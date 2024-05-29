@@ -17,7 +17,7 @@
 									"options": [
 										{
 											"text": "Een systeem gebaseerd op machine learning, deep learning en/of NLP die geen Generatieve AI systeem is. Of een expert systeem of symbolisch systeem.",
-											"result": "We gaan bepalen of de AI-verordening van toepassing is op je AI-systeem",
+											"result": "We gaan bepalen of de AI-verordening van toepassing is op je AI-systeem"
 										}
 									]
 								},
@@ -215,11 +215,11 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
-															"result": "Ga dan door naar de volgende vraag.",
+															"result": "Ga dan door naar de volgende vraag."
 														}
 													]
 												},
@@ -232,7 +232,7 @@
 														},
 														{
 															"text": "Ja",
-															"result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de veresiten te zien.",
+															"result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de veresiten te zien."
 														}
 													]
 												},
@@ -241,11 +241,11 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
-															"result": "Ga dan door naar de volgende vraag.",
+															"result": "Ga dan door naar de volgende vraag."
 														}
 													]
 												},
@@ -399,7 +399,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -412,7 +412,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -425,7 +425,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -453,7 +453,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -466,7 +466,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -479,7 +479,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -492,7 +492,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -505,7 +505,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -518,7 +518,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -531,7 +531,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -544,7 +544,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -572,7 +572,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -585,7 +585,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -598,7 +598,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -611,7 +611,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -624,7 +624,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -637,7 +637,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -650,7 +650,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -663,7 +663,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -691,7 +691,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -704,7 +704,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -717,7 +717,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -730,7 +730,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -743,7 +743,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -756,7 +756,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -769,7 +769,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -782,7 +782,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -810,7 +810,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -823,7 +823,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -836,7 +836,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -849,7 +849,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -862,7 +862,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -875,7 +875,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -888,7 +888,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -901,7 +901,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -929,7 +929,7 @@
 													"options": [
 														{
 															"text": "1a",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -942,7 +942,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -955,7 +955,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -968,7 +968,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -981,7 +981,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -994,7 +994,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1007,7 +1007,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1020,7 +1020,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1048,7 +1048,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1061,7 +1061,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1074,7 +1074,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1087,7 +1087,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1100,7 +1100,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1113,7 +1113,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1126,7 +1126,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1139,7 +1139,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1167,7 +1167,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1180,7 +1180,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1193,7 +1193,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1206,7 +1206,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1219,7 +1219,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1232,7 +1232,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1245,7 +1245,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1258,7 +1258,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1286,7 +1286,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1299,7 +1299,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1312,7 +1312,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1325,7 +1325,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1338,7 +1338,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1351,7 +1351,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1364,7 +1364,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1377,7 +1377,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1405,7 +1405,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1418,7 +1418,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1431,7 +1431,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1444,7 +1444,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1457,7 +1457,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1470,7 +1470,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1483,7 +1483,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1496,7 +1496,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1524,7 +1524,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1537,7 +1537,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1550,7 +1550,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1563,7 +1563,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1576,7 +1576,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1589,7 +1589,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1602,7 +1602,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1615,7 +1615,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1643,7 +1643,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1656,7 +1656,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1669,7 +1669,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1682,7 +1682,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1695,7 +1695,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1708,7 +1708,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1721,7 +1721,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1734,7 +1734,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1762,7 +1762,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1775,7 +1775,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1788,7 +1788,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1801,7 +1801,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1814,7 +1814,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1827,7 +1827,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1840,7 +1840,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1853,7 +1853,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1881,7 +1881,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1894,7 +1894,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1907,7 +1907,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1920,7 +1920,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1933,7 +1933,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1946,7 +1946,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -1959,7 +1959,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -1972,7 +1972,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2000,7 +2000,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2013,7 +2013,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2026,7 +2026,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2039,7 +2039,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2052,7 +2052,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2065,7 +2065,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2078,7 +2078,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2091,7 +2091,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2119,7 +2119,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2132,7 +2132,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2145,7 +2145,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2158,7 +2158,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2171,7 +2171,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2184,7 +2184,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2197,7 +2197,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2210,7 +2210,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2238,7 +2238,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2251,7 +2251,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2264,7 +2264,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2277,7 +2277,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2290,7 +2290,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2303,7 +2303,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2316,7 +2316,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2329,7 +2329,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2357,7 +2357,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2370,7 +2370,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2383,7 +2383,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2396,7 +2396,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2409,7 +2409,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2422,7 +2422,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2435,7 +2435,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2448,7 +2448,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2476,7 +2476,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2489,7 +2489,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2502,7 +2502,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2515,7 +2515,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2528,7 +2528,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2541,7 +2541,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2554,7 +2554,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2567,7 +2567,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2595,7 +2595,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2608,7 +2608,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2621,7 +2621,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2634,7 +2634,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2647,7 +2647,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2660,7 +2660,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2673,7 +2673,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2686,7 +2686,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2714,7 +2714,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2727,7 +2727,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2740,7 +2740,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2753,7 +2753,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2766,7 +2766,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2779,7 +2779,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2792,7 +2792,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2805,7 +2805,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2833,7 +2833,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2846,7 +2846,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2859,7 +2859,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2872,7 +2872,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2885,7 +2885,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2898,7 +2898,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2911,7 +2911,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2924,7 +2924,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2941,7 +2941,8 @@
 									]
 								},
 								{
-									"question": "Is je AI-systeem bedoeld om door of namens een gerechtelijke instantie te worden gebruikt om een gerechtelijke instantie te ondersteunen bij het onderzoeken en uitleggen van feiten of de wet en bij de toepassing van het recht op een concrete reeks feiten of om te worden gebruikt op soortgelijke wijze in het kader van alternatieve geschillenbeslechting?""options": [
+									"question": "Is je AI-systeem bedoeld om door of namens een gerechtelijke instantie te worden gebruikt om een gerechtelijke instantie te ondersteunen bij het onderzoeken en uitleggen van feiten of de wet en bij de toepassing van het recht op een concrete reeks feiten of om te worden gebruikt op soortgelijke wijze in het kader van alternatieve geschillenbeslechting?",
+									"options": [
 										{
 											"text": "Ja",
 											"result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.",
@@ -2951,7 +2952,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2964,7 +2965,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -2977,7 +2978,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -2990,7 +2991,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -3003,7 +3004,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -3016,7 +3017,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -3029,7 +3030,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -3042,7 +3043,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -3059,7 +3060,8 @@
 									]
 								},
 								{
-									"question": "Is je AI-systeem bedoeld voor het beïnvloeden van de uitslag van een verkiezing of referendum of van het stemgedrag van natuurlijke personen bij de uitoefening van hun stemrecht bij verkiezingen of referenda? Dit geldt niet voor AI-systemen aan de output waarvan natuurlijke personen niet rechtstreeks worden blootgesteld, zoals instrumenten die worden gebruikt om politieke campagnes te organiseren, te optimaliseren of te structureren vanuit administratief of logistiek oogpunt.""options": [
+									"question": "Is je AI-systeem bedoeld voor het beïnvloeden van de uitslag van een verkiezing of referendum of van het stemgedrag van natuurlijke personen bij de uitoefening van hun stemrecht bij verkiezingen of referenda? Dit geldt niet voor AI-systemen aan de output waarvan natuurlijke personen niet rechtstreeks worden blootgesteld, zoals instrumenten die worden gebruikt om politieke campagnes te organiseren, te optimaliseren of te structureren vanuit administratief of logistiek oogpunt.",
+									"options": [
 										{
 											"text": "Ja",
 											"result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.",
@@ -3069,7 +3071,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -3082,7 +3084,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -3095,7 +3097,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -3108,7 +3110,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -3121,7 +3123,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -3134,7 +3136,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
@@ -3147,7 +3149,7 @@
 													"options": [
 														{
 															"text": "Ja",
-															"result": "Ga dan door naar de volgende vraag",
+															"result": "Ga dan door naar de volgende vraag"
 														},
 														{
 															"text": "Nee",
@@ -3160,7 +3162,7 @@
 													"options": [
 														{
 															"text": "Nee",
-															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is.",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
 														},
 														{
 															"text": "Ja",
