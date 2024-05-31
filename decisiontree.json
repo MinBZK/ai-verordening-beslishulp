@@ -1,0 +1,3219 @@
+{
+   "version": "v.02",
+  "question": "Waar heb je hulp bij nodig?",
+  "options": [
+    {
+      "text": "Ik wil een AI-systeem ontwikkelen",
+      "result": "Het lijkt er op dat je een aanbieder van AI systemen bent volgens de AI verordening. We zullen nu proberen om vast te stellen of dit klopt.",
+      "next": [
+        {
+          "question": "Ga je een AI-systeem of een AI-model op de markt brengen of in gebruik stellen onder eigen naam of merk, al dan niet tegen betaling?",
+          "options": [
+            {
+              "text": "Ja, dat klopt",
+              "result": "Dan ben je inderdaad een aanbieder volgens de AI verordening. Dan gaan we nu bepalen wat dit voor je betekent.",
+              "next": [
+                {
+                  "question": "Welke soort AI systeem ga je ontwikkelen?",
+                  "options": [
+                    {
+                      "text": "Een systeem gebaseerd op machine learning, deep learning en/of NLP die geen Generatieve AI systeem is. Of een expert systeem of symbolisch systeem.",
+                      "result": "We gaan bepalen of de AI-verordening van toepassing is op je AI-systeem"
+                    }
+                  ]
+                },
+                {
+                  "question": "Zal je AI-systeem of de output van het systeem uitsluitend in de handel wordt gebracht, in gebruik worden gesteld of - al dan niet gewijzigd - worden gebruikt voor militaire, defensie- of nationale veiligheidsdoeleinden, ongeacht het soort entiteit dat deze activiteiten uitvoert?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "In dat geval is de AI-verordening niet van toepassing; maar zorg er wel voor dat de activiteiten worden uitgevoerd in overeenstemming met het toepasselijke Unierecht."
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag."
+                    }
+                  ]
+                },
+                {
+                  "question": "Ga je een AI-systeem ontwikkelen, maar alleen met wetenschappelijk onderzoek als enig doel?",
+                  "options": [
+                    {
+                      "text": "Ja, dat klopt",
+                      "result": "In dat geval is de AI-verordening niet van toepassing, maar zorg er wel voor dat de activiteiten worden uitgevoerd in overeenstemming met het toepasselijke Unierecht. Bijvoorbeeld: als het AI systeem persoonsgegevens verwerkt, dan moet je nog steeds aan de AVG voldoen."
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vragen"
+                    }
+                  ]
+                },
+                {
+                  "question": "Ben je momenteel, of ga je binnekort beginnen met onderzoeks-, test- of ontwikkelingsactiviteiten met betrekking tot AI-systemen of AI-modellen voor zij in de handel worden gebracht of in gebruik worden gesteld?",
+                  "options": [
+                    {
+                      "text": "Ja, dat klopt",
+                      "result": "In dat geval is de AI-verordening nog niet van toepassing, maar zorg er wel voor dat de activiteiten worden uitgevoerd in overeenstemming met het toepasselijke Unierecht. Bijvoorbeeld: als het AI systeem persoonsgegevens verwerkt, dan moet je nog steeds aan de AVG voldoen."
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vragen"
+                    }
+                  ]
+                },
+                {
+                  "question": "Ga je een AI-systeem ontwikkelen die gratis beschikbaar wordt gesteld of vrijgegeven onder opensourcelicenties?",
+                  "options": [
+                    {
+                      "text": "Ja, dat klopt",
+                      "result": "In dat geval is de AI-verordening niet van toepassing, tenzij je AI-systeem op de markt wordt gebracht of in gebruik wordt gesteld als een AI-systeem met een hoog risico, of als een systeem die verboden is volgens artikel 5 van de AI-verordening of een systeem die moet voldoen aan de transparantievereisten van artikel 50. Ga naar de volgende vraag om hier achter te komen. -------------------LINK naar 1a1a14--------------------"
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vragen.We gaan bepalen of je AI-systeem valt onder de veboden systemen van artikel 5 van de AI-verordening."
+                    }
+                  ]
+                },
+                {
+                  "question": "Zou je AI-systeem gebruik kunnen gaan maken van subliminale technieken om mensen onbewust of bewust kunnen manipuleren, waardoor ze beslissingen nemen die ze anders niet zouden hebben genomen?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Deze type AI-systemen zijn in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om dit verder te bekijken ..."
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag."
+                    }
+                  ]
+                },
+                {
+                  "question": "Zou je AI-systeem gebruik kunnen gaan maken van kwetsbaarheden van individuen of specifieke groepen, zoals leeftijd, handicaps of sociale/economische omstandigheden, om het gedrag van die personen aanzienlijk te verstoren, wat kan leiden tot aanzienlijke schade bij henzelf of anderen?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Deze type AI-systemen zijn in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om dit verder te bekijken ..."
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Zou je AI-systemen gebruikt kunnen worden om natuurlijke personen of groepen gedurende een periode te evalueren of te classificeren op basis van hun sociale gedrag of afgeleide persoonlijke kenmerken? Dit kan leiden tot nadelige behandelingen die niet gerechtvaardigd zijn en geen verband houden met de oorspronkelijke context van de data of met de ernst van het sociale gedrag.",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Deze type AI-systemen zijn in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om dit verder te bekijken ..."
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Zou je AI-systeem gebruikt kunnen worden voor risicobeoordelingen van natuurlijke personen om het risico op crimineel gedrag te voorspellen, gebaseerd op profilering of persoonlijkheidskenmerken? Dit geldt niet voor AI-systemen die worden gebruikt om menselijke beoordelingen te ondersteunen, gebaseerd op objectieve en verifieerbare feiten die rechtstreeks verband houden met criminele activiteiten.",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Deze type AI-systemen zijn in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om dit verder te bekijken ..."
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Zou je AI-systemen gebruikt kunnen worden om databanken voor gezichtsherkenning aan te leggen of aan te vullen door willkeurige gezichtsafbeeldingen van internet of CCTV-beelden te scrapen?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Deze type AI-systemen zijn in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om dit verder te bekijken ..."
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Zou je AI-systemen gebruik kunnen worden om emoties van een persoon op de werkplek of in het onderwijs af te leiden? Dit is niet van toepassing als het gebruik van het AI-systeem is bedoeld voor medische- of veiligheidsdoeleinden.",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Deze type AI-systemen zijn in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om dit verder te bekijken ..."
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Zou je AI-systemen gebruikt kunnen worden om natuurlijke personen individueel in categorieën in te delen op basis van biometrische gegevens om ras, politieke opvattingen, lidmaatschap van een vakbond, religieuze of levensbeschouwelijke overtuigingen, seksleven of seksuele geaardheid af te leiden? Dit verbod geldt niet voor het labelen of filteren van rechtmatig verkregen biometrische datasets, zoals afbeeldingen, op basis van biometrische gegevens, of voor categorisering van biometrische gegevens op het gebied van rechtshandhaving.",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Deze type AI-systemen zijn in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om dit verder te bekijken ..."
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Zou je AI-systeem gebruik kunnen worden voor biometrische identificatie op afstand in real time in openbare ruimten met het oog op de rechtshandhaving? Dit geldt niet als het systeem strikt noodzakelijk is voor een van de volgende doelen:\ni) Gericht zoeken naar specifieke slachtoffers van ontvoering, mensenhandel of seksuele uitbuiting, evenals het zoeken naar vermiste personen.\nii) Voorkomen van een specifieke, aanzienlijke en onmiddellijke dreiging voor het leven of de fysieke veiligheid van personen, of een reële en actuele of voorspelbare dreiging van een terroristische aanslag.\niii) Lokalisatie of identificatie van een persoon die verdacht wordt van het plegen van een strafbaar feit, voor strafrechtelijk onderzoek of vervolging, met een maximale straf van ten minste vier jaar vrijheidsbeneming zoals vermeld in bijlage II van de betrokken lidstaat.",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Deze type AI-systemen zijn in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om dit verder te bekijken ..."
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Het lijkt er op dat je AI-systeem geen verboden systeem is. We gaan nu bepalen of het systeem valt onder de hoog-risico categorisatie van de AI-verordening."
+                    }
+                  ]
+                },
+                {
+                  "question": "Is het AI-systeem bedoeld om te worden gebruikt als veiligheidscomponent van een product of is het AI-systeem zelf een product dat valt onder de in bijlage I van de AI-verordening (link) opgenomen harmonisatiewetgeving van de Unie?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem en moet voldoen aan bepaalde vereisten."
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Moet het product waarvan het AI-systeem de veiligheidscomponent vormt een conformiteits-beoordeling door een derde partij laten uitgevoeren met het oog op het in de handel brengen of in gebruik stellen van dat product op grond van de in bijlage I opgenomen harmonisatiewetgeving van de Unie?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem en moet voldoen aan bepaalde vereisten. Ga verder om de vereisten te zien."
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Is je AI-systeem bedoeld om te worden gebruikt voor biometrische identificatie op afstand?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de volgende vragen.",
+                      "next": [
+                        {
+                          "question": "Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en is er geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is het niet bedoeld om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Is je AI-systeem bedoeld om te worden gebruikt voor biometrische categorisering op basis van gevoelige of beschermde eigenschappen of kenmerken, of op basis van wat uit die eigenschappen of kenmerken wordt afgeleid?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.",
+                      "next": [
+                        {
+                          "question": "Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voer het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voer het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voer het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voer het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Is je AI-systeem bedoeld om te worden gebruikt als biometrische systeem voor emotieherkenning?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.",
+                      "next": [
+                        {
+                          "question": "Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voer het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voer het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voer het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voer het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Is je AI-systeem bedoeld om te worden gebruikt als veiligheidscomponent bij het beheer of de exploitatie van kritieke digitale infrastructuur, wegverkeer of bij de levering van water, gas, verwarming en elektriciteit?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.",
+                      "next": [
+                        {
+                          "question": "Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Is je AI-systeem bedoeld om te worden gebruikt voor het bepalen van toegang of toelating tot of het toewijzen van natuurlijke personen aan instellingen voor onderwijs en beroepsonderwijs op alle niveaus?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.",
+                      "next": [
+                        {
+                          "question": "Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Is je AI-systeem bedoeld om te worden gebruikt voor het evalueren van leerresultaten, ook wanneer die resultaten worden gebruikt voor het sturen van het leerproces van natuurlijke personen in instellingen voor onderwijs en beroepsonderwijs op alle niveaus?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.",
+                      "next": [
+                        {
+                          "question": "Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Is je AI-systeem bedoeld om te worden gebruikt voor het beoordelen van het passende onderwijsniveau dat een persoon zal ontvangen of waartoe hij toegang zal hebben, in het kader van of binnen instellingen voor onderwijs en beroepsonderwijs op alle niveaus?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.",
+                      "next": [
+                        {
+                          "question": "1a1a19-1:Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "1a",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Is je AI-systeem bedoeld om te worden gebruikt voor het monitoren en detecteren van ongeoorloofd gedrag van studenten tijdens toetsen in de context van of binnen instellingen voor onderwijs en beroepsonderwijs op alle niveaus?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.",
+                      "next": [
+                        {
+                          "question": "Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Is je AI-systeem bedoeld om te worden gebruikt voor het werven of selecteren van natuurlijke personen, met name voor het plaatsen van gerichte vacatures, het analyseren en filteren van sollicitaties, en het beoordelen van kandidaten?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.",
+                      "next": [
+                        {
+                          "question": "Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Is je AI-systeem bedoeld om te worden gebruikt voor het nemen van besluiten die van invloed zijn op de voorwaarden van arbeidsgerelateerde betrekkingen, de bevordering of beëindiging van arbeidsgerelateerde contractuele betrekkingen, voor het toewijzen van taken op basis van individueel gedrag of persoonlijke eigenschappen of kenmerken, of voor het monitoren en evalueren van prestaties en gedrag van personen in dergelijke betrekkingen?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.",
+                      "next": [
+                        {
+                          "question": "Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Is je AI-systeem bedoeld om te worden gebruikt om te beoordelen of natuurlijke personen in aanmerking komen voor essentiële overheidsuitkeringen en -diensten, waaronder gezondheidsdiensten, of om dergelijke uitkeringen en diensten te verlenen, te beperken, in te trekken of terug te vorderen?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.",
+                      "next": [
+                        {
+                          "question": "Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Is je AI-systeem bedoeld om te worden gebruikt voor het beoordelen van de kredietwaardigheid van natuurlijke personen of voor het vaststellen van hun kredietscore, met uitzondering van AI-systemen die gebruikt worden om financiële fraude op te sporen?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.",
+                      "next": [
+                        {
+                          "question": "Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Is je AI-systeem bedoeld om te worden gebruikt voor risicobeoordeling en prijsstelling met betrekking tot natuurlijke personen in het geval van levens- en ziektekostenverzekeringen?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.",
+                      "next": [
+                        {
+                          "question": "1a1a19-1:Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Is je AI-systeem bedoeld om noodoproepen van natuurlijke personen te evalueren en te classificeren of om te worden gebruikt voor het inzetten of het bepalen van prioriteiten voor de inzet van hulpdiensten, onder meer van politie, brandweer en ambulance, alsook van systemen voor de triage van patiënten die dringend medische zorg behoeven?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.",
+                      "next": [
+                        {
+                          "question": "Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Is je AI-systeem bedoeld om door of namens rechtshandhavingsinstanties, of door instellingen, organen of instanties van de Unie ter ondersteuning van rechtshandhavingsinstanties of namens hen, te worden gebruikt om het risico te beoordelen dat een natuurlijke persoon het slachtoffer wordt van strafbare feiten?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.",
+                      "next": [
+                        {
+                          "question": "Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Is je AI-systeem bedoeld om door of namens rechtshandhavingsinstanties of door instellingen, organen of instanties van de Unie ter ondersteuning van rechtshandhavingsinstanties te worden gebruikt als leugendetector of soortgelijke instrumenten?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.",
+                      "next": [
+                        {
+                          "question": "Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Is je AI-systeem bedoeld om door of namens rechtshandhavingsinstanties of door instellingen, organen of instanties van de Unie ter ondersteuning van rechtshandhavingsinstanties te worden gebruikt om de betrouwbaarheid van bewijsmateriaal tijdens het onderzoek naar of de vervolging van strafbare feiten te beoordelen?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.",
+                      "next": [
+                        {
+                          "question": "Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Is je AI-systeem bedoeld om door of namens rechtshandhavingsinstanties of door instellingen, organen of instanties van de Unie ter ondersteuning van rechtshandhavingsinstanties te worden gebruikt om te beoordelen hoe groot het risico is dat een natuurlijke persoon (opnieuw) een strafbaar feit zal plegen, niet uitsluitend op basis van profilering van natuurlijke personen als bedoeld in artikel 3, punt 4, van Richtlijn (EU) 2016/680, of om persoonlijkheidskenmerken en eigenschappen of eerder crimineel gedrag van natuurlijke personen of groepen te beoordelen?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.",
+                      "next": [
+                        {
+                          "question": "Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Is je AI-systeem bedoeld om door of namens rechtshandhavingsinstanties of door instellingen, organen en instanties van de Unie ter ondersteuning van rechtshandhavingsinstanties te worden gebruikt om natuurlijke personen te profileren als bedoeld in artikel 3, punt 4, van Richtlijn (EU) 2016/680, tijdens het opsporen, onderzoeken of vervolgen van strafbare feiten?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.",
+                      "next": [
+                        {
+                          "question": "Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Is je AI-systeem bedoeld om door of namens bevoegde overheidsinstanties of door instellingen, organen of instanties van de Unie te worden gebruikt als leugendetector of soortgelijke hulpmiddelen?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.",
+                      "next": [
+                        {
+                          "question": "Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Is je AI-systeem bedoeld om door of namens bevoegde overheidsinstanties of door instellingen, organen of instanties van de Unie te worden gebruikt om risico’s te beoordelen, waaronder een veiligheidsrisico, een risico op illegale migratie of een gezondheidsrisico, uitgaat van een natuurlijke persoon die voornemens is het grondgebied van een lidstaat te betreden of dat heeft gedaan?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.",
+                      "next": [
+                        {
+                          "question": "Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Is je AI-systeem bedoeld om door of namens bevoegde overheidsinstanties  of door instellingen, organen of instanties van de Unie te worden gebruikt om bevoegde overheidsinstanties bij te staan bij de behandeling van aanvragen voor asiel, visa of verblijfsvergunningen en bij de behandeling van aanverwante klachten in verband met het al dan niet in aanmerking komen van de natuurlijke personen die een aanvraag voor een status indienen, met inbegrip van hieraan gerelateerde beoordelingen van de betrouwbaarheid van bewijsmateriaal?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.",
+                      "next": [
+                        {
+                          "question": "Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Is je AI-systeem bedoeld om door of namens bevoegde overheidsinstanties, of door instellingen, organen of instanties van de Unie, te worden gebruikt in het kader van migratie-, asiel- of grenstoezichtsbeheer, met het oog op het opsporen, herkennen of identificeren van natuurlijke personen, met uitzondering van de verificatie van reisdocumenten?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.",
+                      "next": [
+                        {
+                          "question": "Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Is je AI-systeem bedoeld om door of namens een gerechtelijke instantie te worden gebruikt om een gerechtelijke instantie te ondersteunen bij het onderzoeken en uitleggen van feiten of de wet en bij de toepassing van het recht op een concrete reeks feiten of om te worden gebruikt op soortgelijke wijze in het kader van alternatieve geschillenbeslechting?",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.",
+                      "next": [
+                        {
+                          "question": "Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                },
+                {
+                  "question": "Is je AI-systeem bedoeld voor het beïnvloeden van de uitslag van een verkiezing of referendum of van het stemgedrag van natuurlijke personen bij de uitoefening van hun stemrecht bij verkiezingen of referenda? Dit geldt niet voor AI-systemen aan de output waarvan natuurlijke personen niet rechtstreeks worden blootgesteld, zoals instrumenten die worden gebruikt om politieke campagnes te organiseren, te optimaliseren of te structureren vanuit administratief of logistiek oogpunt.",
+                  "options": [
+                    {
+                      "text": "Ja",
+                      "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.",
+                      "next": [
+                        {
+                          "question": "Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?",
+                          "options": [
+                            {
+                              "text": "Ja",
+                              "result": "Ga dan door naar de volgende vraag"
+                            },
+                            {
+                              "text": "Nee",
+                              "result": "Ga dan door naar de volgende vraag."
+                            }
+                          ]
+                        },
+                        {
+                          "question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+                          "options": [
+                            {
+                              "text": "Nee",
+                              "result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+                            },
+                            {
+                              "text": "Ja",
+                              "result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door om de vereisten te zien."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "Nee",
+                      "result": "Ga door naar de volgende vraag"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "Een Generatieve AI systeem",
+              "result": "?"
+            },
+            {
+              "text": "Nee of ik weet het niet",
+              "result": "Ga door naar de volgende vragen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question": "Ga je een AI-systeem ontwikkelen, maar alleen met wetenschappelijk onderzoek als enig doel?",
+      "options": [
+        {
+          "text": "Ja, dat klopt",
+          "result": "In dat geval is de AI verordening niet van toepassing, maar zorg er wel voor dat de activiteiten worden uitgevoerd in overeenstemming met het toepasselijke Unierecht. Bijvoorbeeld: als het AI systeem persoonsgegevens verwerkt, dan moet je nog steeds aan de AVG voldoen."
+        },
+        {
+          "text": "Nee",
+          "result": "Ga door naar de volgende vragen."
+        }
+      ]
+    },
+    {
+      "question": "Ga je een AI-systeem ontwikkelen die gratis beschikbaar wordt gesteld of vrijgegeven wordt onder opensourcelicenties?",
+      "options": [
+        {
+          "text": "Ja, dat klopt",
+          "result": "In dat geval is de AI verordening niet van toepassing, tenzij je AI-systeem op de markt wordt gebracht of in gebruik wordt gesteld als een AI-systeem met een hoog risico, of als een systeem die verboden is volgens artikel 5 van de AI-verordening of een systeem die moet voldoen aan de transparantie vereisten van artikel 50. Ga door naar de volgende vraag om hier achter te komen."
+        }
+      ]
+    }
+  ]
+}
