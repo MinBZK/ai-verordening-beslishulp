@@ -1,0 +1,1251 @@
+Welkom naar deze AI Verordening beslissboom!
+1. Waar heb je hulp bij nodig?
+
+a. Ik wil een AI-systeem ontwikkelen
+Result: Het lijkt er op dat je een aanbieder van AI systemen bent volgens de AI verordening. We zullen nu proberen om vast te stellen of dit klopt.
+1a1: Ga je een AI-systeem of een AI-model op de markt brengen of in gebruik stellen onder eigen naam of merk, al dan niet tegen betaling?
+1a1a: Ja, dat klopt
+Result: Dan ben je inderdaad een aanbieder volgens de AI verordening. Dan gaan we nu bepalen wat dit voor je betekent.
+1a1a1:Welke soort AI systeem ga je ontwikkelen?
+1a1a1a: Een systeem gebaseerd op machine learning, deep learning en of NLP die geen Generatieve AI systeem is. Of een exopert systeem of symbolische systeem.
+Result: We gaan bepalen of de AI-verordening van toepassing is op je AI-systeem
+1a1a2: Zal je AI-systeem of de output van het systeem uitsluitend in de handel wordt gebracht, in gebruik wordt gesteld of, al dan niet gewijzigd, wordt gebruikt voor militaire, defensie- of nationale veiligheidsdoeleinden, 
+ongeacht het soort entiteit dat deze activiteiten uitvoert?
+1a1a2a:Ja
+Result: In dat geval is de AI-verordening niet van toepassing, maar zorg er wel voor dat de activiteiten worden uitgevoerd in overeenstemming met het toepasselijke Unierecht. 
+1a1a2b: Nee
+Result: Ga door naar de volgende vraag.
+1a1a3: Ga je een AI-systeem ontwikkelen, maar alleen met wetenschappelijk onderzoek als enig doel?
+1a1a3a:Ja, dat klopt
+Result: In dat geval is de AI-verordening niet van toepassing, maar zorg er wel voor dat de activiteiten worden uitgevoerd in overeenstemming met het toepasselijke Unierecht. Bijvoorbeeld: als het AI systeem persoonsgegevens verwerkt, dan moet je nog steeds aan de AVG voldoen.
+1a1a3b: Nee
+Result: Ga door naar de volgende vragen
+1a1a4:  Ben je momenteel of ga je binnekort beginnen met onderzoeks-, test- of ontwikkelingsactiviteiten met betrekking tot AI-systemen of AI-modellen voor zij in de handel worden gebracht of in gebruik worden gesteld?
+1a1a4a: Ja, dat klopt
+Result: In dat geval is de AI-verordening nog niet van toepassing, maar zorg er wel voor dat de activiteiten worden uitgevoerd in overeenstemming met het toepasselijke Unierecht. Bijvoorbeeld: als het AI systeem persoonsgegevens verwerkt, dan moet je nog steeds aan de AVG voldoen.
+1a1a4b: Nee
+Result: Ga door naar de volgende vragen
+1a1a5: Ga je een AI-systeem ontwikkelen die gratis beschikbaar wordt gesteld of vrijgegeven onder opensourcelicenties?
+1a1a5a: Ja, dat klopt
+Result: In dat geval is de AI-verordening niet van toepassing, tenzij je AI-systeem op de markt wordt gebracht of in gebruik wordt gesteld als een AI-systeem met een hoog risico, of als een systeem die verbod is volgens artikel 5 van de AI-verordening of een systeem die moet voldoen aan de transparantie vereisten van artikel 50. Om hier achter te komen ga naar de volgende vraag. -------------------LINK naar 1a1a14--------------------
+1a1a5b: Nee
+Result: Ga door naar de volgende vragen.We gaan bepalen of je AI-systeem valt onder de veboden systemen van artikel 5 van de AI-verordening. 
+1a1a6: Zou je AI-systeem gebruikmaken van subliminale technieken om mensen onbewust of bewust kunnen manipuleren, waardoor ze beslissingen nemen die ze anders niet zouden hebben genomen?
+1a1a6a:Ja
+Result: Deze type AI-systemen is in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om verder te kijken ...
+1a1a6b: Nee
+Result: Ga door naar de volgende vraag.
+1a1a7: Zou je AI-systeem gebruikmaken van kwetsbaarheden van individuen of specifieke groepen, zoals leeftijd, handicap of sociale/economische omstandigheden, om het gedrag van die personen aanzienlijk te verstoren, wat kan leiden tot aanzienlijke schade bij henzelf of anderen?
+1a1a7a:Ja
+Result: Deze type AI-systemen is in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om verder te kijken ...
+1a1a7b:Nee
+Result: Ga door naar de volgende vraag
+1a1a8: Zou je AI-systemen gebruik kunnen worden om natuurlijke personen of groepen gedurende een periode te evalueren of te classificeren op basis van hun sociale gedrag of afgeleide persoonlijke kenmerken? Dit kan leiden tot nadelige behandelingen die niet gerechtvaardigd zijn en geen verband houden met de oorspronkelijke context van de data of met de ernst van het sociale gedrag.
+1a1a8a:Ja
+Result:Deze type AI-systemen is in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om verder te kijken ...
+1a1a8b:Nee
+Result: Ga door naar de volgende vraag
+1a1a9:Zou je AI-systeem gebruik kunnen worden voor risicobeoordelingen van natuurlijke personen om het risico op crimineel gedrag te voorspellen, gebaseerd op profilering of persoonlijkheidskenmerken? Dit geldt niet voor AI-systemen die worden gebruikt om menselijke beoordelingen te ondersteunen, gebaseerd op objectieve en verifieerbare feiten die rechtstreeks verband houden met criminele activiteit.
+1a1a9a:Ja
+Results: Deze type AI-systemen is in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om verder te kijken ...
+1a1a9b:Nee
+Result: Ga door naar de volgende vraag
+1a1a10:Zou je AI-systemen gebruik kunnen worden om databanken voor gezichtsherkenning aan te leggen of aan te vullen door ongericht gezichtsafbeeldingen van internet of CCTV-beelden te scrapen?
+1a1a10a:Ja
+Results:Deze type AI-systemen is in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om verder te kijken ...
+1a1a10b:Nee
+Results: Ga door naar de volgende vraag
+1a1a11:Zou je AI-systemen gebruik kunnen worden om emoties van een persoon op de werkplek en in het onderwijs af te leiden? Dit gelt niet als het gebruik van het AI-systeem is bedoeld om medische of veiligheidsdoeleinden.
+1a1a11a:Ja
+Results:Deze type AI-systemen is in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om verder te kijken ...
+1a1a11b:Nee
+Results: Ga door naar de volgende vraag
+1a1a12:Zou je AI-systemen gebruik kunnen worden om natuurlijke personen individueel in categorieën indelen op basis van biometrische gegevens om ras, politieke opvattingen, lidmaatschap van een vakbond, religieuze of levensbeschouwelijke overtuigingen, seksleven of seksuele gerichtheid af te leiden? Dit verbod geldt niet voor het labelen of filteren van rechtmatig verkregen biometrische datasets, zoals afbeeldingen, op basis van biometrische gegevens, of voor categorisering van biometrische gegevens op het gebied van rechtshandhaving.
+1a1a12a:Ja
+Results:Deze type AI-systemen is in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om verder te kijken ...
+1a1a12b:Nee
+Results: Ga door naar de volgende vraag
+1a1a13:Zou je AI-systeem gebruik kunnen worden voor biometrische identificatie op afstand in real time in openbare ruimten met het oog op de rechtshandhaving? Dit geldt niet als het systeem strikt noodzakelijk is voor een van de volgende doelen:
+i) Gericht zoeken naar specifieke slachtoffers van ontvoering, mensenhandel of seksuele uitbuiting, evenals het zoeken naar vermiste personen.
+ii) Voorkomen van een specifieke, aanzienlijke en onmiddellijke dreiging voor het leven of de fysieke veiligheid van personen, of een reële en actuele of voorspelbare dreiging van een terroristische aanslag.
+iii) Lokalisatie of identificatie van een persoon die verdacht wordt van het plegen van een strafbaar feit, voor strafrechtelijk onderzoek of vervolging, met een maximale straf van ten minste vier jaar vrijheidsbeneming zoals vermeld in bijlage II van de betrokken lidstaat.
+1a1a13a:Ja
+Result: Deze type AI-systemen is in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om verder te kijken ...
+1a1a13b:Nee
+Results: Ga door naar de volgende vraag. Het lijkt er op dat je AI-systeem niet een verboden systeem is. We gaan nu bepalen of het systeem valt onder de hoge risico categorizatie van de AI-verordening.
+1a1a14:Is het AI-systeem bedoeld om te worden gebruikt als veiligheidscomponent van een product of is het AI-systeem zelf een product dat valt onder de in bijlage I van de AI-verordening (link) opgenomen harmonisatiewetgeving van de Unie?
+1a1a14a:Ja
+Result: Je AI-systemen wordt waarschijnlijk beschouwd als een hoge risico AI-systeem en moet voldoen aan bepaalde vereisten. 
+1a1a14b:Nee
+Result: Ga door naar de volgende vraag
+1a1a15:Moet het product waarvan het AI-systeem de veiligheidscomponent vormt een conformiteitsbeoordeling door een derde partij laten uitgevoeren met het oog op het in de handel brengen of in gebruik stellen van dat product op grond van de in bijlage I opgenomen harmonisatiewetgeving van de Unie?
+1a1a15a:Ja
+Result: Je AI-systemen wordt waarschijnlijk beschouwd als een hoge risico AI-systeem en moet voldoen aan bepaalde vereisten. Ga door om de veresiten te zien.
+1a1a15b:Nee
+Result: Ga door naar de volgende vraag
+1a1a16: Is je AI-systeem bedoeld om te worden gebruikt voor biometrische identificatie op afstand?
+1a1a16a:Ja
+Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.
+	1a1a16-1:Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke 	personen?
+	1a1a16-1a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a16-2:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a16-2a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a16-2b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a16-1b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a16-3:Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de 	grondrechten van natuurlijke personen?
+	1a1a16-3a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a16-4:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a16-4a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a16-4b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a16-3b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a16-5:Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder 	behoorlijke menselijke toetsing te vervangen of te beïnvloeden?
+	1a1a16-5a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a16-6:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a16-6a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a16-6b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a16-5b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a16-7:Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?
+	1a1a16-7a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a16-8:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a16-8a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a16-8b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a16-7b:Nee
+	Result: Dan ga door na de volgende vraag.
+1a1a16b:Nee
+Result: Ga door naar de volgende vraag
+1a1a17: Is je AI-systeem bedoeld om te worden gebruikt voor biometrische categorisering op basis van gevoelige of beschermde eigenschappen of kenmerken, of op basis van wat uit die eigenschappen of kenmerken wordt afgeleid?
+1a1a17a:Ja
+Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.
+	1a1a17-1:Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke 	personen?
+	1a1a17-1a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a17-2:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a17-2a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a17-2b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a17-1b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a17-3:Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de 	grondrechten van natuurlijke personen?
+	1a1a17-3a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a17-4:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a17-4a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a17-4b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a17-3b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a17-5:Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder 	behoorlijke menselijke toetsing te vervangen of te beïnvloeden?
+	1a1a17-5a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a17-6:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a17-6a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a17-6b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a17-5b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a17-7:Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?
+	1a1a17-7a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a17-8:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a17-8a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a17-8b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a17-7b:Nee
+	Result: Dan ga door na de volgende vraag.
+1a1a17b:Nee
+Result: Ga door naar de volgende vraag
+1a1a18: Is je AI-systeem bedoeld om te worden gebruikt als biometrische systeem voor emotieherkenning?
+1a1a18a:Ja
+Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.
+	1a1a18-1:Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke 	personen?
+	1a1a18-1a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a18-2:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a18-2a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a18-2b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a18-1b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a18-3:Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de 	grondrechten van natuurlijke personen?
+	1a1a18-3a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a18-4:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a18-4a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a18-4b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a18-3b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a18-5:Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder 	behoorlijke menselijke toetsing te vervangen of te beïnvloeden?
+	1a1a18-5a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a18-6:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a18-6a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a18-6b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a18-5b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a18-7:Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?
+	1a1a18-7a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a18-8:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a18-8a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a18-8b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a18-7b:Nee
+	Result: Dan ga door na de volgende vraag.
+1a1a18b:Nee
+Result: Ga door naar de volgende vraag
+1a1a19: Is je AI-systeem bedoeld om te worden gebruikt als veiligheidscomponent bij het beheer of de exploitatie van kritieke digitale infrastructuur, wegverkeer of bij de levering van water, gas, verwarming en elektriciteit?
+1a1a19a:Ja
+Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.
+	1a1a19-1:Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke 	personen?
+	1a1a19-1a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a19-2:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a19-2a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a19-2b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a19-1b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a19-3:Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de 	grondrechten van natuurlijke personen?
+	1a1a19-3a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a19-4:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a19-4a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a19-4b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a19-3b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a19-5:Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder 	behoorlijke menselijke toetsing te vervangen of te beïnvloeden?
+	1a1a19-5a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a19-6:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a19-6a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a19-6b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a19-5b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a19-7:Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?
+	1a1a19-7a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a19-8:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a19-8a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a19-8b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a19-7b:Nee
+	Result: Dan ga door na de volgende vraag.
+1a1a19b:Nee
+Result: Ga door naar de volgende vraag
+1a1a20: Is je AI-systeem bedoeld om te worden gebruikt voor het bepalen van toegang of toelating tot of het toewijzen van natuurlijke personen aan instellingen voor onderwijs en beroepsonderwijs op alle niveaus?
+1a1a20a:Ja
+Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.
+	1a1a20-1:Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke 	personen?
+	1a1a20-1a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a20-2:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a20-2a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a20-2b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a20-1b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a20-3:Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de 	grondrechten van natuurlijke personen?
+	1a1a20-3a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a20-4:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a20-4a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a20-4b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a20-3b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a20-5:Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder 	behoorlijke menselijke toetsing te vervangen of te beïnvloeden?
+	1a1a20-5a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a20-6:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a20-6a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a20-6b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a20-5b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a20-7:Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?
+	1a1a20-7a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a20-8:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a20-8a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a20-8b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a20-7b:Nee
+	Result: Dan ga door na de volgende vraag.
+1a1a20b:Nee
+Result: Ga door naar de volgende vraag
+1a1a21: Is je AI-systeem bedoeld om te worden gebruikt voor het evalueren van leerresultaten, ook wanneer die resultaten worden gebruikt voor het sturen van het leerproces van natuurlijke personen in instellingen voor onderwijs en beroepsonderwijs op alle niveaus?
+1a1a21a:Ja
+Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.
+	1a1a21-1:Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke 	personen?
+	1a1a21-1a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a21-2:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a21-2a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a21-2b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a21-1b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a21-3:Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de 	grondrechten van natuurlijke personen?
+	1a1a21-3a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a21-4:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a21-4a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a21-4b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a21-3b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a21-5:Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder 	behoorlijke menselijke toetsing te vervangen of te beïnvloeden?
+	1a1a21-5a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a21-6:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a21-6a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a21-6b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a21-5b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a21-7:Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?
+	1a1a21-7a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a21-8:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a21-8a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a21-8b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a21-7b:Nee
+	Result: Dan ga door na de volgende vraag.
+1a1a21b:Nee
+Result: Ga door naar de volgende vraag
+1a1a22: Is je AI-systeem bedoeld om te worden gebruikt voor het beoordelen van het passende onderwijsniveau dat een persoon zal ontvangen of waartoe hij toegang zal hebben, in het kader van of binnen instellingen voor onderwijs en beroepsonderwijs op alle niveaus?
+1a1a22a:Ja
+Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.
+	1a1a22-1:Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke 	personen?
+	1a1a22-1a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a22-2:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a22-2a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a22-2b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a22-1b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a22-3:Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de 	grondrechten van natuurlijke personen?
+	1a1a22-3a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a22-4:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a22-4a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a22-4b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a22-3b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a22-5:Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder 	behoorlijke menselijke toetsing te vervangen of te beïnvloeden?
+	1a1a22-5a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a22-6:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a22-6a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a22-6b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a22-5b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a22-7:Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?
+	1a1a22-7a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a22-8:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a22-8a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a22-8b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a22-7b:Nee
+	Result: Dan ga door na de volgende vraag.
+1a1a22b:Nee
+Result: Ga door naar de volgende vraag
+1a1a23: Is je AI-systeem bedoeld om te worden gebruikt voor het monitoren en detecteren van ongeoorloofd gedrag van studenten tijdens toetsen in de context van of binnen instellingen voor onderwijs en beroepsonderwijs op alle niveaus?
+1a1a23a:Ja
+Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.
+	1a1a23-1:Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke 	personen?
+	1a1a23-1a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a23-2:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a23-2a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a23-2b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a23-1b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a23-3:Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de 	grondrechten van natuurlijke personen?
+	1a1a23-3a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a23-4:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a23-4a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a23-4b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a23-3b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a23-5:Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder 	behoorlijke menselijke toetsing te vervangen of te beïnvloeden?
+	1a1a23-5a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a23-6:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a23-6a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a23-6b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a23-5b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a23-7:Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?
+	1a1a23-7a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a23-8:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a23-8a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a23-8b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a23-7b:Nee
+	Result: Dan ga door na de volgende vraag.
+1a1a23b:Nee
+Result: Ga door naar de volgende vraag
+1a1a24: Is je AI-systeem bedoeld om te worden gebruikt voor het werven of selecteren van natuurlijke personen, met name voor het plaatsen van gerichte vacatures, het analyseren en filteren van sollicitaties, en het beoordelen van kandidaten?
+1a1a24a:Ja
+Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.
+	1a1a24-1:Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke 	personen?
+	1a1a24-1a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a24-2:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a24-2a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a24-2b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a24-1b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a24-3:Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de 	grondrechten van natuurlijke personen?
+	1a1a24-3a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a24-4:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a24-4a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a24-4b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a24-3b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a24-5:Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder 	behoorlijke menselijke toetsing te vervangen of te beïnvloeden?
+	1a1a24-5a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a24-6:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a24-6a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a24-6b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a24-5b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a24-7:Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?
+	1a1a24-7a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a24-8:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a24-8a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a24-8b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a24-7b:Nee
+	Result: Dan ga door na de volgende vraag.
+1a1a24b:Nee
+Result: Ga door naar de volgende vraag
+1a1a25: Is je AI-systeem bedoeld om te worden gebruikt voor het nemen van besluiten die van invloed zijn op de voorwaarden van arbeidsgerelateerde betrekkingen, de bevordering of beëindiging van arbeidsgerelateerde contractuele betrekkingen, voor het toewijzen van taken op basis van individueel gedrag of persoonlijke eigenschappen of kenmerken, of voor het monitoren en evalueren van prestaties en gedrag van personen in dergelijke betrekkingen?
+1a1a25a:Ja
+Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.
+	1a1a25-1:Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke 	personen?
+	1a1a25-1a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a25-2:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a25-2a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a25-2b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a25-1b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a25-3:Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de 	grondrechten van natuurlijke personen?
+	1a1a25-3a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a25-4:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a25-4a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a25-4b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a25-3b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a25-5:Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder 	behoorlijke menselijke toetsing te vervangen of te beïnvloeden?
+	1a1a25-5a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a25-6:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a25-6a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a25-6b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a25-5b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a25-7:Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?
+	1a1a25-7a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a25-8:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a25-8a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a25-8b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a25-7b:Nee
+	Result: Dan ga door na de volgende vraag.
+1a1a25b:Nee
+Result: Ga door naar de volgende vraag
+1a1a26: Is je AI-systeem bedoeld om te worden gebruikt om te beoordelen of natuurlijke personen in aanmerking komen voor essentiële overheidsuitkeringen en -diensten, waaronder gezondheidsdiensten, of om dergelijke uitkeringen en diensten te verlenen, te beperken, in te trekken of terug te vorderen?
+1a1a26a:Ja
+Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.
+	1a1a26-1:Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke 	personen?
+	1a1a26-1a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a26-2:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a26-2a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a26-2b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a26-1b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a26-3:Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de 	grondrechten van natuurlijke personen?
+	1a1a26-3a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a26-4:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a26-4a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a26-4b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a26-3b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a26-5:Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder 	behoorlijke menselijke toetsing te vervangen of te beïnvloeden?
+	1a1a26-5a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a26-6:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a26-6a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a26-6b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a26-5b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a26-7:Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?
+	1a1a26-7a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a26-8:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a26-8a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a26-8b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a26-7b:Nee
+	Result: Dan ga door na de volgende vraag.
+1a1a26b:Nee
+Result: Ga door naar de volgende vraag
+1a1a27: Is je AI-systeem bedoeld om te worden gebruikt voor het beoordelen van de kredietwaardigheid van natuurlijke personen of voor het vaststellen van hun kredietscore, met uitzondering van AI-systemen die gebruikt worden om financiële fraude op te sporen?
+1a1a27a:Ja
+Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.
+	1a1a27-1:Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke 	personen?
+	1a1a27-1a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a27-2:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a27-2a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a27-2b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a27-1b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a27-3:Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de 	grondrechten van natuurlijke personen?
+	1a1a27-3a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a27-4:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a27-4a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a27-4b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a27-3b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a27-5:Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder 	behoorlijke menselijke toetsing te vervangen of te beïnvloeden?
+	1a1a27-5a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a27-6:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a27-6a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a27-6b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a27-5b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a27-7:Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?
+	1a1a27-7a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a27-8:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a27-8a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a27-8b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a27-7b:Nee
+	Result: Dan ga door na de volgende vraag.
+1a1a27b:Nee
+Result: Ga door naar de volgende vraag
+1a1a28: Is je AI-systeem bedoeld om te worden gebruikt voor risicobeoordeling en prijsstelling met betrekking tot natuurlijke personen in het geval van levens- en ziektekostenverzekeringen?
+1a1a28a:Ja
+Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.
+	1a1a28-1:Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke 	personen?
+	1a1a28-1a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a28-2:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a28-2a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a28-2b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a28-1b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a28-3:Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de 	grondrechten van natuurlijke personen?
+	1a1a28-3a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a28-4:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a28-4a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a28-4b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a28-3b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a28-5:Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder 	behoorlijke menselijke toetsing te vervangen of te beïnvloeden?
+	1a1a28-5a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a28-6:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a28-6a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a28-6b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a28-5b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a28-7:Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?
+	1a1a28-7a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a28-8:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a28-8a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a28-8b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a28-7b:Nee
+	Result: Dan ga door na de volgende vraag.
+1a1a28b:Nee
+Result: Ga door naar de volgende vraag
+1a1a29: Is je AI-systeem bedoeld om noodoproepen van natuurlijke personen te evalueren en te classificeren of om te worden gebruikt voor het inzetten of het bepalen van prioriteiten voor de inzet van hulpdiensten, onder meer van politie, brandweer en ambulance, alsook van systemen voor de triage van patiënten die dringend medische zorg behoeven?
+1a1a29a:Ja
+Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.
+	1a1a29-1:Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke 	personen?
+	1a1a29-1a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a29-2:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a29-2a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a29-2b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a29-1b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a29-3:Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de 	grondrechten van natuurlijke personen?
+	1a1a29-3a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a29-4:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a29-4a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a29-4b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a29-3b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a29-5:Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder 	behoorlijke menselijke toetsing te vervangen of te beïnvloeden?
+	1a1a29-5a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a29-6:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a29-6a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a29-6b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a29-5b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a29-7:Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?
+	1a1a29-7a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a29-8:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a29-8a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a29-8b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a29-7b:Nee
+	Result: Dan ga door na de volgende vraag.
+1a1a29b:Nee
+Result: Ga door naar de volgende vraag
+1a1a30: Is je AI-systeem bedoeld om door of namens rechtshandhavingsinstanties, of door instellingen, organen of instanties van de Unie ter ondersteuning van rechtshandhavingsinstanties of namens hen, te worden gebruikt om het risico te beoordelen dat een natuurlijke persoon het slachtoffer wordt van strafbare feiten?
+1a1a30a:Ja
+Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.
+	1a1a30-1:Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke 	personen?
+	1a1a30-1a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a30-2:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a30-2a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a30-2b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a30-1b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a30-3:Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de 	grondrechten van natuurlijke personen?
+	1a1a30-3a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a30-4:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a30-4a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a30-4b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a30-3b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a30-5:Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder 	behoorlijke menselijke toetsing te vervangen of te beïnvloeden?
+	1a1a30-5a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a30-6:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a30-6a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a30-6b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a30-5b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a30-7:Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?
+	1a1a30-7a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a30-8:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a30-8a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a30-8b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a30-7b:Nee
+	Result: Dan ga door na de volgende vraag.
+1a1a30b:Nee
+Result: Ga door naar de volgende vraag
+1a1a31: Is je AI-systeem bedoeld om door of namens rechtshandhavingsinstanties of door instellingen, organen of instanties van de Unie ter ondersteuning van rechtshandhavingsinstanties te worden gebruikt als leugendetector of soortgelijke instrumenten?
+1a1a31a:Ja
+Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.
+	1a1a31-1:Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke 	personen?
+	1a1a31-1a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a31-2:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a31-2a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a31-2b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a31-1b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a31-3:Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de 	grondrechten van natuurlijke personen?
+	1a1a31-3a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a31-4:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a31-4a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a31-4b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a31-3b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a31-5:Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder 	behoorlijke menselijke toetsing te vervangen of te beïnvloeden?
+	1a1a31-5a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a31-6:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a31-6a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a31-6b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a31-5b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a31-7:Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?
+	1a1a31-7a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a31-8:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a31-8a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a31-8b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a31-7b:Nee
+	Result: Dan ga door na de volgende vraag.
+1a1a31b:Nee
+Result: Ga door naar de volgende vraag
+1a1a32: Is je AI-systeem bedoeld om door of namens rechtshandhavingsinstanties of door instellingen, organen of instanties van de Unie ter ondersteuning van rechtshandhavingsinstanties te worden gebruikt om de betrouwbaarheid van bewijsmateriaal tijdens het onderzoek naar of de vervolging van strafbare feiten te beoordelen?
+1a1a32a:Ja
+Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.
+	1a1a32-1:Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke 	personen?
+	1a1a32-1a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a32-2:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a32-2a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a32-2b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a32-1b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a32-3:Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de 	grondrechten van natuurlijke personen?
+	1a1a32-3a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a32-4:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a32-4a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a32-4b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a32-3b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a32-5:Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder 	behoorlijke menselijke toetsing te vervangen of te beïnvloeden?
+	1a1a32-5a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a32-6:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a32-6a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a32-6b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a32-5b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a32-7:Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?
+	1a1a32-7a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a32-8:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a32-8a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a32-8b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a32-7b:Nee
+	Result: Dan ga door na de volgende vraag.
+1a1a32b:Nee
+Result: Ga door naar de volgende vraag
+1a1a33: Is je AI-systeem bedoeld om door of namens rechtshandhavingsinstanties of door instellingen, organen of instanties van de Unie ter ondersteuning van 
+rechtshandhavingsinstanties te worden gebruikt om te beoordelen hoe groot het risico is dat een natuurlijke persoon (opnieuw) een strafbaar feit zal plegen, niet uitsluitend op basis van profilering van natuurlijke personen als bedoeld in artikel 3, punt 4, van Richtlijn (EU) 2016/680, of om persoonlijkheidskenmerken en eigenschappen of eerder crimineel gedrag van natuurlijke personen of groepen te beoordelen?
+1a1a33a:Ja
+Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.
+	1a1a33-1:Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke 	personen?
+	1a1a33-1a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a33-2:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a33-2a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a33-2b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a33-1b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a33-3:Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de 	grondrechten van natuurlijke personen?
+	1a1a33-3a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a33-4:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a33-4a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a33-4b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a33-3b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a33-5:Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder 	behoorlijke menselijke toetsing te vervangen of te beïnvloeden?
+	1a1a33-5a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a33-6:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a33-6a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a33-6b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a33-5b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a33-7:Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?
+	1a1a33-7a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a33-8:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a33-8a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a33-8b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a33-7b:Nee
+	Result: Dan ga door na de volgende vraag.
+1a1a33b:Nee
+Result: Ga door naar de volgende vraag
+1a1a34: Is je AI-systeem bedoeld om door of namens rechtshandhavingsinstanties of door instellingen, organen en instanties van de Unie ter ondersteuning van rechtshandhavingsinstanties te worden gebruikt om natuurlijke personen te profileren als bedoeld in artikel 3, punt 4, van Richtlijn (EU) 2016/680, tijdens het opsporen, onderzoeken of vervolgen van strafbare feiten?
+1a1a34a:Ja
+Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.
+	1a1a34-1:Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke 	personen?
+	1a1a34-1a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a34-2:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a34-2a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a34-2b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a34-1b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a34-3:Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de 	grondrechten van natuurlijke personen?
+	1a1a34-3a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a34-4:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a34-4a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a34-4b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a34-3b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a34-5:Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder 	behoorlijke menselijke toetsing te vervangen of te beïnvloeden?
+	1a1a34-5a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a34-6:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a34-6a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a34-6b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a34-5b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a34-7:Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?
+	1a1a34-7a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a34-8:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a34-8a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a34-8b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a34-7b:Nee
+	Result: Dan ga door na de volgende vraag.
+1a1a34b:Nee
+Result: Ga door naar de volgende vraag
+1a1a35: Is je AI-systeem bedoeld om door of namens bevoegde overheidsinstanties of door instellingen, organen of instanties van de Unie te worden gebruikt als leugendetector of soortgelijke hulpmiddelen?
+1a1a35a:Ja
+Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.
+	1a1a35-1:Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke 	personen?
+	1a1a35-1a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a35-2:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a35-2a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a35-2b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a35-1b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a35-3:Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de 	grondrechten van natuurlijke personen?
+	1a1a35-3a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a35-4:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a35-4a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a35-4b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a35-3b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a35-5:Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder 	behoorlijke menselijke toetsing te vervangen of te beïnvloeden?
+	1a1a35-5a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a35-6:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a35-6a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a35-6b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a35-5b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a35-7:Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?
+	1a1a35-7a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a35-8:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a35-8a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a35-8b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a35-7b:Nee
+	Result: Dan ga door na de volgende vraag.
+1a1a35b:Nee
+Result: Ga door naar de volgende vraag
+1a1a36: Is je AI-systeem bedoeld om door of namens bevoegde overheidsinstanties of door instellingen, organen of instanties van de Unie te worden gebruikt om risico’s te beoordelen, waaronder een veiligheidsrisico, een risico op illegale migratie of een gezondheidsrisico, uitgaat van een natuurlijke persoon die voornemens is het grondgebied van een lidstaat te betreden of dat heeft gedaan?
+1a1a36a:Ja
+Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.
+	1a1a36-1:Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke 	personen?
+	1a1a36-1a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a36-2:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a36-2a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a36-2b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a36-1b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a36-3:Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de 	grondrechten van natuurlijke personen?
+	1a1a36-3a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a36-4:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a36-4a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a36-4b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a36-3b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a36-5:Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder 	behoorlijke menselijke toetsing te vervangen of te beïnvloeden?
+	1a1a36-5a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a36-6:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a36-6a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a36-6b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a36-5b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a36-7:Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?
+	1a1a36-7a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a36-8:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a36-8a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a36-8b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a36-7b:Nee
+	Result: Dan ga door na de volgende vraag.
+1a1a36b:Nee
+Result: Ga door naar de volgende vraag
+1a1a37: Is je AI-systeem bedoeld om door of namens bevoegde overheidsinstanties  of door instellingen, organen of instanties van de Unie te worden gebruikt om bevoegde overheidsinstanties bij te staan bij de behandeling van aanvragen voor asiel, visa of verblijfsvergunningen en bij de behandeling van aanverwante klachten in verband met het al dan niet in aanmerking komen van de natuurlijke personen die een aanvraag voor een status indienen, met inbegrip van hieraan gerelateerde beoordelingen van de betrouwbaarheid van bewijsmateriaal?
+1a1a37a:Ja
+Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.
+	1a1a37-1:Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke 	personen?
+	1a1a37-1a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a37-2:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a37-2a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a37-2b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a37-1b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a37-3:Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de 	grondrechten van natuurlijke personen?
+	1a1a37-3a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a37-4:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a37-4a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a37-4b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a37-3b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a37-5:Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder 	behoorlijke menselijke toetsing te vervangen of te beïnvloeden?
+	1a1a37-5a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a37-6:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a37-6a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a37-6b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a37-5b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a37-7:Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?
+	1a1a37-7a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a37-8:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a37-8a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a37-8b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a37-7b:Nee
+	Result: Dan ga door na de volgende vraag.
+1a1a37b:Nee
+Result: Ga door naar de volgende vraag
+1a1a38: Is je AI-systeem bedoeld om door of namens bevoegde overheidsinstanties, of door instellingen, organen of instanties van de Unie, te worden gebruikt in het kader van migratie-, asiel- of grenstoezichtsbeheer, met het oog op het opsporen, herkennen of identificeren van natuurlijke personen, met uitzondering van de verificatie van reisdocumenten?
+1a1a38a:Ja
+Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.
+	1a1a38-1:Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke 	personen?
+	1a1a38-1a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a38-2:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a38-2a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a38-2b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a38-1b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a38-3:Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de 	grondrechten van natuurlijke personen?
+	1a1a38-3a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a38-4:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a38-4a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a38-4b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a38-3b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a38-5:Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder 	behoorlijke menselijke toetsing te vervangen of te beïnvloeden?
+	1a1a38-5a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a38-6:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a38-6a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a38-6b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a38-5b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a38-7:Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?
+	1a1a38-7a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a38-8:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a38-8a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a38-8b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a38-7b:Nee
+	Result: Dan ga door na de volgende vraag.
+1a1a38b:Nee
+Result: Ga door naar de volgende vraag
+1a1a39: Is je AI-systeem bedoeld om door of namens een gerechtelijke instantie te worden gebruikt om een gerechtelijke instantie te ondersteunen bij het onderzoeken en uitleggen van feiten of de wet en bij de toepassing van het recht op een concrete reeks feiten of om te worden gebruikt op soortgelijke wijze in het kader van alternatieve geschillenbeslechting?
+1a1a39a:Ja
+Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.
+	1a1a39-1:Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke 	personen?
+	1a1a39-1a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a39-2:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a39-2a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a39-2b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a39-1b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a39-3:Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de 	grondrechten van natuurlijke personen?
+	1a1a39-3a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a39-4:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a39-4a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a39-4b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a39-3b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a39-5:Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder 	behoorlijke menselijke toetsing te vervangen of te beïnvloeden?
+	1a1a39-5a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a39-6:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a39-6a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a39-6b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a39-5b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a39-7:Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?
+	1a1a39-7a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a39-8:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a39-8a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a39-8b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a39-7b:Nee
+	Result: Dan ga door na de volgende vraag.
+1a1a39b:Nee
+Result: Ga door naar de volgende vraag
+1a1a40: Is je AI-systeem bedoeld voor het beïnvloeden van de uitslag van een verkiezing of referendum of van het stemgedrag van natuurlijke personen bij de uitoefening van hun stemrecht bij verkiezingen of referenda? Dit 
+geldt niet voor AI-systemen aan de output waarvan natuurlijke personen niet rechtstreeks worden blootgesteld, zoals instrumenten die worden gebruikt om politieke campagnes te organiseren, te optimaliseren of te structureren vanuit administratief of logistiek oogpunt.
+1a1a40a:Ja
+Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten. Ga door met de vragen.
+	1a1a40-1:Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke 	personen?
+	1a1a40-1a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a40-2:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a40-2a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a40-2b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a40-1b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a40-3:Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en houdt het systeem geen significant risico op schade voor de gezondheid, veiligheid of de 	grondrechten van natuurlijke personen?
+	1a1a40-3a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a40-4:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a40-4a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a40-4b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a40-3b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a40-5:Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is niet bedoeld om de eerder voltooide menselijke beoordeling zonder 	behoorlijke menselijke toetsing te vervangen of te beïnvloeden?
+	1a1a40-5a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a40-6:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a40-6a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a40-6b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a40-5b:Nee
+	Result: Dan ga door na de volgende vraag.
+	1a1a40-7:Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?
+	1a1a40-7a:Ja
+	Result: Dan ga naar de volgende vraag
+	1a1a40-8:Voer het AI-systeem profilering van natuurlijke personen uit?
+	1a1a40-8a:Nee
+	Result: Het is mogelijk dat je AI-systeem toch niet een hoge risico systeem is.
+	1a1a40-8b:Ja
+	Result: Je AI-systeem wordt waarschijnlijk beschouwd als een hoge risico AI-systeem Het zou dan moeten voldoen aan bepaalde vereisten. Ga door on de veresiten te zien.
+	1a1a40-7b:Nee
+	Result: Dan ga door na de volgende vraag.
+1a1a40b:Nee
+Result: Het lijkt er op dat je AI-syteem is geen hoge risico systeem. We gaan kijken of er nog vereisten voor je type systeem van toepassing zijn onder de AI-verordening.
+
+
+
+1a1a1b: Een Generatieve AI systeem 
+
+
+1a1b: Nee of ik weet het niet
+Result: Ga door naar de volgende vragen
+1a2: Ga je een AI-systeem ontwikkelen, maar alleen met wetenschappelijk onderzoek als enig doel?
+1a2a: Ja, dat klopt
+Result: In dat geval is de AI verordening niet van toepassing, maar zorg er wel voor dat de activiteiten worden uitgevoerd in overeenstemming met het toepasselijke Unierecht. Bijvoorbeeld: als het AI systeem persoonsgegevens verwerkt, dan moet je nog steeds aan de AVG voldoen.
+1a2b: Nee
+Result: Ga door naar de volgende vragen
+1a3: Ga je een AI-systeem ontwikkelen die gratis beschikbaar wordt gesteld of vrijgegeven onder opensourcelicenties?
+1a3a: Ja, dat klopt
+Result: In dat geval is de AI verordening niet van toepassing, tenzij je AI-systeem op de markt wordt gebracht of in gebruik wordt gesteld als een AI-systeem met een hoog risico, of als een systeem die verbod is volgens artikel 5 van de AI-verordening of een systeem die moet voldoen aan de transparantie vereisten van artikel 50. Om hier achter te komen ga naar de volgende vraag.
+
+LINK 
+
+
+
+b. Ik wil een AI-systeem op de markt aanbieden, al dan niet tegen betaling, met het oog op distributie of gebruik op de markt van de Unie.
+c. Ik wil een AI-systeem van een derde partij aanschaffen voor om in gebruik te nemen
+d. Ik wil een algoritme ontwikkelen die geen AI-systeem is volgens de definitie van de AI-verordening in artikel 3.
+Result: In dat geval is de AI-verordening niet van toepassing, maar je moet nog steeds voldoen aan bepaalde eisen. Blijf daarom de vragen beantwoorden (IN ONTWIKKELING)
+e. Ik wil een algoritme systeem van een derde partij aanschaffen voor om in gebruik te nemen die geen AI-systeem is volgens de definitie van de AI-verordening in artikel 3.
+Result: In dat geval is de AI-verordening niet van toepassing, maar je moet nog steeds voldoen aan bepaalde eisen. Blijf daarom de vragen beantwoorden (IN ONTWIKKELING)
+
+
+
+
+
+
+
+
+
+
+
+
