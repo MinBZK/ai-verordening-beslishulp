@@ -1,6 +1,8 @@
 ---
 title: AI Act Beslisboom
 ---
+
+``` mermaid
 graph 
 root_question["Waar heb je hulp bij nodig?"]
 0.node["Ik wil een AI-systeem ontwikkelen"]
@@ -1951,3 +1953,4 @@ root_question ---> 0.question
 0.0.result["In dat geval is de AI verordening niet van toepassing, tenzij je AI-systeem op de markt wordt gebracht of in gebruik wordt gesteld als een AI-systeem met een hoog risico, of als een systeem die verboden is volgens artikel 5 van de AI-verordening of een systeem die moet voldoen aan de transparantie vereisten van artikel 50. Ga door naar de volgende vraag om hier achter te komen."]
 0.question ---> 0.0.node
 0.0.node ---> 0.0.result
+```
