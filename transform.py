@@ -4,22 +4,6 @@ from python_mermaid.diagram import (
     MermaidDiagram, Node, Link
 )
 
-#
-# meg = Node("Meg")
-# jo = Node("Jo")
-# beth = Node("Beth")
-# amy = Node("Amy")
-# robert = Node("Robert March")
-#
-# nodes = [meg, jo, beth, amy, robert]
-#
-# edges = [
-#     Link(robert, meg),
-#     Link(robert, jo),
-#     Link(robert, beth),
-#     Link(robert, amy),
-# ]
-
 nodes = []
 edges = []
 
