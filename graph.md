@@ -24,14 +24,14 @@ title: AI Act Beslisboom
 ``` mermaid
 graph 
 
-    %%%%%%%%%% Root question - def ARK %%%%%%%%%%
+    %%%%%%%%%% Root question - definition ARK %%%%%%%%%%
     root_question["`Voldoet je algoritme aan de definitie van 'algoritme' van de Algemene Rekenkamer? 'Een set van regels en instructies die en computer geautomatiseerd volgt bij het maken van berekeningen om een probleem op te lossen of een vraag te beantwoorden'`"]
     root_question -- Ja -->  0.node
     root_question -- Nee --> 1.node
     0.node["`Betreft je algoritme een AI-systeem volgens de definitie van de AI Verordening? *Nog verder uitwerken*`"]
     1.node["`Je gebruikt geen algoritme. De AI Verordening is niet van toepassing. Houd je aan bestaande wet- en regelgeving (bijv. de AVG wanneer je persoonsgegevens gebruikt.)`"]
 
-    %%%%%%%%%% Node 0 - def AI Act %%%%%%%%%%
+    %%%%%%%%%% Node 0 - definition AI system %%%%%%%%%%
     0.node -- Ja, maar geen general purpose AI --> A.0.node
     0.node -- Ja, wel general purpose AI --> B.0.node
     0.node -- Nee --> C.0.node
