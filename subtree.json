@@ -1,0 +1,116 @@
+{
+	"question": "Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en is er geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+	"options": [
+		{
+			"text": "Ja",
+			"result": "",
+			"next": {
+				"question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+				"options": [
+					{
+						"text": "Nee",
+						"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+					},
+					{
+						"text": "Ja",
+						"result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. We gaan nu bepalen welke rol je hebt om te bepalen aan welke vereisten je moet voldoen.",
+						"next": {
+							"file": "determine-role-ex-transparantie.json"
+						}
+					}
+				]
+			}
+		},
+		{
+			"text": "Nee",
+			"result": "Ga dan door naar de volgende vraag.",
+			"next": {
+				"question": "Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?",
+				"options": [
+					{
+						"text": "Ja",
+						"result": "",
+						"next": {
+							"question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+							"options": [
+								{
+									"text": "Nee",
+									"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+								},
+								{
+									"text": "Ja",
+									"result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. We gaan nu bepalen welke rol je hebt om te bepalen aan welke vereisten je moet voldoen.",
+									"next": {
+										"file": "determine-role-ex-transparantie.json"
+									}
+								}
+							]
+						}
+					},
+					{
+						"text": "Nee",
+						"result": "Ga dan door naar de volgende vraag.",
+						"next": {
+							"question": "Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is het niet bedoeld om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?",
+							"options": [
+								{
+									"text": "Ja",
+									"result": "",
+									"next": {
+										"question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+										"options": [
+											{
+												"text": "Nee",
+												"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+											},
+											{
+												"text": "Ja",
+												"result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. We gaan nu bepalen welke rol je hebt om te bepalen aan welke vereisten je moet voldoen.",
+												"next": {
+													"file": "determine-role-ex-transparantie.json"
+												}
+											}
+										]
+									}
+								},
+								{
+									"text": "Nee",
+									"result": "Ga dan door naar de volgende vraag.",
+									"next": {
+										"question": "Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?",
+										"options": [
+											{
+												"text": "Ja",
+												"result": "",
+												"next": {
+													"question": "Voert het AI-systeem profilering van natuurlijke personen uit?",
+													"options": [
+														{
+															"text": "Nee",
+															"result": "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is."
+														},
+														{
+															"text": "Ja",
+															"result": "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. We gaan nu bepalen welke rol je hebt om te bepalen aan welke vereisten je moet voldoen.",
+															"next": {
+																"file": "determine-role-ex-transparantie.json"
+															}
+														}
+													]
+												}
+											},
+											{
+												"text": "Nee",
+												"result": "Je systeem valt niet onder de uitzondering en het blijft beschouwd als een hoog risico AI systeem."
+											}
+										]
+									}
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	]
+}
