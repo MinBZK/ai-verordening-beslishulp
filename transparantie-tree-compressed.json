@@ -1,0 +1,68 @@
+{
+	"question": "Ga je een AI-systeem of een AI-model op de markt brengen of in gebruik stellen onder eigen naam of merk, al dan niet tegen betaling?\nOf ben je een aanbieder van een AI-systeem, met inbegrip van een AI-systeem voor algemene doeleinden, waarin een AI-model is geïntegreerd, ongeacht of het AI-model door hemzelf wordt verstrekt en verticaal geïntegreerd is of door een andere entiteit wordt aangeboden op basis van contractuele betrekkingen?",
+	"options": [
+		{
+			"text": "Ja, dat klopt",
+			"result": "Dan ben je een aanbieder volgens de AI verordening.",
+			"next": {
+				"file": "transparantie-tree-aanbieder.json"
+			}
+		},
+		{
+			"text": "Nee, dat klopt niet",
+			"result": "We gaan kijken of je mogelijk een andere rol hebt",
+			"next": {
+				"question": "Ben je een overheidsinstantie die een AI-systeem onder eigen verantwoordelijkheid gebruikt? Het AI-systeem wordt niet gebruikt in het kader van een persoonlijke niet-beroepsactiviteit",
+				"options": [
+					{
+						"text": "Nee, dat klopt niet",
+						"result": "Deze beslisboom is gemaakt voor alleen deze twee rollen. Controleer nog een keer goed of één van deze rollen misschien toch op jou van toepassing is."
+					},
+					{
+						"text": "Ja, dat klopt",
+						"result": "",
+						"next": {
+							"question": "Ontwikkel je AI-systemen voor het herkennen van emoties of een systeem voor biometrische categorisering",
+							"options": [
+								{
+									"text": "Ja, dat klopt",
+									"result": "Dan moet je voldoen aan de transparantieverplichtingen van art. 50(3)."
+								},
+								{
+									"text": "Nee, dat klopt niet",
+									"result": "",
+									"next": {
+										"question": "Ontwikkel je AI-systemen voor het herkennen van emoties of systemen voor biometrische categorisering?",
+										"options": [
+											{
+												"text": "Ja, dat klopt",
+												"result": "Dan moet je voldoen aan de transparantieverplichtingen van art. 50(4)."
+											},
+											{
+												"text": "Nee, dat klopt niet",
+												"result": "",
+												"next": {
+													"question": "Ontwikkel je AI-systemen die tekst genereren of bewerken en die worden gepubliceerd om het publiek te informeren over aangelegenheden van algemeen belang?",
+													"options": [
+														{
+															"text": "Ja, dat klopt",
+															"result": "Dan moet je voldoen aan de transparantieverplichtingen van art. 50(4)"
+														},
+														{
+															"text": "Nee, dat klopt niet",
+															"result": "Dan hoef je niet te voldoen aan de transparantieverplichtingen. Houd je wel aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)"
+														}
+													]
+												}
+											}
+										]
+									}
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	]
+}
