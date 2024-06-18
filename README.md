@@ -1,10 +1,8 @@
 # AI-act-beslisboom
-<p> Repository voor de beslisboom op basis van de AI Act <br>
+
+Repository voor de beslisboom op basis van de AI Act
  
-<p> De beslisboom bestaat uit:</br>
-     <ul>
-<li> Decision Treev05 file: beslisboom met file-references </li>
-<li> decision-tree.json: beslisboom met nieuwe inhoud (dit is het bestand dat we online moeten gebruiken) </li>
-<li> subtree.json: subtree voor uitzonderingen art. 6 AI-verordening </li>
-<li> determine-role-ex-transparantie: subtree voor het bepalen van rolen aanbieder en gebruiksverantvoordelijke </li>
-  </ul>
+De beslisboom bestaat uit meerdere json files: een hoofdbestand en meerdere sub-trees die in aparte files staan zodat ze geïnclude kunnen worden.
+Er wordt een naming-convention gebruikt om onderscheid te maken: wanneer de naam van een json bestand eindigt in -compressed.json, dan bevat het referenties naar andere json bestanden (sub-trees). Wanneer het niet eindigt op -compressed.json (maar gewoon .json) dan staan er geen referenties in.
+
+Door middel van de aanwezige bashscripts kan de volledige beslisboom worden gegenereerd (decision-tree.json)
