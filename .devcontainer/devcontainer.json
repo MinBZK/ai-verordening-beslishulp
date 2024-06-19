@@ -11,7 +11,8 @@
       "settings": {
         "yaml.schemas": {
           "schemas/base.schema.json": [
-            "decision-tree-compressed-*.yaml"
+            "decision-tree-compressed-new.yaml",
+            "decision-tree.yaml"
           ]
         }
       }
