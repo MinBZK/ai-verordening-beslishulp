@@ -8,21 +8,20 @@
 #
 # Note 2: Because referenced files can also contain references themselves, the order in which the expension is done matters. Use the supplied make.sh to execute everything in the correct order
 
-
-
+# make sure the script is called with exactly one argument
 if [ "$#" -ne 1 ]; then
     echo "Usage: $0 <compressed_json_file>"
     exit 1
 fi
 
 # make sure the file name ends with -compressed.json
-if [[ "$1" != *-compressed.json ]]; then
+if [[ "$1" != *-compressed.json ]]; then 
     echo "Error: Input file must end with -compressed.json"
     exit 1
 fi
 
-input_file="$1"
-output_file="${input_file/-compressed.json/.json}"
+input_file="$1" # input file
+output_file="${input_file/-compressed.json/.json}" # replace -compressed.json with .json
 
 # make sure input file exists
 if [ ! -f "$input_file" ]; then
@@ -36,24 +35,15 @@ if ! jq empty "$input_file" &>/dev/null; then
     exit 1
 fi
 
-# prompt overwrite if necessary
-if [ -f "$output_file" ]; then
-    read -p "File '$output_file' exists. Overwrite? (y/n) " overwrite
-    if [ "$overwrite" != "y" ]; then
-        echo "Exiting script."
-        exit
-    fi
-fi
-
 temp_file=$(mktemp)
 cp "$input_file" "$temp_file"
 
-# this is where the magic happens
+# get all attributes in the file that have a "file" attribute
 jq -r '.. | objects | select(has("file")) | .file' "$input_file" | \
 while IFS= read -r filename; do
     if [ -f "$filename" ]; then
         # replace content in the temporary file
-        jq --tab --argfile newContent "$filename" --arg filename "$filename" '
+        jq --tab --slurpfile newContent "$filename" --arg filename "$filename" '
         (.. | select(type == "object" and .file == $filename)) |= $newContent' "$temp_file" > "$temp_file.tmp" && mv "$temp_file.tmp" "$temp_file"
     else
         echo "Warning: Replacement file '$filename' does not exist."
