@@ -16,10 +16,10 @@ def read_json(file: str) -> dict:
         json_str = f.read()
         data = json.loads(json_str)
     return data
-        
+
 def write_yaml(dict: dict, file: str):
     with open(file, 'w') as f:
-        yaml.dump(dict, f, default_flow_style=False, indent=None, width=float("inf"))
+        yaml.dump(dict, f, default_flow_style=False, sort_keys=False, width=float("inf"))
 
 
 if __name__ == '__main__':
