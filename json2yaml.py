@@ -5,6 +5,7 @@ import yaml
 import argparse
 from pathlib import Path
 import logging
+from hashlib import sha256
 
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
@@ -92,15 +93,24 @@ def remove_duplicates():
 
     for question in questions:
         duplicate_q = question.get('question')
+        answer_array = []
+        for answer in question.get('answers'):
+            answer_array.append(answer.get('result',''))
+
+        print(answer_array)
+
         duplicate_id = question.get('questionId')
-        if duplicate_q in q:
-            index = q.index(duplicate_q)
+
+        hashed = duplicate_q + ''.join(answer_array)
+        if hashed in q:
+            print(duplicate_q)
+            index = q.index(hashed)
             change_answer_id(new_questions,duplicate_id, ids[index])
 
             pass
         else:
             new_questions.append(question)
-            q.append(duplicate_q)
+            q.append(hashed)
             ids.append(duplicate_id)
 
     return new_questions

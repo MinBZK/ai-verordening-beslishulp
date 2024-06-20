@@ -20,7 +20,7 @@ questions:
   - answer: Ja, het betreft een AI-systeem, maar geen AI-systeem voor algemene doeleinden
     nextQuestionId: 0.0.0
   - answer: Ja, het betreft een AI-systeem voor algemene doeleinden
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.0
+    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
   - answer: Nee
     nextQuestionId: 0.0.0.1
 - questionId: 0.0.0
@@ -166,9 +166,17 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.0
+    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
   - answer: Nee
     nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1
+- questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
+  question: "Ga je een AI-systeem of een AI-model op de markt brengen of in gebruik stellen onder eigen naam of merk, al dan niet tegen betaling?\nOf ben je een aanbieder van een AI-systeem, met inbegrip van een AI-systeem voor algemene doeleinden, waarin een AI-model is ge\xEFntegreerd, ongeacht of het AI-model door hemzelf wordt verstrekt en verticaal ge\xEFntegreerd is of door een andere entiteit wordt aangeboden op basis van contractuele betrekkingen?"
+  questionType: SingleChoice
+  answers:
+  - answer: Ja, dat klopt
+    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0.0
+  - answer: Nee, dat klopt niet
+    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.0.1
 - questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0.0
   question: Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en is er geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?
   questionType: SingleChoice
@@ -230,7 +238,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.0
+    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
   - answer: Nee
     nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1
 - questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1
@@ -238,7 +246,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.0
+    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
   - answer: Nee
     nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1
 - questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1
@@ -246,7 +254,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.0
+    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
   - answer: Nee
     nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1
 - questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1
@@ -254,7 +262,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.0
+    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
   - answer: Nee
     nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
 - questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
@@ -262,7 +270,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.0
+    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
   - answer: Nee
     nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
 - questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
@@ -270,7 +278,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.0
+    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
   - answer: Nee
     nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
 - questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
@@ -278,7 +286,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.0
+    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
   - answer: Nee
     nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
 - questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
@@ -286,7 +294,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.0
+    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
   - answer: Nee
     nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
 - questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
@@ -294,7 +302,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.0
+    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
   - answer: Nee
     nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
 - questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
@@ -302,7 +310,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.0
+    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
   - answer: Nee
     nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
 - questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
@@ -310,7 +318,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.0
+    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
   - answer: Nee
     nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
 - questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
@@ -318,7 +326,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.0
+    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
   - answer: Nee
     nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
 - questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
@@ -326,7 +334,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.0
+    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
   - answer: Nee
     nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
 - questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
@@ -334,7 +342,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.0
+    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
   - answer: Nee
     nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
 - questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
@@ -342,7 +350,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.0
+    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
   - answer: Nee
     nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
 - questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
@@ -350,7 +358,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.0
+    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
   - answer: Nee
     nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
 - questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
@@ -358,7 +366,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.0
+    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
   - answer: Nee
     nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
 - questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
@@ -366,7 +374,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.0
+    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
   - answer: Nee
     nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
 - questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
@@ -374,7 +382,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.0
+    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
   - answer: Nee
     nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
 - questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
@@ -382,7 +390,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.0
+    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
   - answer: Nee
     nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
 - questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
@@ -390,7 +398,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.0
+    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
   - answer: Nee
     nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
 - questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
@@ -398,7 +406,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.0
+    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
   - answer: Nee
     nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
 - questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
@@ -406,7 +414,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.0
+    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
   - answer: Nee
     nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
 - questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
@@ -414,9 +422,9 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.0
+    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
   - answer: Nee
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.0
+    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
 - questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
   question: Ontwikkel je AI-systemen voor het herkennen van emoties of een systeem voor biometrische categorisering
   questionType: SingleChoice
@@ -465,3 +473,11 @@ questions:
     result: 'Je AI-systeem moet voldoen aan de vereisten van artikel 55 van de AI-verordening. Let op: het kan zijn dat je ook aan de transparantieverplichtingen van artikel 50 moet voldoen.'
   - answer: Nee, dat klopt niet
     result: 'Dan ben je een AI systeem voor algemene doeleinden aan het ontwikkelen en je moet voldoen de vereisten van artikel 53. Let op: het kan zijn dat je ook aan de transparantieverplichtingen van artikel 50 moet voldoen.'
+- questionId: 0.0.1.1
+  question: Ben je een overheidsinstantie die een AI-systeem onder eigen verantwoordelijkheid gebruikt? Het AI-systeem wordt niet gebruikt in het kader van een persoonlijke niet-beroepsactiviteit
+  questionType: SingleChoice
+  answers:
+  - answer: Ja, dat klopt
+    result: Dan ben je een gebruiksverantwoordelijke volgens de AI verordening. Als je een AI-systeem voor algemene doeleinden gebruikt dan moet je nog steeds voldoen aan artikel 25, 27, 50, 86.
+  - answer: Nee, dat klopt niet
+    result: "Deze beslisboom is gemaakt voor alleen deze twee rollen. Controleer nog een keer goed of \xE9\xE9n van deze rollen misschien toch op jou van toepassing is."
