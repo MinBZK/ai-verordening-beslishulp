@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ing
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  rules:
+    - host: beslisboom.apps.digilab.network
+      http:
+        paths:
+          - backend:
+              service:
+                name: svc
+                port:
+                  number: 80
+            path: /
+            pathType: Prefix
+  tls:
+    - hosts:
+        - beslisboom.apps.digilab.network
+      secretName: beslisboom-tls
