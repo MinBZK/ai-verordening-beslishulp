@@ -24,9 +24,9 @@ questions:
   - answer: Ja, het betreft een AI-systeem, maar geen AI-systeem voor algemene doeleinden
     nextQuestionId: '2.0'
   - answer: Ja, het betreft een AI-systeem voor algemene doeleinden
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
+    nextQuestionId: '7.0'
   - answer: Nee
-    nextQuestionId: 0.0.0.1
+    nextQuestionId: '9.0'
 
 ### reikwijdte AI verordening
 - questionId: '2.0'
@@ -42,13 +42,15 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Het antwoord op alle vier de vragen is Nee
+    answerComment: "De AI-verordening is van toepassing."
     nextQuestionId: '3.0'
   - answer: "\xC9\xE9n of meer vragen zijn met Ja beantwoord"
-    nextQuestionId: 0.0.0.1
+    answerComment: "De AI-verordening is niet van toepassing"
+    nextQuestionId: '9.0'
 
 ### Verboden AI systemen
 - questionId: '3.0'
-  question: We gaan bepalen of je AI-systeem valt onder de veboden systemen van artikel 5 van de AI-verordening. Zou je AI-systeem gebruik kunnen gaan maken van subliminale technieken om mensen onbewust of bewust kunnen manipuleren, waardoor ze beslissingen nemen die ze anders niet zouden hebben genomen?
+  question: We gaan bepalen of je AI-systeem valt onder de verboden systemen van artikel 5 van de AI-verordening. Zou je AI-systeem gebruik kunnen gaan maken van subliminale technieken om mensen onbewust of bewust kunnen manipuleren, waardoor ze beslissingen nemen die ze anders niet zouden hebben genomen?
   questionType: SingleChoice
   answers:
   - answer: Ja
@@ -110,6 +112,7 @@ questions:
   - answer: Ja
     result: Deze type AI-systemen zijn in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om dit verder te bekijken ...
   - answer: Nee
+    answerComment: Het lijkt er op dat je AI-systeem geen verboden systeem is. We gaan nu bepalen of het systeem valt onder de hoog-risico categorisatie van de AI-verordening.
     nextQuestionId: '4.0'
 
 ### Hoog risico AI Act - bijlage I
@@ -118,6 +121,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
+    answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem en moet voldoen aan bepaalde vereisten. We gaan nu bepalen welke rol je hebt om te bepalen aan welke vereisten je moet voldoen.
     nextQuestionId: '4.2.0'
   - answer: Nee
     nextQuestionId: '4.1'
@@ -126,6 +130,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
+    answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem en moet voldoen aan bepaalde vereisten. We gaan nu bepalen welke rol je hebt om te bepalen aan welke vereisten je moet voldoen.
     nextQuestionId: '4.2.0'
   - answer: Nee
     nextQuestionId: '5.0'
@@ -135,41 +140,41 @@ questions:
   question: "Ga je een AI-systeem of een AI-model op de markt brengen of in gebruik stellen onder eigen naam of merk, al dan niet tegen betaling?\nOf ben je een aanbieder van een AI-systeem, met inbegrip van een AI-systeem voor algemene doeleinden, waarin een AI-model is ge\xEFntegreerd, ongeacht of het AI-model door hemzelf wordt verstrekt en verticaal ge\xEFntegreerd is of door een andere entiteit wordt aangeboden op basis van contractuele betrekkingen?"
   questionType: SingleChoice
   answers:
-  - answer: Ja, dat klopt
+  - answer: Ja
     result: 'Dan ben je een aanbieder volgens de AI verordening. Je bent een hoog risico AI systeem aan het ontwikkelen en je moet voldoen aan bepaalde vereisten van de AI-verordening (o.a. artikelen 4, 6, 9 t/m 21, 25, 40, 43, 47 t/m 50, 52, 60, 61, 72, 73)'
-  - answer: Nee, dat klopt niet
+  - answer: Nee
     nextQuestionId: '4.2.1'
 - questionId: '4.2.1'
   question: Ben je een overheidsinstantie die een AI-systeem onder eigen verantwoordelijkheid gebruikt? Het AI-systeem wordt niet gebruikt in het kader van een persoonlijke niet-beroepsactiviteit
   questionType: SingleChoice
   answers:
-  - answer: Ja, dat klopt
+  - answer: Ja
     nextQuestionId: '4.2.2'
-  - answer: Nee, dat klopt niet
+  - answer: Nee
     result: "Deze beslisboom is gemaakt voor alleen deze twee rollen. Controleer nog een keer goed of \xE9\xE9n van deze rollen misschien toch op jou van toepassing is."
 - questionId: '4.2.2'
   question: Zet je jouw naam of merk op een AI-systeem met een hoog risico dat reeds in de handel is gebracht of in gebruik is gesteld, onverminderd contractuele regelingen waarin wordt bepaald dat de verplichtingen anders worden toegewezen
   questionType: SingleChoice
   answers:
-  - answer: Ja, dat klopt
+  - answer: Ja
     result: Dan word je naast gebruiksverantwoordelijke ook beschouwd als een aanbieder van een AI-systeem met een hoog risico en ben je onderworpen aan de verplichtingen van de aanbieder uit hoofde van artikel 16. We raden je daarom aan de beslisboom nog een keer te doorlopen en daarbij aan te geven dat je een aanbieder van een AI-systeem met een hoog risico bent.
-  - answer: Nee, dat klopt niet
+  - answer: Nee
     nextQuestionId: '4.2.3'
 - questionId: '4.2.3'
   question: "Breng je een substanti\xEBle wijziging aan in een AI-systeem met een hoog risico dat reeds in de handel is gebracht of reeds in gebruik is gesteld op zodanige wijze dat het systeem een AI-systeem met een hoog risico blijft op grond van artikel 6"
   questionType: SingleChoice
   answers:
-  - answer: Ja, dat klopt
+  - answer: Ja
     result: Dan word je naast gebruiksverantwoordelijke ook beschouwd als een aanbieder van een AI-systeem met een hoog risico en ben je onderworpen aan de verplichtingen van de aanbieder uit hoofde van artikel 16. We raden je daarom aan de beslisboom nog een keer te doorlopen en daarbij aan te geven dat je een aanbieder van een AI-systeem met een hoog risico bent.
-  - answer: Nee, dat klopt niet
+  - answer: Nee
     nextQuestionId: '4.2.4'
 - questionId: '4.2.4'
   question: Wijzig je het beoogde doel van een AI-systeem, met inbegrip van een AI-systeem voor algemene doeleinden, dat niet als een systeem met een hoog risico is geclassificeerd en reeds in de handel is gebracht of in gebruik is gesteld, op zodanige wijze dat het betrokken AI-systeem een AI-systeem met een hoog risico overeenkomstig artikel 6 wordt
   questionType: SingleChoice
   answers:
-  - answer: Ja, dat klopt
+  - answer: Ja
     result: Dan word je naast gebruiksverantwoordelijke ook beschouwd als een aanbieder van een AI-systeem met een hoog risico en ben je onderworpen aan de verplichtingen van de aanbieder uit hoofde van artikel 16. We raden je daarom aan de beslisboom nog een keer te doorlopen en daarbij aan te geven dat je een aanbieder van een AI-systeem met een hoog risico bent.
-  - answer: Nee, dat klopt niet
+  - answer: Nee
     result: Dan word je alleen als gebruiksverantwoordelijke beschouwd en niet als een aanbieder van een AI-systeem met een hoog risico
 
 ### Hoog risico AI - toepassingsgebieden
@@ -178,7 +183,8 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
+    answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten, afhankelijk van welke rol je hebt. Dit gaan we nu bepalen.
+    nextQuestionId: '5.24.0'
   - answer: Nee
     nextQuestionId: '5.1'
 - questionId: '5.1'
@@ -186,7 +192,8 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
+    answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten, afhankelijk van welke rol je hebt. Dit gaan we nu bepalen.
+    nextQuestionId: '5.24.0'
   - answer: Nee
     nextQuestionId: '5.2'
 - questionId: '5.2'
@@ -194,7 +201,8 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
+    answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten, afhankelijk van welke rol je hebt. Dit gaan we nu bepalen.
+    nextQuestionId: '5.24.0'
   - answer: Nee
     nextQuestionId: '5.3'
 - questionId: '5.3'
@@ -202,7 +210,8 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
+    answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten, afhankelijk van welke rol je hebt. Dit gaan we nu bepalen.
+    nextQuestionId: '5.24.0'
   - answer: Nee
     nextQuestionId: '5.4'
 - questionId: '5.4'
@@ -210,7 +219,8 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
+    answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten, afhankelijk van welke rol je hebt. Dit gaan we nu bepalen.
+    nextQuestionId: '5.24.0'
   - answer: Nee
     nextQuestionId: '5.5'
 - questionId: '5.5'
@@ -218,7 +228,8 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
+    answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten, afhankelijk van welke rol je hebt. Dit gaan we nu bepalen.
+    nextQuestionId: '5.24.0'
   - answer: Nee
     nextQuestionId: '5.6'
 - questionId: '5.6'
@@ -226,7 +237,8 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
+    answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten, afhankelijk van welke rol je hebt. Dit gaan we nu bepalen.
+    nextQuestionId: '5.24.0'
   - answer: Nee
     nextQuestionId: '5.7'
 - questionId: '5.7'
@@ -234,7 +246,8 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
+    answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten, afhankelijk van welke rol je hebt. Dit gaan we nu bepalen.
+    nextQuestionId: '5.24.0'
   - answer: Nee
     nextQuestionId: '5.8'
 - questionId: '5.8'
@@ -242,7 +255,8 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
+    answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten, afhankelijk van welke rol je hebt. Dit gaan we nu bepalen.
+    nextQuestionId: '5.24.0'
   - answer: Nee
     nextQuestionId: '5.9'
 - questionId: '5.9'
@@ -250,7 +264,8 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
+    answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten, afhankelijk van welke rol je hebt. Dit gaan we nu bepalen.
+    nextQuestionId: '5.24.0'
   - answer: Nee
     nextQuestionId: '5.10'
 - questionId: '5.10'
@@ -258,7 +273,8 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
+    answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten, afhankelijk van welke rol je hebt. Dit gaan we nu bepalen.
+    nextQuestionId: '5.24.0'
   - answer: Nee
     nextQuestionId: '5.11'
 - questionId: '5.11'
@@ -266,7 +282,8 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
+    answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten, afhankelijk van welke rol je hebt. Dit gaan we nu bepalen.
+    nextQuestionId: '5.24.0'
   - answer: Nee
     nextQuestionId: '5.12'
 - questionId: '5.12'
@@ -274,7 +291,8 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
+    answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten, afhankelijk van welke rol je hebt. Dit gaan we nu bepalen.
+    nextQuestionId: '5.24.0'
   - answer: Nee
     nextQuestionId: '5.13'
 - questionId: '5.13'
@@ -282,7 +300,8 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
+    answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten, afhankelijk van welke rol je hebt. Dit gaan we nu bepalen.
+    nextQuestionId: '5.24.0'
   - answer: Nee
     nextQuestionId: '5.14'
 - questionId: '5.14'
@@ -290,7 +309,8 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
+    answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten, afhankelijk van welke rol je hebt. Dit gaan we nu bepalen.
+    nextQuestionId: '5.24.0'
   - answer: Nee
     nextQuestionId: '5.15'
 - questionId: '5.15'
@@ -298,7 +318,8 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
+    answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten, afhankelijk van welke rol je hebt. Dit gaan we nu bepalen.
+    nextQuestionId: '5.24.0'
   - answer: Nee
     nextQuestionId: '5.16'
 - questionId: '5.16'
@@ -306,7 +327,8 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
+    answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten, afhankelijk van welke rol je hebt. Dit gaan we nu bepalen.
+    nextQuestionId: '5.24.0'
   - answer: Nee
     nextQuestionId: '5.17'
 - questionId: '5.17'
@@ -314,7 +336,8 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
+    answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten, afhankelijk van welke rol je hebt. Dit gaan we nu bepalen.
+    nextQuestionId: '5.24.0'
   - answer: Nee
     nextQuestionId: '5.18'
 - questionId: '5.18'
@@ -322,7 +345,8 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
+    answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten, afhankelijk van welke rol je hebt. Dit gaan we nu bepalen.
+    nextQuestionId: '5.24.0'
   - answer: Nee
     nextQuestionId: '5.19'
 - questionId: '5.19'
@@ -330,7 +354,8 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
+    answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten, afhankelijk van welke rol je hebt. Dit gaan we nu bepalen.
+    nextQuestionId: '5.24.0'
   - answer: Nee
     nextQuestionId: '5.19'
 - questionId: '5.19'
@@ -338,7 +363,8 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
+    answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten, afhankelijk van welke rol je hebt. Dit gaan we nu bepalen.
+    nextQuestionId: '5.24.0'
   - answer: Nee
     nextQuestionId: '5.20'
 - questionId: '5.20'
@@ -346,7 +372,8 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
+    answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten, afhankelijk van welke rol je hebt. Dit gaan we nu bepalen.
+    nextQuestionId: '5.24.0'
   - answer: Nee
     nextQuestionId: '5.21'
 - questionId: '5.21'
@@ -354,7 +381,8 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
+    answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten, afhankelijk van welke rol je hebt. Dit gaan we nu bepalen.
+    nextQuestionId: '5.24.0'
   - answer: Nee
     nextQuestionId: '5.22'
 - questionId: '5.22'
@@ -362,7 +390,8 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
+    answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten, afhankelijk van welke rol je hebt. Dit gaan we nu bepalen.
+    nextQuestionId: '5.24.0'
   - answer: Nee
     nextQuestionId: '5.23'
 - questionId: '5.23'
@@ -370,118 +399,195 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0 # dit verwijst naar dezelfde vraag?
+    answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten, afhankelijk van welke rol je hebt. Dit gaan we nu bepalen.
+    nextQuestionId: '5.24.0'
   - answer: Nee
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0 # dit verwijst naar dezelfde vraag?
-
+    answerComment: Het blijkt dat je AI-systeem niet verboden is en geen hoog risico AI-systeem is. Het kan echter zijn dat het wel aan bepaalde transparantieverplichtingen moet voldoen ([link naar art. 50 transparantieverplichtingen]).\nWe gaan nu eerst bepalen wat voor rol je hebt.
+    nextQuestionId: '8.0'
 
 ### check rol hoog risico AI - toepassingsgebieden
-- questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0
+- questionId: '5.24.0'
   question: "Ga je een AI-systeem of een AI-model op de markt brengen of in gebruik stellen onder eigen naam of merk, al dan niet tegen betaling?\nOf ben je een aanbieder van een AI-systeem, met inbegrip van een AI-systeem voor algemene doeleinden, waarin een AI-model is ge\xEFntegreerd, ongeacht of het AI-model door hemzelf wordt verstrekt en verticaal ge\xEFntegreerd is of door een andere entiteit wordt aangeboden op basis van contractuele betrekkingen?"
   questionType: SingleChoice
   answers:
-  - answer: Ja, dat klopt
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0.0
-  - answer: Nee, dat klopt niet
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.0.1
+  - answer: Ja
+    answerComment: "Dan ben je een aanbieder volgens de AI verordening.\nJe bent een hoog risico AI systeem aan het ontwikkelen en je moet voldoen aan bepaalde vereisten van de AI-verordening (o.a. artikelen 4, 6, 9 t/m 21, 25, 40, 43, 47 t/m 50, 52, 60, 61, 72, 73). Ga door naar de volgende vragen om te bepalen of je hoog risico AI-systeem valt onder één van de uitzonderingen"
+    nextQuestionId: '5.24.0.0'
+  - answer: Nee
+    answerComment: "Je bent geen aanbieder. We gaan kijken of je mogelijk een andere rol hebt"
+    nextQuestionId: '5.24.1'
+- questionId: '5.24.1'
+  question: "Ben je een overheidsinstantie die een AI-systeem onder eigen verantwoordelijkheid gebruikt? Het AI-systeem wordt niet gebruikt in het kader van een persoonlijke niet-beroepsactiviteit"
+  questionType: SingleChoice
+  answers:
+  - answer: Ja
+    answerComment: "Dan ben je een gebruiksverantwoordelijke volgens de AI verordening.\nJe bent verantwoordelijk voor het gebruik van een hoog risico AI systeem en je moet voldoen aan bepaalde vereisten van de AI-verordening (o.a. artikelen 12, 25 t/m 27, 49, 50, 86). Let op! Er zijn omstandigheden waaronder je als gebruiksverantwoordelijke beschouwd wordt als een aanbieder van een AI-systeem met een hoog risico. We gaan nu vaststellen of dat het geval is."
+    nextQuestionId: '5.24.2'
+  - answer: Nee
+    result: "Je bent geen gebruiksverantwoordelijke en geen aanbieder. Deze beslisboom is gemaakt voor alleen deze twee rollen. Controleer nog een keer goed of één van deze rollen misschien toch op jou van toepassing is."
+##### check of je wordt beschouwd als aanbieder
+- questionId: '5.24.2'
+  question: "Zet je jouw naam of merk op een AI-systeem met een hoog risico dat reeds in de handel is gebracht of in gebruik is gesteld, onverminderd contractuele regelingen waarin wordt bepaald dat de verplichtingen anders worden toegewezen"
+  questionType: SingleChoice
+  answers:
+  - answer: Ja
+    result: "Dan word je naast gebruiksverantwoordelijke ook beschouwd als een aanbieder van een AI-systeem met een hoog risico en ben je onderworpen aan de verplichtingen van de aanbieder uit hoofde van artikel 16. We raden je daarom aan de beslisboom nog een keer te doorlopen en daarbij aan te geven dat je een aanbieder van een AI-systeem met een hoog risico bent."
+  - answer: Nee
+    nextQuestionId: '5.24.3'
+- questionId: '5.24.3'
+  question: "Breng je een substantiële wijziging aan in een AI-systeem met een hoog risico dat reeds in de handel is gebracht of reeds in gebruik is gesteld op zodanige wijze dat het systeem een AI-systeem met een hoog risico blijft op grond van artikel 6"
+  questionType: SingleChoice
+  answers:
+  - answer: Ja
+    result: "Dan word je naast gebruiksverantwoordelijke ook beschouwd als een aanbieder van een AI-systeem met een hoog risico en ben je onderworpen aan de verplichtingen van de aanbieder uit hoofde van artikel 16. We raden je daarom aan de beslisboom nog een keer te doorlopen en daarbij aan te geven dat je een aanbieder van een AI-systeem met een hoog risico bent."
+  - answer: Nee
+    nextQuestionId: '5.24.4'
+- questionId: '5.24.4'
+  question: "Wijzig je het beoogde doel van een AI-systeem, met inbegrip van een AI-systeem voor algemene doeleinden, dat niet als een systeem met een hoog risico is geclassificeerd en reeds in de handel is gebracht of in gebruik is gesteld, op zodanige wijze dat het betrokken AI-systeem een AI-systeem met een hoog risico overeenkomstig artikel 6 wordt"
+  questionType: SingleChoice
+  answers:
+  - answer: Ja
+    result: "Dan word je naast gebruiksverantwoordelijke ook beschouwd als een aanbieder van een AI-systeem met een hoog risico en ben je onderworpen aan de verplichtingen van de aanbieder uit hoofde van artikel 16. We raden je daarom aan de beslisboom nog een keer te doorlopen en daarbij aan te geven dat je een aanbieder van een AI-systeem met een hoog risico bent."
+  - answer: Nee
+    result: "Dan word je alleen als gebruiksverantwoordelijke beschouwd en niet als een aanbieder van een AI-systeem met een hoog risico"
 
-
-
-
-
-- questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0.0
+### check uitzonderingen hoog risico - toepassingsgebieden
+- questionId: '5.24.0.0'
   question: Is het AI-systeem bedoeld om een beperkte procedurele taak uit te voeren en is er geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0.0.0
+    nextQuestionId: '5.24.0.0.1'
   - answer: Nee
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0.0.1
-- questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0.0.0
-  question: Voert het AI-systeem profilering van natuurlijke personen uit?
-  questionType: SingleChoice
-  answers:
-  - answer: Nee
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0.0.0.0
-  - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0.0.0.0
-- questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0.0.0.0
-  question: Ontwikkel je AI-systemen die voor directe interactie met natuurlijke personen zijn bedoeld?
-  questionType: SingleChoice
-  answers:
-  - answer: Ja, dat klopt
-    result: Dan moet je voldoen aan de transparantieverplichtingen van art. 50(1).
-  - answer: Nee, dat klopt niet
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0.0.0.0.1
-- questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0.0.0.0.1
-  question: Ontwikkel je AI-systemen, met inbegrip van AI-systemen voor algemene doeleinden die synthetische audio-, beeld-, video- of tekstinhoud genereren?
-  questionType: SingleChoice
-  answers:
-  - answer: Ja, dat klopt
-    result: Dan moet je voldoen aan de transparantieverplichtingen van art. 50(2).
-  - answer: Nee, dat klopt niet
-    result: Dan hoef je niet te voldoen aan de transparantieverplichtingen. Houd je wel aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)
-- questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0.0.1
+    nextQuestionId: '5.24.0.2'
+- questionId: '5.24.0.2'
   question: Is het AI-systeem bedoeld om het resultaat van een eerder voltooide menselijke activiteit te verbeteren en bevat het systeem geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0.0.0
+    nextQuestionId: '5.24.0.0.1'
   - answer: Nee
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0.0.1.1
-- questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0.0.1.1
+    nextQuestionId: '5.24.0.3'
+- questionId: '5.24.0.3'
   question: "Is het AI-systeem bedoeld om besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen op te sporen en is het niet bedoeld om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te be\xEFnvloeden?"
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0.0.0
+    nextQuestionId: '5.24.0.0.1'
   - answer: Nee
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0.0.1.1.1
-- questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0.0.1.1.1
+    nextQuestionId: '5.24.0.4'
+- questionId: '5.24.0.4'
   question: Is het AI-systeem bedoeld om een voorbereidende taak uit te voeren voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0.0.0
+    nextQuestionId: '5.24.0.0.1'
   - answer: Nee
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.0.0.0.0
+    answerComment: "Je systeem valt niet onder de uitzondering en het blijft beschouwd als een hoog risico AI systeem. Het kan echter zijn dat het wel aan bepaalde transparantieverplichtingen moet voldoen ([link naar art. 50 transparantieverplichtingen])"
+    nextQuestionId: '6.0'
+- questionId: '5.24.0.0.1'
+  question: Voert het AI-systeem profilering van natuurlijke personen uit?
+  questionType: SingleChoice
+  answers:
+  - answer: Nee
+    answerComment: "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is. Het kan echter zijn dat het wel aan bepaalde transparantieverplichtingen moet voldoen ([link naar art. 50 transparantieverplichtingen])"
+    nextQuestionId: '6.0' # OPM: dit verwijst naar dezelfde vraag?
+  - answer: Ja
+    answerComment: "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten. Het kan echter zijn dat het ook aan bepaalde transparantieverplichtingen moet voldoen ([link naar art. 50 transparantieverplichtingen])"
+    nextQuestionId: '6.0' # OPM: dit verwijst naar dezelfde vraag?
 
+### Transparantievereisten aanbieders
+- questionId: '6.0'
+  question: Ontwikkel je AI-systemen die voor directe interactie met natuurlijke personen zijn bedoeld?
+  questionType: SingleChoice
+  answers:
+  - answer: Ja
+    result: Dan moet je voldoen aan de transparantieverplichtingen van art. 50(1).
+  - answer: Nee
+    nextQuestionId: '6.1'
+- questionId: '6.1'
+  question: Ontwikkel je AI-systemen, met inbegrip van AI-systemen voor algemene doeleinden die synthetische audio-, beeld-, video- of tekstinhoud genereren?
+  questionType: SingleChoice
+  answers:
+  - answer: Ja
+    result: Dan moet je voldoen aan de transparantieverplichtingen van art. 50(2).
+  - answer: Nee
+    result: Dan hoef je niet te voldoen aan de transparantieverplichtingen. Houd je wel aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)
 
+### check rol bij general purpose AI
+- questionId: '7.0'
+  question: "Ga je een AI-systeem of een AI-model op de markt brengen of in gebruik stellen onder eigen naam of merk, al dan niet tegen betaling?\nOf ben je een aanbieder van een AI-systeem, met inbegrip van een AI-systeem voor algemene doeleinden, waarin een AI-model is geïntegreerd, ongeacht of het AI-model door hemzelf wordt verstrekt en verticaal geïntegreerd is of door een andere entiteit wordt aangeboden op basis van contractuele betrekkingen?"
+  questionType: SingleChoice
+  answers:
+  - answer: Ja
+    answerComment: "Dan ben je een aanbieder volgens de AI verordening.\nJe bent een AI systeem voor algemene doeleinden aan het ontwikkelen en je moet voldoen aan bepaalde vereisten van de AI-verordening (o.a. artikelen 4, 50 t/m 55)"
+    nextQuestionId: '7.1'
+  - answer: Nee
+    answerComment: "Je bent geen aanbieder. We gaan checken of je een andere rol hebt."
+    nextQuestionId: '7.2'
+- questionId: '7.1'
+  question: "Ben je een aanbieder van een AI-systeem voor algemene doeleinden met een systeemrisico? (Volgens artikel 51 beschikt een AI-systeem met een systeemrisico over capaciteiten met een grote impact die worden geëvalueerd op basis van passende technische instrumenten en methoden, met inbegrip van  indicatoren en benchmarks. Daarnaast wordt geacht capaciteiten met een grote impact overeenkomstig lid 1, punt a), te hebben wanneer de cumulatieve hoeveelheid berekeningen die wordt gebruikt om het model te trainen, gemeten in zwevendekommabewerkingen, groter is dan 10^25)"
+  questionType: SingleChoice
+  answers:
+  - answer: Ja
+    result: "Dan ben je een AI systeem voor algemene doeleinden aan het ontwikkelen en je moet voldoen de vereisten van artikel 53. Let op: het kan zijn dat je ook aan de transparantieverplichtingen van artikel 50 moet voldoen."
+  - answer: Nee
+    result: "Je AI-systeem moet voldoen aan de vereisten van artikel 55 van de AI-verordening. Let op: het kan zijn dat je ook aan de transparantieverplichtingen van artikel 50 moet voldoen." # moeten we hier nog verder naar vragen voor transparantieverplichtingen?
+- questionId: '7.2'
+  question: "Ben je een overheidsinstantie die een AI-systeem onder eigen verantwoordelijkheid gebruikt? Het AI-systeem wordt niet gebruikt in het kader van een persoonlijke niet-beroepsactiviteit"
+  questionType: SingleChoice
+  answers:
+  - answer: Ja
+    result: "Dan ben je een gebruiksverantwoordelijke volgens de AI verordening. Als je een AI-systeem voor algemene doeleinden gebruikt dan moet je nog steeds voldoen aan artikel 25, 27, 50, 86."
+  - answer: Nee
+    result: "Je bent geen aanbieder en geen gebruiksverantwoordelijke. Deze beslisboom is gemaakt voor alleen deze twee rollen. Controleer nog een keer goed of één van deze rollen misschien toch op jou van toepassing is."
 
-
-- questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
+### Transparantieverplichtingen geen hoog risico
+- questionId: '8.0'
+  question: Ga je een AI-systeem of een AI-model op de markt brengen of in gebruik stellen onder eigen naam of merk, al dan niet tegen betaling?\nOf ben je een aanbieder van een AI-systeem, met inbegrip van een AI-systeem voor algemene doeleinden, waarin een AI-model is geïntegreerd, ongeacht of het AI-model door hemzelf wordt verstrekt en verticaal geïntegreerd is of door een andere entiteit wordt aangeboden op basis van contractuele betrekkingen?
+  questionType: SingleChoice
+  answers:
+  - answer: Ja
+    answerComment: "Dan ben je een aanbieder volgens de AI verordening."
+    nextQuestionId: '6.0'
+  - answer: Nee
+    answerComment: "Je bent geen aanbieder. We gaan kijken of je een andere rol hebt."
+    nextQuestionId: '8.1'
+- questionId: '8.1'
+  question: Ben je een overheidsinstantie die een AI-systeem onder eigen verantwoordelijkheid gebruikt? Het AI-systeem wordt niet gebruikt in het kader van een persoonlijke niet-beroepsactiviteit
+  questionType: SingleChoice
+  answers:
+  - answer: Ja
+    nextQuestionId: '8.2'
+  - answer: Nee
+    result: "Je bent geen aanbieder en geen gebruiksverantwoordelijke. Deze beslisboom is gemaakt voor alleen deze twee rollen. Controleer nog een keer goed of één van deze rollen misschien toch op jou van toepassing is."
+- questionId: '8.2'
   question: Ontwikkel je AI-systemen voor het herkennen van emoties of een systeem voor biometrische categorisering
   questionType: SingleChoice
   answers:
-  - answer: Ja, dat klopt
-    result: Dan moet je voldoen aan de transparantieverplichtingen van art. 50(3).
-  - answer: Nee, dat klopt niet
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
-- questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
-  question: Ontwikkel je AI-systemen voor het herkennen van emoties of systemen voor biometrische categorisering?
-  questionType: SingleChoice
-  answers:
-  - answer: Ja, dat klopt
-    result: Dan moet je voldoen aan de transparantieverplichtingen van art. 50(4).
-  - answer: Nee, dat klopt niet
-    nextQuestionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
-- questionId: 0.0.0.0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1
+  - answer: Ja
+    result: Dan moet je voldoen aan de transparantieverplichtingen van art. 50(3). # dit is misschien ook art. 50(4), vraag zat dubbel in json
+  - answer: Nee
+    nextQuestionId: '8.3'
+- questionId: '8.3'
   question: Ontwikkel je AI-systemen die tekst genereren of bewerken en die worden gepubliceerd om het publiek te informeren over aangelegenheden van algemeen belang?
   questionType: SingleChoice
   answers:
-  - answer: Ja, dat klopt
+  - answer: Ja
     result: Dan moet je voldoen aan de transparantieverplichtingen van art. 50(4)
-  - answer: Nee, dat klopt niet
+  - answer: Nee
     result: Dan hoef je niet te voldoen aan de transparantieverplichtingen. Houd je wel aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)
-- questionId: 0.0.0.1
+
+### Buiten scope AI-verordening
+- questionId: '9.0'
   question: De AI-verordening is niet van toepassing. Gebruik je een algoritme met impact (rechtsgevolgen voor de burger of classificatie van burgers of groepen)? Volgens categorie B van de handreiking van het algoritmeregister
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: 0.0.0.1.0
+    nextQuestionId: '9.1'
   - answer: Nee
     result: Je algoritme is niet impactvol en de AI-verordening is niet van toepassing. Houd je wel aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)
-- questionId: 0.0.0.1.0
+- questionId: '9.1'
   question: "Valt je toepassing onder \xE9\xE9n van de uitzonderingsgronden categorie C of D van de handreiking?"
   questionType: SingleChoice
   answers:
@@ -489,19 +595,3 @@ questions:
     result: Het betreft een algoritme met impact, maar de AI-verordening is niet van toepassing. Je hoeft vanwege uitzonderingsgrond niet te publiceren in het register
   - answer: Nee
     result: Het betreft een algoritme met impact, maar de AI-verordening is niet van toepassing. Je moet wel publiceren in het algoritmeregister
-- questionId: 0.0.1.0
-  question: "Ben je een aanbieder van een AI-systeem voor algemene doeleinden met een systeemrisico? (Volgens artikel 51 beschikt een AI-systeem met een systeemrisico over capaciteiten met een grote impact die worden ge\xEBvalueerd op basis van passende technische instrumenten en methoden, met inbegrip van  indicatoren en benchmarks. Daarnaast wordt geacht capaciteiten met een grote impact overeenkomstig lid 1, punt a), te hebben wanneer de cumulatieve hoeveelheid berekeningen die wordt gebruikt om het model te trainen, gemeten in zwevendekommabewerkingen, groter is dan 10^25)"
-  questionType: SingleChoice
-  answers:
-  - answer: Ja, dat klopt
-    result: 'Je AI-systeem moet voldoen aan de vereisten van artikel 55 van de AI-verordening. Let op: het kan zijn dat je ook aan de transparantieverplichtingen van artikel 50 moet voldoen.'
-  - answer: Nee, dat klopt niet
-    result: 'Dan ben je een AI systeem voor algemene doeleinden aan het ontwikkelen en je moet voldoen de vereisten van artikel 53. Let op: het kan zijn dat je ook aan de transparantieverplichtingen van artikel 50 moet voldoen.'
-- questionId: 0.0.1.1
-  question: Ben je een overheidsinstantie die een AI-systeem onder eigen verantwoordelijkheid gebruikt? Het AI-systeem wordt niet gebruikt in het kader van een persoonlijke niet-beroepsactiviteit
-  questionType: SingleChoice
-  answers:
-  - answer: Ja, dat klopt
-    result: Dan ben je een gebruiksverantwoordelijke volgens de AI verordening. Als je een AI-systeem voor algemene doeleinden gebruikt dan moet je nog steeds voldoen aan artikel 25, 27, 50, 86.
-  - answer: Nee, dat klopt niet
-    result: "Deze beslisboom is gemaakt voor alleen deze twee rollen. Controleer nog een keer goed of \xE9\xE9n van deze rollen misschien toch op jou van toepassing is."

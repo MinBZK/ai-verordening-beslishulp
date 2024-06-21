@@ -36,6 +36,10 @@
       "type": "string",
       "uniqueItems": true
     },
+    "AnswerComment": {
+      "id": "#/$defs/AnswerComment",
+      "type": "string"
+    },
     "Answer": {
       "id": "#/$defs/Question",
       "type": "object",
@@ -48,6 +52,9 @@
         },
         "result": {
           "$ref": "#/$defs/Result"
+        },
+        "answerComment": {
+          "$ref": "#/$defs/AnswerComment"
         }
       },
       "required": ["answer"],
