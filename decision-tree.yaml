@@ -10,7 +10,7 @@ questions:
   - answer: Ja
     nextQuestionId: '1.0'
   - answer: Nee
-    result: Je gebruikt geen algoritme. Houd je wel aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)
+    result: Je gebruikt geen algoritme. Houd je wel aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt) # Bak A: geen algoritme
 
 ### definitie AI systeem
 - questionId: '1.0'
@@ -54,7 +54,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    result: Deze type AI-systemen zijn in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om dit verder te bekijken ...
+    result: Deze type AI-systemen zijn in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om dit verder te bekijken ... # Bak B: verboden AI
   - answer: Nee
     nextQuestionId: '3.1'
 - questionId: '3.1'
@@ -62,7 +62,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    result: Deze type AI-systemen zijn in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om dit verder te bekijken ...
+    result: Deze type AI-systemen zijn in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om dit verder te bekijken ... # Bak B: verboden AI
   - answer: Nee
     nextQuestionId: '3.2'
 - questionId: '3.2'
@@ -70,7 +70,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    result: Deze type AI-systemen zijn in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om dit verder te bekijken ...
+    result: Deze type AI-systemen zijn in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om dit verder te bekijken ... # Bak B: verboden AI
   - answer: Nee
     nextQuestionId: '3.3'
 - questionId: '3.3'
@@ -78,7 +78,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    result: Deze type AI-systemen zijn in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om dit verder te bekijken ...
+    result: Deze type AI-systemen zijn in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om dit verder te bekijken ... # Bak B: verboden AI
   - answer: Nee
     nextQuestionId: '3.4'
 - questionId: '3.4'
@@ -86,7 +86,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    result: Deze type AI-systemen zijn in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om dit verder te bekijken ...
+    result: Deze type AI-systemen zijn in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om dit verder te bekijken ... # Bak B: verboden AI
   - answer: Nee
     nextQuestionId: '3.5'
 - questionId: '3.5'
@@ -94,7 +94,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    result: Deze type AI-systemen zijn in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om dit verder te bekijken ...
+    result: Deze type AI-systemen zijn in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om dit verder te bekijken ... # Bak B: verboden AI
   - answer: Nee
     nextQuestionId: '3.6'
 - questionId: '3.6'
@@ -102,7 +102,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    result: Deze type AI-systemen zijn in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om dit verder te bekijken ...
+    result: Deze type AI-systemen zijn in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om dit verder te bekijken ... # Bak B: verboden AI
   - answer: Nee
     nextQuestionId: '3.7'
 - questionId: '3.7'
@@ -110,7 +110,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    result: Deze type AI-systemen zijn in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om dit verder te bekijken ...
+    result: Deze type AI-systemen zijn in principe verboden volgens de AI-verordening. We adviseren om contact te maken met....om dit verder te bekijken ... # Bak B: verboden AI
   - answer: Nee
     answerComment: Het lijkt er op dat je AI-systeem geen verboden systeem is. We gaan nu bepalen of het systeem valt onder de hoog-risico categorisatie van de AI-verordening.
     nextQuestionId: '4.0'
@@ -141,7 +141,8 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    result: 'Dan ben je een aanbieder volgens de AI verordening. Je bent een hoog risico AI systeem aan het ontwikkelen en je moet voldoen aan bepaalde vereisten van de AI-verordening (o.a. artikelen 4, 6, 9 t/m 21, 25, 40, 43, 47 t/m 50, 52, 60, 61, 72, 73)'
+    result: 'Dan ben je een aanbieder volgens de AI verordening. Je bent een hoog risico AI systeem aan het ontwikkelen en je moet voldoen aan bepaalde vereisten van de AI-verordening (o.a. artikelen 4, 6, 9 t/m 21, 25, 40, 43, 47 t/m 50, 52, 60, 61, 72, 73)' # Bak C: hoog risico AI - bijlage I - aanbieder
+    # moet je hier dan ook nog checken of je een gebruiksverantwoordelijke bent? Of is dat niet nodig?
   - answer: Nee
     nextQuestionId: '4.2.1'
 - questionId: '4.2.1'
@@ -151,13 +152,13 @@ questions:
   - answer: Ja
     nextQuestionId: '4.2.2'
   - answer: Nee
-    result: "Deze beslisboom is gemaakt voor alleen deze twee rollen. Controleer nog een keer goed of \xE9\xE9n van deze rollen misschien toch op jou van toepassing is."
+    result: "Deze beslisboom is gemaakt voor alleen deze twee rollen. Controleer nog een keer goed of \xE9\xE9n van deze rollen misschien toch op jou van toepassing is." # Bak D: hoog risico AI - bijlage I - geen aanbieder - geen gebruiksverantwoordelijke
 - questionId: '4.2.2'
   question: Zet je jouw naam of merk op een AI-systeem met een hoog risico dat reeds in de handel is gebracht of in gebruik is gesteld, onverminderd contractuele regelingen waarin wordt bepaald dat de verplichtingen anders worden toegewezen
   questionType: SingleChoice
   answers:
   - answer: Ja
-    result: Dan word je naast gebruiksverantwoordelijke ook beschouwd als een aanbieder van een AI-systeem met een hoog risico en ben je onderworpen aan de verplichtingen van de aanbieder uit hoofde van artikel 16. We raden je daarom aan de beslisboom nog een keer te doorlopen en daarbij aan te geven dat je een aanbieder van een AI-systeem met een hoog risico bent.
+    result: Dan word je naast gebruiksverantwoordelijke ook beschouwd als een aanbieder van een AI-systeem met een hoog risico en ben je onderworpen aan de verplichtingen van de aanbieder uit hoofde van artikel 16. We raden je daarom aan de beslisboom nog een keer te doorlopen en daarbij aan te geven dat je een aanbieder van een AI-systeem met een hoog risico bent. # Bak E: hoog risico AI - bijlage I - gebruiksverantwoordelijke en beschouwd als aanbieder
   - answer: Nee
     nextQuestionId: '4.2.3'
 - questionId: '4.2.3'
@@ -165,7 +166,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    result: Dan word je naast gebruiksverantwoordelijke ook beschouwd als een aanbieder van een AI-systeem met een hoog risico en ben je onderworpen aan de verplichtingen van de aanbieder uit hoofde van artikel 16. We raden je daarom aan de beslisboom nog een keer te doorlopen en daarbij aan te geven dat je een aanbieder van een AI-systeem met een hoog risico bent.
+    result: Dan word je naast gebruiksverantwoordelijke ook beschouwd als een aanbieder van een AI-systeem met een hoog risico en ben je onderworpen aan de verplichtingen van de aanbieder uit hoofde van artikel 16. We raden je daarom aan de beslisboom nog een keer te doorlopen en daarbij aan te geven dat je een aanbieder van een AI-systeem met een hoog risico bent. # Bak E: hoog risico AI - bijlage I - gebruiksverantwoordelijke en beschouwd als aanbieder
   - answer: Nee
     nextQuestionId: '4.2.4'
 - questionId: '4.2.4'
@@ -173,9 +174,9 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    result: Dan word je naast gebruiksverantwoordelijke ook beschouwd als een aanbieder van een AI-systeem met een hoog risico en ben je onderworpen aan de verplichtingen van de aanbieder uit hoofde van artikel 16. We raden je daarom aan de beslisboom nog een keer te doorlopen en daarbij aan te geven dat je een aanbieder van een AI-systeem met een hoog risico bent.
+    result: Dan word je naast gebruiksverantwoordelijke ook beschouwd als een aanbieder van een AI-systeem met een hoog risico en ben je onderworpen aan de verplichtingen van de aanbieder uit hoofde van artikel 16. We raden je daarom aan de beslisboom nog een keer te doorlopen en daarbij aan te geven dat je een aanbieder van een AI-systeem met een hoog risico bent. # Bak E: hoog risico AI - bijlage I - gebruiksverantwoordelijke en beschouwd als aanbieder
   - answer: Nee
-    result: Dan word je alleen als gebruiksverantwoordelijke beschouwd en niet als een aanbieder van een AI-systeem met een hoog risico
+    result: Dan word je alleen als gebruiksverantwoordelijke beschouwd en niet als een aanbieder van een AI-systeem met een hoog risico. # Bak F: hoog risico AI - bijlage I - gebruiksverantwoordelijke - geen aanbieder
 
 ### Hoog risico AI - toepassingsgebieden
 - questionId: '5.0'
@@ -424,14 +425,14 @@ questions:
     answerComment: "Dan ben je een gebruiksverantwoordelijke volgens de AI verordening.\nJe bent verantwoordelijk voor het gebruik van een hoog risico AI systeem en je moet voldoen aan bepaalde vereisten van de AI-verordening (o.a. artikelen 12, 25 t/m 27, 49, 50, 86). Let op! Er zijn omstandigheden waaronder je als gebruiksverantwoordelijke beschouwd wordt als een aanbieder van een AI-systeem met een hoog risico. We gaan nu vaststellen of dat het geval is."
     nextQuestionId: '5.24.2'
   - answer: Nee
-    result: "Je bent geen gebruiksverantwoordelijke en geen aanbieder. Deze beslisboom is gemaakt voor alleen deze twee rollen. Controleer nog een keer goed of één van deze rollen misschien toch op jou van toepassing is."
+    result: "Je bent geen gebruiksverantwoordelijke en geen aanbieder. Deze beslisboom is gemaakt voor alleen deze twee rollen. Controleer nog een keer goed of één van deze rollen misschien toch op jou van toepassing is." # Bak G: hoog risico AI - toepassingsgebieden - geen aanbieder - geen gebruiksverantwoordelijke
 ##### check of je wordt beschouwd als aanbieder
 - questionId: '5.24.2'
   question: "Zet je jouw naam of merk op een AI-systeem met een hoog risico dat reeds in de handel is gebracht of in gebruik is gesteld, onverminderd contractuele regelingen waarin wordt bepaald dat de verplichtingen anders worden toegewezen"
   questionType: SingleChoice
   answers:
   - answer: Ja
-    result: "Dan word je naast gebruiksverantwoordelijke ook beschouwd als een aanbieder van een AI-systeem met een hoog risico en ben je onderworpen aan de verplichtingen van de aanbieder uit hoofde van artikel 16. We raden je daarom aan de beslisboom nog een keer te doorlopen en daarbij aan te geven dat je een aanbieder van een AI-systeem met een hoog risico bent."
+    result: "Dan word je naast gebruiksverantwoordelijke ook beschouwd als een aanbieder van een AI-systeem met een hoog risico en ben je onderworpen aan de verplichtingen van de aanbieder uit hoofde van artikel 16. We raden je daarom aan de beslisboom nog een keer te doorlopen en daarbij aan te geven dat je een aanbieder van een AI-systeem met een hoog risico bent." # Bak H: hoog risico AI - toepassingsgebieden - gebruiksverantwoordelijke en beschouwd als aanbieder
   - answer: Nee
     nextQuestionId: '5.24.3'
 - questionId: '5.24.3'
@@ -439,7 +440,7 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    result: "Dan word je naast gebruiksverantwoordelijke ook beschouwd als een aanbieder van een AI-systeem met een hoog risico en ben je onderworpen aan de verplichtingen van de aanbieder uit hoofde van artikel 16. We raden je daarom aan de beslisboom nog een keer te doorlopen en daarbij aan te geven dat je een aanbieder van een AI-systeem met een hoog risico bent."
+    result: "Dan word je naast gebruiksverantwoordelijke ook beschouwd als een aanbieder van een AI-systeem met een hoog risico en ben je onderworpen aan de verplichtingen van de aanbieder uit hoofde van artikel 16. We raden je daarom aan de beslisboom nog een keer te doorlopen en daarbij aan te geven dat je een aanbieder van een AI-systeem met een hoog risico bent." # Bak H: hoog risico AI - toepassingsgebieden - gebruiksverantwoordelijke en beschouwd als aanbieder
   - answer: Nee
     nextQuestionId: '5.24.4'
 - questionId: '5.24.4'
@@ -447,9 +448,9 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    result: "Dan word je naast gebruiksverantwoordelijke ook beschouwd als een aanbieder van een AI-systeem met een hoog risico en ben je onderworpen aan de verplichtingen van de aanbieder uit hoofde van artikel 16. We raden je daarom aan de beslisboom nog een keer te doorlopen en daarbij aan te geven dat je een aanbieder van een AI-systeem met een hoog risico bent."
+    result: "Dan word je naast gebruiksverantwoordelijke ook beschouwd als een aanbieder van een AI-systeem met een hoog risico en ben je onderworpen aan de verplichtingen van de aanbieder uit hoofde van artikel 16. We raden je daarom aan de beslisboom nog een keer te doorlopen en daarbij aan te geven dat je een aanbieder van een AI-systeem met een hoog risico bent." # Bak H: hoog risico AI - toepassingsgebieden - gebruiksverantwoordelijke en beschouwd als aanbieder
   - answer: Nee
-    result: "Dan word je alleen als gebruiksverantwoordelijke beschouwd en niet als een aanbieder van een AI-systeem met een hoog risico"
+    result: "Dan word je alleen als gebruiksverantwoordelijke beschouwd en niet als een aanbieder van een AI-systeem met een hoog risico" # Bak I: hoog risico AI - toepassingsgebieden - gebruiksverantwoordelijke - geen aanbieder
 
 ### check uitzonderingen hoog risico - toepassingsgebieden
 - questionId: '5.24.0.0'
@@ -502,17 +503,17 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    result: Dan moet je voldoen aan de transparantieverplichtingen van art. 50(1).
+    result: Dan moet je voldoen aan de transparantieverplichtingen van art. 50(1). # Bak
   - answer: Nee
     nextQuestionId: '6.1'
 - questionId: '6.1'
-  question: Ontwikkel je AI-systemen, met inbegrip van AI-systemen voor algemene doeleinden die synthetische audio-, beeld-, video- of tekstinhoud genereren?
+  question: Ontwikkel je AI-systemen, met inbegrip van AI-systemen voor algemene doeleinden die synthetische audio-, beeld-, video- of tekstinhoud genereren? # we zaten toch in niet genAI tak?
   questionType: SingleChoice
   answers:
   - answer: Ja
     result: Dan moet je voldoen aan de transparantieverplichtingen van art. 50(2).
   - answer: Nee
-    result: Dan hoef je niet te voldoen aan de transparantieverplichtingen. Houd je wel aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)
+    result: Dan hoef je niet te voldoen aan de transparantieverplichtingen. Houd je wel aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt) # moeten we hier nog checken of je moet publiceren in het register?
 
 ### check rol bij general purpose AI
 - questionId: '7.0'
@@ -530,17 +531,18 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    result: "Dan ben je een AI systeem voor algemene doeleinden aan het ontwikkelen en je moet voldoen de vereisten van artikel 53. Let op: het kan zijn dat je ook aan de transparantieverplichtingen van artikel 50 moet voldoen."
+    result: "Dan ben je een AI systeem voor algemene doeleinden aan het ontwikkelen en je moet voldoen de vereisten van artikel 53. Let op: het kan zijn dat je ook aan de transparantieverplichtingen van artikel 50 moet voldoen." # Bak N: general purpose AI - aanbieder - systeemrisico
   - answer: Nee
-    result: "Je AI-systeem moet voldoen aan de vereisten van artikel 55 van de AI-verordening. Let op: het kan zijn dat je ook aan de transparantieverplichtingen van artikel 50 moet voldoen." # moeten we hier nog verder naar vragen voor transparantieverplichtingen?
+    result: "Je AI-systeem moet voldoen aan de vereisten van artikel 55 van de AI-verordening. Let op: het kan zijn dat je ook aan de transparantieverplichtingen van artikel 50 moet voldoen." # Bak O: general purpose AI - aanbieder - geen systeemrisico
+    # moeten we hier nog verder naar vragen voor transparantieverplichtingen?
 - questionId: '7.2'
   question: "Ben je een overheidsinstantie die een AI-systeem onder eigen verantwoordelijkheid gebruikt? Het AI-systeem wordt niet gebruikt in het kader van een persoonlijke niet-beroepsactiviteit"
   questionType: SingleChoice
   answers:
   - answer: Ja
-    result: "Dan ben je een gebruiksverantwoordelijke volgens de AI verordening. Als je een AI-systeem voor algemene doeleinden gebruikt dan moet je nog steeds voldoen aan artikel 25, 27, 50, 86."
+    result: "Dan ben je een gebruiksverantwoordelijke volgens de AI verordening. Als je een AI-systeem voor algemene doeleinden gebruikt dan moet je nog steeds voldoen aan artikel 25, 27, 50, 86." # Bak P: general purpose AI - geen aanbieder - gebruiksverantwoordelijke
   - answer: Nee
-    result: "Je bent geen aanbieder en geen gebruiksverantwoordelijke. Deze beslisboom is gemaakt voor alleen deze twee rollen. Controleer nog een keer goed of één van deze rollen misschien toch op jou van toepassing is."
+    result: "Je bent geen aanbieder en geen gebruiksverantwoordelijke. Deze beslisboom is gemaakt voor alleen deze twee rollen. Controleer nog een keer goed of één van deze rollen misschien toch op jou van toepassing is." # Bak Q: general purpose AI - geen aanbieder - geen gebruiksverantwoordelijke
 
 ### Transparantieverplichtingen geen hoog risico
 - questionId: '8.0'
@@ -560,7 +562,7 @@ questions:
   - answer: Ja
     nextQuestionId: '8.2'
   - answer: Nee
-    result: "Je bent geen aanbieder en geen gebruiksverantwoordelijke. Deze beslisboom is gemaakt voor alleen deze twee rollen. Controleer nog een keer goed of één van deze rollen misschien toch op jou van toepassing is."
+    result: "Je bent geen aanbieder en geen gebruiksverantwoordelijke. Deze beslisboom is gemaakt voor alleen deze twee rollen. Controleer nog een keer goed of één van deze rollen misschien toch op jou van toepassing is." # Bak R: niet verboden - niet hoog risico - geen aanbieder - geen gebruiksverantwoordelijke
 - questionId: '8.2'
   question: Ontwikkel je AI-systemen voor het herkennen van emoties of een systeem voor biometrische categorisering
   questionType: SingleChoice
@@ -576,7 +578,7 @@ questions:
   - answer: Ja
     result: Dan moet je voldoen aan de transparantieverplichtingen van art. 50(4)
   - answer: Nee
-    result: Dan hoef je niet te voldoen aan de transparantieverplichtingen. Houd je wel aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)
+    result: Dan hoef je niet te voldoen aan de transparantieverplichtingen. Houd je wel aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt) # hier nog checken of je wel moet publiceren in register?
 
 ### Buiten scope AI-verordening
 - questionId: '9.0'
@@ -586,12 +588,12 @@ questions:
   - answer: Ja
     nextQuestionId: '9.1'
   - answer: Nee
-    result: Je algoritme is niet impactvol en de AI-verordening is niet van toepassing. Houd je wel aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)
+    result: Je algoritme is niet impactvol en de AI-verordening is niet van toepassing. Houd je wel aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt) # bak W: AI verordening niet van toepassing - niet impactvol
 - questionId: '9.1'
   question: "Valt je toepassing onder \xE9\xE9n van de uitzonderingsgronden categorie C of D van de handreiking?"
   questionType: SingleChoice
   answers:
   - answer: Ja
-    result: Het betreft een algoritme met impact, maar de AI-verordening is niet van toepassing. Je hoeft vanwege uitzonderingsgrond niet te publiceren in het register
+    result: Het betreft een algoritme met impact, maar de AI-verordening is niet van toepassing. Je hoeft vanwege uitzonderingsgrond niet te publiceren in het register # bak X: AI verordening niet van toepassing - impactvol maar niet publiceren vanwege uitzonderingsgrond
   - answer: Nee
-    result: Het betreft een algoritme met impact, maar de AI-verordening is niet van toepassing. Je moet wel publiceren in het algoritmeregister
+    result: Het betreft een algoritme met impact, maar de AI-verordening is niet van toepassing. Je moet wel publiceren in het algoritmeregister # bak Y: AI verordening niet van toepassing - impactvol
