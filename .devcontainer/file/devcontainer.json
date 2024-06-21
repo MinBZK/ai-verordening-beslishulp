@@ -1,5 +1,5 @@
 {
-  "name": "Ubuntu",
+  "name": "File",
   "image": "mcr.microsoft.com/devcontainers/python:3.11",
   "postCreateCommand": "sudo apt install jq && pip install -r requirements.txt",
   "customizations": {
@@ -19,4 +19,3 @@
     }
   }
 }
-
