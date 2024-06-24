@@ -7,7 +7,7 @@ import * as t from 'io-ts'
 
 const data = ref<Questions>([])
 const questionId = ref<String>('0')
-const isLoading = ref<bool>(true)
+const isLoading = ref<boolean>(true)
 const result = ref<String>('')
 
 onMounted(async () => {
@@ -40,7 +40,7 @@ function givenAnswer(answer: Answer) {
   if (answer.result) {
     result.value = answer.result
   }
-  questionId.value = answer.nextQuestionId
+  questionId.value = String(answer.nextQuestionId)
 }
 </script>
 
@@ -49,7 +49,7 @@ function givenAnswer(answer: Answer) {
   <h1 v-else-if="showQuestion === undefined">{{ result }}</h1>
   <div v-else>
     <pre>{{ showQuestion.question }}</pre>
-    <li v-for="answer in showQuestion.answers" :key="answer.id">
+    <li v-for="(answer, index) in showQuestion.answers" :key="index">
       <button @click="givenAnswer(answer)">{{ answer.answer }}</button>
     </li>
   </div>

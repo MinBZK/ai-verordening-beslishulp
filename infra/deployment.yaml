@@ -7,12 +7,12 @@ spec:
   template:
     metadata:
       labels:
-        app: beslisboom
+        app: ai-act-decisiontree
     spec:
       automountServiceAccountToken: false
       containers:
-        - image: ghcr.io/minbzk/beslisboom:main
-          name: beslisboom
+        - image: ghcr.io/minbzk/ai-act-decisiontree:main
+          name: ai-act-decisiontree
           imagePullPolicy: Always
           ports:
             - containerPort: 80

@@ -11,7 +11,7 @@ concurrency:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: "minbzk/beslisboom"
+  IMAGE_NAME: "minbzk/ai-act-decisiontree"
 
 jobs:
   runs-on: ubuntu-latest

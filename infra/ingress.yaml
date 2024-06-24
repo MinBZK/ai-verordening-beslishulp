@@ -6,7 +6,7 @@ metadata:
     cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
   rules:
-    - host: beslisboom.apps.digilab.network
+    - host: ai-act-decisiontree.apps.digilab.network
       http:
         paths:
           - backend:
@@ -18,5 +18,5 @@ spec:
             pathType: Prefix
   tls:
     - hosts:
-        - beslisboom.apps.digilab.network
-      secretName: beslisboom-tls
+        - ai-act-decisiontree.apps.digilab.network
+      secretName: ai-act-decisiontree-tls

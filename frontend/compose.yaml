@@ -1,6 +1,6 @@
 services:
   web:
     build: .
-    image: ghcr.io/minbzk/beslisboom:main
+    image: ghcr.io/minbzk/ai-act-decisiontree:main
     ports:
       - '9090:80'

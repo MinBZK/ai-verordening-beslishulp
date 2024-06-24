@@ -8,9 +8,9 @@ resources:
 
 namespace: tn-ai-validation-playground
 
-namePrefix: beslisboom-
+namePrefix: ai-act-decisiontree-
 
 commonLabels:
-  minbzk.github.io/name: beslisboom
+  minbzk.github.io/name: ai-act-decisiontree
 
 buildMetadata: [originAnnotations]
