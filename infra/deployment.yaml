@@ -11,7 +11,7 @@ spec:
     spec:
       automountServiceAccountToken: false
       containers:
-        - image: ghcr.io/minbzk/ai-act-decisiontree:main
+        - image: ghcr.io/minbzk/ai-act-beslisboom:main
           name: ai-act-decisiontree
           imagePullPolicy: Always
           ports:

@@ -1,4 +1,7 @@
-FROM node:20-alpine as build
+ARG NODE_VERSION=20-alpine
+ARG NGINX_VERSION=1.27.0
+
+FROM --platform=$BUILDPLATFORM node:$NODE_VERSION as build
 
 WORKDIR /app
 COPY package*.json ./
@@ -7,7 +10,10 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-FROM nginx:1.27.0
+FROM nginx:$NGINX_VERSION
+
+LABEL org.opencontainers.image.source https://github.com/MinBZK/AI-act-beslisboom
+
 COPY --from=build /app/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY nginx.default.conf /etc/nginx/conf.d/default.conf
