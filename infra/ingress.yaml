@@ -4,6 +4,7 @@ metadata:
   name: ing
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
+    #TODO(Berry): use treafik basic auth middleware
 spec:
   rules:
     - host: ai-act-decisiontree.apps.digilab.network
