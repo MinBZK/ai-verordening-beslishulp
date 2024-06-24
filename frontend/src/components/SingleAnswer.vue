@@ -11,5 +11,6 @@ defineEmits(['answered'])
 <template>
   <div class="ai-decisiontree ai-decisiontree-answered">
     <button @click="$emit('answered', answer)">{{ answer.answer }}</button>
+    <div v-if="answer.answerComment !== undefined">{{ answer.answerComment }}</div>
   </div>
 </template>

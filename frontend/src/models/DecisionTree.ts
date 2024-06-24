@@ -4,7 +4,8 @@ import * as t from 'io-ts'
 export const Answer = t.type({
   answer: t.string,
   nextQuestionId: t.union([t.string, t.undefined]),
-  result: t.union([t.string, t.undefined])
+  result: t.union([t.string, t.undefined]),
+  answerComment: t.union([t.string, t.undefined])
 })
 export type Answer = t.TypeOf<typeof Answer>
 
