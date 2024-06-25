@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 
-import json
-import yaml
 import argparse
-from pathlib import Path
+import json
 import logging
-from hashlib import sha256
+from pathlib import Path
+
+import yaml
 
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
@@ -33,7 +33,7 @@ def parse_question(data, id="0"):
                 case 3:
                     question_type = "MultipleChoice"
                 case _:
-                    logger.info(f'this should not happen')
+                    logger.info('this should not happen')
 
             answers = []
             for i, option in enumerate(options):
