@@ -568,10 +568,18 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    result: Dan moet je voldoen aan de transparantieverplichtingen van art. 50(3). # dit is misschien ook art. 50(4), vraag zat dubbel in json
+    result: Dan moet je voldoen aan de transparantieverplichtingen van art. 50(3).
   - answer: Nee
     nextQuestionId: '8.3'
 - questionId: '8.3'
+  question: Ontwikkel je AI-systemen dat beeld-, audio- of videocontent genereert of die een deepfake vormt bewerkt?
+  questionType: SingleChoice
+  answers:
+  - answer: Ja
+    result: Dan moet je voldoen aan de transparantieverplichtingen van art. 50(4)
+  - answer: Nee
+    nextQuestionId: '8.4'
+- questionId: '8.4'
   question: Ontwikkel je AI-systemen die tekst genereren of bewerken en die worden gepubliceerd om het publiek te informeren over aangelegenheden van algemeen belang?
   questionType: SingleChoice
   answers:
