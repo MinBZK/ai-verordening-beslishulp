@@ -531,9 +531,9 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    result: "Dan ben je een AI systeem voor algemene doeleinden aan het ontwikkelen en je moet voldoen de vereisten van artikel 53. Let op: het kan zijn dat je ook aan de transparantieverplichtingen van artikel 50 moet voldoen." # Bak N: general purpose AI - aanbieder - systeemrisico
+    result: "Je AI-systeem moet voldoen aan de vereisten van artikel 55 van de AI-verordening. Let op: het kan zijn dat je ook aan de transparantieverplichtingen van artikel 50 moet voldoen."  # Bak N: general purpose AI - aanbieder - systeemrisico
   - answer: Nee
-    result: "Je AI-systeem moet voldoen aan de vereisten van artikel 55 van de AI-verordening. Let op: het kan zijn dat je ook aan de transparantieverplichtingen van artikel 50 moet voldoen." # Bak O: general purpose AI - aanbieder - geen systeemrisico
+    result: "Dan ben je een AI systeem voor algemene doeleinden aan het ontwikkelen en je moet voldoen de vereisten van artikel 53. Let op: het kan zijn dat je ook aan de transparantieverplichtingen van artikel 50 moet voldoen." # Bak O: general purpose AI - aanbieder - geen systeemrisico
     # moeten we hier nog verder naar vragen voor transparantieverplichtingen?
 - questionId: '7.2'
   question: "Ben je een overheidsinstantie die een AI-systeem onder eigen verantwoordelijkheid gebruikt? Het AI-systeem wordt niet gebruikt in het kader van een persoonlijke niet-beroepsactiviteit"
