@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ing
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    #TODO(Berry): use treafik basic auth middleware
+spec:
+  rules:
+    - host: ai-act-decisiontree.apps.digilab.network
+      http:
+        paths:
+          - backend:
+              service:
+                name: svc
+                port:
+                  number: 80
+            path: /
+            pathType: Prefix
+  tls:
+    - hosts:
+        - ai-act-decisiontree.apps.digilab.network
+      secretName: ai-act-decisiontree-tls

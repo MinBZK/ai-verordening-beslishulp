@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/MinBZK/AI-act-beslisboom/main/schemas/base.schema",
+  "title": "Beslisboom schema",
+  "description": "beslitboom schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the questions"
+    },
+    "version": {
+      "type": "string",
+      "description": "The version of the questions"
+    },
+    "questions": {
+      "type": "array",
+      "description": "The questions in the decision tree",
+      "items": {
+        "$ref": "#/$defs/Questions"
+      },
+      "minItems": 1
+    }
+  },
+  "$defs": {
+    "Result": {
+      "id": "#/$defs/Question",
+      "type": "string"
+    },
+    "Question": {
+      "id": "#/$defs/Question",
+      "type": "string"
+    },
+    "QuestionId": {
+      "id": "#/$defs/Question",
+      "type": "string",
+      "uniqueItems": true
+    },
+    "AnswerComment": {
+      "id": "#/$defs/AnswerComment",
+      "type": "string"
+    },
+    "Answer": {
+      "id": "#/$defs/Question",
+      "type": "object",
+      "properties": {
+        "answer": {
+          "type": "string"
+        },
+        "nextQuestionId": {
+          "$ref": "#/$defs/QuestionId"
+        },
+        "result": {
+          "$ref": "#/$defs/Result"
+        },
+        "answerComment": {
+          "$ref": "#/$defs/AnswerComment"
+        }
+      },
+      "required": ["answer"],
+      "oneOf": [
+        {
+          "required": ["nextQuestionId"]
+        },
+        {
+          "required": ["result"]
+        }
+      ]
+    },
+    "Questions": {
+      "id": "#/$defs/Questions",
+      "type": "object",
+      "oneOf": [
+        {
+          "$ref": "#/$defs/MultipleChoiceQuestion"
+        },
+        {
+          "$ref": "#/$defs/SingleChoiceQuestion"
+        }
+      ]
+    },
+    "MultipleChoiceQuestion": {
+      "id": "#/$defs/MultipleChoiceQuestion",
+      "type": "object",
+      "properties": {
+        "questionId": {
+          "$ref": "#/$defs/QuestionId"
+        },
+        "question": {
+          "$ref": "#/$defs/Question"
+        },
+        "questionType": {
+          "type": "string",
+          "enum": ["MultipleChoice"]
+        },
+        "answers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Answer"
+          },
+          "minItems": 3
+        }
+      },
+      "required": ["questionId", "question", "questionType", "answers"]
+    },
+    "SingleChoiceQuestion": {
+      "id": "#/$defs/SingleChoiceQuestion",
+      "type": "object",
+      "properties": {
+        "questionId": {
+          "$ref": "#/$defs/QuestionId"
+        },
+        "question": {
+          "$ref": "#/$defs/Question"
+        },
+        "questionType": {
+          "type": "string",
+          "enum": ["SingleChoice"]
+        },
+        "answers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Answer"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      },
+      "required": ["questionId", "question", "questionType", "answers"]
+    }
+  }
+}
