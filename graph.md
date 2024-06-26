@@ -47,11 +47,11 @@ question5.16["`Is je AI-systeem bedoeld om door of namens rechtshandhavingsinsta
 question5.17["`Is je AI-systeem bedoeld om door of namens rechtshandhavingsinstanties of door instellingen, organen of instanties van de Unie ter ondersteuning van rechtshandhavingsinstanties te worden gebruikt om te beoordelen hoe groot het risico is dat een natuurlijke persoon (opnieuw) een strafbaar feit zal plegen, niet uitsluitend op basis van profilering van natuurlijke personen als bedoeld in artikel 3, punt 4, van Richtlijn (EU) 2016/680, of om persoonlijkheidskenmerken en eigenschappen of eerder crimineel gedrag van natuurlijke personen of groepen te beoordelen?`"]
 question5.18["`Is je AI-systeem bedoeld om door of namens rechtshandhavingsinstanties of door instellingen, organen en instanties van de Unie ter ondersteuning van rechtshandhavingsinstanties te worden gebruikt om natuurlijke personen te profileren als bedoeld in artikel 3, punt 4, van Richtlijn (EU) 2016/680, tijdens het opsporen, onderzoeken of vervolgen van strafbare feiten?`"]
 question5.19["`Is je AI-systeem bedoeld om door of namens bevoegde overheidsinstanties of door instellingen, organen of instanties van de Unie te worden gebruikt als leugendetector of soortgelijke hulpmiddelen?`"]
-question5.19["`Is je AI-systeem bedoeld om door of namens bevoegde overheidsinstanties of door instellingen, organen of instanties van de Unie te worden gebruikt om risico’s te beoordelen, waaronder een veiligheidsrisico, een risico op illegale migratie of een gezondheidsrisico, uitgaat van een natuurlijke persoon die voornemens is het grondgebied van een lidstaat te betreden of dat heeft gedaan?`"]
-question5.20["`Is je AI-systeem bedoeld om door of namens bevoegde overheidsinstanties  of door instellingen, organen of instanties van de Unie te worden gebruikt om bevoegde overheidsinstanties bij te staan bij de behandeling van aanvragen voor asiel, visa of verblijfsvergunningen en bij de behandeling van aanverwante klachten in verband met het al dan niet in aanmerking komen van de natuurlijke personen die een aanvraag voor een status indienen, met inbegrip van hieraan gerelateerde beoordelingen van de betrouwbaarheid van bewijsmateriaal?`"]
-question5.21["`Is je AI-systeem bedoeld om door of namens bevoegde overheidsinstanties, of door instellingen, organen of instanties van de Unie, te worden gebruikt in het kader van migratie-, asiel- of grenstoezichtsbeheer, met het oog op het opsporen, herkennen of identificeren van natuurlijke personen, met uitzondering van de verificatie van reisdocumenten?`"]
-question5.22["`Is je AI-systeem bedoeld om door of namens een gerechtelijke instantie te worden gebruikt om een gerechtelijke instantie te ondersteunen bij het onderzoeken en uitleggen van feiten of de wet en bij de toepassing van het recht op een concrete reeks feiten of om te worden gebruikt op soortgelijke wijze in het kader van alternatieve geschillenbeslechting?`"]
-question5.23["`Is je AI-systeem bedoeld voor het beïnvloeden van de uitslag van een verkiezing of referendum of van het stemgedrag van natuurlijke personen bij de uitoefening van hun stemrecht bij verkiezingen of referenda? Dit geldt niet voor AI-systemen aan de output waarvan natuurlijke personen niet rechtstreeks worden blootgesteld, zoals instrumenten die worden gebruikt om politieke campagnes te organiseren, te optimaliseren of te structureren vanuit administratief of logistiek oogpunt.`"]
+question5.20["`Is je AI-systeem bedoeld om door of namens bevoegde overheidsinstanties of door instellingen, organen of instanties van de Unie te worden gebruikt om risico’s te beoordelen, waaronder een veiligheidsrisico, een risico op illegale migratie of een gezondheidsrisico, uitgaat van een natuurlijke persoon die voornemens is het grondgebied van een lidstaat te betreden of dat heeft gedaan?`"]
+question5.21["`Is je AI-systeem bedoeld om door of namens bevoegde overheidsinstanties  of door instellingen, organen of instanties van de Unie te worden gebruikt om bevoegde overheidsinstanties bij te staan bij de behandeling van aanvragen voor asiel, visa of verblijfsvergunningen en bij de behandeling van aanverwante klachten in verband met het al dan niet in aanmerking komen van de natuurlijke personen die een aanvraag voor een status indienen, met inbegrip van hieraan gerelateerde beoordelingen van de betrouwbaarheid van bewijsmateriaal?`"]
+question5.22["`Is je AI-systeem bedoeld om door of namens bevoegde overheidsinstanties, of door instellingen, organen of instanties van de Unie, te worden gebruikt in het kader van migratie-, asiel- of grenstoezichtsbeheer, met het oog op het opsporen, herkennen of identificeren van natuurlijke personen, met uitzondering van de verificatie van reisdocumenten?`"]
+question5.23["`Is je AI-systeem bedoeld om door of namens een gerechtelijke instantie te worden gebruikt om een gerechtelijke instantie te ondersteunen bij het onderzoeken en uitleggen van feiten of de wet en bij de toepassing van het recht op een concrete reeks feiten of om te worden gebruikt op soortgelijke wijze in het kader van alternatieve geschillenbeslechting?`"]
+question5.24["`Is je AI-systeem bedoeld voor het beïnvloeden van de uitslag van een verkiezing of referendum of van het stemgedrag van natuurlijke personen bij de uitoefening van hun stemrecht bij verkiezingen of referenda? Dit geldt niet voor AI-systemen aan de output waarvan natuurlijke personen niet rechtstreeks worden blootgesteld, zoals instrumenten die worden gebruikt om politieke campagnes te organiseren, te optimaliseren of te structureren vanuit administratief of logistiek oogpunt.`"]
 question5.24.0["`Ga je een AI-systeem of een AI-model op de markt brengen of in gebruik stellen onder eigen naam of merk, al dan niet tegen betaling? Of ben je een aanbieder van een AI-systeem, met inbegrip van een AI-systeem voor algemene doeleinden, waarin een AI-model is geïntegreerd, ongeacht of het AI-model door hemzelf wordt verstrekt en verticaal geïntegreerd is of door een andere entiteit wordt aangeboden op basis van contractuele betrekkingen?`"]
 question5.24.1["`Ben je een overheidsinstantie die een AI-systeem onder eigen verantwoordelijkheid gebruikt? Het AI-systeem wordt niet gebruikt in het kader van een persoonlijke niet-beroepsactiviteit`"]
 result.6["`Je bent geen gebruiksverantwoordelijke en geen aanbieder. Deze beslisboom is gemaakt voor alleen deze twee rollen. Controleer nog een keer goed of één van deze rollen misschien toch op jou van toepassing is.`"]
@@ -164,8 +164,6 @@ question5.17 --->|Nee| question5.18
 question5.18 --->|Ja| question5.24.0
 question5.18 --->|Nee| question5.19
 question5.19 --->|Ja| question5.24.0
-question5.19 --->|Nee| question5.19
-question5.19 --->|Ja| question5.24.0
 question5.19 --->|Nee| question5.20
 question5.20 --->|Ja| question5.24.0
 question5.20 --->|Nee| question5.21
@@ -174,7 +172,9 @@ question5.21 --->|Nee| question5.22
 question5.22 --->|Ja| question5.24.0
 question5.22 --->|Nee| question5.23
 question5.23 --->|Ja| question5.24.0
-question5.23 --->|Nee| question8.0
+question5.23 --->|Nee| question5.24
+question5.24 --->|Ja| question5.24.0
+question5.24 --->|Nee| question8.0
 question5.24.0 --->|Ja| question5.24.0.0
 question5.24.0 --->|Nee| question5.24.1
 question5.24.1 --->|Ja| question5.24.2
