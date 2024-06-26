@@ -1,9 +1,8 @@
+```mermaid
 ---
 title: AI Act Beslisboom
 ---
-
-```mermaid
-graph
+graph 
 question0["`Voldoet je algoritme aan de definitie van 'algoritme' van de ARK? 'Een set van regels en instructies die een computer geautomatiseerd volgt bij het maken van berekeningen om een probleem op te lossen of een vraag te beantwoorden.'`"]
 result.0["`Je gebruikt geen algoritme. Houd je wel aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)`"]
 question1.0["`Betreft je algoritme een AI-systeem volgens definitie AI-verordening? Daarbij kan gebruik worden gemaakt van de volgende definities uit artikel 3 van de AI-verordening: 'AI-systeem': een op een machine gebaseerd systeem dat is ontworpen om met verschillende niveaus van autonomie te werken en dat na het inzetten ervan aanpassingsvermogen kan vertonen, en dat, voor expliciete of impliciete doelstellingen, uit de ontvangen input afleidt hoe output te genereren zoals voorspellingen, inhoud,aanbevelingen of beslissingen die van invloed kunnen zijn op fysieke of virtuele omgevingen 'AI-systeem voor algemene doeleinden': een AI-systeem dat is gebaseerd op een AI-model voor algemene doeleinden en dat verschillende doeleinden kan dienen, zowel voor direct gebruik als voor integratie in andere AI-systemen`"]
@@ -220,5 +219,4 @@ question9.0 --->|Ja| question9.1
 question9.0 --->|Nee| result.17
 question9.1 --->|Ja| result.18
 question9.1 --->|Nee| result.19
-
 ```

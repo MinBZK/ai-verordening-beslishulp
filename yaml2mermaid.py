@@ -53,4 +53,7 @@ chart = MermaidDiagram(
 print(chart)
 
 with open('graph.md', 'w') as f:
+    f.write("```mermaid\n")
     f.write(chart.string)
+    f.write("\n")
+    f.write("```")
