@@ -33,8 +33,8 @@ def parse_tree(tree):
                     i += 1
                     nodes.append(node_result)
 
-                    edge = Link(node, node_result, message=answer['answer'])
-                    edges.append(edge)
+                edge = Link(node, node_result, message=answer['answer'])
+                edges.append(edge)
 
             elif 'nextQuestionId' in answer:
                     node_next = Node(f"question{answer['nextQuestionId']}", "")

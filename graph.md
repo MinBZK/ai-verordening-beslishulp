@@ -1,6 +1,7 @@
 ---
 title: AI Act Beslisboom
 ---
+
 ```mermaid
 graph
 question0["`Voldoet je algoritme aan de definitie van 'algoritme' van de ARK? 'Een set van regels en instructies die een computer geautomatiseerd volgt bij het maken van berekeningen om een probleem op te lossen of een vraag te beantwoorden.'`"]
@@ -97,12 +98,19 @@ question2.0 --->|Het antwoord op alle vier de vragen is Nee| question3.0
 question2.0 --->|Één of meer vragen zijn met Ja beantwoord| question9.0
 question3.0 --->|Ja| result.1
 question3.0 --->|Nee| question3.1
+question3.1 --->|Ja| result.1
 question3.1 --->|Nee| question3.2
+question3.2 --->|Ja| result.1
 question3.2 --->|Nee| question3.3
+question3.3 --->|Ja| result.1
 question3.3 --->|Nee| question3.4
+question3.4 --->|Ja| result.1
 question3.4 --->|Nee| question3.5
+question3.5 --->|Ja| result.1
 question3.5 --->|Nee| question3.6
+question3.6 --->|Ja| result.1
 question3.6 --->|Nee| question3.7
+question3.7 --->|Ja| result.1
 question3.7 --->|Nee| question4.0
 question4.0 --->|Ja| question4.2.0
 question4.0 --->|Nee| question4.1
@@ -114,7 +122,9 @@ question4.2.1 --->|Ja| question4.2.2
 question4.2.1 --->|Nee| result.3
 question4.2.2 --->|Ja| result.4
 question4.2.2 --->|Nee| question4.2.3
+question4.2.3 --->|Ja| result.4
 question4.2.3 --->|Nee| question4.2.4
+question4.2.4 --->|Ja| result.4
 question4.2.4 --->|Nee| result.5
 question5.0 --->|Ja| question5.24.0
 question5.0 --->|Nee| question5.1
@@ -170,8 +180,11 @@ question5.24.0 --->|Ja| question5.24.0.0
 question5.24.0 --->|Nee| question5.24.1
 question5.24.1 --->|Ja| question5.24.2
 question5.24.1 --->|Nee| result.6
+question5.24.2 --->|Ja| result.6
 question5.24.2 --->|Nee| question5.24.3
+question5.24.3 --->|Ja| result.6
 question5.24.3 --->|Nee| question5.24.4
+question5.24.4 --->|Ja| result.6
 question5.24.4 --->|Nee| result.7
 question5.24.0.0 --->|Ja| question5.24.0.0.1
 question5.24.0.0 --->|Nee| question5.24.0.2
@@ -196,12 +209,16 @@ question7.2 --->|Nee| result.14
 question8.0 --->|Ja| question6.0
 question8.0 --->|Nee| question8.1
 question8.1 --->|Ja| question8.2
+question8.1 --->|Nee| result.14
 question8.2 --->|Ja| result.15
 question8.2 --->|Nee| question8.3
 question8.3 --->|Ja| result.16
 question8.3 --->|Nee| question8.4
+question8.4 --->|Ja| result.16
+question8.4 --->|Nee| result.16
 question9.0 --->|Ja| question9.1
 question9.0 --->|Nee| result.17
 question9.1 --->|Ja| result.18
 question9.1 --->|Nee| result.19
+
 ```
