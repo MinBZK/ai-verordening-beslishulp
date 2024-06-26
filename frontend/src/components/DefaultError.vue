@@ -7,7 +7,7 @@ defineProps<Props>()
 
 <template>
   {{ error }}
-  <div v-if="error" class="ai-decisiontree ai-decisiontree-error">
+  <div v-if="error" class="ai-decisiontree-error">
     {{ error }}
     <slot />
   </div>

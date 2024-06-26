@@ -6,7 +6,7 @@ defineProps<Props>()
 </script>
 
 <template>
-  <div class="ai-decisiontree ai-decisiontree-question">
+  <div class="ai-decisiontree-question">
     {{ question }}
     <slot />
   </div>

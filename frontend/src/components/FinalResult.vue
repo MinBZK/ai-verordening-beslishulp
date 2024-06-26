@@ -6,7 +6,7 @@ defineProps<Props>()
 </script>
 
 <template>
-  <div v-if="result" class="ai-decisiontree ai-decisiontree-result">
+  <div v-if="result" class="ai-decisiontree-result">
     {{ result }}
     <slot />
   </div>
