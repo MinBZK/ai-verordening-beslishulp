@@ -21,7 +21,7 @@ def parse_tree(tree):
 
     # add all nodes
     for question in data_loaded['questions']:
-        node = Node(f"question{question['questionId']}", question['question'].replace("\n", " "))
+        node = Node(f"question{question['questionId']}", "`" + question['question'].replace("\n", " ") + "`")
         nodes.append(node)
 
         # add nodes for the results
