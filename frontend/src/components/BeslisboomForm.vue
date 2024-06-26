@@ -41,7 +41,6 @@ onMounted(async () => {
     const yamlData = load(text)
 
     const validationResult: t.Validation<any> = DecisionTree.decode(yamlData)
-
     fold(
       () => {
         throw new Error(
@@ -89,26 +88,37 @@ function back() {
 </script>
 
 <template>
-  <div class="ai-decisiontree ai-decisiontree-form">
+  <div
+    class="ai-decisiontree flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6"
+  >
     <DefaultLoader :loading="isLoading" />
 
+    <DefaultError :error="error" />
     <FinalResult :result="result" />
 
-    <div v-if="currentQuestion" class="ai-decisiontree-form-question">
-      <SingleQuestion :question="currentQuestion.question" />
-
-      <div
-        class="ai-decisiontree-form-answer"
-        v-for="(answer, index) in currentQuestion.answers"
-        :key="index"
-      >
-        <SingleAnswer :answer="answer" @answered="givenAnswer" />
-      </div>
+    <div>
+      <fieldset>
+        <div v-if="currentQuestion" class="ai-decisiontree-form-question">
+          <SingleQuestion :question="currentQuestion.question" :id="currentQuestion.questionId" />
+          <SingleAnswer :answers="currentQuestion.answers" @answered="givenAnswer" />
+        </div>
+      </fieldset>
     </div>
+  </div>
 
-    <button v-if="questionId !== '0'" @click="back">back</button>
-    <button @click="reset">reset</button>
-
-    <DefaultError :error="error" />
+  <div
+    class="mt-6 flex items-center justify-end gap-x-6 border-t border-gray-200 bg-white px-4 py-3 sm:px-6"
+  >
+    <button @click="reset" type="button" class="text-sm font-semibold leading-6 text-gray-900">
+      Reset
+    </button>
+    <button
+      @click="back"
+      v-if="questionId !== '0'"
+      type="button"
+      class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+    >
+      Terug
+    </button>
   </div>
 </template>
