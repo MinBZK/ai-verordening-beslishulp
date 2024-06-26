@@ -19,11 +19,14 @@ questions:
     ''AI-systeem'': een op een machine gebaseerd systeem dat is ontworpen om met verschillende niveaus van autonomie te werken en dat na het inzetten ervan aanpassingsvermogen kan vertonen, en dat, voor expliciete of impliciete doelstellingen, uit de ontvangen input afleidt hoe output te genereren zoals voorspellingen, inhoud,aanbevelingen of beslissingen die van invloed kunnen zijn op fysieke of virtuele omgevingen
 
     ''AI-systeem voor algemene doeleinden'': een AI-systeem dat is gebaseerd op een AI-model voor algemene doeleinden en dat verschillende doeleinden kan dienen, zowel voor direct gebruik als voor integratie in andere AI-systemen'
+    
+    ''AI-model voor algemene doeleinden'': een AI-model, ook wanneer het is getraind met een grote hoeveelheid data met behulp van self-supervision op grote schaal, dat een aanzienlijk algemeen karakter vertoont en in staat is op competente wijze een breed scala aan verschillende taken uit te voeren, ongeacht de wijze waarop het model in de 
+handel wordt gebracht, en dat kan worden geïntegreerd in een verscheidenheid aan systemen verder in de AI-waardeketen of toepassingen verder in de AI-waardeketen, met uitzondering van AI-modellen die worden gebruikt voor onderzoek, ontwikkeling of prototypingactiviteiten alvorens zij in de handel worden gebracht'
   questionType: MultipleChoice
   answers:
-  - answer: Ja, het betreft een AI-systeem, maar geen AI-systeem voor algemene doeleinden
+  - answer: Ja, het betreft een AI-systeem of een AI-systeem voor algemene doeleinden
     nextQuestionId: '2.0'
-  - answer: Ja, het betreft een AI-systeem voor algemene doeleinden
+  - answer: Ja, het betreft een AI-model voor algemene doeleinden
     nextQuestionId: '7.0'
   - answer: Nee
     nextQuestionId: '9.0'
@@ -517,30 +520,30 @@ questions:
 
 ### check rol bij general purpose AI
 - questionId: '7.0'
-  question: "Ga je een AI-systeem of een AI-model op de markt brengen of in gebruik stellen onder eigen naam of merk, al dan niet tegen betaling?\nOf ben je een aanbieder van een AI-systeem, met inbegrip van een AI-systeem voor algemene doeleinden, waarin een AI-model is geïntegreerd, ongeacht of het AI-model door hemzelf wordt verstrekt en verticaal geïntegreerd is of door een andere entiteit wordt aangeboden op basis van contractuele betrekkingen?"
+  question: "Ga je een AI-model op de markt brengen of in gebruik stellen onder eigen naam of merk, al dan niet tegen betaling?\nOf ben je een aanbieder van een AI-model?"
   questionType: SingleChoice
   answers:
   - answer: Ja
-    answerComment: "Dan ben je een aanbieder volgens de AI verordening.\nJe bent een AI systeem voor algemene doeleinden aan het ontwikkelen en je moet voldoen aan bepaalde vereisten van de AI-verordening (o.a. artikelen 4, 50 t/m 55)"
+    answerComment: "Dan ben je een aanbieder volgens de AI verordening.\nJe bent een AI-model voor algemene doeleinden aan het ontwikkelen en je moet voldoen aan artikel 53 en ANNEX XI en XII van de AI-verordening"
     nextQuestionId: '7.1'
   - answer: Nee
     answerComment: "Je bent geen aanbieder. We gaan checken of je een andere rol hebt."
     nextQuestionId: '7.2'
 - questionId: '7.1'
-  question: "Ben je een aanbieder van een AI-systeem voor algemene doeleinden met een systeemrisico? (Volgens artikel 51 beschikt een AI-systeem met een systeemrisico over capaciteiten met een grote impact die worden geëvalueerd op basis van passende technische instrumenten en methoden, met inbegrip van  indicatoren en benchmarks. Daarnaast wordt geacht capaciteiten met een grote impact overeenkomstig lid 1, punt a), te hebben wanneer de cumulatieve hoeveelheid berekeningen die wordt gebruikt om het model te trainen, gemeten in zwevendekommabewerkingen, groter is dan 10^25)"
+  question: "Ben je een aanbieder van een AI-model voor algemene doeleinden met een systeemrisico? (Volgens artikel 51 beschikt een AI-model met een systeemrisico over capaciteiten met een grote impact die worden geëvalueerd op basis van passende technische instrumenten en methoden, met inbegrip van  indicatoren en benchmarks. Daarnaast wordt geacht capaciteiten met een grote impact overeenkomstig lid 1, punt a), te hebben wanneer de cumulatieve hoeveelheid berekeningen die wordt gebruikt om het model te trainen, gemeten in zwevendekommabewerkingen, groter is dan 10^25)"
   questionType: SingleChoice
   answers:
   - answer: Ja
-    result: "Je AI-systeem moet voldoen aan de vereisten van artikel 55 van de AI-verordening. Let op: het kan zijn dat je ook aan de transparantieverplichtingen van artikel 50 moet voldoen."  # Bak N: general purpose AI - aanbieder - systeemrisico
+    result: "Je AI-model moet voldoen aan de vereisten van artikel 55 en ANNEX XI en XII van de AI-verordening."  # Bak N: general purpose AI - aanbieder - systeemrisico
   - answer: Nee
-    result: "Dan ben je een AI systeem voor algemene doeleinden aan het ontwikkelen en je moet voldoen de vereisten van artikel 53. Let op: het kan zijn dat je ook aan de transparantieverplichtingen van artikel 50 moet voldoen." # Bak O: general purpose AI - aanbieder - geen systeemrisico
+    result: "Dan ben je geen AI-model voor algemene doeleinden met een systeemrisico aan het ontwikkelen. Je moet voldoen aan artikel 53 en ANNEX XI en XII van de AI-verordening" # Bak O: general purpose AI - aanbieder - geen systeemrisico
     # moeten we hier nog verder naar vragen voor transparantieverplichtingen?
 - questionId: '7.2'
-  question: "Ben je een overheidsinstantie die een AI-systeem onder eigen verantwoordelijkheid gebruikt? Het AI-systeem wordt niet gebruikt in het kader van een persoonlijke niet-beroepsactiviteit"
+  question: "Ben je een overheidsinstantie die een AI-model onder eigen verantwoordelijkheid gebruikt? Het AI-model wordt niet gebruikt in het kader van een persoonlijke niet-beroepsactiviteit"
   questionType: SingleChoice
   answers:
   - answer: Ja
-    result: "Dan ben je een gebruiksverantwoordelijke volgens de AI verordening. Als je een AI-systeem voor algemene doeleinden gebruikt dan moet je nog steeds voldoen aan artikel 25, 27, 50, 86." # Bak P: general purpose AI - geen aanbieder - gebruiksverantwoordelijke
+    result: "Dan ben je een gebruiksverantwoordelijke volgens de AI verordening. Als je een AI-model voor algemene doeleinden gebruikt dan moet je nog steeds voldoen aan artikel 25 t/m 27, 50, 86." # Bak P: general purpose AI - geen aanbieder - gebruiksverantwoordelijke
   - answer: Nee
     result: "Je bent geen aanbieder en geen gebruiksverantwoordelijke. Deze beslisboom is gemaakt voor alleen deze twee rollen. Controleer nog een keer goed of één van deze rollen misschien toch op jou van toepassing is." # Bak Q: general purpose AI - geen aanbieder - geen gebruiksverantwoordelijke
 
