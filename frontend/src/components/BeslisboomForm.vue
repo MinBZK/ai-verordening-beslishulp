@@ -100,7 +100,11 @@ function back() {
       <fieldset>
         <div v-if="currentQuestion" class="ai-decisiontree-form-question">
           <SingleQuestion :question="currentQuestion.question" :id="currentQuestion.questionId" />
-          <SingleAnswer :answers="currentQuestion.answers" @answered="givenAnswer" />
+          <SingleAnswer
+            :answers="currentQuestion.answers"
+            :id="currentQuestion.questionId"
+            @answered="givenAnswer"
+          />
         </div>
       </fieldset>
     </div>
