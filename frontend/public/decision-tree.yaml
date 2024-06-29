@@ -358,18 +358,9 @@ questions:
     answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten, afhankelijk van welke rol je hebt. Dit gaan we nu bepalen.
     nextQuestionId: '5.24.0'
   - answer: Nee
-    nextQuestionId: '5.19'
-- questionId: '5.19'
-  question: "Is je AI-systeem bedoeld om door of namens bevoegde overheidsinstanties of door instellingen, organen of instanties van de Unie te worden gebruikt om risico\u2019s te beoordelen, waaronder een veiligheidsrisico, een risico op illegale migratie of een gezondheidsrisico, uitgaat van een natuurlijke persoon die voornemens is het grondgebied van een lidstaat te betreden of dat heeft gedaan?"
-  questionType: SingleChoice
-  answers:
-  - answer: Ja
-    answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten, afhankelijk van welke rol je hebt. Dit gaan we nu bepalen.
-    nextQuestionId: '5.24.0'
-  - answer: Nee
     nextQuestionId: '5.20'
 - questionId: '5.20'
-  question: Is je AI-systeem bedoeld om door of namens bevoegde overheidsinstanties  of door instellingen, organen of instanties van de Unie te worden gebruikt om bevoegde overheidsinstanties bij te staan bij de behandeling van aanvragen voor asiel, visa of verblijfsvergunningen en bij de behandeling van aanverwante klachten in verband met het al dan niet in aanmerking komen van de natuurlijke personen die een aanvraag voor een status indienen, met inbegrip van hieraan gerelateerde beoordelingen van de betrouwbaarheid van bewijsmateriaal?
+  question: "Is je AI-systeem bedoeld om door of namens bevoegde overheidsinstanties of door instellingen, organen of instanties van de Unie te worden gebruikt om risico\u2019s te beoordelen, waaronder een veiligheidsrisico, een risico op illegale migratie of een gezondheidsrisico, uitgaat van een natuurlijke persoon die voornemens is het grondgebied van een lidstaat te betreden of dat heeft gedaan?"
   questionType: SingleChoice
   answers:
   - answer: Ja
@@ -378,7 +369,7 @@ questions:
   - answer: Nee
     nextQuestionId: '5.21'
 - questionId: '5.21'
-  question: Is je AI-systeem bedoeld om door of namens bevoegde overheidsinstanties, of door instellingen, organen of instanties van de Unie, te worden gebruikt in het kader van migratie-, asiel- of grenstoezichtsbeheer, met het oog op het opsporen, herkennen of identificeren van natuurlijke personen, met uitzondering van de verificatie van reisdocumenten?
+  question: Is je AI-systeem bedoeld om door of namens bevoegde overheidsinstanties  of door instellingen, organen of instanties van de Unie te worden gebruikt om bevoegde overheidsinstanties bij te staan bij de behandeling van aanvragen voor asiel, visa of verblijfsvergunningen en bij de behandeling van aanverwante klachten in verband met het al dan niet in aanmerking komen van de natuurlijke personen die een aanvraag voor een status indienen, met inbegrip van hieraan gerelateerde beoordelingen van de betrouwbaarheid van bewijsmateriaal?
   questionType: SingleChoice
   answers:
   - answer: Ja
@@ -387,7 +378,7 @@ questions:
   - answer: Nee
     nextQuestionId: '5.22'
 - questionId: '5.22'
-  question: Is je AI-systeem bedoeld om door of namens een gerechtelijke instantie te worden gebruikt om een gerechtelijke instantie te ondersteunen bij het onderzoeken en uitleggen van feiten of de wet en bij de toepassing van het recht op een concrete reeks feiten of om te worden gebruikt op soortgelijke wijze in het kader van alternatieve geschillenbeslechting?
+  question: Is je AI-systeem bedoeld om door of namens bevoegde overheidsinstanties, of door instellingen, organen of instanties van de Unie, te worden gebruikt in het kader van migratie-, asiel- of grenstoezichtsbeheer, met het oog op het opsporen, herkennen of identificeren van natuurlijke personen, met uitzondering van de verificatie van reisdocumenten?
   questionType: SingleChoice
   answers:
   - answer: Ja
@@ -396,6 +387,15 @@ questions:
   - answer: Nee
     nextQuestionId: '5.23'
 - questionId: '5.23'
+  question: Is je AI-systeem bedoeld om door of namens een gerechtelijke instantie te worden gebruikt om een gerechtelijke instantie te ondersteunen bij het onderzoeken en uitleggen van feiten of de wet en bij de toepassing van het recht op een concrete reeks feiten of om te worden gebruikt op soortgelijke wijze in het kader van alternatieve geschillenbeslechting?
+  questionType: SingleChoice
+  answers:
+  - answer: Ja
+    answerComment: Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Het zou dan moeten voldoen aan bepaalde vereisten, afhankelijk van welke rol je hebt. Dit gaan we nu bepalen.
+    nextQuestionId: '5.24.0'
+  - answer: Nee
+    nextQuestionId: '5.24'
+- questionId: '5.24'
   question: "Is je AI-systeem bedoeld voor het be\xEFnvloeden van de uitslag van een verkiezing of referendum of van het stemgedrag van natuurlijke personen bij de uitoefening van hun stemrecht bij verkiezingen of referenda? Dit geldt niet voor AI-systemen aan de output waarvan natuurlijke personen niet rechtstreeks worden blootgesteld, zoals instrumenten die worden gebruikt om politieke campagnes te organiseren, te optimaliseren of te structureren vanuit administratief of logistiek oogpunt."
   questionType: SingleChoice
   answers:
@@ -531,9 +531,9 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    result: "Dan ben je een AI systeem voor algemene doeleinden aan het ontwikkelen en je moet voldoen de vereisten van artikel 53. Let op: het kan zijn dat je ook aan de transparantieverplichtingen van artikel 50 moet voldoen." # Bak N: general purpose AI - aanbieder - systeemrisico
+    result: "Je AI-systeem moet voldoen aan de vereisten van artikel 55 van de AI-verordening. Let op: het kan zijn dat je ook aan de transparantieverplichtingen van artikel 50 moet voldoen."  # Bak N: general purpose AI - aanbieder - systeemrisico
   - answer: Nee
-    result: "Je AI-systeem moet voldoen aan de vereisten van artikel 55 van de AI-verordening. Let op: het kan zijn dat je ook aan de transparantieverplichtingen van artikel 50 moet voldoen." # Bak O: general purpose AI - aanbieder - geen systeemrisico
+    result: "Dan ben je een AI systeem voor algemene doeleinden aan het ontwikkelen en je moet voldoen de vereisten van artikel 53. Let op: het kan zijn dat je ook aan de transparantieverplichtingen van artikel 50 moet voldoen." # Bak O: general purpose AI - aanbieder - geen systeemrisico
     # moeten we hier nog verder naar vragen voor transparantieverplichtingen?
 - questionId: '7.2'
   question: "Ben je een overheidsinstantie die een AI-systeem onder eigen verantwoordelijkheid gebruikt? Het AI-systeem wordt niet gebruikt in het kader van een persoonlijke niet-beroepsactiviteit"
@@ -568,10 +568,18 @@ questions:
   questionType: SingleChoice
   answers:
   - answer: Ja
-    result: Dan moet je voldoen aan de transparantieverplichtingen van art. 50(3). # dit is misschien ook art. 50(4), vraag zat dubbel in json
+    result: Dan moet je voldoen aan de transparantieverplichtingen van art. 50(3).
   - answer: Nee
     nextQuestionId: '8.3'
 - questionId: '8.3'
+  question: Ontwikkel je AI-systemen dat beeld-, audio- of videocontent genereert of die een deepfake vormt bewerkt?
+  questionType: SingleChoice
+  answers:
+  - answer: Ja
+    result: Dan moet je voldoen aan de transparantieverplichtingen van art. 50(4)
+  - answer: Nee
+    nextQuestionId: '8.4'
+- questionId: '8.4'
   question: Ontwikkel je AI-systemen die tekst genereren of bewerken en die worden gepubliceerd om het publiek te informeren over aangelegenheden van algemeen belang?
   questionType: SingleChoice
   answers:

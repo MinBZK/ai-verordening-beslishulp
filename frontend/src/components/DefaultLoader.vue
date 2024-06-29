@@ -6,7 +6,7 @@ defineProps<Props>()
 </script>
 
 <template>
-  <div v-if="loading" class="ai-decisiontree ai-decisiontree-loader">
+  <div v-if="loading" class="ai-decisiontree-loader">
     <div></div>
     <div></div>
     <div></div>
