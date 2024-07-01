@@ -1,7 +1,7 @@
 ARG NODE_VERSION=20-alpine
 ARG NGINX_VERSION=1.27.0
 
-FROM --platform=$BUILDPLATFORM node:$NODE_VERSION as build
+FROM --platform=$BUILDPLATFORM node:$NODE_VERSION AS build
 
 WORKDIR /app
 COPY package*.json ./
