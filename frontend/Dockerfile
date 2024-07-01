@@ -12,7 +12,7 @@ RUN npm run build
 
 FROM nginx:$NGINX_VERSION
 
-LABEL org.opencontainers.image.source https://github.com/MinBZK/AI-act-beslisboom
+LABEL org.opencontainers.image.source=https://github.com/MinBZK/AI-act-beslisboom
 
 COPY --from=build /app/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/nginx.conf
