@@ -15,7 +15,7 @@
   "dependencies": {
     "@headlessui/vue": "^1.7.22",
     "@heroicons/vue": "^2.1.4",
-    "fp-ts": "^2.16.6",
+    "fp-ts": "^2.16.8",
     "io-ts": "^2.2.21",
     "js-yaml": "^4.1.0",
     "pinia": "^2.1.7",
