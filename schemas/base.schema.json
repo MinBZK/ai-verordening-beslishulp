@@ -36,8 +36,8 @@
       "type": "string",
       "uniqueItems": true
     },
-    "AnswerComment": {
-      "id": "#/$defs/AnswerComment",
+    "Subresult": {
+      "id": "#/$defs/Subresult",
       "type": "string"
     },
     "Answer": {
@@ -53,8 +53,8 @@
         "result": {
           "$ref": "#/$defs/Result"
         },
-        "answerComment": {
-          "$ref": "#/$defs/AnswerComment"
+        "subresult": {
+          "$ref": "#/$defs/Subresult"
         }
       },
       "required": ["answer"],
@@ -126,7 +126,15 @@
           "maxItems": 2
         }
       },
-      "required": ["questionId", "question", "questionType", "answers"]
+      "required": ["questionId", "question", "questionType", "answers"],
+      "oneOf": [
+        {
+          "required": ["answers"]
+        },
+        {
+          "required": ["questions"]
+        }
+      ]
     }
   }
 }
