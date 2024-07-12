@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/MinBZK/AI-act-beslisboom/main/schemas/base.schema",
   "title": "Beslisboom schema",
-  "description": "beslitboom schema",
+  "description": "Beslisboom schema",
   "type": "object",
   "properties": {
     "name": {
@@ -36,8 +36,8 @@
       "type": "string",
       "uniqueItems": true
     },
-    "Subresult": {
-      "id": "#/$defs/Subresult",
+    "AnswerComment": {
+      "id": "#/$defs/AnswerComment",
       "type": "string"
     },
     "Answer": {
@@ -53,8 +53,8 @@
         "result": {
           "$ref": "#/$defs/Result"
         },
-        "subresult": {
-          "$ref": "#/$defs/Subresult"
+        "answerComment": {
+          "$ref": "#/$defs/AnswerComment"
         }
       },
       "required": ["answer"],
@@ -93,6 +93,15 @@
           "type": "string",
           "enum": ["MultipleChoice"]
         },
+        "description": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "source_url": {
+          "type": "string"
+        },
         "answers": {
           "type": "array",
           "items": {
@@ -116,6 +125,15 @@
         "questionType": {
           "type": "string",
           "enum": ["SingleChoice"]
+        },
+        "description": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "source_url": {
+          "type": "string"
         },
         "answers": {
           "type": "array",
