@@ -40,6 +40,41 @@
       "id": "#/$defs/AnswerComment",
       "type": "string"
     },
+    "Label": {
+      "id": "#/$defs/Label",
+      "type": "string"
+    },
+    "If": {
+      "id": "#/$defs/If",
+      "type": "string"
+    },
+    "Default": {
+      "id": "#/$defs/Default",
+      "type": "string"
+    },
+    "Redirect": {
+      "id": "#/$defs/Redirect",
+      "type": "object",
+      "properties": {
+        "nextQuestionId": {
+          "$ref": "#/$defs/QuestionId"
+        },
+        "if": {
+          "$ref": "#/$defs/If"
+        },
+        "default": {
+          "$ref": "#/$defs/Default"
+        }
+      },
+      "oneOf": [
+        {
+          "required": ["nextQuestionId"]
+        },
+        {
+          "required": ["default"]
+        }
+      ]
+    },
     "Answer": {
       "id": "#/$defs/Question",
       "type": "object",
@@ -55,6 +90,19 @@
         },
         "answerComment": {
           "$ref": "#/$defs/AnswerComment"
+        },
+        "labels": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Label"
+          }
+        },
+        "redirects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Redirect"
+          },
+          "minItems": 2
         }
       },
       "required": ["answer"],
@@ -64,6 +112,9 @@
         },
         {
           "required": ["result"]
+        },
+        {
+          "required": ["redirects"]
         }
       ]
     },

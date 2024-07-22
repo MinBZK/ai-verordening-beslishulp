@@ -1,0 +1,56 @@
+version: 1.0.0
+name: Test Decision Tree
+questions:
+
+### 1e vraag
+- questionId: '0'
+  question: "Is het een algoritme?"
+  questionType: SingleChoice
+  answers:
+  - answer: Ja
+    labels:
+    - "Wel een algoritme"
+    nextQuestionId: '1.0'
+  - answer: Nee
+    labels:
+    - "Geen algoritme"
+    nextQuestionId: '1.0'
+
+## Checkvraag
+- questionId: '1.0'
+  question: "Is het écht geen algoritme?"
+  questionType: SingleChoice
+  answers:
+  - answer: Ja
+    redirects:
+    - nextQuestionId: '2.0'
+      if: '"Wel een algoritme" in labels'
+    - nextQuestionId: '3.0'
+      if: '"Geen algoritme" in labels'
+  - answer: Nee
+    redirects:
+    - nextQuestionId: '3.0'
+      if: '"Wel een algoritme" in labels'
+    - nextQuestionId: '2.0'
+      if: '"Geen algoritme" in labels'
+    - default: '3.0'
+
+## Resultaat dat alles oke is
+- questionId: '2.0'
+  question: "The answer"
+  questionType: SingleChoice
+  answers:
+  - answer: Je antwoord is consistent, goed zo
+    result: Je antwoord is consistent, goed zo
+  - answer: Je antwoord is consistent, goed zo
+    result: Je antwoord is consistent, goed zo
+
+### Resultaat dat iemand inconsistent is
+- questionId: '3.0'
+  question: "The answer"
+  questionType: SingleChoice
+  answers:
+  - answer: Je antwoord is niet consistent, probeer opnieuw
+    result: Je antwoord is niet consistent, probeer opnieuw
+  - answer: Je antwoord is niet consistent, probeer opnieuw
+    result: Je antwoord is niet consistent, probeer opnieuw
