@@ -14,9 +14,7 @@ parser.add_argument("--schema_file", help="file location of the JSON schema file
                     type=str)
 parser.add_argument("--yaml_file", help="file location of te YAML file to check the schema against",
                     type=str)
-
 args = parser.parse_args()
-
 
 # Load the JSON schema
 with open(args.schema_file, "r") as schema_file:
