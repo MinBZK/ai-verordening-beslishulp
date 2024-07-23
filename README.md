@@ -80,5 +80,5 @@ kubectl apply -k infra/
 ## Validate schema of YAML
 
 ```sh
-./scripts/validate schemas/base.schema.json tests/sample-decision-tree-complex.yaml
+./scripts/validate --schema_file schemas/base.schema.json --yaml_file tests/sample-decision-tree-complex.yaml
 ```

@@ -2,24 +2,35 @@
 
 import json
 import sys
+import argparse
 
 import jsonschema
 import yaml
 from jsonschema import validate
 
+# Argument parsing
+parser = argparse.ArgumentParser()
+parser.add_argument("--schema_file", help="file location of the JSON schema file to check the YAML against",
+                    type=str)
+parser.add_argument("--yaml_file", help="file location of te YAML file to check the schema against",
+                    type=str)
+
+args = parser.parse_args()
+
+
 # Load the JSON schema
-with open(sys.argv[1], "r") as schema_file:
+with open(args.schema_file, "r") as schema_file:
     schema = json.load(schema_file)
 
-for f in sys.argv[2:]:
-    # Load the YAML file
-    with open(f, "r") as yaml_file:
-        data = yaml.safe_load(yaml_file)
+# Load the YAML file
+f = args.yaml_file
+with open(f, "r") as yaml_file:
+    data = yaml.safe_load(yaml_file)
 
-    # Validate the data
-    try:
-        validate(instance=data, schema=schema)
-        print(f"Validation of '{f}' successful.")
-    except jsonschema.exceptions.ValidationError as err:
-        print(f"Validation error in '{f}': {err.message}")
-        sys.exit(1)
+# Validate the data
+try:
+    validate(instance=data, schema=schema)
+    print("Validation of '{f}' successful.".format(f=f))
+except jsonschema.exceptions.ValidationError as err:
+    print("Validation error in '{f}': {err.message}".format(f=f, err=err))
+    sys.exit(1)
