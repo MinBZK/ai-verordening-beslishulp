@@ -60,6 +60,18 @@
       "id": "#/$defs/If",
       "type": "string"
     },
+    "ConclusionId": {
+      "id": "#/$defs/ConclusionId",
+      "type": "string"
+    },
+    "ConclusionComment": {
+      "id": "#/$defs/ConclusionComment",
+      "type": "string"
+    },
+    "Obligation": {
+      "id": "#/$defs/Obligation",
+      "type": "string"
+    },
     "Default": {
       "id": "#/$defs/Default",
       "type": "string"
@@ -142,6 +154,9 @@
         },
         {
           "$ref": "#/$defs/SingleChoiceQuestion"
+        },
+        {
+          "$ref": "#/$defs/Conclusion"
         }
       ]
     },
@@ -211,6 +226,35 @@
         }
       },
       "required": ["questionId", "question", "questionType", "answers"]
+    },
+    "Conclusion": {
+      "id": "#/$defs/Conclusion",
+      "type": "object",
+      "properties": {
+        "conclusionId": {
+          "$ref": "#/$defs/ConclusionId"
+        },
+        "conclusion": {
+          "type": "string"
+        },
+        "conclusionComment": {
+          "$ref": "#/$defs/ConclusionComment"
+        },
+        "obligation": {
+          "$ref": "#/$defs/Obligation"
+        },
+        "source": {
+          "$ref": "#/$defs/Source"
+        },
+        "source_url": {
+          "$ref": "#/$defs/SourceURL"
+        },
+        "questionType": {
+          "type": "string",
+          "enum": ["Conclusion"]
+        }
+      },
+      "required": ["conclusionId", "conclusion", "obligation"]
     }
   }
 }
