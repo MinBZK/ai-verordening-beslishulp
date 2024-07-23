@@ -88,6 +88,9 @@
         "result": {
           "$ref": "#/$defs/Result"
         },
+        "subresult": {
+          "$ref": "#/$defs/Result"
+        },
         "answerComment": {
           "$ref": "#/$defs/AnswerComment"
         },

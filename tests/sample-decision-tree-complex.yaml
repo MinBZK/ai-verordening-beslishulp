@@ -10,6 +10,8 @@ questions:
   - answer: Ja
     labels:
     - "Wel een algoritme"
+    - "Hoog risico AI"
+    subresult: "Het is eeen algoritme en een hoog risico AI systeem"
     nextQuestionId: '1.0'
   - answer: Nee
     labels:
