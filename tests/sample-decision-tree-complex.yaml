@@ -6,6 +6,9 @@ questions:
 - questionId: '0'
   question: "Is het een algoritme?"
   questionType: SingleChoice
+  source: "AI Wetgeving MinBZK"
+  source_url: "https://minbzk.nl/AI_wetgeving/"
+  description: "Een klein test beschrijving"
   answers:
   - answer: Ja
     labels:
