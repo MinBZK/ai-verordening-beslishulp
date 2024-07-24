@@ -8,9 +8,11 @@ Deze git repository bevat de beslisboom op basis van de AI Verordening. Het proj
 
 Door deze beslisboom te doorlopen, krijgt uw organisatie inzicht in de volgende vragen:
 
-- Is er sprake van een **AI-systeem** , een **AI-systeem voor algemene doeleinden** of een **AI-model voor algemene doeleinden**? Is het systeem/model **open source** of niet?
+- Is er sprake van een **AI-systeem** , een **AI-systeem voor algemene doeleinden** of een **AI-model voor algemene doeleinden**?
+- Is het systeem/model **open source** of niet?
 - Is de AI-verordening van toepassing? Is er sprake van een **uitzonderingsgrond**?
-- Binnen welke **risicocategorie** valt het AI-systeem? Is er sprake van een **systeemrisico** of **transparantierisico**?
+- Binnen welke **risicocategorie** valt het AI-systeem?
+- Is er sprake van een **systeemrisico** of **transparantierisico**?
 - Bent u een **aanbieder** of een **gebruiksverantwoordelijke** van het AI-systeem?
 - Aan welke **verplichtingen** moet u voldoen bij de inzet van het AI-systeem?
 
@@ -33,19 +35,25 @@ Question:                 # definitie van 1 vraag
   questionId: string      # een unique identifier voor de vraag
   question: string        # de vraag die gesteld wordt
   questionType: enum      # het type vraag
-  description: string     # optioneel: een extra beschrijving bij de vraag
+  description: string     # optioneel: een extra opmerking bij de vraag
   source: string          # optioneel: een verwijzing, naar bijvoorbeeld een wetsartikel
   source_url: string      # optioneel: een link naar de bovengenoemde verwijzing
   answers: array(Answer)  # de mogelijke antwoorden zoals hieronder gedefineerd
 
 Answer:                   # definitie van 1 antwoord
   answer: string          # de text van het antwoord
-  nextQuestionId: string  # optioneel de QuestionId van de volgende vraag
+  nextQuestionId: string  # optioneel: de QuestionId van de volgende vraag
   subresult: string       # optioneel: een tussenresultaat voordat naar de volgende vraag verwezen wordt
   labels: array           # optioneel: labels toegekend aan het bijbehorende tussenresultaat
   result: string          # optioneel: het eindresultaat
   answerComment: string   # optioneel: extra commentaar bij het antwoord
 
+Conclusion:               # definitie van 1 eindconclusie
+  conslusion: string      # de eindconclusie
+  conclusionComment: string   #optioneel: een extra opmerking bij de conclusie
+  obligation: string      # de bij de conclusie bebehorende verplichtingen uit de AI verordening
+  source: string          # optioneel: een verwijzing, naar bijvoorbeeld een wetsartikel
+  source_url: string      # optioneel: een link naar de bovengenoemde verwijzing
 ```
 
 ## Frontend
