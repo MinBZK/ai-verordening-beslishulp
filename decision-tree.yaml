@@ -332,7 +332,7 @@ questions:
     subresult: "Er is sprake van een uitzondering op de lijst van verboden AI-systemen."
     labels:
     - "uitzondering verboden AI"
-    nextquestionId: "12.0"
+    nextQuestionId: "12.0"
   - answer: Nee
     result: "Er is geen sprake van een uitzondering op de lijst van verboden AI-systemen. Het is verboden om dit AI-systeem te gebruiken."
     labels:
@@ -359,7 +359,7 @@ questions:
     - "hoog-risico AI"
     nextQuestionId: "8.0"
   - answer: Nee
-    nextquestionId: "4.1"
+    nextQuestionId: "4.1"
 
 ### check op hoog risico AI Act (bijlage I Sectie A)
 - questionId: "4.1"
@@ -552,7 +552,7 @@ questions:
     subresult: "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is. Het kan echter zijn dat het wel aan bepaalde transparantieverplichtingen moet voldoen."
     labels:
     - "geen hoog-risico AI"
-    redirectss:
+    redirects:
       - nextQuestionId: "6.0"
         if: '"AI-systeem voor algemene doeleinden" in labels'
       - nextQuestionId: "7.0"
@@ -599,11 +599,11 @@ questions:
   description: "Overweging 132 & 134 - Transparantieverplichtingen."
   answers:
   - answer: Ja
-    nextquestionId: "7.1"
+    nextQuestionId: "7.1"
   - answer: Nee
     labels:
     - "geen transparantierisico"
-    nextquestionId: "8.0"
+    nextQuestionId: "8.0"
 - questionId: "7.1"
   question: "Is er sprake van AI waarvan het bij wet is toegestaan om te gebruiken om strafbare feiten op te sporen, te voorkomen, te onderzoeken of te vervolgen?"
   questionType: SingleChoice
@@ -615,7 +615,7 @@ questions:
     - "geen transparantierisico"
     nextQuestionId: "8.0"
   - answer: Nee
-    result: "Er is sprake van een transparantierisico."
+    subresult: "Er is sprake van een transparantierisico."
     labels:
     - "transparantierisico"
     nextQuestionId: "8.0"
@@ -644,7 +644,6 @@ questions:
         if: '"AI-systeem voor algemene doeleinden" in labels  && "systeemrisico" in labels && "geen transparantierisico" in labels'
       - nextQuestionId: "12.11"
         if: '"AI-systeem voor algemene doeleinden" in labels && "geen systeemrisico" in labels && "transparantierisico" in labels'
-
       - nextQuestionId: "12.16"
         if: '"AI-model voor algemene doeleinden" in labels && "systeemrisico" in labels && "transparantierisico" in labels'
       - nextQuestionId: "12.17"
@@ -654,7 +653,7 @@ questions:
       - nextQuestionId: "12.19"
         if: '"AI-model voor algemene doeleinden" in labels && "geen systeemrisico" in labels && "transparantierisico" in labels'
   - answer: Nee
-    result: "Je bent geen aanbieder. We gaan kijken of je mogelijk een andere rol hebt."
+    subresult: "Je bent geen aanbieder. We gaan kijken of je mogelijk een andere rol hebt."
     nextQuestionId: "8.1"
 - questionId: "8.1"
   question: "Ben je een overheidsinstantie die een AI-systeem onder eigen verantwoordelijkheid gebruikt? (Het AI-systeem wordt niet gebruikt in het kader van een persoonlijke niet-beroepsactiviteit)."
@@ -680,13 +679,13 @@ questions:
         if: '"AI-systeem voor algemene doeleinden" in labels  && "systeemrisico" in labels && "geen transparantierisico" in labels'
       - nextQuestionId: "12.15"
         if: '"AI-systeem voor algemene doeleinden" in labels && "geen systeemrisico" in labels && "transparantierisico" in labels'
-      - nextQuestionId/result: "12.20"
+      - nextQuestionId: "12.20"
         if: '"AI-model voor algemene doeleinden" in labels && "systeemrisico" in labels && "transparantierisico" in labels'
-      - nextQuestionId/result: "12.21"
+      - nextQuestionId: "12.21"
         if: '"AI-model voor algemene doeleinden" in labels && "geen systeemrisico" in labels && "geen transparantierisico" in labels'
-      - nextQuestionId/result: "12.22"
+      - nextQuestionId: "12.22"
         if: '"AI-model voor algemene doeleinden" in labels  && "systeemrisico" in labels && "geen transparantierisico" in labels'
-      - nextQuestionId/result: "12.23"
+      - nextQuestionId: "12.23"
         if: '"AI-model voor algemene doeleinden" in labels && "geen systeemrisico" in labels && "transparantierisico" in labels'
   - answer: Nee
     result: "Je bent geen aanbieder en geen gebruiksverantwoordelijke. Deze beslisboom is gemaakt voor alleen deze twee rollen. Controleer nog een keer goed of één van deze rollen misschien toch op jou van toepassing is."
@@ -702,14 +701,14 @@ questions:
   - answer: Nee
     nextQuestionId: "8.3"
 - questionId: "8.3"
-  question: "Breng je een substantiële wijziging aan in een AI-systeem met een hoog risico dat reeds in de handel is gebracht of reeds in gebruik is gesteld op zodanige wijze dat het systeem een AI-systeem met een hoog risico blijft op grond van artikel 6"
+  question: "Breng je een substantiële wijziging aan in een AI-systeem met een hoog risico dat reeds in de handel is gebracht of reeds in gebruik is gesteld op zodanige wijze dat het systeem een AI-systeem met een hoog risico blijft op grond van artikel 6?"
   questionType: SingleChoice
   answers:
   - answer: Ja
     subresult: "Naast gebruiksverantwoordelijke ben je ook een aanbieder van een AI-systeem voor algemene doeleinden met een hoog risico. Je moet voldoen aan de verplichtingen van de aanbieder uit hoofde van artikel 16. We raden je daarom aan de beslisboom nog een keer te doorlopen en daarbij aan te geven dat je een aanbieder van een AI-systeem met een hoog risico bent."
     labels:
     - "aanbieder"
-    nextQuestionId/result: "12.2"
+    nextQuestionId: "12.2"
   - answer: Nee
     nextQuestionId: "8.4"
 - questionId: "8.4"
