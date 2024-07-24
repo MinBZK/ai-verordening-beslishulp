@@ -1,0 +1,53 @@
+version: 1.0.0
+name: Test Decision Tree
+questions:
+
+### 1e vraag
+- questionId: '0'
+  question: "Is het een algoritme?"
+  questionType: SingleChoice
+  source: "AI Wetgeving MinBZK"
+  source_url: "https://minbzk.nl/AI_wetgeving/"
+  description: "Een klein test beschrijving"
+  answers:
+  - answer: Ja
+    labels:
+    - "Wel een algoritme"
+    - "Hoog risico AI"
+    subresult: "Het is eeen algoritme en een hoog risico AI systeem"
+    nextQuestionId: '1.0'
+  - answer: Nee
+    labels:
+    - "Geen algoritme"
+    nextQuestionId: '1.0'
+
+## Checkvraag
+- questionId: '1.0'
+  question: "Is het écht geen algoritme?"
+  questionType: SingleChoice
+  answers:
+  - answer: Ja
+    redirects:
+    - nextQuestionId: '2.0'
+      if: '"Wel een algoritme" in labels'
+    - nextQuestionId: '3.0'
+      if: '"Geen algoritme" in labels'
+  - answer: Nee
+    redirects:
+    - nextQuestionId: '3.0'
+      if: '"Wel een algoritme" in labels'
+    - nextQuestionId: '2.0'
+      if: '"Geen algoritme" in labels'
+    - default: '3.0'
+
+## Resultaat dat alles oke is
+- conclusionId: '2.0'
+  conclusion: "Je antwoord is consistent, goed zo"
+  questionType: Conclusion
+  obligation: "Volgens Art. 5 lid 2 ben je goed bezig"
+
+### Resultaat dat iemand inconsistent is
+- conclusionId: '3.0'
+  conclusion: "Je antwoord is niet consistent, probeer opnieuw"
+  questionType: Conclusion
+  obligation: "Volgens Art. 5 lid 2 ben je slecht bezig"

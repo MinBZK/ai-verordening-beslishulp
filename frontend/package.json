@@ -14,8 +14,8 @@
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.22",
-    "@heroicons/vue": "^2.1.4",
-    "fp-ts": "^2.16.6",
+    "@heroicons/vue": "^2.1.5",
+    "fp-ts": "^2.16.8",
     "io-ts": "^2.2.21",
     "js-yaml": "^4.1.0",
     "pinia": "^2.1.7",
@@ -25,20 +25,20 @@
     "@rushstack/eslint-patch": "^1.8.0",
     "@tsconfig/node20": "^20.1.4",
     "@types/js-yaml": "^4.0.9",
-    "@types/node": "^20.14.9",
+    "@types/node": "^20.14.11",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue/eslint-config-prettier": "^9.0.0",
     "@vue/eslint-config-typescript": "^13.0.0",
     "@vue/tsconfig": "^0.5.1",
     "autoprefixer": "^10.4.19",
     "eslint": "^8.57.0",
-    "eslint-plugin-vue": "^9.23.0",
-    "npm-run-all2": "^6.1.2",
+    "eslint-plugin-vue": "^9.27.0",
+    "npm-run-all2": "^6.2.2",
     "postcss": "^8.4.38",
-    "prettier": "^3.2.5",
+    "prettier": "^3.3.3",
     "tailwindcss": "^3.4.4",
-    "typescript": "~5.5.2",
-    "vite": "^5.3.2",
-    "vue-tsc": "^2.0.24"
+    "typescript": "~5.5.3",
+    "vite": "^5.3.4",
+    "vue-tsc": "^2.0.28"
   }
 }
