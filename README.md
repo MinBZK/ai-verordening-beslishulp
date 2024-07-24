@@ -75,3 +75,10 @@ Er is een klein stukje infra code geschreven voor kubernetes zodat de applicatie
 ```sh
 kubectl apply -k infra/
 ```
+
+
+## Validate schema of YAML
+
+```sh
+./scripts/validate --schema_file schemas/base.schema.json --yaml_file tests/sample-decision-tree-complex.yaml
+```

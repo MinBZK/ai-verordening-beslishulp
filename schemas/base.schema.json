@@ -36,9 +36,68 @@
       "type": "string",
       "uniqueItems": true
     },
+    "Source": {
+      "id": "#/$defs/Source",
+      "type": "string"
+    },
+    "SourceURL": {
+      "id": "#/$defs/SourceURL",
+      "type": "string"
+    },
+    "Description": {
+      "id": "#/$defs/Description",
+      "type": "string"
+    },
     "AnswerComment": {
       "id": "#/$defs/AnswerComment",
       "type": "string"
+    },
+    "Label": {
+      "id": "#/$defs/Label",
+      "type": "string"
+    },
+    "If": {
+      "id": "#/$defs/If",
+      "type": "string"
+    },
+    "ConclusionId": {
+      "id": "#/$defs/ConclusionId",
+      "type": "string"
+    },
+    "ConclusionComment": {
+      "id": "#/$defs/ConclusionComment",
+      "type": "string"
+    },
+    "Obligation": {
+      "id": "#/$defs/Obligation",
+      "type": "string"
+    },
+    "Default": {
+      "id": "#/$defs/Default",
+      "type": "string"
+    },
+    "Redirect": {
+      "id": "#/$defs/Redirect",
+      "type": "object",
+      "properties": {
+        "nextQuestionId": {
+          "$ref": "#/$defs/QuestionId"
+        },
+        "if": {
+          "$ref": "#/$defs/If"
+        },
+        "default": {
+          "$ref": "#/$defs/Default"
+        }
+      },
+      "oneOf": [
+        {
+          "required": ["nextQuestionId"]
+        },
+        {
+          "required": ["default"]
+        }
+      ]
     },
     "Answer": {
       "id": "#/$defs/Question",
@@ -53,8 +112,24 @@
         "result": {
           "$ref": "#/$defs/Result"
         },
+        "subresult": {
+          "$ref": "#/$defs/Result"
+        },
         "answerComment": {
           "$ref": "#/$defs/AnswerComment"
+        },
+        "labels": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Label"
+          }
+        },
+        "redirects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Redirect"
+          },
+          "minItems": 2
         }
       },
       "required": ["answer"],
@@ -64,6 +139,9 @@
         },
         {
           "required": ["result"]
+        },
+        {
+          "required": ["redirects"]
         }
       ]
     },
@@ -76,6 +154,9 @@
         },
         {
           "$ref": "#/$defs/SingleChoiceQuestion"
+        },
+        {
+          "$ref": "#/$defs/Conclusion"
         }
       ]
     },
@@ -88,6 +169,15 @@
         },
         "question": {
           "$ref": "#/$defs/Question"
+        },
+        "source": {
+          "$ref": "#/$defs/Source"
+        },
+        "source_url": {
+          "$ref": "#/$defs/SourceURL"
+        },
+        "description": {
+          "$ref": "#/$defs/Description"
         },
         "questionType": {
           "type": "string",
@@ -113,6 +203,15 @@
         "question": {
           "$ref": "#/$defs/Question"
         },
+        "source": {
+          "$ref": "#/$defs/Source"
+        },
+        "source_url": {
+          "$ref": "#/$defs/SourceURL"
+        },
+        "description": {
+          "$ref": "#/$defs/Description"
+        },
         "questionType": {
           "type": "string",
           "enum": ["SingleChoice"]
@@ -127,6 +226,35 @@
         }
       },
       "required": ["questionId", "question", "questionType", "answers"]
+    },
+    "Conclusion": {
+      "id": "#/$defs/Conclusion",
+      "type": "object",
+      "properties": {
+        "conclusionId": {
+          "$ref": "#/$defs/ConclusionId"
+        },
+        "conclusion": {
+          "type": "string"
+        },
+        "conclusionComment": {
+          "$ref": "#/$defs/ConclusionComment"
+        },
+        "obligation": {
+          "$ref": "#/$defs/Obligation"
+        },
+        "source": {
+          "$ref": "#/$defs/Source"
+        },
+        "source_url": {
+          "$ref": "#/$defs/SourceURL"
+        },
+        "questionType": {
+          "type": "string",
+          "enum": ["Conclusion"]
+        }
+      },
+      "required": ["conclusionId", "conclusion", "obligation"]
     }
   }
 }
