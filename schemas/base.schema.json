@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/MinBZK/AI-act-beslisboom/main/schemas/base.schema",
   "title": "Beslisboom schema",
-  "description": "beslitboom schema",
+  "description": "beslisboom schema",
   "type": "object",
   "properties": {
     "name": {
