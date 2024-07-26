@@ -10,7 +10,7 @@ questions:
   - answer: Ja
     nextQuestionId: "1.0"
   - answer: Nee
-    result: "Je gebruikt geen algoritme. Houd je wel aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)"
+    nextConclusionId: "12.24"
     labels:
     - "geen algoritme"
 
@@ -183,9 +183,9 @@ questions:
       url: https://artificialintelligenceact.eu/article/2/
   answers:
   - answer: Ja
-    result: "Er is sprake van een uitzonderingsgrond. De AI-verordening is niet van toepassing."
     labels:
     - "uitzonderingsgrond: AI-verordening niet van toepassing"
+    nextConclusionId: "12.25"
   - answer: Nee
     nextQuestionId: "2.2"
 - questionId: "2.2"
@@ -196,9 +196,9 @@ questions:
       url: https://artificialintelligenceact.eu/article/2/
   answers:
   - answer: Ja
-    result: "Er is sprake van een uitzonderingsgrond. De AI-verordening is niet van toepassing."
     labels:
     - "uitzonderingsgrond: AI-verordening niet van toepassing"
+    nextConclusionId: "12.25"
   - answer: Nee
     nextQuestionId: "2.3"
 - questionId: "2.3"
@@ -209,9 +209,9 @@ questions:
       url: https://artificialintelligenceact.eu/article/2/
   answers:
   - answer: Ja
-    result: "Er is sprake van een uitzonderingsgrond. De AI-verordening is niet van toepassing."
     labels:
     - "uitzonderingsgrond: AI-verordening niet van toepassing"
+    nextConclusionId: "12.25"
   - answer: Nee
     nextQuestionId: "2.4"
 - questionId: "2.4"
@@ -222,9 +222,9 @@ questions:
       url: https://artificialintelligenceact.eu/article/2/
   answers:
   - answer: Ja
-    result: "Er is sprake van een uitzonderingsgrond. De AI-verordening is niet van toepassing."
     labels:
     - "uitzonderingsgrond: AI-verordening niet van toepassing"
+    nextConclusionId: "12.25"
   - answer: Nee
     nextQuestionId: "2.5"
 - questionId: "2.5"
@@ -235,9 +235,9 @@ questions:
       url: https://artificialintelligenceact.eu/article/2/
   answers:
   - answer: Ja
-    result: "Er is sprake van een uitzonderingsgrond. De AI-verordening is niet van toepassing."
     labels:
     - "uitzonderingsgrond: AI-verordening niet van toepassing"
+    nextConclusionId: "12.25"
   - answer: Nee
     subresult: "Er is geen sprake van een uitzonderingsgrond. De AI-verordening is van toepassing."
     labels:
@@ -383,9 +383,9 @@ questions:
     - "uitzondering verboden AI"
     nextQuestionId: "12.0"
   - answer: Nee
-    result: "Er is geen sprake van een uitzondering op de lijst van verboden AI-systemen. Het is verboden om dit AI-systeem te gebruiken."
     labels:
     - "verboden AI"
+    nextConclusionId: "12.26"
 
 ### check op hoog risico AI Act (bijlage I Sectie B)
 - questionId: "4.0"
@@ -447,7 +447,7 @@ questions:
   question: "Moet het product waarvan het AI-systeem de veiligheidscomponent vormt een conformiteits-beoordeling door een derde partij laten uitgevoeren met het oog op het in de handel brengen of in gebruik stellen van dat product op grond van de in bijlage I sectie A opgenomen harmonisatiewetgeving van de Unie?"
   questionType: SingleChoice
   sources:
-    source: Overweging 50 - Conformiteitsbeoordelingsprocedure
+  - source: Overweging 50 - Conformiteitsbeoordelingsprocedure
     url: https://artificialintelligenceact.eu/recital/50/
   answers:
   - answer: Ja
@@ -789,7 +789,7 @@ questions:
       - nextQuestionId: "12.23"
         if: '"AI-model voor algemene doeleinden" in labels && "geen systeemrisico" in labels && "transparantierisico" in labels'
   - answer: Nee
-    result: "Je bent geen aanbieder en geen gebruiksverantwoordelijke. Deze beslisboom is gemaakt voor alleen deze twee rollen. Controleer nog een keer goed of één van deze rollen misschien toch op jou van toepassing is."
+    nextConclusionId: "12.27"
 - questionId: "8.2"
   question: "Zet je jouw naam of merk op een AI-systeem met een hoog risico dat reeds in de handel is gebracht of in gebruik is gesteld (onverminderd contractuele regelingen waarin wordt bepaald dat de verplichtingen anders worden toegewezen)?"
   questionType: SingleChoice
@@ -1109,6 +1109,22 @@ questions:
     is gegenereerd of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief,
     fictief of analoof werk of programma, zijn de transparantieverplichtingen van dit lid beperkt tot de openbaarmaking van het bestaan van dergelijk gegenereerde of bewerkte content op een passende wijze
     die de weergave of het genot van het werk niet belemmert."
+- conclusionId: "12.24"
+  conclusion: "Je gebruikt geen algoritme."
+  obligation: "Houd je wel aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)."
+- conclusionId: "12.25"
+  conclusion: "Er is sprake van een uitzonderingsgrond. De AI-verordening is niet van toepassing."
+  obligation: " "
+- conclusionId: "12.26"
+  conclusion: "Er is geen sprake van een uitzondering op de lijst van verboden AI-systemen."
+  obligation: "Het is verboden om dit AI-systeem te gebruiken."
+- conclusionId: "12.27"
+  conclusion: "Je bent geen aanbieder en geen gebruiksverantwoordelijke. Deze beslisboom is gemaakt voor alleen deze twee rollen. Controleer nog een keer goed of één van deze rollen misschien toch op jou van toepassing is."
+  obligation: " "
+- conclusionId: "12.28"
+  conclusion: "Je algoritme is niet impactvol en de AI-verordening is niet van toepassing."
+  obligation: "Houd je wel aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)"
+
 
 # ### Buiten scope AI-verordening
 - questionId: "20.0"
@@ -1118,9 +1134,9 @@ questions:
   - answer: Ja
     nextQuestionId: "20.1"
   - answer: Nee
-    result: "Je algoritme is niet impactvol en de AI-verordening is niet van toepassing. Houd je wel aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)"
     labels:
     - "niet impactvol"
+    nextConclusionId: "12.28"
 - questionId: "20.1"
   question: "Valt je toepassing onder \xE9\xE9n van de uitzonderingsgronden categorie C of D van de handreiking?"
   questionType: SingleChoice
