@@ -24,7 +24,7 @@
   },
   "$defs": {
     "Result": {
-      "id": "#/$defs/Question",
+      "id": "#/$defs/Result",
       "type": "string"
     },
     "Question": {
@@ -32,17 +32,23 @@
       "type": "string"
     },
     "QuestionId": {
-      "id": "#/$defs/Question",
+      "id": "#/$defs/QuestionId",
       "type": "string",
       "uniqueItems": true
     },
-    "Source": {
-      "id": "#/$defs/Source",
-      "type": "string"
-    },
-    "SourceURL": {
-      "id": "#/$defs/SourceURL",
-      "type": "string"
+    "Sources": {
+      "id": "#/$defs/Sources",
+      "type": "object",
+      "properties": {
+        "source": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": ["source"]
     },
     "Description": {
       "id": "#/$defs/Description",
@@ -95,6 +101,9 @@
           "required": ["nextQuestionId"]
         },
         {
+          "required": ["nextConclusionId"]
+        },
+        {
           "required": ["default"]
         }
       ]
@@ -108,6 +117,9 @@
         },
         "nextQuestionId": {
           "$ref": "#/$defs/QuestionId"
+        },
+        "nextConclusionId":{
+          "$ref": "#/$defs/ConclusionId"
         },
         "result": {
           "$ref": "#/$defs/Result"
@@ -136,6 +148,9 @@
       "oneOf": [
         {
           "required": ["nextQuestionId"]
+        },
+        {
+          "required": ["nextConclusionId"]
         },
         {
           "required": ["result"]
@@ -170,14 +185,15 @@
         "question": {
           "$ref": "#/$defs/Question"
         },
-        "source": {
-          "$ref": "#/$defs/Source"
-        },
-        "source_url": {
-          "$ref": "#/$defs/SourceURL"
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Sources"
+          }
         },
         "description": {
-          "$ref": "#/$defs/Description"
+          "$ref": "#/$defs/Description",
+          "type": "string"
         },
         "questionType": {
           "type": "string",
@@ -188,7 +204,7 @@
           "items": {
             "$ref": "#/$defs/Answer"
           },
-          "minItems": 3
+          "minItems": 2
         }
       },
       "required": ["questionId", "question", "questionType", "answers"]
@@ -203,14 +219,15 @@
         "question": {
           "$ref": "#/$defs/Question"
         },
-        "source": {
-          "$ref": "#/$defs/Source"
-        },
-        "source_url": {
-          "$ref": "#/$defs/SourceURL"
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Sources"
+          }
         },
         "description": {
-          "$ref": "#/$defs/Description"
+          "$ref": "#/$defs/Description",
+          "type": "string"
         },
         "questionType": {
           "type": "string",
@@ -243,11 +260,11 @@
         "obligation": {
           "$ref": "#/$defs/Obligation"
         },
-        "source": {
-          "$ref": "#/$defs/Source"
-        },
-        "source_url": {
-          "$ref": "#/$defs/SourceURL"
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Sources"
+          }
         },
         "questionType": {
           "type": "string",
