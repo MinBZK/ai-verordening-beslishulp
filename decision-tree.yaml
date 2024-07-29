@@ -122,7 +122,7 @@ questions:
     subresult: "De AI-verordening is niet van toepassing."
     labels:
     - "AI-verordening niet van toepassing"
-    nextQuestionId: "20.0"
+    nextQuestionId: "1.1.0"
 - questionId: "1.10"
   question: "Wordt het model geïntegreerd in een AI-systeem?"
   questionType: SingleChoice
@@ -833,6 +833,9 @@ questions:
     de rechtshandhavingsinstantie een in art. 27 voorziene effectbeoordeling op het gebied van de grondrechten heeft uitgevoerd en het systeem volgens art. 47
     in de EU-databank heeft geregistreerd. In naar behoren gemotiveerde spoedeisende gevallen kan echter met het gebruik van dergelijke systemen worden begonnen
     zonder de systemen in de EU-databank te registreren, op voorwaarde dat die registratie zonder onnodige vertraging wordt voltooid."
+  sources:
+  - source: Artikel 5
+    url: https://artificialintelligenceact.eu/article/5/
 - conclusionId: "12.1"
   conclusion: "Je bent een aanbieder van een hoog risico (GP)AI-systeem."
   obligation:
@@ -849,6 +852,9 @@ questions:
     * aanbieders nemen de noodzakelijke corrigerende maatregelen en verstrekken de uit hoofde van art. 20 vereiste informatie
     * aanbieders tonen op een met redenen omkleed verzoek van een nationale bevoegde autoriteit de overeenstemming aan van het AI-systeem met een hoog risico met de eisen van afdeling 2
     * aanbieders zorgen ervoor dat het AI-systeem met een hoog risico voldoet aan de toegankelijkheidseisen overeenkomstig de Richtlijnen (EU) 2016/2102 en (EU) 2019/882."
+  sources:
+  - source: Artikel 16
+    url: https://artificialintelligenceact.eu/article/16/
 - conclusionId: "12.2"
   conclusion:
     "Je bent aanbieder en gebruiksverantwoordelijke van een hoog risico (GP)AI-systeem."
@@ -896,6 +902,9 @@ questions:
     * passende maatregelen voor menselijke toezicht om risico\u2019s tot een minimum te beperken (art. 14);
     * hoge mate van robuustheid, veiligheid en nauwkeurigheid (art. 15).
     art. 17 t/m 22 & 27 FRIA"
+  sources:
+  - source: Artikel 16
+    url: https://artificialintelligenceact.eu/article/16/
 - conclusionId: "12.3"
   conclusion:
     "Je bent gebruiksverantwoordelijke van een hoog risico AI-systeem voor algemene doeleinden."
@@ -930,6 +939,9 @@ questions:
     * passende maatregelen voor menselijke toezicht om risico\u2019s tot een minimum te beperken (art. 14);
     * hoge mate van robuustheid, veiligheid en nauwkeurigheid (art. 15).
     art. 17 t/m 22 & 27 FRIA"
+  sources:
+  - source: Artikel 26
+    url: https://artificialintelligenceact.eu/article/26/
 - conclusionId: "12.4"
   conclusion:
     "Je bent aanbieder van een AI-systeem met transparantierisico."
@@ -941,6 +953,9 @@ questions:
     gemarkeerd in een machineleesbaar formaat en detecteerbaar zijn als kunstmatig gegenereerd of gemanipuleerd. Aanbieders zorgen ervoor dat hun technische oplossingen doeltreffend, interoperabel
     robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten
     en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen."
+  sources:
+  - source: Artikel 50
+    url: https://artificialintelligenceact.eu/article/50/
 - conclusionId: "12.5"
   conclusion: "Je bent aanbieder van een laag risico AI-systeem."
   obligation:
@@ -958,6 +973,9 @@ questions:
     is gegenereerd of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief,
     fictief of analoof werk of programma, zijn de transparantieverplichtingen van dit lid beperkt tot de openbaarmaking van het bestaan van dergelijk gegenereerde of bewerkte content op een passende wijze
     die de weergave of het genot van het werk niet belemmert."
+  sources:
+  - source: Artikel 50
+    url: https://artificialintelligenceact.eu/article/50/
 - conclusionId: "12.7"
   conclusion:
     "Je bent gebruiksverantwoordelijke van een laag risico AI-systeem."
@@ -982,11 +1000,13 @@ questions:
     * mogelijke systeemrisico/u2019s op Unieniveau beoordelen en beperken, met inbegriop van de bronnen daarvan, die kunnen voortvloeien uit de ontwikkeling, het in handel brengen of het gebruik van GPAI-modellen met een systeemrisico.
     * relevante informatie over ernstige incidenten en mogelijk corrigerende maatregelen bijhouden, documenteren en onverwijld rapporteren aan het AI-bureau (en in voorkomende gevallen aan de nationale bevoegde autoriteiten)
     * zorgen voor een passend niveau van cyberbeveiligingsbescherming voor het GPAI-model en de fysieke infrastructuur van het model."
+  sources:
+  - source: Artikel 50
+    url: https://artificialintelligenceact.eu/article/50/
 - conclusionId: "12.9"
-  conclusion: "Je bent aanbieder van een laag risico AI-systeem voor algemene doeleinden."
-  obligation: "Er is sprake van een laag risico. Dit betekent dat het AI-systeem niet in de risicovolle categorieen valt van de AI-Act.
-    Doordat deze categorie niet genoemd wordt in de AI-Act, gelden voor dit soort AI-technologie geen bijzondere wettelijke vereisten.
-    Wel moet deze AI-technologie uiteraard voldoen aan algemene veiligheidsstandaarden."
+  conclusion: "Je bent aanbieder van een laag risico AI-systeem voor algemene doeleinden. Er is sprake van een laag risico. Dit betekent dat het AI-systeem niet in de risicovolle categorieen valt van de AI-Act.
+    Doordat deze categorie niet genoemd wordt in de AI-Act, gelden voor dit soort AI-technologie geen bijzondere wettelijke vereisten."
+  obligation: "De AI-technologie moet voldoen aan algemene veiligheidsstandaarden."
 - conclusionId: "12.10"
   conclusion: "Je bent aanbieder van een AI-systeem voor algemene doeleinden met een systeemrisico."
   obligation:
@@ -997,6 +1017,9 @@ questions:
     * mogelijke systeemrisico/u2019s op Unieniveau beoordelen en beperken, met inbegriop van de bronnen daarvan, die kunnen voortvloeien uit de ontwikkeling, het in handel brengen of het gebruik van GPAI-modellen met een systeemrisico.
     * relevante informatie over ernstige incidenten en mogelijk corrigerende maatregelen bijhouden, documenteren en onverwijld rapporteren aan het AI-bureau (en in voorkomende gevallen aan de nationale bevoegde autoriteiten)
     * zorgen voor een passend niveau van cyberbeveiligingsbescherming voor het GPAI-model en de fysieke infrastructuur van het model."
+  sources:
+  - source: Artikel 53
+    url: https://artificialintelligenceact.eu/article/53/
 - conclusionId: "12.11"
   conclusion: "Je bent aanbieder van een AI-systeem voor algemene doeleinden met een transparantierisico."
   obligation:
@@ -1007,6 +1030,9 @@ questions:
     gemarkeerd in een machineleesbaar formaat en detecteerbaar zijn als kunstmatig gegenereerd of gemanipuleerd. Aanbieders zorgen ervoor dat hun technische oplossingen doeltreffend, interoperabel
     robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten
     en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen."
+  sources:
+  - source: Artikel 50
+    url: https://artificialintelligenceact.eu/article/50/
 - conclusionId: "12.12"
   conclusion: "Je bent gebruiksverantwoordelijke van een AI-systeem voor algemene doeleinden met een systeemrisico en een transparantierisico."
   obligation:
@@ -1019,6 +1045,9 @@ questions:
     fictief of analoof werk of programma, zijn de transparantieverplichtingen van dit lid beperkt tot de openbaarmaking van het bestaan van dergelijk gegenereerde of bewerkte content op een passende wijze
     die de weergave of het genot van het werk niet belemmert.
     Als gebruiksverantwoordelijke heb je geen verplichtingen vanuit het systeemrisico."
+  sources:
+  - source: Artikel 50
+    url: https://artificialintelligenceact.eu/article/50/
 - conclusionId: "12.13"
   conclusion: "Je bent gebruiksverantwoordelijke van een laag risico AI-systeem voor algemene doeleinden."
   obligation:
@@ -1027,8 +1056,7 @@ questions:
     Wel moet deze AI-technologie uiteraard voldoen aan algemene veiligheidsstandaarden."
 - conclusionId: "12.14"
   conclusion: "Je bent gebruiksverantwoordelijke van een AI-systeem voor algemene doeleinden met een systeemrisico."
-  obligation:
-    "Als gebruiksverantwoordelijke heb je geen verplichtingen vanuit het systeemrisico."
+  obligation: "Als gebruiksverantwoordelijke heb je geen verplichtingen vanuit het systeemrisico."
 - conclusionId: "12.15"
   conclusion: "Je bent gebruiksverantwoordelijke van een AI-systeem voor algemene doeleinden met een transparantierisico."
   obligation:
@@ -1039,6 +1067,9 @@ questions:
     is gegenereerd of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief,
     fictief of analoof werk of programma, zijn de transparantieverplichtingen van dit lid beperkt tot de openbaarmaking van het bestaan van dergelijk gegenereerde of bewerkte content op een passende wijze
     die de weergave of het genot van het werk niet belemmert."
+  sources:
+  - source: Artikel 50
+    url: https://artificialintelligenceact.eu/article/50/
 - conclusionId: "12.16"
   conclusion: "Je bent aanbieder van een GPAI-model met een systeemrisico en een transparantierisico."
   obligation:
@@ -1053,14 +1084,17 @@ questions:
     * mogelijke systeemrisico\u2019s op Unieniveau beoordelen en beperken, met inbegriop van de bronnen daarvan, die kunnen voortvloeien uit de ontwikkeling, het in handel brengen of het gebruik van GPAI-modellen met een systeemrisico.
     * relevante informatie over ernstige incidenten en mogelijk corrigerende maatregelen bijhouden, documenteren en onverwijld rapporteren aan het AI-bureau (en in voorkomende gevallen aan de nationale bevoegde autoriteiten)
     * zorgen voor een passend niveau van cyberbeveiligingsbescherming voor het GPAI-model en de fysieke infrastructuur van het model."
+  sources:
+  - source: Artikel 50
+    url: https://artificialintelligenceact.eu/article/50/
 - conclusionId: "12.17"
-  conclusion: "Je bent aanbieder van een laag risico I-model voor algemene doeleinden."
+  conclusion: "Je bent aanbieder van een laag risico AI-model voor algemene doeleinden."
   obligation:
     "Er is sprake van een laag risico. Dit betekent dat het AI-systeem niet in de risicovolle categorieen valt van de AI-Act.
     Doordat deze categorie niet genoemd wordt in de AI-Act, gelden voor dit soort AI-technologie geen bijzondere wettelijke vereisten.
     Wel moet deze AI-technologie uiteraard voldoen aan algemene veiligheidsstandaarden."
 - conclusionId: "12.18"
-  conclusion: "Je bent een aanbieder van een GPAI-model met een systeemrisico."
+  conclusion: "Je bent een aanbieder van een AI-model voor algemene doeleinde met een systeemrisico."
   obligation:
     "Art. 53 lid (1a) - de technische documentatie van het model opstellen en up-to-date houden, inc. het trainings- en testproces en de resultaten van de evaluatie ervan.
     Art. 53 lid (1b) - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het GPAI-model in hun AI-systemen willen integreren.
@@ -1068,18 +1102,28 @@ questions:
     * een modelevaluatie uitvoeren
     * mogelijke systeemrisico\u2019s op Unieniveau beoordelen en beperken, met inbegriop van de bronnen daarvan, die kunnen voortvloeien uit de ontwikkeling, het in handel brengen of het gebruik van GPAI-modellen met een systeemrisico.
     * relevante informatie over ernstige incidenten en mogelijk corrigerende maatregelen bijhouden, documenteren en onverwijld rapporteren aan het AI-bureau (en in voorkomende gevallen aan de nationale bevoegde autoriteiten)
-    * zorgen voor een passend niveau van cyberbeveiligingsbescherming voor het GPAI-model en de fysieke infrastructuur van het model."
+    * zorgen voor een passend niveau van cyberbeveiligingsbescherming voor het AI-model voor algemene doeleinden en de fysieke infrastructuur van het model."
+  sources:
+  - source: Artikel 53
+    url: https://artificialintelligenceact.eu/article/53/
+  - source: Artikel 55
+    url: https://artificialintelligenceact.eu/article/55/
 - conclusionId: "12.19"
-  conclusion: "Je bent aanbieder van een GPAI-model met een transparantierisico."
+  conclusion: "Je bent aanbieder van een AI-model voor algemene doeleinden met een transparantierisico."
   obligation:
-    "Art 50 lid 2 - aanbieders van (GP)AI-systemen, die synthetische audio, beeld, video- of tekstinhoud genereren, zorgen ervoor dat de outputs van het AI-systeem worden
+    "Art 50 lid 2 - aanbieders van AI-systemen (voor algemene doeleinden), die synthetische audio, beeld, video- of tekstinhoud genereren, zorgen ervoor dat de outputs van het AI-systeem worden
     gemarkeerd in een machineleesbaar formaat en detecteerbaar zijn als kunstmatig gegenereerd of gemanipuleerd. Aanbieders zorgen ervoor dat hun technische oplossingen doeltreffend, interoperabel
     robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten
     en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen.
     Art. 53 lid (1a) - de technische documentatie van het model opstellen en up-to-date houden, inc. het trainings- en testproces en de resultaten van de evaluatie ervan.
     Art. 53 lid (1b) - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het GPAI-model in hun AI-systemen willen integreren."
+  sources:
+  - source: Artikel 53
+    url: https://artificialintelligenceact.eu/article/53/
+  - source: Artikel 50
+    url: https://artificialintelligenceact.eu/article/50/
 - conclusionId: "12.20"
-  conclusion: "Je bent gebruiksverantwoordelijke van een GPAI-model met een systeemrisico en transparantierisico."
+  conclusion: "Je bent gebruiksverantwoordelijke van een AI-model (voor algemene doeleinden) met een systeemrisico en transparantierisico."
   obligation:
     "Art. 50 lid 3 - gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke
     personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680,
@@ -1089,6 +1133,9 @@ questions:
     fictief of analoof werk of programma, zijn de transparantieverplichtingen van dit lid beperkt tot de openbaarmaking van het bestaan van dergelijk gegenereerde of bewerkte content op een passende wijze
     die de weergave of het genot van het werk niet belemmert.
     Als gebruiksverantwoordelijke heb je geen verplichtingen vanuit het systeemrisico."
+  sources:
+  - source: Artikel 50
+    url: https://artificialintelligenceact.eu/article/50/
 - conclusionId: "12.21"
   conclusion: "Je bent gebruiksverantwoordelijke van een laag risico AI-model voor algemene doeleinden."
   obligation:
@@ -1096,11 +1143,11 @@ questions:
     Doordat deze categorie niet genoemd wordt in de AI-Act, gelden voor dit soort AI-technologie geen bijzondere wettelijke vereisten.
     Wel moet deze AI-technologie uiteraard voldoen aan algemene veiligheidsstandaarden."
 - conclusionId: "12.22"
-  conclusion: "Je bent gebruiksverantwoordelijke van een GPAI-model met een systeemrisico."
+  conclusion: "Je bent gebruiksverantwoordelijke van een AI-model voor algemene doeleinden met een systeemrisico."
   obligation:
     "Als gebruiksverantwoordelijke heb je geen verplichtingen vanuit het systeemrisico."
 - conclusionId: "12.23"
-  conclusion: "Je bent gebruiksverantwoordelijke van een GPAI-model met een transparantierisico."
+  conclusion: "Je bent gebruiksverantwoordelijke van een AI-model voor algemene doeleinden met een transparantierisico."
   obligation:
     "Art. 50 lid 3 - gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke
     personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680,
@@ -1109,9 +1156,12 @@ questions:
     is gegenereerd of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief,
     fictief of analoof werk of programma, zijn de transparantieverplichtingen van dit lid beperkt tot de openbaarmaking van het bestaan van dergelijk gegenereerde of bewerkte content op een passende wijze
     die de weergave of het genot van het werk niet belemmert."
+  sources:
+  - source: Artikel 50
+    url: https://artificialintelligenceact.eu/article/50/
 - conclusionId: "12.24"
   conclusion: "Je gebruikt geen algoritme."
-  obligation: "Houd je wel aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)."
+  obligation: "Houd je aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)."
 - conclusionId: "12.25"
   conclusion: "Er is sprake van een uitzonderingsgrond. De AI-verordening is niet van toepassing."
   obligation: " "
@@ -1123,21 +1173,23 @@ questions:
   obligation: " "
 - conclusionId: "12.28"
   conclusion: "Je algoritme is niet impactvol en de AI-verordening is niet van toepassing."
-  obligation: "Houd je wel aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)"
-
+  obligation: "Houd je aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)."
+- conclusionId: "12.29"
+  conclusion: "Het betreft een algoritme met impact, maar de AI-verordening is niet van toepassing."
+  obligation: "Omdat het een algoritme met impact betreft, dien je algoritmeregister te publiceren."
 
 # ### Buiten scope AI-verordening
-- questionId: "20.0"
+- questionId: "1.1.0"
   question: "De AI-verordening is niet van toepassing. Gebruik je een algoritme met impact (rechtsgevolgen voor de burger of classificatie van burgers of groepen)? Volgens categorie B van de handreiking van het algoritmeregister"
   questionType: SingleChoice
   answers:
   - answer: Ja
-    nextQuestionId: "20.1"
+    nextQuestionId: "1.1.1"
   - answer: Nee
     labels:
     - "niet impactvol"
     nextConclusionId: "12.28"
-- questionId: "20.1"
+- questionId: "1.1.1"
   question: "Valt je toepassing onder \xE9\xE9n van de uitzonderingsgronden categorie C of D van de handreiking?"
   questionType: SingleChoice
   answers:
@@ -1146,6 +1198,6 @@ questions:
     labels:
     - "impactvol"
   - answer: Nee
-    result: "Het betreft een algoritme met impact, maar de AI-verordening is niet van toepassing. Je moet wel publiceren in het algoritmeregister"
+    nextConclusionId: "12.29"
     labels:
     - "impactvol"
