@@ -1,26 +1,43 @@
-categories:
-- catA: geen algoritme
-- catB: verboden AI
-- catC: hoog risico AI - bijlage I - aanbieder
-- catD: hoog risico AI - bijlage I - geen aanbieder - geen gebruiksverantwoordelijke
-- catE: hoog risico AI - bijlage I - gebruiksverantwoordelijke en beschouwd als aanbieder
-- catF: hoog risico AI - bijlage I - gebruiksverantwoordelijke - geen aanbieder
-- catG: hoog risico AI - toepassingsgebieden - geen aanbieder - geen gebruiksverantwoordelijke
-- catH: hoog risico AI - toepassingsgebieden - gebruiksverantwoordelijke en beschouwd als aanbieder
-- catI: hoog risico AI - toepassingsgebieden - gebruiksverantwoordelijke - geen aanbieder
-- catJ: hoog risico AI - toepassingsgebieden - aanbieder - transparantieverplichtingen # dit is nog niet goed uit de boom te halen
-- catK: hoog risico AI - toepassingsgebieden - aanbieder - geen transparantieverplichtingen # dit is nog niet goed uit de boom te halen
-- catL: hoog risico AI - toepassingsgebieden - aanbieder - uitgezonderd - transparantieverplichtingen # dit is nog niet goed uit de boom te halen
-- catM: hoog risico AI - toepassingsgebieden - aanbieder - uitgezonderd - geen transparantieverplichtingen # dit is nog niet goed uit de boom te halen
-- catN: general purpose AI - aanbieder - systeemrisico
-- catO: general purpose AI - aanbieder - geen systeemrisico
-- catP: general purpose AI - geen aanbieder - gebruiksverantwoordelijke
-- catQ: general purpose AI - geen aanbieder - geen gebruiksverantwoordelijke
-- catR: niet verboden - niet hoog risico - geen aanbieder - geen gebruiksverantwoordelijke
-- catS: niet verboden - niet hoog risico - geen aanbieder - gebruiksverantwoordelijke - transparantieverplichtingen # hier zit misschien nog onderscheid in wel/niet biometrische categorisering
-- catT: niet verboden - niet hoog risico - geen aanbieder - gebruiksverantwoordelijke - geen transparantieverplichtingen
-- catU: niet verboden - niet hoog risico - aanbieder - transparantieverplichtingen # hier zit misschien nog onderscheid obv wel/niet interactie met personen
-- catV: niet verboden - niet hoog risico - aanbieder - geen transparantieverplichtingen
-- catW: AI verordening niet van toepassing - niet impactvol
-- catX: AI verordening niet van toepassing - impactvol maar niet publiceren vanwege uitzonderingsgrond
-- catY: AI verordening niet van toepassing - impactvol
+- questionId: "0."
+  topic: Type AI
+  topic_details: Definitie Algoritme Rekenkamer
+- questionId: "1."
+  topic: Type AI
+  topic_details: Type AI
+- questionId: "1.1."
+  topic: Type AI
+  topic_details: Buiten scope AI verordening
+- questionId: "1.0."
+  topic: Open-source
+  topic_details: Open-source
+- questionId: "2.1"
+  topic: Uitzonderingsgrond
+  topic_details: Uitzonderingsgrond
+- questionId: "3."
+  topic: Risicocategorie
+  topic_details: Verboden AI-systeem
+- questionId: "3.1."
+  topic: Risicocategorie
+  topic_details: Uitzondering verboden AI-systeem
+- questionId: "4."
+  topic: Risicocategorie
+  topic_details: Hoog risico AI (Bijlage 1, sectie A en B)
+- questionId: "5."
+  topic: Risicocategorie
+  topic_details: Hoog risico AI (Bijlage 3)
+- questionId: "5.1."
+  topic: Risicocategorie
+  topic_details: Uitzondering hoog risico AI
+- questionId: "6."
+  topic: Systeemrisico
+  topic_details: Systeemrisico
+- questionId: "7."
+  topic: Transparantierisico
+  topic_details: Transparantierisico
+- questionId: "8."
+  topic: Entiteit/rol
+  topic_details: Entiteit/rol
+- questionId: "12."
+  topic: Conclusie
+  topic_details: Conclusie
+
