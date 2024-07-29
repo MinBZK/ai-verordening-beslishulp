@@ -1,6 +1,6 @@
 <script setup lang="ts">
 interface Props {
-  result: string | null
+  conclusion: string | null
 }
 defineProps<Props>()
 
@@ -8,7 +8,7 @@ import { ExclamationTriangleIcon } from '@heroicons/vue/24/outline'
 </script>
 
 <template>
-  <DialogPanel v-if="result" class="">
+  <DialogPanel v-if="conclusion" class="">
     <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
       <div class="sm:flex sm:items-start">
         <div
@@ -18,11 +18,11 @@ import { ExclamationTriangleIcon } from '@heroicons/vue/24/outline'
         </div>
         <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
           <DialogTitle as="h3" class="text-base font-semibold leading-6 text-gray-900"
-            >Resultaat</DialogTitle
+            >Conclusie</DialogTitle
           >
           <div class="mt-2">
             <p class="text-sm text-gray-500">
-              {{ result }}
+              {{ conclusion }}
               <slot />
             </p>
           </div>

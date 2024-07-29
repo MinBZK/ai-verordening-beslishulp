@@ -15,8 +15,10 @@
   "dependencies": {
     "@headlessui/vue": "^1.7.22",
     "@heroicons/vue": "^2.1.5",
+    "@types/jexl": "^2.3.4",
     "fp-ts": "^2.16.8",
     "io-ts": "^2.2.21",
+    "jexl": "^2.3.0",
     "js-yaml": "^4.1.0",
     "pinia": "^2.2.0",
     "vue": "^3.4.31"

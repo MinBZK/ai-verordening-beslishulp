@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { load } from 'js-yaml'
-import { ref, computed, onMounted } from 'vue'
-import { DecisionTree, Questions, Answer } from '@/models/DecisionTree'
+import jexl from 'jexl'
+import { computed, onMounted, ref } from 'vue'
+import { Answer, Conclusions, DecisionTree, Questions, Redirect, type Source } from '@/models/DecisionTree'
 import { storeToRefs } from 'pinia'
 import { fold } from 'fp-ts/lib/Either'
 import * as t from 'io-ts'
@@ -11,7 +12,7 @@ import { useQuestionStore } from '@/stores/QuestionStore'
 
 import SingleAnswer from '@/components/SingleAnswer.vue'
 import SingleQuestion from '@/components/SingleQuestion.vue'
-import FinalResult from '@/components/FinalResult.vue'
+import Conclusion from '@/components/Conclusion.vue'
 import DefaultLoader from '@/components/DefaultLoader.vue'
 import DefaultError from '@/components/DefaultError.vue'
 
@@ -19,10 +20,11 @@ const questionStore = useQuestionStore()
 
 const { QuestionId } = storeToRefs(questionStore)
 
-const data = ref<Questions>([])
+const data_questions = ref<Questions>([])
+const data_conclusions = ref<Conclusions>([])
 const questionId = QuestionId
+const conclusionId = ref<string | null>(null)
 const isLoading = ref(true)
-const result = ref<string | null>(null)
 const error = ref<string | null>(null)
 
 onMounted(async () => {
@@ -31,11 +33,6 @@ onMounted(async () => {
     if (!response.ok) {
       throw new Error(`Error getting questionair data: ${response.status}`)
     }
-
-    //const contenttype = response.headers.get('content-type')
-    // if (!contenttype?.includes('text/yaml')) {
-    //   throw new Error(`Invalid content type: ${response.headers.get('content-type')}`)
-    // }
 
     const text = await response.text()
     const yamlData = load(text)
@@ -47,7 +44,11 @@ onMounted(async () => {
           `Could not validate data: ${PathReporter.report(validationResult).join('\n')}`
         )
       },
-      (validData: DecisionTree) => (data.value = validData.questions) // validData is the decoded object
+      (validData: DecisionTree) => {
+        data_questions.value = validData.questions;
+        data_conclusions.value = validData.conclusions;
+      }
+      // validData is the decoded object
     )(validationResult)
   } catch (e: unknown) {
     if (e instanceof Error) {
@@ -61,29 +62,53 @@ onMounted(async () => {
 })
 
 const currentQuestion = computed(() => {
-  const question = data.value.find((q) => q.questionId === questionId.value)
-  return question
+  return data_questions.value.find((q) => q.questionId === questionId.value)
 })
 
-function givenAnswer(answer: Answer) {
-  questionStore.addAnswer(questionId.value)
-  questionId.value = String(answer.nextQuestionId)
+const findConclusion = computed(() => {
+  return data_conclusions.value.find((q) => q.conclusionId === conclusionId.value)
+})
 
-  if (answer.result) {
-    result.value = answer.result
-  } else {
+function handleNextStep(object: Answer | Redirect){
+  if (object.nextQuestionId) {
+    questionId.value = String(object.nextQuestionId)
     questionStore.setQuestionId(questionId.value)
+  }
+  if (object.nextConclusionId) {
+    conclusionId.value = String(object.nextConclusionId)
+    questionId.value = String(null)
+  }
+}
+
+async function givenAnswer(answer: Answer) {
+  questionStore.addAnswer(questionId.value)
+  if (answer.labels) {
+    for (let i in answer.labels) {
+      questionStore.addLabel(answer.labels[i], questionId.value) // only works if we have one label per question_id
+    }
+  }
+  handleNextStep(answer);
+  if (answer.redirects) {
+    for (const redirect of answer.redirects) {
+      const context = {labels : questionStore.getLabels()};
+      const result = await jexl.eval(redirect.if, context);
+      if (result) {
+        handleNextStep(redirect);
+        break  // break out of the loop once one if statement is valid
+      }
+    }
+    // only works if statements don't contradict in the YAML
   }
 }
 
 function reset() {
   questionStore.reset()
-  result.value = null
+  conclusionId.value = null
 }
 
 function back() {
   questionStore.revertAnswer()
-  result.value = null
+  conclusionId.value = null
 }
 </script>
 
@@ -94,7 +119,7 @@ function back() {
     <DefaultLoader :loading="isLoading" />
 
     <DefaultError :error="error" />
-    <FinalResult :result="result" />
+    <Conclusion v-if="findConclusion" :conclusion="findConclusion.conclusion"/>
 
     <div>
       <fieldset>

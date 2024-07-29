@@ -1,6 +1,13 @@
 import * as t from 'io-ts'
 
 // Define your types
+export const Redirect = t.type({
+  nextQuestionId: t.union([t.string, t.undefined]),
+  nextConclusionId: t.union([t.string, t.undefined]),
+  if: t.string
+})
+export type Redirect = t.TypeOf<typeof Redirect>
+
 export const Answer = t.type({
   answer: t.string,
   nextQuestionId: t.union([t.string, t.undefined]),
@@ -8,7 +15,7 @@ export const Answer = t.type({
   subresult: t.union([t.string, t.undefined]),
   answerComment: t.union([t.string, t.undefined]),
   labels: t.union([t.array(t.string), t.undefined]),
-  redirects: t.union([t.array(t.string), t.undefined])
+  redirects: t.union([t.array(Redirect), t.undefined])
 })
 export type Answer = t.TypeOf<typeof Answer>
 
@@ -27,22 +34,25 @@ export const Question = t.type({
 })
 export type Question = t.TypeOf<typeof Question>
 
+export const Questions = t.array(Question)
+export type Questions = t.TypeOf<typeof Questions>
+
 export const Conclusion = t.type({
   conclusionId: t.string,
   conclusion: t.string,
-  conclusionComment: t.string,
+  conclusionComment: t.union([t.string, t.undefined]),
   obligation: t.string,
   sources: t.union([t.array(Source), t.undefined])
 })
 export type Conclusion = t.TypeOf<typeof Conclusion>
 
-export const Questions = t.array(Question)
-export type Questions = t.TypeOf<typeof Questions>
+export const Conclusions = t.array(Conclusion)
+export type Conclusions = t.TypeOf<typeof Conclusions>
 
 export const DecisionTree = t.type({
   version: t.string,
   name: t.string,
   questions: Questions,
-  conclusions: Conclusion
+  conclusions: Conclusions
 })
 export type DecisionTree = t.TypeOf<typeof DecisionTree>

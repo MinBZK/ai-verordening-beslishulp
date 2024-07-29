@@ -3,14 +3,25 @@ import { defineStore } from 'pinia'
 
 export const useQuestionStore = defineStore('question', () => {
   const initialAnswers = JSON.parse(localStorage.getItem('answers') || '[]')
+  const initialLabels = JSON.parse(localStorage.getItem('labels') || '{}')
   const initialQuestionId = JSON.parse(localStorage.getItem('currentquestion') || '0')
 
   const QuestionId = ref(String(initialQuestionId))
   const answers = ref(initialAnswers)
+  const labels = ref(initialLabels)
 
   function setQuestionId(id: string) {
     QuestionId.value = id
     localStorage.setItem('currentquestion', JSON.stringify(QuestionId.value))
+  }
+
+  function getLabels(){
+    return localStorage.getItem('labels')
+  }
+
+  function addLabel(label: string, question_id: string) {
+    labels.value[question_id] = label // only works if we have one label per question_id
+    localStorage.setItem('labels', JSON.stringify(labels.value))
   }
 
   function addAnswer(id: string) {
@@ -21,15 +32,19 @@ export const useQuestionStore = defineStore('question', () => {
   function revertAnswer() {
     QuestionId.value = answers.value[answers.value.length - 1]
     answers.value.pop()
+    delete labels.value[QuestionId.value]
     localStorage.setItem('answers', JSON.stringify(answers.value))
+    localStorage.setItem('labels', JSON.stringify(labels.value))
   }
 
   function reset() {
     answers.value = []
     QuestionId.value = '0'
+    labels.value = {}
     localStorage.removeItem('answers')
     localStorage.removeItem('currentquestion')
+    localStorage.removeItem('labels')
   }
 
-  return { QuestionId, answers, setQuestionId, addAnswer, revertAnswer, reset }
+  return { QuestionId, answers, setQuestionId, addAnswer, getLabels, addLabel, revertAnswer, reset }
 })
