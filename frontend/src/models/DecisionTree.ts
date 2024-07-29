@@ -5,8 +5,7 @@ export const Answer = t.type({
   answer: t.string,
   nextQuestionId: t.union([t.string, t.undefined]),
   nextConclusionId: t.union([t.string, t.undefined]),
-  result: t.union([t.string, t.undefined]),
-  subresult: t.union([t.string, t.undefined]),  // TODO: Remove also from base.schema.json
+  subresult: t.union([t.string, t.undefined]),
   answerComment: t.union([t.string, t.undefined]),
   labels: t.union([t.array(t.string), t.undefined]),
   redirects: t.union([t.array(t.string), t.undefined])
@@ -24,7 +23,6 @@ export const Question = t.type({
   question: t.string,
   sources: t.union([t.array(Source), t.undefined]),
   description: t.union([t.string, t.undefined]),
-  questionType: t.string,
   answers: t.array(Answer)
 })
 export type Question = t.TypeOf<typeof Question>
@@ -32,12 +30,11 @@ export type Question = t.TypeOf<typeof Question>
 export const Conclusion = t.type({
   conclusionId: t.string,
   conclusion: t.string,
+  conclusionComment: t.string,
   obligation: t.string,
-  sources: t.union([t.array(Source), t.undefined]),
-  questionType: t.string
+  sources: t.union([t.array(Source), t.undefined])
 })
 export type Conclusion = t.TypeOf<typeof Conclusion>
-
 
 export const Questions = t.array(Question)
 export type Questions = t.TypeOf<typeof Questions>
@@ -45,6 +42,7 @@ export type Questions = t.TypeOf<typeof Questions>
 export const DecisionTree = t.type({
   version: t.string,
   name: t.string,
-  questions: Questions
+  questions: Questions,
+  conclusions: Conclusion
 })
 export type DecisionTree = t.TypeOf<typeof DecisionTree>
