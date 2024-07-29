@@ -843,7 +843,6 @@ questions:
   question: "Wijzig je het beoogde doel van een AI-systeem, met inbegrip van een AI-systeem voor algemene doeleinden, dat niet als een systeem met een hoog risico is geclassificeerd en reeds in de handel is gebracht of in gebruik is gesteld, op zodanige wijze dat het betrokken AI-systeem een AI-systeem met een hoog risico overeenkomstig artikel 6 wordt"
   questionType: SingleChoice
   answers:
-  answers:
   - answer: Ja
     subresult: "Naast gebruiksverantwoordelijke ben je ook een aanbieder van een AI-systeem voor algemene doeleinden met een hoog risico. Je moet voldoen aan de verplichtingen van de aanbieder uit hoofde van artikel 16. We raden je daarom aan de beslisboom nog een keer te doorlopen en daarbij aan te geven dat je een aanbieder van een AI-systeem met een hoog risico bent."
     labels:
