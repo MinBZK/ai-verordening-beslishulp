@@ -26,6 +26,33 @@ questions:
     nextQuestionId: "1.1"
   - answer: Nee
     nextQuestionId: "1.9"
+
+# ### Buiten scope AI-verordening
+- questionId: "1.1.0"
+  question: "De AI-verordening is niet van toepassing. Gebruik je een algoritme met impact (rechtsgevolgen voor de burger of classificatie van burgers of groepen)? Volgens categorie B van de handreiking van het algoritmeregister"
+  questionType: SingleChoice
+  answers:
+  - answer: Ja
+    nextQuestionId: "1.1.1"
+  - answer: Nee
+    labels:
+    - "niet impactvol"
+    nextConclusionId: "12.28"
+
+- questionId: "1.1.1"
+  question: "Valt je toepassing onder \xE9\xE9n van de uitzonderingsgronden categorie C of D van de handreiking?"
+  questionType: SingleChoice
+  answers:
+  - answer: Ja
+    subresult: "Het betreft een algoritme met impact, maar de AI-verordening is niet van toepassing. Je hoeft vanwege uitzonderingsgrond niet te publiceren in het register"
+    nextConclusionId: "12.30"
+    labels:
+    - "impactvol"
+  - answer: Nee
+    nextConclusionId: "12.29"
+    labels:
+    - "impactvol"
+
 - questionId: "1.1"
   question: "Is er sprake van een systeem gebaseerd op door mensen gedefinieerde regels om taken te automatiseren?"
   questionType: SingleChoice
@@ -381,7 +408,7 @@ questions:
     subresult: "Er is sprake van een uitzondering op de lijst van verboden AI-systemen."
     labels:
     - "uitzondering verboden AI"
-    nextQuestionId: "12.0"
+    nextConclusionId: "12.0"
   - answer: Nee
     labels:
     - "verboden AI"
@@ -729,27 +756,27 @@ questions:
     labels:
     - "aanbieder"
     redirects:
-      - nextQuestionId: "12.1"
+      - nextConclusionId: "12.1"
         if: '"hoog-risico AI" in labels'
-      - nextQuestionId: "12.4"
+      - nextConclusionId: "12.4"
         if: '"AI-systeem" in labels && "geen hoog-risico" in labels && "transparantierisico" in labels'
-      - nextQuestionId: "12.5"
+      - nextConclusionId: "12.5"
         if: '"AI-systeem" in labels && "geen hoog-risico" in labels && "geen transparantierisico" in labels'
-      - nextQuestionId: "12.8"
+      - nextConclusionId: "12.8"
         if: '"AI-syteem voor algemene doeleinden" in labels && "systeemrisico" in labels && "transparantierisico" in labels'
-      - nextQuestionId: "12.9"
+      - nextConclusionId: "12.9"
         if: '"AI-systeem voor algemene doeleinden" in labels && "geen systeemrisico" in labels && "geen transparantierisico" in labels'
-      - nextQuestionId: "12.10"
+      - nextConclusionId: "12.10"
         if: '"AI-systeem voor algemene doeleinden" in labels  && "systeemrisico" in labels && "geen transparantierisico" in labels'
-      - nextQuestionId: "12.11"
+      - nextConclusionId: "12.11"
         if: '"AI-systeem voor algemene doeleinden" in labels && "geen systeemrisico" in labels && "transparantierisico" in labels'
-      - nextQuestionId: "12.16"
+      - nextConclusionId: "12.16"
         if: '"AI-model voor algemene doeleinden" in labels && "systeemrisico" in labels && "transparantierisico" in labels'
-      - nextQuestionId: "12.17"
+      - nextConclusionId: "12.17"
         if: '"AI-model voor algemene doeleinden" in labels && "geen systeemrisico" in labels && "geen transparantierisico" in labels'
-      - nextQuestionId: "12.18"
+      - nextConclusionId: "12.18"
         if: '"AI-model voor algemene doeleinden" in labels  && "systeemrisico" in labels && "geen transparantierisico" in labels'
-      - nextQuestionId: "12.19"
+      - nextConclusionId: "12.19"
         if: '"AI-model voor algemene doeleinden" in labels && "geen systeemrisico" in labels && "transparantierisico" in labels'
   - answer: Nee
     subresult: "Je bent geen aanbieder. We gaan kijken of je mogelijk een andere rol hebt."
@@ -768,25 +795,25 @@ questions:
     redirects:
       - nextQuestionId: "8.2"
         if: '"hoog-risico AI" in labels'
-      - nextQuestionId: "12.6"
+      - nextConclusionId: "12.6"
         if: '"AI-systeem" in labels && "geen hoog-risico" in labels && "transparantierisico" in labels'
-      - nextQuestionId: "12.7"
+      - nextConclusionId: "12.7"
         if: '"AI-systeem" in labels && "geen hoog-risico" in labels && "geen transparantierisico" in labels'
-      - nextQuestionId: "12.12"
+      - nextConclusionId: "12.12"
         if: '"AI-syteem voor algemene doeleinden" in labels && "systeemrisico" in labels && "transparantierisico" in labels'
-      - nextQuestionId: "12.13"
+      - nextConclusionId: "12.13"
         if: '"AI-systeem voor algemene doeleinden" in labels && "geen systeemrisico" in labels && "geen transparantierisico" in labels'
-      - nextQuestionId: "12.14"
+      - nextConclusionId: "12.14"
         if: '"AI-systeem voor algemene doeleinden" in labels  && "systeemrisico" in labels && "geen transparantierisico" in labels'
-      - nextQuestionId: "12.15"
+      - nextConclusionId: "12.15"
         if: '"AI-systeem voor algemene doeleinden" in labels && "geen systeemrisico" in labels && "transparantierisico" in labels'
-      - nextQuestionId: "12.20"
+      - nextConclusionId: "12.20"
         if: '"AI-model voor algemene doeleinden" in labels && "systeemrisico" in labels && "transparantierisico" in labels'
-      - nextQuestionId: "12.21"
+      - nextConclusionId: "12.21"
         if: '"AI-model voor algemene doeleinden" in labels && "geen systeemrisico" in labels && "geen transparantierisico" in labels'
-      - nextQuestionId: "12.22"
+      - nextConclusionId: "12.22"
         if: '"AI-model voor algemene doeleinden" in labels  && "systeemrisico" in labels && "geen transparantierisico" in labels'
-      - nextQuestionId: "12.23"
+      - nextConclusionId: "12.23"
         if: '"AI-model voor algemene doeleinden" in labels && "geen systeemrisico" in labels && "transparantierisico" in labels'
   - answer: Nee
     nextConclusionId: "12.27"
@@ -798,7 +825,7 @@ questions:
     subresult: "Naast gebruiksverantwoordelijke ben je ook een aanbieder van een AI-systeem voor algemene doeleinden met een hoog risico. Je moet voldoen aan de verplichtingen van de aanbieder uit hoofde van artikel 16. We raden je daarom aan de beslisboom nog een keer te doorlopen en daarbij aan te geven dat je een aanbieder van een AI-systeem met een hoog risico bent."
     labels:
     - "aanbieder"
-    nextQuestionId: "12.2"
+    nextConclusionId: "12.2"
   - answer: Nee
     nextQuestionId: "8.3"
 - questionId: "8.3"
@@ -809,23 +836,25 @@ questions:
     subresult: "Naast gebruiksverantwoordelijke ben je ook een aanbieder van een AI-systeem voor algemene doeleinden met een hoog risico. Je moet voldoen aan de verplichtingen van de aanbieder uit hoofde van artikel 16. We raden je daarom aan de beslisboom nog een keer te doorlopen en daarbij aan te geven dat je een aanbieder van een AI-systeem met een hoog risico bent."
     labels:
     - "aanbieder"
-    nextQuestionId: "12.2"
+    nextConclusionId: "12.2"
   - answer: Nee
     nextQuestionId: "8.4"
 - questionId: "8.4"
   question: "Wijzig je het beoogde doel van een AI-systeem, met inbegrip van een AI-systeem voor algemene doeleinden, dat niet als een systeem met een hoog risico is geclassificeerd en reeds in de handel is gebracht of in gebruik is gesteld, op zodanige wijze dat het betrokken AI-systeem een AI-systeem met een hoog risico overeenkomstig artikel 6 wordt"
   questionType: SingleChoice
   answers:
+  answers:
   - answer: Ja
     subresult: "Naast gebruiksverantwoordelijke ben je ook een aanbieder van een AI-systeem voor algemene doeleinden met een hoog risico. Je moet voldoen aan de verplichtingen van de aanbieder uit hoofde van artikel 16. We raden je daarom aan de beslisboom nog een keer te doorlopen en daarbij aan te geven dat je een aanbieder van een AI-systeem met een hoog risico bent."
     labels:
     - "aanbieder"
-    nextQuestionId: "12.2"
+    nextConclusionId: "12.2"
   - answer: Nee
     subresult: "Je bent alleen gebruiksverantwoordelijke, geen aanbieder van een AI-systeem voor algemene doeleinden met een hoog risico."
-    nextQuestionId: "12.3"
+    nextConclusionId: "12.3"
 
 ### uiteindelijke resultaten: verplichtingen op grond van voorgaande antwoorden
+conclusions:
 - conclusionId: "12.0"
   conclusion: "Er is sprake van een uitzondering op de verboden lijst voor het open-source AI-systeem."
   obligation:
@@ -1177,27 +1206,6 @@ questions:
 - conclusionId: "12.29"
   conclusion: "Het betreft een algoritme met impact, maar de AI-verordening is niet van toepassing."
   obligation: "Omdat het een algoritme met impact betreft, dien je algoritmeregister te publiceren."
-
-# ### Buiten scope AI-verordening
-- questionId: "1.1.0"
-  question: "De AI-verordening is niet van toepassing. Gebruik je een algoritme met impact (rechtsgevolgen voor de burger of classificatie van burgers of groepen)? Volgens categorie B van de handreiking van het algoritmeregister"
-  questionType: SingleChoice
-  answers:
-  - answer: Ja
-    nextQuestionId: "1.1.1"
-  - answer: Nee
-    labels:
-    - "niet impactvol"
-    nextConclusionId: "12.28"
-- questionId: "1.1.1"
-  question: "Valt je toepassing onder \xE9\xE9n van de uitzonderingsgronden categorie C of D van de handreiking?"
-  questionType: SingleChoice
-  answers:
-  - answer: Ja
-    result: "Het betreft een algoritme met impact, maar de AI-verordening is niet van toepassing. Je hoeft vanwege uitzonderingsgrond niet te publiceren in het register"
-    labels:
-    - "impactvol"
-  - answer: Nee
-    nextConclusionId: "12.29"
-    labels:
-    - "impactvol"
+- conclusionId: "12.30"
+  conclusion: "Het betreft een algoritme met impact, maar de AI-verordening is niet van toepassing."
+  obligation: "Je hoeft vanwege uitzonderingsgrond niet te publiceren in het register."
