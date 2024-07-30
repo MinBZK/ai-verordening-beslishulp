@@ -15,7 +15,7 @@ defineProps<Props>()
       >{{ id }}</span
     >
   </legend>
-  <p class="mt-1 text-sm leading-6 text-gray-600">
+  <p style="white-space: pre-line" class="mt-1 text-sm leading-6 text-gray-600">
     {{ question }}
     <slot />
   </p>
