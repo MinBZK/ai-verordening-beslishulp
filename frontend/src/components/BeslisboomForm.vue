@@ -2,7 +2,7 @@
 import { load } from 'js-yaml'
 import jexl from 'jexl'
 import { computed, onMounted, ref } from 'vue'
-import { Answer, Conclusions, DecisionTree, Questions, Redirect, type Source } from '@/models/DecisionTree'
+import { Answer, Conclusions, DecisionTree, Questions, Redirect } from '@/models/DecisionTree'
 import { storeToRefs } from 'pinia'
 import { fold } from 'fp-ts/lib/Either'
 import * as t from 'io-ts'
@@ -119,8 +119,10 @@ function back() {
     <DefaultLoader :loading="isLoading" />
 
     <DefaultError :error="error" />
-    <Conclusion v-if="findConclusion" :conclusion="findConclusion.conclusion"/>
-
+    <Conclusion v-if="findConclusion"
+                :conclusion="findConclusion.conclusion"
+                :obligation="findConclusion.obligation"
+                :labels="questionStore.getJsonLabels()"/>
     <div>
       <fieldset>
         <div v-if="currentQuestion" class="ai-decisiontree-form-question">

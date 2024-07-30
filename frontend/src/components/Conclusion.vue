@@ -1,6 +1,8 @@
 <script setup lang="ts">
 interface Props {
   conclusion: string | null
+  obligation: string | null
+  labels: {} | null
 }
 defineProps<Props>()
 
@@ -17,15 +19,32 @@ import { ExclamationTriangleIcon } from '@heroicons/vue/24/outline'
           <ExclamationTriangleIcon class="h-6 w-6 text-green-600" aria-hidden="true" />
         </div>
         <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-          <DialogTitle as="h3" class="text-base font-semibold leading-6 text-gray-900"
-            >Conclusie</DialogTitle
-          >
-          <div class="mt-2">
-            <p class="text-sm text-gray-500">
-              {{ conclusion }}
-              <slot />
-            </p>
-          </div>
+          <!--Conclusion section-->
+          <DialogTitle as="h3" class="text-base font-semibold leading-6 text-gray-900">
+            Conclusie</DialogTitle>
+          <p class="text-sm text-gray-500">
+            {{ conclusion }}
+            <slot />
+          </p>
+
+          <!--Obligation section-->
+          <DialogTitle as="h4" class="text-sm font-semibold leading-5 text-gray-900 relative top-5">
+            Verplichting</DialogTitle>
+          <p class="text-sm text-gray-500 relative top-5">
+            {{ obligation }}
+            <slot />
+          </p>
+
+          <!--Sources section-->
+
+
+          <!--Labels section-->
+          <DialogTitle as="h4" class="text-sm font-semibold leading-5 text-gray-900 relative top-5">
+            Labels</DialogTitle>
+          <p class="text-sm text-gray-500 relative top-5">
+            {{ labels }}
+            <slot />
+          </p>
         </div>
       </div>
     </div>
