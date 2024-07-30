@@ -2,6 +2,7 @@
 interface Props {
   id: string
   question: string
+  sources: {   source: string;   url: string; }[] | undefined
 }
 defineProps<Props>()
 </script>
@@ -18,4 +19,19 @@ defineProps<Props>()
     {{ question }}
     <slot />
   </p>
+  <div>
+    <!--Sources section-->
+    <!--Make an vue component from this?-->
+    <DialogTitle v-if='sources' as="h4" class="text-sm font-semibold leading-5 text-gray-900 relative top-2.5">
+      Bronnen
+    </DialogTitle>
+      <ul class="bottom-5 relative top-2.5">
+        <li v-for='source in sources' class="text-sm text-blue-700 underline relative top-2.5">
+          <a v-bind:href=source.url target="_blank" >
+            {{source.source}}
+          </a>
+        </li>
+      </ul>
+  </div>
+
 </template>

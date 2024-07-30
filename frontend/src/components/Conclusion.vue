@@ -2,7 +2,8 @@
 interface Props {
   conclusion: string | null
   obligation: string | null
-  labels: {} | null
+  labels: string[] | null
+  sources: {   source: string;   url: string; }[] | undefined
 }
 defineProps<Props>()
 
@@ -36,6 +37,19 @@ import { ExclamationTriangleIcon } from '@heroicons/vue/24/outline'
           </p>
 
           <!--Sources section-->
+          <!--Make an vue component from this?-->
+          <DialogTitle v-if='sources'  as="h4" class="text-sm font-semibold leading-5 text-gray-900 relative top-5">
+            Bronnen
+          </DialogTitle>
+
+          <ul>
+            <li v-for='source in sources' class="text-sm text-blue-700 underline relative top-5">
+              <a v-bind:href=source.url target="_blank">
+                {{source.source}}
+              <slot />
+              </a>
+            </li>
+          </ul>
 
 
           <!--Labels section-->

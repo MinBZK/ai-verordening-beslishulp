@@ -122,15 +122,18 @@ function back() {
     <Conclusion v-if="findConclusion"
                 :conclusion="findConclusion.conclusion"
                 :obligation="findConclusion.obligation"
-                :labels="questionStore.getJsonLabels()"/>
+                :labels="questionStore.getJsonLabels()"
+                :sources="findConclusion.sources"/>
     <div>
       <fieldset>
         <div v-if="currentQuestion" class="ai-decisiontree-form-question">
-          <SingleQuestion :question="currentQuestion.question" :id="currentQuestion.questionId" />
+          <SingleQuestion :question="currentQuestion.question"
+                          :id="currentQuestion.questionId"
+                          :sources="currentQuestion.sources"/>
           <SingleAnswer
             :answers="currentQuestion.answers"
             :id="currentQuestion.questionId"
-            @answered="givenAnswer"
+            @answered="givenAnswer" class="relative top-5"
           />
         </div>
       </fieldset>
