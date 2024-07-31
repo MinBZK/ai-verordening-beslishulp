@@ -15,10 +15,6 @@ export const useQuestionStore = defineStore('question', () => {
     localStorage.setItem('currentquestion', JSON.stringify(QuestionId.value))
   }
 
-  function getLabels(){
-    return localStorage.getItem('labels')
-  }
-
   function getJsonLabels(){
     const label_dict = JSON.parse(localStorage.getItem('labels') ?? '{}')
     let label_list: string[] = []
@@ -55,5 +51,5 @@ export const useQuestionStore = defineStore('question', () => {
     localStorage.removeItem('labels')
   }
 
-  return { QuestionId, answers, setQuestionId, addAnswer, getLabels, getJsonLabels, addLabel, revertAnswer, reset }
+  return { QuestionId, answers, setQuestionId, addAnswer, getJsonLabels, addLabel, revertAnswer, reset }
 })
