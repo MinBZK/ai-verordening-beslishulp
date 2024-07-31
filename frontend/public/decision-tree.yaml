@@ -765,7 +765,7 @@ questions:
           - nextConclusionId: "12.5"
             if: '"AI-systeem" in labels && "geen hoog-risico AI" in labels && "geen transparantierisico" in labels'
           - nextConclusionId: "12.8"
-            if: '"AI-syteem voor algemene doeleinden" in labels && "systeemrisico" in labels && "transparantierisico" in labels'
+            if: '"AI-systeem voor algemene doeleinden" in labels && "systeemrisico" in labels && "transparantierisico" in labels'
           - nextConclusionId: "12.9"
             if: '"AI-systeem voor algemene doeleinden" in labels && "geen systeemrisico" in labels && "geen transparantierisico" in labels'
           - nextConclusionId: "12.10"
@@ -802,7 +802,7 @@ questions:
           - nextConclusionId: "12.7"
             if: '"AI-systeem" in labels && "geen hoog-risico AI" in labels && "geen transparantierisico" in labels'
           - nextConclusionId: "12.12"
-            if: '"AI-syteem voor algemene doeleinden" in labels && "systeemrisico" in labels && "transparantierisico" in labels'
+            if: '"AI-systeem voor algemene doeleinden" in labels && "systeemrisico" in labels && "transparantierisico" in labels'
           - nextConclusionId: "12.13"
             if: '"AI-systeem voor algemene doeleinden" in labels && "geen systeemrisico" in labels && "geen transparantierisico" in labels'
           - nextConclusionId: "12.14"
