@@ -90,7 +90,7 @@ async function givenAnswer(answer: Answer) {
   handleNextStep(answer);
   if (answer.redirects) {
     for (const redirect of answer.redirects) {
-      const context = {labels : questionStore.getLabels()};
+      const context = {labels : questionStore.getJsonLabels()};
       const result = await jexl.eval(redirect.if, context);
       if (result) {
         handleNextStep(redirect);
