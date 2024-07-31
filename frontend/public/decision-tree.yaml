@@ -761,9 +761,9 @@ questions:
           - nextConclusionId: "12.1"
             if: '"hoog-risico AI" in labels'
           - nextConclusionId: "12.4"
-            if: '"AI-systeem" in labels && "geen hoog-risico" in labels && "transparantierisico" in labels'
+            if: '"AI-systeem" in labels && "geen hoog-risico AI" in labels && "transparantierisico" in labels'
           - nextConclusionId: "12.5"
-            if: '"AI-systeem" in labels && "geen hoog-risico" in labels && "geen transparantierisico" in labels'
+            if: '"AI-systeem" in labels && "geen hoog-risico AI" in labels && "geen transparantierisico" in labels'
           - nextConclusionId: "12.8"
             if: '"AI-syteem voor algemene doeleinden" in labels && "systeemrisico" in labels && "transparantierisico" in labels'
           - nextConclusionId: "12.9"
@@ -798,9 +798,9 @@ questions:
           - nextQuestionId: "8.2"
             if: '"hoog-risico AI" in labels'
           - nextConclusionId: "12.6"
-            if: '"AI-systeem" in labels && "geen hoog-risico" in labels && "transparantierisico" in labels'
+            if: '"AI-systeem" in labels && "geen hoog-risico AI" in labels && "transparantierisico" in labels'
           - nextConclusionId: "12.7"
-            if: '"AI-systeem" in labels && "geen hoog-risico" in labels && "geen transparantierisico" in labels'
+            if: '"AI-systeem" in labels && "geen hoog-risico AI" in labels && "geen transparantierisico" in labels'
           - nextConclusionId: "12.12"
             if: '"AI-syteem voor algemene doeleinden" in labels && "systeemrisico" in labels && "transparantierisico" in labels'
           - nextConclusionId: "12.13"
@@ -867,7 +867,7 @@ conclusions:
       - source: Artikel 5
         url: https://artificialintelligenceact.eu/article/5/
   - conclusionId: "12.1"
-    conclusion: "Je bent een aanbieder van een hoog risico (GP)AI-systeem."
+    conclusion: "Je bent een aanbieder van een hoog risico AI-systeem (voor algemene doeleinden)."
     obligation: "Art. 16:\n
       - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2\n
       - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres\n
@@ -885,7 +885,7 @@ conclusions:
       - source: Artikel 16
         url: https://artificialintelligenceact.eu/article/16/
   - conclusionId: "12.2"
-    conclusion: "Je bent aanbieder en gebruiksverantwoordelijke van een hoog risico (GP)AI-systeem."
+    conclusion: "Je bent aanbieder en gebruiksverantwoordelijke van een hoog risico AI-systeem (voor algemene doeleinden)."
     obligation: "Art. 16:\n
       - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2\n
       - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres\n
@@ -1017,12 +1017,12 @@ conclusions:
       robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten
       en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen.\n
       Art. 53 lid (1a) - de technische documentatie van het model opstellen en up-to-date houden, inc. het trainings- en testproces en de resultaten van de evaluatie ervan.\n
-      Art. 53 lid (1b) - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het GPAI-model in hun AI-systemen willen integreren.\n
+      Art. 53 lid (1b) - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren.\n
       Art. 55 - systeemrisico verplichtingen\n
       - een modelevaluatie uitvoeren\n
-      - mogelijke systeemrisico/u2019s op Unieniveau beoordelen en beperken, met inbegriop van de bronnen daarvan, die kunnen voortvloeien uit de ontwikkeling, het in handel brengen of het gebruik van GPAI-modellen met een systeemrisico\n
+      - mogelijke systeemrisico/u2019s op Unieniveau beoordelen en beperken, met inbegriop van de bronnen daarvan, die kunnen voortvloeien uit de ontwikkeling, het in handel brengen of het gebruik van AI-model voor algemene doeleindenlen met een systeemrisico\n
       - relevante informatie over ernstige incidenten en mogelijk corrigerende maatregelen bijhouden, documenteren en onverwijld rapporteren aan het AI-bureau (en in voorkomende gevallen aan de nationale bevoegde autoriteiten)\n
-      - zorgen voor een passend niveau van cyberbeveiligingsbescherming voor het GPAI-model en de fysieke infrastructuur van het model."
+      - zorgen voor een passend niveau van cyberbeveiligingsbescherming voor het AI-model voor algemene doeleinden en de fysieke infrastructuur van het model."
     sources:
       - source: Artikel 50
         url: https://artificialintelligenceact.eu/article/50/
@@ -1035,12 +1035,12 @@ conclusions:
     conclusion: "Je bent aanbieder van een AI-systeem voor algemene doeleinden met een systeemrisico."
     obligation:
       "Art. 53 lid (1a) - de technische documentatie van het model opstellen en up-to-date houden, inc. het trainings- en testproces en de resultaten van de evaluatie ervan.\n
-      Art. 53 lid (1b) - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het GPAI-model in hun AI-systemen willen integreren.\n
+      Art. 53 lid (1b) - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren.\n
       Art. 55 - systeemrisico verplichtingen\n
       - een modelevaluatie uitvoeren\n
-      - mogelijke systeemrisico/u2019s op Unieniveau beoordelen en beperken, met inbegriop van de bronnen daarvan, die kunnen voortvloeien uit de ontwikkeling, het in handel brengen of het gebruik van GPAI-modellen met een systeemrisico\n
+      - mogelijke systeemrisico/u2019s op Unieniveau beoordelen en beperken, met inbegriop van de bronnen daarvan, die kunnen voortvloeien uit de ontwikkeling, het in handel brengen of het gebruik van AI-model voor algemene doeleindenlen met een systeemrisico\n
       - relevante informatie over ernstige incidenten en mogelijk corrigerende maatregelen bijhouden, documenteren en onverwijld rapporteren aan het AI-bureau (en in voorkomende gevallen aan de nationale bevoegde autoriteiten)\n
-      - zorgen voor een passend niveau van cyberbeveiligingsbescherming voor het GPAI-model en de fysieke infrastructuur van het model."
+      - zorgen voor een passend niveau van cyberbeveiligingsbescherming voor het AI-model voor algemene doeleinden en de fysieke infrastructuur van het model."
     sources:
       - source: Artikel 53
         url: https://artificialintelligenceact.eu/article/53/
@@ -1094,19 +1094,19 @@ conclusions:
       - source: Artikel 50
         url: https://artificialintelligenceact.eu/article/50/
   - conclusionId: "12.16"
-    conclusion: "Je bent aanbieder van een GPAI-model met een systeemrisico en een transparantierisico."
+    conclusion: "Je bent aanbieder van een AI-model voor algemene doeleinden met een systeemrisico en een transparantierisico."
     obligation:
       "Art 50 lid 2 - aanbieders van (GP)AI-systemen, die synthetische audio, beeld, video- of tekstinhoud genereren, zorgen ervoor dat de outputs van het AI-systeem worden
       gemarkeerd in een machineleesbaar formaat en detecteerbaar zijn als kunstmatig gegenereerd of gemanipuleerd. Aanbieders zorgen ervoor dat hun technische oplossingen doeltreffend, interoperabel
       robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten
       en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen.\n
       Art. 53 lid (1a) - de technische documentatie van het model opstellen en up-to-date houden, inc. het trainings- en testproces en de resultaten van de evaluatie ervan.\n
-      Art. 53 lid (1b) - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het GPAI-model in hun AI-systemen willen integreren.\n
+      Art. 53 lid (1b) - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren.\n
       Art. 55 - systeemrisico verplichtingen\n
       - een modelevaluatie uitvoeren\n
-      - mogelijke systeemrisico\u2019s op Unieniveau beoordelen en beperken, met inbegriop van de bronnen daarvan, die kunnen voortvloeien uit de ontwikkeling, het in handel brengen of het gebruik van GPAI-modellen met een systeemrisico\n
+      - mogelijke systeemrisico\u2019s op Unieniveau beoordelen en beperken, met inbegriop van de bronnen daarvan, die kunnen voortvloeien uit de ontwikkeling, het in handel brengen of het gebruik van AI-model voor algemene doeleindenlen met een systeemrisico\n
       - relevante informatie over ernstige incidenten en mogelijk corrigerende maatregelen bijhouden, documenteren en onverwijld rapporteren aan het AI-bureau (en in voorkomende gevallen aan de nationale bevoegde autoriteiten)\n
-      - zorgen voor een passend niveau van cyberbeveiligingsbescherming voor het GPAI-model en de fysieke infrastructuur van het model."
+      - zorgen voor een passend niveau van cyberbeveiligingsbescherming voor het AI-model voor algemene doeleinden en de fysieke infrastructuur van het model."
     sources:
       - source: Artikel 50
         url: https://artificialintelligenceact.eu/article/50/
@@ -1120,10 +1120,10 @@ conclusions:
     conclusion: "Je bent een aanbieder van een AI-model voor algemene doeleinde met een systeemrisico."
     obligation:
       "Art. 53 lid (1a) - de technische documentatie van het model opstellen en up-to-date houden, inc. het trainings- en testproces en de resultaten van de evaluatie ervan.\n
-      Art. 53 lid (1b) - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het GPAI-model in hun AI-systemen willen integreren.\n
+      Art. 53 lid (1b) - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren.\n
       Art. 55 - systeemrisico verplichtingen:\n
       - een modelevaluatie uitvoeren\n
-      - mogelijke systeemrisico\u2019s op Unieniveau beoordelen en beperken, met inbegriop van de bronnen daarvan, die kunnen voortvloeien uit de ontwikkeling, het in handel brengen of het gebruik van GPAI-modellen met een systeemrisico.\n
+      - mogelijke systeemrisico\u2019s op Unieniveau beoordelen en beperken, met inbegriop van de bronnen daarvan, die kunnen voortvloeien uit de ontwikkeling, het in handel brengen of het gebruik van AI-model voor algemene doeleindenlen met een systeemrisico.\n
       - relevante informatie over ernstige incidenten en mogelijk corrigerende maatregelen bijhouden, documenteren en onverwijld rapporteren aan het AI-bureau (en in voorkomende gevallen aan de nationale bevoegde autoriteiten)\n
       - zorgen voor een passend niveau van cyberbeveiligingsbescherming voor het AI-model voor algemene doeleinden en de fysieke infrastructuur van het model."
     sources:
@@ -1139,7 +1139,7 @@ conclusions:
       robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten
       en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen.\n
       Art. 53 lid (1a) - de technische documentatie van het model opstellen en up-to-date houden, inc. het trainings- en testproces en de resultaten van de evaluatie ervan.\n
-      Art. 53 lid (1b) - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het GPAI-model in hun AI-systemen willen integreren."
+      Art. 53 lid (1b) - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren."
     sources:
       - source: Artikel 53
         url: https://artificialintelligenceact.eu/article/53/
