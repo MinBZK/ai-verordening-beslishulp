@@ -1,10 +1,11 @@
 # AI-act-beslisboom
 
-Deze git repository bevat de beslisboom op basis van de AI Verordening. Het project omvat 3 onderdelen.
+Deze git repository bevat de beslisboom op basis van de AI Verordening. Het project omvat 2 onderdelen.
 
 1. De beslisboom: [decision-tree.yaml](decision-tree.yaml)
 2. Een frontend voor de visualisatie van de beslisboom: [frontend](frontend/)
-3. Kubernetes deployment code: [infra](infra/)
+
+De Kubernetes deployment code staat bij  [infra](https://github.com/MinBZK/ai-validation-infra/apps/ai-act-beslisboom)
 
 Door deze beslisboom te doorlopen, krijgt uw organisatie inzicht in de volgende vragen:
 
