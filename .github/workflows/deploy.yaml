@@ -1,9 +1,10 @@
 name: deploy
 
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["build"]
+    types:
+      - completed
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -32,7 +33,7 @@ jobs:
         with:
           repository: 'minbzk/ai-validation-infra'
           ref: main
-          token: ${{ secrets.GH_PAT }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Configure Git
         run: |
@@ -54,4 +55,4 @@ jobs:
           git commit -m "Update ai-act-beslisboom sandbox tag ${{ steps.get_package_hash.outputs.container_id }}"
           git push --force-with-lease
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
