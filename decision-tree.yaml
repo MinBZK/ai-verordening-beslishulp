@@ -768,9 +768,7 @@ questions:
             if: '"AI-systeem voor algemene doeleinden" in labels && "systeemrisico" in labels && "transparantierisico" in labels'
           - nextConclusionId: "12.9"
             if: '"AI-systeem voor algemene doeleinden" in labels && "geen systeemrisico" in labels && ("geen transparantierisico" in labels || "open-source" in labels)'
-            if: '"AI-systeem voor algemene doeleinden" in labels && "geen systeemrisico" in labels && ("geen transparantierisico" in labels || "open-source" in labels)'
           - nextConclusionId: "12.10"
-            if: '"AI-systeem voor algemene doeleinden" in labels  && "systeemrisico" in labels && ("geen transparantierisico" in labels || "open-source" in labels)'
             if: '"AI-systeem voor algemene doeleinden" in labels  && "systeemrisico" in labels && ("geen transparantierisico" in labels || "open-source" in labels)'
           - nextConclusionId: "12.11"
             if: '"AI-systeem voor algemene doeleinden" in labels && "geen systeemrisico" in labels && "transparantierisico" in labels'
@@ -778,9 +776,7 @@ questions:
             if: '"AI-model voor algemene doeleinden" in labels && "systeemrisico" in labels && "transparantierisico" in labels'
           - nextConclusionId: "12.17"
             if: '"AI-model voor algemene doeleinden" in labels && "geen systeemrisico" in labels && ("geen transparantierisico" in labels || "open-source" in labels)'
-            if: '"AI-model voor algemene doeleinden" in labels && "geen systeemrisico" in labels && ("geen transparantierisico" in labels || "open-source" in labels)'
           - nextConclusionId: "12.18"
-            if: '"AI-model voor algemene doeleinden" in labels  && "systeemrisico" in labels && ("geen transparantierisico" in labels || "open-source" in labels)'
             if: '"AI-model voor algemene doeleinden" in labels  && "systeemrisico" in labels && ("geen transparantierisico" in labels || "open-source" in labels)'
           - nextConclusionId: "12.19"
             if: '"AI-model voor algemene doeleinden" in labels && "geen systeemrisico" in labels && "transparantierisico" in labels'
@@ -809,9 +805,7 @@ questions:
             if: '"AI-systeem voor algemene doeleinden" in labels && "systeemrisico" in labels && "transparantierisico" in labels'
           - nextConclusionId: "12.13"
             if: '"AI-systeem voor algemene doeleinden" in labels && "geen systeemrisico" in labels && ("geen transparantierisico" in labels || "open-source" in labels)'
-            if: '"AI-systeem voor algemene doeleinden" in labels && "geen systeemrisico" in labels && ("geen transparantierisico" in labels || "open-source" in labels)'
           - nextConclusionId: "12.14"
-            if: '"AI-systeem voor algemene doeleinden" in labels  && "systeemrisico" in labels && ("geen transparantierisico" in labels || "open-source" in labels)'
             if: '"AI-systeem voor algemene doeleinden" in labels  && "systeemrisico" in labels && ("geen transparantierisico" in labels || "open-source" in labels)'
           - nextConclusionId: "12.15"
             if: '"AI-systeem voor algemene doeleinden" in labels && "geen systeemrisico" in labels && "transparantierisico" in labels'
@@ -819,9 +813,7 @@ questions:
             if: '"AI-model voor algemene doeleinden" in labels && "systeemrisico" in labels && "transparantierisico" in labels'
           - nextConclusionId: "12.21"
             if: '"AI-model voor algemene doeleinden" in labels && "geen systeemrisico" in labels && ("geen transparantierisico" in labels || "open-source" in labels)'
-            if: '"AI-model voor algemene doeleinden" in labels && "geen systeemrisico" in labels && ("geen transparantierisico" in labels || "open-source" in labels)'
           - nextConclusionId: "12.22"
-            if: '"AI-model voor algemene doeleinden" in labels  && "systeemrisico" in labels && ("geen transparantierisico" in labels || "open-source" in labels)'
             if: '"AI-model voor algemene doeleinden" in labels  && "systeemrisico" in labels && ("geen transparantierisico" in labels || "open-source" in labels)'
           - nextConclusionId: "12.23"
             if: '"AI-model voor algemene doeleinden" in labels && "geen systeemrisico" in labels && "transparantierisico" in labels'
