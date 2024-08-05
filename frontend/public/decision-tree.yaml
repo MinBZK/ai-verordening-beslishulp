@@ -15,45 +15,30 @@ questions:
 
   ### check of het een AI-systeem, AI-systeem voor algemene doeleinden of AI-model voor algemene doeleinden is
   - questionId: "1.0"
-    question: "Is er sprake van een machine?"
+    question: "Betreft het algoritme een AI-systeem volgens de definitie van de AI-verordening? Dit houdt in dat:\n
+          - er sprake is van een machine\n
+          - het systeem taken automatiseert, op basis van door mensen gedefinieerde regels\n
+          - het systeem functioneert volgens expliciete, gedefinieerde, of impliciete doelstellingen\n
+          - het systeem inferenties maakt\n
+          - het systeem output, zoals een voorspelling, inhoud, een aanbeveling of een beslissing genereert\n
+          - het systeem enige mate van autonomie heeft\n
+          - het systeem na de implementatie aanpassingsvermogen heeft\n
+          - het systeem de omgeving kan beïnvloeden"
     questionType: SingleChoice
     sources:
       - source: Overweging 12 - Begrip AI-systeem
         url: https://artificialintelligenceact.eu/recital/12/
+      - source: Artikel 3
+        url: https://artificialintelligenceact.eu/article/3/
     answers:
       - answer: Ja
+        labels:
+          - "AI-systeem"
+        nextQuestionId: "1.0.1"
+      - answer: Nee
         nextQuestionId: "1.1"
-      - answer: Nee
-        nextQuestionId: "1.9"
-
-  # ### Buiten scope AI-verordening
-  - questionId: "1.1.0"
-    question: "De AI-verordening is niet van toepassing. Gebruik je een algoritme met impact (rechtsgevolgen voor de burger of classificatie van burgers of groepen)? Volgens categorie B van de handreiking van het algoritmeregister"
-    questionType: SingleChoice
-    answers:
-      - answer: Ja
-        nextQuestionId: "1.1.1"
-      - answer: Nee
-        labels:
-          - "niet impactvol"
-        nextConclusionId: "12.28"
-
-  - questionId: "1.1.1"
-    question: "Valt je toepassing onder \xE9\xE9n van de uitzonderingsgronden categorie C of D van de handreiking?"
-    questionType: SingleChoice
-    answers:
-      - answer: Ja
-        subresult: "Het betreft een algoritme met impact, maar de AI-verordening is niet van toepassing. Je hoeft vanwege uitzonderingsgrond niet te publiceren in het register"
-        nextConclusionId: "12.30"
-        labels:
-          - "impactvol"
-      - answer: Nee
-        nextConclusionId: "12.29"
-        labels:
-          - "impactvol"
-
   - questionId: "1.1"
-    question: "Is er sprake van een systeem gebaseerd op door mensen gedefinieerde regels om taken te automatiseren?"
+    question: "Kan de AI een groot scala aan onderscheidende taken uitvoeren?"
     questionType: SingleChoice
     sources:
       - source: Overweging 12 - Begrip AI-systeem
@@ -62,94 +47,11 @@ questions:
       - answer: Ja
         nextQuestionId: "1.2"
       - answer: Nee
-        nextQuestionId: "1.9"
-  - questionId: "1.2"
-    question: "Optimaliseert het systeem voor expliciet om impliciete doelstellingen?"
-    questionType: SingleChoice
-    sources:
-      - source: Overweging 12 - Begrip AI-systeem
-        url: https://artificialintelligenceact.eu/recital/12/
-    answers:
-      - answer: Ja
-        nextQuestionId: "1.3"
-      - answer: Nee
-        nextQuestionId: "1.9"
-  - questionId: "1.3"
-    question: "Maakt het systeem inferenties?"
-    questionType: SingleChoice
-    sources:
-      - source: Overweging 12 - Begrip AI-systeem
-        url: https://artificialintelligenceact.eu/recital/12/
-    answers:
-      - answer: Ja
-        nextQuestionId: "1.4"
-      - answer: Nee
-        nextQuestionId: "1.9"
-  - questionId: "1.4"
-    question: "Genereert het output zoals een voorspelling, inhoud, aanbeveling of beslissing?"
-    questionType: SingleChoice
-    sources:
-      - source: Overweging 12 - Begrip AI-systeem
-        url: https://artificialintelligenceact.eu/recital/12/
-    answers:
-      - answer: Ja
-        nextQuestionId: "1.5"
-      - answer: Nee
-        nextQuestionId: "1.9"
-  - questionId: "1.5"
-    question: "Heeft het systeem enige mate van autonomie?"
-    questionType: SingleChoice
-    sources:
-      - source: Overweging 12 - Begrip AI-systeem
-        url: https://artificialintelligenceact.eu/recital/12/
-    answers:
-      - answer: Ja
-        nextQuestionId: "1.6"
-      - answer: Nee
-        nextQuestionId: "1.9"
-  - questionId: "1.6"
-    question: "Heeft het systeem na de implementatie aanpassingsvermogen?"
-    questionType: SingleChoice
-    sources:
-      - source: Overweging 12 - Begrip AI-systeem
-        url: https://artificialintelligenceact.eu/recital/12/
-    answers:
-      - answer: Ja
-        nextQuestionId: "1.7"
-      - answer: Nee
-        nextQuestionId: "1.9"
-  - questionId: "1.7"
-    question: "Kan het systeem de omgeving beïnvloeden?"
-    questionType: SingleChoice
-    sources:
-      - source: Overweging 12 - Begrip AI-systeem
-        url: https://artificialintelligenceact.eu/recital/12/
-    answers:
-      - answer: Ja
-        subresult: "Aan alle vereisten is voldaan. Er is sprake van een AI-systeem."
-        labels:
-          - "AI-systeem"
-        nextQuestionId: "1.0.1"
-      - answer: Nee
-        nextQuestionId: "1.8"
-  - questionId: "1.8"
-    question: "Kan de AI een groot scala aan onderscheidende taken uitvoeren?"
-    questionType: SingleChoice
-    sources:
-      - source: Overweging 12 - Begrip AI-systeem
-        url: https://artificialintelligenceact.eu/recital/12/
-    answers:
-      - answer: Ja
-        subresult: "Er is sprake van een AI-model voor algemene doeleinden."
-        labels:
-          - "AI-systeem voor algemene doeleinden"
-        nextQuestionId: "1.9"
-      - answer: Nee
         subresult: "De AI-verordening is niet van toepassing."
         labels:
           - "AI-verordening niet van toepassing"
-        nextQuestionId: "1.1.0"
-  - questionId: "1.9"
+        nextQuestionId: "9.0"
+  - questionId: "1.2"
     question: "Wordt het model geïntegreerd in een AI-systeem?"
     questionType: SingleChoice
     sources:
@@ -181,7 +83,7 @@ questions:
         subresult: "Er is geen sprake van een open-source model."
         labels:
           - "geen open-source"
-        nextQuestionId: "2.1"
+        nextQuestionId: "2.0"
   - questionId: "1.0.2"
     question: "Zijn de broncodes en parameters openbaar voor eenieder?"
     questionType: SingleChoice
@@ -193,16 +95,29 @@ questions:
         subresult: "Er is sprake van een open-source model."
         labels:
           - "open-source"
-        nextQuestionId: "2.1"
+        nextQuestionId: "2.0"
       - answer: Nee
         subresult: "Er is geen sprake van een open-source model."
         labels:
           - "geen open-source"
-        nextQuestionId: "2.1"
+        nextQuestionId: "2.0"
 
-  ### check of AI verordening van toepassing is of uitzonderingsgrond
-  - questionId: "2.1"
+  ### check of AI-verordening van toepassing is of uitzonderingsgrond
+  - questionId: "2.0"
     question: "We gaan nu bepalen of de toepassing binnen de reikwijdte van de AI-verordening. Is er sprake van een AI-systeem die uitsluitend in de handel wordt gebracht/in gebruik wordt gesteld/wordt gebruikt voor militaire-, defensie-, of nationale veiligheidsdoeleinden?"
+    questionType: SingleChoice
+    sources:
+      - source: Artikel 2
+        url: https://artificialintelligenceact.eu/article/2/
+    answers:
+      - answer: Ja
+        labels:
+          - "uitzonderingsgrond: AI-verordening niet van toepassing"
+        nextConclusionId: "12.25"
+      - answer: Nee
+        nextQuestionId: "2.1"
+  - questionId: "2.1"
+    question: "Is er sprake van een AI-systeem die niet in de Europese Unie in handel wordt gebracht/in gebruik wordt gesteld en waarvan de output in de Europese Unie uitsluitend wordt gebruikt voor militaire-, defensie-, of nationale veiligheidsdoeleinden?"
     questionType: SingleChoice
     sources:
       - source: Artikel 2
@@ -215,7 +130,7 @@ questions:
       - answer: Nee
         nextQuestionId: "2.2"
   - questionId: "2.2"
-    question: "Is er sprake van een AI-systeem die niet in de Unie in handel wordt gebracht/in gebruik wordt gesteld en waarvan de output in de Unie uitsluitend wordt gebruikt voor militaire-, defensie-, of nationale veiligheidsdoeleinden?"
+    question: "Is er sprake van een overheidsinstantie in een derde land of een internationale organisatie die op grond van Artikel 2 Lid 1 Binnen het toepassingsgebied van deze verordening vallen, wanneer zij AI-systemen gebruiken in het kader van internationale  samenwerking of overeenkomsten met de Europese Unie of een of meer lidstaten op het gebied van rechtshandhaving en justitie, op voorwaarde dat het land/organisatie passen waarborgen biedt?"
     questionType: SingleChoice
     sources:
       - source: Artikel 2
@@ -228,7 +143,7 @@ questions:
       - answer: Nee
         nextQuestionId: "2.3"
   - questionId: "2.3"
-    question: "Is er sprake van een overheidsinstantie in een derde land of een internationale organisatie die ogv art. 2 lid 1 Binnen het toepassingsgebied van deze verordening vallen, wanneer zij AI-systemen gebruiken in het kader van internationale  samenwerking of overeenkomsten met de Unie of een of meer lidstaten op het gebied van rechtshandhaving en justitie, op voorwaarde dat het land/organisatie passen waarborgen biedt?"
+    question: "Is er sprake van een AI-systeem die in gebruik wordt gesteld/in handel is gebracht voor onderzoeks-, test- of ontwikkelingsactiviteiten? Testen onder reële omstandigheden valt hier niet onder."
     questionType: SingleChoice
     sources:
       - source: Artikel 2
@@ -241,20 +156,7 @@ questions:
       - answer: Nee
         nextQuestionId: "2.4"
   - questionId: "2.4"
-    question: "Is er sprake van een AI-systeem die in gebruik wordt gesteld/in handel is gebracht voor onderzoeks-, test- of ontwikkelingsactiviteiten? Testen onder reële omstandigheden valt hier niet onder."
-    questionType: SingleChoice
-    sources:
-      - source: Artikel 2
-        url: https://artificialintelligenceact.eu/article/2/
-    answers:
-      - answer: Ja
-        labels:
-          - "uitzonderingsgrond: AI-verordening niet van toepassing"
-        nextConclusionId: "12.25"
-      - answer: Nee
-        nextQuestionId: "2.5"
-  - questionId: "2.5"
-    question: "Is er sprake van een AI-systeem, die specifiek is ontwikkeld en in gebruik is gesteld met wetenschappelijk onderzoek en wetenschappelijke ontwikkeling als enig doel."
+    question: "Is er sprake van een AI-systeem, die specifiek is ontwikkeld en in gebruik is gesteld met wetenschappelijk onderzoek en wetenschappelijke ontwikkeling als enig doel?"
     questionType: SingleChoice
     sources:
       - source: Artikel 2
@@ -384,7 +286,7 @@ questions:
     answers:
       - answer: Ja
         subresult: "Deze type AI-systemen zijn in principe verboden volgens de AI-verordening. Er kan sprake zijn van een uitzondering."
-        nextQuestionId: "3.1.1."
+        nextQuestionId: "3.1.1"
       - answer: Nee
         subresult: "Het AI-systeem is niet verboden. We gaan nu bepalen of er sprake is van een hoog-risico AI-systeem."
         labels:
@@ -413,7 +315,7 @@ questions:
           - "verboden AI"
         nextConclusionId: "12.26"
 
-  ### check op hoog risico AI Act (bijlage I Sectie B)
+  ### check op hoog risico AI-verordening (bijlage I Sectie B)
   - questionId: "4.0"
     question:
       "Is er sprake van een veiligheidscomponent als bedoeld in Bijlage I Sectie B van de AI-verordening?:\n
@@ -442,7 +344,7 @@ questions:
       - answer: Nee
         nextQuestionId: "4.1"
 
-  ### check op hoog risico AI Act (bijlage I Sectie A)
+  ### check op hoog risico AI-verordening (bijlage I Sectie A)
   - questionId: "4.1"
     question:
       "Is er sprake van een veiligheidscomponent als bedoeld in Bijlage I sectie A van de AI-verordening?:\n
@@ -472,7 +374,7 @@ questions:
       - answer: Nee
         nextQuestionId: "5.0"
   - questionId: "4.2"
-    question: "Moet het product waarvan het AI-systeem de veiligheidscomponent vormt een conformiteits-beoordeling door een derde partij laten uitgevoeren met het oog op het in de handel brengen of in gebruik stellen van dat product op grond van de in bijlage I sectie A opgenomen harmonisatiewetgeving van de Unie?"
+    question: "Moet het product waarvan het AI-systeem de veiligheidscomponent vormt een conformiteits-beoordeling door een derde partij laten uitgevoeren met het oog op het in de handel brengen of in gebruik stellen van dat product op grond van de in bijlage I sectie A opgenomen harmonisatiewetgeving van de Europese Unie?"
     questionType: SingleChoice
     sources:
       - source: Overweging 50 - Conformiteitsbeoordelingsprocedure
@@ -486,9 +388,9 @@ questions:
       - answer: Nee
         nextQuestionId: "5.0"
 
-  ### check op hoog risico AI Act (Bijlage III)
+  ### check op hoog risico AI-verordening (Bijlage III)
   - questionId: "5.0"
-    question: " Is je AI-systeem bedoeld voor een van de volgende doeleinden?\n
+    question: " Is je AI-systeem bedoeld voor een van de volgende doeleinden:\n
       - Biometrische identificatie op afstand\n
       - Biometrische categorisering op basis van gevoelige of beschermde eigenschappen of kenmerken, of op basis van wat uit die eigenschappen of kenmerken wordt afgeleid\n
       - Biometrisch systeem voor emotieherkenning"
@@ -505,7 +407,7 @@ questions:
       - answer: Nee
         nextQuestionId: "5.1"
   - questionId: "5.1"
-    question: "Is je AI-systeem bedoeld voor een van de volgende doeleinden?\n
+    question: "Is je AI-systeem bedoeld voor volgend doeleind:\n
       - Veiligheidscomponent bij het beheer of de exploitatie van kritieke digitale infrastructuur, wegverkeer of bij de levering van water, gas, verwarming en elektriciteit"
     questionType: SingleChoice
     sources:
@@ -573,15 +475,15 @@ questions:
         nextQuestionId: "5.5"
   - questionId: "5.5"
     question: "Is je AI-systeem bedoeld voor een van de volgende doeleinden?\n
-      - Om door of namens rechtshandhavingsinstanties, of door instellingen, organen of instanties van de Unie ter ondersteuning van rechtshandhavingsinstanties of namens hen, te worden gebruikt om het risico te beoordelen dat een natuurlijke persoon het slachtoffer wordt van strafbare feiten\n
-      - Om door of namens rechtshandhavingsinstanties of door instellingen, organen of instanties van de Unie ter ondersteuning van rechtshandhavingsinstanties te worden gebruikt als leugendetector of soortgelijke instrumenten\n
-      - Om door of namens rechtshandhavingsinstanties of door instellingen, organen of instanties van de Unie ter ondersteuning van rechtshandhavingsinstanties te worden gebruikt om de betrouwbaarheid van bewijsmateriaal tijdens het onderzoek naar of de vervolging van strafbare feiten te beoordelen\n
-      - Om door of namens rechtshandhavingsinstanties of door instellingen, organen of instanties van de Unie ter ondersteuning van rechtshandhavingsinstanties te worden gebruikt om te beoordelen hoe groot het risico is dat een natuurlijke persoon (opnieuw) een strafbaar feit zal plegen, niet uitsluitend op basis van profilering van natuurlijke personen als bedoeld in artikel 3, punt 4, van Richtlijn (EU) 2016/680, of om persoonlijkheidskenmerken en eigenschappen of eerder crimineel gedrag van natuurlijke personen of groepen te beoordelen\n
-      - Om door of namens rechtshandhavingsinstanties of door instellingen, organen en instanties van de Unie ter ondersteuning van rechtshandhavingsinstanties te worden gebruikt om natuurlijke personen te profileren als bedoeld in artikel 3, punt 4, van Richtlijn (EU) 2016/680, tijdens het opsporen, onderzoeken of vervolgen van strafbare feiten?\n
-      - Om door of namens bevoegde overheidsinstanties of door instellingen, organen of instanties van de Unie te worden gebruikt als leugendetector of soortgelijke hulpmiddelen?"
+      - Om door of namens rechtshandhavingsinstanties, of door instellingen, organen of instanties van de Europese Unie ter ondersteuning van rechtshandhavingsinstanties of namens hen, te worden gebruikt om het risico te beoordelen dat een natuurlijke persoon het slachtoffer wordt van strafbare feiten\n
+      - Om door of namens rechtshandhavingsinstanties of door instellingen, organen of instanties van de Europese Unie ter ondersteuning van rechtshandhavingsinstanties te worden gebruikt als leugendetector of soortgelijke instrumenten\n
+      - Om door of namens rechtshandhavingsinstanties of door instellingen, organen of instanties van de Europese Unie ter ondersteuning van rechtshandhavingsinstanties te worden gebruikt om de betrouwbaarheid van bewijsmateriaal tijdens het onderzoek naar of de vervolging van strafbare feiten te beoordelen\n
+      - Om door of namens rechtshandhavingsinstanties of door instellingen, organen of instanties van de Europese Unie ter ondersteuning van rechtshandhavingsinstanties te worden gebruikt om te beoordelen hoe groot het risico is dat een natuurlijke persoon (opnieuw) een strafbaar feit zal plegen, niet uitsluitend op basis van profilering van natuurlijke personen als bedoeld in artikel 3, punt 4, van Richtlijn (EU) 2016/680, of om persoonlijkheidskenmerken en eigenschappen of eerder crimineel gedrag van natuurlijke personen of groepen te beoordelen\n
+      - Om door of namens rechtshandhavingsinstanties of door instellingen, organen en instanties van de Europese Unie ter ondersteuning van rechtshandhavingsinstanties te worden gebruikt om natuurlijke personen te profileren als bedoeld in artikel 3, punt 4, van Richtlijn (EU) 2016/680, tijdens het opsporen, onderzoeken of vervolgen van strafbare feiten?\n
+      - Om door of namens bevoegde overheidsinstanties of door instellingen, organen of instanties van de Europese Unie te worden gebruikt als leugendetector of soortgelijke hulpmiddelen?"
     questionType: SingleChoice
     sources:
-      - source: Overweging 59 - AI-systemen namens rechtshandhavingsinstanties of instellingen, organen of instanties van de Unie
+      - source: Overweging 59 - AI-systemen namens rechtshandhavingsinstanties of instellingen, organen of instanties van de Europese Unie
         url: https://artificialintelligenceact.eu/recital/59/
       - source: Bijlage 3
         url: https://artificialintelligenceact.eu/annex/3/
@@ -593,9 +495,9 @@ questions:
         nextQuestionId: "5.6"
   - questionId: "5.6"
     question: "Is je AI-systeem bedoeld voor een van de volgende doeleinden?\n
-      - Om door of namens bevoegde overheidsinstanties of door instellingen, organen of instanties van de Unie te worden gebruikt om risico\u2019s te beoordelen, waaronder een veiligheidsrisico, een risico op illegale migratie of een gezondheidsrisico, uitgaat van een natuurlijke persoon die voornemens is het grondgebied van een lidstaat te betreden of dat heeft gedaan\n
-      - Om door of namens bevoegde overheidsinstanties  of door instellingen, organen of instanties van de Unie te worden gebruikt om bevoegde overheidsinstanties bij te staan bij de behandeling van aanvragen voor asiel, visa of verblijfsvergunningen en bij de behandeling van aanverwante klachten in verband met het al dan niet in aanmerking komen van de natuurlijke personen die een aanvraag voor een status indienen, met inbegrip van hieraan gerelateerde beoordelingen van de betrouwbaarheid van bewijsmateriaal\n
-      - Om door of namens bevoegde overheidsinstanties, of door instellingen, organen of instanties van de Unie, te worden gebruikt in het kader van migratie-, asiel- of grenstoezichtsbeheer, met het oog op het opsporen, herkennen of identificeren van natuurlijke personen, met uitzondering van de verificatie van reisdocumenten"
+      - Om door of namens bevoegde overheidsinstanties of door instellingen, organen of instanties van de Europese Unie te worden gebruikt om risico\u2019s te beoordelen, waaronder een veiligheidsrisico, een risico op illegale migratie of een gezondheidsrisico, uitgaat van een natuurlijke persoon die voornemens is het grondgebied van een lidstaat te betreden of dat heeft gedaan\n
+      - Om door of namens bevoegde overheidsinstanties  of door instellingen, organen of instanties van de Europese Unie te worden gebruikt om bevoegde overheidsinstanties bij te staan bij de behandeling van aanvragen voor asiel, visa of verblijfsvergunningen en bij de behandeling van aanverwante klachten in verband met het al dan niet in aanmerking komen van de natuurlijke personen die een aanvraag voor een status indienen, met inbegrip van hieraan gerelateerde beoordelingen van de betrouwbaarheid van bewijsmateriaal\n
+      - Om door of namens bevoegde overheidsinstanties, of door instellingen, organen of instanties van de Europese Unie, te worden gebruikt in het kader van migratie-, asiel- of grenstoezichtsbeheer, met het oog op het opsporen, herkennen of identificeren van natuurlijke personen, met uitzondering van de verificatie van reisdocumenten"
     questionType: SingleChoice
     sources:
       - source: Overweging 60 - AI-systemen die worden gebruikt op het gebied van migratie, asiel en grenstoezichtsbeheer
@@ -634,7 +536,7 @@ questions:
           - nextQuestionId: "8.0"
             if: '"open-source" in labels && "AI-systeem" in labels'
 
-  ### check op uitzonderingen hoog risico EU AI Act (bijlage III - toepassingsgebieden)
+  ### check op uitzonderingen hoog risico EU AI-verordening (bijlage III - toepassingsgebieden)
   - questionId: "5.1.0"
     question: "Is het AI-systeem bedoeld om:\n
       - Een beperkte procedurele taak uit te voeren en is er geen significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?\n
@@ -645,6 +547,8 @@ questions:
     sources:
       - source: Overweging 53 - Uitzonderingen hoog risico
         url: https://artificialintelligenceact.eu/recital/53/
+      - source: Bijlage 3
+        url: https://artificialintelligenceact.eu/annex/3/
     answers:
       - answer: Ja
         nextQuestionId: "5.1.1"
@@ -691,6 +595,8 @@ questions:
         url: https://artificialintelligenceact.eu/recital/110/
       - source: Overweging 111 - Classificatie systeemrisico
         url: https://artificialintelligenceact.eu/recital/111/
+      - source: Artikel 51
+        url: https://artificialintelligenceact.eu/article/51/
     answers:
       - answer: Ja
         subresult: "Er is sprake van een systeemrisico. Afhankelijk van de vorige antwoorden gaan we nu checken of er ook sprake is van een transparantierisico, of van welke entiteit sprake is."
@@ -754,7 +660,7 @@ questions:
     questionType: SingleChoice
     answers:
       - answer: Ja
-        subresult: "Je bent een aanbieder volgens de AI verordening."
+        subresult: "Je bent een aanbieder volgens de AI-verordening."
         labels:
           - "aanbieder"
         redirects:
@@ -791,7 +697,7 @@ questions:
     questionType: SingleChoice
     answers:
       - answer: Ja
-        subresult: "Je bent een gebruiksverantwoordelijke volgens de AI verordening."
+        subresult: "Je bent een gebruiksverantwoordelijke volgens de AI-verordening."
         labels:
           - "gebruiksverantwoordelijke"
         redirects:
@@ -842,7 +748,7 @@ questions:
       - answer: Nee
         nextQuestionId: "8.4"
   - questionId: "8.4"
-    question: "Wijzig je het beoogde doel van een AI-systeem, met inbegrip van een AI-systeem voor algemene doeleinden, dat niet als een systeem met een hoog risico is geclassificeerd en reeds in de handel is gebracht of in gebruik is gesteld, op zodanige wijze dat het betrokken AI-systeem een AI-systeem met een hoog risico overeenkomstig artikel 6 wordt"
+    question: "Wijzig je het beoogde doel van een AI-systeem, met inbegrip van een AI-systeem voor algemene doeleinden, dat niet als een systeem met een hoog risico is geclassificeerd en reeds in de handel is gebracht of in gebruik is gesteld, op zodanige wijze dat het betrokken AI-systeem een AI-systeem met een hoog risico overeenkomstig artikel 6 wordt?"
     questionType: SingleChoice
     answers:
       - answer: Ja
@@ -854,13 +760,38 @@ questions:
         subresult: "Je bent alleen gebruiksverantwoordelijke, geen aanbieder van een AI-systeem voor algemene doeleinden met een hoog risico."
         nextConclusionId: "12.3"
 
+  # ### Buiten scope AI-verordening
+  - questionId: "9.0"
+    question: "De AI-verordening is niet van toepassing. Gebruik je een algoritme met impact (rechtsgevolgen voor de burger of classificatie van burgers of groepen)? Volgens categorie B van de handreiking van het algoritmeregister"
+    questionType: SingleChoice
+    answers:
+      - answer: Ja
+        nextQuestionId: "9.1"
+      - answer: Nee
+        labels:
+          - "niet impactvol"
+        nextConclusionId: "12.28"
+  - questionId: "9.1"
+    question: "Valt je toepassing onder \xE9\xE9n van de uitzonderingsgronden categorie C of D van de handreiking?"
+    questionType: SingleChoice
+    answers:
+      - answer: Ja
+        subresult: "Het betreft een algoritme met impact, maar de AI-verordening is niet van toepassing. Je hoeft vanwege uitzonderingsgrond niet te publiceren in het register"
+        nextConclusionId: "12.30"
+        labels:
+          - "impactvol"
+      - answer: Nee
+        nextConclusionId: "12.29"
+        labels:
+          - "impactvol"
+
 ### uiteindelijke resultaten: verplichtingen op grond van voorgaande antwoorden
 conclusions:
   - conclusionId: "12.0"
-    conclusion: "Er is sprake van een uitzondering op de verboden lijst voor het open-source AI-systeem."
+    conclusion: "Er is sprake van een uitzondering op de lijst van verboden AI-systemen."
     obligation:
       "Art. 5 lid 2: Het gebruik van het systeem voor biometrische identificatie op afstand in real-time in openbare ruimeten wordt alleen toegestaan indien
-      de rechtshandhavingsinstantie een in art. 27 voorziene effectbeoordeling op het gebied van de grondrechten heeft uitgevoerd en het systeem volgens art. 47
+      de rechtshandhavingsinstantie een in Artikel 27 voorziene effectbeoordeling op het gebied van de grondrechten heeft uitgevoerd en het systeem volgens Artikel 47
       in de EU-databank heeft geregistreerd. In naar behoren gemotiveerde spoedeisende gevallen kan echter met het gebruik van dergelijke systemen worden begonnen
       zonder de systemen in de EU-databank te registreren, op voorwaarde dat die registratie zonder onnodige vertraging wordt voltooid."
     sources:
@@ -871,14 +802,14 @@ conclusions:
     obligation: "Art. 16:\n
       - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2\n
       - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres\n
-      - aanbieders beschikken over een systeem voor kwaliteitsbeheer dat in overeenstemming is met art. 17 (systeem voor kwaliteitsbeheer)\n
+      - aanbieders beschikken over een systeem voor kwaliteitsbeheer dat in overeenstemming is met Artikel 17 (systeem voor kwaliteitsbeheer)\n
       - aanbieders bewaren de in artikel 18 (bewaring van documentatie) bedoelde documentatie\n
       - aanbieders bewaren de in artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben\n
       - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld\n
-      - aanbieders stellen een EU-conformiteitsverklaring op, in overeenstemming met art. 47\n
-      - aanbieders brengen de CE-markering aan op het Ai-systeem met een hoog risico of, waneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, om aan te geven dat aan deze verordening is voldaan, overeenkomstig art. 48\n
-      - aanbieders leven de registratieverplichtingen als bedoeld in art. 49 lid 1, na\n
-      - aanbieders nemen de noodzakelijke corrigerende maatregelen en verstrekken de uit hoofde van art. 20 vereiste informatie\n
+      - aanbieders stellen een EU-conformiteitsverklaring op, in overeenstemming met Artikel 47\n
+      - aanbieders brengen de CE-markering aan op het Ai-systeem met een hoog risico of, waneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, om aan te geven dat aan deze verordening is voldaan, overeenkomstig Artikel 48\n
+      - aanbieders leven de registratieverplichtingen als bedoeld in Artikel 49 lid 1, na\n
+      - aanbieders nemen de noodzakelijke corrigerende maatregelen en verstrekken de uit hoofde van Artikel 20 vereiste informatie\n
       - aanbieders tonen op een met redenen omkleed verzoek van een nationale bevoegde autoriteit de overeenstemming aan van het AI-systeem met een hoog risico met de eisen van afdeling 2\n
       - aanbieders zorgen ervoor dat het AI-systeem met een hoog risico voldoet aan de toegankelijkheidseisen overeenkomstig de Richtlijnen (EU) 2016/2102 en (EU) 2019/882."
     sources:
@@ -889,14 +820,14 @@ conclusions:
     obligation: "Art. 16:\n
       - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2\n
       - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres\n
-      - aanbieders beschikken over een systeem voor kwaliteitsbeheer dat in overeenstemming is met art. 17 (systeem voor kwaliteitsbeheer)\n
+      - aanbieders beschikken over een systeem voor kwaliteitsbeheer dat in overeenstemming is met Artikel 17 (systeem voor kwaliteitsbeheer)\n
       - aanbieders bewaren de in artikel 18 (bewaring van documentatie) bedoelde documentatie\n
       - aanbieders bewaren de in artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben\n
       - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld\n
-      - aanbieders stellen een EU-conformiteitsverklaring op, in overeenstemming met art. 47\n
-      - aanbieders brengen de CE-markering aan op het Ai-systeem met een hoog risico of, waneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, om aan te geven dat aan deze verordening is voldaan, overeenkomstig art. 48\n
-      - aanbieders leven de registratieverplichtingen als bedoeld in art. 49 lid 1, na\n
-      - aanbieders nemen de noodzakelijke corrigerende maatregelen en verstrekken de uit hoofde van art. 20 vereiste informatie\n
+      - aanbieders stellen een EU-conformiteitsverklaring op, in overeenstemming met Artikel 47\n
+      - aanbieders brengen de CE-markering aan op het Ai-systeem met een hoog risico of, waneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, om aan te geven dat aan deze verordening is voldaan, overeenkomstig Artikel 48\n
+      - aanbieders leven de registratieverplichtingen als bedoeld in Artikel 49 lid 1, na\n
+      - aanbieders nemen de noodzakelijke corrigerende maatregelen en verstrekken de uit hoofde van Artikel 20 vereiste informatie\n
       - aanbieders tonen op een met redenen omkleed verzoek van een nationale bevoegde autoriteit de overeenstemming aan van het AI-systeem met een hoog risico met de eisen van afdeling 2\n
       - aanbieders zorgen ervoor dat het AI-systeem met een hoog risico voldoet aan de toegankelijkheidseisen overeenkomstig de Richtlijnen (EU) 2016/2102 en (EU) 2019/882.\n
       Als gebruiksverantwoordelijke van een AI-systeem met een hoog risico moet je voldoen aan de verplichtingen van artikel 26 uit de AI-verordening:\n
@@ -920,15 +851,15 @@ conclusions:
       - Het gebruik van het AI-systeem onderbreken\n
       - Onmiddellijk eerst de leverancier en vervolgens de importeur of distributeur en de relevante nationale toezichthoudende autoriteiten op de hoogte stellen\n
       - Verplichtingen voor AI-systemen met een hoog risico zijn op basis van artikel 6 ook van toepassing op systemen die worden beschouwd als een 'veiligheidscomponent' van het type dat is opgenomen in bijlage I, deel A, en op systemen die worden beschouwd als een 'AI-systeem met hoog risico' volgens bijlage 3\n
-      Deze categorie AI wordt toegelaten mits deze voldoen aan dwingende voorschriften en er vooraf een conformiteitsbeoordeling is uitgevoerd door de aanbieder van AI. Bij een beoordeling wordt er gekeken of de AI voldoet aan de AI Act en wordt er met name gelet op de beheersing van risico en de bescherming van fundamentele rechten. AI die onder deze hoge risico categorie valt dient aan strikte eisen te voldoen voordat het AI-systeem mag worden gebruikt of op de markt mag worden gebracht:\n
-      - adequate systemen voor risicobeoordeling en \u2013beperking (art. 9)\n
-      - hoge kwaliteit van de datasets die het systeem voeden om risico\u2019s en discriminerende resultaten tot een minimum te beperken (art. 10)\n
-      - loggen van activiteiten om de traceerbaarheid van de resultaten te waarborgen (art. 11)\n
-      - beschikbaar hebben van gedetailleerde documentatie met informatie over de AI-technologie en het doel ervan voor de autoriteiten om de naleving van de AI-act te boordelen (art. 12)\n
-      - duidelijke en adequate informatie aan de eindgebruiker van AI (art. 13)\n
-      - passende maatregelen voor menselijke toezicht om risico\u2019s tot een minimum te beperken (art. 14)\n
-      - hoge mate van robuustheid, veiligheid en nauwkeurigheid (art. 15)\n
-      art. 17 t/m 22 & 27 FRIA"
+      Deze categorie AI wordt toegelaten mits deze voldoen aan dwingende voorschriften en er vooraf een conformiteitsbeoordeling is uitgevoerd door de aanbieder van AI. Bij een beoordeling wordt er gekeken of de AI voldoet aan de AI-verordening en wordt er met name gelet op de beheersing van risico en de bescherming van fundamentele rechten. AI die onder deze hoge risico categorie valt dient aan strikte eisen te voldoen voordat het AI-systeem mag worden gebruikt of op de markt mag worden gebracht:\n
+      - adequate systemen voor risicobeoordeling en \u2013beperking (Artikel 9)\n
+      - hoge kwaliteit van de datasets die het systeem voeden om risico\u2019s en discriminerende resultaten tot een minimum te beperken (Artikel 10)\n
+      - loggen van activiteiten om de traceerbaarheid van de resultaten te waarborgen (Artikel 11)\n
+      - beschikbaar hebben van gedetailleerde documentatie met informatie over de AI-technologie en het doel ervan voor de autoriteiten om de naleving van de AI-act te boordelen (Artikel 12)\n
+      - duidelijke en adequate informatie aan de eindgebruiker van AI (Artikel 13)\n
+      - passende maatregelen voor menselijke toezicht om risico\u2019s tot een minimum te beperken (Artikel 14)\n
+      - hoge mate van robuustheid, veiligheid en nauwkeurigheid (Artikel 15)\n
+      Artikel 17 t/m 22 & 27 FRIA"
     sources:
       - source: Artikel 16
         url: https://artificialintelligenceact.eu/article/16/
@@ -956,15 +887,15 @@ conclusions:
       - Het gebruik van het AI-systeem onderbreken\n
       - Onmiddellijk eerst de leverancier en vervolgens de importeur of distributeur en de relevante nationale toezichthoudende autoriteiten op de hoogte stellen\n
       - Verplichtingen voor AI-systemen met een hoog risico zijn op basis van artikel 6 ook van toepassing op systemen die worden beschouwd als een 'veiligheidscomponent' van het type dat is opgenomen in bijlage I, deel A, en op systemen die worden beschouwd als een 'AI-systeem met hoog risico' volgens bijlage 3\n
-      Deze categorie AI wordt toegelaten mits deze voldoen aan dwingende voorschriften en er vooraf een conformiteitsbeoordeling is uitgevoerd door de aanbieder van AI. Bij een beoordeling wordt er gekeken of de AI voldoet aan de AI Act en wordt er met name gelet op de beheersing van risico en de bescherming van fundamentele rechten. AI die onder deze hoge risico categorie valt dient aan strikte eisen te voldoen voordat het AI-systeem mag worden gebruikt of op de markt mag worden gebracht:\n
-      - adequate systemen voor risicobeoordeling en \u2013beperking (art. 9)\n
-      - hoge kwaliteit van de datasets die het systeem voeden om risico\u2019s en discriminerende resultaten tot een minimum te beperken (art. 10)\n
-      - loggen van activiteiten om de traceerbaarheid van de resultaten te waarborgen (art. 11)\n
-      - beschikbaar hebben van gedetailleerde documentatie met informatie over de AI-technologie en het doel ervan voor de autoriteiten om de naleving van de AI-act te boordelen (art. 12)\n
-      - duidelijke en adequate informatie aan de eindgebruiker van AI (art. 13)\n
-      - passende maatregelen voor menselijke toezicht om risico\u2019s tot een minimum te beperken (art. 14)\n
-      - hoge mate van robuustheid, veiligheid en nauwkeurigheid (art. 15)\n
-      art. 17 t/m 22 & 27 FRIA"
+      Deze categorie AI wordt toegelaten mits deze voldoen aan dwingende voorschriften en er vooraf een conformiteitsbeoordeling is uitgevoerd door de aanbieder van AI. Bij een beoordeling wordt er gekeken of de AI voldoet aan de AI-verordening en wordt er met name gelet op de beheersing van risico en de bescherming van fundamentele rechten. AI die onder deze hoge risico categorie valt dient aan strikte eisen te voldoen voordat het AI-systeem mag worden gebruikt of op de markt mag worden gebracht:\n
+      - adequate systemen voor risicobeoordeling en \u2013beperking (Artikel 9)\n
+      - hoge kwaliteit van de datasets die het systeem voeden om risico\u2019s en discriminerende resultaten tot een minimum te beperken (Artikel 10)\n
+      - loggen van activiteiten om de traceerbaarheid van de resultaten te waarborgen (Artikel 11)\n
+      - beschikbaar hebben van gedetailleerde documentatie met informatie over de AI-technologie en het doel ervan voor de autoriteiten om de naleving van de AI-act te boordelen (Artikel 12)\n
+      - duidelijke en adequate informatie aan de eindgebruiker van AI (Artikel 13)\n
+      - passende maatregelen voor menselijke toezicht om risico\u2019s tot een minimum te beperken (Artikel 14)\n
+      - hoge mate van robuustheid, veiligheid en nauwkeurigheid (Artikel 15)\n
+      Artikel 17 t/m 22 & 27 FRIA"
     sources:
       - source: Artikel 26
         url: https://artificialintelligenceact.eu/article/26/
@@ -984,8 +915,8 @@ conclusions:
   - conclusionId: "12.5"
     conclusion: "Je bent aanbieder van een laag risico AI-systeem."
     obligation:
-      "Er is sprake van een laag risico. Dit betekent dat het AI-systeem niet in de risicovolle categorieen valt van de AI-Act.
-      Doordat deze categorie niet genoemd wordt in de AI-Act, gelden voor dit soort AI-technologie geen bijzondere wettelijke vereisten.
+      "Er is sprake van een laag risico. Dit betekent dat het AI-systeem niet in de risicovolle categorieen valt van de AI-verordening.
+      Doordat deze categorie niet genoemd wordt in de AI-verordening, gelden voor dit soort AI-technologie geen bijzondere wettelijke vereisten.
       Wel moet deze AI-technologie uiteraard voldoen aan algemene veiligheidsstandaarden."
   - conclusionId: "12.6"
     conclusion: "Je bent gebruiksverantwoordelijke van een AI-systeem met transparantierisico."
@@ -1003,8 +934,8 @@ conclusions:
   - conclusionId: "12.7"
     conclusion: "Je bent gebruiksverantwoordelijke van een laag risico AI-systeem."
     obligation:
-      "Er is sprake van een laag risico. Dit betekent dat het AI-systeem niet in de risicovolle categorieen valt van de AI-Act.
-      Doordat deze categorie niet genoemd wordt in de AI-Act, gelden voor dit soort AI-technologie geen bijzondere wettelijke vereisten.
+      "Er is sprake van een laag risico. Dit betekent dat het AI-systeem niet in de risicovolle categorieen valt van de AI-verordening.
+      Doordat deze categorie niet genoemd wordt in de AI-verordening, gelden voor dit soort AI-technologie geen bijzondere wettelijke vereisten.
       Wel moet deze AI-technologie uiteraard voldoen aan algemene veiligheidsstandaarden."
   - conclusionId: "12.8"
     conclusion: "Je bent aanbieder van een AI-systeem voor algemene doeleinden met een systeemrisico en een transparantierisico."
@@ -1028,8 +959,8 @@ conclusions:
         url: https://artificialintelligenceact.eu/article/50/
   - conclusionId: "12.9"
     conclusion:
-      "Je bent aanbieder van een laag risico AI-systeem voor algemene doeleinden. Er is sprake van een laag risico. Dit betekent dat het AI-systeem niet in de risicovolle categorieen valt van de AI-Act.
-      Doordat deze categorie niet genoemd wordt in de AI-Act, gelden voor dit soort AI-technologie geen bijzondere wettelijke vereisten."
+      "Je bent aanbieder van een laag risico AI-systeem voor algemene doeleinden. Er is sprake van een laag risico. Dit betekent dat het AI-systeem niet in de risicovolle categorieen valt van de AI-verordening.
+      Doordat deze categorie niet genoemd wordt in de AI-verordening, gelden voor dit soort AI-technologie geen bijzondere wettelijke vereisten."
     obligation: "De AI-technologie moet voldoen aan algemene veiligheidsstandaarden."
   - conclusionId: "12.10"
     conclusion: "Je bent aanbieder van een AI-systeem voor algemene doeleinden met een systeemrisico."
@@ -1074,8 +1005,8 @@ conclusions:
   - conclusionId: "12.13"
     conclusion: "Je bent gebruiksverantwoordelijke van een laag risico AI-systeem voor algemene doeleinden."
     obligation:
-      "Er is sprake van een laag risico. Dit betekent dat het AI-systeem niet in de risicovolle categorieen valt van de AI-Act.
-      Doordat deze categorie niet genoemd wordt in de AI-Act, gelden voor dit soort AI-technologie geen bijzondere wettelijke vereisten.
+      "Er is sprake van een laag risico. Dit betekent dat het AI-systeem niet in de risicovolle categorieen valt van de AI-verordening.
+      Doordat deze categorie niet genoemd wordt in de AI-verordening, gelden voor dit soort AI-technologie geen bijzondere wettelijke vereisten.
       Wel moet deze AI-technologie uiteraard voldoen aan algemene veiligheidsstandaarden."
   - conclusionId: "12.14"
     conclusion: "Je bent gebruiksverantwoordelijke van een AI-systeem voor algemene doeleinden met een systeemrisico."
@@ -1113,11 +1044,11 @@ conclusions:
   - conclusionId: "12.17"
     conclusion: "Je bent aanbieder van een laag risico AI-model voor algemene doeleinden."
     obligation:
-      "Er is sprake van een laag risico. Dit betekent dat het AI-systeem niet in de risicovolle categorieen valt van de AI-Act.
-      Doordat deze categorie niet genoemd wordt in de AI-Act, gelden voor dit soort AI-technologie geen bijzondere wettelijke vereisten.
+      "Er is sprake van een laag risico. Dit betekent dat het AI-systeem niet in de risicovolle categorieen valt van de AI-verordening.
+      Doordat deze categorie niet genoemd wordt in de AI-verordening, gelden voor dit soort AI-technologie geen bijzondere wettelijke vereisten.
       Wel moet deze AI-technologie uiteraard voldoen aan algemene veiligheidsstandaarden."
   - conclusionId: "12.18"
-    conclusion: "Je bent een aanbieder van een AI-model voor algemene doeleinde met een systeemrisico."
+    conclusion: "Je bent een aanbieder van een AI-model voor algemene doeleinden met een systeemrisico."
     obligation:
       "Art. 53 lid (1a) - de technische documentatie van het model opstellen en up-to-date houden, inc. het trainings- en testproces en de resultaten van de evaluatie ervan.\n
       Art. 53 lid (1b) - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren.\n
@@ -1162,8 +1093,8 @@ conclusions:
   - conclusionId: "12.21"
     conclusion: "Je bent gebruiksverantwoordelijke van een laag risico AI-model voor algemene doeleinden."
     obligation:
-      "Er is sprake van een laag risico. Dit betekent dat het AI-systeem niet in de risicovolle categorieen valt van de AI-Act.
-      Doordat deze categorie niet genoemd wordt in de AI-Act, gelden voor dit soort AI-technologie geen bijzondere wettelijke vereisten.
+      "Er is sprake van een laag risico. Dit betekent dat het AI-systeem niet in de risicovolle categorieen valt van de AI-verordening.
+      Doordat deze categorie niet genoemd wordt in de AI-verordening, gelden voor dit soort AI-technologie geen bijzondere wettelijke vereisten.
       Wel moet deze AI-technologie uiteraard voldoen aan algemene veiligheidsstandaarden."
   - conclusionId: "12.22"
     conclusion: "Je bent gebruiksverantwoordelijke van een AI-model voor algemene doeleinden met een systeemrisico."
@@ -1182,7 +1113,7 @@ conclusions:
       - source: Artikel 50
         url: https://artificialintelligenceact.eu/article/50/
   - conclusionId: "12.24"
-    conclusion: "Je gebruikt geen algoritme."
+    conclusion: "Je gebruikt geen algoritme. De AI-verordening is niet van toepassing."
     obligation: "Houd je aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)."
   - conclusionId: "12.25"
     conclusion: "Er is sprake van een uitzonderingsgrond. De AI-verordening is niet van toepassing."
