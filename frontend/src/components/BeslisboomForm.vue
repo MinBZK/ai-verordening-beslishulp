@@ -89,7 +89,7 @@ async function givenAnswer(answer: Answer) {
   questionStore.addAnswer(questionId.value)
   if (answer.labels) {
     for (let i in answer.labels) {
-      questionStore.addLabel(answer.labels[i], questionId.value) // only works if we have one label per question_id
+      questionStore.addLabel(answer.labels[i], questionId.value)
     }
   }
   handleNextStep(answer)
