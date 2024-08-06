@@ -33,7 +33,7 @@ jobs:
         with:
           repository: 'minbzk/ai-validation-infra'
           ref: main
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_PAT }}
 
       - name: Configure Git
         run: |
@@ -55,4 +55,4 @@ jobs:
           git commit -m "Update ai-act-beslisboom sandbox tag ${{ steps.get_package_hash.outputs.container_id }}"
           git push --force-with-lease
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
