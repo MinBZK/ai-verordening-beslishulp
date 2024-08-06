@@ -2,7 +2,7 @@
 interface Props {
   id: string
   question: string
-  sources: {   source: string;   url: string; }[] | undefined
+  sources: {   source: string;   url: string | undefined; }[] | undefined
 }
 defineProps<Props>()
 </script>
@@ -22,14 +22,23 @@ defineProps<Props>()
   <div>
     <!--Sources section-->
     <!--Make an vue component from this?-->
-    <DialogTitle v-if='sources' as="h4" class="text-sm font-semibold leading-5 text-gray-900 relative top-2.5">
-      Bronnen
-    </DialogTitle>
-      <ul class="bottom-5 relative top-2.5">
-        <li v-for='source in sources' class="text-sm text-blue-700 underline relative top-2.5">
-          <a v-bind:href=source.url target="_blank" >
-            {{source.source}}
+      <DialogTitle v-if='sources' as="h4" class="text-sm font-semibold leading-5 text-gray-900 relative top-5">
+        Bronnen
+      </DialogTitle>
+
+      <ul>
+        <li v-for='(source, index) in sources' :key="index" class="relative top-5 text-sm">
+          <!-- When source.url exists -->
+          <a v-if="source.url" :href="source.url" target="_blank" class="text-blue-700 underline">
+            {{ source.source }}
+            <slot />
           </a>
+
+          <!-- When source.url does not exist -->
+          <span v-else class="text-gray-700">
+            {{ source.source }}
+            <slot />
+          </span>
         </li>
       </ul>
   </div>

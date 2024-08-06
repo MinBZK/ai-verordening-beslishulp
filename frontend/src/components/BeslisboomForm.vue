@@ -11,7 +11,7 @@ import { useQuestionStore } from '@/stores/QuestionStore'
 
 import SingleAnswer from '@/components/SingleAnswer.vue'
 import SingleQuestion from '@/components/SingleQuestion.vue'
-import Conclusion from '@/components/Conclusion.vue'
+import Conclusion from '@/components/ConclusionComponent.vue'
 import DefaultLoader from '@/components/DefaultLoader.vue'
 import DefaultError from '@/components/DefaultError.vue'
 
@@ -89,7 +89,7 @@ async function givenAnswer(answer: Answer) {
   questionStore.addAnswer(questionId.value)
   if (answer.labels) {
     for (let i in answer.labels) {
-      questionStore.addLabel(answer.labels[i], questionId.value) // only works if we have one label per question_id
+      questionStore.addLabel(answer.labels[i], questionId.value)
     }
   }
   handleNextStep(answer)
