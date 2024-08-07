@@ -112,11 +112,13 @@ questions:
 
   ### check of AI-verordening van toepassing is of uitzonderingsgrond
   - questionId: "2.0"
-    question: "We gaan nu bepalen of de toepassing binnen de reikwijdte van de AI-verordening. Is er sprake van een AI-systeem die uitsluitend in de handel wordt gebracht/in gebruik wordt gesteld/wordt gebruikt voor militaire-, defensie-, of nationale veiligheidsdoeleinden?"
+    question: "Is er sprake van een AI-systeem die uitsluitend in de handel wordt gebracht/in gebruik wordt gesteld/wordt gebruikt voor militaire-, defensie-, of nationale veiligheidsdoeleinden?"
     questionType: SingleChoice
     sources:
       - source: Artikel 2
         url: https://artificialintelligenceact.eu/article/2/
+      - source: Overweging 24
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e1978-1-1
     answers:
       - answer: Ja
         labels:
@@ -130,6 +132,8 @@ questions:
     sources:
       - source: Artikel 2
         url: https://artificialintelligenceact.eu/article/2/
+      - source: Overweging 22
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e1978-1-1
     answers:
       - answer: Ja
         labels:
@@ -138,7 +142,7 @@ questions:
       - answer: Nee
         nextQuestionId: "2.2"
   - questionId: "2.2"
-    question: "Is er sprake van een overheidsinstantie in een derde land of een internationale organisatie die op grond van Artikel 2 Lid 1 Binnen het toepassingsgebied van deze verordening vallen, wanneer zij AI-systemen gebruiken in het kader van internationale  samenwerking of overeenkomsten met de Europese Unie of een of meer lidstaten op het gebied van rechtshandhaving en justitie, op voorwaarde dat het land/organisatie passen waarborgen biedt?"
+    question: "Is er sprake van een overheidsinstantie in een derde land of een internationale organisatie die op grond van Artikel 2 Lid 1 binnen het toepassingsgebied van deze verordening vallen, wanneer zij AI-systemen gebruiken in het kader van internationale samenwerking of overeenkomsten met de Europese Unie of één of meer lidstaten op het gebied van rechtshandhaving en justitie, op voorwaarde dat het land/organisatie passende waarborgen biedt?"
     questionType: SingleChoice
     sources:
       - source: Artikel 2
