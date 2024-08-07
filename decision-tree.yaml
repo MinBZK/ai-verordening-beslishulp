@@ -55,7 +55,7 @@ questions:
       - answer: Ja
         nextQuestionId: "1.2"
       - answer: Nee
-        subresult: "De AI-verordening is niet van toepassing."
+        subresult: "De AI-verordening is niet van toepassing. Jouw toepassing is geen AI-systeem volgens de AI-verordening. "
         labels:
           - "AI-verordening niet van toepassing"
         nextQuestionId: "9.0"
