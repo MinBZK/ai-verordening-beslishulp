@@ -88,7 +88,7 @@ questions:
       - answer: Ja
         nextQuestionId: "1.0.2"
       - answer: Nee
-        subresult: "Er is geen sprake van een open-source model."
+        subresult: "Er is geen sprake van een open-source model." #Q: kan je hier spreken van 'model'? je komt ook bij deze vraag als je vorige subresult is 'AI-systeem voor algemene doeleinden'
         labels:
           - "geen open-source"
         nextQuestionId: "2.0"
@@ -288,7 +288,7 @@ questions:
       - answer: Nee
         nextQuestionId: "3.7"
   - questionId: "3.7"
-    question: "Zou je AI-systeem gebruikt kunnen worden  als een biometrisch systeem in de publieke ruimte voor identificatie op afstand in real-time, met het oog op de rechtshandhaving?"
+    question: "Zou je AI-systeem gebruikt kunnen worden als een biometrisch systeem in de publieke ruimte voor identificatie op afstand in real-time, met het oog op de rechtshandhaving?"
     questionType: SingleChoice
     sources:
       - source: Overweging 32 - Biometrische identifcatie op afstand in real time van natuurlijke personen in openbare ruimten voor rechthandhavingsdoeleinden
@@ -386,7 +386,7 @@ questions:
       - answer: Nee
         nextQuestionId: "5.0"
   - questionId: "4.2"
-    question: "Moet het product waarvan het AI-systeem de veiligheidscomponent vormt een conformiteits-beoordeling door een derde partij laten uitgevoeren met het oog op het in de handel brengen of in gebruik stellen van dat product op grond van de in bijlage I sectie A opgenomen harmonisatiewetgeving van de Europese Unie?"
+    question: "Moet het product waarvan het AI-systeem de veiligheidscomponent vormt een conformiteitsbeoordeling door een derde partij laten uitgevoeren met het oog op het in de handel brengen of in gebruik stellen van dat product op grond van de in bijlage I sectie A opgenomen harmonisatiewetgeving van de Europese Unie?"
     questionType: SingleChoice
     sources:
       - source: Overweging 50 - Conformiteitsbeoordelingsprocedure
@@ -774,8 +774,9 @@ questions:
 
   # ### Buiten scope AI-verordening
   - questionId: "9.0"
-    question: "De AI-verordening is niet van toepassing. Gebruik je een algoritme met impact (rechtsgevolgen voor de burger of classificatie van burgers of groepen)? Volgens categorie B van de handreiking van het algoritmeregister"
-    questionType: SingleChoice
+    question: "De AI-verordening is niet van toepassing. Wordt jouw algoritme gebruikt in processen met impact op betrokkenen (burger of organisatie):\n
+      - Het proces waarin het algoritme wordt gebruikt heeft directe rechtsgevolgen voor betrokkenen. Denk aan opleggen van boete of weigeren subsidie.
+      - Het proces waarin het algoritme zich bevindt, draagt bij aan hoe de overheid een betrokkene of groep categoriseert of benadert. Denk aan profilering of risico-indicatie voor controle. 
     answers:
       - answer: Ja
         nextQuestionId: "9.1"
