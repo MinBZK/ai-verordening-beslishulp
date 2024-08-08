@@ -45,7 +45,7 @@ questions:
         nextQuestionId: "1.0.1"
       - answer: Nee
         nextQuestionId: "1.1"
-  - questionId: "1.1"
+  - questionId: "1.1" # dit klopt niet 
     question: "Kan de AI een groot scala aan onderscheidende taken uitvoeren?"
     questionType: SingleChoice
     sources:
@@ -811,7 +811,7 @@ conclusions:
       - source: Artikel 5
         url: https://artificialintelligenceact.eu/article/5/
   - conclusionId: "12.1"
-    conclusion: "Je bent een aanbieder van een hoog risico AI-systeem (voor algemene doeleinden)."
+    conclusion: "Je bent een aanbieder van een hoog risico AI-systeem (voor algemene doeleinden)." # dit moeten twee losse conclusies worden
     obligation: "Art. 16:\n
       - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2\n
       - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres\n
@@ -829,7 +829,7 @@ conclusions:
       - source: Artikel 16
         url: https://artificialintelligenceact.eu/article/16/
   - conclusionId: "12.2"
-    conclusion: "Je bent aanbieder en gebruiksverantwoordelijke van een hoog risico AI-systeem (voor algemene doeleinden)."
+    conclusion: "Je bent aanbieder en gebruiksverantwoordelijke van een hoog risico AI-systeem (voor algemene doeleinden)." # deze opsplitsen
     obligation: "Art. 16:\n
       - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2\n
       - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres\n
