@@ -3,7 +3,7 @@ name: Decision Tree
 questions:
   ### check definitie algoritme
   - questionId: "0"
-    question: "Is uw toepassing een set van regels en instructies die een computer uitvoert om een probleem op te lossen of een vraag te beantwoorden?"
+    question: "Is jouw toepassing een set van regels en instructies die een computer uitvoert om een probleem op te lossen of een vraag te beantwoorden?"
     questionType: SingleChoice
     sources:
       - source: Handreiking Algoritmeregister
@@ -23,7 +23,7 @@ questions:
 
   ### check GPAI model: deze vraag komt voor AI-systeem, omdat een GPAI model niet onder AI-systeem valt (zie overweging 97)
   - questionId: "1.0"
-    question: "Is uw algoritme een AI-model, ook wanneer het is getraind met een grote hoeveelheid data met behulp van self-supervision op grote schaal, dat een aanzienlijk algemeen karakter vertoont en in staat is op competente wijze een breed scala aan verschillende taken uit te voeren, ongeacht de wijze waarop het model in de handel wordt gebracht, en dat kan worden geïntegreerd in een verscheidenheid aan systemen verder in de AI-waardeketen of toepassingen verder in de AI-waardeketen, met uitzondering van AI-modellen die worden gebruikt voor onderzoek, ontwikkeling of prototypingactiviteiten alvorens zij in de handel worden gebracht?"
+    question: "Is jouw algoritme een AI-model, ook wanneer het is getraind met een grote hoeveelheid data met behulp van self-supervision op grote schaal, dat een aanzienlijk algemeen karakter vertoont en in staat is op competente wijze een breed scala aan verschillende taken uit te voeren, ongeacht de wijze waarop het model in de handel wordt gebracht, en dat kan worden geïntegreerd in een verscheidenheid aan systemen verder in de AI-waardeketen of toepassingen verder in de AI-waardeketen, met uitzondering van AI-modellen die worden gebruikt voor onderzoek, ontwikkeling of prototypingactiviteiten alvorens zij in de handel worden gebracht?"
     questionType: SingleChoice
     sources:
       - source: Artikel 3 - Definities
@@ -106,7 +106,7 @@ questions:
 
   ### check of AI-verordening van toepassing is of uitzonderingsgrond
   - questionId: "2.0"
-    question: "We gaan nu bepalen of de toepassing binnen de reikwijdte van de AI-verordening valt. Valt uw toepassing onder een van de volgende uitzonderingen? \n
+    question: "We gaan nu bepalen of de toepassing binnen de reikwijdte van de AI-verordening valt. Valt jouw toepassing onder een van de volgende uitzonderingen? \n
           - AI-systemen wanneer en in zover die uitsluitend in de handel worden gebracht, in gebruik worden gesteld of, al dan niet gewijzigd, worden gebruikt voor militaire, defensie- of nationale veiligheidsdoeleinden \n
           - AI-systemen die niet in de Unie in de handel worden gebracht of in gebruik worden gesteld en waarvan de output in de Unie uitsluitend wordt gebruikt voor militaire, defensie- of nationale veiligheidsdoeleinden \n
           - overheidsinstanties in derde landen of internationale organisaties die binnen het toepassingsgebied van deze verordening vallen, wanneer deze instanties of organisaties AI-systemen gebruiken in het kader van internationale samenwerking of overeenkomsten met de Unie of een of meer lidstaten op het gebied van rechtshandhaving en justitie (op voorwaarde dat een dergelijk derde land of internationale organisatie passende waarborgen biedt met betrekking tot de bescherming van de grondrechten en fundamentele vrijheden van natuurlijke personen) \n
@@ -133,7 +133,7 @@ questions:
 
   ### check of het een verboden AI-systeem is
   - questionId: "3.0"
-    question: "We gaan bepalen of je AI-systeem valt onder een van de verboden systemen in artikel 5 van de AI-verordening. Zou je AI-systeem gebruik kunnen gaan maken van subliminale technieken om mensen onbewust of bewust kunnen manipuleren, waardoor ze beslissingen nemen die ze anders niet zouden hebben genomen?"
+    question: "We gaan bepalen of jouw AI-systeem valt onder een van de verboden systemen in artikel 5 van de AI-verordening. Zou jouw AI-systeem gebruik kunnen gaan maken van subliminale technieken om mensen onbewust of bewust kunnen manipuleren, waardoor ze beslissingen nemen die ze anders niet zouden hebben genomen?"
     questionType: SingleChoice
     sources:
       - source: Artikel 5 - Verboden AI-praktijken
@@ -147,7 +147,7 @@ questions:
       - answer: Nee
         nextQuestionId: "3.1"
   - questionId: "3.1"
-    question: "Zou je AI-systeem gebruik kunnen gaan maken van kwetsbaarheden van individuen of specifieke groepen, zoals leeftijd, handicaps of sociale/economische omstandigheden, om het gedrag van die personen aanzienlijk te verstoren, wat kan leiden tot aanzienlijke schade bij henzelf of anderen?"
+    question: "Zou jouw AI-systeem gebruik kunnen gaan maken van kwetsbaarheden van individuen of specifieke groepen, zoals leeftijd, handicaps of sociale/economische omstandigheden, om het gedrag van die personen aanzienlijk te verstoren, wat kan leiden tot aanzienlijke schade bij henzelf of anderen?"
     questionType: SingleChoice
     sources:
       - source: Artikel 5 - Verboden AI-praktijken
@@ -337,7 +337,7 @@ questions:
 
   ### check op hoog risico AI-verordening (Bijlage III)
   - questionId: "5.0"
-    question: " Is je AI-systeem bedoeld voor een van de volgende doeleinden:\n
+    question: "Is je AI-systeem bedoeld voor een van de volgende doeleinden:\n
       - Biometrische identificatie op afstand\n
       - Biometrische categorisering op basis van gevoelige of beschermde eigenschappen of kenmerken, of op basis van wat uit die eigenschappen of kenmerken wordt afgeleid\n
       - Biometrisch systeem voor emotieherkenning"
@@ -471,9 +471,7 @@ questions:
           - nextQuestionId: "6.0"
             if: '"AI-systeem voor algemene doeleinden" in labels'
           - nextQuestionId: "7.0"
-            if: '"geen open-source" in labels && "AI-systeem" in labels'
-          - nextQuestionId: "8.0"
-            if: '"open-source" in labels && "AI-systeem" in labels'
+            if: '"AI-systeem" in labels'
 
   ### check op uitzonderingen hoog risico EU AI-verordening (bijlage III - toepassingsgebieden)
   - questionId: "5.1.0"
@@ -494,7 +492,7 @@ questions:
         subresult: "Je systeem valt niet onder een van de uitzonderingen. Het blijft beschouwd als een hoog risico AI systeem."
         labels:
           - "hoog-risico AI"
-        nextQuestionId: "8.0"
+        nextQuestionId: "7.0"
   - questionId: "5.1.1"
     question: "Voert het AI-systeem profilering van natuurlijke personen uit? Bij profilering is er altijd sprake van een hoog risico."
     questionType: SingleChoice
@@ -505,7 +503,7 @@ questions:
         subresult: "Je AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten."
         labels:
           - "hoog-risico AI"
-        nextQuestionId: "8.0"
+        nextQuestionId: "7.0"
       - answer: Nee
         subresult: "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is. Het kan echter zijn dat het wel aan bepaalde transparantieverplichtingen moet voldoen."
         labels:
@@ -514,9 +512,8 @@ questions:
           - nextQuestionId: "6.0"
             if: '"AI-systeem voor algemene doeleinden" in labels'
           - nextQuestionId: "7.0"
-            if: '"geen open-source" in labels && "AI-systeem" in labels'
-          - nextQuestionId: "8.0"
-            if: '"open-source" in labels && "AI-systeem" in labels'
+            if: '"AI-systeem" in labels'
+
 
   ### check op systeem risico (alleen voor AI-systemen/modellen voor algemene doeleinden)
   - questionId: "6.0"
@@ -534,25 +531,17 @@ questions:
       - source: Overweging 111 - Classificatie systeemrisico
     answers:
       - answer: Ja
-        subresult: "Er is sprake van een systeemrisico. Afhankelijk van de vorige antwoorden gaan we nu checken of er ook sprake is van een transparantierisico, of van welke entiteit sprake is."
+        subresult: "Er is sprake van een systeemrisico. We gaan nu bepalen of er ook sprake is van een transparantierisico."
         labels:
           - "systeemrisico"
-        redirects:
-          - nextQuestionId: "7.0"
-            if: '"geen open-source" in labels' #Dit moet nog aangepast worden waarschijnlijk, to do check
-          - nextQuestionId: "8.0"
-            if: '"open-source" in labels'
+        nextQuestionId: "7.0"
       - answer: Nee
-        subresult: "Er is geen sprake van een systeemrisico. Afhankelijk van de vorige antwoorden gaan we nu checken of er sprake is van een transparantierisico, of van welke entiteit sprake is."
+        subresult: "Er is geen sprake van een systeemrisico. We gaan nu bepalen of er ook sprake is van een transparantierisico."
         labels:
           - "geen systeemrisico"
-        redirects:
-          - nextQuestionId: "7.0"
-            if: '"geen open-source" in labels'
-          - nextQuestionId: "8.0"
-            if: '"open-source" in labels'
+        nextQuestionId: "7.0"
 
-  ### check op transparantie risico (alleen voor niet-open-source) #Dit klopt dus niet, moeten we nog aanpassen. Kan ook wel voor open source zie art 2 lid 12
+  ### check op transparantie risico
   - questionId: "7.0"
     question: "Is er sprake van:\n
       - AI die direct communiceert met mensen (zoals chatbots)?\n
@@ -560,26 +549,38 @@ questions:
       - AI die doet aan emotieherkenning of biometrische categorisatie?"
     questionType: SingleChoice
     sources:
+      - source: Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
       - source: Overweging 132 - Transparantieverplichtingen
-      - source: Overweging 134 - Transparantieverplichtingen
+      - source: Overweging 134 - Transparantieverplichtingen #artikel 2 lid 12 hier ook bij?
     answers:
       - answer: Ja
         nextQuestionId: "7.1"
       - answer: Nee
+        subresult: "Er is geen sprake van een transparantierisico."
         labels:
           - "geen transparantierisico"
-        nextQuestionId: "8.0"
+        redirects:
+          - nextQuestionId: "8.0"
+            if: ('"geen open-source" in labels' || ('"open-source" in labels' && '"hoog-risico AI" in labels')) #to do check of dit wel klopt
+          - nextQuestionId: "9.0"
+            if: ('"open-source" in labels' && '"geen hoog-risico AI" in labels' && '"niet-verboden AI" in labels') #nieuwe redirect: de AI act is niet van toepassing op open source AI systemen die niet hoog risico / verboden zijn / onder artikel 50 vallen -> dus door naar vraag 9
   - questionId: "7.1"
     question: "Is er sprake van AI waarvan het bij wet is toegestaan om te gebruiken om strafbare feiten op te sporen, te voorkomen, te onderzoeken of te vervolgen?"
     questionType: SingleChoice
     sources:
-      - source: Overweging 135 - Uitzondering transparantierisico
+      - source: Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
     answers:
       - answer: Ja
         subresult: "Er is geen sprake van een transparantierisico."
         labels:
           - "geen transparantierisico"
-        nextQuestionId: "8.0"
+        redirects:
+          - nextQuestionId: "8.0"
+            if: ('"geen open-source" in labels' || ('"open-source" in labels' && '"hoog-risico AI" in labels'))
+          - nextQuestionId: "9.0"
+            if: ('"open-source" in labels' && '"geen hoog-risico AI" in labels' && '"niet-verboden AI" in labels')
       - answer: Nee
         subresult: "Er is sprake van een transparantierisico."
         labels:
@@ -637,21 +638,21 @@ questions:
           - nextConclusionId: "12.6"
             if: '"AI-systeem" in labels && "geen hoog-risico AI" in labels && "transparantierisico" in labels'
           - nextConclusionId: "12.7"
-            if: '"AI-systeem" in labels && "geen hoog-risico AI" in labels && ("geen transparantierisico" in labels || "open-source" in labels)'
+            if: '"AI-systeem" in labels && "geen hoog-risico AI" in labels && "geen transparantierisico" in labels'
           - nextConclusionId: "12.12"
             if: '"AI-systeem voor algemene doeleinden" in labels && "systeemrisico" in labels && "transparantierisico" in labels'
           - nextConclusionId: "12.13"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "geen systeemrisico" in labels && ("geen transparantierisico" in labels || "open-source" in labels)'
+            if: '"AI-systeem voor algemene doeleinden" in labels && "geen systeemrisico" in labels && "geen transparantierisico" in labels'
           - nextConclusionId: "12.14"
-            if: '"AI-systeem voor algemene doeleinden" in labels  && "systeemrisico" in labels && ("geen transparantierisico" in labels || "open-source" in labels)'
+            if: '"AI-systeem voor algemene doeleinden" in labels  && "systeemrisico" in labels && "geen transparantierisico" in labels'
           - nextConclusionId: "12.15"
             if: '"AI-systeem voor algemene doeleinden" in labels && "geen systeemrisico" in labels && "transparantierisico" in labels'
           - nextConclusionId: "12.20"
             if: '"AI-model voor algemene doeleinden" in labels && "systeemrisico" in labels && "transparantierisico" in labels'
           - nextConclusionId: "12.21"
-            if: '"AI-model voor algemene doeleinden" in labels && "geen systeemrisico" in labels && ("geen transparantierisico" in labels || "open-source" in labels)'
+            if: '"AI-model voor algemene doeleinden" in labels && "geen systeemrisico" in labels && "geen transparantierisico" in labels'
           - nextConclusionId: "12.22"
-            if: '"AI-model voor algemene doeleinden" in labels  && "systeemrisico" in labels && ("geen transparantierisico" in labels || "open-source" in labels)'
+            if: '"AI-model voor algemene doeleinden" in labels  && "systeemrisico" in labels && "geen transparantierisico" in labels'
           - nextConclusionId: "12.23"
             if: '"AI-model voor algemene doeleinden" in labels && "geen systeemrisico" in labels && "transparantierisico" in labels'
       - answer: Nee
