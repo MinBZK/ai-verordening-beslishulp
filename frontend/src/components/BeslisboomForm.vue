@@ -6,7 +6,6 @@ import { Answer, Conclusions, DecisionTree, Questions, Redirect } from '@/models
 import { storeToRefs } from 'pinia'
 import { fold } from 'fp-ts/lib/Either'
 import * as t from 'io-ts'
-import { PathReporter } from 'io-ts/PathReporter'
 
 import { useQuestionStore } from '@/stores/QuestionStore'
 
@@ -39,14 +38,20 @@ onMounted(async () => {
 
     const validationResult: t.Validation<any> = DecisionTree.decode(yamlData)
     fold(
-      () => {
+      (errors: t.Errors) => {
+        console.log('Validation errors: ' + errors.length)
+        let error_locations = []
+        for (const error of errors) {
+          console.log('error at ' + error.context.map((c) => c.key).join('.'))
+          error_locations.push(error.context.map((c) => c.key).join('.'))
+        }
         throw new Error(
-          `Could not validate data: ${PathReporter.report(validationResult).join('\n')}`
+          `Could not validate data. Problem in yaml for ${error_locations.join(', ')}`
         )
       },
       (validData: DecisionTree) => {
-        data_questions.value = validData.questions;
-        data_conclusions.value = validData.conclusions;
+        data_questions.value = validData.questions
+        data_conclusions.value = validData.conclusions
       }
       // validData is the decoded object
     )(validationResult)
@@ -69,7 +74,7 @@ const findConclusion = computed(() => {
   return data_conclusions.value.find((q) => q.conclusionId === conclusionId.value)
 })
 
-function handleNextStep(object: Answer | Redirect){
+function handleNextStep(object: Answer | Redirect) {
   if (object.nextQuestionId) {
     questionId.value = String(object.nextQuestionId)
     questionStore.setQuestionId(questionId.value)
@@ -87,14 +92,14 @@ async function givenAnswer(answer: Answer) {
       questionStore.addLabel(answer.labels[i], questionId.value) // only works if we have one label per question_id
     }
   }
-  handleNextStep(answer);
+  handleNextStep(answer)
   if (answer.redirects) {
     for (const redirect of answer.redirects) {
-      const context = {labels : questionStore.getJsonLabels()};
-      const result = await jexl.eval(redirect.if, context);
+      const context = { labels: questionStore.getJsonLabels() }
+      const result = await jexl.eval(redirect.if, context)
       if (result) {
-        handleNextStep(redirect);
-        break  // break out of the loop once one if statement is valid
+        handleNextStep(redirect)
+        break // break out of the loop once one if statement is valid
       }
     }
     // only works if statements don't contradict in the YAML
@@ -119,21 +124,26 @@ function back() {
     <DefaultLoader :loading="isLoading" />
 
     <DefaultError :error="error" />
-    <Conclusion v-if="findConclusion"
-                :conclusion="findConclusion.conclusion"
-                :obligation="findConclusion.obligation"
-                :labels="questionStore.getJsonLabels()"
-                :sources="findConclusion.sources"/>
+    <Conclusion
+      v-if="findConclusion"
+      :conclusion="findConclusion.conclusion"
+      :obligation="findConclusion.obligation"
+      :labels="questionStore.getJsonLabels()"
+      :sources="findConclusion.sources"
+    />
     <div>
       <fieldset>
         <div v-if="currentQuestion" class="ai-decisiontree-form-question">
-          <SingleQuestion :question="currentQuestion.question"
-                          :id="currentQuestion.questionId"
-                          :sources="currentQuestion.sources"/>
+          <SingleQuestion
+            :question="currentQuestion.question"
+            :id="currentQuestion.questionId"
+            :sources="currentQuestion.sources"
+          />
           <SingleAnswer
             :answers="currentQuestion.answers"
             :id="currentQuestion.questionId"
-            @answered="givenAnswer" class="relative top-5"
+            @answered="givenAnswer"
+            class="relative top-5"
           />
         </div>
       </fieldset>
