@@ -21,7 +21,7 @@ export type Answer = t.TypeOf<typeof Answer>
 
 export const Source = t.type({
   source: t.string,
-  url: t.string
+  url: t.union([t.string, t.undefined])
 })
 export type Source = t.TypeOf<typeof Source>
 

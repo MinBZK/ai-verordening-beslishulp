@@ -11,7 +11,7 @@ import { useQuestionStore } from '@/stores/QuestionStore'
 
 import SingleAnswer from '@/components/SingleAnswer.vue'
 import SingleQuestion from '@/components/SingleQuestion.vue'
-import Conclusion from '@/components/Conclusion.vue'
+import Conclusion from '@/components/ConclusionComponent.vue'
 import DefaultLoader from '@/components/DefaultLoader.vue'
 import DefaultError from '@/components/DefaultError.vue'
 
