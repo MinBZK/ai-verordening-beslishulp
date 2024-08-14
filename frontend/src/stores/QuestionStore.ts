@@ -15,17 +15,17 @@ export const useQuestionStore = defineStore('question', () => {
     localStorage.setItem('currentquestion', JSON.stringify(QuestionId.value))
   }
 
-  function getJsonLabels(){
+  function getJsonLabels() {
     const label_dict = JSON.parse(localStorage.getItem('labels') ?? '{}')
-    let label_list: string[] = []
-    Object.entries(label_dict).forEach(
-      ([_, value]) => label_list.push(String(value))
-    );
+    const label_list = Object.values(label_dict).map(String)
     return label_list
   }
 
   function addLabel(label: string, question_id: string) {
-    labels.value[question_id] = label // only works if we have one label per question_id
+    if (!labels.value[question_id]) {
+      labels.value[question_id] = []
+    }
+    labels.value[question_id].push(label)
     localStorage.setItem('labels', JSON.stringify(labels.value))
   }
 
