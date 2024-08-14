@@ -18,7 +18,7 @@ export const useQuestionStore = defineStore('question', () => {
   function getJsonLabels() {
     const label_dict = JSON.parse(localStorage.getItem('labels') ?? '{}')
     const label_list: string[] = []
-    Object.entries(label_dict).forEach(([_, value]) => {
+    const label_list = Object.values(label_dict).map(String);
       label_list.push(String(value))
     })
     return Array.from(new Set(label_list))
