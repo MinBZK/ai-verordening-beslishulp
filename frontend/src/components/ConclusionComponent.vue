@@ -31,7 +31,7 @@ import { ExclamationTriangleIcon } from '@heroicons/vue/24/outline'
           <!--Obligation section-->
           <DialogTitle as="h4" class="text-sm font-semibold leading-5 text-gray-900 relative top-5">
             Verplichtingen</DialogTitle>
-          <p class="text-sm text-gray-500 relative top-5">
+          <p style="white-space: pre-line" class="text-sm text-gray-500 relative top-5">
             {{ obligation }}
             <slot />
           </p>
