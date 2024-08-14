@@ -17,11 +17,8 @@ export const useQuestionStore = defineStore('question', () => {
 
   function getJsonLabels() {
     const label_dict = JSON.parse(localStorage.getItem('labels') ?? '{}')
-    const label_list: string[] = []
-    const label_list = Object.values(label_dict).map(String);
-      label_list.push(String(value))
-    })
-    return Array.from(new Set(label_list))
+    const label_list = Object.values(label_dict).map(String)
+    return label_list
   }
 
   function addLabel(label: string, question_id: string) {
