@@ -571,9 +571,9 @@ questions:
           - "geen transparantierisico"
         redirects:
           - nextQuestionId: "8.0"
-            if: ('"geen open-source" in labels' || ('"open-source" in labels' && '"hoog-risico AI" in labels') || ('"open-source" in labels' && '"AI-model voor algemene doeleinden" in labels')) #to do check of dit wel klopt (met Monika)
+            if: ('"geen open-source" in labels' || ('"open-source" in labels' && '"hoog-risico AI" in labels') || ('"open-source" in labels' && '"AI-model voor algemene doeleinden" in labels'))
           - nextQuestionId: "9.0"
-            if: ('"open-source" in labels' && '"geen hoog-risico AI" in labels' && '"niet-verboden AI" in labels') #nieuwe redirect: de AI act is niet van toepassing op open source AI systemen die niet hoog risico / verboden zijn / onder artikel 50 vallen -> dus door naar vraag 9
+            if: ('"open-source" in labels' && '"geen hoog-risico AI" in labels' && '"niet-verboden AI" in labels')
   - questionId: "7.1"
     question: "Is er sprake van AI waarvan het bij wet is toegestaan om te gebruiken om strafbare feiten op te sporen, te voorkomen, te onderzoeken of te vervolgen?"
     questionType: SingleChoice
@@ -1019,7 +1019,7 @@ conclusions:
       Doordat deze categorie niet genoemd wordt in de AI-verordening, gelden voor dit soort AI-technologie geen bijzondere wettelijke vereisten.
       Wel moet deze AI-technologie uiteraard voldoen aan algemene veiligheidsstandaarden."
   - conclusionId: "12.2.0"
-    conclusion: "Je bent een aanbieder van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico en er moet worden voldaan aan transparantieverplichtingen."
+    conclusion: "Je bent een aanbieder van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico en er moet worden voldaan aan transparantieverplichtingen"
     obligation: "Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden:\n
       Aanbieders van AI-modellen voor algemene doeleinden moeten: \n
       - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan \n
@@ -1035,6 +1035,7 @@ conclusions:
         gemarkeerd in een machineleesbaar formaat en detecteerbaar zijn als kunstmatig gegenereerd of gemanipuleerd. Aanbieders zorgen ervoor dat hun technische oplossingen doeltreffend, interoperabel
         robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten
         en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen.\n
+      \n
       Artikel 55 - Verplichtingen van aanbieders van AI-modellen voor algemene doeleinden met een systeemrisico: \n
       - het uitvoeren van een modelevaluatie overeenkomstig gestandaardiseerde protocollen en instrumenten die de stand van de techniek weerspiegelen, met inbegrip van het uitvoeren en documenteren van tests gericht op het ontdekken van kwetsbaarheden van het model met als doel om systeemrisico’s in kaart te brengen en te beperken\n
       - het beoordelen en beperken van mogelijke systeemrisico’s op Unieniveau, met inbegrip van de bronnen daarvan, die kunnen voortvloeien uit de ontwikkeling, het in de handel brengen of het gebruik van AI-modellen voor algemene doeleinden met een systeemrisico\n
@@ -1553,7 +1554,7 @@ conclusions:
     obligation: "Houd je aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)."
   - conclusionId: "15.1"
     conclusion: "Het is verboden om dit AI-systeem te gebruiken. Er is geen sprake van een uitzondering op de lijst van verboden AI-systemen."
-    obligation: "Het is verboden om dit AI-systeem te gebruiken." #to do: voeg deadlines toe. vanaf wanneeer verboden?
+    obligation: "Het is verboden om dit AI-systeem te gebruiken. Dit verbod gaat in op 2 februari 2025."
   - conclusionId: "15.2"
     conclusion: "Er is sprake van een uitzondering op de lijst van verboden AI-systemen."
     obligation:
