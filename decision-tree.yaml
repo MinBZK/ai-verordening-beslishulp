@@ -15,7 +15,7 @@ questions:
         subresult: "Er is sprake van een algoritme."
         labels:
           - "algoritme"
-        nextQuestionId: "1.0" #check GPAI model
+        nextQuestionId: "1.0"
       - answer: Nee
         nextConclusionId: "15.0"
         labels:
@@ -64,7 +64,9 @@ questions:
             - "AI-model voor algemene doeleinden"
         nextQuestionId: "1.0.1" #check open source
       - answer: Nee
-        nextQuestionId: "1.0.1" #check open source
+        nextQuestionId: "9.0" #check open source
+        labels:
+            - "AI verordening niet van toepassing"
 
 
   ### check of het systeem/model open-source is
@@ -135,9 +137,7 @@ questions:
       - source: Overweging 29 - gebruik van subliminale componenten en het uitbuiten van kwetsbaarheden van een persoon of specifieke groep
     answers:
       - answer: Ja
-        labels:
-          - "verboden AI"
-        nextConclusionId: "15.1"
+        nextConclusionId: "3.1.1"
       - answer: Nee
         nextQuestionId: "3.1"
   - questionId: "3.1"
@@ -149,9 +149,7 @@ questions:
       - source: Overweging 29 - gebruik van subliminale componenten en het uitbuiten van kwetsbaarheden van een persoon of specifieke groep
     answers:
       - answer: Ja
-        labels:
-          - "verboden AI"
-        nextConclusionId: "15.1"
+        nextConclusionId: "3.1.1"
       - answer: Nee
         nextQuestionId: "3.2"
   - questionId: "3.2"
@@ -163,9 +161,7 @@ questions:
       - source: Overweging 31 - "social scoring"
     answers:
       - answer: Ja
-        labels:
-          - "verboden AI"
-        nextConclusionId: "15.1"
+        nextConclusionId: "3.1.1"
       - answer: Nee
         nextQuestionId: "3.3"
   - questionId: "3.3"
@@ -177,9 +173,7 @@ questions:
       - source: Overweging 42 - profilering of beoordeling van persoonlijkheidskenmerken en kenmerken om crimineel gedrag te voorspellen
     answers:
       - answer: Ja
-        labels:
-          - "verboden AI"
-        nextConclusionId: "15.1"
+        nextConclusionId: "3.1.1"
       - answer: Nee
         nextQuestionId: "3.4"
   - questionId: "3.4"
@@ -191,8 +185,6 @@ questions:
       - source: Overweging 43 - niet-gerichte scraping van gezichtsopnamen van het internet of CCTV-beelden.
     answers:
       - answer: Ja
-        labels:
-          - "verboden AI"
         nextConclusionId: "15.1"
       - answer: Nee
         nextQuestionId: "3.5"
@@ -205,9 +197,7 @@ questions:
       - source: Overweging 44 - identificeren of afleiden van emoties of intenties van natuurlijke personen op basis van hun biometrische gegeven in de context van werk of onderwijs
     answers:
       - answer: Ja
-        labels:
-          - "verboden AI"
-        nextConclusionId: "12.26"
+        nextConclusionId: "3.1.1"
       - answer: Nee
         nextQuestionId: "3.6"
   - questionId: "3.6"
@@ -219,9 +209,7 @@ questions:
       - source: Overweging 32 - Biometrische identifcatie op afstand in real time van natuurlijke personen in openbare ruimten voor rechthandhavingsdoeleinden
     answers:
       - answer: Ja
-        labels:
-          - "verboden AI"
-        nextConclusionId: "12.26"
+        nextConclusionId: "3.1.1"
       - answer: Nee
         nextQuestionId: "3.7"
   - questionId: "3.7"
@@ -543,12 +531,12 @@ questions:
         subresult: "Er is sprake van een systeemrisico. We gaan nu bepalen of er ook sprake is van een transparantierisico."
         labels:
           - "systeemrisico"
-        nextQuestionId: "7.0"
+        nextQuestionId: "8.0"
       - answer: Nee
         subresult: "Er is geen sprake van een systeemrisico. We gaan nu bepalen of er ook sprake is van een transparantierisico."
         labels:
           - "geen systeemrisico"
-        nextQuestionId: "7.0"
+        nextQuestionId: "8.0"
 
   ### check op transparantie risico
   - questionId: "7.0"
@@ -567,6 +555,7 @@ questions:
         nextQuestionId: "7.1"
       - answer: Nee
         subresult: "Er is geen sprake van een transparantierisico."
+        answerComment: "Voor open-source AI-systemen en AI-systemen voor algemene doeleinden die zowel niet-hoog-risico zijn als niet onder artikel 50 (transparantieverplichting) vallen, geldt artikel 12.2: uitzondering op AI-verordenining."
         labels:
           - "geen transparantierisico"
         redirects:
@@ -583,6 +572,7 @@ questions:
     answers:
       - answer: Ja
         subresult: "Er is geen sprake van een transparantierisico."
+        answerComment: "Voor open-source AI-systemen en AI-systemen voor algemene doeleinden die zowel niet-hoog-risico zijn als niet onder artikel 50 (transparantieverplichting) vallen, geldt artikel 12.2: uitzondering op AI-verordenining."
         labels:
           - "geen transparantierisico"
         redirects:
@@ -598,7 +588,7 @@ questions:
 
   ### check op entiteit/rol: aanbieder of gebruiksverantwoordelijke + uiteindelijke doorverwijzing naar verplichtingen
   - questionId: "8.0"
-    question: "Ga je een AI-systeem of een AI-model op de markt brengen of in gebruik stellen onder eigen naam of merk, al dan niet tegen betaling?\nOf ben je een aanbieder van een AI-systeem, met inbegrip van een AI-systeem voor algemene doeleinden, waarin een AI-model is geïntegreerd, ongeacht of het AI-model door hemzelf wordt verstrekt en verticaal geïntegreerd is of door een andere entiteit wordt aangeboden op basis van contractuele betrekkingen?"
+    question: "Ga je een AI-systeem of een AI-model (laten) ontwikkelen en vervolgens op de markt brengen of in gebruik stellen onder eigen naam of merk, al dan niet tegen betaling?"
     questionType: SingleChoice
     answers:
       - answer: Ja
@@ -755,7 +745,8 @@ questions:
             if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "transparantierisico" in labels && "geen systeemrisico" in labels'
           - nextConclusionId: "13.1.3"
             if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "geen transparantierisico" in labels && "geen systeemrisico" in labels'
-  # ### Buiten scope AI-verordening
+
+### Buiten scope AI-verordening
   - questionId: "9.0"
     question: "De AI-verordening is niet van toepassing. Gebruik je een algoritme met impact (rechtsgevolgen voor de burger of classificatie van burgers of groepen)? Volgens categorie B van de handreiking van het Algoritmeregister?"
     questionType: SingleChoice
