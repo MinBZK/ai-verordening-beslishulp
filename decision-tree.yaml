@@ -1538,7 +1538,7 @@ conclusions:
     obligation: "Houd je aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)."
   - conclusionId: "15.1"
     conclusion: "Het is verboden om dit AI-systeem te gebruiken. Er is geen sprake van een uitzondering op de lijst van verboden AI-systemen."
-    obligation: "Het is verboden om dit AI-systeem te gebruiken. Dit verbod gaat in op 2 februari 2025."
+    obligation: "Het is verboden om dit AI-systeem te gebruiken. Dit verbod gaat in op 1 februari 2025."
   - conclusionId: "15.2"
     conclusion: "Er is sprake van een uitzondering op de lijst van verboden AI-systemen."
     obligation:
