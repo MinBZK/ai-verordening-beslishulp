@@ -688,7 +688,7 @@ questions:
             if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "transparantierisico" in labels'
           - nextConclusionId: "13.1.3"
             if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "geen transparantierisico" in labels'
-            
+
   #### Buiten scope AI-verordening
   - questionId: "9.0"
     question: "De AI-verordening is niet van toepassing. Gebruik je een algoritme met impact (rechtsgevolgen voor de burger of classificatie van burgers of groepen)? Volgens categorie B van de handreiking van het Algoritmeregister?"
@@ -720,7 +720,7 @@ questions:
         labels:
           - "impactvol"
 
-### NIEUWE CONCLUSIES ####
+### Conclusies
 conclusions:
 ###Conclusies 12.0.1 tm 12.2.3 voor aanbieders
   - conclusionId: "12.0.1"
@@ -1189,7 +1189,7 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e4350-1-1
       - source: Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
-      - source: Artikel 51 - Classificatie van AI-modellen voor algemene doeleinden als AI-modellen voor algemene doeleinden met een systeemrisico #vanuit het systeemrisico gelden er geen verplichtingen voor gebruiksverantwoordelijken. TO DO check of dit klopt.
+      - source: Artikel 51 - Classificatie van AI-modellen voor algemene doeleinden als AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5489-1-1
   - conclusionId: "13.1.1"
     conclusion: "Je bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem voor algemene doeleinden. Er is sprake van een systeemrisico."
@@ -1285,7 +1285,7 @@ conclusions:
       Doordat deze categorie niet genoemd wordt in de AI-verordening, gelden voor dit soort AI-technologie geen bijzondere wettelijke vereisten.
       Wel moet deze AI-technologie uiteraard voldoen aan algemene veiligheidsstandaarden."
   - conclusionId: "13.2.0"
-    conclusion: "Je bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico en er moet worden voldaan aan transparantieverplichtingen." #TO DO check of transparantieverplichtingen hier wel gelden (systeem ipv model)
+    conclusion: "Je bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico en er moet worden voldaan aan transparantieverplichtingen."
     obligation: "Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen: \n
       - gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680, indien van toepassing \n
       - gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent genereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief, satirisch, fictief of analoog werk of programma, zijn de transparantieverplichtingen beperkt tot de openbaarmaking van het bestaan van dergelijke gegenereerde of bewerkte content op een passende wijze die de weergave of het genot van het werk niet belemmert."
@@ -1296,7 +1296,7 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5489-1-1
   - conclusionId: "13.2.1"
     conclusion: "Je bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico."
-    obligation: Als gebruiksverantwoordelijke van een AI-model voor algemene doeleinden gelden er geen verplichtingen vanuit het systeemrisico. #TO DO CHECK OF DIT KLOPT
+    obligation: Als gebruiksverantwoordelijke van een AI-model voor algemene doeleinden gelden er geen verplichtingen vanuit het systeemrisico.
     sources:
       - source: Artikel 51 - Classificatie van AI-modellen voor algemene doeleinden als AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5489-1-1
