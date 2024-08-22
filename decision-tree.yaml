@@ -272,11 +272,7 @@ questions:
         subresult: "Het AI-systeem wordt beschouwd als een hoog-risico AI systeem en moet voldoen aan bepaalde verplichtingen/vereisten. Bij de volgende vragen gaan we bepalen van welke entiteit/rol sprake is om erachter te komen welke vereisten van toepassing zijn."
         labels:
           - "hoog-risico AI"
-        redirects:
-          - nextQuestionId: "6.0"
-            if: '"AI-systeem voor algemene doeleinden" in labels'
-          - nextQuestionId: "7.0"
-            if: '"AI-systeem" in labels'
+        nextQuestionId: "7.0"
       - answer: Nee
         nextQuestionId: "4.1"
 
@@ -317,11 +313,7 @@ questions:
         subresult: Het AI-systeem wordt beschouwd als een hoog-risico AI systeem en moet voldoen aan bepaalde verplichtingen/vereisten. Bij de volgende vragen gaan we bepalen van welke entiteit/rol sprake is om erachter te komen welke vereisten van toepassing zijn.
         labels:
           - "hoog-risico AI"
-        redirects:
-          - nextQuestionId: "6.0"
-            if: '"AI-systeem voor algemene doeleinden" in labels'
-          - nextQuestionId: "7.0"
-            if: '"AI-systeem" in labels'
+        nextQuestionId: "7.0"
       - answer: Nee
         nextQuestionId: "5.0"
 
@@ -457,11 +449,7 @@ questions:
         subresult: "Het blijkt dat je AI-systeem niet verboden is en geen hoog risico AI-systeem is. Het kan echter zijn dat het wel aan bepaalde transparantieverplichtingen moet voldoen."
         labels:
           - "geen hoog-risico AI"
-        redirects:
-          - nextQuestionId: "6.0"
-            if: '"AI-systeem voor algemene doeleinden" in labels'
-          - nextQuestionId: "7.0"
-            if: '"AI-systeem" in labels'
+        nextQuestionId: "7.0"
 
   ### check op uitzonderingen hoog risico EU AI-verordening (bijlage III - toepassingsgebieden)
   - questionId: "5.1.0"
@@ -485,11 +473,7 @@ questions:
         subresult: "Je systeem valt niet onder een van de uitzonderingen. Het blijft beschouwd als een hoog risico AI systeem."
         labels:
           - "hoog-risico AI"
-        redirects:
-          - nextQuestionId: "6.0"
-            if: '"AI-systeem voor algemene doeleinden" in labels'
-          - nextQuestionId: "7.0"
-            if: '"AI-systeem" in labels'
+        nextQuestionId: "7.0"
   - questionId: "5.1.1"
     question: "Voert het AI-systeem profilering van natuurlijke personen uit? Bij profilering is er altijd sprake van een hoog risico."
     questionType: SingleChoice
@@ -505,12 +489,7 @@ questions:
         subresult: "Het is mogelijk dat je AI-systeem toch geen hoog-risico systeem is. Het kan echter zijn dat het wel aan bepaalde transparantieverplichtingen moet voldoen."
         labels:
           - "geen hoog-risico AI"
-        redirects:
-          - nextQuestionId: "6.0"
-            if: '"AI-systeem voor algemene doeleinden" in labels'
-          - nextQuestionId: "7.0"
-            if: '"AI-systeem" in labels'
-
+        nextQuestionId: "7.0"
 
   ### check op systeem risico (alleen voor AI-systemen/modellen voor algemene doeleinden)
   - questionId: "6.0"
@@ -604,30 +583,18 @@ questions:
             if: '"AI-systeem" in labels && "geen hoog-risico AI" in labels && "transparantierisico" in labels'
           - nextConclusionId: "12.0.4"
             if: '"AI-systeem" in labels && "geen hoog-risico AI" in labels && "geen transparantierisico" in labels'
-          - nextConclusionId: "12.1.0"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "transparantierisico" in labels && "systeemrisico" in labels'
-          - nextConclusionId: "12.1.1"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "geen transparantierisico" in labels && "systeemrisico" in labels'
           - nextConclusionId: "12.1.2"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "transparantierisico" in labels && "geen systeemrisico" in labels'
+            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "transparantierisico" in labels'
           - nextConclusionId: "12.1.3"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "geen transparantierisico" in labels && "geen systeemrisico" in labels'
-          - nextConclusionId: "12.1.4"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels && "transparantierisico" in labels && "systeemrisico" in labels'
-          - nextConclusionId: "12.1.5"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels && "geen transparantierisico" in labels && "systeemrisico" in labels'
+            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "geen transparantierisico" in labels'
           - nextConclusionId: "12.1.6"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels && "transparantierisico" in labels && "geen systeemrisico" in labels'
+            if: '"AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels && "transparantierisico" in labels'
           - nextConclusionId: "12.1.7"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels && "geen transparantierisico" in labels && "geen systeemrisico" in labels'
-          - nextConclusionId: "12.2.0"
-            if: '"AI-model voor algemene doeleinden" in labels && "transparantierisico" in labels && "systeemrisico" in labels' #might not exist, need to check
+            if: '"AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels && "geen transparantierisico" in labels'
           - nextConclusionId: "12.2.1"
-            if: '"AI-model voor algemene doeleinden" in labels && "geen transparantierisico" in labels && "systeemrisico" in labels'
-          - nextConclusionId: "12.2.2"
-            if: '"AI-model voor algemene doeleinden" in labels && "transparantierisico" in labels && "geen systeemrisico" in labels' #might not exist, need to check
+            if: '"AI-model voor algemene doeleinden" in labels && "systeemrisico" in labels'
           - nextConclusionId: "12.2.3"
-            if: '"AI-model voor algemene doeleinden" in labels && "geen transparantierisico" in labels && "geen systeemrisico" in labels'
+            if: '"AI-model voor algemene doeleinden" in labels && "geen systeemrisico" in labels'
       - answer: Nee
         subresult: "Je bent geen aanbieder. We gaan kijken of je mogelijk een andere rol hebt."
         nextQuestionId: "8.1"
@@ -648,22 +615,14 @@ questions:
             if: '"AI-systeem" in labels && "geen hoog-risico AI" in labels && "transparantierisico" in labels'
           - nextConclusionId: "13.0.4"
             if: '"AI-systeem" in labels && "geen hoog-risico AI" in labels && "geen transparantierisico" in labels'
-          - nextConclusionId: "13.1.4"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels && "transparantierisico" in labels && "systeemrisico" in labels'
-          - nextConclusionId: "13.1.5"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels && "geen transparantierisico" in labels && "systeemrisico" in labels'
           - nextConclusionId: "13.1.6"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels && "transparantierisico" in labels && "geen systeemrisico" in labels'
+            if: '"AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels && "transparantierisico" in labels'
           - nextConclusionId: "13.1.7"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels && "geen transparantierisico" in labels && "geen systeemrisico" in labels'
-          - nextConclusionId: "13.2.0"
-            if: '"AI-model voor algemene doeleinden" in labels && "transparantierisico" in labels && "systeemrisico" in labels' #might not exist, need to check
+            if: '"AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels && "geen transparantierisico" in labels'
           - nextConclusionId: "13.2.1"
-            if: '"AI-model voor algemene doeleinden" in labels && "geen transparantierisico" in labels && "systeemrisico" in labels'
-          - nextConclusionId: "13.2.2"
-            if: '"AI-model voor algemene doeleinden" in labels && "transparantierisico" in labels && "geen systeemrisico" in labels' #might not exist, need to check
+            if: '"AI-model voor algemene doeleinden" in labels && "systeemrisico" in labels'
           - nextConclusionId: "13.2.3"
-            if: '"AI-model voor algemene doeleinden" in labels && "geen transparantierisico" in labels && "geen systeemrisico" in labels'
+            if: '"AI-model voor algemene doeleinden" in labels && "geen systeemrisico" in labels'
       - answer: Nee
         nextConclusionId: "15.7"
   - questionId: "8.2"
@@ -678,14 +637,10 @@ questions:
             if: '"AI-systeem" in labels && "hoog-risico AI" in labels && "transparantierisico" in labels'
           - nextConclusionId: "14.0.2"
             if: '"AI-systeem" in labels && "hoog-risico AI" in labels && "geen transparantierisico" in labels'
-          - nextConclusionId: "14.0.3"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "transparantierisico" in labels && "systeemrisico" in labels'
-          - nextConclusionId: "14.0.4"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "geen transparantierisico" in labels && "systeemrisico" in labels'
           - nextConclusionId: "14.0.5"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "transparantierisico" in labels && "geen systeemrisico" in labels'
+            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "transparantierisico" in labels'
           - nextConclusionId: "14.0.6"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "geen transparantierisico" in labels && "geen systeemrisico" in labels'
+            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "geen transparantierisico" in labels'
       - answer: Nee
         nextQuestionId: "8.3"
   - questionId: "8.3"
@@ -700,14 +655,10 @@ questions:
             if: '"AI-systeem" in labels && "hoog-risico AI" in labels && "transparantierisico" in labels'
           - nextConclusionId: "14.0.2"
             if: '"AI-systeem" in labels && "hoog-risico AI" in labels && "geen transparantierisico" in labels'
-          - nextConclusionId: "14.0.3"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "transparantierisico" in labels && "systeemrisico" in labels'
-          - nextConclusionId: "14.0.4"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "geen transparantierisico" in labels && "systeemrisico" in labels'
           - nextConclusionId: "14.0.5"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "transparantierisico" in labels && "geen systeemrisico" in labels'
+            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "transparantierisico" in labels'
           - nextConclusionId: "14.0.6"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "geen transparantierisico" in labels && "geen systeemrisico" in labels'
+            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "geen transparantierisico" in labels'
       - answer: Nee
         nextQuestionId: "8.4"
   - questionId: "8.4"
@@ -723,30 +674,22 @@ questions:
             if: '"AI-systeem" in labels && "hoog-risico AI" in labels && "transparantierisico" in labels'
           - nextConclusionId: "14.0.2"
             if: '"AI-systeem" in labels && "hoog-risico AI" in labels && "geen transparantierisico" in labels'
-          - nextConclusionId: "14.0.3"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "transparantierisico" in labels && "systeemrisico" in labels'
-          - nextConclusionId: "14.0.4"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "geen transparantierisico" in labels && "systeemrisico" in labels'
           - nextConclusionId: "14.0.5"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "transparantierisico" in labels && "geen systeemrisico" in labels'
+            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "transparantierisico" in labels'
           - nextConclusionId: "14.0.6"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "geen transparantierisico" in labels && "geen systeemrisico" in labels'
+            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "geen transparantierisico" in labels'
       - answer: Nee
         redirects:
           - nextConclusionId: "13.0.1"
             if: '"AI-systeem" in labels && "hoog-risico AI" in labels && "transparantierisico" in labels'
           - nextConclusionId: "13.0.2"
             if: '"AI-systeem" in labels && "hoog-risico AI" in labels && "geen transparantierisico" in labels'
-          - nextConclusionId: "13.1.0"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "transparantierisico" in labels && "systeemrisico" in labels'
-          - nextConclusionId: "13.1.1"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "geen transparantierisico" in labels && "systeemrisico" in labels'
           - nextConclusionId: "13.1.2"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "transparantierisico" in labels && "geen systeemrisico" in labels'
+            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "transparantierisico" in labels'
           - nextConclusionId: "13.1.3"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "geen transparantierisico" in labels && "geen systeemrisico" in labels'
+            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "geen transparantierisico" in labels'
 
-### Buiten scope AI-verordening
+  #### Buiten scope AI-verordening
   - questionId: "9.0"
     question: "De AI-verordening is niet van toepassing. Gebruik je een algoritme met impact (rechtsgevolgen voor de burger of classificatie van burgers of groepen)? Volgens categorie B van de handreiking van het Algoritmeregister?"
     questionType: SingleChoice
@@ -777,11 +720,11 @@ questions:
         labels:
           - "impactvol"
 
-### NIEUWE CONCLUSIES ####
+### Conclusies
 conclusions:
 ###Conclusies 12.0.1 tm 12.2.3 voor aanbieders
   - conclusionId: "12.0.1"
-    conclusion: "Je bent een aanbieder van een hoog-risico AI-systeem. Er moet worden voldaan aan transparantieverplichtingen. "
+    conclusion: "Je bent een aanbieder van een hoog-risico AI-systeem. Er moet worden voldaan aan transparantieverplichtingen."
     obligation: "Artikel 16 - Verplichtingen van aanbieders van AI-systemen met een hoog risico: \n
           - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2\n
           - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres\n
@@ -804,6 +747,7 @@ conclusions:
             gemarkeerd in een machineleesbaar formaat en detecteerbaar zijn als kunstmatig gegenereerd of gemanipuleerd. Aanbieders zorgen ervoor dat hun technische oplossingen doeltreffend, interoperabel
             robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten
             en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen."
+
     sources:
       - source: Artikel 16 - Verplichtingen van aanbieders van AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e3823-1-1
@@ -1245,7 +1189,7 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e4350-1-1
       - source: Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
-      - source: Artikel 51 - Classificatie van AI-modellen voor algemene doeleinden als AI-modellen voor algemene doeleinden met een systeemrisico #vanuit het systeemrisico gelden er geen verplichtingen voor gebruiksverantwoordelijken. TO DO check of dit klopt.
+      - source: Artikel 51 - Classificatie van AI-modellen voor algemene doeleinden als AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5489-1-1
   - conclusionId: "13.1.1"
     conclusion: "Je bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem voor algemene doeleinden. Er is sprake van een systeemrisico."
@@ -1336,11 +1280,12 @@ conclusions:
       - source: Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
   - conclusionId: "13.1.7"
-    conclusion: "Je bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem voor algemene doeleinden."
-    obligation: "Er is geen sprake van een hoog risico. Dit betekent dat het AI-systeem niet in de risicovolle categorieen van de AI-verordening valt. \n
-                Wel moet deze AI-technologie uiteraard voldoen aan algemene veiligheidsstandaarden."
-  - conclusionId: "13.2.0" #TO DO CHECK INHOUD
-    conclusion: "Je bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico en er moet worden voldaan aan transparantieverplichtingen." #TO DO check of transparantieverplichtingen hier wel gelden (systeem ipv model)
+    conclusion: "Je bent een gebruiksverantwoordelijke van een laag-risico AI-systeem voor algemene doeleinden."
+    obligation: "Er is sprake van een laag risico. Dit betekent dat het AI-systeem niet in de risicovolle categorieen van de AI-verordening valt.
+      Doordat deze categorie niet genoemd wordt in de AI-verordening, gelden voor dit soort AI-technologie geen bijzondere wettelijke vereisten.
+      Wel moet deze AI-technologie uiteraard voldoen aan algemene veiligheidsstandaarden."
+  - conclusionId: "13.2.0"
+    conclusion: "Je bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico en er moet worden voldaan aan transparantieverplichtingen."
     obligation: "Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen: \n
       - gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680, indien van toepassing \n
       - gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent genereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief, satirisch, fictief of analoog werk of programma, zijn de transparantieverplichtingen beperkt tot de openbaarmaking van het bestaan van dergelijke gegenereerde of bewerkte content op een passende wijze die de weergave of het genot van het werk niet belemmert."
@@ -1351,7 +1296,7 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5489-1-1
   - conclusionId: "13.2.1"
     conclusion: "Je bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico."
-    obligation: Als gebruiksverantwoordelijke van een AI-model voor algemene doeleinden gelden er geen verplichtingen vanuit het systeemrisico. #TO DO CHECK OF DIT KLOPT
+    obligation: Als gebruiksverantwoordelijke van een AI-model voor algemene doeleinden gelden er geen verplichtingen vanuit het systeemrisico.
     sources:
       - source: Artikel 51 - Classificatie van AI-modellen voor algemene doeleinden als AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5489-1-1
@@ -1696,371 +1641,3 @@ conclusions:
   - conclusionId: "15.7"
     conclusion: "Je bent geen aanbieder en geen gebruiksverantwoordelijke. Deze beslisboom is gemaakt voor alleen deze twee rollen. Controleer nog een keer goed of één van deze rollen misschien toch op jou van toepassing is."
     obligation: "Er is geen sprake van een verplichting."
-
-
-# ### OUD: uiteindelijke resultaten: verplichtingen op grond van voorgaande antwoorden
-# conclusions:
-#   - conclusionId: "12.0"
-#     conclusion: "Er is sprake van een uitzondering op de lijst van verboden AI-systemen."
-#     obligation:
-#       "Art. 5 lid 2: Het gebruik van het systeem voor biometrische identificatie op afstand in real-time in openbare ruimeten wordt alleen toegestaan indien
-#       de rechtshandhavingsinstantie een in Artikel 27 voorziene effectbeoordeling op het gebied van de grondrechten heeft uitgevoerd en het systeem volgens Artikel 47
-#       in de EU-databank heeft geregistreerd. In naar behoren gemotiveerde spoedeisende gevallen kan echter met het gebruik van dergelijke systemen worden begonnen
-#       zonder de systemen in de EU-databank te registreren, op voorwaarde dat die registratie zonder onnodige vertraging wordt voltooid."
-#     sources:
-#       - source: Artikel 5 - Verboden AI-praktijken
-#         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2808-1-1
-#   - conclusionId: "12.1"
-#     conclusion: "Je bent een aanbieder van een hoog risico AI-systeem."
-#     obligation: "Art. 16:\n
-#       - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2\n
-#       - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres\n
-#       - aanbieders beschikken over een systeem voor kwaliteitsbeheer dat in overeenstemming is met Artikel 17 (systeem voor kwaliteitsbeheer)\n
-#       - aanbieders bewaren de in artikel 18 (bewaring van documentatie) bedoelde documentatie\n
-#       - aanbieders bewaren de in artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben\n
-#       - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld\n
-#       - aanbieders stellen een EU-conformiteitsverklaring op, in overeenstemming met Artikel 47\n
-#       - aanbieders brengen de CE-markering aan op het Ai-systeem met een hoog risico of, waneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, om aan te geven dat aan deze verordening is voldaan, overeenkomstig Artikel 48\n
-#       - aanbieders leven de registratieverplichtingen als bedoeld in Artikel 49 lid 1, na\n
-#       - aanbieders nemen de noodzakelijke corrigerende maatregelen en verstrekken de uit hoofde van Artikel 20 vereiste informatie\n
-#       - aanbieders tonen op een met redenen omkleed verzoek van een nationale bevoegde autoriteit de overeenstemming aan van het AI-systeem met een hoog risico met de eisen van afdeling 2\n
-#       - aanbieders zorgen ervoor dat het AI-systeem met een hoog risico voldoet aan de toegankelijkheidseisen overeenkomstig de Richtlijnen (EU) 2016/2102 en (EU) 2019/882."
-#     sources:
-#       - source: Artikel 16 - Verplichtingen van aanbieders van AI-systemen met een hoog risico
-#         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e3823-1-1
-#   - conclusionId: "12.1.1"
-#     conclusion: "Je bent een aanbieder van een hoog risico AI-systeem voor algemene doeleinden."
-#     obligation: "Art. 16:\n
-#       - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2\n
-# #       - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres\n
-# #       - aanbieders beschikken over een systeem voor kwaliteitsbeheer dat in overeenstemming is met Artikel 17 (systeem voor kwaliteitsbeheer)\n
-#       - aanbieders bewaren de in artikel 18 (bewaring van documentatie) bedoelde documentatie\n
-#       - aanbieders bewaren de in artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben\n
-#       - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld\n
-#       - aanbieders stellen een EU-conformiteitsverklaring op, in overeenstemming met Artikel 47\n
-#       - aanbieders brengen de CE-markering aan op het Ai-systeem met een hoog risico of, waneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, om aan te geven dat aan deze verordening is voldaan, overeenkomstig Artikel 48\n
-#       - aanbieders leven de registratieverplichtingen als bedoeld in Artikel 49 lid 1, na\n
-#       - aanbieders nemen de noodzakelijke corrigerende maatregelen en verstrekken de uit hoofde van Artikel 20 vereiste informatie\n
-#       - aanbieders tonen op een met redenen omkleed verzoek van een nationale bevoegde autoriteit de overeenstemming aan van het AI-systeem met een hoog risico met de eisen van afdeling 2\n
-#       - aanbieders zorgen ervoor dat het AI-systeem met een hoog risico voldoet aan de toegankelijkheidseisen overeenkomstig de Richtlijnen (EU) 2016/2102 en (EU) 2019/882."
-#     sources:
-#       - source: Artikel 16 - Verplichtingen van aanbieders van AI-systemen met een hoog risico
-#         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e3823-1-1
-#   - conclusionId: "12.2"
-#     conclusion: "Je bent aanbieder en gebruiksverantwoordelijke van een hoog risico AI-systeem (voor algemene doeleinden)."
-#     obligation: "Art. 16:\n
-#       - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2\n
-#       - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres\n
-#       - aanbieders beschikken over een systeem voor kwaliteitsbeheer dat in overeenstemming is met Artikel 17 (systeem voor kwaliteitsbeheer)\n
-#       - aanbieders bewaren de in artikel 18 (bewaring van documentatie) bedoelde documentatie\n
-#       - aanbieders bewaren de in artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben\n
-#       - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld\n
-#       - aanbieders stellen een EU-conformiteitsverklaring op, in overeenstemming met Artikel 47\n
-#       - aanbieders brengen de CE-markering aan op het Ai-systeem met een hoog risico of, waneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, om aan te geven dat aan deze verordening is voldaan, overeenkomstig Artikel 48\n
-#       - aanbieders leven de registratieverplichtingen als bedoeld in Artikel 49 lid 1, na\n
-#       - aanbieders nemen de noodzakelijke corrigerende maatregelen en verstrekken de uit hoofde van Artikel 20 vereiste informatie\n
-#       - aanbieders tonen op een met redenen omkleed verzoek van een nationale bevoegde autoriteit de overeenstemming aan van het AI-systeem met een hoog risico met de eisen van afdeling 2\n
-#       - aanbieders zorgen ervoor dat het AI-systeem met een hoog risico voldoet aan de toegankelijkheidseisen overeenkomstig de Richtlijnen (EU) 2016/2102 en (EU) 2019/882.\n
-#       Als gebruiksverantwoordelijke van een AI-systeem met een hoog risico moet je voldoen aan de verplichtingen van artikel 26 uit de AI-verordening:\n
-#       - Het nemen van passende technische en organisatorische maatregelen om ervoor te zorgen dat zij dergelijke systemen gebruiken in overeenstemming met de gebruiksinstructies bij de systemen\n
-#       - Toezicht houden op de werking van het systeem op basis\n
-#       - Voorafgaand aan de installatie of het gebruik van het systeem op de werkplek, de werknemersvertegenwoordigers raadplegen om overeenstemming te bereiken overeenkomstig Richtlijn 2002/14/EG en de betrokken werknemers informeren dat het systeem op hen van toepassing zal zijn\n
-#       - Samenwerken met de relevante nationale bevoegde autoriteiten bij elke actie die deze autoriteiten ondernemen in verband met het hoog risico systeem om de verordening uit te voeren\n
-#       Voor zover je controle uitoefent over het systeem moet je ook:\n
-#       - Menselijk toezicht implementeren en ervoor zorgen dat de persoon of personen die zijn aangewezen om dit toezicht te garanderen, competent, goed gekwalificeerd en opgeleid zijn en over de nodige middelen beschikken om effectief toezicht te garanderen\n
-#       - Ervoor zorgen dat relevante en passende robuustheids- en cyberbeveiligingsmaatregelen regelmatig worden gecontroleerd op effectiviteit en regelmatig worden aangepast of bijgewerkt\n
-#       - Ervoor zorgen dat de inputgegevens relevant en voldoende representatief zijn met het oog op het beoogde doel van het AI-systeem met hoog risico\n
-#       - Bewaar logbestanden die automatisch door het systeem worden gegenereerd ten minste zes maanden\n
-#       Wanneer het systeem beslissingen neemt of helpt bij de besluitvorming met betrekking tot mensen (zoals bij het aannemen van personeel of onderwijs), moet u deze mensen informeren:\n
-#       - Dat ze onderworpen zijn aan het gebruik van het AI-systeem met hoog risico\n
-#       - Over het beoogde doel van het systeem en het soort beslissingen dat het neemt\n
-#       - Over hun recht op uitleg\n
-#       Als je denkt dat het gebruik van het AI-systeem volgens de instructies de gezondheid, veiligheid of rechten van een persoon kan schaden, moet je:\n
-#       - Zonder onnodige vertraging de aanbieder of distributeur en de relevante nationale toezichthoudende autoriteiten informeren\n
-#       - Het gebruik van het systeem opschorten\n
-#       Als je een ernstig incident of een storing hebt vastgesteld, moet je:\n
-#       - Het gebruik van het AI-systeem onderbreken\n
-#       - Onmiddellijk eerst de leverancier en vervolgens de importeur of distributeur en de relevante nationale toezichthoudende autoriteiten op de hoogte stellen\n
-#       - Verplichtingen voor AI-systemen met een hoog risico zijn op basis van artikel 6 ook van toepassing op systemen die worden beschouwd als een 'veiligheidscomponent' van het type dat is opgenomen in bijlage I, deel A, en op systemen die worden beschouwd als een 'AI-systeem met hoog risico' volgens bijlage 3\n
-#       Deze categorie AI wordt toegelaten mits deze voldoen aan dwingende voorschriften en er vooraf een conformiteitsbeoordeling is uitgevoerd door de aanbieder van AI. Bij een beoordeling wordt er gekeken of de AI voldoet aan de AI-verordening en wordt er met name gelet op de beheersing van risico en de bescherming van fundamentele rechten. AI die onder deze hoge risico categorie valt dient aan strikte eisen te voldoen voordat het AI-systeem mag worden gebruikt of op de markt mag worden gebracht:\n
-#       - adequate systemen voor risicobeoordeling en \u2013beperking (Artikel 9)\n
-#       - hoge kwaliteit van de datasets die het systeem voeden om risico\u2019s en discriminerende resultaten tot een minimum te beperken (Artikel 10)\n
-#       - loggen van activiteiten om de traceerbaarheid van de resultaten te waarborgen (Artikel 11)\n
-#       - beschikbaar hebben van gedetailleerde documentatie met informatie over de AI-technologie en het doel ervan voor de autoriteiten om de naleving van de AI-act te boordelen (Artikel 12)\n
-#       - duidelijke en adequate informatie aan de eindgebruiker van AI (Artikel 13)\n
-#       - passende maatregelen voor menselijke toezicht om risico\u2019s tot een minimum te beperken (Artikel 14)\n
-#       - hoge mate van robuustheid, veiligheid en nauwkeurigheid (Artikel 15)\n
-#       Artikel 17 t/m 22 & 27 FRIA"
-#     sources:
-#       - source: Artikel 16 - Verplichtingen van aanbieders van AI-systemen met een hoog risico
-#         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e3823-1-1
-#   - conclusionId: "12.3"
-#     conclusion: "Je bent gebruiksverantwoordelijke van een hoog risico AI-systeem voor algemene doeleinden."
-#     obligation:
-#       "Als gebruiksverantwoordelijke van een AI-systeem met een hoog risico moet je voldoen aan de verplichtingen van artikel 26 uit de AI-verordening:\n
-#       - Het nemen van passende technische en organisatorische maatregelen om ervoor te zorgen dat zij dergelijke systemen gebruiken in overeenstemming met de gebruiksinstructies bij de systemen\n
-#       - Toezicht houden op de werking van het systeem op basis\n
-#       - Voorafgaand aan de installatie of het gebruik van het systeem op de werkplek, de werknemersvertegenwoordigers raadplegen om overeenstemming te bereiken overeenkomstig Richtlijn 2002/14/EG en de betrokken werknemers informeren dat het systeem op hen van toepassing zal zijn\n
-#       - Samenwerken met de relevante nationale bevoegde autoriteiten bij elke actie die deze autoriteiten ondernemen in verband met het hoog risico systeem om de verordening uit te voeren\n
-#       Voor zover je controle uitoefent over het systeem moet je ook:\n
-#       - Menselijk toezicht implementeren en ervoor zorgen dat de persoon of personen die zijn aangewezen om dit toezicht te garanderen, competent, goed gekwalificeerd en opgeleid zijn en over de nodige middelen beschikken om effectief toezicht te garanderen\n
-#       - Ervoor zorgen dat relevante en passende robuustheids- en cyberbeveiligingsmaatregelen regelmatig worden gecontroleerd op effectiviteit en regelmatig worden aangepast of bijgewerkt\n
-#       - Ervoor zorgen dat de inputgegevens relevant en voldoende representatief zijn met het oog op het beoogde doel van het AI-systeem met hoog risico\n
-#       - Bewaar logbestanden die automatisch door het systeem worden gegenereerd ten minste zes maanden\n
-#       Wanneer het systeem beslissingen neemt of helpt bij de besluitvorming met betrekking tot mensen (zoals bij het aannemen van personeel of onderwijs), moet u deze mensen informeren:\n
-#       - Dat ze onderworpen zijn aan het gebruik van het AI-systeem met hoog risico\n
-#       - Over het beoogde doel van het systeem en het soort beslissingen dat het neemt\n
-#       - Over hun recht op uitleg\n
-#       Als je denkt dat het gebruik van het AI-systeem volgens de instructies de gezondheid, veiligheid of rechten van een persoon kan schaden, moet je:\n
-#       - Zonder onnodige vertraging de aanbieder of distributeur en de relevante nationale toezichthoudende autoriteiten informeren\n
-#       - Het gebruik van het systeem opschorten\n
-#       Als je een ernstig incident of een storing hebt vastgesteld, moet je:
-#       - Het gebruik van het AI-systeem onderbreken\n
-#       - Onmiddellijk eerst de leverancier en vervolgens de importeur of distributeur en de relevante nationale toezichthoudende autoriteiten op de hoogte stellen\n
-#       - Verplichtingen voor AI-systemen met een hoog risico zijn op basis van artikel 6 ook van toepassing op systemen die worden beschouwd als een 'veiligheidscomponent' van het type dat is opgenomen in bijlage I, deel A, en op systemen die worden beschouwd als een 'AI-systeem met hoog risico' volgens bijlage 3\n
-#       Deze categorie AI wordt toegelaten mits deze voldoen aan dwingende voorschriften en er vooraf een conformiteitsbeoordeling is uitgevoerd door de aanbieder van AI. Bij een beoordeling wordt er gekeken of de AI voldoet aan de AI-verordening en wordt er met name gelet op de beheersing van risico en de bescherming van fundamentele rechten. AI die onder deze hoge risico categorie valt dient aan strikte eisen te voldoen voordat het AI-systeem mag worden gebruikt of op de markt mag worden gebracht:\n
-#       - adequate systemen voor risicobeoordeling en \u2013beperking (Artikel 9)\n
-#       - hoge kwaliteit van de datasets die het systeem voeden om risico\u2019s en discriminerende resultaten tot een minimum te beperken (Artikel 10)\n
-#       - loggen van activiteiten om de traceerbaarheid van de resultaten te waarborgen (Artikel 11)\n
-#       - beschikbaar hebben van gedetailleerde documentatie met informatie over de AI-technologie en het doel ervan voor de autoriteiten om de naleving van de AI-act te boordelen (Artikel 12)\n
-#       - duidelijke en adequate informatie aan de eindgebruiker van AI (Artikel 13)\n
-#       - passende maatregelen voor menselijke toezicht om risico\u2019s tot een minimum te beperken (Artikel 14)\n
-#       - hoge mate van robuustheid, veiligheid en nauwkeurigheid (Artikel 15)\n
-#       Artikel 17 t/m 22 & 27 FRIA"
-#     sources:
-#       - source: Artikel 26 - Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico
-#         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e4350-1-1
-#   - conclusionId: "12.4"
-#     conclusion: "Je bent aanbieder van een AI-systeem met transparantierisico."
-#     obligation:
-#       "Art. 50 lid 1 - aanbieders zorgen ervoor dat AI-systemen die voor directe interactie met natuurlijke personen zijn bedoeld, zodanig worden ontworpen en ontwikkeld
-#       dat de betrokken natuurlijke personen worden geinformeerd dat zij interageren met een AI-systeem, tenzij dit duidelijk is vanuit het oogpunt van een normaal geinformeerde
-#       en redelijk omzichtige en oplettende natuurlijke persoon, rekening houdend met de omstandigheden en de gebruikscontext.
-#       Art 50 lid 2 - aanbieders van (GP)AI-systemen, die synthetische audio, beeld, video- of tekstinhoud genereren, zorgen ervoor dat de outputs van het AI-systeem worden
-#       gemarkeerd in een machineleesbaar formaat en detecteerbaar zijn als kunstmatig gegenereerd of gemanipuleerd. Aanbieders zorgen ervoor dat hun technische oplossingen doeltreffend, interoperabel
-#       robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten
-#       en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen."
-#     sources:
-#       - source: Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
-#         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
-#   - conclusionId: "12.5"
-#     conclusion: "Je bent aanbieder van een laag risico AI-systeem."
-#     obligation:
-#       "Er is sprake van een laag risico. Dit betekent dat het AI-systeem niet in de risicovolle categorieen valt van de AI-verordening.
-#       Doordat deze categorie niet genoemd wordt in de AI-verordening, gelden voor dit soort AI-technologie geen bijzondere wettelijke vereisten.
-#       Wel moet deze AI-technologie uiteraard voldoen aan algemene veiligheidsstandaarden."
-#   - conclusionId: "12.6"
-#     conclusion: "Je bent gebruiksverantwoordelijke van een AI-systeem met transparantierisico."
-#     obligation:
-#       "Art. 50 lid 3 - gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke
-#       personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680,
-#       indien van toepassing.
-#       Art. 50 lid 4 - gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent gegenereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig
-#       is gegenereerd of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief,
-#       fictief of analoof werk of programma, zijn de transparantieverplichtingen van dit lid beperkt tot de openbaarmaking van het bestaan van dergelijk gegenereerde of bewerkte content op een passende wijze
-#       die de weergave of het genot van het werk niet belemmert."
-#     sources:
-#       - source: Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
-#         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
-#   - conclusionId: "12.7"
-#     conclusion: "Je bent gebruiksverantwoordelijke van een laag risico AI-systeem."
-#     obligation:
-#       "Er is sprake van een laag risico. Dit betekent dat het AI-systeem niet in de risicovolle categorieen valt van de AI-verordening.
-#       Doordat deze categorie niet genoemd wordt in de AI-verordening, gelden voor dit soort AI-technologie geen bijzondere wettelijke vereisten.
-#       Wel moet deze AI-technologie uiteraard voldoen aan algemene veiligheidsstandaarden."
-#   - conclusionId: "12.8"
-#     conclusion: "Je bent aanbieder van een AI-systeem voor algemene doeleinden met een systeemrisico en een transparantierisico."
-#     obligation:
-#       "Art. 50 lid 1 - aanbieders zorgen ervoor dat AI-systemen die voor directe interactie met natuurlijke personen zijn bedoeld, zodanig worden ontworpen en ontwikkeld
-#       dat de betrokken natuurlijke personen worden geinformeerd dat zij interageren met een AI-systeem, tenzij dit duidelijk is vanuit het oogpunt van een normaal geinformeerde
-#       en redelijk omzichtige en oplettende natuurlijke persoon, rekening houdend met de omstandigheden en de gebruikscontext.\n
-#       Art 50 lid 2 - aanbieders van (GP)AI-systemen, die synthetische audio, beeld, video- of tekstinhoud genereren, zorgen ervoor dat de outputs van het AI-systeem worden
-#       gemarkeerd in een machineleesbaar formaat en detecteerbaar zijn als kunstmatig gegenereerd of gemanipuleerd. Aanbieders zorgen ervoor dat hun technische oplossingen doeltreffend, interoperabel
-#       robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten
-#       en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen.\n
-#       Art. 53 lid (1a) - de technische documentatie van het model opstellen en up-to-date houden, inc. het trainings- en testproces en de resultaten van de evaluatie ervan.\n
-#       Art. 53 lid (1b) - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren.\n
-#       Art. 55 - systeemrisico verplichtingen\n
-#       - een modelevaluatie uitvoeren\n
-#       - mogelijke systeemrisico/u2019s op Unieniveau beoordelen en beperken, met inbegriop van de bronnen daarvan, die kunnen voortvloeien uit de ontwikkeling, het in handel brengen of het gebruik van AI-model voor algemene doeleindenlen met een systeemrisico\n
-#       - relevante informatie over ernstige incidenten en mogelijk corrigerende maatregelen bijhouden, documenteren en onverwijld rapporteren aan het AI-bureau (en in voorkomende gevallen aan de nationale bevoegde autoriteiten)\n
-#       - zorgen voor een passend niveau van cyberbeveiligingsbescherming voor het AI-model voor algemene doeleinden en de fysieke infrastructuur van het model."
-#     sources:
-#       - source: Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
-#         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
-#   - conclusionId: "12.9"
-#     conclusion:
-#       "Je bent aanbieder van een laag risico AI-systeem voor algemene doeleinden. Er is sprake van een laag risico. Dit betekent dat het AI-systeem niet in de risicovolle categorieen valt van de AI-verordening.
-#       Doordat deze categorie niet genoemd wordt in de AI-verordening, gelden voor dit soort AI-technologie geen bijzondere wettelijke vereisten."
-#     obligation: "De AI-technologie moet voldoen aan algemene veiligheidsstandaarden."
-#   - conclusionId: "12.10"
-#     conclusion: "Je bent aanbieder van een AI-systeem voor algemene doeleinden met een systeemrisico."
-#     obligation:
-#       "Art. 53 lid (1a) - de technische documentatie van het model opstellen en up-to-date houden, inc. het trainings- en testproces en de resultaten van de evaluatie ervan.\n
-#       Art. 53 lid (1b) - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren.\n
-#       Art. 55 - systeemrisico verplichtingen\n
-#       - een modelevaluatie uitvoeren\n
-#       - mogelijke systeemrisico/u2019s op Unieniveau beoordelen en beperken, met inbegriop van de bronnen daarvan, die kunnen voortvloeien uit de ontwikkeling, het in handel brengen of het gebruik van AI-model voor algemene doeleindenlen met een systeemrisico\n
-#       - relevante informatie over ernstige incidenten en mogelijk corrigerende maatregelen bijhouden, documenteren en onverwijld rapporteren aan het AI-bureau (en in voorkomende gevallen aan de nationale bevoegde autoriteiten)\n
-#       - zorgen voor een passend niveau van cyberbeveiligingsbescherming voor het AI-model voor algemene doeleinden en de fysieke infrastructuur van het model."
-#     sources:
-#       - source: Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden
-#         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5576-1-1
-#   - conclusionId: "12.11"
-#     conclusion: "Je bent aanbieder van een AI-systeem voor algemene doeleinden met een transparantierisico."
-#     obligation:
-#       "Art. 50 lid 1 - aanbieders zorgen ervoor dat AI-systemen die voor directe interactie met natuurlijke personen zijn bedoeld, zodanig worden ontworpen en ontwikkeld
-#       dat de betrokken natuurlijke personen worden geinformeerd dat zij interageren met een AI-systeem, tenzij dit duidelijk is vanuit het oogpunt van een normaal geinformeerde
-#       en redelijk omzichtige en oplettende natuurlijke persoon, rekening houdend met de omstandigheden en de gebruikscontext.\n
-#       Art 50 lid 2 - aanbieders van (GP)AI-systemen, die synthetische audio, beeld, video- of tekstinhoud genereren, zorgen ervoor dat de outputs van het AI-systeem worden
-#       gemarkeerd in een machineleesbaar formaat en detecteerbaar zijn als kunstmatig gegenereerd of gemanipuleerd. Aanbieders zorgen ervoor dat hun technische oplossingen doeltreffend, interoperabel
-#       robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten
-#       en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen."
-#     sources:
-#       - source: Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
-#         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
-#   - conclusionId: "12.12"
-#     conclusion: "Je bent gebruiksverantwoordelijke van een AI-systeem voor algemene doeleinden met een systeemrisico en een transparantierisico."
-#     obligation: "Art. 50 - transparantierisico\n
-#       Art. 50 lid 3 - gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke
-#       personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680,
-#       indien van toepassing.\n
-#       Art. 50 lid 4 - gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent gegenereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig
-#       is gegenereerd of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief,
-#       fictief of analoof werk of programma, zijn de transparantieverplichtingen van dit lid beperkt tot de openbaarmaking van het bestaan van dergelijk gegenereerde of bewerkte content op een passende wijze
-#       die de weergave of het genot van het werk niet belemmert.\n
-#       Als gebruiksverantwoordelijke heb je geen verplichtingen vanuit het systeemrisico."
-#     sources:
-#       - source: Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
-#         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
-#   - conclusionId: "12.13"
-#     conclusion: "Je bent gebruiksverantwoordelijke van een laag risico AI-systeem voor algemene doeleinden."
-#     obligation:
-#       "Er is sprake van een laag risico. Dit betekent dat het AI-systeem niet in de risicovolle categorieen valt van de AI-verordening.
-#       Doordat deze categorie niet genoemd wordt in de AI-verordening, gelden voor dit soort AI-technologie geen bijzondere wettelijke vereisten.
-#       Wel moet deze AI-technologie uiteraard voldoen aan algemene veiligheidsstandaarden."
-#   - conclusionId: "12.14"
-#     conclusion: "Je bent gebruiksverantwoordelijke van een AI-systeem voor algemene doeleinden met een systeemrisico."
-#     obligation: "Als gebruiksverantwoordelijke heb je geen verplichtingen vanuit het systeemrisico."
-#   - conclusionId: "12.15"
-#     conclusion: "Je bent gebruiksverantwoordelijke van een AI-systeem voor algemene doeleinden met een transparantierisico."
-#     obligation:
-#       "Art. 50 lid 3 - gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke
-#       personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680,
-#       indien van toepassing.\n
-#       Art. 50 lid 4 - gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent gegenereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig
-#       is gegenereerd of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief,
-#       fictief of analoof werk of programma, zijn de transparantieverplichtingen van dit lid beperkt tot de openbaarmaking van het bestaan van dergelijk gegenereerde of bewerkte content op een passende wijze
-#       die de weergave of het genot van het werk niet belemmert."
-#     sources:
-#       - source: Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
-#         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
-#   - conclusionId: "12.16"
-#     conclusion: "Je bent aanbieder van een AI-model voor algemene doeleinden met een systeemrisico en een transparantierisico."
-#     obligation:
-#       "Art 50 lid 2 - aanbieders van (GP)AI-systemen, die synthetische audio, beeld, video- of tekstinhoud genereren, zorgen ervoor dat de outputs van het AI-systeem worden
-#       gemarkeerd in een machineleesbaar formaat en detecteerbaar zijn als kunstmatig gegenereerd of gemanipuleerd. Aanbieders zorgen ervoor dat hun technische oplossingen doeltreffend, interoperabel
-#       robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten
-#       en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen.\n
-#       Art. 53 lid (1a) - de technische documentatie van het model opstellen en up-to-date houden, inc. het trainings- en testproces en de resultaten van de evaluatie ervan.\n
-#       Art. 53 lid (1b) - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren.\n
-#       Art. 55 - systeemrisico verplichtingen\n
-#       - een modelevaluatie uitvoeren\n
-#       - mogelijke systeemrisico\u2019s op Unieniveau beoordelen en beperken, met inbegriop van de bronnen daarvan, die kunnen voortvloeien uit de ontwikkeling, het in handel brengen of het gebruik van AI-model voor algemene doeleindenlen met een systeemrisico\n
-#       - relevante informatie over ernstige incidenten en mogelijk corrigerende maatregelen bijhouden, documenteren en onverwijld rapporteren aan het AI-bureau (en in voorkomende gevallen aan de nationale bevoegde autoriteiten)\n
-#       - zorgen voor een passend niveau van cyberbeveiligingsbescherming voor het AI-model voor algemene doeleinden en de fysieke infrastructuur van het model."
-#     sources:
-#       - source: Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
-#         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
-#   - conclusionId: "12.17"
-#     conclusion: "Je bent aanbieder van een laag risico AI-model voor algemene doeleinden."
-#     obligation:
-#       "Er is sprake van een laag risico. Dit betekent dat het AI-systeem niet in de risicovolle categorieen valt van de AI-verordening.
-#       Doordat deze categorie niet genoemd wordt in de AI-verordening, gelden voor dit soort AI-technologie geen bijzondere wettelijke vereisten.
-#       Wel moet deze AI-technologie uiteraard voldoen aan algemene veiligheidsstandaarden."
-#   - conclusionId: "12.18"
-#     conclusion: "Je bent een aanbieder van een AI-model voor algemene doeleinden met een systeemrisico."
-#     obligation:
-#       "Art. 53 lid (1a) - de technische documentatie van het model opstellen en up-to-date houden, inc. het trainings- en testproces en de resultaten van de evaluatie ervan.\n
-#       Art. 53 lid (1b) - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren.\n
-#       Art. 55 - systeemrisico verplichtingen:\n
-#       - een modelevaluatie uitvoeren\n
-#       - mogelijke systeemrisico\u2019s op Unieniveau beoordelen en beperken, met inbegriop van de bronnen daarvan, die kunnen voortvloeien uit de ontwikkeling, het in handel brengen of het gebruik van AI-model voor algemene doeleindenlen met een systeemrisico.\n
-#       - relevante informatie over ernstige incidenten en mogelijk corrigerende maatregelen bijhouden, documenteren en onverwijld rapporteren aan het AI-bureau (en in voorkomende gevallen aan de nationale bevoegde autoriteiten)\n
-#       - zorgen voor een passend niveau van cyberbeveiligingsbescherming voor het AI-model voor algemene doeleinden en de fysieke infrastructuur van het model."
-#     sources:
-#       - source: Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden
-#         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5576-1-1
-#       - source: Artikel 55 - Verplichtingen van aanbieders van AI-modellen voor algemene doeleinden met een systeemrisico
-#         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5730-1-1
-#   - conclusionId: "12.19"
-#     conclusion: "Je bent aanbieder van een AI-model voor algemene doeleinden met een transparantierisico."
-#     obligation:
-#       "Art 50 lid 2 - aanbieders van AI-systemen (voor algemene doeleinden), die synthetische audio, beeld, video- of tekstinhoud genereren, zorgen ervoor dat de outputs van het AI-systeem worden
-#       gemarkeerd in een machineleesbaar formaat en detecteerbaar zijn als kunstmatig gegenereerd of gemanipuleerd. Aanbieders zorgen ervoor dat hun technische oplossingen doeltreffend, interoperabel
-#       robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten
-#       en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen.\n
-#       Art. 53 lid (1a) - de technische documentatie van het model opstellen en up-to-date houden, inc. het trainings- en testproces en de resultaten van de evaluatie ervan.\n
-#       Art. 53 lid (1b) - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren."
-#     sources:
-#       - source: Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden
-#         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5576-1-1
-#       - source: Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
-#         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
-#   - conclusionId: "12.20"
-#     conclusion: "Je bent gebruiksverantwoordelijke van een AI-model (voor algemene doeleinden) met een systeemrisico en transparantierisico."
-#     obligation:
-#       "Art. 50 lid 3 - gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke
-#       personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680,
-#       indien van toepassing.\n
-#       Art. 50 lid 4 - gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent gegenereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig
-#       is gegenereerd of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief,
-#       fictief of analoof werk of programma, zijn de transparantieverplichtingen van dit lid beperkt tot de openbaarmaking van het bestaan van dergelijk gegenereerde of bewerkte content op een passende wijze
-#       die de weergave of het genot van het werk niet belemmert.\n
-#       Als gebruiksverantwoordelijke heb je geen verplichtingen vanuit het systeemrisico."
-#     sources:
-#       - source: Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
-#         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
-#   - conclusionId: "12.21"
-#     conclusion: "Je bent gebruiksverantwoordelijke van een laag risico AI-model voor algemene doeleinden."
-#     obligation:
-#       "Er is sprake van een laag risico. Dit betekent dat het AI-systeem niet in de risicovolle categorieen valt van de AI-verordening.
-#       Doordat deze categorie niet genoemd wordt in de AI-verordening, gelden voor dit soort AI-technologie geen bijzondere wettelijke vereisten.
-#       Wel moet deze AI-technologie uiteraard voldoen aan algemene veiligheidsstandaarden."
-#   - conclusionId: "12.22"
-#     conclusion: "Je bent gebruiksverantwoordelijke van een AI-model voor algemene doeleinden met een systeemrisico."
-#     obligation: "Als gebruiksverantwoordelijke heb je geen verplichtingen vanuit het systeemrisico."
-#   - conclusionId: "12.23"
-#     conclusion: "Je bent gebruiksverantwoordelijke van een AI-model voor algemene doeleinden met een transparantierisico."
-#     obligation:
-#       "Art. 50 lid 3 - gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke
-#       personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680,
-#       indien van toepassing.\n
-#       Art. 50 lid 4 - gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent gegenereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig
-#       is gegenereerd of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief,
-#       fictief of analoof werk of programma, zijn de transparantieverplichtingen van dit lid beperkt tot de openbaarmaking van het bestaan van dergelijk gegenereerde of bewerkte content op een passende wijze
-#       die de weergave of het genot van het werk niet belemmert."
-#     sources:
-#       - source: Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
-#         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
-#   - conclusionId: "12.24"
-#     conclusion: "Je gebruikt geen algoritme. De AI-verordening is niet van toepassing."
-#     obligation: "Houd je aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)."
-#   - conclusionId: "12.25"
-#     conclusion: "Er is sprake van een uitzonderingsgrond. De AI-verordening is niet van toepassing."
-#     obligation: "Er is geen sprake van een verplichting."
-#   - conclusionId: "12.26"
-#     conclusion: "Het is verboden om dit AI-systeem te gebruiken. Er is geen sprake van een uitzondering op de lijst van verboden AI-systemen."
-#     obligation: "Het is verboden om dit AI-systeem te gebruiken." #to do: voeg deadlines toe. vanaf wanneeer verboden?
-#   - conclusionId: "12.27"
-#     conclusion: "Je bent geen aanbieder en geen gebruiksverantwoordelijke. Deze beslisboom is gemaakt voor alleen deze twee rollen. Controleer nog een keer goed of één van deze rollen misschien toch op jou van toepassing is."
-#     obligation: "Er is geen sprake van een verplichting."
-#   - conclusionId: "12.28"
-#     conclusion: "Je algoritme is niet impactvol en de AI-verordening is niet van toepassing."
-#     obligation: "Houd je aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)."
-#   - conclusionId: "12.29"
-#     conclusion: "Het betreft een algoritme met impact, maar de AI-verordening is niet van toepassing."
-#     obligation: "Omdat het een algoritme met impact betreft, dien je algoritmeregister te publiceren."
-#   - conclusionId: "12.30"
-#     conclusion: "Het betreft een algoritme met impact, maar de AI-verordening is niet van toepassing."
-#     obligation: "Je hoeft vanwege uitzonderingsgrond niet te publiceren in het register."
