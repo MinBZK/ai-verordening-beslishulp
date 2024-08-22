@@ -68,7 +68,7 @@ import { ExclamationTriangleIcon } from '@heroicons/vue/24/outline'
           <DialogTitle as="h4" class="text-sm font-semibold leading-5 text-gray-900 relative top-5">
             Contact</DialogTitle>
           <p class="text-sm text-gray-500 relative top-5">
-            Mocht je vragen of opmerkingen hebben naar aanleiding van deze beslisboom, mail dan gerust naar ai-verordening@minbzk.nl.
+            Mocht u vragen of opmerkingen hebben naar aanleiding van deze beslisboom, mail dan gerust naar ai-verordening@minbzk.nl.
             <slot />
           </p>
 
