@@ -516,7 +516,9 @@ questions:
           - nextConclusionId: "12.2.1"
             if: '"AI-model voor algemene doeleinden" in labels && "systeemrisico" in labels'
           - nextConclusionId: "12.2.3"
-            if: '"AI-model voor algemene doeleinden" in labels && "geen systeemrisico" in labels'
+            if: '"AI-model voor algemene doeleinden" in labels && "geen systeemrisico" in labels && "geen open-source" in labels'
+          - nextConclusionId: "12.2.4"
+            if: '"AI-model voor algemene doeleinden" in labels && "geen systeemrisico" in labels &&  "open-source" in labels'
       - answer: Nee
         subresult: "U bent geen aanbieder. We gaan kijken of u mogelijk een andere rol heeft."
         nextQuestionId: "8.1"
@@ -1053,6 +1055,16 @@ conclusions:
     obligation: "Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden:\n
       - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan \n
       - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren \n
+      - beleid opstellen ter naleving van het Unierecht inzake auteursrechten en naburige rechten en dan met name ter vaststelling en naleving, onder meer door middel van geavanceerde technologieën \n
+      - een voldoende gedetailleerde samenvatting opstellen en openbaar maken over de voor het trainen van het AI-model voor algemene doeleinden gebruikte content, volgens een door het AI-bureau verstrekt sjabloon.\n
+      \n
+      Let op: de verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden gelden vanaf 1 augustus 2025."
+    sources:
+      - source: Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5576-1-1
+  - conclusionId: "12.2.4"
+    conclusion: "U bent een aanbieder van een open-source AI-model voor algemene doeleinden."
+    obligation: "Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden:\n
       - beleid opstellen ter naleving van het Unierecht inzake auteursrechten en naburige rechten en dan met name ter vaststelling en naleving, onder meer door middel van geavanceerde technologieën \n
       - een voldoende gedetailleerde samenvatting opstellen en openbaar maken over de voor het trainen van het AI-model voor algemene doeleinden gebruikte content, volgens een door het AI-bureau verstrekt sjabloon.\n
       \n
