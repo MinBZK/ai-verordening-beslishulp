@@ -1,5 +1,7 @@
 # AI-act-beslisboom
 
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/MinBZK/ai-act-decisiontree/main.svg?badge_token=d3dKEK97RwC1II15_W-nng)](https://results.pre-commit.ci/latest/github/MinBZK/ai-act-decisiontree/main?badge_token=d3dKEK97RwC1II15_W-nng)
+
 Deze git repository bevat de beslisboom op basis van de AI Verordening. Het project omvat 2 onderdelen.
 
 1. De beslisboom: [decision-tree.yaml](decision-tree.yaml)
@@ -108,4 +110,19 @@ Door het volgende script te runnen, kunt u controlen of het bestand decision-tre
 
 ```sh
 ./script/validate --schema_file schemas/base.schema.json --yaml_file decision-tree.yaml
+```
+
+## Pre-commit
+
+Om pre-commit lokaal in te schakelen, voer het volgende uit:
+```sh
+pip install pre-commit
+pre-commit install
+```
+
+Bij volgende commits zullen alle hooks worden uitgevoerd.
+
+Je kunt alle hooks handmatig als volgt uitvoeren:
+```sh
+re-commit run --all-files
 ```
