@@ -1,0 +1,34 @@
+default_language_version:
+  python: python3.11
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-yaml
+      - id: check-json
+      - id: check-toml
+      - id: check-added-large-files
+      - id: check-merge-conflict
+      - id: check-toml
+      - id: detect-private-key
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.5.1
+    hooks:
+      - id: ruff
+      - id: ruff-format
+  - repo: local
+    hooks:
+    -   id: validate-schema
+        name: validate schema
+        entry: sh -c './script/validate --schema_file schemas/base.schema.json --yaml_file decision-tree.yaml'
+        language: python
+        additional_dependencies: [jsonschema, pyyaml]
+        pass_filenames: false
+        always_run: true
+
+ci:
+  autofix_prs: false
+  autofix_commit_msg: "Auto fix pre-commit.com hooks"
+  autoupdate_commit_msg: "Update .pre-commit-config.yaml"

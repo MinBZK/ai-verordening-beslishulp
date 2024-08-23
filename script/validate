@@ -10,10 +10,16 @@ from jsonschema import validate
 
 # Argument parsing
 parser = argparse.ArgumentParser()
-parser.add_argument("--schema_file", help="file location of the JSON schema file to check the YAML against",
-                    type=str)
-parser.add_argument("--yaml_file", help="file location of te YAML file to check the schema against",
-                    type=str)
+parser.add_argument(
+    "--schema_file",
+    help="file location of the JSON schema file to check the YAML against",
+    type=str,
+)
+parser.add_argument(
+    "--yaml_file",
+    help="file location of te YAML file to check the schema against",
+    type=str,
+)
 args = parser.parse_args()
 
 # Load the JSON schema
