@@ -490,6 +490,7 @@ questions:
   ### check op entiteit/rol: aanbieder of gebruiksverantwoordelijke + uiteindelijke doorverwijzing naar verplichtingen
   - questionId: "8.0"
     question: "We gaan nu bepalen wat voor rol u heeft.\n\n Gaat u een AI-systeem of een AI-model op de markt brengen of in gebruik stellen onder eigen naam of merk, al dan niet tegen betaling?"
+    questionType: SingleChoice
     answers:
       - answer: Ja
         subresult: "U bent een aanbieder volgens de AI-verordening."
@@ -651,7 +652,7 @@ questions:
 conclusions:
 ###Conclusies 12.0.1 tm 12.2.3 voor aanbieders
   - conclusionId: "12.0.1"
-    conclusion: "U bent een aanbieder van een hoog-risico AI-systeem. U moet voldoen aan transparantieverplichtingen. "
+    conclusion: "U bent een aanbieder van een hoog-risico AI-systeem. Uw AI-systeem moet voldoen aan transparantieverplichtingen. "
     obligation: "Artikel 16 - Verplichtingen van aanbieders van AI-systemen met een hoog risico: \n
           - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2\n
           - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres\n
@@ -706,7 +707,7 @@ conclusions:
       - source: Artikel 16 - Verplichtingen van aanbieders van AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e3823-1-1
   - conclusionId: "12.0.3"
-    conclusion: "U bent een aanbieder van een niet-hoog-risico AI-systeem. U moet voldoen aan transparantieverplichtingen."
+    conclusion: "U bent een aanbieder van een niet-hoog-risico AI-systeem. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen: \n
       - aanbieders zorgen ervoor dat AI-systemen die voor directe interactie met natuurlijke personen zijn bedoeld, zodanig worden ontworpen en ontwikkeld
         dat de betrokken natuurlijke personen worden geinformeerd dat zij interageren met een AI-systeem, tenzij dit duidelijk is vanuit het oogpunt van een normaal geinformeerde
@@ -724,7 +725,7 @@ conclusions:
       "Er is geen sprake van een hoog risico. Dit betekent dat het AI-systeem niet in de risicovolle categorieen van de AI-verordening valt. \n
       Wel moet deze AI-technologie uiteraard voldoen aan algemene veiligheidsstandaarden."
   - conclusionId: "12.1.0" #kan weg
-    conclusion: "U bent een aanbieder van een hoog-risico AI-systeem voor algemene doeleinden. Er is sprake van een systeemrisico en u moet voldoen aan transparantieverplichtingen."
+    conclusion: "U bent een aanbieder van een hoog-risico AI-systeem voor algemene doeleinden. Er is sprake van een systeemrisico en uw AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "Artikel 16 - Verplichtingen van aanbieders van AI-systemen met een hoog risico: \n
       - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2\n
       - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres\n
@@ -807,7 +808,7 @@ conclusions:
       - source: Artikel 55 - Verplichtingen van aanbieders van AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5730-1-1
   - conclusionId: "12.1.2"
-    conclusion: "U bent een aanbieder van een hoog-risico AI-systeem voor algemene doeleinden. U moet voldoen aan transparantieverplichtingen."
+    conclusion: "U bent een aanbieder van een hoog-risico AI-systeem voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "Artikel 16 - Verplichtingen van aanbieders van AI-systemen met een hoog risico: \n
       - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2\n
       - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres\n
@@ -883,7 +884,7 @@ conclusions:
       - source: Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5576-1-1
   - conclusionId: "12.1.4" #kan weg
-    conclusion: "U bent een aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden. Er is sprake van een systeemrisico en u moet voldoen aan transparantieverplichtingen."
+    conclusion: "U bent een aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden. Er is sprake van een systeemrisico en uw AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen: \n
       - aanbieders zorgen ervoor dat AI-systemen die voor directe interactie met natuurlijke personen zijn bedoeld, zodanig worden ontworpen en ontwikkeld
         dat de betrokken natuurlijke personen worden geinformeerd dat zij interageren met een AI-systeem, tenzij dit duidelijk is vanuit het oogpunt van een normaal geinformeerde
@@ -938,7 +939,7 @@ conclusions:
       - source: Artikel 55 - Verplichtingen van aanbieders van AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5730-1-1
   - conclusionId: "12.1.6"
-    conclusion: "U bent een aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden. U moet voldoen aan transparantieverplichtingen."
+    conclusion: "U bent een aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen: \n
       - aanbieders zorgen ervoor dat AI-systemen die voor directe interactie met natuurlijke personen zijn bedoeld, zodanig worden ontworpen en ontwikkeld
         dat de betrokken natuurlijke personen worden geinformeerd dat zij interageren met een AI-systeem, tenzij dit duidelijk is vanuit het oogpunt van een normaal geinformeerde
@@ -975,7 +976,7 @@ conclusions:
      - source: Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden
        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5576-1-1
   - conclusionId: "12.2.0" #kan weg
-    conclusion: "U bent een aanbieder van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico en u moet voldoen aan transparantieverplichtingen"
+    conclusion: "U bent een aanbieder van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico en uw AI-systeem moet voldoen aan transparantieverplichtingen"
     obligation: "Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden:\n
       Aanbieders van AI-modellen voor algemene doeleinden moeten: \n
       - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan \n
@@ -1027,7 +1028,7 @@ conclusions:
       - source: Artikel 55 - Verplichtingen van aanbieders van AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5730-1-1
   - conclusionId: "12.2.2" #kan weg
-    conclusion: "U bent een aanbieder van een AI-model voor algemene doeleinden. U moet voldoen aan transparantieverplichtingen."
+    conclusion: "U bent een aanbieder van een AI-model voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden:\n
       - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan \n
       - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren \n
@@ -1061,7 +1062,7 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5576-1-1
 # Conclusies 13.0.1 tm 13.2.3 voor gebruiksverantwoordelijken
   - conclusionId: "13.0.1"
-    conclusion: "U bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem. U moet voldoen aan transparantieverplichtingen. "
+    conclusion: "U bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem. Uw AI-systeem moet voldoen aan transparantieverplichtingen. "
     obligation: "Artikel 26 - Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico:
       - het nemen van passende technische en organisatorische maatregelen om te waarborgen dat dergelijke systemen in overeenstemming met de gebruiksaanwijzingen die bij de systemen zijn gevoegd worden gebruikt \n
       - het opdragen van menselijk toezicht aan natuurlijke personen die over de nodige bekwaamheid, opleiding en autoriteit beschikken en de nodige ondersteuning krijgen \n
@@ -1109,7 +1110,7 @@ conclusions:
       - source: Artikel 26 - Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e4350-1-1
   - conclusionId: "13.0.3"
-    conclusion: "U bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem. U moet voldoen aan transparantieverplichtingen."
+    conclusion: "U bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen: \n
       - gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680, indien van toepassing \n
       - gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent genereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief, satirisch, fictief of analoog werk of programma, zijn de transparantieverplichtingen beperkt tot de openbaarmaking van het bestaan van dergelijke gegenereerde of bewerkte content op een passende wijze die de weergave of het genot van het werk niet belemmert."
@@ -1121,7 +1122,7 @@ conclusions:
     obligation: "Er is geen sprake van een hoog risico. Dit betekent dat het AI-systeem niet in de risicovolle categorieen van de AI-verordening valt. \n
                 Wel moet deze AI-technologie uiteraard voldoen aan algemene veiligheidsstandaarden."
   - conclusionId: "13.1.0" #kan weg
-    conclusion: "U bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem voor algemene doeleinden. Er is sprake van een systeemrisico en u moet voldoen aan transparantieverplichtingen."
+    conclusion: "U bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem voor algemene doeleinden. Er is sprake van een systeemrisico en uw AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "Artikel 26 - Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico:
       - het nemen van passende technische en organisatorische maatregelen om te waarborgen dat dergelijke systemen in overeenstemming met de gebruiksaanwijzingen die bij de systemen zijn gevoegd worden gebruikt \n
       - het opdragen van menselijk toezicht aan natuurlijke personen die over de nodige bekwaamheid, opleiding en autoriteit beschikken en de nodige ondersteuning krijgen \n
@@ -1165,7 +1166,7 @@ conclusions:
       - source: Artikel 51 - Classificatie van AI-modellen voor algemene doeleinden als AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5489-1-1
   - conclusionId: "13.1.2"
-    conclusion: "U bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem voor algemene doeleinden. U moet voldoen aan transparantieverplichtingen."
+    conclusion: "U bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "Artikel 26 - Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico:
       - het nemen van passende technische en organisatorische maatregelen om te waarborgen dat dergelijke systemen in overeenstemming met de gebruiksaanwijzingen die bij de systemen zijn gevoegd worden gebruikt \n
       - het opdragen van menselijk toezicht aan natuurlijke personen die over de nodige bekwaamheid, opleiding en autoriteit beschikken en de nodige ondersteuning krijgen \n
@@ -1217,7 +1218,7 @@ conclusions:
       - source: Artikel 26 - Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e4350-1-1
   - conclusionId: "13.1.4" #kan weg
-    conclusion: "U bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem voor algemene doeleinden. Er is sprake van een systeemrisico en u moet voldoen aan transparantieverplichtingen."
+    conclusion: "U bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem voor algemene doeleinden. Er is sprake van een systeemrisico en uw AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen: \n
       - gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680, indien van toepassing \n
       - gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent genereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief, satirisch, fictief of analoog werk of programma, zijn de transparantieverplichtingen beperkt tot de openbaarmaking van het bestaan van dergelijke gegenereerde of bewerkte content op een passende wijze die de weergave of het genot van het werk niet belemmert."
@@ -1234,7 +1235,7 @@ conclusions:
       - source: Artikel 51 - Classificatie van AI-modellen voor algemene doeleinden als AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5489-1-1
   - conclusionId: "13.1.6"
-    conclusion: "U bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem voor algemene doeleinden. U moet voldoen aan transparantieverplichtingen."
+    conclusion: "U bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen: \n
       - gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680, indien van toepassing \n
       - gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent genereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief, satirisch, fictief of analoog werk of programma, zijn de transparantieverplichtingen beperkt tot de openbaarmaking van het bestaan van dergelijke gegenereerde of bewerkte content op een passende wijze die de weergave of het genot van het werk niet belemmert."
@@ -1247,7 +1248,7 @@ conclusions:
       Doordat deze categorie niet genoemd wordt in de AI-verordening, gelden voor dit soort AI-technologie geen bijzondere wettelijke vereisten.
       Wel moet deze AI-technologie uiteraard voldoen aan algemene veiligheidsstandaarden."
   - conclusionId: "13.2.0" #kan weg
-    conclusion: "U bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico en u moet voldoen aan transparantieverplichtingen."
+    conclusion: "U bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico en uw AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen: \n
       - gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680, indien van toepassing \n
       - gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent genereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief, satirisch, fictief of analoog werk of programma, zijn de transparantieverplichtingen beperkt tot de openbaarmaking van het bestaan van dergelijke gegenereerde of bewerkte content op een passende wijze die de weergave of het genot van het werk niet belemmert."
@@ -1263,7 +1264,7 @@ conclusions:
       - source: Artikel 51 - Classificatie van AI-modellen voor algemene doeleinden als AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5489-1-1
   - conclusionId: "13.2.2" #kan weg
-    conclusion: "U bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden. U moet voldoen aan transparantieverplichtingen."
+    conclusion: "U bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen: \n
       - gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680, indien van toepassing \n
       - gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent genereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief, satirisch, fictief of analoog werk of programma, zijn de transparantieverplichtingen beperkt tot de openbaarmaking van het bestaan van dergelijke gegenereerde of bewerkte content op een passende wijze die de weergave of het genot van het werk niet belemmert."
@@ -1275,7 +1276,7 @@ conclusions:
     obligation: "Voor gebruiksverantwoordelijken van een AI-model voor algemene doeleinden, gelden er geen bijzondere vereisten vanuit de AI-verordening."
 # Conclusies 14.0.1 tm 14.0.6 voor gebruiksverantwoordelijken && aanbieders
   - conclusionId: "14.0.1"
-    conclusion: "U bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem. U moet voldoen aan transparantieverplichtingen."
+    conclusion: "U bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "Artikel 16 - Verplichtingen van aanbieders van AI-systemen met een hoog risico: \n
       - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2\n
       - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres\n
@@ -1362,7 +1363,7 @@ conclusions:
       - source: Artikel 26 - Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e4350-1-1
   - conclusionId: "14.0.3" #kan weg
-    conclusion: "U bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem voor algemene doeleinden. Er is sprake van een systeemrisico en u moet voldoen aan transparantieverplichtingen."
+    conclusion: "U bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem voor algemene doeleinden. Er is sprake van een systeemrisico en uw AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "Artikel 16 - Verplichtingen van aanbieders van AI-systemen met een hoog risico: \n
       - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2\n
       - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres\n
@@ -1482,7 +1483,7 @@ conclusions:
       - source: Artikel 55 - Verplichtingen van aanbieders van AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5730-1-1
   - conclusionId: "14.0.5"
-    conclusion: "U bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem voor algemene doeleinden. U moet voldoen aan transparantieverplichtingen."
+    conclusion: "U bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "Artikel 16 - Verplichtingen van aanbieders van AI-systemen met een hoog risico: \n
       - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2\n
       - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres\n
@@ -1618,7 +1619,7 @@ conclusions:
     obligation: "U hoeft vanwege uitzonderingsgrond niet te publiceren in het register."
   - conclusionId: "15.6"
     conclusion: "Uw algoritme is niet impactvol en de AI-verordening is niet van toepassing."
-    obligation: "Houdt u aan bestaande wet- en regelgeving (bijv. AVG wanneer u persoonsgegevens verwerkt)."
+    obligation: "Zorg ervoor dat uw algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer uw algoritme persoonsgegevens verwerkt)."
   - conclusionId: "15.7"
     conclusion: "U bent geen aanbieder en geen gebruiksverantwoordelijke. Deze beslisboom is gemaakt voor alleen deze twee rollen. Controleer nog een keer goed of één van deze rollen misschien toch op u van toepassing is."
     obligation: "Er is geen sprake van een verplichting."
