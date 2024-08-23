@@ -107,5 +107,5 @@ kubectl apply -k infra/
 Door het volgende script te runnen, kunt u controlen of het bestand decision-tree.yaml (technisch) valide is. Eventuele (syntax)fouten worden hiermee aangegeven.
 
 ```sh
-./scripts/validate --schema_file schemas/base.schema.json --yaml_file decision-tree.yaml
+./script/validate --schema_file schemas/base.schema.json --yaml_file decision-tree.yaml
 ```
