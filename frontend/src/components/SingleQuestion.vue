@@ -2,6 +2,7 @@
 interface Props {
   id: string
   question: string
+  definitions: {   term: string;   definition: string; url:  string | undefined; source: string | undefined; }[] | undefined
   sources: {   source: string;   url: string | undefined; }[] | undefined
 }
 defineProps<Props>()
