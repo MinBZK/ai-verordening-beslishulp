@@ -2,7 +2,7 @@
 interface Props {
   id: string
   question: string
-  definitions: {   term: string;   definition: string; url:  string | undefined; source: string | undefined; }[] | undefined
+  definitions: {   term: string;   definition: string; url:  string | undefined; }[] | undefined
   sources: {   source: string;   url: string | undefined; }[] | undefined
 }
 defineProps<Props>()
@@ -21,9 +21,22 @@ defineProps<Props>()
     <slot />
   </p>
   <div>
+    <!-- Definitions Section -->
+    <DialogTitle v-if="definitions && definitions.length" class="text-sm font-semibold leading-5 text-gray-900 relative top-5">
+      Definities
+    </DialogTitle>
+
+    <ul v-if="definitions && definitions.length" class="list-disc list-inside ml-5 relative top-5">
+      <li v-for="(item, index) in definitions" :key="index" class="text-sm text-gray-700">
+        <strong>{{ item.term }}:</strong> {{ item.definition }}
+      </li>
+    </ul>
+  </div>
+
+  <div>
     <!--Sources section-->
     <!--Make an vue component from this?-->
-      <DialogTitle v-if='sources' as="h4" class="text-sm font-semibold leading-5 text-gray-900 relative top-5">
+      <DialogTitle v-if='sources && sources.length' as="h4" class="text-sm font-semibold leading-5 text-gray-900 relative top-5">
         Bronnen
       </DialogTitle>
 
