@@ -124,5 +124,5 @@ Bij volgende commits zullen alle hooks worden uitgevoerd.
 
 Je kunt alle hooks handmatig als volgt uitvoeren:
 ```sh
-re-commit run --all-files
+pre-commit run --all-files
 ```

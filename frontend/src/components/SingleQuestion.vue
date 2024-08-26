@@ -17,7 +17,7 @@ defineProps<Props>()
     >
   </legend>
   <p style="white-space: pre-line" class="mt-1 text-sm leading-6 text-gray-600">
-    {{ question }}
+    <span v-html="question"></span>
     <slot />
   </p>
   <div>

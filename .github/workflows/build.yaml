@@ -44,6 +44,17 @@ jobs:
         env:
           DOCKER_METADATA_ANNOTATIONS_LEVELS: manifest,index
 
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+
+      - name: Install dependencies
+        run: pip3 install -r requirements.txt
+
+      - name: Build decision-tree.yaml
+        run: python script/inject_definitions_in_decision_tree.py
+
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:

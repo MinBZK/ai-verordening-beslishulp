@@ -6,6 +6,7 @@ import { Answer, Conclusions, DecisionTree, Questions, Redirect } from '@/models
 import { storeToRefs } from 'pinia'
 import { fold } from 'fp-ts/lib/Either'
 import * as t from 'io-ts'
+import decision_tree_json from './decision-tree.json'
 
 import { useQuestionStore } from '@/stores/QuestionStore'
 

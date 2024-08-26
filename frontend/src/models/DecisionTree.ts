@@ -28,8 +28,7 @@ export type Source = t.TypeOf<typeof Source>
 export const Definition = t.type({
   term: t.string,
   definition: t.string,
-  url: t.union([t.string, t.undefined]),
-  source: t.union([t.string, t.undefined])
+  url: t.union([t.string, t.undefined])
 })
 export type Definition = t.TypeOf<typeof Definition>
 
