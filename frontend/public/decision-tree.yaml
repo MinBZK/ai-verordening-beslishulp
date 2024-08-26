@@ -3,14 +3,19 @@ name: Decision Tree
 questions:
   ### check definitie algoritme
   - questionId: "0"
-    question: "Bevat de (beoogde) toepassing een algoritme? \n\n
-              Algoritme: een set van regels en instructies die een computer uitvoert om een probleem op te lossen of een vraag te beantwoorden"
+    question: "Bevat de (beoogde) toepassing een algoritme?"
     questionType: SingleChoice
+    definitions:
+      - term: algoritme
+        definition: "Een set van regels en instructies die een computer uitvoert om een probleem op te lossen of een vraag te beantwoorden."
+        url: https://www.rekenkamer.nl/publicaties/rapporten/2021/01/26/aandacht-voor-algoritmes
     sources:
       - source: Handreiking Algoritmeregister
         url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
       - source: Aandacht voor Algoritmes, Algemene Rekenkamer, 2021
         url: https://www.rekenkamer.nl/onderwerpen/algoritmes/documenten/rapporten/2021/01/26/aandacht-voor-algoritmes
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     answers:
       - answer: Ja
         subresult: "Er is sprake van een algoritme."
@@ -24,25 +29,34 @@ questions:
 
   ### check of het een AI-systeem is
   - questionId: "1.0"
-    question: "Is de (beoogde) toepassing een AI-systeem? \n\n
-              AI-systeem: een op een machine gebaseerd systeem dat is ontworpen om met verschillende niveaus van autonomie te werken en dat na het inzetten ervan aanpassingsvermogen kan vertonen, en dat, voor expliciete of impliciete doelstellingen, uit de ontvangen input afleidt hoe output te genereren zoals voorspellingen, inhoud, aanbevelingen of beslissingen die van invloed kunnen zijn op fysieke of virtuele omgevingen"
+    question: "Is de (beoogde) toepassing een AI-systeem?"
     questionType: SingleChoice
+    definitions:
+      - term: AI-systeem
+        definition: "Een op een machine gebaseerd systeem dat is ontworpen om met verschillende niveaus van autonomie te werken en dat na het inzetten ervan aanpassingsvermogen kan vertonen, en dat, voor expliciete of impliciete doelstellingen, uit de ontvangen input afleidt hoe output te genereren zoals voorspellingen, inhoud, aanbevelingen of beslissingen die van invloed kunnen zijn op fysieke of virtuele omgevingen."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/?h=definities#begrippenlijst
     sources:
       - source: Artikel 3 - Definities
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2093-1-1
       - source: Overweging 12 - Begrip "AI-systeem"
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     answers:
       - answer: Ja
-        nextQuestionId: "1.1" #check GPAI-systeem
+        nextQuestionId: "1.1"
       - answer: Nee
-        nextQuestionId: "1.2" #check GPAI-model
-  - questionId: "1.1" # GPAI-systeem check
-    question: "Is de (beoogde) toepassing een AI-systeem voor algemene doeleinden?\n\n
-              AI-systeem voor algemene doeleinden: een AI-systeem dat is gebaseerd op een AI-model voor algemene doeleinden en dat verschillende doeleinden kan dienen, zowel voor direct gebruik als voor integratie in andere AI-systemen"
+        nextQuestionId: "1.2"
+  - questionId: "1.1"
+    question: "Is de (beoogde) toepassing een AI-systeem voor algemene doeleinden?"
     questionType: SingleChoice
-    description: "Definitie AI-model voor algemene doeleinden: een AI-model, ook wanneer het is getraind met een grote hoeveelheid data met behulp van self-supervision op grote schaal, dat een aanzienlijk algemeen karakter vertoont en in staat is op competente wijze een breed scala aan verschillende taken uit te voeren, ongeacht de wijze waarop het model in de handel wordt gebracht, en dat kan worden geïntegreerd in een verscheidenheid aan systemen verder in de AI-waardeketen of toepassingen verder in de AI-waardeketen, met uitzondering van AI-modellen die worden gebruikt voor onderzoek, ontwikkeling of prototypingactiviteiten alvorens zij in de handel worden gebracht"
+    definitions:
+      - term: AI-systeem voor algemene doeleinden
+        definition: "Een AI-systeem dat is gebaseerd op een AI-model voor algemene doeleinden en dat verschillende doeleinden kan dienen, zowel voor direct gebruik als voor integratie in andere AI-systemen."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     sources:
       - source: Overweging 12 - Begrip AI-systeem
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     answers:
       - answer: Ja
         subresult: "Er is sprake van een AI-systeem voor algemene doeleinden."
@@ -55,13 +69,18 @@ questions:
           - "AI-systeem"
         nextQuestionId: "1.0.1" #check open source
   - questionId: "1.2"
-    question: "Is de (beoogde) toepassing een AI-model voor algemene doeleinden?\n\n
-              AI-model voor algemene doeleinden: een AI-model, ook wanneer het is getraind met een grote hoeveelheid data met behulp van self-supervision op grote schaal, dat een aanzienlijk algemeen karakter vertoont en in staat is op competente wijze een breed scala aan verschillende taken uit te voeren, ongeacht de wijze waarop het model in de handel wordt gebracht, en dat kan worden geïntegreerd in een verscheidenheid aan systemen verder in de AI-waardeketen of toepassingen verder in de AI-waardeketen, met uitzondering van AI-modellen die worden gebruikt voor onderzoek, ontwikkeling of prototypingactiviteiten alvorens zij in de handel worden gebracht"
+    question: "Is de (beoogde) toepassing een AI-model voor algemene doeleinden?"
     questionType: SingleChoice
+    definitions:
+      - term: AI-model voor algemene doeleinden
+        definition: "Een AI-model, ook wanneer het is getraind met een grote hoeveelheid data met behulp van self-supervision op grote schaal, dat een aanzienlijk algemeen karakter vertoont en in staat is op competente wijze een breed scala aan verschillende taken uit te voeren, ongeacht de wijze waarop het model in de handel wordt gebracht, en dat kan worden geïntegreerd in een verscheidenheid aan systemen verder in de AI-waardeketen of toepassingen verder in de AI-waardeketen, met uitzondering van AI-modellen die worden gebruikt voor onderzoek, ontwikkeling of prototypingactiviteiten alvorens zij in de handel worden gebracht."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     sources:
       - source: Artikel 3 - Definities
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2093-1-1
       - source: Lid 63 - "AI-model voor algemene doeleinden"
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     answers:
       - answer: Ja
         labels:
@@ -111,9 +130,21 @@ questions:
           - onderzoeks-, test- of ontwikkelingsactiviteiten met betrekking tot AI-systemen of AI-modellen voor zij in de handel worden gebracht of in gebruik worden gesteld (testen onder reële omstandigheden valt hier niet onder) \n
           - AI-systemen of AI-modellen, met inbegrip van hun output, die specifiek zijn ontwikkeld en in gebruik worden gesteld met wetenschappelijk onderzoek en wetenschappelijke ontwikkeling als enig doel"
     questionType: SingleChoice
+    definitions:
+      - term: testen onder reële omstandigheden
+        definition: "Het tijdelijk testen van een AI-systeem voor zijn beoogde doel onder reële omstandigheden buiten een laboratorium of anderszins gesimuleerde omgeving teneinde betrouwbare en robuuste gegevens te verkrijgen, en te beoordelen en te verifiëren of het AI-systeem overeenstemt met de voorschriften van de AI-verordening en het wordt niet aangemerkt als het in de handel brengen of in gebruik stellen van het AI-systeem in de zin van de AI-verordening, mits aan alle in artikel 57 of 60 vastgestelde voorwaarden is voldaan."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
+      - term: in de handel brengen
+        definition: "Het voor het eerst in de Unie op de markt aanbieden van een AI-systeem of een AI-model voor algemene doeleinden."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
+      - term: in gebruik stellen
+        definition: "De directe levering van een AI-systeem door de aanbieder aan de gebruiksverantwoordelijke voor het eerste gebruik of voor eigen gebruik in de Unie voor het beoogde doel."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     sources:
       - source: Artikel 2 - Toepassingsgebied
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e1978-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     answers:
       - answer: Ja
         labels:
@@ -141,9 +172,15 @@ questions:
       - gebruikt kan worden om natuurlijke personen individueel in categorie\xEBn in te delen op basis van biometrische gegevens om ras, politieke opvattingen, lidmaatschap van een vakbond, religieuze of levensbeschouwelijke overtuigingen, seksleven of seksuele geaardheid af te leiden? (Dit verbod geldt niet voor het labelen of filteren van rechtmatig verkregen biometrische datasets, zoals afbeeldingen, op basis van biometrische gegevens, of voor categorisering van biometrische gegevens op het gebied van rechtshandhaving) \n
       - gebruikt kan worden als een biometrisch systeem in de publieke ruimte voor identificatie op afstand in real-time, met het oog op de rechtshandhaving?"
     questionType: SingleChoice
+    definitions:
+      - term: biometrische gegevens
+        definition: "Persoonsgegevens die het resultaat zijn van een specifieke technische verwerking met betrekking tot de fysieke, fysiologische of gedragsgerelateerde kenmerken van een natuurlijk persoon, zoals gezichtsafbeeldingen of vingerafdrukgegevens."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     sources:
       - source: Artikel 5 - Verboden AI-praktijken
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2808-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     answers:
       - answer: Ja
         subresult: "Deze type AI-systemen zijn in principe verboden volgens de AI-verordening. Er kan echter sprake zijn van een uitzondering."
@@ -187,11 +224,20 @@ questions:
       - Verordening (EU) 2019/2144 betreffende de voorschriften voor de typegoedkeuring van motorvoertuigen en aanhangwagens daarvan en van systemen, onderdelen en technische eenheden die voor dergelijke voertuigen zijn bestemd wat de algemene veiligheid ervan en de bescherming van de inzittenden van voertuigen en kwetsbare weggebruikers betreft\n
       - Verordening (EU) 2018/1139 inzake gemeenschappelijke regels op het gebied van burgerluchtvaart en tot oprichting van een Agentschap van de Europese Unie voor de veiligheid van de luchtvaart, voor zover het gaat om het ontwerp, de productie en het in de handel brengen van luchtvaartuigen, en hun motoren, propellors, onderdelen en apparatuur om het luchtvaartuig op afstand te besturen"
     questionType: SingleChoice
+    definitions:
+      - term: veiligheidscomponent
+        definition: "Een component van een product of systeem die een veiligheidsfunctie voor dat product of systeem vervult of waarvan het falen of gebrekkig functioneren de gezondheid en veiligheid van personen of eigendom in gevaar brengt."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
+      - term: in de handel brengen
+        definition: "Het voor het eerst in de Unie op de markt aanbieden van een AI-systeem of een AI-model voor algemene doeleinden."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     sources:
       - source: Bijlage 1 - Lijst van harmonisatiewetgeving van de Unie
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e38-124-1
       - source: Overweging 47 - Veiligheidscomponent
       - source: Overweging 49 - Veiligheidscomponent
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     answers:
       - answer: Ja
         subresult: "Het AI-systeem wordt beschouwd als een hoog-risico AI systeem en moet voldoen aan bepaalde verplichtingen/vereisten."
@@ -218,6 +264,13 @@ questions:
       - Verordening (EU) 2017/745 betreffende medische hulpmiddelen\n
       - Verordening (EU) 2017/746 betreffende medische hulpmiddelen voor in-vitrodiagnostiek"
     questionType: SingleChoice
+    definitions:
+      - term: veiligheidscomponent
+        definition: "Een component van een product of systeem die een veiligheidsfunctie voor dat product of systeem vervult of waarvan het falen of gebrekkig functioneren de gezondheid en veiligheid van personen of eigendom in gevaar brengt."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
+      - term: op de markt aanbieden
+        definition: "Het in het kader van een handelsactiviteit, al dan niet tegen betaling, verstrekken van een AI-systeem of een AI-model voor algemene doeleinden met het oog op distributie of gebruik op de markt van de Unie."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     sources:
       - source: Bijlage 1 - Lijst van harmonisatiewetgeving van de Unie
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e38-124-1
@@ -231,8 +284,23 @@ questions:
   - questionId: "4.2"
     question: "Moet het product waarvan het AI-systeem de veiligheidscomponent vormt een conformiteits-beoordeling door een derde partij laten uitgevoeren met het oog op het in de handel brengen of in gebruik stellen van dat product op grond van de in Bijlage I Sectie A opgenomen harmonisatiewetgeving van de Europese Unie?"
     questionType: SingleChoice
+    definitions:
+      - term: veiligheidscomponent
+        definition: "Een component van een product of systeem die een veiligheidsfunctie voor dat product of systeem vervult of waarvan het falen of gebrekkig functioneren de gezondheid en veiligheid van personen of eigendom in gevaar brengt."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
+      - term: in de handel brengen
+        definition: "Het voor het eerst in de Unie op de markt aanbieden van een AI-systeem of een AI-model voor algemene doeleinden."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
+      - term: in gebruik stellen
+        definition: "De directe levering van een AI-systeem door de aanbieder aan de gebruiksverantwoordelijke voor het eerste gebruik of voor eigen gebruik in de Unie voor het beoogde doel."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
+      - term: op de markt aanbieden
+        definition: "Het in het kader van een handelsactiviteit, al dan niet tegen betaling, verstrekken van een AI-systeem of een AI-model voor algemene doeleinden met het oog op distributie of gebruik op de markt van de Unie."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     sources:
       - source: Overweging 50 - Conformiteitsbeoordelingsprocedure
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     answers:
       - answer: Ja
         subresult: "Het AI-systeem wordt beschouwd als een hoog-risico AI systeem en moet voldoen aan bepaalde verplichtingen/vereisten."
@@ -249,10 +317,22 @@ questions:
       - AI-systemen die bedoeld zijn om te worden gebruikt voor biometrische categorisering op basis van gevoelige of beschermde eigenschappen of kenmerken, of op basis van wat uit die eigenschappen of kenmerken wordt afgeleid\n
       - AI-systemen die bedoeld zijn om te worden gebruikt voor emotieherkenning"
     questionType: SingleChoice
+    definitions:
+      - term: biometrische identificatie
+        definition: "De geautomatiseerde herkenning van fysieke, fysiologische, gedragsgerelateerde of psychologische menselijke kenmerken om de identiteit van een natuurlijk persoon vast te stellen door biometrische gegevens van die persoon te vergelijken met in een databank opgeslagen biometrische gegevens van personen."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
+      - term: biometrische gegevens
+        definition: "Persoonsgegevens die het resultaat zijn van een specifieke technische verwerking met betrekking tot de fysieke, fysiologische of gedragsgerelateerde kenmerken van een natuurlijk persoon, zoals gezichtsafbeeldingen of vingerafdrukgegevens."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
+      - term: biometrische verificatie
+        definition: "De geautomatiseerde één-op-éénverificatie, met inbegrip van de authenticatie, van de identiteit van natuurlijke personen door hun biometrische gegevens te vergelijken met eerder verstrekte biometrische gegevens."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     sources:
       - source: Bijlage 3 - AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e38-127-1
       - source: Overweging 54 - Biometrische identificatie op afstand
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     answers:
       - answer: Ja
         subresult: "Uw AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Er kan sprake zijn van een uitzondering."
@@ -262,6 +342,13 @@ questions:
   - questionId: "5.1"
     question: "Betreft het een AI-systeem op het gebied van kritieke infrastructuur? Hieronder vallen AI-systemen die bedoeld zijn om te worden gebruikt als veiligheidscomponent bij het beheer of de exploitatie van kritieke digitale infrastructuur, wegverkeer of bij de levering van water, gas, verwarming en elektriciteit."
     questionType: SingleChoice
+    definitions:
+      - term: veiligheidscomponent
+        definition: "Een component van een product of systeem die een veiligheidsfunctie voor dat product of systeem vervult of waarvan het falen of gebrekkig functioneren de gezondheid en veiligheid van personen of eigendom in gevaar brengt."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
+      - term: kritieke infrastructuur
+        definition: "Kritieke infrastructuur zoals gedefinieerd in artikel 2, punt 4, van Richtlijn (EU) 2022/2557: AI-systemen die bedoeld zijn om te worden gebruikt als veiligheidscomponent bij het beheer of de exploitatie van kritieke digitale infrastructuur, wegverkeer of bij de levering van water, gas, verwarming en elektriciteit."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     sources:
       - source: Bijlage 3 - AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e38-127-1
@@ -329,6 +416,10 @@ questions:
       - AI-systemen die bedoeld zijn om door of namens rechtshandhavingsinstanties of door instellingen, organen of instanties van de Unie ter ondersteuning van rechtshandhavingsinstanties te worden gebruikt om te beoordelen hoe groot het risico is dat een natuurlijke persoon (opnieuw) een strafbaar feit zal plegen, niet uitsluitend op basis van profilering van natuurlijke personen, of om persoonlijkheidskenmerken en eigenschappen of eerder crimineel gedrag van natuurlijke personen of groepen te beoordelen \n
       - AI-systemen die bedoeld zijn om door of namens rechtshandhavingsinstanties of door instellingen, organen en instanties van de Unie ter ondersteuning van rechtshandhavingsinstanties te worden gebruikt om natuurlijke personen te profileren tijdens het opsporen, onderzoeken of vervolgen van strafbare feiten."
     questionType: SingleChoice
+    definitions:
+      - term: risico
+        definition: "De combinatie van de kans op schade en de ernst van die schade."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     sources:
       - source: Bijlage 3 - AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e38-127-1
@@ -346,6 +437,10 @@ questions:
       - AI-systemen die bedoeld zijn om door of namens bevoegde overheidsinstanties of door instellingen, organen of instanties van de Unie te worden gebruikt om bevoegde overheidsinstanties bij te staan bij de behandeling van aanvragen voor asiel, visa of verblijfsvergunningen en bij de behandeling van aanverwante klachten in verband met het al dan niet in aanmerking komen van de natuurlijke personen die een aanvraag voor een status indienen, met inbegrip van hieraan gerelateerde beoordelingen van de betrouwbaarheid van bewijsmateriaal \n
       - AI-systemen die bedoeld zijn om door of namens bevoegde overheidsinstanties, of door instellingen, organen of instanties van de Unie, te worden gebruikt in het kader van migratie-, asiel- of grenstoezichtsbeheer, met het oog op het opsporen, herkennen of identificeren van natuurlijke personen, met uitzondering van de verificatie van reisdocumenten."
     questionType: SingleChoice
+    definitions:
+      - term: risico
+        definition: "De combinatie van de kans op schade en de ernst van die schade."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     sources:
       - source: Bijlage 3 - AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e38-127-1
@@ -384,10 +479,19 @@ questions:
       - Het opsporen van besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen en waarbij het niet bedoeld is om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te be\xEFnvloeden?\n
       - Het uitvoeren van een voorbereidende taak voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?"
     questionType: SingleChoice
+    definitions:
+      - term: aanbieder
+        definition: "Een natuurlijke of rechtspersoon, overheidsinstantie, agentschap of ander orgaan die/dat een AI-systeem of een AI-model voor algemene doeleinden ontwikkelt of laat ontwikkelen en dat systeem of model in de handel brengt of het AI-systeem in gebruik stelt onder de eigen naam of merk, al dan niet tegen betaling."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
+      - term: risico
+        definition: "De combinatie van de kans op schade en de ernst van die schade."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     sources:
       - source: Bijlage 3 - AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e38-127-1
       - source: Overweging 53 - Uitzonderingen hoog risico
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     answers:
       - answer: Ja
         nextQuestionId: "5.1.1"
@@ -424,11 +528,23 @@ questions:
       - CPUs zijn Central Processing Units.\n
       - Dit is de centrale verwerkingseenheid van een computer, smartphone of tablet. De CPU voert het rekenwerk uit waardoor programma\u2019s draaien en hardware wordt aangestuurd."
     questionType: SingleChoice
+    definitions:
+      - term: systeemrisico
+        definition: "Een risico dat specifiek is voor de capaciteiten met een grote impact van AI-modellen voor algemene doeleinden, die aanzienlijke gevolgen hebben voor de markt van de Unie vanwege hun bereik, of vanwege feitelijke of redelijkerwijs te voorziene negatieve gevolgen voor de gezondheid, de veiligheid, de openbare veiligheid, de grondrechten of de samenleving als geheel, en dat op grote schaal in de hele waardeketen kan worden verspreid."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
+      - term: zwevendekommabewerking of floating-point operation (FLOP)
+        definition: "Elke wiskundige bewerking of toewijzing met zwevendekommagetallen, die een subset vormen van de reële getallen die gewoonlijk op computers worden gerepresenteerd door een geheel getal met een vaste precisie, geschaald door een gehele exponent van een vaste basis."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
+      - term: capaciteiten met een grote impact
+        definition: "Capaciteiten die overeenkomen met of groter zijn dan de capaciteiten die worden opgetekend bij de meest geavanceerde AI-modellen voor algemene doeleinden."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     sources:
       - source: Artikel 51 - Classificatie van AI-modellen voor algemene doeleinden als AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5489-1-1
       - source: Overweging 110 - Classificatie systeemrisico
       - source: Overweging 111 - Classificatie systeemrisico
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     answers:
       - answer: Ja
         subresult: "Er is sprake van een systeemrisico"
@@ -448,11 +564,17 @@ questions:
       - synthetische afbeeldingen, audio, video of tekst content genereert en manipuleert? Bijvoorbeeld een deepfake.\n
       - aan emotieherkenning of biometrische categorisatie doet?"
     questionType: SingleChoice
+    definitions:
+      - term: deepfake
+        definition: "Door AI gegenereerd of gemanipuleerd beeld-, audio- of videomateriaal dat een gelijkenis vertoont met bestaande personen, voorwerpen, plaatsen, entiteiten of gebeurtenissen, en door een persoon ten onrechte voor authentiek of waarheidsgetrouw zou worden aangezien."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     sources:
       - source: Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
       - source: Overweging 132 - Transparantieverplichtingen
       - source: Overweging 134 - Transparantieverplichtingen
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     answers:
       - answer: Ja
         nextQuestionId: "7.1"
@@ -491,6 +613,13 @@ questions:
   - questionId: "8.0"
     question: "We gaan nu bepalen wat voor rol u heeft.\n\n Gaat u een AI-systeem of een AI-model op de markt brengen of in gebruik stellen onder eigen naam of merk, al dan niet tegen betaling?"
     questionType: SingleChoice
+    definitions:
+      - term: aanbieder
+        definition: "Een natuurlijke of rechtspersoon, overheidsinstantie, agentschap of ander orgaan die/dat een AI-systeem of een AI-model voor algemene doeleinden ontwikkelt of laat ontwikkelen en dat systeem of model in de handel brengt of het AI-systeem in gebruik stelt onder de eigen naam of merk, al dan niet tegen betaling."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
+      - term: in gebruik stellen
+        definition: "De directe levering van een AI-systeem door de aanbieder aan de gebruiksverantwoordelijke voor het eerste gebruik of voor eigen gebruik in de Unie voor het beoogde doel."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     answers:
       - answer: Ja
         subresult: "U bent een aanbieder volgens de AI-verordening."
@@ -527,6 +656,10 @@ questions:
     sources:
       - source: Overweging 13 - Overheidsinstanties, agentschappen of andere organen als gebruiksverantwoordelijke
     questionType: SingleChoice
+    definitions:
+      - term: gebruiksverantwoordelijke
+        definition: "Een natuurlijke of rechtspersoon, overheidsinstantie, agentschap of ander orgaan die/dat een AI-systeem onder eigen verantwoordelijkheid gebruikt, tenzij het AI-systeem wordt gebruikt in het kader van een persoonlijke niet- beroepsactiviteit."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     answers:
       - answer: Ja
         subresult: "U bent een gebruiksverantwoordelijke volgens de AI-verordening."
@@ -552,6 +685,10 @@ questions:
   - questionId: "8.2"
     question: "Zet u uw naam of merk op een AI-systeem met een hoog risico dat reeds in de handel is gebracht of in gebruik is gesteld (onverminderd contractuele regelingen waarin wordt bepaald dat de verplichtingen anders worden toegewezen)?"
     questionType: SingleChoice
+    definitions:
+      - term: aanbieder
+        definition: "Een natuurlijke of rechtspersoon, overheidsinstantie, agentschap of ander orgaan die/dat een AI-systeem of een AI-model voor algemene doeleinden ontwikkelt of laat ontwikkelen en dat systeem of model in de handel brengt of het AI-systeem in gebruik stelt onder de eigen naam of merk, al dan niet tegen betaling."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     answers:
       - answer: Ja
         labels:
@@ -570,9 +707,18 @@ questions:
   - questionId: "8.3"
     question: "Brengt u een substantiële wijziging aan in een AI-systeem met een hoog risico dat reeds in de handel is gebracht of reeds in gebruik is gesteld, op zodanige wijze dat het systeem een AI-systeem met een hoog risico blijft op grond van Artikel 6?"
     questionType: SingleChoice
+    definitions:
+      - term: aanbieder
+        definition: "Een natuurlijke of rechtspersoon, overheidsinstantie, agentschap of ander orgaan die/dat een AI-systeem of een AI-model voor algemene doeleinden ontwikkelt of laat ontwikkelen en dat systeem of model in de handel brengt of het AI-systeem in gebruik stelt onder de eigen naam of merk, al dan niet tegen betaling."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
+      - term: substantiële wijziging
+        definition: "Een verandering van een AI-systeem nadat dit in de handel is gebracht of in gebruik is gesteld, die door de aanbieder niet is voorzien of gepland in de initiële conformiteitsbeoordeling en als gevolg waarvan de overeenstemming van het AI-systeem met de voorschriften van hoofdstuk III, afdeling 2, AI-Verordening wordt beïnvloed, of die leidt tot een wijziging van het beoogde doel waarvoor het AI-systeem is beoordeeld."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     sources:
       - source: Artikel 6 - Classificatieregels voor AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2986-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     answers:
       - answer: Ja
         labels:
@@ -591,9 +737,15 @@ questions:
   - questionId: "8.4"
     question: "Wijzigt u het beoogde doel van een AI-systeem, met inbegrip van een AI-systeem voor algemene doeleinden, dat niet als een systeem met een hoog risico is geclassificeerd en reeds in de handel is gebracht of in gebruik is gesteld, op zodanige wijze dat het betrokken AI-systeem een AI-systeem met een hoog risico overeenkomstig Artikel 6 wordt?"
     questionType: SingleChoice
+    definitions:
+      - term: aanbieder
+        definition: "Een natuurlijke of rechtspersoon, overheidsinstantie, agentschap of ander orgaan die/dat een AI-systeem of een AI-model voor algemene doeleinden ontwikkelt of laat ontwikkelen en dat systeem of model in de handel brengt of het AI-systeem in gebruik stelt onder de eigen naam of merk, al dan niet tegen betaling."
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     sources:
       - source: Artikel 6 - Classificatieregels voor AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2986-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     answers:
       - answer: Ja
         subresult: "Naast gebruiksverantwoordelijke bent u ook een aanbieder van een AI-systeem voor algemene doeleinden met een hoog risico. U moet voldoen aan de verplichtingen van de aanbieder uit hoofde van artikel 16. We raden u daarom aan de beslisboom nog een keer te doorlopen en daarbij aan te geven dat u een aanbieder van een AI-systeem met een hoog risico bent."
@@ -686,6 +838,8 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e3823-1-1
       - source: Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "12.0.2"
     conclusion: "U bent een aanbieder van een hoog-risico AI-systeem."
     obligation: "Artikel 16 - Verplichtingen van aanbieders van AI-systemen met een hoog risico: \n
@@ -708,6 +862,8 @@ conclusions:
     sources:
       - source: Artikel 16 - Verplichtingen van aanbieders van AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e3823-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "12.0.3"
     conclusion: "U bent een aanbieder van een niet-hoog-risico AI-systeem. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen: \n
@@ -721,6 +877,8 @@ conclusions:
     sources:
       - source: Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "12.0.4"
     conclusion: "U bent een aanbieder van een niet-hoog-risico AI-systeem."
     obligation:
@@ -773,6 +931,8 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5489-1-1
       - source: Artikel 55 - Verplichtingen van aanbieders van AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5730-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "12.1.1" #kan weg
     conclusion: "U bent een aanbieder van een hoog-risico AI-systeem voor algemene doeleinden. Er is sprake van een systeemrisico."
     obligation: "Artikel 16 - Verplichtingen van aanbieders van AI-systemen met een hoog risico: \n
@@ -852,6 +1012,8 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
       - source: Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5576-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "12.1.3"
     conclusion: "U bent een aanbieder van een hoog-risico AI-systeem voor algemene doeleinden."
     obligation: "Artikel 16 - Verplichtingen van aanbieders van AI-systemen met een hoog risico: \n
@@ -885,6 +1047,8 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e3823-1-1
       - source: Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5576-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "12.1.4" #kan weg
     conclusion: "U bent een aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden. Er is sprake van een systeemrisico en uw AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen: \n
@@ -918,6 +1082,8 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5576-1-1
       - source: Artikel 55 - Verplichtingen van aanbieders van AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5730-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "12.1.5" #kan weg
     conclusion: "U bent een aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden. Er is sprake van een systeemrisico."
     obligation: "De volgende verplichtingen gelden voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd:\n
@@ -940,6 +1106,8 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5576-1-1
       - source: Artikel 55 - Verplichtingen van aanbieders van AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5730-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "12.1.6"
     conclusion: "U bent een aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen: \n
@@ -964,6 +1132,8 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
       - source: Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5576-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "12.1.7"
     conclusion: "U bent een aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden."
     obligation: "De volgende verplichtingen gelden voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd:\n
@@ -977,6 +1147,8 @@ conclusions:
     sources:
      - source: Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden
        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5576-1-1
+     - source: Begrippenlijst Algoritmekader
+       url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "12.2.0" #kan weg
     conclusion: "U bent een aanbieder van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico en uw AI-systeem moet voldoen aan transparantieverplichtingen"
     obligation: "Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden:\n
@@ -1007,6 +1179,8 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5489-1-1
       - source: Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5576-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "12.2.1"
     conclusion: "U bent een aanbieder van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico."
     obligation: "Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden:\n
@@ -1029,6 +1203,8 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5576-1-1
       - source: Artikel 55 - Verplichtingen van aanbieders van AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5730-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "12.2.2" #kan weg
     conclusion: "U bent een aanbieder van een AI-model voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden:\n
@@ -1050,6 +1226,8 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
       - source: Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5576-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "12.2.3"
     conclusion: "U bent een aanbieder van een AI-model voor algemene doeleinden."
     obligation: "Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden:\n
@@ -1062,6 +1240,8 @@ conclusions:
     sources:
       - source: Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5576-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "12.2.4"
     conclusion: "U bent een aanbieder van een open-source AI-model voor algemene doeleinden."
     obligation: "Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden:\n
@@ -1072,6 +1252,7 @@ conclusions:
     sources:
       - source: Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5576-1-1
+
 # Conclusies 13.0.1 tm 13.2.3 voor gebruiksverantwoordelijken
   - conclusionId: "13.0.1"
     conclusion: "U bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem. Uw AI-systeem moet voldoen aan transparantieverplichtingen. "
@@ -1100,6 +1281,8 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e4350-1-1
       - source: Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "13.0.2"
     conclusion: "U bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem."
     obligation: "Artikel 26 - Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico:
@@ -1121,6 +1304,8 @@ conclusions:
     sources:
       - source: Artikel 26 - Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e4350-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "13.0.3"
     conclusion: "U bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen: \n
@@ -1158,6 +1343,8 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
       - source: Artikel 51 - Classificatie van AI-modellen voor algemene doeleinden als AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5489-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "13.1.1" #kan weg
     conclusion: "U bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem voor algemene doeleinden. Er is sprake van een systeemrisico."
     obligation: "Artikel 26 - Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico:
@@ -1177,6 +1364,8 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e4350-1-1
       - source: Artikel 51 - Classificatie van AI-modellen voor algemene doeleinden als AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5489-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "13.1.2"
     conclusion: "U bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "Artikel 26 - Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico:
@@ -1204,6 +1393,8 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e4350-1-1
       - source: Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "13.1.3"
     conclusion: "U bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem voor algemene doeleinden."
     obligation: "Artikel 26 - Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico:
@@ -1229,6 +1420,8 @@ conclusions:
     sources:
       - source: Artikel 26 - Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e4350-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "13.1.4" #kan weg
     conclusion: "U bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem voor algemene doeleinden. Er is sprake van een systeemrisico en uw AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen: \n
@@ -1239,6 +1432,8 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
       - source: Artikel 51 - Classificatie van AI-modellen voor algemene doeleinden als AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5489-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "13.1.5" #kan weg
     conclusion: "U bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem voor algemene doeleinden. Er is sprake van een systeemrisico."
     obligation: "Er is geen sprake van een hoog risico. Dit betekent dat het AI-systeem niet in de risicovolle categorieen van de AI-verordening valt. \n
@@ -1246,6 +1441,8 @@ conclusions:
     sources:
       - source: Artikel 51 - Classificatie van AI-modellen voor algemene doeleinden als AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5489-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "13.1.6"
     conclusion: "U bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen: \n
@@ -1254,6 +1451,8 @@ conclusions:
     sources:
       - source: Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "13.1.7"
     conclusion: "U bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem voor algemene doeleinden."
     obligation: "Er is geen sprake van een hoog risico. Dit betekent dat het AI-systeem niet in de risicovolle categorieen van de AI-verordening valt.
@@ -1269,12 +1468,16 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
       - source: Artikel 51 - Classificatie van AI-modellen voor algemene doeleinden als AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5489-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "13.2.1"
     conclusion: "U bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico."
     obligation: Als gebruiksverantwoordelijke van een AI-model voor algemene doeleinden gelden er geen verplichtingen vanuit het systeemrisico.
     sources:
       - source: Artikel 51 - Classificatie van AI-modellen voor algemene doeleinden als AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5489-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "13.2.2" #kan weg
     conclusion: "U bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen: \n
@@ -1283,9 +1486,14 @@ conclusions:
     sources:
       - source: Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "13.2.3"
     conclusion: "U bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden."
     obligation: "Voor gebruiksverantwoordelijken van een AI-model voor algemene doeleinden, gelden er geen bijzondere vereisten vanuit de AI-verordening."
+    sources:
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
 # Conclusies 14.0.1 tm 14.0.6 voor gebruiksverantwoordelijken && aanbieders
   - conclusionId: "14.0.1"
     conclusion: "U bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
@@ -1337,6 +1545,8 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e4350-1-1
       - source: Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "14.0.2"
     conclusion: "U bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem."
     obligation: "Artikel 16 - Verplichtingen van aanbieders van AI-systemen met een hoog risico: \n
@@ -1374,6 +1584,8 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e3823-1-1
       - source: Artikel 26 - Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e4350-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "14.0.3" #kan weg
     conclusion: "U bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem voor algemene doeleinden. Er is sprake van een systeemrisico en uw AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "Artikel 16 - Verplichtingen van aanbieders van AI-systemen met een hoog risico: \n
@@ -1441,6 +1653,8 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5576-1-1
       - source: Artikel 55 - Verplichtingen van aanbieders van AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5730-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "14.0.4" #kan weg
     conclusion: "U bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem voor algemene doeleinden. Er is sprake van een systeemrisico."
     obligation: "Artikel 16 - Verplichtingen van aanbieders van AI-systemen met een hoog risico: \n
@@ -1494,6 +1708,8 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5576-1-1
       - source: Artikel 55 - Verplichtingen van aanbieders van AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5730-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "14.0.5"
     conclusion: "U bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "Artikel 16 - Verplichtingen van aanbieders van AI-systemen met een hoog risico: \n
@@ -1555,6 +1771,8 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
       - source: Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5576-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "14.0.6"
     conclusion: "U bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem voor algemene doeleinden."
     obligation: "Artikel 16 - Verplichtingen van aanbieders van AI-systemen met een hoog risico: \n
@@ -1603,6 +1821,8 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e4350-1-1
       - source: Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5576-1-1
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   # Conclusies 15.0 tm 15.8 zijn overig
   - conclusionId: "15.0"
     conclusion: "U gebruikt geen algoritme. De AI-verordening is niet van toepassing."
