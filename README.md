@@ -11,7 +11,7 @@ De Kubernetes deployment code staat bij  [infra](https://github.com/MinBZK/ai-va
 
 Door deze beslisboom te doorlopen, krijgt uw organisatie inzicht in de volgende vragen:
 
-- Is er sprake van een **AI-systeem** , een **AI-systeem voor algemene doeleinden** of een **AI-model voor algemene doeleinden**?
+- Is er sprake van een **AI-systeem**, een **AI-systeem voor algemene doeleinden** of een **AI-model voor algemene doeleinden**?
 - Is het systeem/model **open source** of niet?
 - Is de AI-verordening van toepassing? Is er sprake van een **uitzonderingsgrond**?
 - Binnen welke **risicocategorie** valt het AI-systeem?
