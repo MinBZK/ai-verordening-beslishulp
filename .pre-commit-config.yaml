@@ -22,7 +22,7 @@ repos:
     hooks:
     -   id: validate-schema
         name: validate schema
-        entry: sh -c './script/validate --schema_file schemas/base.schema.json --yaml_file decision-tree.yaml'
+        entry: sh -c './script/validate --file_pairs schemas/schema_decision_tree.json:decision-tree.yaml schemas/schema_definitions.json:definitions.yaml'
         language: python
         additional_dependencies: [jsonschema, pyyaml]
         pass_filenames: false

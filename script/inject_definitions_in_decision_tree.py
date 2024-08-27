@@ -87,5 +87,5 @@ for c in decision_tree.get("conclusions", []):
         )
 
 # Save the modified decision_tree back to a YAML file
-with open("frontend/public/decision-tree.json", "w+") as file:
+with open("frontend/src/assets/decision-tree.json", "w+") as file:
     json.dump(decision_tree, file)

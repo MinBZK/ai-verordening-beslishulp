@@ -25,7 +25,7 @@ Om u te helpen bij het beantwoorden van de vragen, zijn relevante overwegingen /
 
 De beslisboom is gevat in [decision-tree.yaml](decision-tree.yaml). U kunt deze bekijken met elke editor die u fijn vindt.
 
-De beslisboom heeft componenten die vastgelegd zijn in een schema. Zie [schema](schemas/base.schema.json). Dit schema zorgt ervoor dat het systeem weet welke velden verwacht worden.
+De beslisboom heeft componenten die vastgelegd zijn in een schema. Zie [schema_decision_tree.json](schemas/schema_decision_tree.json). Dit schema zorgt ervoor dat het systeem weet welke velden verwacht worden.
 
 De beslisboom is opgebouwd uit de volgende componenten:
 
@@ -58,6 +58,8 @@ Conclusion:               # definitie van 1 eindconclusie
   source: string          # optioneel: een verwijzing, naar bijvoorbeeld een wetsartikel
   source_url: string      # optioneel: een link naar de bovengenoemde verwijzing
 ```
+
+Naast de beslisboom is er ook een [definitions.yaml](definitions.yaml) bestand toegevoegd. Dit bestand vat alle relevante definities die de beslisboom ondersteunen, gebaseerd op de [Begrippenlijst van het algoritmekader](https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst). Het verwachte schema van velden is gedocumenteerd in [schema_definitions.json](schemas/schema_definitions.json).
 
 ## Frontend
 
@@ -106,10 +108,10 @@ kubectl apply -k infra/
 
 ## Validatie schema
 
-Door het volgende script te runnen, kunt u controlen of het bestand decision-tree.yaml (technisch) valide is. Eventuele (syntax)fouten worden hiermee aangegeven.
+Door het volgende script te runnen, kunt u controlen of het bestand decision-tree.yaml en het bestand definitions.yaml (technisch) valide zijn. Eventuele (syntax)fouten worden hiermee aangegeven.
 
 ```sh
-./script/validate --schema_file schemas/base.schema.json --yaml_file decision-tree.yaml
+./script/validate --file_pairs schemas/schema_decision_tree.json:decision-tree.yaml schemas/schema_definitions.json:definitions.yaml
 ```
 
 ## Pre-commit
