@@ -59,7 +59,7 @@ Conclusion:               # definitie van 1 eindconclusie
   source_url: string      # optioneel: een link naar de bovengenoemde verwijzing
 ```
 
-Naast de beslisboom is er ook een [definitions.yaml](definitions.yaml) bestand toegevoegd. Dit bestand vat alle relevante definities die de beslisboom ondersteunen, gebaseerd op de [Begrippenlijst van het algoritmekader](https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst). Het verwachte schema van velden is gedocumenteerd in [schema_definitions.json](schemas/schema_definitions.json).
+Naast de beslisboom is er ook een [definitions.yaml](definitions.yaml) bestand. Dit bestand bevat alle relevante definities die de beslisboom ondersteunen en extra uitleg nodig hebben, gebaseerd op de [Begrippenlijst van het algoritmekader](https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst). Het verwachte schema van velden is gedocumenteerd in [schema_definitions.json](schemas/schema_definitions.json).
 
 ## Frontend
 

@@ -18,7 +18,7 @@
         },
         "required": ["term", "definition"],
         "additionalProperties": false
-      }
+      , "minItems": 1}
     }
   },
   "required": ["definitions"],
