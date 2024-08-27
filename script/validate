@@ -11,16 +11,6 @@ from jsonschema import validate
 # Argument parsing
 parser = argparse.ArgumentParser()
 parser.add_argument(
-    "--schema_file",
-    help="file location of the JSON schema file to check the YAML against",
-    type=str,
-)
-parser.add_argument(
-    "--yaml_file",
-    help="file location of te YAML file to check the schema against",
-    type=str,
-)
-parser.add_argument(
     "--file_pairs",
     nargs="+",  # Accept multiple pairs of schema and YAML files
     help="Pairs of schema and YAML files, in the format schema1.json:file1.yaml schema2.json:file2.yaml",
@@ -56,9 +46,6 @@ if args.file_pairs:
     for pair in args.file_pairs:
         schema_file, yaml_file = pair.split(":")
         validate_pair(schema_file, yaml_file)
-# Handle single schema and YAML file validation
-elif args.schema_file and args.yaml_file:
-    validate_pair(args.schema_file, args.yaml_file)
 else:
     print(
         "Error: Please provide either --schema_file and --yaml_file for a single validation, or --file_pairs for multiple validations."

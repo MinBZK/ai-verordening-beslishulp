@@ -131,7 +131,6 @@ function back() {
             :question="currentQuestion.question"
             :id="currentQuestion.questionId"
             :sources="currentQuestion.sources"
-            :definitions="currentQuestion.definitions"
           />
           <SingleAnswer
             :answers="currentQuestion.answers"

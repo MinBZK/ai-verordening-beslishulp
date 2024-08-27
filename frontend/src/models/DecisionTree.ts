@@ -25,17 +25,9 @@ export const Source = t.type({
 })
 export type Source = t.TypeOf<typeof Source>
 
-export const Definition = t.type({
-  term: t.string,
-  definition: t.string,
-  url: t.union([t.string, t.undefined])
-})
-export type Definition = t.TypeOf<typeof Definition>
-
 export const Question = t.type({
   questionId: t.string,
   question: t.string,
-  definitions: t.union([t.array(Definition), t.undefined]),
   sources: t.union([t.array(Source), t.undefined]),
   description: t.union([t.string, t.undefined]),
   answers: t.array(Answer)
