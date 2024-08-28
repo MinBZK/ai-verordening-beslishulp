@@ -61,22 +61,6 @@
       "id": "#/$defs/Description",
       "type": "string"
     },
-    "Definition": {
-      "id": "#/$defs/Definition",
-      "type": "object",
-      "properties": {
-        "term": {
-          "type": "string"
-        },
-        "definition": {
-          "type": "string"
-        },
-        "url": {
-          "type": "string"
-        }
-      },
-      "required": ["term", "definition"]
-    },
     "AnswerComment": {
       "id": "#/$defs/AnswerComment",
       "type": "string"
@@ -199,12 +183,6 @@
           "$ref": "#/$defs/Description",
           "type": "string"
         },
-        "definitions": {
-          "type": "array",
-          "items": {
-            "$ref": "#/$defs/Definition"
-          }
-        },
         "questionType": {
           "type": "string",
           "enum": ["MultipleChoice"]
@@ -238,12 +216,6 @@
         "description": {
           "$ref": "#/$defs/Description",
           "type": "string"
-        },
-        "definitions": {
-          "type": "array",
-          "items": {
-            "$ref": "#/$defs/Definition"
-          }
         },
         "questionType": {
           "type": "string",
@@ -280,12 +252,6 @@
           "type": "array",
           "items": {
             "$ref": "#/$defs/Source"
-          }
-        },
-        "definitions": {
-          "type": "array",
-          "items": {
-            "$ref": "#/$defs/Definition"
           }
         }
       },

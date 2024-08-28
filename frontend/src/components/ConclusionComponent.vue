@@ -24,7 +24,7 @@ import { ExclamationTriangleIcon } from '@heroicons/vue/24/outline'
           <DialogTitle as="h3" class="text-base font-semibold leading-6 text-gray-900">
             Conclusie</DialogTitle>
           <p class="text-sm text-gray-500">
-            {{ conclusion }}
+            <span v-html="conclusion"></span>
             <slot />
           </p>
 
@@ -32,7 +32,7 @@ import { ExclamationTriangleIcon } from '@heroicons/vue/24/outline'
           <DialogTitle as="h4" class="text-sm font-semibold leading-5 text-gray-900 relative top-5">
             Verplichtingen</DialogTitle>
           <p style="white-space: pre-line" class="text-sm text-gray-500 relative top-5">
-            {{ obligation }}
+            <span v-html="obligation"></span>
             <slot />
           </p>
 
@@ -68,7 +68,8 @@ import { ExclamationTriangleIcon } from '@heroicons/vue/24/outline'
           <DialogTitle as="h4" class="text-sm font-semibold leading-5 text-gray-900 relative top-5">
             Contact</DialogTitle>
           <p class="text-sm text-gray-500 relative top-5">
-            Mocht u vragen of opmerkingen hebben naar aanleiding van deze beslisboom, mail dan gerust naar ai-verordening@minbzk.nl.
+            Mocht u vragen of opmerkingen hebben naar aanleiding van deze beslisboom, mail dan gerust naar
+            <a href="mailto:ai-verordening@minbzk.nl" target="_blank" class="text-blue-700 underline">ai-verordening@minbzk.nl</a>.
             <slot />
           </p>
 

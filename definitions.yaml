@@ -17,10 +17,12 @@ definitions:
   definition: "Een AI-model, ook wanneer het is getraind met een grote hoeveelheid data met behulp van self-supervision op grote schaal, dat een aanzienlijk algemeen karakter vertoont en in staat is op competente wijze een breed scala aan verschillende taken uit te voeren, ongeacht de wijze waarop het model in de handel wordt gebracht, en dat kan worden geïntegreerd in een verscheidenheid aan systemen verder in de AI-waardeketen of toepassingen verder in de AI-waardeketen, met uitzondering van AI-modellen die worden gebruikt voor onderzoek, ontwikkeling of prototypingactiviteiten alvorens zij in de handel worden gebracht."
 - term: AI-modellen voor algemene doeleinden
   definition: "Een AI-model, ook wanneer het is getraind met een grote hoeveelheid data met behulp van self-supervision op grote schaal, dat een aanzienlijk algemeen karakter vertoont en in staat is op competente wijze een breed scala aan verschillende taken uit te voeren, ongeacht de wijze waarop het model in de handel wordt gebracht, en dat kan worden geïntegreerd in een verscheidenheid aan systemen verder in de AI-waardeketen of toepassingen verder in de AI-waardeketen, met uitzondering van AI-modellen die worden gebruikt voor onderzoek, ontwikkeling of prototypingactiviteiten alvorens zij in de handel worden gebracht."
-- term: AI-systeem
-  definition: "Een op een machine gebaseerd systeem dat is ontworpen om met verschillende niveaus van autonomie te werken en dat na het inzetten ervan aanpassingsvermogen kan vertonen, en dat, voor expliciete of impliciete doelstellingen, uit de ontvangen input afleidt hoe output te genereren zoals voorspellingen, inhoud, aanbevelingen of beslissingen die van invloed kunnen zijn op fysieke of virtuele omgevingen."
 - term: AI-systeem voor algemene doeleinden
   definition: "Een AI-systeem dat is gebaseerd op een AI-model voor algemene doeleinden en dat verschillende doeleinden kan dienen, zowel voor direct gebruik als voor integratie in andere AI-systemen."
+- term: AI-systeem
+  definition: "Een op een machine gebaseerd systeem dat is ontworpen om met verschillende niveaus van autonomie te werken en dat na het inzetten ervan aanpassingsvermogen kan vertonen, en dat, voor expliciete of impliciete doelstellingen, uit de ontvangen input afleidt hoe output te genereren zoals voorspellingen, inhoud, aanbevelingen of beslissingen die van invloed kunnen zijn op fysieke of virtuele omgevingen."
+- term: AI-systemen
+  definition: "Een op een machine gebaseerd systeem dat is ontworpen om met verschillende niveaus van autonomie te werken en dat na het inzetten ervan aanpassingsvermogen kan vertonen, en dat, voor expliciete of impliciete doelstellingen, uit de ontvangen input afleidt hoe output te genereren zoals voorspellingen, inhoud, aanbevelingen of beslissingen die van invloed kunnen zijn op fysieke of virtuele omgevingen."
 - term: AI-testomgeving voor regelgeving
   definition: "Een door een bevoegde autoriteit opgezet gecontroleerd kader dat aanbieders of toekomstige aanbieders van AI-systemen de mogelijkheid biedt een innovatief AI-systeem te ontwikkelen, trainen, valideren en testen, zo nodig onder reële omstandigheden, volgens een testomgevingsplan, voor een beperkte periode en onder begeleiding van een toezichthouder."
 - term: algoritme
@@ -57,14 +59,18 @@ definitions:
   definition: "Een aanbieder van een AI-systeem, met inbegrip van een AI-systeem voor algemene doeleinden, waarin een AI-model is geïntegreerd, ongeacht of het model door hemzelf wordt verstrekt en verticaal geïntegreerd is of door een andere entiteit wordt aangeboden op basis van contractuele betrekkingen."
 - term: etnisch profileren
   definition: "Het gebruik door overheidsinstanties van selectiecriteria als ras, huidskleur, taal, religie, nationaliteit of nationale of etnische afkomst bij de uitoefening van toezichts-, handhavings- en opsporingsbevoegdheden, zonder dat daarvoor een object"
-- term: fundamentele rechten
-  definition: "De rechten en vrijheden van de mens zoals die zijn vastgelegd in het Handvest van de grondrechten van de Europese Unie en het Europees Verdrag tot bescherming van de rechten van de mens en de fundamentele vrijheden."
-- term: Generatieve AI
-  definition: "Een AI-systeem dat in staat is om uit ingevoerde tekst, audio of video, of andere media-invoer, inhoud te genereren, ongeacht of deze gegevens op werkelijke gebeurtenissen berusten."
-- term: generieke toepassingsmogelijkheden
-  definition: "De mogelijkheid om een AI-model voor algemene doeleinden op verschillende toepassingsgebieden en in uiteenlopende contexten in te zetten, onafhankelijk van de wijze waarop het model in de handel wordt gebracht."
-- term: gebruiker
-  definition: "Elke natuurlijke of rechtspersoon, overheidsinstantie, agentschap of ander orgaan dat/dat gebruik maakt van een AI-systeem, met uitzondering van degene die louter handelt als consument."
+- term: gemeenschappelijke specificatie
+  definition: "Een reeks technische specificaties zoals gedefinieerd in artikel 2, punt 4, van Verordening (EU) nr. 1025/2012, om te voldoen aan bepaalde voorschriften zoals vastgelegd in de AI-verordening."
+- term: gebruiksinstructies
+  definition: "De door de aanbieder verstrekte informatie om de gebruiksverantwoordelijke te informeren over met name het beoogde doel en juiste gebruik van een AI-systeem."
+- term: gebruiksverantwoordelijke
+  definition: "Een natuurlijke of rechtspersoon, overheidsinstantie, agentschap of ander orgaan die/dat een AI-systeem onder eigen verantwoordelijkheid gebruikt, tenzij het AI-systeem wordt gebruikt in het kader van een persoonlijke niet- beroepsactiviteit."
+- term: geharmoniseerde norm
+  definition: "Een Europese norm die op verzoek van de Commissie is vastgesteld met het oog op de toepassing van harmonisatiewetgeving van de Unie. Een geharmoniseerde norm zoals gedefinieerd in artikel 2, lid 1,punt c), van Verordening (EU) nr. 1025/2012."
+- term: geïnformeerde toestemming
+  definition: "De vrijelijk gegeven, specifieke, ondubbelzinnige en vrijwillige uiting door een proefpersoon van zijn of haar bereidheid deel te nemen aan een bepaalde test onder reële omstandigheden, na geïnformeerd te zijn over alle aspecten van de test die van belang zijn voor zijn of haar beslissing om deel te nemen."
+- term: gemachtigde
+  definition: "Een natuurlijke of rechtspersoon die zich bevindt of gevestigd is in de Unie die een schriftelijke machtiging heeft gekregen en aanvaard van een aanbieder van een AI-systeem of een AI-model voor algemene doeleinden om namens die aanbieder de verplichtingen en procedures van deze verordening respectievelijk na te komen en uit te voeren."
 - term: gemeenschappelijke specificatie
   definition: "Een reeks technische specificaties zoals gedefinieerd in artikel 2, punt 4, van Verordening (EU) nr. 1025/2012, om te voldoen aan bepaalde voorschriften zoals vastgelegd in deze verordening."
 - term: gevoelige operationele gegevens
@@ -157,5 +163,7 @@ definitions:
   definition: "Een rechtspersoon of overheidsinstantie die, alleen of samen met anderen, het doel van en de middelen voor de verwerking van persoonsgegevens vaststelt."
 - term: zwevendekommabewerking
   definition: "Elke wiskundige bewerking of toewijzing met zwevendekommagetallen, die een subset vormen van de reële getallen die gewoonlijk op computers worden gerepresenteerd door een geheel getal met een vaste precisie, geschaald door een gehele exponent van een vaste basis."
-- term: floating-point operation (FLOP)
+- term: floating-point operation
+  definition: "Elke wiskundige bewerking of toewijzing met zwevendekommagetallen, die een subset vormen van de reële getallen die gewoonlijk op computers worden gerepresenteerd door een geheel getal met een vaste precisie, geschaald door een gehele exponent van een vaste basis."
+- term: FLOPs
   definition: "Elke wiskundige bewerking of toewijzing met zwevendekommagetallen, die een subset vormen van de reële getallen die gewoonlijk op computers worden gerepresenteerd door een geheel getal met een vaste precisie, geschaald door een gehele exponent van een vaste basis."

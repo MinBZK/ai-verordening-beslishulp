@@ -6,6 +6,7 @@ import { Answer, Conclusions, DecisionTree, Questions, Redirect } from '@/models
 import { storeToRefs } from 'pinia'
 import { fold } from 'fp-ts/lib/Either'
 import * as t from 'io-ts'
+import decision_tree_json from '@/assets/decision-tree.json'
 
 import { useQuestionStore } from '@/stores/QuestionStore'
 
@@ -28,15 +29,7 @@ const error = ref<string | null>(null)
 
 onMounted(async () => {
   try {
-    const response = await fetch('/decision-tree.yaml')
-    if (!response.ok) {
-      throw new Error(`Error getting questionair data: ${response.status}`)
-    }
-
-    const text = await response.text()
-    const yamlData = load(text)
-
-    const validationResult: t.Validation<any> = DecisionTree.decode(yamlData)
+    const validationResult: t.Validation<any> = DecisionTree.decode(decision_tree_json)
     fold(
       (errors: t.Errors) => {
         console.log('Validation errors: ' + errors.length)
@@ -138,7 +131,6 @@ function back() {
             :question="currentQuestion.question"
             :id="currentQuestion.questionId"
             :sources="currentQuestion.sources"
-            :definitions="currentQuestion.definitions"
           />
           <SingleAnswer
             :answers="currentQuestion.answers"

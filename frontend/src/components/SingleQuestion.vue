@@ -2,7 +2,6 @@
 interface Props {
   id: string
   question: string
-  definitions: {   term: string;   definition: string; url:  string | undefined; }[] | undefined
   sources: {   source: string;   url: string | undefined; }[] | undefined
 }
 defineProps<Props>()
@@ -17,21 +16,9 @@ defineProps<Props>()
     >
   </legend>
   <p style="white-space: pre-line" class="mt-1 text-sm leading-6 text-gray-600">
-    {{ question }}
+    <span v-html="question"></span>
     <slot />
   </p>
-  <div>
-    <!-- Definitions Section -->
-    <DialogTitle v-if="definitions && definitions.length" class="text-sm font-semibold leading-5 text-gray-900 relative top-5">
-      Definities
-    </DialogTitle>
-
-    <ul v-if="definitions && definitions.length" class="list-disc list-inside ml-5 relative top-5">
-      <li v-for="(item, index) in definitions" :key="index" class="text-sm text-gray-700">
-        <strong>{{ item.term }}:</strong> {{ item.definition }}
-      </li>
-    </ul>
-  </div>
 
   <div>
     <!--Sources section-->
