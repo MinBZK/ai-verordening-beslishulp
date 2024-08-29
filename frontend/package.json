@@ -16,7 +16,7 @@
     "@headlessui/vue": "^1.7.22",
     "@heroicons/vue": "^2.1.5",
     "@types/jexl": "^2.3.4",
-    "fp-ts": "^2.16.8",
+    "fp-ts": "^2.16.9",
     "io-ts": "^2.2.21",
     "jexl": "^2.3.0",
     "js-yaml": "^4.1.0",
