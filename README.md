@@ -8,6 +8,8 @@
 - Overleg de uitkomsten van de beslisboom met een expert.
 - In de beslisboom staat alleen informatie over de rollen van de overheid als [aanbieder](https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst) en als [gebruiksverantwoordelijke](https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst).
 
+Voor vragen of opmerkingen over de beslisboom mail je naar: [ai-verordening@minbzk.nl](mailto::ai-verordening@minbzk.nl).
+
 # AI-act-beslisboom
 
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/MinBZK/ai-act-decisiontree/main.svg?badge_token=d3dKEK97RwC1II15_W-nng)](https://results.pre-commit.ci/latest/github/MinBZK/ai-act-decisiontree/main?badge_token=d3dKEK97RwC1II15_W-nng)
