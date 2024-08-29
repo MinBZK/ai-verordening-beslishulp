@@ -21,7 +21,7 @@
     "jexl": "^2.3.0",
     "js-yaml": "^4.1.0",
     "pinia": "^2.2.0",
-    "vue": "^3.4.31"
+    "vue": "^3.4.38"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",
