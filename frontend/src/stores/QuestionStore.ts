@@ -2,7 +2,7 @@ import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
 export const useQuestionStore = defineStore('question', () => {
-  const initialAcceptedDisclaimer = JSON.parse(localStorage.getItem('acceptedDisclaimer') || '0')
+  const initialAcceptedDisclaimer = JSON.parse(sessionStorage.getItem('acceptedDisclaimer') || '0')
   const initialAnswers = JSON.parse(localStorage.getItem('answers') || '[]')
   const initialLabels = JSON.parse(localStorage.getItem('labels') || '{}')
   const initialQuestionId = JSON.parse(localStorage.getItem('currentquestion') || '0')
@@ -55,7 +55,7 @@ export const useQuestionStore = defineStore('question', () => {
 
   function acceptDisclaimer() {
     AcceptedDisclaimer.value = '1'
-    localStorage.setItem('acceptedDisclaimer', '1')
+    sessionStorage.setItem('acceptedDisclaimer', '1')
   }
 
   return { AcceptedDisclaimer, QuestionId, answers, setQuestionId, addAnswer, getJsonLabels, addLabel, revertAnswer,
