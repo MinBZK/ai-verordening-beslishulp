@@ -1,6 +1,6 @@
 # Beslisboom AI-Verordening bètaversie
 
-Met deze beslisboom stel je vast of de AI-verordening geldt voor jouw overheidsorganisatie. En aan welke vereisten je dan moet voldoen.
+**Met deze beslisboom stel je vast of de AI-verordening geldt voor jouw overheidsorganisatie. En aan welke vereisten je dan moet voldoen.**
 
 - Deze beslisboom is een bètaversie (betekenende dat deze website in ontwikkeling is. Volgende versies ontstaan op een open manier.)
 - De informatie is niet compleet en er kunnen fouten in staan.
