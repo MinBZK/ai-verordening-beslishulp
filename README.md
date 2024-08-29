@@ -1,4 +1,12 @@
-# DIT PROJECT IS IN ONTWIKKELING
+# Beslisboom AI-Verordening bètaversie
+
+**Met deze beslisboom stel je vast of de AI-verordening geldt voor jouw overheidsorganisatie. En aan welke vereisten je dan moet voldoen.**
+
+- Deze beslisboom is een bètaversie (betekenende dat deze website in ontwikkeling is. Volgende versies ontstaan op een open manier.)
+- De informatie is niet compleet en er kunnen fouten in staan.
+- Je bent zelf verantwoordelijk voor de informatie die je gebruikt.
+- Overleg de uitkomsten van de beslisboom met een expert.
+- In de beslisboom staat alleen informatie over de rollen van de overheid als [aanbieder](https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst) en als [gebruiksverantwoordelijke](https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst).
 
 # AI-act-beslisboom
 
