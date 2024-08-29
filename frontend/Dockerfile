@@ -17,6 +17,5 @@ LABEL org.opencontainers.image.source=https://github.com/MinBZK/AI-act-beslisboo
 COPY --from=build /app/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY nginx.default.conf /etc/nginx/conf.d/default.conf
-COPY nginx.htpasswd /etc/nginx/.htpasswd
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
