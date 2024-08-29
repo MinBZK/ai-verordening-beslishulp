@@ -19,7 +19,7 @@ import { ExclamationTriangleIcon } from '@heroicons/vue/24/outline'
           >
           <div class="mt-2">
             <p class="text-sm text-gray-500">
-              Deze website is in ontwikkeling. Alle versies ontstaan op een open manier.
+              Deze website is in ontwikkeling. Volgende versies ontstaan op een open manier.
             </p>
             <p class="text-sm text-gray-500 underline">
               <a underline href="https://github.com/MinBZK/ai-act-decisiontree">Iedereen mag opmerkingen of suggesties
