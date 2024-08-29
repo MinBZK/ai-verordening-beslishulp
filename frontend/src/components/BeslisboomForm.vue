@@ -15,10 +15,10 @@ import SingleQuestion from '@/components/SingleQuestion.vue'
 import Conclusion from '@/components/ConclusionComponent.vue'
 import DefaultLoader from '@/components/DefaultLoader.vue'
 import DefaultError from '@/components/DefaultError.vue'
+import Disclaimer from '@/components/DisclaimerForm.vue'
 
 const questionStore = useQuestionStore()
-
-const { QuestionId } = storeToRefs(questionStore)
+const { AcceptedDisclaimer, QuestionId } = storeToRefs(questionStore)
 
 const data_questions = ref<Questions>([])
 const data_conclusions = ref<Conclusions>([])
@@ -108,54 +108,70 @@ function back() {
   questionStore.revertAnswer()
   conclusionId.value = null
 }
+
+function acceptDisclaimer() {
+  questionStore.acceptDisclaimer()
+}
 </script>
 
 <template>
-  <div
-    class="ai-decisiontree flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6"
-  >
-    <DefaultLoader :loading="isLoading" />
-
-    <DefaultError :error="error" />
-    <Conclusion
-      v-if="findConclusion"
-      :conclusion="findConclusion.conclusion"
-      :obligation="findConclusion.obligation"
-      :labels="questionStore.getJsonLabels()"
-      :sources="findConclusion.sources"
-    />
-    <div>
-      <fieldset>
-        <div v-if="currentQuestion" class="ai-decisiontree-form-question">
-          <SingleQuestion
-            :question="currentQuestion.question"
-            :id="currentQuestion.questionId"
-            :sources="currentQuestion.sources"
-          />
-          <SingleAnswer
-            :answers="currentQuestion.answers"
-            :id="currentQuestion.questionId"
-            @answered="givenAnswer"
-            class="relative top-5"
-          />
-        </div>
-      </fieldset>
-    </div>
-  </div>
-
-  <div
-    class="mt-6 flex items-center justify-end gap-x-6 border-t border-gray-200 bg-white px-4 py-3 sm:px-6"
-  >
-    <button @click="reset" type="button" class="text-sm font-semibold leading-6 text-gray-900">
-      Reset
-    </button>
-    <button
-      @click="back"
-      v-if="questionId !== '0'"
-      type="button"
-      class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+  <div v-if="AcceptedDisclaimer == '0'">
+    <Disclaimer />
+    <button @click="acceptDisclaimer" type="button"
+            class="text-sm font-semibold leading-6 text-gray-900 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
     >
-      Terug
+      Accept
     </button>
+  </div>
+  <div v-else>
+    <div
+      class="ai-decisiontree flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6"
+
+    >
+      <DefaultLoader :loading="isLoading" />
+
+      <DefaultError :error="error" />
+      <Conclusion
+        v-if="findConclusion"
+        :conclusion="findConclusion.conclusion"
+        :obligation="findConclusion.obligation"
+        :labels="questionStore.getJsonLabels()"
+        :sources="findConclusion.sources"
+      />
+      <div>
+        <fieldset>
+          <div v-if="currentQuestion" class="ai-decisiontree-form-question">
+            <SingleQuestion
+              :question="currentQuestion.question"
+              :id="currentQuestion.questionId"
+              :sources="currentQuestion.sources"
+            />
+            <SingleAnswer
+              :answers="currentQuestion.answers"
+              :id="currentQuestion.questionId"
+              @answered="givenAnswer"
+              class="relative top-5"
+            />
+          </div>
+        </fieldset>
+      </div>
+    </div>
+
+    <div
+      class="mt-6 flex items-center justify-end gap-x-6 border-t border-gray-200 bg-white px-4 py-3 sm:px-6"
+
+    >
+      <button @click="reset" type="button" class="text-sm font-semibold leading-6 text-gray-900">
+        Reset
+      </button>
+      <button
+        @click="back"
+        v-if="questionId !== '0'"
+        type="button"
+        class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+      >
+        Terug
+      </button>
+    </div>
   </div>
 </template>
