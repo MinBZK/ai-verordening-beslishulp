@@ -89,6 +89,8 @@ class Answer:
 class Question:
     questionId: str
     question: str
+    simplifiedQuestion: str
+    group: str
     questionType: str
     answers: List[Answer]
     definitions: Optional[List[Definition]] = None
@@ -130,11 +132,11 @@ def find_node_by_id(node_id):
     raise Exception(f'Node with id {node_id} not found')
 
 for conclusion in conclusions:
-    nodes.append(CustomNode(id_='c-'+conclusion.conclusionId, shape='hexagon', callback_tooltip=conclusion.conclusion))
+    nodes.append(CustomNode(id_='c-'+conclusion.conclusionId, content = conclusion.conclusion, shape='hexagon', callback_tooltip=conclusion.obligation))
 
 for question in questions:
     sub_nodes = []
-    nodes.append(CustomNode(id_="q-"+question.questionId, shape='round-edge', callback_tooltip=question.question))
+    nodes.append(CustomNode(id_="q-"+question.questionId, content = question.questionId+": "+question.simplifiedQuestion, shape='round-edge', callback_tooltip=question.question))
 
 for question in questions:
     answers: List[Answer] = [Answer(**a) for a in question.answers]
@@ -170,7 +172,7 @@ for question in questions:
 
 
 
-config = Config(theme=Themes.BASE, primary_color='#01699B', primary_text_color='#000000', primary_border_color='#01699B', line_color='#000000')
+config = Config(theme=Themes.BASE, primary_color='#01689b', primary_text_color='#FDFDFD', primary_border_color='#154273', line_color='#154273')
 
 orientation = Direction.TOP_TO_BOTTOM
 
@@ -237,7 +239,7 @@ with open('decision-tree.html', "w") as file:
      {script}
   </pre>
 
-  <script>mermaid.initialize({ startOnLoad: true, securityLevel: 'loose' })</script>
+  <script>mermaid.initialize({ maxTextSize: 9000000000, startOnLoad: true, securityLevel: 'loose' })</script>
 </body>
 
 </html>

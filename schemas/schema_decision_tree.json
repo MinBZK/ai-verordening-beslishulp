@@ -57,6 +57,14 @@
       },
       "required": ["source"]
     },
+    "SimplifiedQuestion":{
+      "id": "#/$defs/SimplifiedQuestion",
+      "type": "string"
+    },
+    "Group": {
+      "id": "#/$defs/Group",
+      "type": "string"
+    },
     "Description": {
       "id": "#/$defs/Description",
       "type": "string"
@@ -173,6 +181,12 @@
         "question": {
           "$ref": "#/$defs/Question"
         },
+        "simplifiedQuestion":{
+          "$ref": "#/$defs/SimplifiedQuestion"
+        },
+        "group": {
+          "$ref": "#/$defs/Group"
+        },
         "sources": {
           "type": "array",
           "items": {
@@ -195,7 +209,7 @@
           "minItems": 2
         }
       },
-      "required": ["questionId", "question", "questionType", "answers"]
+      "required": ["questionId", "question", "simplifiedQuestion","group", "answers"]
     },
     "SingleChoiceQuestion": {
       "id": "#/$defs/SingleChoiceQuestion",
@@ -206,6 +220,12 @@
         },
         "question": {
           "$ref": "#/$defs/Question"
+        },
+        "simplifiedQuestion":{
+          "$ref": "#/$defs/SimplifiedQuestion"
+        },
+        "group": {
+          "$ref": "#/$defs/Group"
         },
         "sources": {
           "type": "array",
@@ -230,7 +250,7 @@
           "maxItems": 2
         }
       },
-      "required": ["questionId", "question", "questionType", "answers"]
+      "required": ["questionId", "question", "simplifiedQuestion", "group", "answers"]
     },
     "Conclusion": {
       "id": "#/$defs/Conclusion",
