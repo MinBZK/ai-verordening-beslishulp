@@ -24,13 +24,7 @@ import { ExclamationTriangleIcon } from '@heroicons/vue/24/outline'
               <li>Deze beslisboom is een betaversie: de informatie is niet compleet en er kunnen fouten in staan.</li>
               <li>Je bent zelf verantwoordelijk voor de informatie die je gebruikt.</li>
               <li>Overleg de uitkomsten van de beslisboom met een expert.</li>
-              <li>In de beslisboom staat alleen informatie over de rollen van de overheid als <a
-                class=underline
-                href="https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst">aanbieder</a>
-                en als <a
-                  class=underline
-                  href="https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst">gebruiksverantwoordelijke</a>.
-              </li>
+              <li>De beslisboom is bedoeld voor overheden die AI-systemen aanbieden, of gebruiken onder eigen verantwoordelijkheid.</li>
             </ul>
             <p>Voor vragen of opmerkingen over de beslisboom mail je naar: <a class=underline href="mailto::ai-verordening@minbzk.nl">ai-verordening@minbzk.nl</a>.
             </p>
