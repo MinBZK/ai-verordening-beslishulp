@@ -12,19 +12,21 @@ import { ExclamationTriangleIcon } from '@heroicons/vue/24/outline'
         >
           <ExclamationTriangleIcon class="h-6 w-6 text-red-600" aria-hidden="true" />
         </div>
-        <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+        <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left text-gray-500">
           <DialogTitle as="h3" class="text-base font-semibold leading-6 text-gray-900"
-          >Disclaimer
+          >Beslisboom AI-Verordening <dfn id="betaversie"><abbr title="Deze website is in ontwikkeling. Volgende versies ontstaan op een open manier. Iedereen mag opmerkingen of suggesties geven.">bètaversie</abbr> </dfn>
           </DialogTitle
           >
-          <div class="mt-2">
-            <p class="text-sm text-gray-500">
-              Deze website is in ontwikkeling. Volgende versies ontstaan op een open manier.
-            </p>
-            <p class="text-sm text-gray-500 underline">
-              <a underline href="https://github.com/MinBZK/ai-act-decisiontree">Iedereen mag opmerkingen of suggesties
-                geven.
-              </a>
+          <div class="mt-2 text-gray-500">
+            <p class="font-bold">Met deze beslisboom stel je vast of de AI-verordening geldt voor jouw overheidsorganisatie. En aan welke
+              vereisten je dan moet voldoen.</p>
+            <ul style="list-style-type:disc;">
+              <li>Deze beslisboom is een betaversie: de informatie is niet compleet en er kunnen fouten in staan.</li>
+              <li>Je bent zelf verantwoordelijk voor de informatie die je gebruikt.</li>
+              <li>Overleg de uitkomsten van de beslisboom met een expert.</li>
+              <li>De beslisboom is bedoeld voor overheden die AI-systemen aanbieden, of gebruiken onder eigen verantwoordelijkheid.</li>
+            </ul>
+            <p>Voor vragen of opmerkingen over de beslisboom mail je naar: <a class=underline href="mailto::ai-verordening@minbzk.nl">ai-verordening@minbzk.nl</a>.
             </p>
           </div>
         </div>
