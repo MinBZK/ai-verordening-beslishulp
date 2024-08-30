@@ -5,7 +5,7 @@ questions:
   - questionId: "0"
     question: "Bevat de (beoogde) toepassing een algoritme?"
     simplifiedQuestion: "Algoritme"
-    group: Soort toepassing
+    group: soort toepassing
     questionType: SingleChoice
     sources:
       - source: Aandacht voor Algoritmes, Algemene Rekenkamer, 2021
@@ -29,7 +29,7 @@ questions:
   - questionId: "1.0"
     question: "Is de (beoogde) toepassing een AI-systeem?"
     simplifiedQuestion: "AI-systeem"
-    group: Soort toepassing
+    group: soort toepassing
     questionType: SingleChoice
     sources:
       - source: Overweging 12 - Begrip "AI-systeem"
@@ -43,7 +43,7 @@ questions:
   - questionId: "1.1"
     question: "Is de (beoogde) toepassing een AI-systeem voor algemene doeleinden?"
     simplifiedQuestion: "AI-systeem voor algemene doeleinden"
-    group: Soort toepassing
+    group: soort toepassing
     questionType: SingleChoice
     sources:
       - source: Overweging 12 - Begrip AI-systeem
@@ -63,7 +63,7 @@ questions:
   - questionId: "1.2"
     question: "Is de (beoogde) toepassing een AI-model voor algemene doeleinden?"
     simplifiedQuestion: "AI-model voor algemene doeleinden"
-    group: Soort toepassing
+    group: soort toepassing
     questionType: SingleChoice
     sources:
       - source: Lid 63 - "AI-model voor algemene doeleinden"

@@ -54,10 +54,11 @@ title: Decision Tree
 	init: {
 		"theme": "base",
 		"themeVariables": {
-			"primaryColor": "#01689b",
-			"primaryTextColor": "#FDFDFD",
-			"primaryBorderColor": "#154273",
-			"lineColor": "#154273"
+			"primaryColor": "#007bc7",
+			"primaryTextColor": "#000000",
+			"primaryBorderColor": "#007bc7",
+			"lineColor": "#154273",
+			"secondaryColor": "#CCE7F4"
 		}
 	}
 }%%
@@ -206,8 +207,8 @@ click q-9.1 callback "Valt uw toepassing onder één van de uitzonderingsgronden
 	q-1.0.2 -->|Ja| q-2.0
 	q-1.0.2 -->|Nee| q-2.0
 	q-2.0 -->|Ja| c-15.3
-	q-2.0 -->|Nee| q-3.0
-	q-2.0 -->|Nee| q-6.0
+	q-2.0 -->|Nee: AI-systeem, AI-systeem voor algemene doeleinden| q-3.0
+	q-2.0 -->|Nee: AI-model voor algemene doeleinden| q-6.0
 	q-3.0 -->|Ja| q-3.1
 	q-3.0 -->|Nee| q-4.0
 	q-3.1 -->|Ja| c-15.2
@@ -241,10 +242,10 @@ click q-9.1 callback "Valt uw toepassing onder één van de uitzonderingsgronden
 	q-6.0 -->|Ja| q-8.0
 	q-6.0 -->|Nee| q-8.0
 	q-7.0 -->|Ja| q-7.1
-	q-7.0 -->|Nee| q-8.0
-	q-7.0 -->|Nee| q-9.0
-	q-7.1 -->|Ja| q-8.0
-	q-7.1 -->|Ja| q-9.0
+	q-7.0 -->|Nee: geen open-source, open-source, hoog-risico AI, open-source, AI-model voor algemene doeleinden| q-8.0
+	q-7.0 -->|Nee: open-source, geen hoog-risico AI, niet-verboden AI| q-9.0
+	q-7.1 -->|Ja: geen open-source, open-source, hoog-risico AI| q-8.0
+	q-7.1 -->|Ja: open-source, geen hoog-risico AI, niet-verboden AI| q-9.0
 	q-7.1 -->|Nee| q-8.0
 	q-8.0 -->|Ja: AI-systeem, hoog-risico AI, transparantierisico| c-12.0.1
 	q-8.0 -->|Ja: AI-systeem, hoog-risico AI, geen transparantierisico| c-12.0.2
@@ -258,7 +259,7 @@ click q-9.1 callback "Valt uw toepassing onder één van de uitzonderingsgronden
 	q-8.0 -->|Ja: AI-model voor algemene doeleinden, geen systeemrisico, geen open-source| c-12.2.3
 	q-8.0 -->|Ja: AI-model voor algemene doeleinden, geen systeemrisico, open-source| c-12.2.4
 	q-8.0 -->|Nee| q-8.1
-	q-8.1 -->|Ja| q-8.2
+	q-8.1 -->|Ja: hoog-risico AI| q-8.2
 	q-8.1 -->|Ja: AI-systeem, geen hoog-risico AI, transparantierisico| c-13.0.3
 	q-8.1 -->|Ja: AI-systeem, geen hoog-risico AI, geen transparantierisico| c-13.0.4
 	q-8.1 -->|Ja: AI-systeem voor algemene doeleinden, geen hoog-risico AI, transparantierisico| c-13.1.6
@@ -295,4 +296,3 @@ click q-9.1 callback "Valt uw toepassing onder één van de uitzonderingsgronden
 </body>
 
 </html>
-        

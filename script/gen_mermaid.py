@@ -12,7 +12,6 @@ from mermaid.style import Style
 
 
 class CustomNode(Node):
-
     # add options to __init__ method
     def __init__(
         self,
@@ -25,14 +24,23 @@ class CustomNode(Node):
         styles: Optional[list[Style]] = None,
         direction: Union[str, Direction] = "LR",
         callback_tooltip: Optional[str] = None,
-
     ) -> None:
         # call super and use result to add the id
 
+        self.callback_tooltip = callback_tooltip.replace(
+            "\n", "#specialnewline#"
+        ).replace("\r", "")
 
-        self.callback_tooltip = callback_tooltip.replace('\n', '#specialnewline#').replace('\r', '')
-
-        super().__init__(id_=id_, content=content, shape=shape, sub_nodes=sub_nodes, href=href, href_type=href_type, styles=styles, direction=direction)
+        super().__init__(
+            id_=id_,
+            content=content,
+            shape=shape,
+            sub_nodes=sub_nodes,
+            href=href,
+            href_type=href_type,
+            styles=styles,
+            direction=direction,
+        )
 
     # overwrite __string__ method to include the node id
     def __str__(self) -> str:
@@ -41,10 +49,11 @@ class CustomNode(Node):
         mystr = super().__str__()
 
         mystr = "".join(
-                [mystr, "\n", f'click {self.id_} callback "{self.callback_tooltip}"']
-                )
+            [mystr, "\n", f'click {self.id_} callback "{self.callback_tooltip}"']
+        )
 
-        return  mystr
+        return mystr
+
 
 class CustomLink(Link):
     pass
@@ -52,7 +61,7 @@ class CustomLink(Link):
 
 # function to only remove all special characters
 def escape_for_mermaid(text):
-    return text.replace('||','of').replace('&&', 'en')
+    return text.replace("||", "of").replace("&&", "en")
 
 
 @dataclass
@@ -61,10 +70,12 @@ class Definition:
     definition: str
     url: str
 
+
 @dataclass
 class Source:
     source: str
     url: str
+
 
 @dataclass
 class Redirect:
@@ -85,6 +96,7 @@ class Answer:
     nextConclusionId: Optional[str] = None
     redirects: Optional[List[Redirect]] = None
 
+
 @dataclass
 class Question:
     questionId: str
@@ -99,10 +111,12 @@ class Question:
     def __post_init__(self):
         self.question = escape_for_mermaid(self.question)
 
+
 @dataclass
 class Source:
     source: str
     url: str
+
 
 @dataclass
 class Conclusion:
@@ -112,82 +126,124 @@ class Conclusion:
     sources: Optional[List[Source]] = None
 
 
-with open('decision-tree.yaml', 'r') as file:
+with open("decision-tree.yaml", "r") as file:
     decision_tree = yaml.safe_load(file)
 
-version: str = decision_tree.get('version')
-name: str = decision_tree.get('name')
+version: str = decision_tree.get("version")
+name: str = decision_tree.get("name")
 
-questions: List[Question] = [Question(**q) for q in decision_tree.get('questions', [])]
-conclusions: List[Conclusion] = [Conclusion(**q) for q in decision_tree.get('conclusions', [])]
+questions: List[Question] = [Question(**q) for q in decision_tree.get("questions", [])]
+conclusions: List[Conclusion] = [
+    Conclusion(**q) for q in decision_tree.get("conclusions", [])
+]
 
 nodes: List[Node] = []
 links: List[Link] = []
+
 
 def find_node_by_id(node_id):
     for node in nodes:
         if node.id_ == node_id:
             return node
 
-    raise Exception(f'Node with id {node_id} not found')
+    raise Exception(f"Node with id {node_id} not found")
+
 
 for conclusion in conclusions:
-    nodes.append(CustomNode(id_='c-'+conclusion.conclusionId, content = conclusion.conclusion, shape='hexagon', callback_tooltip=conclusion.obligation))
+    nodes.append(
+        CustomNode(
+            id_="c-" + conclusion.conclusionId,
+            content=conclusion.conclusion,
+            shape="hexagon",
+            callback_tooltip=conclusion.obligation,
+        )
+    )
 
 for question in questions:
     sub_nodes = []
-    nodes.append(CustomNode(id_="q-"+question.questionId, content = question.questionId+": "+question.simplifiedQuestion, shape='round-edge', callback_tooltip=question.question))
+
+    nodes.append(
+        CustomNode(
+            id_="q-" + question.questionId,
+            content=question.questionId + ": " + question.simplifiedQuestion,
+            shape="round-edge",
+            callback_tooltip=question.question,
+        )
+    )
 
 for question in questions:
     answers: List[Answer] = [Answer(**a) for a in question.answers]
 
-    origin = find_node_by_id("q-"+question.questionId)
+    origin = find_node_by_id("q-" + question.questionId)
 
     for answer in answers:
         if answer.nextQuestionId:
-            end = find_node_by_id("q-"+answer.nextQuestionId)
+            end = find_node_by_id("q-" + answer.nextQuestionId)
             links.append(CustomLink(origin=origin, end=end, message=answer.answer))
         elif answer.nextConclusionId:
-            end = find_node_by_id("c-"+answer.nextConclusionId)
+            end = find_node_by_id("c-" + answer.nextConclusionId)
             links.append(CustomLink(origin=origin, end=end, message=answer.answer))
         elif answer.redirects:
-            redirects: List[Redirect] = [Redirect(nextQuestionId=r.get('nextQuestionId'),nextConclusionId=r.get('nextConclusionId'), if_condition=r['if']) for r in answer.redirects]
+            redirects: List[Redirect] = [
+                Redirect(
+                    nextQuestionId=r.get("nextQuestionId"),
+                    nextConclusionId=r.get("nextConclusionId"),
+                    if_condition=r["if"],
+                )
+                for r in answer.redirects
+            ]
 
             for redirect in redirects:
-                #print(redirect.if_condition)
                 if redirect.nextQuestionId:
-                    end = find_node_by_id("q-"+redirect.nextQuestionId)
-                    links.append(CustomLink(origin=origin, end=end, message=answer.answer))
+                    match = re.findall('(?:"(.*?)")', redirect.if_condition)
+                    end = find_node_by_id("q-" + redirect.nextQuestionId)
+                    links.append(
+                        CustomLink(
+                            origin=origin,
+                            end=end,
+                            message=answer.answer + ": " + ", ".join(match),
+                        )
+                    )
                 elif redirect.nextConclusionId:
                     match = re.findall('(?:"(.*?)")', redirect.if_condition)
-
-
-                    end = find_node_by_id("c-"+redirect.nextConclusionId)
-                    links.append(CustomLink(origin=origin, end=end, message=answer.answer + ": "  + ', '.join(match)))
+                    end = find_node_by_id("c-" + redirect.nextConclusionId)
+                    links.append(
+                        CustomLink(
+                            origin=origin,
+                            end=end,
+                            message=answer.answer + ": " + ", ".join(match),
+                        )
+                    )
                 else:
-                    print(f'Error: No nextQuestionId or nextConclusionId found in redirects for question {question.questionId}')
+                    print(
+                        f"Error: No nextQuestionId or nextConclusionId found in redirects for question {question.questionId}"
+                    )
 
         else:
-            print(f'Error: No nextQuestionId or nextConclusionId found in answer for question {question.questionId}')
+            print(
+                f"Error: No nextQuestionId or nextConclusionId found in answer for question {question.questionId}"
+            )
 
 
-
-config = Config(theme=Themes.BASE, primary_color='#01689b', primary_text_color='#FDFDFD', primary_border_color='#154273', line_color='#154273')
+config = Config(
+    theme=Themes.BASE,
+    primary_color="#007bc7",
+    primary_text_color="#000000",
+    primary_border_color="#007bc7",
+    secondary_color="#CCE7F4",
+    line_color="#154273",
+)
 
 orientation = Direction.TOP_TO_BOTTOM
 
 flowchart = FlowChart(
-    title=name,
-    nodes=nodes,
-    links=links,
-    orientation=orientation,
-    config=config
+    title=name, nodes=nodes, links=links, orientation=orientation, config=config
 )
 
 
-with open('decision-tree.html', "w") as file:
+with open("decision-tree.html", "w") as file:
     file.write(
-        '''
+        """
 <!DOCTYPE html>
 <html lang="en">
 
@@ -243,6 +299,6 @@ with open('decision-tree.html', "w") as file:
 </body>
 
 </html>
-        '''.replace("{script}", flowchart.script)
+        """.replace("{script}", flowchart.script)
     )
-#//.format(script=flowchart.script)
+# //.format(script=flowchart.script)
