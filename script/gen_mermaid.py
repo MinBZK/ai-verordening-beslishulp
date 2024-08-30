@@ -64,6 +64,15 @@ def escape_for_mermaid(text):
     return text.replace("||", "of").replace("&&", "en")
 
 
+def dict_to_str(subgraph):
+    mermaid_array = []
+    for group, questions in subgraph.items():
+        mermaid_array.append(f"subgraph {group}")
+        mermaid_array.extend(questions)
+        mermaid_array.append("end")
+    return "\n".join(mermaid_array)
+
+
 @dataclass
 class Definition:
     term: str
@@ -171,10 +180,18 @@ for question in questions:
         )
     )
 
+subgraph = {}
+
 for question in questions:
     answers: List[Answer] = [Answer(**a) for a in question.answers]
 
     origin = find_node_by_id("q-" + question.questionId)
+
+    # fill in subgraph dictionairy based on group
+    if question.group not in subgraph:
+        subgraph[question.group] = ["q-" + question.questionId]
+    else:
+        subgraph[question.group].append("q-" + question.questionId)
 
     for answer in answers:
         if answer.nextQuestionId:
@@ -234,12 +251,12 @@ config = Config(
     line_color="#154273",
 )
 
+
 orientation = Direction.TOP_TO_BOTTOM
 
 flowchart = FlowChart(
     title=name, nodes=nodes, links=links, orientation=orientation, config=config
 )
-
 
 with open("decision-tree.html", "w") as file:
     file.write(
@@ -299,6 +316,6 @@ with open("decision-tree.html", "w") as file:
 </body>
 
 </html>
-        """.replace("{script}", flowchart.script)
+        """.replace("{script}", (flowchart.script + dict_to_str(subgraph)))
     )
 # //.format(script=flowchart.script)

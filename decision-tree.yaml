@@ -702,7 +702,7 @@ questions:
   - questionId: "9.0"
     question: "Gebruikt u een algoritme met impact (rechtsgevolgen voor de burger of classificatie van burgers of groepen) volgens categorie B van de Handreiking van het Algoritmeregister?"
     simplifiedQuestion: "Impactvol algoritme"
-    group: publicatiecategorie
+    group: impactvol
     questionType: SingleChoice
     sources:
       - source: Handreiking Algoritmeregister
@@ -717,7 +717,7 @@ questions:
   - questionId: "9.1"
     question: "Valt uw toepassing onder \xE9\xE9n van de uitzonderingsgronden categorie C of D van de Handreiking van het Algoritmeregister?"
     simplifiedQuestion: "Uitzonderingsgronden Handreiking Algoritmeregister"
-    group: publicatiecategorie
+    group: impactvol
     questionType: SingleChoice
     sources:
       - source: Handreiking Algoritmeregister
