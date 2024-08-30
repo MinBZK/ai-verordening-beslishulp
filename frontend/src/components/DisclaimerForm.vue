@@ -14,15 +14,14 @@ import { ExclamationTriangleIcon } from '@heroicons/vue/24/outline'
         </div>
         <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left text-gray-500">
           <DialogTitle as="h3" class="text-base font-semibold leading-6 text-gray-900"
-          >Beslisboom AI-Verordening <dfn id="betaversie"><abbr title="Deze website is in ontwikkeling. Volgende versies ontstaan op een open manier. Iedereen mag opmerkingen of suggesties geven.">bètaversie</abbr> </dfn> Disclaimer
+          >Beslisboom AI-Verordening <dfn id="betaversie"><abbr title="Deze website is in ontwikkeling. Volgende versies ontstaan op een open manier. Iedereen mag opmerkingen of suggesties geven.">bètaversie</abbr> </dfn>
           </DialogTitle
           >
           <div class="mt-2 text-gray-500">
             <p class="font-bold">Met deze beslisboom stel je vast of de AI-verordening geldt voor jouw overheidsorganisatie. En aan welke
               vereisten je dan moet voldoen.</p>
             <ul style="list-style-type:disc;">
-              <li>Deze beslisboom is een <dfn id="betaversie"><abbr title="Deze website is in ontwikkeling. Volgende versies ontstaan op een open manier. Iedereen mag opmerkingen of suggesties geven.">bètaversie</abbr> </dfn>.</li>
-              <li>De informatie is niet compleet en er kunnen fouten in staan.</li>
+              <li>Deze beslisboom is een betaversie: de informatie is niet compleet en er kunnen fouten in staan.</li>
               <li>Je bent zelf verantwoordelijk voor de informatie die je gebruikt.</li>
               <li>Overleg de uitkomsten van de beslisboom met een expert.</li>
               <li>In de beslisboom staat alleen informatie over de rollen van de overheid als <a

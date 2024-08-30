@@ -14,7 +14,7 @@ defineProps<Props>()
       class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10"
       >{{ id }}</span
     >
-<dfn  class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10"id="betaversie"><abbr title="Deze website is in ontwikkeling. Volgende versies ontstaan op een open manier. Iedereen mag opmerkingen of suggesties geven.">bètaversie</abbr> </dfn>
+<dfn  class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10"id="betaversie"><abbr title="Deze beslisboom is een bètaversie: de informatie is niet compleet en er kunnen fouten in staan. Volgende versies ontstaan op een open manier. Iedereen mag opmerkingen of suggesties geven.">bètaversie</abbr> </dfn>
   </legend>
   <p style="white-space: pre-line" class="mt-1 text-sm leading-6 text-gray-600">
     <span v-html="question"></span>
