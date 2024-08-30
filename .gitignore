@@ -30,3 +30,5 @@ coverage
 *.tsbuildinfo
 
 up.txt
+
+venv/
