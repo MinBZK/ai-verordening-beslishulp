@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 import re
+
+# import sys
 from dataclasses import dataclass
 from typing import List, Optional, Union
 
@@ -66,10 +68,18 @@ def escape_for_mermaid(text):
 
 def dict_to_str(subgraph):
     mermaid_array = []
-    for group, questions in subgraph.items():
-        mermaid_array.append(f"subgraph {group}")
+
+    for category, questions in subgraph.items():
+        mermaid_array.append(f"subgraph {category}")
         mermaid_array.extend(questions)
         mermaid_array.append("end")
+
+    mermaid_array.append(
+        "classDef commonStyle fill:#FFFFFF,stroke:#39870c,stroke-width:2px"
+    )
+    for category in subgraph.keys():
+        mermaid_array.append(f"class {category} commonStyle")
+
     return "\n".join(mermaid_array)
 
 
@@ -111,7 +121,7 @@ class Question:
     questionId: str
     question: str
     simplifiedQuestion: str
-    group: str
+    category: str
     questionType: str
     answers: List[Answer]
     definitions: Optional[List[Definition]] = None
@@ -164,7 +174,7 @@ for conclusion in conclusions:
             id_="c-" + conclusion.conclusionId,
             content=conclusion.conclusion,
             shape="hexagon",
-            callback_tooltip=conclusion.obligation,
+            callback_tooltip=conclusion.conclusion,
         )
     )
 
@@ -187,11 +197,11 @@ for question in questions:
 
     origin = find_node_by_id("q-" + question.questionId)
 
-    # fill in subgraph dictionairy based on group
-    if question.group not in subgraph:
-        subgraph[question.group] = ["q-" + question.questionId]
+    # fill in subgraph dictionairy based on category
+    if question.category not in subgraph:
+        subgraph[question.category] = ["q-" + question.questionId]
     else:
-        subgraph[question.group].append("q-" + question.questionId)
+        subgraph[question.category].append("q-" + question.questionId)
 
     for answer in answers:
         if answer.nextQuestionId:
@@ -265,57 +275,56 @@ with open("decision-tree.html", "w") as file:
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Decision tree</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-  <script src='https://unpkg.com/mermaid@11.0.2/dist/mermaid.min.js'></script>
-  <script>
-    window.callback = function (name) {
-      let cookieValue = document.getElementsByClassName("mermaidTooltip");
-      let modelcontent1 = document.getElementById("modelcontent1");
-      let model1 = document.getElementById("model1");
-      console.log(cookieValue[0]);
-      // hide the tooltip
-      cookieValue[0].style.display = "none";
-
-      modelcontent1.innerHTML = cookieValue[0].innerText.replaceAll("#specialnewline#", "<br>");;
-      model1.classList.add('is-active');
-    };
-
-    document.addEventListener('DOMContentLoaded', () => {
-      let modealclose1 = document.getElementById("modealclose1");
-      modealclose1.addEventListener('click', () => {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Decision tree</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <script src='https://unpkg.com/mermaid@11.0.2/dist/mermaid.min.js'></script>
+    <script>
+        window.callback = function (name) {
+        let cookieValue = document.getElementsByClassName("mermaidTooltip");
+        let modelcontent1 = document.getElementById("modelcontent1");
         let model1 = document.getElementById("model1");
-        model1.classList.remove('is-active');
-      });
+        console.log(cookieValue[0]);
+        // hide the tooltip
+        cookieValue[0].style.display = "none";
 
-    });
+        modelcontent1.innerHTML = cookieValue[0].innerText.replaceAll("#specialnewline#", "<br>");;
+        model1.classList.add('is-active');
+        };
 
-  </script>
+        document.addEventListener('DOMContentLoaded', () => {
+        let modealclose1 = document.getElementById("modealclose1");
+        modealclose1.addEventListener('click', () => {
+            let model1 = document.getElementById("model1");
+            model1.classList.remove('is-active');
+        });
 
-</head>
+        });
 
-<body class="has-background-white-ter">
+    </script>
 
-  <div id="model1" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-content">
-      <div id="modelcontent1">
-      </div>
+    </head>
+
+    <body class="has-background-white-ter">
+
+    <div id="model1" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+        <div id="modelcontent1">
+        </div>
+        </div>
+        <button id="modealclose1" class="modal-close is-large" aria-label="close"></button>
     </div>
-    <button id="modealclose1" class="modal-close is-large" aria-label="close"></button>
-  </div>
 
 
-  <pre class="mermaid has-background-white-ter">
-     {script}
-  </pre>
+    <pre class="mermaid has-background-white-ter">
+        {script}
+    </pre>
 
-  <script>mermaid.initialize({ maxTextSize: 9000000000, startOnLoad: true, securityLevel: 'loose' })</script>
+<script>mermaid.initialize({ maxTextSize: 9000000000, startOnLoad: true, securityLevel: 'loose' })</script>
 </body>
 
 </html>
         """.replace("{script}", (flowchart.script + dict_to_str(subgraph)))
     )
-# //.format(script=flowchart.script)
