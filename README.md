@@ -111,7 +111,7 @@ Nu is de website beschikbaar op deze locale [site](http://localhost:9090)
 
 ## Infra
 
-Er is een klein stukje infra code geschreven voor kubernetes zodat de applicaties gehost kan worden. Om dit uit te kunnen voeren heeft u een kubernetes cluster nodig en [kubectl](https://kubernetes.io/docs/tasks/tools/). Dit inatellen laten we buiten beschouwing voor deze readme. Als men het ingesteld heeft kan met het volgende commando uitvoeren.
+Er is een klein stukje infra code geschreven voor kubernetes zodat de applicaties gehost kan worden. Om dit uit te kunnen voeren heeft u een kubernetes cluster nodig en [kubectl](https://kubernetes.io/docs/tasks/tools/). Dit instellen laten we buiten beschouwing voor deze readme. Als men het ingesteld heeft kan met het volgende commando uitvoeren.
 
 ```sh
 kubectl apply -k infra/
@@ -140,3 +140,5 @@ Je kunt alle hooks handmatig als volgt uitvoeren:
 ```sh
 pre-commit run --all-files
 ```
+
+Pre-commit runt ook als CI/CD check step voor het mergen naar `main`.
