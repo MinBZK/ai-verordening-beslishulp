@@ -2,3 +2,10 @@
 
 decision-tree.yaml @ruthkoole
 categories.yaml @ruthkoole
+
+# excluded files so github actions bot can auto update dependencies
+#  see https://github.com/orgs/community/discussions/23064
+.github/workflows/*
+.devcontainer/devcontainer.json
+.pre-commit-config.yaml
+frontend/package.json
