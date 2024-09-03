@@ -28,14 +28,6 @@ repos:
         additional_dependencies: [jsonschema, pyyaml]
         pass_filenames: false
         always_run: true
-  - repo: local
-    hooks:
-      - id: check-mermaid-changes
-        name: Check if mermaid is rendered
-        entry: sh -c './script/check_mermaid_changes.py' #TO DO: check if this it sufficient
-        language: python
-        pass_filenames: false
-        always_run: true
 
 ci:
   autofix_prs: false

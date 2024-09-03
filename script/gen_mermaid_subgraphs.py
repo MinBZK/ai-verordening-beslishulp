@@ -5,7 +5,7 @@ import re
 # import sys
 from dataclasses import dataclass
 from typing import List, Optional, Union
-
+from collections import defaultdict
 import yaml
 from mermaid import Config, Direction
 from mermaid.configuration import Themes
@@ -26,12 +26,15 @@ class CustomNode(Node):
         styles: Optional[list[Style]] = None,
         direction: Union[str, Direction] = "LR",
         callback_tooltip: Optional[str] = None,
+        category: Optional[str] = None,
     ) -> None:
         # call super and use result to add the id
-
-        self.callback_tooltip = callback_tooltip.replace(
-            "\n", "#specialnewline#"
-        ).replace("\r", "")
+        self.callback_tooltip = (
+            callback_tooltip.replace("\n", "#specialnewline#").replace("\r", "")
+            if callback_tooltip
+            else ""
+        )
+        self.category = category  # Store the category
 
         super().__init__(
             id_=id_,
@@ -66,21 +69,67 @@ def escape_for_mermaid(text):
     return text.replace("||", "of").replace("&&", "en")
 
 
-def dict_to_str(subgraph):
-    mermaid_array = []
+def create_html(file_name, flowchart_script):
+    with open(file_name, "w") as file:
+        file.write(
+            """
+    <!DOCTYPE html>
+    <html lang="en">
 
-    for category, questions in subgraph.items():
-        mermaid_array.append(f"subgraph {category}")
-        mermaid_array.extend(questions)
-        mermaid_array.append("end")
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AI Decision tree</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+        <script src='https://unpkg.com/mermaid@11.0.2/dist/mermaid.min.js'></script>
+        <script>
+            window.callback = function (name) {
+            let cookieValue = document.getElementsByClassName("mermaidTooltip");
+            let modelcontent1 = document.getElementById("modelcontent1");
+            let model1 = document.getElementById("model1");
+            console.log(cookieValue[0]);
+            // hide the tooltip
+            cookieValue[0].style.display = "none";
 
-    mermaid_array.append(
-        "classDef commonStyle fill:#FFFFFF,stroke:#39870c,stroke-width:2px"
-    )
-    for category in subgraph.keys():
-        mermaid_array.append(f"class {category} commonStyle")
+            modelcontent1.innerHTML = cookieValue[0].innerText.replaceAll("#specialnewline#", "<br>");;
+            model1.classList.add('is-active');
+            };
 
-    return "\n".join(mermaid_array)
+            document.addEventListener('DOMContentLoaded', () => {
+            let modealclose1 = document.getElementById("modealclose1");
+            modealclose1.addEventListener('click', () => {
+                let model1 = document.getElementById("model1");
+                model1.classList.remove('is-active');
+            });
+
+            });
+
+        </script>
+
+        </head>
+
+        <body class="has-background-white-ter">
+
+        <div id="model1" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+            <div id="modelcontent1">
+            </div>
+            </div>
+            <button id="modealclose1" class="modal-close is-large" aria-label="close"></button>
+        </div>
+
+
+        <pre class="mermaid has-background-white-ter">
+            {script}
+        </pre>
+
+    <script>mermaid.initialize({ maxTextSize: 9000000000, startOnLoad: true, securityLevel: 'loose' })</script>
+    </body>
+
+    </html>
+            """.replace("{script}", flowchart_script)
+        )
 
 
 @dataclass
@@ -155,8 +204,9 @@ questions: List[Question] = [Question(**q) for q in decision_tree.get("questions
 conclusions: List[Conclusion] = [
     Conclusion(**q) for q in decision_tree.get("conclusions", [])
 ]
+# subgraphs: Dict[str, Dict[str]] = {}
 
-nodes: List[Node] = []
+nodes: List[CustomNode] = []
 links: List[Link] = []
 
 
@@ -168,6 +218,7 @@ def find_node_by_id(node_id):
     raise Exception(f"Node with id {node_id} not found")
 
 
+# create conclusion nodes
 for conclusion in conclusions:
     nodes.append(
         CustomNode(
@@ -178,6 +229,8 @@ for conclusion in conclusions:
         )
     )
 
+# create question nodes
+subgraphs = {}
 for question in questions:
     sub_nodes = []
 
@@ -187,21 +240,19 @@ for question in questions:
             content=question.questionId + ": " + question.simplifiedQuestion,
             shape="round-edge",
             callback_tooltip=question.question,
+            category=question.category,
         )
     )
+    if question.category not in subgraphs:
+        subgraphs[question.category] = ["q-" + question.questionId]
+    else:
+        subgraphs[question.category].append("q-" + question.questionId)
 
-subgraph = {}
-
+# create links between nodes (question and conclusion)
 for question in questions:
     answers: List[Answer] = [Answer(**a) for a in question.answers]
 
     origin = find_node_by_id("q-" + question.questionId)
-
-    # fill in subgraph dictionairy based on category
-    if question.category not in subgraph:
-        subgraph[question.category] = ["q-" + question.questionId]
-    else:
-        subgraph[question.category].append("q-" + question.questionId)
 
     for answer in answers:
         if answer.nextQuestionId:
@@ -261,70 +312,35 @@ config = Config(
     line_color="#154273",
 )
 
-
 orientation = Direction.TOP_TO_BOTTOM
 
-flowchart = FlowChart(
-    title=name, nodes=nodes, links=links, orientation=orientation, config=config
+# Create main graph and write into html
+pairs_main = "\n".join(
+    {
+        f"{link.origin.category} --> {link.end.category}"
+        for link in links
+        if link.origin.category != link.end.category and link.end.category
+    }
 )
+flowchart = FlowChart(title=name, config=config)
+create_html("./mermaid_links/decision-tree-main.html", flowchart.script + pairs_main)
 
-with open("decision-tree.html", "w") as file:
-    file.write(
-        """
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Decision tree</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-    <script src='https://unpkg.com/mermaid@11.0.2/dist/mermaid.min.js'></script>
-    <script>
-        window.callback = function (name) {
-        let cookieValue = document.getElementsByClassName("mermaidTooltip");
-        let modelcontent1 = document.getElementById("modelcontent1");
-        let model1 = document.getElementById("model1");
-        console.log(cookieValue[0]);
-        // hide the tooltip
-        cookieValue[0].style.display = "none";
-
-        modelcontent1.innerHTML = cookieValue[0].innerText.replaceAll("#specialnewline#", "<br>");;
-        model1.classList.add('is-active');
-        };
-
-        document.addEventListener('DOMContentLoaded', () => {
-        let modealclose1 = document.getElementById("modealclose1");
-        modealclose1.addEventListener('click', () => {
-            let model1 = document.getElementById("model1");
-            model1.classList.remove('is-active');
-        });
-
-        });
-
-    </script>
-
-    </head>
-
-    <body class="has-background-white-ter">
-
-    <div id="model1" class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-        <div id="modelcontent1">
-        </div>
-        </div>
-        <button id="modealclose1" class="modal-close is-large" aria-label="close"></button>
-    </div>
-
-
-    <pre class="mermaid has-background-white-ter">
-        {script}
-    </pre>
-
-<script>mermaid.initialize({ maxTextSize: 9000000000, startOnLoad: true, securityLevel: 'loose' })</script>
-</body>
-
-</html>
-        """.replace("{script}", (flowchart.script + dict_to_str(subgraph)))
+# Create subgraphs and write into html
+nodes_by_category = defaultdict(list)
+links_by_category = defaultdict(list)
+for category, cat_questions in subgraphs.items():
+    links_by_category[category] = [
+        link for link in links if link.origin.id_ in cat_questions
+    ]
+    nodes_by_category[category] = [node for node in nodes if node.id_ in cat_questions]
+    flowchart = FlowChart(
+        title=name,
+        nodes=nodes_by_category.get(category, []),
+        links=links_by_category.get(category, []),
+        orientation=orientation,
+        config=config,
+    )
+    create_html(
+        "./mermaid_links/decision-tree-subgraphs-" + category + ".html",
+        flowchart.script,
     )

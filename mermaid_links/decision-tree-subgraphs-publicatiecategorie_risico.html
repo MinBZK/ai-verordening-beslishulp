@@ -1,53 +1,53 @@
 
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Decision tree</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-    <script src='https://unpkg.com/mermaid@11.0.2/dist/mermaid.min.js'></script>
-    <script>
-        window.callback = function (name) {
-        let cookieValue = document.getElementsByClassName("mermaidTooltip");
-        let modelcontent1 = document.getElementById("modelcontent1");
-        let model1 = document.getElementById("model1");
-        console.log(cookieValue[0]);
-        // hide the tooltip
-        cookieValue[0].style.display = "none";
-
-        modelcontent1.innerHTML = cookieValue[0].innerText.replaceAll("#specialnewline#", "<br>");;
-        model1.classList.add('is-active');
-        };
-
-        document.addEventListener('DOMContentLoaded', () => {
-        let modealclose1 = document.getElementById("modealclose1");
-        modealclose1.addEventListener('click', () => {
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AI Decision tree</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+        <script src='https://unpkg.com/mermaid@11.0.2/dist/mermaid.min.js'></script>
+        <script>
+            window.callback = function (name) {
+            let cookieValue = document.getElementsByClassName("mermaidTooltip");
+            let modelcontent1 = document.getElementById("modelcontent1");
             let model1 = document.getElementById("model1");
-            model1.classList.remove('is-active');
-        });
+            console.log(cookieValue[0]);
+            // hide the tooltip
+            cookieValue[0].style.display = "none";
 
-        });
+            modelcontent1.innerHTML = cookieValue[0].innerText.replaceAll("#specialnewline#", "<br>");;
+            model1.classList.add('is-active');
+            };
 
-    </script>
+            document.addEventListener('DOMContentLoaded', () => {
+            let modealclose1 = document.getElementById("modealclose1");
+            modealclose1.addEventListener('click', () => {
+                let model1 = document.getElementById("model1");
+                model1.classList.remove('is-active');
+            });
 
-    </head>
+            });
 
-    <body class="has-background-white-ter">
+        </script>
 
-    <div id="model1" class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-        <div id="modelcontent1">
+        </head>
+
+        <body class="has-background-white-ter">
+
+        <div id="model1" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+            <div id="modelcontent1">
+            </div>
+            </div>
+            <button id="modealclose1" class="modal-close is-large" aria-label="close"></button>
         </div>
-        </div>
-        <button id="modealclose1" class="modal-close is-large" aria-label="close"></button>
-    </div>
 
 
-    <pre class="mermaid has-background-white-ter">
-        ---
+        <pre class="mermaid has-background-white-ter">
+            ---
 title: Decision Tree
 ---
 %%{
@@ -64,84 +64,6 @@ title: Decision Tree
 }%%
 
 flowchart TB
-	c-12.0.1{{"U bent een aanbieder van een hoog-risico AI-systeem. Uw AI-systeem moet voldoen aan transparantieverplichtingen. "}}
-click c-12.0.1 callback "U bent een aanbieder van een hoog-risico AI-systeem. Uw AI-systeem moet voldoen aan transparantieverplichtingen. "
-	c-12.0.2{{"U bent een aanbieder van een hoog-risico AI-systeem."}}
-click c-12.0.2 callback "U bent een aanbieder van een hoog-risico AI-systeem."
-	c-12.0.3{{"U bent een aanbieder van een niet-hoog-risico AI-systeem. Uw AI-systeem moet voldoen aan transparantieverplichtingen."}}
-click c-12.0.3 callback "U bent een aanbieder van een niet-hoog-risico AI-systeem. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
-	c-12.0.4{{"U bent een aanbieder van een niet-hoog-risico AI-systeem."}}
-click c-12.0.4 callback "U bent een aanbieder van een niet-hoog-risico AI-systeem."
-	c-12.1.2{{"U bent een aanbieder van een hoog-risico AI-systeem voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."}}
-click c-12.1.2 callback "U bent een aanbieder van een hoog-risico AI-systeem voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
-	c-12.1.3{{"U bent een aanbieder van een hoog-risico AI-systeem voor algemene doeleinden."}}
-click c-12.1.3 callback "U bent een aanbieder van een hoog-risico AI-systeem voor algemene doeleinden."
-	c-12.1.6{{"U bent een aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."}}
-click c-12.1.6 callback "U bent een aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
-	c-12.1.7{{"U bent een aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden."}}
-click c-12.1.7 callback "U bent een aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden."
-	c-12.2.1{{"U bent een aanbieder van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico."}}
-click c-12.2.1 callback "U bent een aanbieder van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico."
-	c-12.2.3{{"U bent een aanbieder van een AI-model voor algemene doeleinden."}}
-click c-12.2.3 callback "U bent een aanbieder van een AI-model voor algemene doeleinden."
-	c-12.2.4{{"U bent een aanbieder van een open-source AI-model voor algemene doeleinden."}}
-click c-12.2.4 callback "U bent een aanbieder van een open-source AI-model voor algemene doeleinden."
-	c-13.0.1{{"U bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem. Uw AI-systeem moet voldoen aan transparantieverplichtingen. "}}
-click c-13.0.1 callback "U bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem. Uw AI-systeem moet voldoen aan transparantieverplichtingen. "
-	c-13.0.2{{"U bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem."}}
-click c-13.0.2 callback "U bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem."
-	c-13.0.3{{"U bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem. Uw AI-systeem moet voldoen aan transparantieverplichtingen."}}
-click c-13.0.3 callback "U bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
-	c-13.0.4{{"U bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem."}}
-click c-13.0.4 callback "U bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem."
-	c-13.1.2{{"U bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."}}
-click c-13.1.2 callback "U bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
-	c-13.1.3{{"U bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem voor algemene doeleinden."}}
-click c-13.1.3 callback "U bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem voor algemene doeleinden."
-	c-13.1.6{{"U bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."}}
-click c-13.1.6 callback "U bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
-	c-13.1.7{{"U bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem voor algemene doeleinden."}}
-click c-13.1.7 callback "U bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem voor algemene doeleinden."
-	c-13.2.1{{"U bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico."}}
-click c-13.2.1 callback "U bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico."
-	c-13.2.3{{"U bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden."}}
-click c-13.2.3 callback "U bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden."
-	c-14.0.1{{"U bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem. Uw AI-systeem moet voldoen aan transparantieverplichtingen."}}
-click c-14.0.1 callback "U bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
-	c-14.0.2{{"U bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem."}}
-click c-14.0.2 callback "U bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem."
-	c-14.0.5{{"U bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."}}
-click c-14.0.5 callback "U bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
-	c-14.0.6{{"U bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem voor algemene doeleinden."}}
-click c-14.0.6 callback "U bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem voor algemene doeleinden."
-	c-15.0{{"U gebruikt geen algoritme. De AI-verordening is niet van toepassing."}}
-click c-15.0 callback "U gebruikt geen algoritme. De AI-verordening is niet van toepassing."
-	c-15.1{{"Het is verboden om dit AI-systeem te gebruiken. Er is geen sprake van een uitzondering op de lijst van verboden AI-systemen."}}
-click c-15.1 callback "Het is verboden om dit AI-systeem te gebruiken. Er is geen sprake van een uitzondering op de lijst van verboden AI-systemen."
-	c-15.2{{"Er is sprake van een uitzondering op de lijst van verboden AI-systemen."}}
-click c-15.2 callback "Er is sprake van een uitzondering op de lijst van verboden AI-systemen."
-	c-15.3{{"Er is sprake van een uitzonderingsgrond. De AI-verordening is niet van toepassing."}}
-click c-15.3 callback "Er is sprake van een uitzonderingsgrond. De AI-verordening is niet van toepassing."
-	c-15.4{{"Het betreft een algoritme met impact, maar de AI-verordening is niet van toepassing."}}
-click c-15.4 callback "Het betreft een algoritme met impact, maar de AI-verordening is niet van toepassing."
-	c-15.5{{"Het betreft een algoritme met impact, maar de AI-verordening is niet van toepassing."}}
-click c-15.5 callback "Het betreft een algoritme met impact, maar de AI-verordening is niet van toepassing."
-	c-15.6{{"Uw algoritme is niet impactvol en de AI-verordening is niet van toepassing."}}
-click c-15.6 callback "Uw algoritme is niet impactvol en de AI-verordening is niet van toepassing."
-	c-15.7{{"U bent geen aanbieder en geen gebruiksverantwoordelijke. Deze beslisboom is gemaakt voor alleen deze twee rollen. Controleer nog een keer goed of één van deze rollen misschien toch op u van toepassing is."}}
-click c-15.7 callback "U bent geen aanbieder en geen gebruiksverantwoordelijke. Deze beslisboom is gemaakt voor alleen deze twee rollen. Controleer nog een keer goed of één van deze rollen misschien toch op u van toepassing is."
-	q-0("0: Algoritme")
-click q-0 callback "Bevat de (beoogde) toepassing een algoritme?"
-	q-1.0("1.0: AI-systeem")
-click q-1.0 callback "Is de (beoogde) toepassing een AI-systeem?"
-	q-1.1("1.1: AI-systeem voor algemene doeleinden")
-click q-1.1 callback "Is de (beoogde) toepassing een AI-systeem voor algemene doeleinden?"
-	q-1.2("1.2: AI-model voor algemene doeleinden")
-click q-1.2 callback "Is de (beoogde) toepassing een AI-model voor algemene doeleinden?"
-	q-1.0.1("1.0.1: Open of vrije licentie")
-click q-1.0.1 callback "Wordt de toepassing onder een open of vrije licentie gedeeld?"
-	q-1.0.2("1.0.2: Openbare broncodes en parameters")
-click q-1.0.2 callback "Zijn de broncodes en parameters openbaar voor eenieder?"
 	q-2.0("2.0: Uitzondering AI-verordening")
 click q-2.0 callback "We gaan nu bepalen of er sprake is van een uitzondering op de AI-verordening.#specialnewline##specialnewline# Valt de (beoogde) toepassing onder een van de volgende categorieen? #specialnewline##specialnewline# - AI-systemen die uitsluitend in de handel worden gebracht, in gebruik worden gesteld of, al dan niet gewijzigd, worden gebruikt voor militaire, defensie- of nationale veiligheidsdoeleinden #specialnewline# - AI-systemen die niet in de Unie in de handel worden gebracht of in gebruik worden gesteld en waarvan de output in de Unie uitsluitend wordt gebruikt voor militaire, defensie- of nationale veiligheidsdoeleinden #specialnewline# - overheidsinstanties in derde landen of internationale organisaties die binnen het toepassingsgebied van de AI-verordening vallen, wanneer deze instanties of organisaties AI-systemen gebruiken in het kader van internationale samenwerking of overeenkomsten met de Unie of een of meer lidstaten op het gebied van rechtshandhaving en justitie #specialnewline# - onderzoeks-, test- of ontwikkelingsactiviteiten met betrekking tot AI-systemen of AI-modellen voor zij in de handel worden gebracht of in gebruik worden gesteld (testen onder reële omstandigheden valt hier niet onder) #specialnewline# - AI-systemen of AI-modellen, met inbegrip van hun output, die specifiek zijn ontwikkeld en in gebruik worden gesteld met wetenschappelijk onderzoek en wetenschappelijke ontwikkeling als enig doel"
 	q-3.0("3.0: Verboden AI")
@@ -174,38 +96,6 @@ click q-5.7 callback "Betreft het een AI-systeem voor rechtsbedeling en democrat
 click q-5.1.0 callback "We gaan nu bepalen of er sprake is van een uitzondering op de lijst van hoog-risico AI systemen.#specialnewline# Bent u een aanbieder van een AI-systeem dat is bedoeld voor een van de volgende doeleinden?#specialnewline# - Het uitvoeren van een beperkte procedurele taak waarbij er geen significant risico is op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?#specialnewline# - Het verbeteren van het resultaat van een eerder voltooide menselijke activiteit en waarbij er geen significant risico is op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?#specialnewline# - Het opsporen van besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen en waarbij het niet bedoeld is om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?#specialnewline# - Het uitvoeren van een voorbereidende taak voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?"
 	q-5.1.1("5.1.1: Profilering")
 click q-5.1.1 callback "Voert het AI-systeem profilering van natuurlijke personen uit? Bij profilering is er altijd sprake van een hoog risico."
-	q-6.0("6.0: Systeemrisico")
-click q-6.0 callback "We gaan nu bepalen of er sprake is van een systeemrisico. #specialnewline##specialnewline# Is er sprake van een cumulatieve hoeveelheid rekenkracht van FLOPs groter dan 10^25?#specialnewline##specialnewline# - FLOPs zijn floating point operations per second.#specialnewline# - FLOPs is een eenheid die wordt gebruikt om de rekenkracht van CPU’s aan te duiden.#specialnewline# - CPUs zijn Central Processing Units.#specialnewline# - Dit is de centrale verwerkingseenheid van een computer, smartphone of tablet. De CPU voert het rekenwerk uit waardoor programma’s draaien en hardware wordt aangestuurd."
-	q-7.0("7.0: Transparantieverplichtingen")
-click q-7.0 callback "We gaan nu bepalen of het AI-systeem onder de transparantieverplichtingen van Artikel 50 valt.#specialnewline##specialnewline# Is er sprake van een AI-systeem dat:#specialnewline##specialnewline# - direct communiceert met mensen (zoals chatbots)?#specialnewline# - synthetische afbeeldingen, audio, video of tekst content genereert en manipuleert? Bijvoorbeeld een deepfake.#specialnewline# - aan emotieherkenning of biometrische categorisatie doet?"
-	q-7.1("7.1: Uitzondering transparantieverplichtingen")
-click q-7.1 callback "Is er sprake van AI waarvan het bij wet is toegestaan om te gebruiken om strafbare feiten op te sporen, te voorkomen, te onderzoeken of te vervolgen?"
-	q-8.0("8.0: Aanbieder")
-click q-8.0 callback "We gaan nu bepalen welke rol u heeft: aanbieder, gebruiksverantwoordelijke, of beide.#specialnewline##specialnewline# Gaat u een AI-systeem of een AI-model op de markt brengen of in gebruik stellen onder eigen naam of merk, al dan niet tegen betaling?"
-	q-8.1("8.1: Gebruiksverantwoordelijke")
-click q-8.1 callback "Bent u een overheidsinstantie die een AI-systeem onder eigen verantwoordelijkheid gebruikt? (Het AI-systeem wordt niet gebruikt in het kader van een persoonlijke niet-beroepsactiviteit)."
-	q-8.2("8.2: Naam of merk op hoog-risico AI-systeem")
-click q-8.2 callback "Zet u uw naam of merk op een AI-systeem met een hoog risico dat reeds in de handel is gebracht of in gebruik is gesteld (onverminderd contractuele regelingen waarin wordt bepaald dat de verplichtingen anders worden toegewezen)?"
-	q-8.3("8.3: Substantiële wijziging in hoog-risico AI-systeem")
-click q-8.3 callback "Brengt u een substantiële wijziging aan in een AI-systeem met een hoog risico dat reeds in de handel is gebracht of reeds in gebruik is gesteld, op zodanige wijze dat het systeem een AI-systeem met een hoog risico blijft op grond van Artikel 6?"
-	q-8.4("8.4: Wijziging beoogde doel hoog-risico AI-systeem")
-click q-8.4 callback "Wijzigt u het beoogde doel van een AI-systeem, met inbegrip van een AI-systeem voor algemene doeleinden, dat niet als een systeem met een hoog risico is geclassificeerd en reeds in de handel is gebracht of in gebruik is gesteld, op zodanige wijze dat het betrokken AI-systeem een AI-systeem met een hoog risico overeenkomstig Artikel 6 wordt?"
-	q-9.0("9.0: Impactvol algoritme")
-click q-9.0 callback "Gebruikt u een algoritme met impact (rechtsgevolgen voor de burger of classificatie van burgers of groepen) volgens categorie B van de Handreiking van het Algoritmeregister?"
-	q-9.1("9.1: Uitzonderingsgronden Handreiking Algoritmeregister")
-click q-9.1 callback "Valt uw toepassing onder één van de uitzonderingsgronden categorie C of D van de Handreiking van het Algoritmeregister?"
-	q-0 -->|Ja| q-1.0
-	q-0 -->|Nee| c-15.0
-	q-1.0 -->|Ja| q-1.1
-	q-1.0 -->|Nee| q-1.2
-	q-1.1 -->|Ja| q-1.0.1
-	q-1.1 -->|Nee| q-1.0.1
-	q-1.2 -->|Ja| q-1.0.1
-	q-1.2 -->|Nee| q-9.0
-	q-1.0.1 -->|Ja| q-1.0.2
-	q-1.0.1 -->|Nee| q-2.0
-	q-1.0.2 -->|Ja| q-2.0
-	q-1.0.2 -->|Nee| q-2.0
 	q-2.0 -->|Ja| c-15.3
 	q-2.0 -->|Nee: AI-systeem, AI-systeem voor algemene doeleinden| q-3.0
 	q-2.0 -->|Nee: AI-model voor algemene doeleinden| q-6.0
@@ -239,113 +129,10 @@ click q-9.1 callback "Valt uw toepassing onder één van de uitzonderingsgronden
 	q-5.1.0 -->|Nee| q-7.0
 	q-5.1.1 -->|Ja| q-7.0
 	q-5.1.1 -->|Nee| q-7.0
-	q-6.0 -->|Ja| q-8.0
-	q-6.0 -->|Nee| q-8.0
-	q-7.0 -->|Ja| q-7.1
-	q-7.0 -->|Nee: geen open-source, open-source, hoog-risico AI, open-source, AI-model voor algemene doeleinden| q-8.0
-	q-7.0 -->|Nee: open-source, geen hoog-risico AI, niet-verboden AI| q-9.0
-	q-7.1 -->|Ja: geen open-source, open-source, hoog-risico AI| q-8.0
-	q-7.1 -->|Ja: open-source, geen hoog-risico AI, niet-verboden AI| q-9.0
-	q-7.1 -->|Nee| q-8.0
-	q-8.0 -->|Ja: AI-systeem, hoog-risico AI, transparantierisico| c-12.0.1
-	q-8.0 -->|Ja: AI-systeem, hoog-risico AI, geen transparantierisico| c-12.0.2
-	q-8.0 -->|Ja: AI-systeem, geen hoog-risico AI, transparantierisico| c-12.0.3
-	q-8.0 -->|Ja: AI-systeem, geen hoog-risico AI, geen transparantierisico| c-12.0.4
-	q-8.0 -->|Ja: AI-systeem voor algemene doeleinden, hoog-risico AI, transparantierisico| c-12.1.2
-	q-8.0 -->|Ja: AI-systeem voor algemene doeleinden, hoog-risico AI, geen transparantierisico| c-12.1.3
-	q-8.0 -->|Ja: AI-systeem voor algemene doeleinden, geen hoog-risico AI, transparantierisico| c-12.1.6
-	q-8.0 -->|Ja: AI-systeem voor algemene doeleinden, geen hoog-risico AI, geen transparantierisico| c-12.1.7
-	q-8.0 -->|Ja: AI-model voor algemene doeleinden, systeemrisico| c-12.2.1
-	q-8.0 -->|Ja: AI-model voor algemene doeleinden, geen systeemrisico, geen open-source| c-12.2.3
-	q-8.0 -->|Ja: AI-model voor algemene doeleinden, geen systeemrisico, open-source| c-12.2.4
-	q-8.0 -->|Nee| q-8.1
-	q-8.1 -->|Ja: hoog-risico AI| q-8.2
-	q-8.1 -->|Ja: AI-systeem, geen hoog-risico AI, transparantierisico| c-13.0.3
-	q-8.1 -->|Ja: AI-systeem, geen hoog-risico AI, geen transparantierisico| c-13.0.4
-	q-8.1 -->|Ja: AI-systeem voor algemene doeleinden, geen hoog-risico AI, transparantierisico| c-13.1.6
-	q-8.1 -->|Ja: AI-systeem voor algemene doeleinden, geen hoog-risico AI, geen transparantierisico| c-13.1.7
-	q-8.1 -->|Ja: AI-model voor algemene doeleinden, systeemrisico| c-13.2.1
-	q-8.1 -->|Ja: AI-model voor algemene doeleinden, geen systeemrisico| c-13.2.3
-	q-8.1 -->|Nee| c-15.7
-	q-8.2 -->|Ja: AI-systeem, hoog-risico AI, transparantierisico| c-14.0.1
-	q-8.2 -->|Ja: AI-systeem, hoog-risico AI, geen transparantierisico| c-14.0.2
-	q-8.2 -->|Ja: AI-systeem voor algemene doeleinden, hoog-risico AI, transparantierisico| c-14.0.5
-	q-8.2 -->|Ja: AI-systeem voor algemene doeleinden, hoog-risico AI, geen transparantierisico| c-14.0.6
-	q-8.2 -->|Nee| q-8.3
-	q-8.3 -->|Ja: AI-systeem, hoog-risico AI, transparantierisico| c-14.0.1
-	q-8.3 -->|Ja: AI-systeem, hoog-risico AI, geen transparantierisico| c-14.0.2
-	q-8.3 -->|Ja: AI-systeem voor algemene doeleinden, hoog-risico AI, transparantierisico| c-14.0.5
-	q-8.3 -->|Ja: AI-systeem voor algemene doeleinden, hoog-risico AI, geen transparantierisico| c-14.0.6
-	q-8.3 -->|Nee| q-8.4
-	q-8.4 -->|Ja: AI-systeem, hoog-risico AI, transparantierisico| c-14.0.1
-	q-8.4 -->|Ja: AI-systeem, hoog-risico AI, geen transparantierisico| c-14.0.2
-	q-8.4 -->|Ja: AI-systeem voor algemene doeleinden, hoog-risico AI, transparantierisico| c-14.0.5
-	q-8.4 -->|Ja: AI-systeem voor algemene doeleinden, hoog-risico AI, geen transparantierisico| c-14.0.6
-	q-8.4 -->|Nee: AI-systeem, hoog-risico AI, transparantierisico| c-13.0.1
-	q-8.4 -->|Nee: AI-systeem, hoog-risico AI, geen transparantierisico| c-13.0.2
-	q-8.4 -->|Nee: AI-systeem voor algemene doeleinden, hoog-risico AI, transparantierisico| c-13.1.2
-	q-8.4 -->|Nee: AI-systeem voor algemene doeleinden, hoog-risico AI, geen transparantierisico| c-13.1.3
-	q-9.0 -->|Ja| q-9.1
-	q-9.0 -->|Nee| c-15.6
-	q-9.1 -->|Ja| c-15.5
-	q-9.1 -->|Nee| c-15.4
-subgraph soort_toepassing
-q-0
-q-1.0
-q-1.1
-q-1.2
-end
-subgraph open_source
-q-1.0.1
-q-1.0.2
-end
-subgraph publicatiecategorie
-q-2.0
-q-3.0
-q-3.1
-q-4.0
-q-4.1
-q-4.2
-q-5.0
-q-5.1
-q-5.2
-q-5.3
-q-5.4
-q-5.5
-q-5.6
-q-5.7
-q-5.1.0
-q-5.1.1
-end
-subgraph systeemrisico
-q-6.0
-end
-subgraph transparantieverplichting
-q-7.0
-q-7.1
-end
-subgraph rol
-q-8.0
-q-8.1
-q-8.2
-q-8.3
-q-8.4
-end
-subgraph impactvol
-q-9.0
-q-9.1
-end
-classDef commonStyle fill:#FFFFFF,stroke:#39870c,stroke-width:2px
-class soort_toepassing commonStyle
-class open_source commonStyle
-class publicatiecategorie commonStyle
-class systeemrisico commonStyle
-class transparantieverplichting commonStyle
-class rol commonStyle
-class impactvol commonStyle
-    </pre>
 
-<script>mermaid.initialize({ maxTextSize: 9000000000, startOnLoad: true, securityLevel: 'loose' })</script>
-</body>
+        </pre>
 
-</html>
+    <script>mermaid.initialize({ maxTextSize: 9000000000, startOnLoad: true, securityLevel: 'loose' })</script>
+    </body>
+
+    </html>

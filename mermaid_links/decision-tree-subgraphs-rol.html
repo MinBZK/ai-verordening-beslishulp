@@ -1,0 +1,121 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AI Decision tree</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+        <script src='https://unpkg.com/mermaid@11.0.2/dist/mermaid.min.js'></script>
+        <script>
+            window.callback = function (name) {
+            let cookieValue = document.getElementsByClassName("mermaidTooltip");
+            let modelcontent1 = document.getElementById("modelcontent1");
+            let model1 = document.getElementById("model1");
+            console.log(cookieValue[0]);
+            // hide the tooltip
+            cookieValue[0].style.display = "none";
+
+            modelcontent1.innerHTML = cookieValue[0].innerText.replaceAll("#specialnewline#", "<br>");;
+            model1.classList.add('is-active');
+            };
+
+            document.addEventListener('DOMContentLoaded', () => {
+            let modealclose1 = document.getElementById("modealclose1");
+            modealclose1.addEventListener('click', () => {
+                let model1 = document.getElementById("model1");
+                model1.classList.remove('is-active');
+            });
+
+            });
+
+        </script>
+
+        </head>
+
+        <body class="has-background-white-ter">
+
+        <div id="model1" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+            <div id="modelcontent1">
+            </div>
+            </div>
+            <button id="modealclose1" class="modal-close is-large" aria-label="close"></button>
+        </div>
+
+
+        <pre class="mermaid has-background-white-ter">
+            ---
+title: Decision Tree
+---
+%%{
+	init: {
+		"theme": "base",
+		"themeVariables": {
+			"primaryColor": "#007bc7",
+			"primaryTextColor": "#000000",
+			"primaryBorderColor": "#007bc7",
+			"lineColor": "#154273",
+			"secondaryColor": "#CCE7F4"
+		}
+	}
+}%%
+
+flowchart TB
+	q-8.0("8.0: Aanbieder")
+click q-8.0 callback "We gaan nu bepalen welke rol u heeft: aanbieder, gebruiksverantwoordelijke, of beide.#specialnewline##specialnewline# Gaat u een AI-systeem of een AI-model op de markt brengen of in gebruik stellen onder eigen naam of merk, al dan niet tegen betaling?"
+	q-8.1("8.1: Gebruiksverantwoordelijke")
+click q-8.1 callback "Bent u een overheidsinstantie die een AI-systeem onder eigen verantwoordelijkheid gebruikt? (Het AI-systeem wordt niet gebruikt in het kader van een persoonlijke niet-beroepsactiviteit)."
+	q-8.2("8.2: Naam of merk op hoog-risico AI-systeem")
+click q-8.2 callback "Zet u uw naam of merk op een AI-systeem met een hoog risico dat reeds in de handel is gebracht of in gebruik is gesteld (onverminderd contractuele regelingen waarin wordt bepaald dat de verplichtingen anders worden toegewezen)?"
+	q-8.3("8.3: Substantiële wijziging in hoog-risico AI-systeem")
+click q-8.3 callback "Brengt u een substantiële wijziging aan in een AI-systeem met een hoog risico dat reeds in de handel is gebracht of reeds in gebruik is gesteld, op zodanige wijze dat het systeem een AI-systeem met een hoog risico blijft op grond van Artikel 6?"
+	q-8.4("8.4: Wijziging beoogde doel hoog-risico AI-systeem")
+click q-8.4 callback "Wijzigt u het beoogde doel van een AI-systeem, met inbegrip van een AI-systeem voor algemene doeleinden, dat niet als een systeem met een hoog risico is geclassificeerd en reeds in de handel is gebracht of in gebruik is gesteld, op zodanige wijze dat het betrokken AI-systeem een AI-systeem met een hoog risico overeenkomstig Artikel 6 wordt?"
+	q-8.0 -->|Ja: AI-systeem, hoog-risico AI, transparantierisico| c-12.0.1
+	q-8.0 -->|Ja: AI-systeem, hoog-risico AI, geen transparantierisico| c-12.0.2
+	q-8.0 -->|Ja: AI-systeem, geen hoog-risico AI, transparantierisico| c-12.0.3
+	q-8.0 -->|Ja: AI-systeem, geen hoog-risico AI, geen transparantierisico| c-12.0.4
+	q-8.0 -->|Ja: AI-systeem voor algemene doeleinden, hoog-risico AI, transparantierisico| c-12.1.2
+	q-8.0 -->|Ja: AI-systeem voor algemene doeleinden, hoog-risico AI, geen transparantierisico| c-12.1.3
+	q-8.0 -->|Ja: AI-systeem voor algemene doeleinden, geen hoog-risico AI, transparantierisico| c-12.1.6
+	q-8.0 -->|Ja: AI-systeem voor algemene doeleinden, geen hoog-risico AI, geen transparantierisico| c-12.1.7
+	q-8.0 -->|Ja: AI-model voor algemene doeleinden, systeemrisico| c-12.2.1
+	q-8.0 -->|Ja: AI-model voor algemene doeleinden, geen systeemrisico, geen open-source| c-12.2.3
+	q-8.0 -->|Ja: AI-model voor algemene doeleinden, geen systeemrisico, open-source| c-12.2.4
+	q-8.0 -->|Nee| q-8.1
+	q-8.1 -->|Ja: hoog-risico AI| q-8.2
+	q-8.1 -->|Ja: AI-systeem, geen hoog-risico AI, transparantierisico| c-13.0.3
+	q-8.1 -->|Ja: AI-systeem, geen hoog-risico AI, geen transparantierisico| c-13.0.4
+	q-8.1 -->|Ja: AI-systeem voor algemene doeleinden, geen hoog-risico AI, transparantierisico| c-13.1.6
+	q-8.1 -->|Ja: AI-systeem voor algemene doeleinden, geen hoog-risico AI, geen transparantierisico| c-13.1.7
+	q-8.1 -->|Ja: AI-model voor algemene doeleinden, systeemrisico| c-13.2.1
+	q-8.1 -->|Ja: AI-model voor algemene doeleinden, geen systeemrisico| c-13.2.3
+	q-8.1 -->|Nee| c-15.7
+	q-8.2 -->|Ja: AI-systeem, hoog-risico AI, transparantierisico| c-14.0.1
+	q-8.2 -->|Ja: AI-systeem, hoog-risico AI, geen transparantierisico| c-14.0.2
+	q-8.2 -->|Ja: AI-systeem voor algemene doeleinden, hoog-risico AI, transparantierisico| c-14.0.5
+	q-8.2 -->|Ja: AI-systeem voor algemene doeleinden, hoog-risico AI, geen transparantierisico| c-14.0.6
+	q-8.2 -->|Nee| q-8.3
+	q-8.3 -->|Ja: AI-systeem, hoog-risico AI, transparantierisico| c-14.0.1
+	q-8.3 -->|Ja: AI-systeem, hoog-risico AI, geen transparantierisico| c-14.0.2
+	q-8.3 -->|Ja: AI-systeem voor algemene doeleinden, hoog-risico AI, transparantierisico| c-14.0.5
+	q-8.3 -->|Ja: AI-systeem voor algemene doeleinden, hoog-risico AI, geen transparantierisico| c-14.0.6
+	q-8.3 -->|Nee| q-8.4
+	q-8.4 -->|Ja: AI-systeem, hoog-risico AI, transparantierisico| c-14.0.1
+	q-8.4 -->|Ja: AI-systeem, hoog-risico AI, geen transparantierisico| c-14.0.2
+	q-8.4 -->|Ja: AI-systeem voor algemene doeleinden, hoog-risico AI, transparantierisico| c-14.0.5
+	q-8.4 -->|Ja: AI-systeem voor algemene doeleinden, hoog-risico AI, geen transparantierisico| c-14.0.6
+	q-8.4 -->|Nee: AI-systeem, hoog-risico AI, transparantierisico| c-13.0.1
+	q-8.4 -->|Nee: AI-systeem, hoog-risico AI, geen transparantierisico| c-13.0.2
+	q-8.4 -->|Nee: AI-systeem voor algemene doeleinden, hoog-risico AI, transparantierisico| c-13.1.2
+	q-8.4 -->|Nee: AI-systeem voor algemene doeleinden, hoog-risico AI, geen transparantierisico| c-13.1.3
+
+        </pre>
+
+    <script>mermaid.initialize({ maxTextSize: 9000000000, startOnLoad: true, securityLevel: 'loose' })</script>
+    </body>
+
+    </html>
