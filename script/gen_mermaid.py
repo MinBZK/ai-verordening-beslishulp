@@ -127,8 +127,7 @@ def create_html(file_name, flowchart_script):
     <script>mermaid.initialize({ maxTextSize: 9000000000, startOnLoad: true, securityLevel: 'loose' })</script>
     </body>
 
-    </html>
-            """.replace("{script}", flowchart_script)
+    </html>""".replace("{script}", flowchart_script)
         )
 
 
@@ -204,7 +203,6 @@ questions: List[Question] = [Question(**q) for q in decision_tree.get("questions
 conclusions: List[Conclusion] = [
     Conclusion(**q) for q in decision_tree.get("conclusions", [])
 ]
-# subgraphs: Dict[str, Dict[str]] = {}
 
 nodes: List[CustomNode] = []
 links: List[Link] = []
@@ -314,6 +312,29 @@ config = Config(
 
 orientation = Direction.TOP_TO_BOTTOM
 
+# create complete graph and write into html
+subgraphs = defaultdict(list)
+for link in links:
+    if f"{link.origin.id_}" not in subgraphs[link.origin.category]:
+        subgraphs[link.origin.category].append(f"{link.origin.id_}")
+
+subgraphs_complete = "\n".join(
+    [
+        f"subgraph {category}\n" + "\n".join(questions) + "\nend"
+        for category, questions in subgraphs.items()
+    ]
+    + ["classDef commonStyle fill:#FFFFFF,stroke:#39870c,stroke-width:2px"]
+    + [f"class {category} commonStyle" for category in subgraphs]
+)
+flowchart_complete = FlowChart(
+    title=name, nodes=nodes, links=links, orientation=orientation, config=config
+)
+create_html(
+    "./mermaid_links/decision-tree-complete.html",
+    flowchart_complete.script + subgraphs_complete,
+)
+
+
 # Create main graph and write into html
 pairs_main = "\n".join(
     {
@@ -322,10 +343,12 @@ pairs_main = "\n".join(
         if link.origin.category != link.end.category and link.end.category
     }
 )
-flowchart = FlowChart(title=name, config=config)
-create_html("./mermaid_links/decision-tree-main.html", flowchart.script + pairs_main)
+flowchart_main = FlowChart(title=name, config=config)
+create_html(
+    "./mermaid_links/decision-tree-main.html", flowchart_main.script + pairs_main
+)
 
-# Create subgraphs and write into html
+# Create subgraphs and write into htmls
 nodes_by_category = defaultdict(list)
 links_by_category = defaultdict(list)
 for category, cat_questions in subgraphs.items():
@@ -344,3 +367,21 @@ for category, cat_questions in subgraphs.items():
         "./mermaid_links/decision-tree-subgraphs-" + category + ".html",
         flowchart.script,
     )
+
+# TO DO: make sure that html is rendered correctly.
+# try:
+#     mermaid_str = dict_to_str(subgraph)
+
+#     if not flowchart.script:
+#         raise ValueError("Error: The flowchart script is empty.")
+
+#     if not mermaid_str.strip():
+#         raise ValueError("Error: The Mermaid diagram string is empty.")
+
+#     print("Flowchart script and Mermaid diagram are not empty.")
+# except ValueError as e:
+#     print(e)
+#     sys.exit(1)
+# except Exception as e:
+#     print(f"An unexpected error occured: {e}")
+#     sys.exit(1)

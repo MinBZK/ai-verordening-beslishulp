@@ -1,53 +1,53 @@
 
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Decision tree</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-    <script src='https://unpkg.com/mermaid@11.0.2/dist/mermaid.min.js'></script>
-    <script>
-        window.callback = function (name) {
-        let cookieValue = document.getElementsByClassName("mermaidTooltip");
-        let modelcontent1 = document.getElementById("modelcontent1");
-        let model1 = document.getElementById("model1");
-        console.log(cookieValue[0]);
-        // hide the tooltip
-        cookieValue[0].style.display = "none";
-
-        modelcontent1.innerHTML = cookieValue[0].innerText.replaceAll("#specialnewline#", "<br>");;
-        model1.classList.add('is-active');
-        };
-
-        document.addEventListener('DOMContentLoaded', () => {
-        let modealclose1 = document.getElementById("modealclose1");
-        modealclose1.addEventListener('click', () => {
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AI Decision tree</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+        <script src='https://unpkg.com/mermaid@11.0.2/dist/mermaid.min.js'></script>
+        <script>
+            window.callback = function (name) {
+            let cookieValue = document.getElementsByClassName("mermaidTooltip");
+            let modelcontent1 = document.getElementById("modelcontent1");
             let model1 = document.getElementById("model1");
-            model1.classList.remove('is-active');
-        });
+            console.log(cookieValue[0]);
+            // hide the tooltip
+            cookieValue[0].style.display = "none";
 
-        });
+            modelcontent1.innerHTML = cookieValue[0].innerText.replaceAll("#specialnewline#", "<br>");;
+            model1.classList.add('is-active');
+            };
 
-    </script>
+            document.addEventListener('DOMContentLoaded', () => {
+            let modealclose1 = document.getElementById("modealclose1");
+            modealclose1.addEventListener('click', () => {
+                let model1 = document.getElementById("model1");
+                model1.classList.remove('is-active');
+            });
 
-    </head>
+            });
 
-    <body class="has-background-white-ter">
+        </script>
 
-    <div id="model1" class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-        <div id="modelcontent1">
+        </head>
+
+        <body class="has-background-white-ter">
+
+        <div id="model1" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+            <div id="modelcontent1">
+            </div>
+            </div>
+            <button id="modealclose1" class="modal-close is-large" aria-label="close"></button>
         </div>
-        </div>
-        <button id="modealclose1" class="modal-close is-large" aria-label="close"></button>
-    </div>
 
 
-    <pre class="mermaid has-background-white-ter">
-        ---
+        <pre class="mermaid has-background-white-ter">
+            ---
 title: Decision Tree
 ---
 %%{
@@ -343,9 +343,9 @@ class systeemrisico commonStyle
 class transparantieverplichting commonStyle
 class rol commonStyle
 class publicatiecategorie_impactvol commonStyle
-    </pre>
+        </pre>
 
-<script>mermaid.initialize({ maxTextSize: 9000000000, startOnLoad: true, securityLevel: 'loose' })</script>
-</body>
+    <script>mermaid.initialize({ maxTextSize: 9000000000, startOnLoad: true, securityLevel: 'loose' })</script>
+    </body>
 
-</html>
+    </html>
