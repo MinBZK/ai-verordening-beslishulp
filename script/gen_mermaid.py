@@ -317,6 +317,8 @@ subgraphs = defaultdict(list)
 for link in links:
     if f"{link.origin.id_}" not in subgraphs[link.origin.category]:
         subgraphs[link.origin.category].append(f"{link.origin.id_}")
+    if f"{link.end.id_}" not in subgraphs[link.origin.category] and link.end.id_.startswith('c-'):
+        subgraphs[link.origin.category].append(f"{link.end.id_}")
 
 subgraphs_complete = "\n".join(
     [
@@ -335,18 +337,6 @@ create_html(
 )
 
 
-# Create main graph and write into html
-pairs_main = "\n".join(
-    {
-        f"{link.origin.category} --> {link.end.category}"
-        for link in links
-        if link.origin.category != link.end.category and link.end.category
-    }
-)
-flowchart_main = FlowChart(title=name, config=config)
-create_html(
-    "./mermaid_links/decision-tree-main.html", flowchart_main.script + pairs_main
-)
 
 # Create subgraphs and write into htmls
 nodes_by_category = defaultdict(list)
@@ -357,16 +347,41 @@ for category, cat_questions in subgraphs.items():
     ]
     nodes_by_category[category] = [node for node in nodes if node.id_ in cat_questions]
     flowchart = FlowChart(
-        title=name,
+        title=category,
         nodes=nodes_by_category.get(category, []),
         links=links_by_category.get(category, []),
         orientation=orientation,
         config=config,
     )
+
+
     create_html(
         "./mermaid_links/decision-tree-subgraphs-" + category + ".html",
         flowchart.script,
     )
+
+# Create main graph and write into html
+pairs_main = "\n".join(
+    {
+        f"{link.origin.category} --> {link.end.category}"
+        for link in links
+        if link.origin.category != link.end.category and link.end.category
+    }
+)
+
+htmls = []
+for category in subgraphs.keys():
+    htmls.append("click " + category + " href " + '"decision-tree-subgraphs-' + category + '.html"' + ' "' + category + '"')
+#print("\n".join(htmls))
+
+flowchart_main = FlowChart(title=name, config=config)
+
+
+
+create_html(
+    "./mermaid_links/decision-tree-main.html", flowchart_main.script + pairs_main + "\n" + "\n".join(htmls)
+)
+
 
 # TO DO: make sure that html is rendered correctly.
 # try:

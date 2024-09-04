@@ -48,7 +48,7 @@
 
         <pre class="mermaid has-background-white-ter">
             ---
-title: Decision Tree
+title: rol
 ---
 %%{
 	init: {
@@ -64,6 +64,58 @@ title: Decision Tree
 }%%
 
 flowchart TB
+	c-12.0.1{{"U bent een aanbieder van een hoog-risico AI-systeem. Uw AI-systeem moet voldoen aan transparantieverplichtingen. "}}
+click c-12.0.1 callback "U bent een aanbieder van een hoog-risico AI-systeem. Uw AI-systeem moet voldoen aan transparantieverplichtingen. "
+	c-12.0.2{{"U bent een aanbieder van een hoog-risico AI-systeem."}}
+click c-12.0.2 callback "U bent een aanbieder van een hoog-risico AI-systeem."
+	c-12.0.3{{"U bent een aanbieder van een niet-hoog-risico AI-systeem. Uw AI-systeem moet voldoen aan transparantieverplichtingen."}}
+click c-12.0.3 callback "U bent een aanbieder van een niet-hoog-risico AI-systeem. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
+	c-12.0.4{{"U bent een aanbieder van een niet-hoog-risico AI-systeem."}}
+click c-12.0.4 callback "U bent een aanbieder van een niet-hoog-risico AI-systeem."
+	c-12.1.2{{"U bent een aanbieder van een hoog-risico AI-systeem voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."}}
+click c-12.1.2 callback "U bent een aanbieder van een hoog-risico AI-systeem voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
+	c-12.1.3{{"U bent een aanbieder van een hoog-risico AI-systeem voor algemene doeleinden."}}
+click c-12.1.3 callback "U bent een aanbieder van een hoog-risico AI-systeem voor algemene doeleinden."
+	c-12.1.6{{"U bent een aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."}}
+click c-12.1.6 callback "U bent een aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
+	c-12.1.7{{"U bent een aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden."}}
+click c-12.1.7 callback "U bent een aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden."
+	c-12.2.1{{"U bent een aanbieder van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico."}}
+click c-12.2.1 callback "U bent een aanbieder van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico."
+	c-12.2.3{{"U bent een aanbieder van een AI-model voor algemene doeleinden."}}
+click c-12.2.3 callback "U bent een aanbieder van een AI-model voor algemene doeleinden."
+	c-12.2.4{{"U bent een aanbieder van een open-source AI-model voor algemene doeleinden."}}
+click c-12.2.4 callback "U bent een aanbieder van een open-source AI-model voor algemene doeleinden."
+	c-13.0.1{{"U bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem. Uw AI-systeem moet voldoen aan transparantieverplichtingen. "}}
+click c-13.0.1 callback "U bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem. Uw AI-systeem moet voldoen aan transparantieverplichtingen. "
+	c-13.0.2{{"U bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem."}}
+click c-13.0.2 callback "U bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem."
+	c-13.0.3{{"U bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem. Uw AI-systeem moet voldoen aan transparantieverplichtingen."}}
+click c-13.0.3 callback "U bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
+	c-13.0.4{{"U bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem."}}
+click c-13.0.4 callback "U bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem."
+	c-13.1.2{{"U bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."}}
+click c-13.1.2 callback "U bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
+	c-13.1.3{{"U bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem voor algemene doeleinden."}}
+click c-13.1.3 callback "U bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem voor algemene doeleinden."
+	c-13.1.6{{"U bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."}}
+click c-13.1.6 callback "U bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
+	c-13.1.7{{"U bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem voor algemene doeleinden."}}
+click c-13.1.7 callback "U bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem voor algemene doeleinden."
+	c-13.2.1{{"U bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico."}}
+click c-13.2.1 callback "U bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico."
+	c-13.2.3{{"U bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden."}}
+click c-13.2.3 callback "U bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden."
+	c-14.0.1{{"U bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem. Uw AI-systeem moet voldoen aan transparantieverplichtingen."}}
+click c-14.0.1 callback "U bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
+	c-14.0.2{{"U bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem."}}
+click c-14.0.2 callback "U bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem."
+	c-14.0.5{{"U bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."}}
+click c-14.0.5 callback "U bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem voor algemene doeleinden. Uw AI-systeem moet voldoen aan transparantieverplichtingen."
+	c-14.0.6{{"U bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem voor algemene doeleinden."}}
+click c-14.0.6 callback "U bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem voor algemene doeleinden."
+	c-15.7{{"U bent geen aanbieder en geen gebruiksverantwoordelijke. Deze beslisboom is gemaakt voor alleen deze twee rollen. Controleer nog een keer goed of één van deze rollen misschien toch op u van toepassing is."}}
+click c-15.7 callback "U bent geen aanbieder en geen gebruiksverantwoordelijke. Deze beslisboom is gemaakt voor alleen deze twee rollen. Controleer nog een keer goed of één van deze rollen misschien toch op u van toepassing is."
 	q-8.0("8.0: Aanbieder")
 click q-8.0 callback "We gaan nu bepalen welke rol u heeft: aanbieder, gebruiksverantwoordelijke, of beide.#specialnewline##specialnewline# Gaat u een AI-systeem of een AI-model op de markt brengen of in gebruik stellen onder eigen naam of merk, al dan niet tegen betaling?"
 	q-8.1("8.1: Gebruiksverantwoordelijke")

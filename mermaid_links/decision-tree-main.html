@@ -64,14 +64,21 @@ title: Decision Tree
 }%%
 
 flowchart TB
-publicatiecategorie_risico --> transparantieverplichting
-transparantieverplichting --> rol
-publicatiecategorie_risico --> systeemrisico
-soort_toepassing --> publicatiecategorie_impactvol
 systeemrisico --> rol
+soort_toepassing --> open_source
+transparantieverplichting --> rol
 open_source --> publicatiecategorie_risico
 transparantieverplichting --> publicatiecategorie_impactvol
-soort_toepassing --> open_source
+publicatiecategorie_risico --> transparantieverplichting
+publicatiecategorie_risico --> systeemrisico
+soort_toepassing --> publicatiecategorie_impactvol
+click soort_toepassing href "decision-tree-subgraphs-soort_toepassing.html" "soort_toepassing"
+click open_source href "decision-tree-subgraphs-open_source.html" "open_source"
+click publicatiecategorie_risico href "decision-tree-subgraphs-publicatiecategorie_risico.html" "publicatiecategorie_risico"
+click systeemrisico href "decision-tree-subgraphs-systeemrisico.html" "systeemrisico"
+click transparantieverplichting href "decision-tree-subgraphs-transparantieverplichting.html" "transparantieverplichting"
+click rol href "decision-tree-subgraphs-rol.html" "rol"
+click publicatiecategorie_impactvol href "decision-tree-subgraphs-publicatiecategorie_impactvol.html" "publicatiecategorie_impactvol"
         </pre>
 
     <script>mermaid.initialize({ maxTextSize: 9000000000, startOnLoad: true, securityLevel: 'loose' })</script>

@@ -48,7 +48,7 @@
 
         <pre class="mermaid has-background-white-ter">
             ---
-title: Decision Tree
+title: soort_toepassing
 ---
 %%{
 	init: {
@@ -64,6 +64,8 @@ title: Decision Tree
 }%%
 
 flowchart TB
+	c-15.0{{"U gebruikt geen algoritme. De AI-verordening is niet van toepassing."}}
+click c-15.0 callback "U gebruikt geen algoritme. De AI-verordening is niet van toepassing."
 	q-0("0: Algoritme")
 click q-0 callback "Bevat de (beoogde) toepassing een algoritme?"
 	q-1.0("1.0: AI-systeem")

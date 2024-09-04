@@ -48,7 +48,7 @@
 
         <pre class="mermaid has-background-white-ter">
             ---
-title: Decision Tree
+title: publicatiecategorie_impactvol
 ---
 %%{
 	init: {
@@ -64,6 +64,12 @@ title: Decision Tree
 }%%
 
 flowchart TB
+	c-15.4{{"Het betreft een algoritme met impact, maar de AI-verordening is niet van toepassing."}}
+click c-15.4 callback "Het betreft een algoritme met impact, maar de AI-verordening is niet van toepassing."
+	c-15.5{{"Het betreft een algoritme met impact, maar de AI-verordening is niet van toepassing."}}
+click c-15.5 callback "Het betreft een algoritme met impact, maar de AI-verordening is niet van toepassing."
+	c-15.6{{"Uw algoritme is niet impactvol en de AI-verordening is niet van toepassing."}}
+click c-15.6 callback "Uw algoritme is niet impactvol en de AI-verordening is niet van toepassing."
 	q-9.0("9.0: Impactvol algoritme")
 click q-9.0 callback "Gebruikt u een algoritme met impact (rechtsgevolgen voor de burger of classificatie van burgers of groepen) volgens categorie B van de Handreiking van het Algoritmeregister?"
 	q-9.1("9.1: Uitzonderingsgronden Handreiking Algoritmeregister")

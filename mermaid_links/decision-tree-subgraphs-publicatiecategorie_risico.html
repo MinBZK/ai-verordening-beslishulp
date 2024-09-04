@@ -48,7 +48,7 @@
 
         <pre class="mermaid has-background-white-ter">
             ---
-title: Decision Tree
+title: publicatiecategorie_risico
 ---
 %%{
 	init: {
@@ -64,6 +64,12 @@ title: Decision Tree
 }%%
 
 flowchart TB
+	c-15.1{{"Het is verboden om dit AI-systeem te gebruiken. Er is geen sprake van een uitzondering op de lijst van verboden AI-systemen."}}
+click c-15.1 callback "Het is verboden om dit AI-systeem te gebruiken. Er is geen sprake van een uitzondering op de lijst van verboden AI-systemen."
+	c-15.2{{"Er is sprake van een uitzondering op de lijst van verboden AI-systemen."}}
+click c-15.2 callback "Er is sprake van een uitzondering op de lijst van verboden AI-systemen."
+	c-15.3{{"Er is sprake van een uitzonderingsgrond. De AI-verordening is niet van toepassing."}}
+click c-15.3 callback "Er is sprake van een uitzonderingsgrond. De AI-verordening is niet van toepassing."
 	q-2.0("2.0: Uitzondering AI-verordening")
 click q-2.0 callback "We gaan nu bepalen of er sprake is van een uitzondering op de AI-verordening.#specialnewline##specialnewline# Valt de (beoogde) toepassing onder een van de volgende categorieen? #specialnewline##specialnewline# - AI-systemen die uitsluitend in de handel worden gebracht, in gebruik worden gesteld of, al dan niet gewijzigd, worden gebruikt voor militaire, defensie- of nationale veiligheidsdoeleinden #specialnewline# - AI-systemen die niet in de Unie in de handel worden gebracht of in gebruik worden gesteld en waarvan de output in de Unie uitsluitend wordt gebruikt voor militaire, defensie- of nationale veiligheidsdoeleinden #specialnewline# - overheidsinstanties in derde landen of internationale organisaties die binnen het toepassingsgebied van de AI-verordening vallen, wanneer deze instanties of organisaties AI-systemen gebruiken in het kader van internationale samenwerking of overeenkomsten met de Unie of een of meer lidstaten op het gebied van rechtshandhaving en justitie #specialnewline# - onderzoeks-, test- of ontwikkelingsactiviteiten met betrekking tot AI-systemen of AI-modellen voor zij in de handel worden gebracht of in gebruik worden gesteld (testen onder reële omstandigheden valt hier niet onder) #specialnewline# - AI-systemen of AI-modellen, met inbegrip van hun output, die specifiek zijn ontwikkeld en in gebruik worden gesteld met wetenschappelijk onderzoek en wetenschappelijke ontwikkeling als enig doel"
 	q-3.0("3.0: Verboden AI")
