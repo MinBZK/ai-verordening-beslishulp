@@ -162,18 +162,6 @@
     "Questions": {
       "id": "#/$defs/Questions",
       "type": "object",
-      "oneOf": [
-        {
-          "$ref": "#/$defs/MultipleChoiceQuestion"
-        },
-        {
-          "$ref": "#/$defs/SingleChoiceQuestion"
-        }
-      ]
-    },
-    "MultipleChoiceQuestion": {
-      "id": "#/$defs/MultipleChoiceQuestion",
-      "type": "object",
       "properties": {
         "questionId": {
           "$ref": "#/$defs/QuestionId"
@@ -196,50 +184,6 @@
         "description": {
           "$ref": "#/$defs/Description",
           "type": "string"
-        },
-        "questionType": {
-          "type": "string",
-          "enum": ["MultipleChoice"]
-        },
-        "answers": {
-          "type": "array",
-          "items": {
-            "$ref": "#/$defs/Answer"
-          },
-          "minItems": 2
-        }
-      },
-      "required": ["questionId", "question", "simplifiedQuestion","category", "answers"]
-    },
-    "SingleChoiceQuestion": {
-      "id": "#/$defs/SingleChoiceQuestion",
-      "type": "object",
-      "properties": {
-        "questionId": {
-          "$ref": "#/$defs/QuestionId"
-        },
-        "question": {
-          "$ref": "#/$defs/Question"
-        },
-        "simplifiedQuestion":{
-          "$ref": "#/$defs/SimplifiedQuestion"
-        },
-        "category": {
-          "$ref": "#/$defs/Category"
-        },
-        "sources": {
-          "type": "array",
-          "items": {
-            "$ref": "#/$defs/Source"
-          }
-        },
-        "description": {
-          "$ref": "#/$defs/Description",
-          "type": "string"
-        },
-        "questionType": {
-          "type": "string",
-          "enum": ["SingleChoice"]
         },
         "answers": {
           "type": "array",

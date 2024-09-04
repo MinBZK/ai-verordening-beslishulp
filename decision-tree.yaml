@@ -6,7 +6,6 @@ questions:
     question: "Bevat de (beoogde) toepassing een algoritme?"
     simplifiedQuestion: "Algoritme"
     category: soort_toepassing
-    questionType: SingleChoice
     sources:
       - source: Aandacht voor Algoritmes, Algemene Rekenkamer, 2021
         url: https://www.rekenkamer.nl/onderwerpen/algoritmes/documenten/rapporten/2021/01/26/aandacht-voor-algoritmes
@@ -30,7 +29,6 @@ questions:
     question: "Is de (beoogde) toepassing een AI-systeem?"
     simplifiedQuestion: "AI-systeem"
     category: soort_toepassing
-    questionType: SingleChoice
     sources:
       - source: Overweging 12 - Begrip "AI-systeem"
       - source: Begrippenlijst Algoritmekader
@@ -44,7 +42,6 @@ questions:
     question: "Is de (beoogde) toepassing een AI-systeem voor algemene doeleinden?"
     simplifiedQuestion: "AI-systeem voor algemene doeleinden"
     category: soort_toepassing
-    questionType: SingleChoice
     sources:
       - source: Overweging 12 - Begrip AI-systeem
       - source: Begrippenlijst Algoritmekader
@@ -64,7 +61,6 @@ questions:
     question: "Is de (beoogde) toepassing een AI-model voor algemene doeleinden?"
     simplifiedQuestion: "AI-model voor algemene doeleinden"
     category: soort_toepassing
-    questionType: SingleChoice
     sources:
       - source: Lid 63 - "AI-model voor algemene doeleinden"
       - source: Begrippenlijst Algoritmekader
@@ -83,7 +79,6 @@ questions:
     question: "Wordt de toepassing onder een open of vrije licentie gedeeld?"
     simplifiedQuestion: "Open of vrije licentie"
     category: open_source
-    questionType: SingleChoice
     sources:
       - source: Overweging 102 - Begrip open-source
     answers:
@@ -98,7 +93,6 @@ questions:
     question: "Zijn de broncodes en parameters openbaar voor eenieder?"
     simplifiedQuestion: "Openbare broncodes en parameters"
     category: open_source
-    questionType: SingleChoice
     sources:
       - source: Overweging 102 - Begrip open-source
     answers:
@@ -123,7 +117,6 @@ questions:
           - AI-systemen of AI-modellen, met inbegrip van hun output, die specifiek zijn ontwikkeld en in gebruik worden gesteld met wetenschappelijk onderzoek en wetenschappelijke ontwikkeling als enig doel"
     simplifiedQuestion: "Uitzondering AI-verordening"
     category: publicatiecategorie_risico
-    questionType: SingleChoice
     sources:
       - source: Artikel 2 - Toepassingsgebied
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e1978-1-1
@@ -157,7 +150,6 @@ questions:
       - gebruikt kan worden als een biometrisch systeem in de publieke ruimte voor identificatie op afstand in real-time, met het oog op de rechtshandhaving?"
     simplifiedQuestion: "Verboden AI"
     category: publicatiecategorie_risico
-    questionType: SingleChoice
     sources:
       - source: Artikel 5 - Verboden AI-praktijken
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2808-1-1
@@ -180,7 +172,6 @@ questions:
       - Er is sprake van gerichte opsporing van specifieke slachtoffers, ontvoering, mensenhandel en seksuele uitbuiting van mensen, vermiste personen; of het voorkomen van bedreigingen voor het leven of de fysieke veiligheid van personen of het reageren op de huidige of voorzienbare dreiging van een terreuraanslag"
     simplifiedQuestion: "Uitzondering verboden AI"
     category: publicatiecategorie_risico
-    questionType: SingleChoice
     sources:
       - source: Overweging 33 - Uitzondering verboden AI-systeem
       - source: Overweging 34 - Uitzondering verboden AI-systeem
@@ -209,7 +200,6 @@ questions:
       - Verordening (EU) 2018/1139 inzake gemeenschappelijke regels op het gebied van burgerluchtvaart en tot oprichting van een Agentschap van de Europese Unie voor de veiligheid van de luchtvaart, voor zover het gaat om het ontwerp, de productie en het in de handel brengen van luchtvaartuigen, en hun motoren, propellors, onderdelen en apparatuur om het luchtvaartuig op afstand te besturen"
     simplifiedQuestion: "Veiligheidscomponent Bijlage 1B"
     category: publicatiecategorie_risico
-    questionType: SingleChoice
     sources:
       - source: Bijlage 1 - Lijst van harmonisatiewetgeving van de Unie
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e38-124-1
@@ -244,7 +234,6 @@ questions:
       - Verordening (EU) 2017/746 betreffende medische hulpmiddelen voor in-vitrodiagnostiek"
     simplifiedQuestion: "Veiligheidscomponent Bijlage 1A"
     category: publicatiecategorie_risico
-    questionType: SingleChoice
     sources:
       - source: Bijlage 1 - Lijst van harmonisatiewetgeving van de Unie
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e38-124-1
@@ -259,7 +248,6 @@ questions:
     question: "Moet het product waarvan het AI-systeem de veiligheidscomponent vormt een conformiteits-beoordeling door een derde partij laten uitgevoeren met het oog op het in de handel brengen of in gebruik stellen van dat product op grond van de in Bijlage I Sectie A opgenomen harmonisatiewetgeving van de Europese Unie?"
     simplifiedQuestion: "Conformiteits-beoordeling"
     category: publicatiecategorie_risico
-    questionType: SingleChoice
     sources:
       - source: Overweging 50 - Conformiteitsbeoordelingsprocedure
       - source: Begrippenlijst Algoritmekader
@@ -286,7 +274,6 @@ questions:
         - rechtsbedeling en democratische processen"
     simplifiedQuestion: "Hoog-risico AI"
     category: publicatiecategorie_risico
-    questionType: SingleChoice
     sources:
       - source: Bijlage 3 - AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e38-127-1
@@ -312,7 +299,6 @@ questions:
       - Het uitvoeren van een voorbereidende taak voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?"
     simplifiedQuestion: "Uitzondering hoog-risico AI"
     category: publicatiecategorie_risico
-    questionType: SingleChoice
     sources:
       - source: Bijlage 3 - AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e38-127-1
@@ -333,7 +319,6 @@ questions:
     question: "Voert het AI-systeem profilering van natuurlijke personen uit? Bij profilering is er altijd sprake van een hoog risico."
     simplifiedQuestion: "Profilering"
     category: publicatiecategorie_risico
-    questionType: SingleChoice
     sources:
       - source: Overweging 53 - Uitzonderingen hoog risico
     answers:
@@ -358,7 +343,6 @@ questions:
       - Dit is de centrale verwerkingseenheid van een computer, smartphone of tablet. De CPU voert het rekenwerk uit waardoor programma\u2019s draaien en hardware wordt aangestuurd."
     simplifiedQuestion: "Systeemrisico"
     category: systeemrisico
-    questionType: SingleChoice
     sources:
       - source: Artikel 51 - Classificatie van AI-modellen voor algemene doeleinden als AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5489-1-1
@@ -386,7 +370,6 @@ questions:
       - aan emotieherkenning of biometrische categorisatie doet?"
     simplifiedQuestion: "Transparantieverplichtingen"
     category: transparantieverplichting
-    questionType: SingleChoice
     sources:
       - source: Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
@@ -410,7 +393,6 @@ questions:
     question: "Is er sprake van AI waarvan het bij wet is toegestaan om te gebruiken om strafbare feiten op te sporen, te voorkomen, te onderzoeken of te vervolgen?"
     simplifiedQuestion: "Uitzondering transparantieverplichtingen"
     category: transparantieverplichting
-    questionType: SingleChoice
     sources:
       - source: Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
@@ -435,7 +417,6 @@ questions:
     question: "We gaan nu bepalen welke rol u heeft: aanbieder, gebruiksverantwoordelijke, of beide.\n\n Gaat u een AI-systeem of een AI-model op de markt brengen of in gebruik stellen onder eigen naam of merk, al dan niet tegen betaling?"
     simplifiedQuestion: "Aanbieder"
     category: rol
-    questionType: SingleChoice
     answers:
       - answer: Ja
         subresult: "U bent een aanbieder volgens de AI-verordening."
@@ -473,7 +454,6 @@ questions:
     category: rol
     sources:
       - source: Overweging 13 - Overheidsinstanties, agentschappen of andere organen als gebruiksverantwoordelijke
-    questionType: SingleChoice
     answers:
       - answer: Ja
         subresult: "U bent een gebruiksverantwoordelijke volgens de AI-verordening."
@@ -503,7 +483,6 @@ questions:
         - U wijzigt het beoogde doel van een AI-systeem, met inbegrip van een AI-systeem voor algemene doeleinden, dat niet als een systeem met een hoog risico is geclassificeerd en reeds in de handel is gebracht of in gebruik is gesteld, op zodanige wijze dat het betrokken AI-systeem een AI-systeem met een hoog risico overeenkomstig Artikel 6 wordt?"
     simplifiedQuestion: "Gebruiksverantwoordelijke en aanbieder"
     category: rol
-    questionType: SingleChoice
     answers:
       - answer: Ja
         labels:
@@ -533,7 +512,6 @@ questions:
     question: "Gebruikt u een algoritme met impact (rechtsgevolgen voor de burger of classificatie van burgers of groepen) volgens categorie B van de Handreiking van het Algoritmeregister?"
     simplifiedQuestion: "Impactvol algoritme"
     category: publicatiecategorie_impactvol
-    questionType: SingleChoice
     sources:
       - source: Handreiking Algoritmeregister
         url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
@@ -548,7 +526,6 @@ questions:
     question: "Valt uw toepassing onder \xE9\xE9n van de uitzonderingsgronden categorie C of D van de Handreiking van het Algoritmeregister?"
     simplifiedQuestion: "Uitzonderingsgronden Handreiking Algoritmeregister"
     category: publicatiecategorie_impactvol
-    questionType: SingleChoice
     sources:
       - source: Handreiking Algoritmeregister
         url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
