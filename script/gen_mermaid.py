@@ -317,7 +317,9 @@ subgraphs = defaultdict(list)
 for link in links:
     if f"{link.origin.id_}" not in subgraphs[link.origin.category]:
         subgraphs[link.origin.category].append(f"{link.origin.id_}")
-    if f"{link.end.id_}" not in subgraphs[link.origin.category] and link.end.id_.startswith('c-'):
+    if f"{link.end.id_}" not in subgraphs[
+        link.origin.category
+    ] and link.end.id_.startswith("c-"):
         subgraphs[link.origin.category].append(f"{link.end.id_}")
 
 subgraphs_complete = "\n".join(
@@ -336,11 +338,15 @@ create_html(
     flowchart_complete.script + subgraphs_complete,
 )
 
-
-
 # Create subgraphs and write into htmls
 nodes_by_category = defaultdict(list)
 links_by_category = defaultdict(list)
+
+
+def get_category(subgraphs, link):
+    return next((key for key, values in subgraphs.items() if link in values), None)
+
+
 for category, cat_questions in subgraphs.items():
     links_by_category[category] = [
         link for link in links if link.origin.id_ in cat_questions
@@ -354,10 +360,23 @@ for category, cat_questions in subgraphs.items():
         config=config,
     )
 
+    subgraph_links = {
+        link.end.id_
+        for link in links_by_category[category]
+        if link.end.id_ not in cat_questions
+    }
+
+    htmls = "\n".join(
+        [
+            f'click {link} href "decision-tree-subgraphs-{end_category}.html" "{end_category}"'
+            for link in subgraph_links
+            if (end_category := get_category(subgraphs, link)) is not None
+        ]
+    )
 
     create_html(
         "./mermaid_links/decision-tree-subgraphs-" + category + ".html",
-        flowchart.script,
+        flowchart.script + "\n" + htmls,
     )
 
 # Create main graph and write into html
@@ -369,17 +388,23 @@ pairs_main = "\n".join(
     }
 )
 
-htmls = []
-for category in subgraphs.keys():
-    htmls.append("click " + category + " href " + '"decision-tree-subgraphs-' + category + '.html"' + ' "' + category + '"')
-#print("\n".join(htmls))
+htmls = "\n".join(
+    [
+        f'click {category} href "decision-tree-subgraphs-{category}.html" "{category}"'
+        for category in subgraphs
+    ]
+)
+# htmls = []
+# for category in subgraphs.keys():
+#     htmls.append("click " + category + " href " + '"decision-tree-subgraphs-' + category + '.html"' + ' "' + category + '"')
+# htmls = "\n".join(htmls)
 
 flowchart_main = FlowChart(title=name, config=config)
 
 
-
 create_html(
-    "./mermaid_links/decision-tree-main.html", flowchart_main.script + pairs_main + "\n" + "\n".join(htmls)
+    "./mermaid_links/decision-tree-main.html",
+    flowchart_main.script + pairs_main + "\n" + htmls,
 )
 
 

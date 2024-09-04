@@ -65,13 +65,13 @@ title: Decision Tree
 
 flowchart TB
 systeemrisico --> rol
-soort_toepassing --> open_source
-transparantieverplichting --> rol
-open_source --> publicatiecategorie_risico
 transparantieverplichting --> publicatiecategorie_impactvol
-publicatiecategorie_risico --> transparantieverplichting
 publicatiecategorie_risico --> systeemrisico
+transparantieverplichting --> rol
+soort_toepassing --> open_source
+publicatiecategorie_risico --> transparantieverplichting
 soort_toepassing --> publicatiecategorie_impactvol
+open_source --> publicatiecategorie_risico
 click soort_toepassing href "decision-tree-subgraphs-soort_toepassing.html" "soort_toepassing"
 click open_source href "decision-tree-subgraphs-open_source.html" "open_source"
 click publicatiecategorie_risico href "decision-tree-subgraphs-publicatiecategorie_risico.html" "publicatiecategorie_risico"
