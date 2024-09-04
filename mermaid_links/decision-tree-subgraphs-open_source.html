@@ -5,31 +5,17 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>AI Decision tree</title>
+        <title>AI Verordening Beslisboom</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
         <script src='https://unpkg.com/mermaid@11.0.2/dist/mermaid.min.js'></script>
         <script>
             window.callback = function (name) {
-            let cookieValue = document.getElementsByClassName("mermaidTooltip");
-            let modelcontent1 = document.getElementById("modelcontent1");
-            let model1 = document.getElementById("model1");
-            console.log(cookieValue[0]);
-            // hide the tooltip
-            cookieValue[0].style.display = "none";
+                let cookieValue = document.getElementsByClassName("mermaidTooltip");
+                console.log(cookieValue[0]);
 
-            modelcontent1.innerHTML = cookieValue[0].innerText.replaceAll("#specialnewline#", "<br>");;
-            model1.classList.add('is-active');
+
+                // Optionally, you can perform other actions here if needed
             };
-
-            document.addEventListener('DOMContentLoaded', () => {
-            let modealclose1 = document.getElementById("modealclose1");
-            modealclose1.addEventListener('click', () => {
-                let model1 = document.getElementById("model1");
-                model1.classList.remove('is-active');
-            });
-
-            });
-
         </script>
 
         </head>

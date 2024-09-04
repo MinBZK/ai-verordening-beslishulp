@@ -5,31 +5,17 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>AI Decision tree</title>
+        <title>AI Verordening Beslisboom</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
         <script src='https://unpkg.com/mermaid@11.0.2/dist/mermaid.min.js'></script>
         <script>
             window.callback = function (name) {
-            let cookieValue = document.getElementsByClassName("mermaidTooltip");
-            let modelcontent1 = document.getElementById("modelcontent1");
-            let model1 = document.getElementById("model1");
-            console.log(cookieValue[0]);
-            // hide the tooltip
-            cookieValue[0].style.display = "none";
+                let cookieValue = document.getElementsByClassName("mermaidTooltip");
+                console.log(cookieValue[0]);
 
-            modelcontent1.innerHTML = cookieValue[0].innerText.replaceAll("#specialnewline#", "<br>");;
-            model1.classList.add('is-active');
+
+                // Optionally, you can perform other actions here if needed
             };
-
-            document.addEventListener('DOMContentLoaded', () => {
-            let modealclose1 = document.getElementById("modealclose1");
-            modealclose1.addEventListener('click', () => {
-                let model1 = document.getElementById("model1");
-                model1.classList.remove('is-active');
-            });
-
-            });
-
         </script>
 
         </head>
@@ -65,15 +51,19 @@ title: soort_toepassing
 
 flowchart TB
 	c-15.0{{"U gebruikt geen algoritme. De AI-verordening is niet van toepassing."}}
-click c-15.0 callback "U gebruikt geen algoritme. De AI-verordening is niet van toepassing."
+click c-15.0 callback "Houdt u aan bestaande wet
+- en regelgeving (bijv. AVG wanneer u persoonsgegevens verwerkt)."
 	q-0("0: Algoritme")
 click q-0 callback "Bevat de (beoogde) toepassing een algoritme?"
 	q-1.0("1.0: AI-systeem")
-click q-1.0 callback "Is de (beoogde) toepassing een AI-systeem?"
+click q-1.0 callback "Is de (beoogde) toepassing een AI
+-systeem?"
 	q-1.1("1.1: AI-systeem voor algemene doeleinden")
-click q-1.1 callback "Is de (beoogde) toepassing een AI-systeem voor algemene doeleinden?"
+click q-1.1 callback "Is de (beoogde) toepassing een AI
+-systeem voor algemene doeleinden?"
 	q-1.2("1.2: AI-model voor algemene doeleinden")
-click q-1.2 callback "Is de (beoogde) toepassing een AI-model voor algemene doeleinden?"
+click q-1.2 callback "Is de (beoogde) toepassing een AI
+-model voor algemene doeleinden?"
 	q-0 -->|Ja| q-1.0
 	q-0 -->|Nee| c-15.0
 	q-1.0 -->|Ja| q-1.1

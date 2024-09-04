@@ -5,31 +5,17 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>AI Decision tree</title>
+        <title>AI Verordening Beslisboom</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
         <script src='https://unpkg.com/mermaid@11.0.2/dist/mermaid.min.js'></script>
         <script>
             window.callback = function (name) {
-            let cookieValue = document.getElementsByClassName("mermaidTooltip");
-            let modelcontent1 = document.getElementById("modelcontent1");
-            let model1 = document.getElementById("model1");
-            console.log(cookieValue[0]);
-            // hide the tooltip
-            cookieValue[0].style.display = "none";
+                let cookieValue = document.getElementsByClassName("mermaidTooltip");
+                console.log(cookieValue[0]);
 
-            modelcontent1.innerHTML = cookieValue[0].innerText.replaceAll("#specialnewline#", "<br>");;
-            model1.classList.add('is-active');
+
+                // Optionally, you can perform other actions here if needed
             };
-
-            document.addEventListener('DOMContentLoaded', () => {
-            let modealclose1 = document.getElementById("modealclose1");
-            modealclose1.addEventListener('click', () => {
-                let model1 = document.getElementById("model1");
-                model1.classList.remove('is-active');
-            });
-
-            });
-
         </script>
 
         </head>
@@ -65,7 +51,18 @@ title: transparantieverplichting
 
 flowchart TB
 	q-7.0("7.0: Transparantieverplichtingen")
-click q-7.0 callback "We gaan nu bepalen of het AI-systeem onder de transparantieverplichtingen van Artikel 50 valt.#specialnewline##specialnewline# Is er sprake van een AI-systeem dat:#specialnewline##specialnewline# - direct communiceert met mensen (zoals chatbots)?#specialnewline# - synthetische afbeeldingen, audio, video of tekst content genereert en manipuleert? Bijvoorbeeld een deepfake.#specialnewline# - aan emotieherkenning of biometrische categorisatie doet?"
+click q-7.0 callback "We gaan nu bepalen of het AI
+-systeem onder de transparantieverplichtingen van Artikel 50 valt.
+
+ Is er sprake van een AI
+-systeem dat:
+
+ 
+- direct communiceert met mensen (zoals chatbots)?
+ 
+- synthetische afbeeldingen, audio, video of tekst content genereert en manipuleert? Bijvoorbeeld een deepfake.
+ 
+- aan emotieherkenning of biometrische categorisatie doet?"
 	q-7.1("7.1: Uitzondering transparantieverplichtingen")
 click q-7.1 callback "Is er sprake van AI waarvan het bij wet is toegestaan om te gebruiken om strafbare feiten op te sporen, te voorkomen, te onderzoeken of te vervolgen?"
 	q-7.0 -->|Ja| q-7.1

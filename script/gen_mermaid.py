@@ -30,7 +30,7 @@ class CustomNode(Node):
     ) -> None:
         # call super and use result to add the id
         self.callback_tooltip = (
-            callback_tooltip.replace("\n", "#specialnewline#").replace("\r", "")
+            callback_tooltip.replace("-", "\n-")
             if callback_tooltip
             else ""
         )
@@ -62,6 +62,22 @@ class CustomNode(Node):
 
 class CustomLink(Link):
     pass
+"""    # add options to __init__ method
+    def __init__(
+        self,
+        origin:  Node,
+        end: Node,
+        message: str = "",
+        labels: Optional[str] = None,
+    )-> None:
+
+        self.labels = labels
+
+        super().__init__(
+            origin=origin,
+            end=end,
+            message=message,
+        )"""
 
 
 # function to only remove all special characters
@@ -79,31 +95,17 @@ def create_html(file_name, flowchart_script):
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>AI Decision tree</title>
+        <title>AI Verordening Beslisboom</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
         <script src='https://unpkg.com/mermaid@11.0.2/dist/mermaid.min.js'></script>
         <script>
             window.callback = function (name) {
-            let cookieValue = document.getElementsByClassName("mermaidTooltip");
-            let modelcontent1 = document.getElementById("modelcontent1");
-            let model1 = document.getElementById("model1");
-            console.log(cookieValue[0]);
-            // hide the tooltip
-            cookieValue[0].style.display = "none";
+                let cookieValue = document.getElementsByClassName("mermaidTooltip");
+                console.log(cookieValue[0]);
 
-            modelcontent1.innerHTML = cookieValue[0].innerText.replaceAll("#specialnewline#", "<br>");;
-            model1.classList.add('is-active');
+
+                // Optionally, you can perform other actions here if needed
             };
-
-            document.addEventListener('DOMContentLoaded', () => {
-            let modealclose1 = document.getElementById("modealclose1");
-            modealclose1.addEventListener('click', () => {
-                let model1 = document.getElementById("model1");
-                model1.classList.remove('is-active');
-            });
-
-            });
-
         </script>
 
         </head>
@@ -223,7 +225,7 @@ for conclusion in conclusions:
             id_="c-" + conclusion.conclusionId,
             content=conclusion.conclusion,
             shape="hexagon",
-            callback_tooltip=conclusion.conclusion,
+            callback_tooltip=conclusion.obligation,
         )
     )
 
@@ -394,10 +396,6 @@ htmls = "\n".join(
         for category in subgraphs
     ]
 )
-# htmls = []
-# for category in subgraphs.keys():
-#     htmls.append("click " + category + " href " + '"decision-tree-subgraphs-' + category + '.html"' + ' "' + category + '"')
-# htmls = "\n".join(htmls)
 
 flowchart_main = FlowChart(title=name, config=config)
 
