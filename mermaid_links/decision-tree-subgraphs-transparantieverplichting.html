@@ -51,18 +51,13 @@ title: transparantieverplichting
 
 flowchart TB
 	q-7.0("7.0: Transparantieverplichtingen")
-click q-7.0 callback "We gaan nu bepalen of het AI
--systeem onder de transparantieverplichtingen van Artikel 50 valt.
+click q-7.0 callback "We gaan nu bepalen of het AI-systeem onder de transparantieverplichtingen van Artikel 50 valt.
 
- Is er sprake van een AI
--systeem dat:
+ Is er sprake van een AI-systeem dat:
 
-
-- direct communiceert met mensen (zoals chatbots)?
-
-- synthetische afbeeldingen, audio, video of tekst content genereert en manipuleert? Bijvoorbeeld een deepfake.
-
-- aan emotieherkenning of biometrische categorisatie doet?"
+ - direct communiceert met mensen (zoals chatbots)?
+ - synthetische afbeeldingen, audio, video of tekst content genereert en manipuleert? Bijvoorbeeld een deepfake.
+ - aan emotieherkenning of biometrische categorisatie doet?"
 	q-7.1("7.1: Uitzondering transparantieverplichtingen")
 click q-7.1 callback "Is er sprake van AI waarvan het bij wet is toegestaan om te gebruiken om strafbare feiten op te sporen, te voorkomen, te onderzoeken of te vervolgen?"
 	q-7.0 -->|Ja| q-7.1
@@ -72,8 +67,8 @@ click q-7.1 callback "Is er sprake van AI waarvan het bij wet is toegestaan om t
 	q-7.1 -->|Ja: open-source, geen hoog-risico AI, niet-verboden AI| q-9.0
 	q-7.1 -->|Nee| q-8.0
 
-click q-8.0 href "decision-tree-subgraphs-rol.html" "rol"
 click q-9.0 href "decision-tree-subgraphs-publicatiecategorie_impactvol.html" "publicatiecategorie_impactvol"
+click q-8.0 href "decision-tree-subgraphs-rol.html" "rol"
         </pre>
 
     <script>mermaid.initialize({ maxTextSize: 9000000000, startOnLoad: true, securityLevel: 'loose' })</script>

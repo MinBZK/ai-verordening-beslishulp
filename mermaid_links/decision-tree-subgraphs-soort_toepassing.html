@@ -51,19 +51,15 @@ title: soort_toepassing
 
 flowchart TB
 	c-15.0{{"U gebruikt geen algoritme. De AI-verordening is niet van toepassing."}}
-click c-15.0 callback "Houdt u aan bestaande wet
-- en regelgeving (bijv. AVG wanneer u persoonsgegevens verwerkt)."
+click c-15.0 callback "Houdt u aan bestaande wet- en regelgeving (bijv. AVG wanneer u persoonsgegevens verwerkt)."
 	q-0("0: Algoritme")
 click q-0 callback "Bevat de (beoogde) toepassing een algoritme?"
 	q-1.0("1.0: AI-systeem")
-click q-1.0 callback "Is de (beoogde) toepassing een AI
--systeem?"
+click q-1.0 callback "Is de (beoogde) toepassing een AI-systeem?"
 	q-1.1("1.1: AI-systeem voor algemene doeleinden")
-click q-1.1 callback "Is de (beoogde) toepassing een AI
--systeem voor algemene doeleinden?"
+click q-1.1 callback "Is de (beoogde) toepassing een AI-systeem voor algemene doeleinden?"
 	q-1.2("1.2: AI-model voor algemene doeleinden")
-click q-1.2 callback "Is de (beoogde) toepassing een AI
--model voor algemene doeleinden?"
+click q-1.2 callback "Is de (beoogde) toepassing een AI-model voor algemene doeleinden?"
 	q-0 -->|Ja| q-1.0
 	q-0 -->|Nee| c-15.0
 	q-1.0 -->|Ja| q-1.1
@@ -73,8 +69,8 @@ click q-1.2 callback "Is de (beoogde) toepassing een AI
 	q-1.2 -->|Ja| q-1.0.1
 	q-1.2 -->|Nee| q-9.0
 
-click q-1.0.1 href "decision-tree-subgraphs-open_source.html" "open_source"
 click q-9.0 href "decision-tree-subgraphs-publicatiecategorie_impactvol.html" "publicatiecategorie_impactvol"
+click q-1.0.1 href "decision-tree-subgraphs-open_source.html" "open_source"
         </pre>
 
     <script>mermaid.initialize({ maxTextSize: 9000000000, startOnLoad: true, securityLevel: 'loose' })</script>

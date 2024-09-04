@@ -29,9 +29,7 @@ class CustomNode(Node):
         category: Optional[str] = None,
     ) -> None:
         # call super and use result to add the id
-        self.callback_tooltip = (
-            callback_tooltip.replace("-", "\n-") if callback_tooltip else ""
-        )
+        self.callback_tooltip = callback_tooltip
         self.category = category  # Store the category
 
         super().__init__(

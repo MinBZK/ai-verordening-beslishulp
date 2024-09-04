@@ -275,11 +275,16 @@ questions:
 
   ### check op hoog risico AI-verordening (Bijlage III)
   - questionId: "5.0"
-    question: "We gaan nu bepalen of het AI-systeem onder een van de hoog-risico systemen uit Bijlage 3 van de AI-verordening valt. Betreft het een AI-systeem op het gebied van biometrie? Hieronder vallen:\n
-      - systemen voor biometrische identificatie op afstand (dit geldt niet voor AI-systemen die bedoeld zijn om te worden gebruikt voor biometrische verificatie met als enig doel te bevestigen dat een specifieke natuurlijke persoon de persoon is die hij of zij beweert te zijn)\n
-      - AI-systemen die bedoeld zijn om te worden gebruikt voor biometrische categorisering op basis van gevoelige of beschermde eigenschappen of kenmerken, of op basis van wat uit die eigenschappen of kenmerken wordt afgeleid\n
-      - AI-systemen die bedoeld zijn om te worden gebruikt voor emotieherkenning"
-    simplifiedQuestion: "Hoog-risico AI: biometrie"
+    question: "We gaan nu bepalen of het AI-systeem onder een van de hoog-risico systemen uit Bijlage 3 van de AI-verordening valt. Betreft het een AI-systeem op een van de volgende gebieden? Ga met uw muis over de opties om te zien welke systemen hieronder vallen.\n
+        - biometrie\n
+        - kritieke infrastructuur\n
+        - onderwijs en beroepsopleiding\n
+        - werkgelegenheid, personeelsbeheer en toegang tot zelfstandige arbeid\n
+        - toegang tot en gebruik van essentiele particuliere en publieke diensten en uitkeringen\n
+        - rechtshandhavingsinstanties\n
+        - migratie-, asiel- en grenstoezichtsbeheer\n
+        - rechtsbedeling en democratische processen"
+    simplifiedQuestion: "Hoog-risico AI"
     category: publicatiecategorie_risico
     questionType: SingleChoice
     sources:
@@ -293,133 +298,6 @@ questions:
         subresult: "Uw AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Er kan sprake zijn van een uitzondering."
         nextQuestionId: "5.1.0"
       - answer: Nee
-        nextQuestionId: "5.1"
-  - questionId: "5.1"
-    question: "Betreft het een AI-systeem op het gebied van kritieke infrastructuur? Hieronder vallen AI-systemen die bedoeld zijn om te worden gebruikt als veiligheidscomponent bij het beheer of de exploitatie van kritieke digitale infrastructuur, wegverkeer of bij de levering van water, gas, verwarming en elektriciteit."
-    simplifiedQuestion: "Hoog-risico AI: kritieke infrastructuur"
-    category: publicatiecategorie_risico
-    questionType: SingleChoice
-    sources:
-      - source: Bijlage 3 - AI-systemen met een hoog risico
-        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e38-127-1
-      - source: Overweging 55 - Veiligheidscomponent bij het beheer en de excploitatie van kritieke digitale infrastructuur
-    answers:
-      - answer: Ja
-        subresult: "Uw AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Er kan sprake zijn van een uitzondering."
-        nextQuestionId: "5.1.0"
-      - answer: Nee
-        nextQuestionId: "5.2"
-  - questionId: "5.2"
-    question: "Betreft het een AI-systeem op het gebied van onderwijs en beroepsopleiding? Hieronder vallen:\n
-      - AI-systemen die bedoeld zijn om te worden gebruikt voor het bepalen van toegang of toelating tot of het toewijzen van natuurlijke personen aan instellingen voor onderwijs en beroepsonderwijs op alle niveaus\n
-      - AI-systemen die bedoeld zijn om te worden gebruikt voor het evalueren van leerresultaten, ook wanneer die resultaten worden gebruikt voor het sturen van het leerproces van natuurlijke personen in instellingen voor onderwijs en beroepsonderwijs op alle niveaus\n
-      - AI-systemen die bedoeld zijn om te worden gebruikt voor het beoordelen van het passende onderwijsniveau dat een persoon zal ontvangen of waartoe hij toegang zal hebben, in het kader van of binnen instellingen voor onderwijs en beroepsonderwijs op alle niveaus\n
-      - AI-systemen die bedoeld zijn om te worden gebruikt voor het monitoren en detecteren van ongeoorloofd gedrag van studenten tijdens toetsen in de context van of binnen instellingen voor onderwijs en beroepsonderwijs op alle niveaus."
-    simplifiedQuestion: "Hoog-risico AI: onderwijs en beroepsopleiding"
-    category: publicatiecategorie_risico
-    questionType: SingleChoice
-    sources:
-      - source: Bijlage 3 - AI-systemen met een hoog risico
-        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e38-127-1
-      - source: Overweging 56 - AI-systemen die worden gebruikt voor het bepalen van toegang of toelating, voor het evalueren van leerresultaten en voor beoordeling van een passend niveau
-    answers:
-      - answer: Ja
-        subresult: "Uw AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Er kan sprake zijn van een uitzondering."
-        nextQuestionId: "5.1.0"
-      - answer: Nee
-        nextQuestionId: "5.3"
-  - questionId: "5.3"
-    question: "Betreft het een AI-systeem op het gebied van werkgelegenheid, personeelsbeheer en toegang tot zelfstandige arbeid? Hieronder vallen:\n
-      - AI-systemen die bedoeld zijn om te worden gebruikt voor het werven of selecteren van natuurlijke personen, met name voor het plaatsen van gerichte vacatures, het analyseren en filteren van sollicitaties, en het beoordelen van kandidaten\n
-      - AI-systemen die bedoeld zijn om te worden gebruikt voor het nemen van besluiten die van invloed zijn op de voorwaarden van arbeidsgerelateerde betrekkingen, de bevordering of beëindiging van arbeidsgerelateerde contractuele betrekkingen, voor het toewijzen van taken op basis van individueel gedrag of persoonlijke eigenschappen of kenmerken, of voor het monitoren en evalueren van prestaties en gedrag van personen in dergelijke betrekkingen."
-    simplifiedQuestion: "Hoog-risico AI: werkgelegenheid, personeel en arbeid"
-    category: publicatiecategorie_risico
-    questionType: SingleChoice
-    sources:
-      - source: Bijlage 3 - AI-systemen met een hoog risico
-        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e38-127-1
-      - source: Overweging 57 - AI-systemen die worden gebruikt op het gebied van werkgelegenheid, personeelsbeheer en toegang tot zelfstandige arbeid
-    answers:
-      - answer: Ja
-        subresult: "Uw AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Er kan sprake zijn van een uitzondering."
-        nextQuestionId: "5.1.0"
-      - answer: Nee
-        nextQuestionId: "5.4"
-  - questionId: "5.4"
-    question: "Betreft het een AI-systeem op het gebied van toegang en gebruik van essenti\xEBle particuliere en publieke diensten en uitkeringen? Hieronder vallen:\n
-      - AI-systemen die bedoeld zijn om door of namens overheidsinstanties te worden gebruikt om te beoordelen of natuurlijke personen in aanmerking komen voor essentiële overheidsuitkeringen en -diensten, waaronder gezondheidsdiensten, of om dergelijke uitkeringen en diensten te verlenen, te beperken, in te trekken of terug te vorderen\n
-      - AI-systemen die bedoeld zijn om te worden gebruikt voor het beoordelen van de kredietwaardigheid van natuurlijke personen of voor het vaststellen van hun kredietscore, met uitzondering van AI-systemen die gebruikt worden om financiële fraude op te sporen\n
-      - AI-systemen die bedoeld zijn om te worden gebruikt voor risicobeoordeling en prijsstelling met betrekking tot natuurlijke personen in het geval van levens- en ziektekostenverzekeringen\n
-      - AI-systemen die bedoeld zijn om noodoproepen van natuurlijke personen te evalueren en te classificeren of om te worden gebruikt voor het inzetten of het bepalen van prioriteiten voor de inzet van hulpdiensten, onder meer van politie, brandweer en ambulance, alsook van systemen voor de triage van patiënten die dringend medische zorg behoeven."
-    simplifiedQuestion: "Hoog-risico AI: diensten en uitkeringen"
-    category: publicatiecategorie_risico
-    questionType: SingleChoice
-    sources:
-      - source: Bijlage 3 - AI-systemen met een hoog risico
-        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e38-127-1
-      - source: Overweging 58 - Gebruik van AI-systemen bij toegang tot en gebruik van bepaalde essentiële particuliere en openbare diensten
-    answers:
-      - answer: Ja
-        subresult: "Uw AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Er kan sprake zijn van een uitzondering."
-        nextQuestionId: "5.1.0"
-      - answer: Nee
-        nextQuestionId: "5.5"
-  - questionId: "5.5"
-    question: "Betreft het een AI-systeem op het gebied van rechtshandhaving? Hieronder vallen:\n
-      - AI-systemen die bedoeld zijn om door of namens rechtshandhavingsinstanties, of door instellingen, organen of instanties van de Unie ter ondersteuning van rechtshandhavingsinstanties of namens hen, te worden gebruikt om het risico te beoordelen dat een natuurlijke persoon het slachtoffer wordt van strafbare feiten\n
-      - AI-systemen die bedoeld zijn om door of namens rechtshandhavingsinstanties of door instellingen, organen of instanties van de Unie ter ondersteuning van rechtshandhavingsinstanties te worden gebruikt als leugendetector of soortgelijke instrumenten \n
-      - AI-systemen die bedoeld zijn om door of namens rechtshandhavingsinstanties of door instellingen, organen of instanties van de Unie ter ondersteuning van rechtshandhavingsinstanties te worden gebruikt om de betrouwbaarheid van bewijsmateriaal tijdens het onderzoek naar of de vervolging van strafbare feiten te beoordelen
-      - AI-systemen die bedoeld zijn om door of namens rechtshandhavingsinstanties of door instellingen, organen of instanties van de Unie ter ondersteuning van rechtshandhavingsinstanties te worden gebruikt om te beoordelen hoe groot het risico is dat een natuurlijke persoon (opnieuw) een strafbaar feit zal plegen, niet uitsluitend op basis van profilering van natuurlijke personen, of om persoonlijkheidskenmerken en eigenschappen of eerder crimineel gedrag van natuurlijke personen of groepen te beoordelen \n
-      - AI-systemen die bedoeld zijn om door of namens rechtshandhavingsinstanties of door instellingen, organen en instanties van de Unie ter ondersteuning van rechtshandhavingsinstanties te worden gebruikt om natuurlijke personen te profileren tijdens het opsporen, onderzoeken of vervolgen van strafbare feiten."
-    simplifiedQuestion: "Hoog-risico AI: rechtshandhaving"
-    category: publicatiecategorie_risico
-    questionType: SingleChoice
-    sources:
-      - source: Bijlage 3 - AI-systemen met een hoog risico
-        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e38-127-1
-      - source: Overweging 59 - AI-systemen namens rechtshandhavingsinstanties of instellingen, organen of instanties van de Europese Unie
-    answers:
-      - answer: Ja
-        subresult: "Uw AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Er kan sprake zijn van een uitzondering."
-        nextQuestionId: "5.1.0"
-      - answer: Nee
-        nextQuestionId: "5.6"
-  - questionId: "5.6"
-    question: "Betreft het een AI-systeem op het gebied van migratie-, asiel- en grenstoezichtsbeheer? Hieronder vallen:\n
-      - AI-systemen die bedoeld zijn om door of namens bevoegde overheidsinstanties of door instellingen, organen of instanties van de Unie te worden gebruikt als leugendetector of soortgelijke hulpmiddelen \n
-      - AI-systemen die bedoeld zijn om door of namens bevoegde overheidsinstanties of door instellingen, organen of instanties van de Unie te worden gebruikt om risico’s te beoordelen, waaronder een veiligheidsrisico, een risico op illegale migratie of een gezondheidsrisico, uitgaat van een natuurlijke persoon die voornemens is het grondgebied van een lidstaat te betreden of dat heeft gedaan \n
-      - AI-systemen die bedoeld zijn om door of namens bevoegde overheidsinstanties of door instellingen, organen of instanties van de Unie te worden gebruikt om bevoegde overheidsinstanties bij te staan bij de behandeling van aanvragen voor asiel, visa of verblijfsvergunningen en bij de behandeling van aanverwante klachten in verband met het al dan niet in aanmerking komen van de natuurlijke personen die een aanvraag voor een status indienen, met inbegrip van hieraan gerelateerde beoordelingen van de betrouwbaarheid van bewijsmateriaal \n
-      - AI-systemen die bedoeld zijn om door of namens bevoegde overheidsinstanties, of door instellingen, organen of instanties van de Unie, te worden gebruikt in het kader van migratie-, asiel- of grenstoezichtsbeheer, met het oog op het opsporen, herkennen of identificeren van natuurlijke personen, met uitzondering van de verificatie van reisdocumenten."
-    simplifiedQuestion: "Hoog-risico AI: migratie-, asiel- en grenstoezicht"
-    category: publicatiecategorie_risico
-    questionType: SingleChoice
-    sources:
-      - source: Bijlage 3 - AI-systemen met een hoog risico
-        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e38-127-1
-      - source: Overweging 60 - AI-systemen die worden gebruikt op het gebied van migratie, asiel en grenstoezichtsbeheer
-    answers:
-      - answer: Ja
-        subresult: "Uw AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Er kan sprake zijn van een uitzondering."
-        nextQuestionId: "5.1.0"
-      - answer: Nee
-        nextQuestionId: "5.7"
-  - questionId: "5.7"
-    question: "Betreft het een AI-systeem voor rechtsbedeling en democratische processen? Hieronder vallen:\n
-      - AI-systemen die bedoeld zijn om door of namens een gerechtelijke instantie te worden gebruikt om een gerechtelijke instantie te ondersteunen bij het onderzoeken en uitleggen van feiten of de wet en bij de toepassing van het recht op een concrete reeks feiten of om te worden gebruikt op soortgelijke wijze in het kader van alternatieve geschillenbeslechting \n
-      - AI-systemen die bedoeld zijn om te worden gebruikt voor het beïnvloeden van de uitslag van een verkiezing of referendum of van het stemgedrag van natuurlijke personen bij de uitoefening van hun stemrecht bij verkiezingen of referenda. Dit geldt niet voor AI-systemen aan de output waarvan natuurlijke personen niet rechtstreeks worden blootgesteld, zoals instrumenten die worden gebruikt om politieke campagnes te organiseren, te optimaliseren of te structureren vanuit administratief of logistiek oogpunt."
-    simplifiedQuestion: "Hoog-risico AI: rechtsbedeling en democratie"
-    category: publicatiecategorie_risico
-    questionType: SingleChoice
-    sources:
-      - source: Bijlage 3 - AI-systemen met een hoog risico
-        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e38-127-1
-      - source: Overweging 61 - AI-systemen bedoeld voor rechtsbedeling en democratische processen
-    answers:
-      - answer: Ja
-        subresult: "Uw AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem als het een significant risico op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen inhoudt. Er kan sprake zijn van een uitzondering."
-        nextQuestionId: "5.1.0"
-      - answer: Nee
-        subresult: "Het blijkt dat Uw AI-systeem niet verboden is en geen hoog risico AI-systeem is. Het kan echter zijn dat het wel aan bepaalde transparantieverplichtingen moet voldoen."
         labels:
           - "geen hoog-risico AI"
         nextQuestionId: "7.0"
@@ -619,63 +497,15 @@ questions:
       - answer: Nee
         nextConclusionId: "15.7"
   - questionId: "8.2"
-    question: "Zet u uw naam of merk op een AI-systeem met een hoog risico dat reeds in de handel is gebracht of in gebruik is gesteld (onverminderd contractuele regelingen waarin wordt bepaald dat de verplichtingen anders worden toegewezen)?"
-    simplifiedQuestion: "Naam of merk op hoog-risico AI-systeem"
+    question: "Is een van de volgende situaties voor u van toepassing?\n
+        - U zet uw naam of merk op een AI-systeem met een hoog risico dat reeds in de handel is gebracht of in gebruik is gesteld (onverminderd contractuele regelingen waarin wordt bepaald dat de verplichtingen anders worden toegewezen)\n
+        - U brengt een substantiële wijziging aan in een AI-systeem met een hoog risico dat reeds in de handel is gebracht of reeds in gebruik is gesteld, op zodanige wijze dat het systeem een AI-systeem met een hoog risico blijft op grond van Artikel 6?\n
+        - U wijzigt het beoogde doel van een AI-systeem, met inbegrip van een AI-systeem voor algemene doeleinden, dat niet als een systeem met een hoog risico is geclassificeerd en reeds in de handel is gebracht of in gebruik is gesteld, op zodanige wijze dat het betrokken AI-systeem een AI-systeem met een hoog risico overeenkomstig Artikel 6 wordt?"
+    simplifiedQuestion: "Gebruiksverantwoordelijke en aanbieder"
     category: rol
     questionType: SingleChoice
     answers:
       - answer: Ja
-        labels:
-          - "aanbieder"
-        redirects:
-          - nextConclusionId: "14.0.1"
-            if: '"AI-systeem" in labels && "hoog-risico AI" in labels && "transparantierisico" in labels'
-          - nextConclusionId: "14.0.2"
-            if: '"AI-systeem" in labels && "hoog-risico AI" in labels && "geen transparantierisico" in labels'
-          - nextConclusionId: "14.0.5"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "transparantierisico" in labels'
-          - nextConclusionId: "14.0.6"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "geen transparantierisico" in labels'
-      - answer: Nee
-        nextQuestionId: "8.3"
-  - questionId: "8.3"
-    question: "Brengt u een substantiële wijziging aan in een AI-systeem met een hoog risico dat reeds in de handel is gebracht of reeds in gebruik is gesteld, op zodanige wijze dat het systeem een AI-systeem met een hoog risico blijft op grond van Artikel 6?"
-    simplifiedQuestion: "Substantiële wijziging in hoog-risico AI-systeem"
-    category: rol
-    questionType: SingleChoice
-    sources:
-      - source: Artikel 6 - Classificatieregels voor AI-systemen met een hoog risico
-        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2986-1-1
-      - source: Begrippenlijst Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
-    answers:
-      - answer: Ja
-        labels:
-          - "aanbieder"
-        redirects:
-          - nextConclusionId: "14.0.1"
-            if: '"AI-systeem" in labels && "hoog-risico AI" in labels && "transparantierisico" in labels'
-          - nextConclusionId: "14.0.2"
-            if: '"AI-systeem" in labels && "hoog-risico AI" in labels && "geen transparantierisico" in labels'
-          - nextConclusionId: "14.0.5"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "transparantierisico" in labels'
-          - nextConclusionId: "14.0.6"
-            if: '"AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "geen transparantierisico" in labels'
-      - answer: Nee
-        nextQuestionId: "8.4"
-  - questionId: "8.4"
-    question: "Wijzigt u het beoogde doel van een AI-systeem, met inbegrip van een AI-systeem voor algemene doeleinden, dat niet als een systeem met een hoog risico is geclassificeerd en reeds in de handel is gebracht of in gebruik is gesteld, op zodanige wijze dat het betrokken AI-systeem een AI-systeem met een hoog risico overeenkomstig Artikel 6 wordt?"
-    simplifiedQuestion: "Wijziging beoogde doel hoog-risico AI-systeem"
-    category: rol
-    questionType: SingleChoice
-    sources:
-      - source: Artikel 6 - Classificatieregels voor AI-systemen met een hoog risico
-        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2986-1-1
-      - source: Begrippenlijst Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
-    answers:
-      - answer: Ja
-        subresult: "Naast gebruiksverantwoordelijke bent u ook een aanbieder van een AI-systeem voor algemene doeleinden met een hoog risico. U moet voldoen aan de verplichtingen van de aanbieder uit hoofde van artikel 16. We raden u daarom aan de beslisboom nog een keer te doorlopen en daarbij aan te geven dat u een aanbieder van een AI-systeem met een hoog risico bent."
         labels:
           - "aanbieder"
         redirects:
