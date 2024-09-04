@@ -30,9 +30,7 @@ class CustomNode(Node):
     ) -> None:
         # call super and use result to add the id
         self.callback_tooltip = (
-            callback_tooltip.replace("-", "\n-")
-            if callback_tooltip
-            else ""
+            callback_tooltip.replace("-", "\n-") if callback_tooltip else ""
         )
         self.category = category  # Store the category
 
@@ -62,6 +60,8 @@ class CustomNode(Node):
 
 class CustomLink(Link):
     pass
+
+
 """    # add options to __init__ method
     def __init__(
         self,
