@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
+import argparse
 import json
 import sys
-import argparse
 
 import jsonschema
 import yaml
@@ -21,13 +21,13 @@ args = parser.parse_args()
 
 
 # Function to validate a single pair
-def validate_pair(schema_file, yaml_file):
+def validate_pair(schema_file, yaml_file) -> None:
     # Load the JSON schema
-    with open(schema_file, "r") as sf:
+    with open(schema_file) as sf:
         schema = json.load(sf)
 
     # Load the YAML file
-    with open(yaml_file, "r") as yf:
+    with open(yaml_file) as yf:
         data = yaml.safe_load(yf)
 
     # Validate the data
@@ -35,9 +35,7 @@ def validate_pair(schema_file, yaml_file):
         validate(instance=data, schema=schema)
         print(f"Validation of '{yaml_file}' against '{schema_file}' successful.")
     except jsonschema.exceptions.ValidationError as err:
-        print(
-            f"Validation error in '{yaml_file}' against '{schema_file}': {err.message}"
-        )
+        print(f"Validation error in '{yaml_file}' against '{schema_file}': {err.message}")
         sys.exit(1)
 
 
@@ -48,6 +46,7 @@ if args.file_pairs:
         validate_pair(schema_file, yaml_file)
 else:
     print(
-        "Error: Please provide either --schema_file and --yaml_file for a single validation, or --file_pairs for multiple validations."
+        "Error: Please provide either --schema_file and --yaml_file for a single validation, or --file_pairs for "
+        "multiple validations."
     )
     sys.exit(1)
