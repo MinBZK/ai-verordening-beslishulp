@@ -345,7 +345,7 @@ flowchart_complete = FlowChart(
     title=name, nodes=nodes, links=links, orientation=orientation, config=config
 )
 create_html(
-    "./mermaid_links/decision-tree-complete.html",
+    "./mermaid_graphs/decision-tree-complete.html",
     flowchart_complete.script + subgraphs_complete,
 )
 
@@ -386,7 +386,7 @@ for category, cat_questions in subgraphs.items():
     )
 
     create_html(
-        "./mermaid_links/decision-tree-subgraphs-" + category + ".html",
+        "./mermaid_graphs/decision-tree-subgraphs-" + category + ".html",
         flowchart.script + "\n" + htmls,
     )
 
@@ -418,7 +418,7 @@ htmls = "\n".join(
 flowchart_main = FlowChart(title=name, config=config)
 
 create_html(
-    "./mermaid_links/decision-tree-main.html",
+    "./mermaid_graphs/decision-tree-main.html",
     flowchart_main.script + pairs_main + "\n" + labels_per_category + "\n" + htmls,
 )
 
