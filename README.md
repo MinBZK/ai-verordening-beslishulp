@@ -14,11 +14,10 @@ Voor vragen of opmerkingen over de beslisboom mail je naar: [ai-verordening@minb
 
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/MinBZK/ai-act-decisiontree/main.svg?badge_token=d3dKEK97RwC1II15_W-nng)](https://results.pre-commit.ci/latest/github/MinBZK/ai-act-decisiontree/main?badge_token=d3dKEK97RwC1II15_W-nng)
 
-Deze git repository bevat de beslisboom op basis van de AI Verordening. Het project omvat 3 onderdelen.
+Deze git repository bevat de beslisboom op basis van de AI Verordening. Het project omvat 2 onderdelen.
 
 1. De beslisboom: [decision-tree.yaml](decision-tree.yaml)
-2. Een diagram van de beslisboom: [decision-tree.html](decision-tree.html)
-3. Een frontend voor de visualisatie van de beslisboom: [frontend](frontend/)
+2. Een frontend voor de visualisatie van de beslisboom: [frontend](frontend/)
 
 De Kubernetes deployment code staat bij  [infra](https://github.com/MinBZK/ai-validation-infra/apps/ai-act-beslisboom)
 
@@ -78,7 +77,7 @@ Naast de beslisboom is er ook een [definitions.yaml](definitions.yaml) bestand. 
 
 ## Beslisboom diagram
 
-De beslisboom is schematisch weergegeven in [decision-tree.html](mermaid_links/decision-tree-complete.html).
+De beslisboom is schematisch weergegeven in [een doorklikbare diagram](https://minbzk.github.io/ai-act-decisiontree/mermaid_graphs/decision-tree-main.html)
 
 ## Frontend
 
