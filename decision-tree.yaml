@@ -1,5 +1,5 @@
 version: 1.0.0
-name: Decision Tree
+name: Beslisboom AI Verordening
 questions:
   ### check definitie algoritme
   - questionId: "0"
@@ -308,8 +308,6 @@ questions:
     answers:
       - answer: Ja
         nextQuestionId: "5.1.1"
-        labels:
-          - "aanbieder"
       - answer: Nee
         subresult: "Uw systeem valt niet onder een van de uitzonderingen. Het blijft beschouwd als een hoog-risico AI-systeem."
         labels:
@@ -486,7 +484,7 @@ questions:
     answers:
       - answer: Ja
         labels:
-          - "aanbieder"
+          - "aanbieder + gebruiksverantwoordelijke"
         redirects:
           - nextConclusionId: "14.0.1"
             if: '"AI-systeem" in labels && "hoog-risico AI" in labels && "transparantierisico" in labels'

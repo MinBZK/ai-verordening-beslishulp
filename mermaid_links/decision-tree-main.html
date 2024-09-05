@@ -34,7 +34,7 @@
 
         <pre class="mermaid has-background-white-ter">
             ---
-title: Decision Tree
+title: Beslisboom AI Verordening
 ---
 %%{
 	init: {
@@ -51,13 +51,36 @@ title: Decision Tree
 
 flowchart TB
 soort_toepassing --> open_source
-systeemrisico --> rol
-publicatiecategorie_risico --> systeemrisico
-transparantieverplichting --> rol
-open_source --> publicatiecategorie_risico
-publicatiecategorie_risico --> transparantieverplichting
-soort_toepassing --> publicatiecategorie_impactvol
 transparantieverplichting --> publicatiecategorie_impactvol
+open_source --> publicatiecategorie_risico
+transparantieverplichting --> rol
+soort_toepassing --> publicatiecategorie_impactvol
+publicatiecategorie_risico --> transparantieverplichting
+publicatiecategorie_risico --> systeemrisico
+systeemrisico --> rol
+soort_toepassing~~~| geen algoritme|soort_toepassing
+soort_toepassing~~~| AI-systeem|soort_toepassing
+rol~~~| gebruiksverantwoordelijke|rol
+publicatiecategorie_impactvol~~~| impactvol|publicatiecategorie_impactvol
+publicatiecategorie_risico~~~| geen hoog-risico AI|publicatiecategorie_risico
+rol~~~| aanbieder|rol
+soort_toepassing~~~| algoritme|soort_toepassing
+transparantieverplichting~~~| geen transparantierisico|transparantieverplichting
+publicatiecategorie_risico~~~| niet-verboden AI|publicatiecategorie_risico
+rol~~~| aanbieder + gebruiksverantwoordelijke|rol
+publicatiecategorie_risico~~~| uitzonderingsgrond: AI-verordening niet van toepassing|publicatiecategorie_risico
+soort_toepassing~~~| AI-model voor algemene doeleinden|soort_toepassing
+publicatiecategorie_risico~~~| uitzondering verboden AI|publicatiecategorie_risico
+systeemrisico~~~| systeemrisico|systeemrisico
+publicatiecategorie_risico~~~| verboden AI|publicatiecategorie_risico
+open_source~~~| geen open-source|open_source
+systeemrisico~~~| geen systeemrisico|systeemrisico
+transparantieverplichting~~~| transparantierisico|transparantieverplichting
+soort_toepassing~~~| AI-systeem voor algemene doeleinden|soort_toepassing
+open_source~~~| open-source|open_source
+publicatiecategorie_impactvol~~~| niet impactvol|publicatiecategorie_impactvol
+publicatiecategorie_risico~~~| hoog-risico AI|publicatiecategorie_risico
+publicatiecategorie_risico~~~| geen uitzonderingsgrond: AI-verordening van toepassing|publicatiecategorie_risico
 click soort_toepassing href "decision-tree-subgraphs-soort_toepassing.html" "soort_toepassing"
 click open_source href "decision-tree-subgraphs-open_source.html" "open_source"
 click publicatiecategorie_risico href "decision-tree-subgraphs-publicatiecategorie_risico.html" "publicatiecategorie_risico"

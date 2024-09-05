@@ -57,25 +57,21 @@ class CustomNode(Node):
 
 
 class CustomLink(Link):
-    pass
-
-
-"""    # add options to __init__ method
+    # add options to __init__ method
     def __init__(
         self,
-        origin:  Node,
+        origin: Node,
         end: Node,
         message: str = "",
         labels: Optional[str] = None,
-    )-> None:
-
+    ) -> None:
         self.labels = labels
 
         super().__init__(
             origin=origin,
             end=end,
             message=message,
-        )"""
+        )
 
 
 # function to only remove all special characters
@@ -170,7 +166,6 @@ class Question:
     question: str
     simplifiedQuestion: str
     category: str
-    questionType: str
     answers: List[Answer]
     definitions: Optional[List[Definition]] = None
     sources: Optional[List[Source]] = None
@@ -255,10 +250,24 @@ for question in questions:
     for answer in answers:
         if answer.nextQuestionId:
             end = find_node_by_id("q-" + answer.nextQuestionId)
-            links.append(CustomLink(origin=origin, end=end, message=answer.answer))
+            links.append(
+                CustomLink(
+                    origin=origin,
+                    end=end,
+                    message=answer.answer,
+                    labels=answer.labels,
+                )
+            )
         elif answer.nextConclusionId:
             end = find_node_by_id("c-" + answer.nextConclusionId)
-            links.append(CustomLink(origin=origin, end=end, message=answer.answer))
+            links.append(
+                CustomLink(
+                    origin=origin,
+                    end=end,
+                    message=answer.answer,
+                    labels=answer.labels,
+                )
+            )
         elif answer.redirects:
             redirects: List[Redirect] = [
                 Redirect(
@@ -278,6 +287,7 @@ for question in questions:
                             origin=origin,
                             end=end,
                             message=answer.answer + ": " + ", ".join(match),
+                            labels=answer.labels,
                         )
                     )
                 elif redirect.nextConclusionId:
@@ -288,6 +298,7 @@ for question in questions:
                             origin=origin,
                             end=end,
                             message=answer.answer + ": " + ", ".join(match),
+                            labels=answer.labels,
                         )
                     )
                 else:
@@ -388,6 +399,15 @@ pairs_main = "\n".join(
     }
 )
 
+labels_per_category = "\n".join(
+    {
+        f"{link.origin.category}~~~| {link.labels[0]}|{link.origin.category}"
+        for link in links
+        if link.labels is not None
+    }
+)
+
+
 htmls = "\n".join(
     [
         f'click {category} href "decision-tree-subgraphs-{category}.html" "{category}"'
@@ -397,10 +417,9 @@ htmls = "\n".join(
 
 flowchart_main = FlowChart(title=name, config=config)
 
-
 create_html(
     "./mermaid_links/decision-tree-main.html",
-    flowchart_main.script + pairs_main + "\n" + htmls,
+    flowchart_main.script + pairs_main + "\n" + labels_per_category + "\n" + htmls,
 )
 
 
