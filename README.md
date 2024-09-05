@@ -49,6 +49,8 @@ questions: array(Question) # de vragen zoals gedefineerd hieronder
 Question:                 # definitie van 1 vraag
   questionId: string      # een unique identifier voor de vraag
   question: string        # de vraag die gesteld wordt
+  simplifiedQuestion: string  # versimpelde versie van de vraag
+  category: string        # in welke categorie de vraag valt
   questionType: enum      # het type vraag
   description: string     # optioneel: een extra opmerking bij de vraag
   source: string          # optioneel: een verwijzing, naar bijvoorbeeld een wetsartikel
@@ -73,9 +75,13 @@ Conclusion:               # definitie van 1 eindconclusie
 
 Naast de beslisboom is er ook een [definitions.yaml](definitions.yaml) bestand. Dit bestand bevat alle relevante definities die de beslisboom ondersteunen en extra uitleg nodig hebben, gebaseerd op de [Begrippenlijst van het algoritmekader](https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst). Het verwachte schema van velden is gedocumenteerd in [schema_definitions.json](schemas/schema_definitions.json).
 
+## Beslisboom diagram
+
+De beslisboom is schematisch weergegeven in [een doorklikbare diagram](https://minbzk.github.io/ai-act-decisiontree/mermaid_graphs/decision-tree-main.html)
+
 ## Frontend
 
-Om door de beslisboom te lopen is een visualizatie tool gemaakt. Met deze tool kunt u door de vragen lopen. De frontend is beschikbaar op deze [website](https://ai-act-decisiontree.apps.digilab.network). Voor nu is er nog een wachtwoord nodig om de website te bekijken. Deze kan bij Ruth worden opgevraagd.
+Om door de beslisboom te lopen is een visualizatie tool gemaakt. Met deze tool kunt u door de vragen lopen. De frontend is beschikbaar op deze [website](https://ai-act-decisiontree.apps.digilab.network).
 
 ### Frontend locaal draaien
 

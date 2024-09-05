@@ -57,6 +57,14 @@
       },
       "required": ["source"]
     },
+    "SimplifiedQuestion":{
+      "id": "#/$defs/SimplifiedQuestion",
+      "type": "string"
+    },
+    "Category": {
+      "id": "#/$defs/Category",
+      "type": "string"
+    },
     "Description": {
       "id": "#/$defs/Description",
       "type": "string"
@@ -154,24 +162,18 @@
     "Questions": {
       "id": "#/$defs/Questions",
       "type": "object",
-      "oneOf": [
-        {
-          "$ref": "#/$defs/MultipleChoiceQuestion"
-        },
-        {
-          "$ref": "#/$defs/SingleChoiceQuestion"
-        }
-      ]
-    },
-    "MultipleChoiceQuestion": {
-      "id": "#/$defs/MultipleChoiceQuestion",
-      "type": "object",
       "properties": {
         "questionId": {
           "$ref": "#/$defs/QuestionId"
         },
         "question": {
           "$ref": "#/$defs/Question"
+        },
+        "simplifiedQuestion":{
+          "$ref": "#/$defs/SimplifiedQuestion"
+        },
+        "category": {
+          "$ref": "#/$defs/Category"
         },
         "sources": {
           "type": "array",
@@ -182,44 +184,6 @@
         "description": {
           "$ref": "#/$defs/Description",
           "type": "string"
-        },
-        "questionType": {
-          "type": "string",
-          "enum": ["MultipleChoice"]
-        },
-        "answers": {
-          "type": "array",
-          "items": {
-            "$ref": "#/$defs/Answer"
-          },
-          "minItems": 2
-        }
-      },
-      "required": ["questionId", "question", "questionType", "answers"]
-    },
-    "SingleChoiceQuestion": {
-      "id": "#/$defs/SingleChoiceQuestion",
-      "type": "object",
-      "properties": {
-        "questionId": {
-          "$ref": "#/$defs/QuestionId"
-        },
-        "question": {
-          "$ref": "#/$defs/Question"
-        },
-        "sources": {
-          "type": "array",
-          "items": {
-            "$ref": "#/$defs/Source"
-          }
-        },
-        "description": {
-          "$ref": "#/$defs/Description",
-          "type": "string"
-        },
-        "questionType": {
-          "type": "string",
-          "enum": ["SingleChoice"]
         },
         "answers": {
           "type": "array",
@@ -230,7 +194,7 @@
           "maxItems": 2
         }
       },
-      "required": ["questionId", "question", "questionType", "answers"]
+      "required": ["questionId", "question", "simplifiedQuestion", "category", "answers"]
     },
     "Conclusion": {
       "id": "#/$defs/Conclusion",
