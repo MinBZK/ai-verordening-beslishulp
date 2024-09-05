@@ -1,6 +1,4 @@
-
 jsonschema==4.22.0
-
 asttokens==2.4.1
 certifi==2024.7.4
 charset-normalizer==3.3.2
