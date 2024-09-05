@@ -15,7 +15,7 @@ import SingleQuestion from '@/components/SingleQuestion.vue'
 import Conclusion from '@/components/ConclusionComponent.vue'
 import DefaultLoader from '@/components/DefaultLoader.vue'
 import DefaultError from '@/components/DefaultError.vue'
-import Disclaimer from '@/components/DisclaimerForm.vue'
+import HomePage from '@/components/HomePage.vue'
 
 const questionStore = useQuestionStore()
 const { AcceptedDisclaimer, QuestionId } = storeToRefs(questionStore)
@@ -116,7 +116,7 @@ function acceptDisclaimer() {
 
 <template>
   <div v-if="AcceptedDisclaimer == '0'">
-    <Disclaimer />
+    <HomePage />
     <button @click="acceptDisclaimer" type="button"
             class="text-sm font-semibold leading-6 text-gray-900 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
     >

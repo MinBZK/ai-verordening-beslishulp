@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import BeslistboomForm from './components/BeslisboomForm.vue'
+import BeslisboomForm from '@/components/BeslisboomForm.vue'
 </script>
 
 <template>
-  <BeslistboomForm />
+  <BeslisboomForm class="rvo-theme"/>
 </template>
