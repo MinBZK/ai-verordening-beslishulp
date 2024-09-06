@@ -19,6 +19,6 @@ jobs:
       - run: npm install --prefix frontend
       - run: npm run build --prefix frontend
       - run: npm run prepub --prefix frontend
-      - run: npm publish ./frontend/dist --access=public --tag "ai-act-decision-tree@${{ github.event.release.tag_name }}"
+      - run: npm publish ./frontend/dist --access=public --tag "${{ github.event.release.tag_name }}"
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPMJS_ACCESS_TOKEN}}
