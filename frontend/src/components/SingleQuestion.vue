@@ -9,6 +9,7 @@ defineProps<Props>()
 
 <template>
   <legend class="text-sm font-semibold leading-6 text-gray-900">
+<!--    TODO: Replace question with categories-->
     Vraag:
     <span
       class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10"

@@ -58,6 +58,6 @@ export const useQuestionStore = defineStore('question', () => {
     sessionStorage.setItem('acceptedDisclaimer', '1')
   }
 
-  return { AcceptedDisclaimer, QuestionId, answers, setQuestionId, addAnswer, getJsonLabels, addLabel, revertAnswer,
-    reset, acceptDisclaimer }
+  return { AcceptedDisclaimer, QuestionId, answers, setQuestionId, addAnswer, getJsonLabels, addLabel,
+    revertAnswer, reset, acceptDisclaimer }
 })
