@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
 
 import re
-
-from dataclasses import dataclass
-from typing import List, Optional, Union
 from collections import defaultdict
+from dataclasses import dataclass
 
 import yaml
 from mermaid import Config, Direction
@@ -76,12 +74,12 @@ class CustomStyle(Style):
     def __init__(
         self,
         name: str,
-        fill: Optional[str] = None,
-        color: Optional[str] = None,
-        font_weight: Optional[str] = None,
-        stroke_width: Optional[str] = None,
-        stroke: Optional[str] = None,
-        other: Optional[str] = None,
+        fill: str | None = None,
+        color: str | None = None,
+        font_weight: str | None = None,
+        stroke_width: str | None = None,
+        stroke: str | None = None,
+        other: str | None = None,
     ) -> None:
         super().__init__(
             name=name,
@@ -129,8 +127,6 @@ def find_node_by_id(node_id):
     for node in nodes:
         if node.id_ == node_id:
             return node
-
-    raise Exception(f"Node with id {node_id} not found")
 
 
 def get_category(subgraphs, link):
@@ -308,8 +304,8 @@ questions: list[Question] = [Question(**q) for q in decision_tree.get("questions
 conclusions: list[Conclusion] = [Conclusion(**q) for q in decision_tree.get("conclusions", [])]
 
 
-nodes: List[CustomNode] = []
-links: List[CustomLink] = []
+nodes: list[CustomNode] = []
+links: list[CustomLink] = []
 
 # create conclusion nodes
 for conclusion in conclusions:
@@ -361,8 +357,7 @@ for question in questions:
                         answer.answer
                         + ".\n\n\n"
                         + (
-                            "\nOpgehaalde labels: "
-                            + ", ".join(str(label) for label in answer.labels)
+                            "\nOpgehaalde labels: " + ", ".join(str(label) for label in answer.labels)
                             if answer.labels is not None
                             else ""
                         )
@@ -381,8 +376,7 @@ for question in questions:
                         answer.answer
                         + ".\n\n\n"
                         + (
-                            "Opgehaalde labels: "
-                            + ", ".join(str(label) for label in answer.labels)
+                            "Opgehaalde labels: " + ", ".join(str(label) for label in answer.labels)
                             if answer.labels is not None
                             else ""
                         )
@@ -421,8 +415,7 @@ for question in questions:
                                 + " ".join(str(m) for m in match_list)
                                 + ".\n\n\n"
                                 + (
-                                    "\nOpgehaalde labels: "
-                                    + ", ".join(str(label) for label in answer.labels)
+                                    "\nOpgehaalde labels: " + ", ".join(str(label) for label in answer.labels)
                                     if answer.labels is not None
                                     else ""
                                 )
@@ -444,8 +437,7 @@ for question in questions:
                                 + " ".join(str(m) for m in match_list)
                                 + ".\n\n\n"
                                 + (
-                                    "\nOpgehaalde labels: "
-                                    + ", ".join(str(label) for label in answer.labels)
+                                    "\nOpgehaalde labels: " + ", ".join(str(label) for label in answer.labels)
                                     if answer.labels is not None
                                     else ""
                                 )
