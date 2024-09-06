@@ -15,7 +15,7 @@ defineEmits(['answered'])
 </script>
 
 <template>
-  <legend>
+  <div class="flex-col">
     <div class="flex items-center">
       <!--    TODO: Replace question with categories-->
       <h1 class="utrecht-heading-1">Vraag:</h1>
@@ -26,31 +26,33 @@ defineEmits(['answered'])
       <BetaversionLabel />
     </div>
     <Sources :sources="sources" />
-
-    <!-- Question section -->
-    <div class="mt-6 space-y-6">
-      <p style="white-space: pre-line" class="inline-flex utrecht-paragraph">
-        <span v-html="question"></span>
-        <slot />
-      </p>
-    </div>
-
-    <!-- Answers section -->
-    <div class="mt-6 space-y-6">
-      <div v-for="(answer, index) in answers" :key="index" class="flex items-center gap-x-3">
-        <input
-          :key="id + index.toString()"
-          aria-roledescription="radio button"
-          @click="$emit('answered', answer)"
-          :value="id + index.toString()"
-          :id="index.toString()"
-          type="radio"
-          class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
-        />
-        <label :for="index.toString()" class="block text-sm font-medium leading-6 text-gray-900">{{
-            answer.answer
-          }}</label>
+    <!-- Question and Answer section -->
+    <fieldset class="rvo-layout-margin-vertical--2xl utrecht-form-fieldset rvo-form-fieldset">
+      <!-- Question section -->
+      <div>
+        <p style="white-space: pre-line" class="utrecht-paragraph">
+          <span v-html="question"></span>
+          <slot />
+        </p>
       </div>
-    </div>
-  </legend>
+
+      <!-- Answers section -->
+      <div class="mt-6 space-y-6">
+        <div v-for="(answer, index) in answers" :key="index" class="flex items-center gap-x-3">
+          <input
+            :key="id + index.toString()"
+            aria-roledescription="radio button"
+            @click="$emit('answered', answer)"
+            :value="id + index.toString()"
+            :id="index.toString()"
+            type="radio"
+            class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+          />
+          <label :for="index.toString()" class="block text-sm font-medium leading-6 text-gray-900">{{
+              answer.answer
+            }}</label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
 </template>

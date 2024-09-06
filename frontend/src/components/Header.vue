@@ -1,5 +1,9 @@
+<script setup lang="ts">
+const emit = defineEmits(['reset-event'])
+</script>
+
 <template>
-<header class="header">
+  <header class="header">
     <div class="rvo-header__logo-wrapper">
       <div class="rvo-logo rvo-header__logo-img">
         <div class="rvo-logo__emblem">
@@ -13,13 +17,13 @@
           <nav class="rvo-topnav rvo-topnav--lg">
             <ul class="rvo-topnav__list">
               <li class="rvo-topnav__item">
-                <a class="rvo-link rvo-topnav__link rvo-link--logoblauw" href="#">
+                <a class="rvo-link rvo-topnav__link rvo-link--logoblauw" @click="$emit('reset-event')">
                 <span
                   class="utrecht-icon rvo-icon rvo-icon-terug rvo-icon--lg rvo-icon--wit"
                   role="img"
                   aria-label="Terug"
                 ></span>
-                  Terug naar naar begin
+                  Terug naar het begin
                 </a>
               </li>
             </ul>

@@ -134,6 +134,7 @@ function back() {
 function acceptDisclaimer() {
   questionStore.acceptDisclaimer()
 }
+
 </script>
 
 <template>
@@ -146,7 +147,7 @@ function acceptDisclaimer() {
     </button>
   </div>
   <div v-else>
-    <Header />
+    <Header @reset-event="reset" />
     <div
       class="ai-decisiontree flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6"
 
@@ -161,32 +162,24 @@ function acceptDisclaimer() {
         :labels="questionStore.getJsonLabels()"
         :sources="findConclusion.sources"
       />
-      <div>
-        <fieldset>
-          <div v-if="currentQuestion" class="ai-decisiontree-form-question">
-            <Question
-              :question="currentQuestion.question"
-              :id="currentQuestion.questionId"
-              :sources="currentQuestion.sources"
-              :answers="currentQuestion.answers"
-              @answered="givenAnswer"
-            />
-          </div>
-        </fieldset>
+      <div v-if="currentQuestion" class="ai-decisiontree-form-question">
+        <Question
+          :question="currentQuestion.question"
+          :id="currentQuestion.questionId"
+          :sources="currentQuestion.sources"
+          :answers="currentQuestion.answers"
+          @answered="givenAnswer"
+        />
       </div>
     </div>
     <div
       class="mt-6 flex items-center justify-end gap-x-6 border-t border-gray-200 bg-white px-4 py-3 sm:px-6"
     >
-      <button @click="reset" type="button" class="text-sm font-semibold leading-6 text-gray-900">
-        Reset
-<!--   TODO: Replace this button with the Terug naar begin in the top left-->
-      </button>
       <button
         @click="back"
         v-if="questionId !== '0'"
         type="button"
-        class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+        class="utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
       >
         Terug
       </button>

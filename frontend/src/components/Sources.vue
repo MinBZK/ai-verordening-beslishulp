@@ -17,7 +17,7 @@ defineProps<Props>()
           role="img"
           aria-label="Info"
         ></span>
-        <a v-if="source.url" :href="source.url" target="_blank" class="rvo-link">
+        <a v-if="source.url" :href="source.url" target="_blank" class="rvo-link utrecht-link">
           {{ source.source }}
           <slot />
         </a>
