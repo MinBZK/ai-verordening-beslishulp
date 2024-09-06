@@ -92,6 +92,7 @@ De beslisboom is schematisch weergegeven verschillende diagrammen:
 
 Let op: de diagrammen kunnen het beste in Chrome, Safari of Microsoft Edge worden geopend.
 
+
 ## Frontend
 
 Om door de beslisboom te lopen is een visualizatie tool gemaakt. Met deze tool kunt u door de vragen lopen. De frontend is beschikbaar op deze [website](https://ai-act-decisiontree.apps.digilab.network).

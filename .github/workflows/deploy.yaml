@@ -56,7 +56,7 @@ jobs:
           git push --force-with-lease
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-  build:
+  deploy_github_pages:
     runs-on: ubuntu-latest
 
     steps:

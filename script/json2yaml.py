@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 questions = []
 
 
-def parse_question(data, id="0"):
+def parse_question(data, id="0") -> None:
     global questions
 
     if isinstance(data, list):  # all lists are 1 length. why is it like this?
@@ -65,20 +65,18 @@ def parse_question(data, id="0"):
 
 
 def read_json(file: str) -> dict:
-    with open(file, "r") as f:
+    with open(file) as f:
         json_str = f.read()
         data = json.loads(json_str)
     return data
 
 
-def write_yaml(dict: dict, file: str):
+def write_yaml(dict: dict, file: str) -> None:
     with open(file, "w") as f:
-        yaml.dump(
-            dict, f, default_flow_style=False, sort_keys=False, width=float("inf")
-        )
+        yaml.dump(dict, f, default_flow_style=False, sort_keys=False, width=float("inf"))
 
 
-def change_answer_id(questions, old, new):
+def change_answer_id(questions, old, new) -> None:
     for question in questions:
         for answer in question.get("answers"):
             if answer.get("nextQuestionId") == old:
@@ -108,7 +106,6 @@ def remove_duplicates():
             index = q.index(hashed)
             change_answer_id(new_questions, duplicate_id, ids[index])
 
-            pass
         else:
             new_questions.append(question)
             q.append(hashed)
