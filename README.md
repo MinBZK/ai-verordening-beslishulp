@@ -78,17 +78,20 @@ Naast de beslisboom is er ook een [definitions.yaml](definitions.yaml) bestand. 
 ## Beslisboom diagram
 
 De beslisboom is schematisch weergegeven verschillende diagrammen:
-1: een [doorklikbaar diagram](https://minbzk.github.io/ai-act-decisiontree/mermaid_graphs/decision-tree-main.html): in dit diagram is de beslisboom op een versimpelde manier weergeven. Dit diagram bevat de volgende componenten:
 
-- donkerblauwe rechthoeken: dit zijn doorklikbare componenten die doorverwijzen naar een volgende categorie uit de beslisboom. Wanneer u met uw muis over deze rechthoeken sleept, wordt de categorie weergeven onderaan de pagina.
-- lichtblauwe rechthoeken: dit zijn de 'labels' uit de beslisboom. De labels geven de karakteristieken die u door de beslisboom te doorlopen kunt verzamelen weer.
-- donkerblauwe afgeronde rechthoeken: dit zijn de vragen uit de beslisboom. Wanneer u met uw muis over deze rechthoeken sleept, wordt de volledige vraag weergeven onderaan de pagina.
-- donkerblauwe hexagons: dit zijn de conclusies uit de beslisboom. Wanneer u met uw muis over deze hexagons sleept, worden de bij de conclusie behorende verplichtingen weergeven onderaan de pagina.
+1. [een doorklikbaar diagram](https://minbzk.github.io/ai-act-decisiontree/mermaid_graphs/decision-tree-main.html): in dit diagram is de beslisboom op een versimpelde manier weergeven. Dit diagram bevat de volgende componenten:
 
-U kunt terug naar het vorige diagram door de vorige pagina-knop in uw browser te gebruiken.
-Let op: de diagrammen worden soms niet geheel weergeven in Firefox.
+    - donkerblauwe rechthoeken: dit zijn doorklikbare componenten die doorverwijzen naar een volgende categorie uit de beslisboom.
+    - lichtblauwe rechthoeken: dit zijn de 'labels' uit de beslisboom. De labels geven de karakteristieken die u door de beslisboom te doorlopen kunt verzamelen weer.
+    - donkerblauwe cirkels: dit zijn de vragen uit de beslisboom. Wanneer u op een cirkel klikt, verschijnt de volledige vraag in een pop-up op het scherm. Deze kan vervolgens weer weg worden geklikt door rechtsboven op het kruisje te klikken.
+    - witte hexagons met groene rand: dit zijn de conclusies uit de beslisboom. Wanneer u op een hexagon klikt, verschijnen de bij de conclusie behorende verplichtingen in een pop-up op het scherm.
 
-2: een [overzichtsdiagram](https://minbzk.github.io/ai-act-decisiontree/mermaid_graphs/decision-tree-complete.html): in dit diagram is de gehele beslisboom gevat. Dit diagram is niet doorklikbaar. De vragen zijn gegroepeerd categorieen, weergeven in witte rechthoeken met groene randen.
+    U kunt terug naar het vorige diagram door de vorige pagina-knop in uw browser te gebruiken.
+
+2. een [overzichtsdiagram](https://minbzk.github.io/ai-act-decisiontree/mermaid_graphs/decision-tree-complete.html): in dit diagram is de gehele beslisboom gevat. Dit diagram is niet doorklikbaar. De vragen zijn gegroepeerd categorieen, weergeven in witte rechthoeken met groene randen.
+
+Let op: de diagrammen kunnen het beste in Chrome, Safari of Microsoft Edge worden geopend.
+
 
 ## Frontend
 

@@ -70,9 +70,67 @@ class CustomLink(Link):
         )
 
 
+class CustomStyle(Style):
+    def __init__(
+        self,
+        name: str,
+        fill: str | None = None,
+        color: str | None = None,
+        font_weight: str | None = None,
+        stroke_width: str | None = None,
+        stroke: str | None = None,
+        other: str | None = None,
+    ) -> None:
+        super().__init__(
+            name=name,
+            fill=fill,
+            color=color,
+            font_weight=font_weight,
+            stroke_width=stroke_width,
+            stroke=stroke,
+            other=other,
+        )
+
+    def __str__(self) -> str:
+        """Return the string representation of the style definition."""
+        parts = [f"classDef {self.name}"]  # Start with the class definition name
+
+        attributes = []  # Collect style attributes here
+        if self.fill:
+            attributes.append(f"fill:{self.fill}")
+        if self.color:
+            attributes.append(f"color:{self.color}")
+        if self.font_weight:
+            attributes.append(f"font-weight:{self.font_weight}")
+        if self.stroke_width:
+            attributes.append(f"stroke-width:{self.stroke_width}")
+        if self.stroke:
+            attributes.append(f"stroke:{self.stroke}")
+        if self.other:
+            attributes.append(self.other)
+
+        if attributes:
+            parts.append(",".join(attributes))  # Join attributes with commas
+
+        return " ".join(parts)
+
+    def __hash__(self) -> int:
+        return hash(self.name)
+
+
 # function to only remove all special characters
 def escape_for_mermaid(text):
     return text.replace("||", "of").replace("&&", "en")
+
+
+def find_node_by_id(node_id):
+    for node in nodes:
+        if node.id_ == node_id:
+            return node
+
+
+def get_category(subgraphs, link):
+    return next((key for key, values in subgraphs.items() if link in values), None)
 
 
 def create_html(file_name, flowchart_script):
@@ -81,45 +139,97 @@ def create_html(file_name, flowchart_script):
             """
     <!DOCTYPE html>
     <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>AI Verordening Beslisboom</title>
+        <title>AI Decision Tree</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
         <script src='https://unpkg.com/mermaid@11.0.2/dist/mermaid.min.js'></script>
-        <script>
-            window.callback = function (name) {
-                let cookieValue = document.getElementsByClassName("mermaidTooltip");
-                console.log(cookieValue[0]);
 
+        <!-- Custom Styles -->
+        <style>
+            /* Tooltip styling */
+            .mermaidTooltip {
+                display: none; /* Hides any remaining tooltips */
+            }
 
-                // Optionally, you can perform other actions here if needed
-            };
-        </script>
+            /* Modal centering and responsiveness */
+            .modal.is-active {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
 
-        </head>
+            .modal-content {
+                max-width: 80vw; /* Makes modal responsive to screen size */
+                max-height: 80vh; /* Ensures modal fits within the viewport */
+                overflow-y: auto; /* Allows scrolling inside modal if content is too long */
+                position: relative;
+                padding: 20px;
+                background-color: white;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body class="has-background-white-ter">
 
-        <body class="has-background-white-ter">
-
+        <!-- Modal -->
         <div id="model1" class="modal">
             <div class="modal-background"></div>
             <div class="modal-content">
-            <div id="modelcontent1">
-            </div>
+                <div id="modelcontent1"></div>
             </div>
             <button id="modealclose1" class="modal-close is-large" aria-label="close"></button>
         </div>
 
-
+        <!-- Diagram (placeholder) -->
         <pre class="mermaid has-background-white-ter">
             {script}
         </pre>
 
-    <script>mermaid.initialize({ maxTextSize: 9000000000, startOnLoad: true, securityLevel: 'loose' })</script>
-    </body>
+        <!-- Mermaid initialization -->
+        <script>mermaid.initialize({ maxTextSize: 9000000000, startOnLoad: true, securityLevel: 'loose' })</script>
 
-    </html>""".replace("{script}", flowchart_script)
+        <!-- JavaScript for tooltip and modal handling -->
+        <script>
+            // Function to handle modal popup when a node is clicked
+            window.callback = function (name) {
+                let cookieValue = document.getElementsByClassName("mermaidTooltip");
+                let modelcontent1 = document.getElementById("modelcontent1");
+                let model1 = document.getElementById("model1");
+
+                // If a tooltip exists, display its content in the modal
+                if (cookieValue[0]) {
+                    // Hide the tooltip when opening the modal
+                    cookieValue[0].style.display = "none";
+                    // Set the modal content from the tooltip text
+                    modelcontent1.innerHTML = cookieValue[0].innerText.replaceAll("#specialnewline#", "<br>");
+                    // Open the modal by adding the 'is-active' class
+                    model1.classList.add('is-active');
+                }
+            };
+
+            // Function to close the modal and restore tooltip visibility
+            document.addEventListener('DOMContentLoaded', () => {
+                let modealclose1 = document.getElementById("modealclose1");
+
+                // Event listener to close the modal when the close button is clicked
+                modealclose1.addEventListener('click', () => {
+                    let model1 = document.getElementById("model1");
+                    let cookieValue = document.getElementsByClassName("mermaidTooltip");
+
+                    // Close the modal by removing the 'is-active' class
+                    model1.classList.remove('is-active');
+
+                    // Restore the tooltip visibility after the modal is closed
+                });
+            });
+
+        </script>
+
+    </body>
+    </html>
+    """.replace("{script}", flowchart_script)
         )
 
 
@@ -193,17 +303,9 @@ name: str = decision_tree.get("name")
 questions: list[Question] = [Question(**q) for q in decision_tree.get("questions", [])]
 conclusions: list[Conclusion] = [Conclusion(**q) for q in decision_tree.get("conclusions", [])]
 
+
 nodes: list[CustomNode] = []
-links: list[Link] = []
-
-
-def find_node_by_id(node_id):
-    for node in nodes:
-        if node.id_ == node_id:
-            return node
-
-    raise Exception(f"Node with id {node_id} not found")  # noqa : TRY002
-
+links: list[CustomLink] = []
 
 # create conclusion nodes
 for conclusion in conclusions:
@@ -212,12 +314,18 @@ for conclusion in conclusions:
             id_="c-" + conclusion.conclusionId,
             content=conclusion.conclusion,
             shape="hexagon",
+            styles=[
+                CustomStyle(
+                    name="conclusionStyle",
+                    fill="#FFFFFF",
+                    stroke="#39870c",
+                )
+            ],
             callback_tooltip=conclusion.obligation,
         )
     )
 
 # create question nodes
-subgraphs = {}
 for question in questions:
     sub_nodes = []
 
@@ -225,15 +333,11 @@ for question in questions:
         CustomNode(
             id_="q-" + question.questionId,
             content=question.questionId + ": " + question.simplifiedQuestion,
-            shape="round-edge",
+            shape="circle",
             callback_tooltip=question.question,
             category=question.category,
         )
     )
-    if question.category not in subgraphs:
-        subgraphs[question.category] = ["q-" + question.questionId]
-    else:
-        subgraphs[question.category].append("q-" + question.questionId)
 
 # create links between nodes (question and conclusion)
 for question in questions:
@@ -244,21 +348,39 @@ for question in questions:
     for answer in answers:
         if answer.nextQuestionId:
             end = find_node_by_id("q-" + answer.nextQuestionId)
+            labels_ = answer.labels if answer.labels is not None else []
             links.append(
                 CustomLink(
                     origin=origin,
                     end=end,
-                    message=answer.answer,
+                    message=(
+                        answer.answer
+                        + ".\n\n\n"
+                        + (
+                            "\nOpgehaalde labels: " + ", ".join(str(label) for label in answer.labels)
+                            if answer.labels is not None
+                            else ""
+                        )
+                    ),
                     labels=answer.labels,
                 )
             )
         elif answer.nextConclusionId:
             end = find_node_by_id("c-" + answer.nextConclusionId)
+            labels_ = answer.labels if answer.labels is not None else []
             links.append(
                 CustomLink(
                     origin=origin,
                     end=end,
-                    message=answer.answer,
+                    message=(
+                        answer.answer
+                        + ".\n\n\n"
+                        + (
+                            "Opgehaalde labels: " + ", ".join(str(label) for label in answer.labels)
+                            if answer.labels is not None
+                            else ""
+                        )
+                    ),
                     labels=answer.labels,
                 )
             )
@@ -274,13 +396,30 @@ for question in questions:
 
             for redirect in redirects:
                 if redirect.nextQuestionId:
-                    match = re.findall('(?:"(.*?)")', redirect.if_condition)
+                    match_list = [
+                        m[0] or m[1]
+                        for m in re.findall(
+                            r'"([^"]+)"\s+in\s+labels|(\bof\b|\ben\b)',
+                            redirect.if_condition,
+                        )
+                    ]
                     end = find_node_by_id("q-" + redirect.nextQuestionId)
                     links.append(
                         CustomLink(
                             origin=origin,
                             end=end,
-                            message=answer.answer + ": " + ", ".join(match),
+                            message=(
+                                answer.answer
+                                + ",\n"
+                                + "Als: "
+                                + " ".join(str(m) for m in match_list)
+                                + ".\n\n\n"
+                                + (
+                                    "\nOpgehaalde labels: " + ", ".join(str(label) for label in answer.labels)
+                                    if answer.labels is not None
+                                    else ""
+                                )
+                            ),
                             labels=answer.labels,
                         )
                     )
@@ -291,7 +430,18 @@ for question in questions:
                         CustomLink(
                             origin=origin,
                             end=end,
-                            message=answer.answer + ": " + ", ".join(match),
+                            message=(
+                                answer.answer
+                                + ",\n"
+                                + "Als: "
+                                + " ".join(str(m) for m in match_list)
+                                + ".\n\n\n"
+                                + (
+                                    "\nOpgehaalde labels: " + ", ".join(str(label) for label in answer.labels)
+                                    if answer.labels is not None
+                                    else ""
+                                )
+                            ),
                             labels=answer.labels,
                         )
                     )
@@ -339,11 +489,6 @@ create_html(
 nodes_by_category = defaultdict(list)
 links_by_category = defaultdict(list)
 
-
-def get_category(subgraphs, link):
-    return next((key for key, values in subgraphs.items() if link in values), None)
-
-
 for category, cat_questions in subgraphs.items():
     links_by_category[category] = [link for link in links if link.origin.id_ in cat_questions]
     nodes_by_category[category] = [node for node in nodes if node.id_ in cat_questions]
@@ -364,10 +509,14 @@ for category, cat_questions in subgraphs.items():
             if (end_category := get_category(subgraphs, link)) is not None
         ]
     )
+    replace_flowchart_script = flowchart.script + "\n" + htmls
+    for key, values in subgraphs.items():
+        for value in (v for v in values if v in subgraph_links):
+            replace_flowchart_script = replace_flowchart_script.replace(value, key)
 
     create_html(
         "./mermaid_graphs/decision-tree-subgraphs-" + category + ".html",
-        flowchart.script + "\n" + htmls,
+        replace_flowchart_script,
     )
 
 # Create main graph and write into html
