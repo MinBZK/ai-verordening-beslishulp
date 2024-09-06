@@ -3,8 +3,9 @@ interface Props {
   conclusion: string | null
   obligation: string | null
   labels: string[] | null
-  sources: {   source: string;   url: string | undefined; }[] | undefined
+  sources: { source: string; url: string | undefined; }[] | undefined
 }
+
 defineProps<Props>()
 
 import { ExclamationTriangleIcon } from '@heroicons/vue/24/outline'
@@ -22,7 +23,8 @@ import { ExclamationTriangleIcon } from '@heroicons/vue/24/outline'
         <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
           <!--Conclusion section-->
           <DialogTitle as="h3" class="text-base font-semibold leading-6 text-gray-900">
-            Conclusie</DialogTitle>
+            Conclusie
+          </DialogTitle>
           <p class="text-sm text-gray-500">
             <span v-html="conclusion"></span>
             <slot />
@@ -30,7 +32,8 @@ import { ExclamationTriangleIcon } from '@heroicons/vue/24/outline'
 
           <!--Obligation section-->
           <DialogTitle as="h4" class="text-sm font-semibold leading-5 text-gray-900 relative top-5">
-            Verplichtingen</DialogTitle>
+            Verplichtingen
+          </DialogTitle>
           <p style="white-space: pre-line" class="text-sm text-gray-500 relative top-5">
             <span v-html="obligation"></span>
             <slot />
@@ -58,7 +61,8 @@ import { ExclamationTriangleIcon } from '@heroicons/vue/24/outline'
 
           <!--Labels section-->
           <DialogTitle as="h4" class="text-sm font-semibold leading-5 text-gray-900 relative top-5">
-            Labels</DialogTitle>
+            Labels
+          </DialogTitle>
           <p class="text-sm text-gray-500 relative top-5">
             {{ labels }}
             <slot />
@@ -66,7 +70,8 @@ import { ExclamationTriangleIcon } from '@heroicons/vue/24/outline'
 
           <!--Contact section-->
           <DialogTitle as="h4" class="text-sm font-semibold leading-5 text-gray-900 relative top-5">
-            Contact</DialogTitle>
+            Contact
+          </DialogTitle>
           <p class="text-sm text-gray-500 relative top-5">
             Mocht u vragen of opmerkingen hebben naar aanleiding van deze beslisboom, mail dan gerust naar
             <a href="mailto:ai-verordening@minbzk.nl" target="_blank" class="text-blue-700 underline">ai-verordening@minbzk.nl</a>.

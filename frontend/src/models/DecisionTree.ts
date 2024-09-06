@@ -13,7 +13,6 @@ export const Answer = t.type({
   nextQuestionId: t.union([t.string, t.undefined]),
   nextConclusionId: t.union([t.string, t.undefined]),
   subresult: t.union([t.string, t.undefined]),
-  answerComment: t.union([t.string, t.undefined]),
   labels: t.union([t.array(t.string), t.undefined]),
   redirects: t.union([t.array(Redirect), t.undefined])
 })

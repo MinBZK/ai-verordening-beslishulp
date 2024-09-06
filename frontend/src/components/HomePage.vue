@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Header from '@/components/Header.vue'
+import BetaversionLabel from '@/components/betaversion-label.vue'
 </script>
 
 <template>
@@ -7,20 +8,10 @@ import Header from '@/components/Header.vue'
   <main>
     <!--    TODO: Hier komt nog een progress tracker-->
     <div class="rvo-form">
-      <div class="rvo-layout-column rvo-layout-gap--xl">
-        <div class="rvo-form-intro inline-flex items-center">
-          <h2 class="utrecht-heading-2">Beslisboom AI-verordering</h2>
-          <div
-            class="items-center rounded-md rvo-alert rvo-alert--padding-xs rvo-alert--warning">
-            <span
-              class="utrecht-icon rvo-icon rvo-icon-waarschuwing rvo-icon--xl rvo-status-icon-waarschuwing"
-              role="img"
-              aria-label="Waarschuwing"
-            ></span>
-            <div class="utrecht-alert--warning">
-              bètaversie
-            </div>
-          </div>
+      <div class="flex items-center rvo-layout-column rvo-layout-gap--xl">
+        <div class="flex justify-center rvo-form-intro inline-flex items-center">
+          <h2 class="flex justify-center utrecht-heading-2">Beslisboom AI-verordering</h2>
+          <BetaversionLabel/>
         </div>
         <div class="rvo-layout-column rvo-layout-gap--md">
           <div class="utrecht-form-fieldset rvo-form-fieldset">

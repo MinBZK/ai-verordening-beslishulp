@@ -12,9 +12,8 @@ import categories_json from '@/assets/categories.json'
 
 import { useQuestionStore } from '@/stores/QuestionStore'
 
-import SingleAnswer from '@/components/SingleAnswer.vue'
-import SingleQuestion from '@/components/SingleQuestion.vue'
-import Conclusion from '@/components/ConclusionComponent.vue'
+import Question from '@/components/Question.vue'
+import Conclusion from '@/components/Conclusion.vue'
 import DefaultLoader from '@/components/DefaultLoader.vue'
 import DefaultError from '@/components/DefaultError.vue'
 import HomePage from '@/components/HomePage.vue'
@@ -165,16 +164,12 @@ function acceptDisclaimer() {
       <div>
         <fieldset>
           <div v-if="currentQuestion" class="ai-decisiontree-form-question">
-            <SingleQuestion
+            <Question
               :question="currentQuestion.question"
               :id="currentQuestion.questionId"
               :sources="currentQuestion.sources"
-            />
-            <SingleAnswer
               :answers="currentQuestion.answers"
-              :id="currentQuestion.questionId"
               @answered="givenAnswer"
-              class="relative top-5"
             />
           </div>
         </fieldset>
