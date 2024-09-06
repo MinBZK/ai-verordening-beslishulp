@@ -424,7 +424,13 @@ for question in questions:
                         )
                     )
                 elif redirect.nextConclusionId:
-                    match = re.findall('(?:"(.*?)")', redirect.if_condition)
+                    match_list = [
+                        m[0] or m[1]
+                        for m in re.findall(
+                            r'"([^"]+)"\s+in\s+labels|(\bof\b|\ben\b)',
+                            redirect.if_condition,
+                        )
+                    ]
                     end = find_node_by_id("c-" + redirect.nextConclusionId)
                     links.append(
                         CustomLink(
