@@ -10,6 +10,7 @@ import decision_tree_json from '@/assets/decision-tree.json'
 import categories_json from '@/assets/categories.json'
 
 import { useQuestionStore } from '@/stores/QuestionStore'
+import { useCategoryStore } from '@/stores/CategoryStore'
 
 import Question from '@/components/Question.vue'
 import Conclusion from '@/components/Conclusion.vue'
@@ -17,9 +18,13 @@ import DefaultLoader from '@/components/DefaultLoader.vue'
 import DefaultError from '@/components/DefaultError.vue'
 import HomePage from '@/components/HomePage.vue'
 import Header from '@/components/Header.vue'
+import ProgressTracker from '@/components/ProgressTracker.vue'
 
 const questionStore = useQuestionStore()
 const { AcceptedDisclaimer, QuestionId } = storeToRefs(questionStore)
+
+const categoryStore = useCategoryStore()
+const { categoryState } = storeToRefs(categoryStore)
 
 const data_questions = ref<Questions>([])
 const data_conclusions = ref<Conclusions>([])
@@ -83,9 +88,11 @@ onMounted(async () => {
 })
 
 const currentCategory = computed(() => {
+  // TODO: this is calculated with each refresh, this should be only also when handle next step
   var versions = questionId.value.split('.')
   let category: Category | undefined
 
+  // TODO: check with past category, if changed call CategoryStore
   if (questionId.value === '0') {
     category = data_categories.value.find((q) => q.questionId === '0')
   } else {
@@ -98,6 +105,7 @@ const currentCategory = computed(() => {
       }
     }
   }
+  categoryStore.updateCurrentCategory(category.topic)
   return category
 })
 
@@ -143,11 +151,13 @@ async function givenAnswer(answer: Answer) {
 
 function reset() {
   questionStore.reset()
+  categoryStore.reset()
   conclusionId.value = null
 }
 
 function back() {
   questionStore.revertAnswer()
+  categoryStore.revertCurrentCategory()
   conclusionId.value = null
 }
 
@@ -160,46 +170,61 @@ function acceptDisclaimer() {
 <template>
   <div v-if="AcceptedDisclaimer == '0'">
     <HomePage />
-    <button @click="acceptDisclaimer" type="button"
-            class="utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
-    >
-      Accepteer voorwaarden
-    </button>
+    <!--    TODO: move this to child with emit pattern??-->
+    <div class="py-5 px-5">
+      <button @click="acceptDisclaimer" type="button"
+              class="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
+      >
+        Accepteer voorwaarden
+      </button>
+    </div>
   </div>
   <div v-else>
     <Header @reset-event="reset" />
-    <div
-      class="ai-decisiontree flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6"
-    >
-      <DefaultLoader :loading="isLoading" />
-      <DefaultError :error="error" />
-      <Conclusion
-        v-if="findConclusion"
-        :conclusion="findConclusion.conclusion"
-        :obligation="findConclusion.obligation"
-        :labels="questionStore.getJsonLabels()"
-        :sources="findConclusion.sources"
+    <div class="flex justify-center py-10">
+      <ProgressTracker
+        v-if="categoryState"
+        :type_ai_systeem_state="categoryState.type_ai_systeem_state"
+        :open_source_state="categoryState.open_source_state"
+        :uitzonderingsgrond_state="categoryState.uitzonderingsgrond_state"
+        :risicocategorie_state="categoryState.risicocategorie_state"
+        :systeemrisico_state="categoryState.systeemrisico_state"
+        :transparantie_risico_state="categoryState.transparantie_risico_state"
+        :entiteit_rol_state="categoryState.entiteit_rol_state"
       />
-      <div v-if="currentQuestion" class="ai-decisiontree-form-question">
-        <Question
-          :question="currentQuestion.question"
-          :id="currentQuestion.questionId"
-          :sources="currentQuestion.sources"
-          :answers="currentQuestion.answers"
-          :topic="currentCategory.topic"
-          @answered="givenAnswer"
-        />
-      </div>
-    </div>
-    <div class="rvo-layout-margin-horizontal--2xl">
-      <button
-        @click="back"
-        v-if="questionId !== '0'"
-        type="button"
-        class="utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
+      <div
+        class="px-20"
       >
-        Vorige vraag
-      </button>
+        <DefaultLoader :loading="isLoading" />
+        <DefaultError :error="error" />
+        <Conclusion
+          v-if="findConclusion"
+          :conclusion="findConclusion.conclusion"
+          :obligation="findConclusion.obligation"
+          :labels="questionStore.getJsonLabels()"
+          :sources="findConclusion.sources"
+        />
+        <div v-if="currentQuestion" class="ai-decisiontree-form-question">
+          <Question
+            :question="currentQuestion.question"
+            :id="currentQuestion.questionId"
+            :sources="currentQuestion.sources"
+            :answers="currentQuestion.answers"
+            :topic="currentCategory.topic"
+            @answered="givenAnswer"
+          />
+        </div>
+      </div>
+      <div class="rvo-layout-margin-horizontal--2xl">
+        <button
+          @click="back"
+          v-if="questionId !== '0'"
+          type="button"
+          class="utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
+        >
+          Vorige vraag
+        </button>
+      </div>
     </div>
   </div>
 </template>
