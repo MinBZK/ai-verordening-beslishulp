@@ -7,22 +7,20 @@ interface Props {
   id: string
   question: string
   sources: { source: string; url: string | undefined; }[] | undefined
-  answers: Array<Answer>
+  answers: Array<Answer>,
+  topic: string
 }
 
 defineProps<Props>()
 defineEmits(['answered'])
+
+
 </script>
 
 <template>
   <div class="flex-col">
     <div class="flex items-center">
-      <!--    TODO: Replace question with categories-->
-      <h1 class="utrecht-heading-1">Vraag:</h1>
-      <span
-        class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10"
-      >{{ id }}</span
-      >
+      <h1 class="utrecht-heading-1"><span>{{ topic }}</span></h1>
       <BetaversionLabel />
     </div>
     <Sources :sources="sources" />

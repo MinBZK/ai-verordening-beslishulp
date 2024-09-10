@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import { load } from 'js-yaml'
 import jexl from 'jexl'
 import { computed, onMounted, ref } from 'vue'
 import { Answer, Conclusions, DecisionTree, Questions, Redirect } from '@/models/DecisionTree'
-import { Categories } from '@/models/Categories'
+import { Categories, Category } from '@/models/Categories'
 import { storeToRefs } from 'pinia'
 import { fold } from 'fp-ts/lib/Either'
 import * as t from 'io-ts'
@@ -33,6 +32,7 @@ const error = ref<string | null>(null)
 onMounted(async () => {
   // Read in the Data
   try {
+    // Read in the decision tree json
     const validationResultDecisionTree: t.Validation<any> = DecisionTree.decode(decision_tree_json)
     fold(
       (errors: t.Errors) => {
@@ -52,6 +52,7 @@ onMounted(async () => {
       }
     )(validationResultDecisionTree)
 
+    // Read in the categories json
     const validationResultCategories: t.Validation<any> = Categories.decode(categories_json)
     fold(
       (errors: t.Errors) => {
@@ -79,6 +80,25 @@ onMounted(async () => {
   } finally {
     isLoading.value = false
   }
+})
+
+const currentCategory = computed(() => {
+  var versions = questionId.value.split('.')
+  let category: Category | undefined
+
+  if (questionId.value === '0') {
+    category = data_categories.value.find((q) => q.questionId === '0')
+  } else {
+    if (versions.length >= 2) {
+      // First try to find topic on minor version
+      category = data_categories.value.find((q) => q.questionId === versions[0] + '.' + versions[1])
+      if (category === undefined) {
+        // When not exist, use the major version (patch versions currently does not exist)
+        category = data_categories.value.find((q) => q.questionId === versions[0])
+      }
+    }
+  }
+  return category
 })
 
 const currentQuestion = computed(() => {
@@ -150,10 +170,8 @@ function acceptDisclaimer() {
     <Header @reset-event="reset" />
     <div
       class="ai-decisiontree flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6"
-
     >
       <DefaultLoader :loading="isLoading" />
-
       <DefaultError :error="error" />
       <Conclusion
         v-if="findConclusion"
@@ -168,20 +186,19 @@ function acceptDisclaimer() {
           :id="currentQuestion.questionId"
           :sources="currentQuestion.sources"
           :answers="currentQuestion.answers"
+          :topic="currentCategory.topic"
           @answered="givenAnswer"
         />
       </div>
     </div>
-    <div
-      class="mt-6 flex items-center justify-end gap-x-6 border-t border-gray-200 bg-white px-4 py-3 sm:px-6"
-    >
+    <div class="rvo-layout-margin-horizontal--2xl">
       <button
         @click="back"
         v-if="questionId !== '0'"
         type="button"
         class="utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
       >
-        Terug
+        Vorige vraag
       </button>
     </div>
   </div>
