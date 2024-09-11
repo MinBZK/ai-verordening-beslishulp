@@ -184,13 +184,12 @@ function acceptDisclaimer() {
     <div class="flex justify-center py-10">
       <ProgressTracker
         v-if="categoryState"
-        :type_ai_systeem_state="categoryState.type_ai_systeem_state"
+        :soort_toepassing_state="categoryState.soort_toepassing_state"
         :open_source_state="categoryState.open_source_state"
-        :uitzonderingsgrond_state="categoryState.uitzonderingsgrond_state"
-        :risicocategorie_state="categoryState.risicocategorie_state"
+        :publicatiecategorie_state="categoryState.publicatiecategorie_state"
         :systeemrisico_state="categoryState.systeemrisico_state"
-        :transparantie_risico_state="categoryState.transparantie_risico_state"
-        :entiteit_rol_state="categoryState.entiteit_rol_state"
+        :transparantieverplichtingen_state="categoryState.transparantieverplichtingen_state"
+        :rol_state="categoryState.rol_state"
       />
       <div class="px-20">
         <DefaultLoader :loading="isLoading" />

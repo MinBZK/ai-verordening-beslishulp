@@ -6,22 +6,20 @@ export const useCategoryStore = defineStore('category', () => {
   const initialCurrentCategory = localStorage.getItem('currentCategory') || 'Type AI-Systeem'
   const initialCategoryTrace = JSON.parse(localStorage.getItem('categoryTrace') || '[]')
   const initialCategoryStateString = `{
-  "type_ai_systeem_state": "doing",
+  "soort_toepassing_state": "doing",
   "open_source_state": "incomplete",
-  "uitzonderingsgrond_state": "incomplete",
-  "risicocategorie_state": "incomplete",
+  "publicatiecategorie_state": "incomplete",
   "systeemrisico_state": "incomplete",
-  "transparantie_risico_state": "incomplete",
-  "entiteit_rol_state": "incomplete"
+  "transparantieverplichtingen_state": "incomplete",
+  "rol_state": "incomplete"
 }`
   const categoryMapper = {
-    'Type AI-Systeem': 'type_ai_systeem_state',
+    'Type AI-Systeem': 'soort_toepassing_state',
     'Open-source': 'open_source_state',
-    'Uitzonderingsgrond': 'uitzonderingsgrond_state',
-    'Risicocategorie': 'risicocategorie_state',
+    'Publicatiecategorie': 'publicatiecategorie_state',
     'Systeemrisico': 'systeemrisico_state',
-    'Transparantierisico': 'transparantierisico_state',
-    'Entiteit/rol': 'entiteit_rol_state'
+    'Transparantieverplichtingen': 'transparantieverplichtingen_state',
+    'Rol': 'rol_state'
   }
   const initialCategoryState = JSON.parse(localStorage.getItem('categoryState') || initialCategoryStateString)
 

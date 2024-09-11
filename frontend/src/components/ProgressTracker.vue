@@ -1,12 +1,11 @@
 <script setup lang="ts">
 interface Props {
-  type_ai_systeem_state: string,
+  soort_toepassing_state: string,
   open_source_state: string,
-  uitzonderingsgrond_state: string,
-  risicocategorie_state: string,
+  publicatiecategorie_state: string,
   systeemrisico_state: string,
-  transparantie_risico_state: string,
-  entiteit_rol_state: string,
+  transparantieverplichtingen_state: string,
+  rol_state: string,
 }
 
 defineProps<Props>()
@@ -24,9 +23,9 @@ function change_status(category: string) {
       class="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--start rvo-image-bg-progress-tracker-start-end-md--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before"
     >
     </div>
-    <div :class="change_status(type_ai_systeem_state)">
+    <div :class="change_status(soort_toepassing_state)">
       <a class="rvo-link rvo-progress-tracker__step-link">
-        Type AI-Systeem
+        Soort toepassing
       </a>
     </div>
     <div :class="change_status(open_source_state)">
@@ -34,14 +33,9 @@ function change_status(category: string) {
         Open-source
       </a>
     </div>
-    <div :class="change_status(uitzonderingsgrond_state)">
+    <div :class="change_status(publicatiecategorie_state)">
       <a class="rvo-link rvo-progress-tracker__step-link">
-        Uitzonderingsgrond
-      </a>
-    </div>
-    <div :class="change_status(risicocategorie_state)">
-      <a class="rvo-link rvo-progress-tracker__step-link">
-        Risicocategorie
+        Publicatiecategorie
       </a>
     </div>
     <div :class="change_status(systeemrisico_state)">
@@ -49,14 +43,14 @@ function change_status(category: string) {
         Systeemrisico
       </a>
     </div>
-    <div :class="change_status(transparantie_risico_state)">
+    <div :class="change_status(transparantieverplichtingen_state)">
       <a class="rvo-link rvo-progress-tracker__step-link">
-        Transparantierisico
+        Transparantieverplichtingen
       </a>
     </div>
-    <div :class="change_status(entiteit_rol_state)">
+    <div :class="change_status(rol_state)">
       <a class="rvo-link rvo-progress-tracker__step-link">
-        Entiteit/rol
+        Rol
       </a>
     </div>
     <div
