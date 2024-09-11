@@ -12,7 +12,7 @@ interface Props {
 }
 
 defineProps<Props>()
-defineEmits(['answered'])
+defineEmits(['answered', 'back'])
 </script>
 
 <template>
@@ -49,5 +49,15 @@ defineEmits(['answered'])
         </div>
       </div>
     </fieldset>
+  </div>
+  <div>
+    <button
+      @click="$emit('back')"
+      v-if="id !== '0'"
+      type="button"
+      class="utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline "
+    >
+      Vorige vraag
+    </button>
   </div>
 </template>

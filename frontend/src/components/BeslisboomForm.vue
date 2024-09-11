@@ -19,9 +19,10 @@ import DefaultError from '@/components/DefaultError.vue'
 import HomePage from '@/components/HomePage.vue'
 import Header from '@/components/Header.vue'
 import ProgressTracker from '@/components/ProgressTracker.vue'
+import SubResult from '@/components/SubResult.vue'
 
 const questionStore = useQuestionStore()
-const { AcceptedDisclaimer, QuestionId } = storeToRefs(questionStore)
+const { AcceptedDisclaimer, QuestionId, labelsByCategory } = storeToRefs(questionStore)
 
 const categoryStore = useCategoryStore()
 const { categoryState } = storeToRefs(categoryStore)
@@ -91,20 +92,24 @@ const currentCategory = computed(() => {
   // TODO: this is calculated with each refresh, this should be only also when handle next step
   var versions = questionId.value.split('.')
   let category: Category | undefined
-
-  // TODO: check with past category, if changed call CategoryStore
-  if (questionId.value === '0') {
-    category = data_categories.value.find((q) => q.questionId === '0')
-  } else {
-    if (versions.length >= 2) {
-      // First try to find topic on minor version
-      category = data_categories.value.find((q) => q.questionId === versions[0] + '.' + versions[1])
-      if (category === undefined) {
-        // When not exist, use the major version (patch versions currently does not exist)
-        category = data_categories.value.find((q) => q.questionId === versions[0])
+  if (questionId) {
+    // TODO: check with past category, if changed call CategoryStore
+    if (questionId.value === '0') {
+      category = data_categories.value.find((q) => q.questionId === '0')
+    } else {
+      if (versions.length >= 2) {
+        // First try to find topic on minor version
+        category = data_categories.value.find((q) => q.questionId === versions[0] + '.' + versions[1])
+        if (category === undefined) {
+          // When not exist, use the major version (patch versions currently does not exist)
+          category = data_categories.value.find((q) => q.questionId === versions[0])
+        }
       }
     }
+  } else {
+    category = data_categories.value.find((q) => q.questionId === '15')
   }
+  // TODO: met wanneer we naar de conclusionid gaan ;s
   categoryStore.updateCurrentCategory(category.topic)
   return category
 })
@@ -133,6 +138,7 @@ async function givenAnswer(answer: Answer) {
   if (answer.labels) {
     for (let i in answer.labels) {
       questionStore.addLabel(answer.labels[i], questionId.value)
+      questionStore.addLabelByCategory(answer.labels[i], currentCategory.value.topic)
     }
   }
   handleNextStep(answer)
@@ -169,15 +175,7 @@ function acceptDisclaimer() {
 
 <template>
   <div v-if="AcceptedDisclaimer == '0'">
-    <HomePage />
-    <!--    TODO: move this to child with emit pattern??-->
-    <div class="py-5 px-5">
-      <button @click="acceptDisclaimer" type="button"
-              class="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
-      >
-        Accepteer voorwaarden
-      </button>
-    </div>
+    <HomePage @accept-disclaimer="acceptDisclaimer" />
   </div>
   <div v-else>
     <Header @reset-event="reset" />
@@ -201,8 +199,12 @@ function acceptDisclaimer() {
           :labels="questionStore.getJsonLabels()"
           :sources="findConclusion.sources"
         />
-        <div v-if="currentQuestion">
-<!--          TODO: also v-if currentCategory?-->
+        <SubResult v-if="currentCategory && labelsByCategory"
+                   :question_id="questionId"
+                   :topic="currentCategory.topic"
+                   :labels="questionStore.getLabelsByCategory()"
+                   @back="back" />
+        <div v-if="currentQuestion && currentCategory">
           <Question
             :question="currentQuestion.question"
             :id="currentQuestion.questionId"
@@ -210,18 +212,9 @@ function acceptDisclaimer() {
             :answers="currentQuestion.answers"
             :topic="currentCategory.topic"
             @answered="givenAnswer"
+            @back="back"
           />
         </div>
-      </div>
-      <div class="rvo-layout-margin-horizontal--2xl">
-        <button
-          @click="back"
-          v-if="questionId !== '0'"
-          type="button"
-          class="utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
-        >
-          Vorige vraag
-        </button>
       </div>
     </div>
   </div>

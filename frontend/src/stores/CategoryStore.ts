@@ -14,7 +14,7 @@ export const useCategoryStore = defineStore('category', () => {
   "rol_state": "incomplete"
 }`
   const categoryMapper = {
-    'Type AI-Systeem': 'soort_toepassing_state',
+    'Soort toepassing': 'soort_toepassing_state',
     'Open-source': 'open_source_state',
     'Publicatiecategorie': 'publicatiecategorie_state',
     'Systeemrisico': 'systeemrisico_state',

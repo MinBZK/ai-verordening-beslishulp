@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import Header from '@/components/Header.vue'
 import BetaversionLabel from '@/components/betaversion-label.vue'
+
+const emit = defineEmits(['acceptDisclaimer'])
 </script>
 
 <template>
@@ -45,6 +47,13 @@ import BetaversionLabel from '@/components/betaversion-label.vue'
           </div>
         </div>
       </div>
+    </div>
+    <div class="py-5 px-5">
+      <button @click="$emit('acceptDisclaimer')" type="button"
+              class="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
+      >
+        Accepteer voorwaarden
+      </button>
     </div>
   </main>
 </template>
