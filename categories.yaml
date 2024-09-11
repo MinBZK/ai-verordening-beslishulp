@@ -1,42 +1,54 @@
-- questionId: "0."
-  topic: Type AI
-  topic_details: Definitie Algoritme Rekenkamer
-- questionId: "1."
-  topic: Type AI
-  topic_details: Type AI
-- questionId: "1.1."
-  topic: Type AI
-  topic_details: Buiten scope AI verordening
-- questionId: "1.0."
+- questionId: "0"
+  topic: Soort toepassing
+  topic_details: Definitie Algoritme
+- questionId: "1"
+  topic: Soort toepassing
+  topic_details: AI-systeem, AI-model of AI-model voor algemene doeleinden
+- questionId: "1.0"
   topic: Open-source
   topic_details: Open-source
-- questionId: "2.1"
-  topic: Uitzonderingsgrond
+- questionId: "2"
+  topic: Publicatiecategorie
   topic_details: Uitzonderingsgrond
-- questionId: "3."
-  topic: Risicocategorie
-  topic_details: Verboden AI-systeem
-- questionId: "3.1."
-  topic: Risicocategorie
-  topic_details: Uitzondering verboden AI-systeem
-- questionId: "4."
-  topic: Risicocategorie
-  topic_details: Hoog risico AI (Bijlage 1, sectie A en B)
-- questionId: "5."
-  topic: Risicocategorie
+- questionId: "3.0"
+  topic: Publicatiecategorie
+  topic_details: Verboden AI
+- questionId: "3.1"
+  topic: Publicatiecategorie
+  topic_details: Uitzondering verboden AI
+- questionId: "4"
+  topic: Publicatiecategorie
+  topic_details: Hoog risico AI (Veiligheidscomponent)
+- questionId: "5.0"
+  topic: Publicatiecategorie
   topic_details: Hoog risico AI (Bijlage 3)
-- questionId: "5.1."
-  topic: Risicocategorie
+- questionId: "5.1.0"
+  topic: Publicatiecategorie
   topic_details: Uitzondering hoog risico AI
-- questionId: "6."
+- questionId: "5.1.1"
+  topic: Publicatiecategorie
+  topic_details: Profilering
+- questionId: "6"
   topic: Systeemrisico
   topic_details: Systeemrisico
-- questionId: "7."
-  topic: Transparantierisico
-  topic_details: Transparantierisico
-- questionId: "8."
-  topic: Entiteit/rol
-  topic_details: Entiteit/rol
-- questionId: "12."
+- questionId: "7"
+  topic: Transparantieverplichtingen
+  topic_details: Transparantieverplichtingen
+- questionId: "8"
+  topic: Rol
+  topic_details: Rol
+- questionId: "9"
+  topic: Publicatiecategorie
+  topic_details: Impactvol
+- questionId: "12"
+  topic: Conclusie
+  topic_details: Conclusie
+- questionId: "13"
+  topic: Conclusie
+  topic_details: Conclusie
+- questionId: "14"
+  topic: Conclusie
+  topic_details: Conclusie
+- questionId: "15"
   topic: Conclusie
   topic_details: Conclusie
