@@ -192,9 +192,7 @@ function acceptDisclaimer() {
         :transparantie_risico_state="categoryState.transparantie_risico_state"
         :entiteit_rol_state="categoryState.entiteit_rol_state"
       />
-      <div
-        class="px-20"
-      >
+      <div class="px-20">
         <DefaultLoader :loading="isLoading" />
         <DefaultError :error="error" />
         <Conclusion
@@ -204,7 +202,8 @@ function acceptDisclaimer() {
           :labels="questionStore.getJsonLabels()"
           :sources="findConclusion.sources"
         />
-        <div v-if="currentQuestion" class="ai-decisiontree-form-question">
+        <div v-if="currentQuestion">
+<!--          TODO: also v-if currentCategory?-->
           <Question
             :question="currentQuestion.question"
             :id="currentQuestion.questionId"

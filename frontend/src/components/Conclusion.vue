@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import Sources from '@/components/Sources.vue'
+
 interface Props {
   conclusion: string | null
   obligation: string | null
@@ -7,79 +9,45 @@ interface Props {
 }
 
 defineProps<Props>()
-
-import { ExclamationTriangleIcon } from '@heroicons/vue/24/outline'
 </script>
 
 <template>
-  <DialogPanel v-if="conclusion" class="">
-    <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-      <div class="sm:flex sm:items-start">
-        <div
-          class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-green-100 sm:mx-0 sm:h-10 sm:w-10"
-        >
-          <ExclamationTriangleIcon class="h-6 w-6 text-green-600" aria-hidden="true" />
-        </div>
-        <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-          <!--Conclusion section-->
-          <DialogTitle as="h3" class="text-base font-semibold leading-6 text-gray-900">
-            Conclusie
-          </DialogTitle>
-          <p class="text-sm text-gray-500">
-            <span v-html="conclusion"></span>
-            <slot />
-          </p>
+  <div class="flex flex-col py-5 gap-y-5">
 
-          <!--Obligation section-->
-          <DialogTitle as="h4" class="text-sm font-semibold leading-5 text-gray-900 relative top-5">
-            Verplichtingen
-          </DialogTitle>
-          <p style="white-space: pre-line" class="text-sm text-gray-500 relative top-5">
-            <span v-html="obligation"></span>
-            <slot />
-          </p>
+    <!--Conclusion/Resultaat section-->
+    <DialogTitle as="h3" class="utrecht-heading-2">
+      Resultaat
+    </DialogTitle>
+    <p class="rvo-alert rvo-alert--info rvo-alert--padding-md">
+      <span v-html="conclusion" class="rvo-text--italic rvo-text--xl --rvo-font-sans-serif-font-family"></span>
+      <slot />
+    </p>
 
-          <!--Sources section-->
-          <!--Make an vue component from this?-->
-          <DialogTitle v-if='sources' as="h4" class="text-sm font-semibold leading-5 text-gray-900 relative top-5">
-            Bronnen
-          </DialogTitle>
-          <ul>
-            <li v-for='(source, index) in sources' :key="index" class="relative top-5 text-sm">
-              <!-- When source.url exists -->
-              <a v-if="source.url" :href="source.url" target="_blank" class="text-blue-700 underline">
-                {{ source.source }}
-                <slot />
-              </a>
-              <!-- When source.url does not exist -->
-              <span v-else class="text-gray-700">
-                {{ source.source }}
-                <slot />
-              </span>
-            </li>
-          </ul>
+    <!--Obligation/Verplichtingen section-->
+    <p style="white-space: pre-line" class="rvo-text--bold rvo-text--md --rvo-font-sans-serif-font-family">
+      <span v-html="obligation"></span>
+      <slot />
+    </p>
 
-          <!--Labels section-->
-          <DialogTitle as="h4" class="text-sm font-semibold leading-5 text-gray-900 relative top-5">
-            Labels
-          </DialogTitle>
-          <p class="text-sm text-gray-500 relative top-5">
-            {{ labels }}
-            <slot />
-          </p>
+    <!--Contact section-->
+    <p class="rvo-text--md --rvo-font-sans-serif-font-family">
+      Mocht u vragen of opmerkingen hebben naar aanleiding van deze beslisboom, mail dan gerust naar
+      <a href="mailto:ai-verordening@minbzk.nl" target="_blank"
+         class="text-blue-700 underline">ai-verordening@minbzk.nl</a>.
+      <slot />
+    </p>
 
-          <!--Contact section-->
-          <DialogTitle as="h4" class="text-sm font-semibold leading-5 text-gray-900 relative top-5">
-            Contact
-          </DialogTitle>
-          <p class="text-sm text-gray-500 relative top-5">
-            Mocht u vragen of opmerkingen hebben naar aanleiding van deze beslisboom, mail dan gerust naar
-            <a href="mailto:ai-verordening@minbzk.nl" target="_blank" class="text-blue-700 underline">ai-verordening@minbzk.nl</a>.
-            <slot />
-          </p>
+    <!--Sources section-->
+    <Sources :sources="sources" />
 
-        </div>
-      </div>
-    </div>
-  </DialogPanel>
+    <!--          &lt;!&ndash;Labels section TODO remove this later&ndash;&gt;-->
+    <!--          <DialogTitle as="h4" class="text-sm font-semibold leading-5 text-gray-900 relative top-5">-->
+    <!--            Labels-->
+    <!--          </DialogTitle>-->
+    <!--          <p class="text-sm text-gray-500 relative top-5">-->
+    <!--            {{ labels }}-->
+    <!--            <slot />-->
+    <!--          </p>-->
+
+  </div>
 </template>
