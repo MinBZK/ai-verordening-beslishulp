@@ -11,22 +11,35 @@ export const useQuestionStore = defineStore('question', () => {
     "Rol": ["Nader te bepalen"]
   }`
 
-  const initialAcceptedDisclaimer = JSON.parse(sessionStorage.getItem('acceptedDisclaimer') || '0')
-  const initialAnswers = JSON.parse(localStorage.getItem('answers') || '[]')
-  const initialLabels = JSON.parse(localStorage.getItem('labels') || '{}')
-  const initialLabelsByCategory = JSON.parse(localStorage.getItem('labelsByCategory') || initialLabelsByCategoryNTB)
-  const initialQuestionId = JSON.parse(localStorage.getItem('currentquestion') || '0')
+  const initialAcceptedDisclaimer = sessionStorage.getItem('acceptedDisclaimer') ?? '0'
+  const initialAnswers = JSON.parse(localStorage.getItem('answers') ?? '[]')
+  const initialLabels = JSON.parse(localStorage.getItem('labels') ?? '{}')
+  const initialLabelsByCategory = JSON.parse(localStorage.getItem('labelsbycategory') ?? initialLabelsByCategoryNTB)
+  const initialQuestionId  = localStorage.getItem('currentquestion') ?? '0'
+  const initialConclusionId = localStorage.getItem('currentconclusion') ?? ''
 
   const AcceptedDisclaimer = ref(String(initialAcceptedDisclaimer))
-  const QuestionId = ref(String(initialQuestionId))
+  const QuestionId = ref<any>(initialQuestionId)
+  const ConclusionId = ref(String(initialConclusionId))
   const answers = ref(initialAnswers)
   const labels = ref(initialLabels)
-  const labelsByCategory = ref(initialLabelsByCategory)
+  const LabelsByCategory = ref(initialLabelsByCategory)
 
-  function setQuestionId(id: string) {
+  function setQuestionId(id: string | null) {
     QuestionId.value = id
-    localStorage.setItem('currentquestion', JSON.stringify(QuestionId.value))
+    localStorage.setItem('currentquestion', QuestionId.value)
   }
+
+  function setConclusionId(id: string) {
+    ConclusionId.value = id
+    localStorage.setItem('currentconclusion', ConclusionId.value)
+  }
+
+  function getLabelsByCategory() {
+    // TODO: Research whether this variable can be access directly through refs
+    return LabelsByCategory.value
+  }
+
 
   function getJsonLabels() {
     const label_dict = JSON.parse(localStorage.getItem('labels') ?? '{}')
@@ -43,17 +56,11 @@ export const useQuestionStore = defineStore('question', () => {
   }
 
   function addLabelByCategory(label: string, category: string) {
-    if (JSON.stringify(labelsByCategory.value[category]) === JSON.stringify(["Nader te bepalen"])) {
-      labelsByCategory.value[category] = []
+    if (JSON.stringify(LabelsByCategory.value[category]) === JSON.stringify(["Nader te bepalen"])) {
+      LabelsByCategory.value[category] = []
     }
-    labelsByCategory.value[category].push(label)
-    localStorage.setItem('labelsByCategory', JSON.stringify(labelsByCategory.value))
-  }
-
-  // labels can be removed later and be substituted by labelsByCategory
-  function getLabelsByCategory() {
-    const label_dict = JSON.parse(localStorage.getItem('labelsByCategory') ?? '{}')
-    return label_dict
+    LabelsByCategory.value[category].push(label)
+    localStorage.setItem('labelsbycategory', JSON.stringify(LabelsByCategory.value))
   }
 
   function addAnswer(id: string) {
@@ -61,23 +68,34 @@ export const useQuestionStore = defineStore('question', () => {
     localStorage.setItem('answers', JSON.stringify(answers.value))
   }
 
-  function revertAnswer() {
+  function revertAnswer(currentCategory: string) {
     QuestionId.value = answers.value[answers.value.length - 1]
     answers.value.pop()
-    delete labels.value[QuestionId.value]
+    if(labels.value[QuestionId.value]) {
+      const label: string = labels.value[QuestionId.value]
+      LabelsByCategory.value[currentCategory].pop(label)
+      if (LabelsByCategory.value[currentCategory].length === 0){
+        LabelsByCategory.value[currentCategory].push("Nader te bepalen")
+      }
+      delete labels.value[QuestionId.value]
+    }
     localStorage.setItem('answers', JSON.stringify(answers.value))
+    localStorage.setItem('currentquestion', QuestionId.value)
     localStorage.setItem('labels', JSON.stringify(labels.value))
+    localStorage.setItem('labelsbycategory', JSON.stringify(LabelsByCategory.value))
   }
 
   function reset() {
     answers.value = []
     QuestionId.value = '0'
     labels.value = {}
-    labelsByCategory.value = JSON.parse(initialLabelsByCategoryNTB)
+    LabelsByCategory.value = JSON.parse(initialLabelsByCategoryNTB)
+    ConclusionId.value = ''
     localStorage.setItem('answers', JSON.stringify(answers.value))
-    localStorage.setItem('currentquestion', JSON.stringify(QuestionId.value))
+    localStorage.setItem('currentquestion', QuestionId.value)
+    localStorage.setItem('currentconclusion', ConclusionId.value)
     localStorage.setItem('labels', JSON.stringify(labels.value))
-    localStorage.setItem('labelsByCategory', JSON.stringify(labelsByCategory.value))
+    localStorage.setItem('labelsbycategory', JSON.stringify(LabelsByCategory.value))
   }
 
   function acceptDisclaimer() {
@@ -86,7 +104,7 @@ export const useQuestionStore = defineStore('question', () => {
   }
 
   return {
-    AcceptedDisclaimer, QuestionId, answers, labelsByCategory, getLabelsByCategory, setQuestionId, addAnswer, getJsonLabels, addLabel,
+    AcceptedDisclaimer, initialLabelsByCategoryNTB, QuestionId, ConclusionId, answers, LabelsByCategory, getLabelsByCategory, setQuestionId, setConclusionId, addAnswer, getJsonLabels, addLabel,
     addLabelByCategory, revertAnswer, reset, acceptDisclaimer
   }
 })

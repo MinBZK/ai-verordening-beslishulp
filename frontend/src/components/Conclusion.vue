@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import Sources from '@/components/Sources.vue'
+import SubResult from '@/components/SubResult.vue'
 
 interface Props {
   conclusion: string | null
   obligation: string | null
-  labels: string[] | null
   sources: { source: string; url: string | undefined; }[] | undefined
+  topic: string | null
+  'labels': { category: string; assigned_labels: string | undefined; }[] | undefined
 }
 
 defineProps<Props>()
@@ -15,13 +17,19 @@ defineProps<Props>()
   <div class="flex flex-col py-5 gap-y-5">
 
     <!--Conclusion/Resultaat section-->
-    <DialogTitle as="h3" class="utrecht-heading-2">
+    <div as="h3" class="utrecht-heading-2">
       Resultaat
-    </DialogTitle>
+    </div>
     <p class="rvo-alert rvo-alert--info rvo-alert--padding-md">
       <span v-html="conclusion" class="rvo-text--italic rvo-text--xl --rvo-font-sans-serif-font-family"></span>
       <slot />
     </p>
+
+    <!--   Labels section  -->
+    <SubResult
+      :topic="topic"
+      :labels="labels"
+      :showButtons="null"/>
 
     <!--Obligation/Verplichtingen section-->
     <p style="white-space: pre-line" class="rvo-text--bold rvo-text--md --rvo-font-sans-serif-font-family">
@@ -39,15 +47,6 @@ defineProps<Props>()
 
     <!--Sources section-->
     <Sources :sources="sources" />
-
-    <!--          &lt;!&ndash;Labels section TODO remove this later&ndash;&gt;-->
-    <!--          <DialogTitle as="h4" class="text-sm font-semibold leading-5 text-gray-900 relative top-5">-->
-    <!--            Labels-->
-    <!--          </DialogTitle>-->
-    <!--          <p class="text-sm text-gray-500 relative top-5">-->
-    <!--            {{ labels }}-->
-    <!--            <slot />-->
-    <!--          </p>-->
 
   </div>
 </template>

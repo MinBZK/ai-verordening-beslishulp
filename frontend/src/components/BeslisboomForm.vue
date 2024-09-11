@@ -22,18 +22,20 @@ import ProgressTracker from '@/components/ProgressTracker.vue'
 import SubResult from '@/components/SubResult.vue'
 
 const questionStore = useQuestionStore()
-const { AcceptedDisclaimer, QuestionId, labelsByCategory } = storeToRefs(questionStore)
+const { AcceptedDisclaimer, QuestionId, ConclusionId } = storeToRefs(questionStore)
 
 const categoryStore = useCategoryStore()
-const { categoryState } = storeToRefs(categoryStore)
+const { categoryState, previousCategory } = storeToRefs(categoryStore)
 
 const data_questions = ref<Questions>([])
 const data_conclusions = ref<Conclusions>([])
 const data_categories = ref<Categories>([])
 const questionId = QuestionId
-const conclusionId = ref<string | null>(null)
+const conclusionId = ConclusionId
 const isLoading = ref(true)
 const error = ref<string | null>(null)
+
+let showSubResultScreen = 0
 
 onMounted(async () => {
   // Read in the Data
@@ -88,30 +90,32 @@ onMounted(async () => {
   }
 })
 
-const currentCategory = computed(() => {
-  // TODO: this is calculated with each refresh, this should be only also when handle next step
-  var versions = questionId.value.split('.')
+function handleVersions(question_or_conclusion_id: string){
   let category: Category | undefined
-  if (questionId) {
-    // TODO: check with past category, if changed call CategoryStore
-    if (questionId.value === '0') {
-      category = data_categories.value.find((q) => q.questionId === '0')
-    } else {
-      if (versions.length >= 2) {
-        // First try to find topic on minor version
-        category = data_categories.value.find((q) => q.questionId === versions[0] + '.' + versions[1])
-        if (category === undefined) {
-          // When not exist, use the major version (patch versions currently does not exist)
-          category = data_categories.value.find((q) => q.questionId === versions[0])
-        }
-      }
+  let versions = question_or_conclusion_id.split(".")
+  category = data_categories.value.find((q) => q.questionId === versions[0])
+  if (versions.length >= 2) {
+    // Only overwrite if we find something here
+    let category_overwrite = data_categories.value.find((q) => q.questionId === versions[0] + '.' + versions[1])
+    if(category_overwrite != undefined){
+      category = category_overwrite
     }
-  } else {
-    category = data_categories.value.find((q) => q.questionId === '15')
   }
-  // TODO: met wanneer we naar de conclusionid gaan ;s
-  categoryStore.updateCurrentCategory(category.topic)
+  if (versions.length >= 3 ){
+    let category_overwrite = data_categories.value.find((q) => q.questionId === versions[0] + '.' + versions[1] + "." + versions[2])
+    if(category_overwrite != undefined){
+      category = category_overwrite
+    }
+  }
   return category
+}
+
+const currentCategory = computed(() => {
+  if (questionId.value){
+    return handleVersions(questionId.value)
+  } else {
+    return handleVersions(conclusionId.value)
+  }
 })
 
 const currentQuestion = computed(() => {
@@ -122,15 +126,23 @@ const findConclusion = computed(() => {
   return data_conclusions.value.find((q) => q.conclusionId === conclusionId.value)
 })
 
+function handleSubResult(){
+
+}
+
 function handleNextStep(object: Answer | Redirect) {
-  if (object.nextQuestionId) {
-    questionId.value = String(object.nextQuestionId)
-    questionStore.setQuestionId(questionId.value)
-  }
+  questionStore.setQuestionId(object.nextQuestionId ?? null)
   if (object.nextConclusionId) {
-    conclusionId.value = String(object.nextConclusionId)
-    questionId.value = String(null)
+    questionStore.setConclusionId(String(object.nextConclusionId))
   }
+  categoryStore.updateCurrentCategory(currentCategory.value.topic)
+  // if(previousCategory.value != currentCategory.value.topic){
+  //   // Show subresult screen
+  //   showSubResultScreen = 1
+  //   categoryStore.setPreviousCategory(currentCategory.value.topic)
+  // } else {
+  //   //
+  // }
 }
 
 async function givenAnswer(answer: Answer) {
@@ -158,13 +170,11 @@ async function givenAnswer(answer: Answer) {
 function reset() {
   questionStore.reset()
   categoryStore.reset()
-  conclusionId.value = null
 }
 
 function back() {
-  questionStore.revertAnswer()
+  questionStore.revertAnswer(previousCategory.value)
   categoryStore.revertCurrentCategory()
-  conclusionId.value = null
 }
 
 function acceptDisclaimer() {
@@ -193,17 +203,20 @@ function acceptDisclaimer() {
         <DefaultLoader :loading="isLoading" />
         <DefaultError :error="error" />
         <Conclusion
-          v-if="findConclusion"
+          v-if="findConclusion && questionStore.getLabelsByCategory()"
           :conclusion="findConclusion.conclusion"
           :obligation="findConclusion.obligation"
-          :labels="questionStore.getJsonLabels()"
           :sources="findConclusion.sources"
+          :topic="currentCategory.topic"
+          :labels="questionStore.getLabelsByCategory()"
+          :showButtons="null"
         />
-        <SubResult v-if="currentCategory && labelsByCategory"
-                   :question_id="questionId"
+<!--        show if showsubresult-->
+        <SubResult v-if="currentCategory && questionStore.getLabelsByCategory()"
                    :topic="currentCategory.topic"
                    :labels="questionStore.getLabelsByCategory()"
-                   @back="back" />
+                   @back="back"
+                  :showButtons="true"/>
         <div v-if="currentQuestion && currentCategory">
           <Question
             :question="currentQuestion.question"
