@@ -25,7 +25,7 @@ const questionStore = useQuestionStore()
 const { AcceptedDisclaimer, QuestionId, ConclusionId } = storeToRefs(questionStore)
 
 const categoryStore = useCategoryStore()
-const { categoryState, previousCategory } = storeToRefs(categoryStore)
+const { categoryState, previousCategory, showSubresult } = storeToRefs(categoryStore)
 
 const data_questions = ref<Questions>([])
 const data_conclusions = ref<Conclusions>([])
@@ -177,6 +177,10 @@ function back() {
   categoryStore.revertCurrentCategory()
 }
 
+function forwardSubresult(){
+  categoryStore.resetSubresult()
+}
+
 function acceptDisclaimer() {
   questionStore.acceptDisclaimer()
 }
@@ -212,12 +216,13 @@ function acceptDisclaimer() {
           :showButtons="null"
         />
 <!--        show if showsubresult-->
-        <SubResult v-if="currentCategory && questionStore.getLabelsByCategory()"
+        <SubResult v-if="showSubresult === '1' && currentCategory && questionStore.getLabelsByCategory()"
                    :topic="currentCategory.topic"
                    :labels="questionStore.getLabelsByCategory()"
                    @back="back"
+                   @forward="forwardSubresult"
                   :showButtons="true"/>
-        <div v-if="currentQuestion && currentCategory">
+        <div v-if="showSubresult === '0' && currentQuestion && currentCategory">
           <Question
             :question="currentQuestion.question"
             :id="currentQuestion.questionId"

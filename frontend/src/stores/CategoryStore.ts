@@ -3,6 +3,7 @@ import { defineStore } from 'pinia'
 
 export const useCategoryStore = defineStore('category', () => {
   const startCategory = 'Soort toepassing'
+  const initialShowSubresult = localStorage.getItem("showSubresult") ?? '0'
   const initialPreviousCategory = localStorage.getItem('previousCategory') ?? startCategory
   const initialCurrentCategory = localStorage.getItem('currentCategory') ?? startCategory
   const initialCategoryTrace = JSON.parse(localStorage.getItem('categoryTrace') ?? '[]')
@@ -28,12 +29,8 @@ export const useCategoryStore = defineStore('category', () => {
   const currentCategory = ref(String(initialCurrentCategory))
   const categoryTrace = ref(initialCategoryTrace)
   const categoryState = ref(initialCategoryState)
+  const showSubresult = ref(initialShowSubresult)
 
-
-  function setPreviousCategory(category: string){
-      previousCategory.value = category
-      localStorage.setItem('previousCategory', previousCategory.value)
-  }
 
   function updateCurrentCategory(category: string) {
     previousCategory.value = currentCategory.value
@@ -45,16 +42,22 @@ export const useCategoryStore = defineStore('category', () => {
     updateCategoryState()
   }
 
+  function resetSubresult(){
+    showSubresult.value = '0'
+    localStorage.removeItem('showSubresult')
+  }
+
   function updateCategoryState() {
     /**
      * Update the CategoryState by looking at the currentCategory only
      */
-
     const currentCategoryKey = categoryMapper[currentCategory.value as keyof typeof categoryMapper]
     const previousCategoryKey = categoryMapper[previousCategory.value as keyof typeof categoryMapper]
     if (previousCategoryKey != currentCategoryKey) {
       categoryState.value[previousCategoryKey] = "completed"
       categoryState.value[currentCategoryKey] = "doing"
+      showSubresult.value = '1'
+      localStorage.setItem('showSubresult', showSubresult.value)
       localStorage.setItem('categoryState', JSON.stringify(categoryState.value))
     }
   }
@@ -98,11 +101,12 @@ export const useCategoryStore = defineStore('category', () => {
     previousCategory.value = startCategory
     categoryState.value = JSON.parse(initialCategoryStateString)
     categoryTrace.value = []
+    resetSubresult()
     localStorage.removeItem('currentCategory')
     localStorage.removeItem('previousCategory')
     localStorage.removeItem('categoryState')
     localStorage.removeItem('categoryTrace')
   }
 
-  return { categoryState, previousCategory, setPreviousCategory, revertCurrentCategory, updateCurrentCategory, reset }
+  return { categoryState, previousCategory, showSubresult, revertCurrentCategory, updateCurrentCategory, reset, resetSubresult }
 })

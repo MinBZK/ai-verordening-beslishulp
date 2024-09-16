@@ -8,7 +8,7 @@ interface Props {
 }
 
 defineProps<Props>()
-const emit = defineEmits(['back', 'next-question'])
+const emit = defineEmits(['back', 'forward'])
 
 function get_background_color(label: string | undefined) {
   if (label === 'Nader te bepalen') {
@@ -62,7 +62,7 @@ function get_background_color(label: string | undefined) {
       Vorige
     </button>
     <button
-      @click="$emit('next-question')"
+      @click="$emit('forward')"
       type="button"
       class="flex float-right utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline px-50"
     >
