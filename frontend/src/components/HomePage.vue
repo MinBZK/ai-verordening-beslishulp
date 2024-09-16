@@ -4,47 +4,11 @@ import BetaversionLabel from '@/components/betaversion-label.vue'
 
 const emit = defineEmits(['acceptDisclaimer'])
 
-const StartDecisionTree = '1'
-
 </script>
 
 <template>
-<!--  TODO: Here is the logic for the pre-HomePage-->
-  <div v-if="StartDecisionTree === '0'">
-    <div class="rvo-form h-screen" style="background-color: var(--rvo-color-hemelblauw-150)">
-      <div class="rvo-header__logo-wrapper">
-        <div class="rvo-logo rvo-header__logo-img">
-          <div class="rvo-logo__emblem">
-            <img src="@nl-rvo/assets/images/emblem.svg">
-          </div>
-        </div>
-      </div>
-      <div class="rvo-layout-column rvo-layout-gap--xl">
-        <div class="flex-col rvo-form-intro inline-flex py-28">
-          <h2 class="flex justify-center utrecht-heading-1" style="color: var(--rvo-color-logoblauw)">AI ACT</h2>
-          <h2 class="flex justify-center utrecht-heading-1" style="color: var(--rvo-color-logoblauw)">Beslisboom</h2>
-          <div class="flex justify-center">
-            <a class="text-center utrecht-paragraph width rvo-max-width-layout--md py-10"
-               style="color: var(--rvo-color-logoblauw-750)">Deze
-              beslisboom helpt uw
-              organisatie bepalen om welk type AI-systeem het gaat, of het open source is, en of de AI-verordening van
-              toepassing is. Daarnaast identificeert het de risicocategorie en verplichtingen, en of u aanbieder of
-              gebruiksverantwoordelijke bent.</a>
-          </div>
-          <div class="flex justify-center">
-            <button @click="startDecisionTree" type="button"
-                    class="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline">
-              Start beslisboom
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div v-else>
     <Header />
     <main>
-      <!--    TODO: Hier komt nog een progress tracker-->
       <div class="rvo-progress-tracker">
       </div>
       <div class="rvo-form">
@@ -96,5 +60,4 @@ const StartDecisionTree = '1'
       </div>
 
     </main>
-  </div>
 </template>

@@ -79,6 +79,7 @@ export const useCategoryStore = defineStore('category', () => {
     /**
      * Set the currentCategory back to incomplete when the previousCategory is different
      */
+    resetSubresult()
     revertCategoryState()
     if(categoryTrace.value.length - 2 > 0){
       currentCategory.value = categoryTrace.value[categoryTrace.value.length - 2]

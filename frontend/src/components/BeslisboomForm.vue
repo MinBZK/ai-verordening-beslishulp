@@ -20,6 +20,7 @@ import HomePage from '@/components/HomePage.vue'
 import Header from '@/components/Header.vue'
 import ProgressTracker from '@/components/ProgressTracker.vue'
 import SubResult from '@/components/SubResult.vue'
+import { c } from 'vite/dist/node/types.d-aGj9QkWt'
 
 const questionStore = useQuestionStore()
 const { AcceptedDisclaimer, QuestionId, ConclusionId } = storeToRefs(questionStore)
@@ -126,23 +127,12 @@ const findConclusion = computed(() => {
   return data_conclusions.value.find((q) => q.conclusionId === conclusionId.value)
 })
 
-function handleSubResult(){
-
-}
-
 function handleNextStep(object: Answer | Redirect) {
   questionStore.setQuestionId(object.nextQuestionId ?? null)
   if (object.nextConclusionId) {
     questionStore.setConclusionId(String(object.nextConclusionId))
   }
   categoryStore.updateCurrentCategory(currentCategory.value.topic)
-  // if(previousCategory.value != currentCategory.value.topic){
-  //   // Show subresult screen
-  //   showSubResultScreen = 1
-  //   categoryStore.setPreviousCategory(currentCategory.value.topic)
-  // } else {
-  //   //
-  // }
 }
 
 async function givenAnswer(answer: Answer) {
@@ -216,7 +206,7 @@ function acceptDisclaimer() {
           :showButtons="null"
         />
 <!--        show if showsubresult-->
-        <SubResult v-if="showSubresult === '1' && currentCategory && questionStore.getLabelsByCategory()"
+        <SubResult v-if="showSubresult === '1' && !conclusionId && currentCategory && questionStore.getLabelsByCategory()"
                    :topic="currentCategory.topic"
                    :labels="questionStore.getLabelsByCategory()"
                    @back="back"
