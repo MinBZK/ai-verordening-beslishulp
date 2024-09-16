@@ -57,25 +57,40 @@ export const useCategoryStore = defineStore('category', () => {
       categoryState.value[currentCategoryKey] = "doing"
       localStorage.setItem('categoryState', JSON.stringify(categoryState.value))
     }
+  }
 
+  function revertCategoryState() {
+    /**
+     * Update the CategoryState by looking at the currentCategory only
+     */
+    if (previousCategory.value != currentCategory.value) {
+      const currentCategoryKey = categoryMapper[currentCategory.value as keyof typeof categoryMapper]
+      const previousCategoryKey = categoryMapper[previousCategory.value as keyof typeof categoryMapper]
+      categoryState.value[currentCategoryKey] = "incomplete"
+      categoryState.value[previousCategoryKey] = "doing"
+      localStorage.setItem('categoryState', JSON.stringify(categoryState.value))
+    }
   }
 
   function revertCurrentCategory() {
     /**
      * Set the currentCategory back to incomplete when the previousCategory is different
      */
-    if (previousCategory.value != currentCategory.value) {
-      const currentCategoryKey = categoryMapper[currentCategory.value as keyof typeof categoryMapper]
-      categoryState.value[currentCategoryKey] = "incomplete"
-      localStorage.setItem('categoryState', JSON.stringify(categoryState.value))
+    revertCategoryState()
+    if(categoryTrace.value.length - 2 > 0){
+      currentCategory.value = categoryTrace.value[categoryTrace.value.length - 2]
+    }else{
+      currentCategory.value = startCategory
     }
-    currentCategory.value = categoryTrace.value[categoryTrace.value.length - 1]
     categoryTrace.value.pop()
-    previousCategory.value = categoryTrace.value[categoryTrace.value.length - 1]
+    if(categoryTrace.value.length - 2 > 0) {
+      previousCategory.value = categoryTrace.value[categoryTrace.value.length - 2]
+    } else {
+      previousCategory.value = startCategory
+    }
     localStorage.setItem('categoryTrace', JSON.stringify(categoryTrace.value))
     localStorage.setItem('previousCategory', previousCategory.value)
     localStorage.setItem('currentCategory', currentCategory.value)
-    updateCategoryState()
   }
 
   function reset() {

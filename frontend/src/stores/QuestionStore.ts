@@ -68,14 +68,14 @@ export const useQuestionStore = defineStore('question', () => {
     localStorage.setItem('answers', JSON.stringify(answers.value))
   }
 
-  function revertAnswer(currentCategory: string) {
+  function revertAnswer(previousCategory: string) {
     QuestionId.value = answers.value[answers.value.length - 1]
     answers.value.pop()
     if(labels.value[QuestionId.value]) {
       const label: string = labels.value[QuestionId.value]
-      LabelsByCategory.value[currentCategory].pop(label)
-      if (LabelsByCategory.value[currentCategory].length === 0){
-        LabelsByCategory.value[currentCategory].push("Nader te bepalen")
+      LabelsByCategory.value[previousCategory].pop(label)
+      if (LabelsByCategory.value[previousCategory].length === 0){
+        LabelsByCategory.value[previousCategory].push("Nader te bepalen")
       }
       delete labels.value[QuestionId.value]
     }
