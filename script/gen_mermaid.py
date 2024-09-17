@@ -118,10 +118,70 @@ class CustomStyle(Style):
         return hash(self.name)
 
 
+@dataclass
+class Definition:
+    term: str
+    definition: str
+    url: str
+
+
+@dataclass
+class Source:
+    source: str
+    url: str
+
+
+@dataclass
+class Redirect:
+    if_condition: str
+    nextQuestionId: str | None = None
+    nextConclusionId: str | None = None
+
+    def __post_init__(self):
+        self.if_condition = escape_for_mermaid(self.if_condition)
+
+
+@dataclass
+class Answer:
+    answer: str
+    subresult: str | None = None
+    labels: list[str] = None
+    nextQuestionId: str | None = None
+    nextConclusionId: str | None = None
+    redirects: list[Redirect] | None = None
+
+
+@dataclass
+class Question:
+    questionId: str
+    question: str
+    simplifiedQuestion: str
+    category: str
+    answers: list[Answer]
+    definitions: list[Definition] | None = None
+    sources: list[Source] | None = None
+
+    def __post_init__(self):
+        self.question = escape_for_mermaid(self.question)
+
+
+@dataclass
+class Source:
+    source: str
+    url: str
+
+
+@dataclass
+class Conclusion:
+    conclusionId: str
+    conclusion: str
+    obligation: str
+    sources: list[Source] | None = None
+
+
 # function to only remove all special characters
 def escape_for_mermaid(text):
     return text.replace("||", "of").replace("&&", "en")
-
 
 def find_node_by_id(node_id):
     for node in nodes:
@@ -232,68 +292,6 @@ def create_html(file_name, flowchart_script):
     """.replace("{script}", flowchart_script)
         )
 
-
-@dataclass
-class Definition:
-    term: str
-    definition: str
-    url: str
-
-
-@dataclass
-class Source:
-    source: str
-    url: str
-
-
-@dataclass
-class Redirect:
-    if_condition: str
-    nextQuestionId: str | None = None
-    nextConclusionId: str | None = None
-
-    def __post_init__(self):
-        self.if_condition = escape_for_mermaid(self.if_condition)
-
-
-@dataclass
-class Answer:
-    answer: str
-    subresult: str | None = None
-    labels: list[str] = None
-    nextQuestionId: str | None = None
-    nextConclusionId: str | None = None
-    redirects: list[Redirect] | None = None
-
-
-@dataclass
-class Question:
-    questionId: str
-    question: str
-    simplifiedQuestion: str
-    category: str
-    answers: list[Answer]
-    definitions: list[Definition] | None = None
-    sources: list[Source] | None = None
-
-    def __post_init__(self):
-        self.question = escape_for_mermaid(self.question)
-
-
-@dataclass
-class Source:
-    source: str
-    url: str
-
-
-@dataclass
-class Conclusion:
-    conclusionId: str
-    conclusion: str
-    obligation: str
-    sources: list[Source] | None = None
-
-
 with open("decision-tree.yaml") as file:
     decision_tree = yaml.safe_load(file)
 
@@ -302,164 +300,6 @@ name: str = decision_tree.get("name")
 
 questions: list[Question] = [Question(**q) for q in decision_tree.get("questions", [])]
 conclusions: list[Conclusion] = [Conclusion(**q) for q in decision_tree.get("conclusions", [])]
-
-
-nodes: list[CustomNode] = []
-links: list[CustomLink] = []
-
-# create conclusion nodes
-for conclusion in conclusions:
-    nodes.append(
-        CustomNode(
-            id_="c-" + conclusion.conclusionId,
-            content=conclusion.conclusion,
-            shape="hexagon",
-            styles=[
-                CustomStyle(
-                    name="conclusionStyle",
-                    fill="#FFFFFF",
-                    stroke="#39870c",
-                )
-            ],
-            callback_tooltip=conclusion.obligation,
-        )
-    )
-
-# create question nodes
-for question in questions:
-    sub_nodes = []
-
-    nodes.append(
-        CustomNode(
-            id_="q-" + question.questionId,
-            content=question.questionId + ": " + question.simplifiedQuestion,
-            shape="circle",
-            callback_tooltip=question.question,
-            category=question.category,
-        )
-    )
-
-# create links between nodes (question and conclusion)
-for question in questions:
-    answers: list[Answer] = [Answer(**a) for a in question.answers]
-
-    origin = find_node_by_id("q-" + question.questionId)
-
-    for answer in answers:
-        if answer.nextQuestionId:
-            end = find_node_by_id("q-" + answer.nextQuestionId)
-            labels_ = answer.labels if answer.labels is not None else []
-            links.append(
-                CustomLink(
-                    origin=origin,
-                    end=end,
-                    message=(
-                        answer.answer
-                        + ".\n\n\n"
-                        + (
-                            "\nOpgehaalde labels: " + ", ".join(str(label) for label in answer.labels)
-                            if answer.labels is not None
-                            else ""
-                        )
-                    ),
-                    labels=answer.labels,
-                )
-            )
-        elif answer.nextConclusionId:
-            end = find_node_by_id("c-" + answer.nextConclusionId)
-            labels_ = answer.labels if answer.labels is not None else []
-            links.append(
-                CustomLink(
-                    origin=origin,
-                    end=end,
-                    message=(
-                        answer.answer
-                        + ".\n\n\n"
-                        + (
-                            "Opgehaalde labels: " + ", ".join(str(label) for label in answer.labels)
-                            if answer.labels is not None
-                            else ""
-                        )
-                    ),
-                    labels=answer.labels,
-                )
-            )
-        elif answer.redirects:
-            redirects: list[Redirect] = [
-                Redirect(
-                    nextQuestionId=r.get("nextQuestionId"),
-                    nextConclusionId=r.get("nextConclusionId"),
-                    if_condition=r["if"],
-                )
-                for r in answer.redirects
-            ]
-
-            for redirect in redirects:
-                if redirect.nextQuestionId:
-                    match_list = [
-                        m[0] or m[1]
-                        for m in re.findall(
-                            r'"([^"]+)"\s+in\s+labels|(\bof\b|\ben\b)',
-                            redirect.if_condition,
-                        )
-                    ]
-                    end = find_node_by_id("q-" + redirect.nextQuestionId)
-                    links.append(
-                        CustomLink(
-                            origin=origin,
-                            end=end,
-                            message=(
-                                answer.answer
-                                + ",\n"
-                                + "Als: "
-                                + " ".join(str(m) for m in match_list)
-                                + ".\n\n\n"
-                                + (
-                                    "\nOpgehaalde labels: " + ", ".join(str(label) for label in answer.labels)
-                                    if answer.labels is not None
-                                    else ""
-                                )
-                            ),
-                            labels=answer.labels,
-                        )
-                    )
-                elif redirect.nextConclusionId:
-                    match_list = [
-                        m[0] or m[1]
-                        for m in re.findall(
-                            r'"([^"]+)"\s+in\s+labels|(\bof\b|\ben\b)',
-                            redirect.if_condition,
-                        )
-                    ]
-                    end = find_node_by_id("c-" + redirect.nextConclusionId)
-                    links.append(
-                        CustomLink(
-                            origin=origin,
-                            end=end,
-                            message=(
-                                answer.answer
-                                + ",\n"
-                                + "Als: "
-                                + " ".join(str(m) for m in match_list)
-                                + ".\n\n\n"
-                                + (
-                                    "\nOpgehaalde labels: " + ", ".join(str(label) for label in answer.labels)
-                                    if answer.labels is not None
-                                    else ""
-                                )
-                            ),
-                            labels=answer.labels,
-                        )
-                    )
-                else:
-                    print(
-                        f"""Error: No nextQuestionId or nextConclusionId found
-                        in redirects for question {question.questionId}"""
-                    )
-
-        else:
-            print(f"Error: No nextQuestionId or nextConclusionId found in answer for question {question.questionId}")
-
 
 config = Config(
     theme=Themes.BASE,
@@ -470,82 +310,237 @@ config = Config(
     line_color="#154273",
 )
 
+secondary_style = CustomStyle(
+                    name="secondaryStyle",
+                    fill="#FFFFFF",
+                    stroke="#39870c"
+                )
+
 orientation = Direction.TOP_TO_BOTTOM
+nodes: list[CustomNode] = []
+links: list[CustomLink] = []
 
-# create complete graph and write into html
-subgraphs = defaultdict(list)
-for link in links:
-    if f"{link.origin.id_}" not in subgraphs[link.origin.category]:
-        subgraphs[link.origin.category].append(f"{link.origin.id_}")
-    if f"{link.end.id_}" not in subgraphs[link.origin.category] and link.end.id_.startswith("c-"):
-        subgraphs[link.origin.category].append(f"{link.end.id_}")
 
-subgraphs_complete = "\n".join(
-    [f"subgraph {category}\n" + "\n".join(questions) + "\nend" for category, questions in subgraphs.items()]
-    + ["classDef commonStyle fill:#FFFFFF,stroke:#39870c,stroke-width:2px"]
-    + [f"class {category} commonStyle" for category in subgraphs]
-)
-flowchart_complete = FlowChart(title=name, nodes=nodes, links=links, orientation=orientation, config=config)
-create_html(
-    "./mermaid_graphs/decision-tree-complete.html",
-    flowchart_complete.script + subgraphs_complete,
-)
+# Create nodes for conclusions and questions
 
-# Create subgraphs and write into htmls
-nodes_by_category = defaultdict(list)
-links_by_category = defaultdict(list)
+def create_nodes(conclusions, questions):
+    for conclusion in conclusions:
+        nodes.append(
+            CustomNode(
+                id_="c-" + conclusion.conclusionId,
+                content=conclusion.conclusion,
+                shape="hexagon",
+                styles= [secondary_style],
+                callback_tooltip=conclusion.obligation,
+            )
+        )
+    for question in questions:
+        nodes.append(
+            CustomNode(
+                id_="q-" + question.questionId,
+                content=question.questionId + ": " + question.simplifiedQuestion,
+                shape="circle",
+                callback_tooltip=question.question,
+                category=question.category,
+            )
+        )
+    return nodes
 
-for category, cat_questions in subgraphs.items():
-    links_by_category[category] = [link for link in links if link.origin.id_ in cat_questions]
-    nodes_by_category[category] = [node for node in nodes if node.id_ in cat_questions]
-    flowchart = FlowChart(
-        title=category,
-        nodes=nodes_by_category.get(category, []),
-        links=links_by_category.get(category, []),
-        orientation=orientation,
-        config=config,
-    )
+# Create links between nodes (question and conclusion
+def create_links(questions):
+    for question in questions:
 
-    subgraph_links = {link.end.id_ for link in links_by_category[category] if link.end.id_ not in cat_questions}
+        answers: list[Answer] = [Answer(**a) for a in question.answers]
+        origin = find_node_by_id("q-" + question.questionId)
 
-    htmls = "\n".join(
-        [
-            f'click {link} href "decision-tree-subgraphs-{end_category}.html" "{end_category}"'
-            for link in subgraph_links
-            if (end_category := get_category(subgraphs, link)) is not None
-        ]
-    )
-    replace_flowchart_script = flowchart.script + "\n" + htmls
-    for key, values in subgraphs.items():
-        for value in (v for v in values if v in subgraph_links):
-            replace_flowchart_script = replace_flowchart_script.replace(value, key)
+        for answer in answers:
+            link_message = (
+                answer.answer
+                + "\n"
+                + (
+                    "\nOpgehaalde labels: " + ", ".join(str(label) for label in answer.labels)
+                    if answer.labels is not None
+                    else ""
+                )
+            )
+            if answer.nextQuestionId:
+                end = find_node_by_id("q-" + answer.nextQuestionId)
+                links.append(
+                    CustomLink(
+                        origin=origin,
+                        end=end,
+                        message=link_message,
+                        labels=answer.labels,
+                    )
+                )
+            elif answer.nextConclusionId:
+                end = find_node_by_id("c-" + answer.nextConclusionId)
+                links.append(
+                    CustomLink(
+                        origin=origin,
+                        end=end,
+                        message=link_message,
+                        labels=answer.labels,
+                    )
+                )
+            elif answer.redirects:
+                redirects: list[Redirect] = [
+                    Redirect(
+                        nextQuestionId=r.get("nextQuestionId"),
+                        nextConclusionId=r.get("nextConclusionId"),
+                        if_condition=r["if"],
+                    )
+                    for r in answer.redirects
+                ]
 
+                for redirect in redirects:
+                    if redirect.nextQuestionId:
+
+                        match_list = [
+                            m[0] or m[1]
+                            for m in re.findall(
+                                r'"([^"]+)"\s+in\s+labels|(\bof\b|\ben\b)',
+                                redirect.if_condition,
+                            )
+                        ]
+
+                        redirect_message = (
+                                    answer.answer
+                                    + ",\n"
+                                    + "Als: "
+                                    + " ".join(str(m) for m in match_list)
+                                    + ".\n\n\n"
+                                    + (
+                                        "\nOpgehaalde labels: " + ", ".join(str(label) for label in answer.labels)
+                                        if answer.labels is not None
+                                        else ""
+                                    )
+                                )
+
+                        end = find_node_by_id("q-" + redirect.nextQuestionId)
+                        links.append(
+                            CustomLink(
+                                origin=origin,
+                                end=end,
+                                message=redirect_message,
+                                labels=answer.labels,
+                            )
+                        )
+                    elif redirect.nextConclusionId:
+                        end = find_node_by_id("c-" + redirect.nextConclusionId)
+                        links.append(
+                            CustomLink(
+                                origin=origin,
+                                end=end,
+                                message=redirect_message,
+                                labels=answer.labels,
+                            )
+                        )
+                    else:
+                        print(
+                            f"""Error: No nextQuestionId or nextConclusionId found
+                            in redirects for question {question.questionId}"""
+                        )
+
+            else:
+                print(f"Error: No nextQuestionId or nextConclusionId found in answer for question {question.questionId}")
+    return links
+
+# Create structure for subgraphs
+def create_subgraph_structure(links):
+    subgraphs = defaultdict(list)
+    for link in links:
+        if f"{link.origin.id_}" not in subgraphs[link.origin.category]:
+            subgraphs[link.origin.category].append(f"{link.origin.id_}")
+        if f"{link.end.id_}" not in subgraphs[link.origin.category] and link.end.id_.startswith("c-"):
+            subgraphs[link.origin.category].append(f"{link.end.id_}")
+    return subgraphs
+
+# Create complete graph html
+def create_complete_graph_html(subgraphs):
+    subgraphs_complete = "\n".join(
+        [f"subgraph {category}\n" + "\n".join(questions) + "\nend" for category, questions in subgraphs.items()]
+        + [str(secondary_style)]
+        + [f"class {category} secondaryStyle" for category in subgraphs])
+
+    flowchart_complete = FlowChart(title=name, nodes=nodes, links=links, orientation=orientation, config=config)
     create_html(
-        "./mermaid_graphs/decision-tree-subgraphs-" + category + ".html",
-        replace_flowchart_script,
+        "./mermaid_graphs/decision-tree-complete.html",
+        flowchart_complete.script + subgraphs_complete,
     )
+
+# Create subgraphs and write into html files
+def create_subgraph_html(subgraphs):
+    nodes_by_category = defaultdict(list)
+    links_by_category = defaultdict(list)
+
+    for category, cat_questions in subgraphs.items():
+        links_by_category[category] = [link for link in links if link.origin.id_ in cat_questions]
+        nodes_by_category[category] = [node for node in nodes if node.id_ in cat_questions]
+        flowchart = FlowChart(
+            title=category,
+            nodes=nodes_by_category.get(category, []),
+            links=links_by_category.get(category, []),
+            orientation=orientation,
+            config=config,
+        )
+        # Add 'end' nodes to categories
+        subgraph_links = {link.end.id_ for link in links_by_category[category] if link.end.id_ not in cat_questions}
+
+        # Create links between subgraphs
+        links_between_subgraphs = "\n".join(
+            [
+                f'click {link} href "decision-tree-subgraphs-{end_category}.html" "{end_category}"'
+                for link in subgraph_links
+                if (end_category := get_category(subgraphs, link)) is not None
+            ]
+        )
+        subgraph_script = flowchart.script + "\n" + links_between_subgraphs
+        for key, values in subgraphs.items():
+            for value in (v for v in values if v in subgraph_links):
+                subgraph_script = subgraph_script.replace(value, key)
+
+        create_html(
+            "./mermaid_graphs/decision-tree-subgraphs-" + category + ".html",
+            subgraph_script,
+        )
+
 
 # Create main graph and write into html
-pairs_main = "\n".join(
-    {
-        f"{link.origin.category} --> {link.end.category}"
-        for link in links
-        if link.origin.category != link.end.category and link.end.category
-    }
-)
+def create_main_graph_html(links):
+    pairs_main = "\n".join(
+        {
+            f"{link.origin.category} --> {link.end.category}"
+            for link in links
+            if link.origin.category != link.end.category and link.end.category
+        }
+    )
 
-labels_per_category = "\n".join(
-    {f"{link.origin.category}~~~| {link.labels[0]}|{link.origin.category}" for link in links if link.labels is not None}
-)
+    labels_per_category = "\n".join(
+        {
+            f"{link.origin.category}~~~| {link.labels[0]}|{link.origin.category}"
+            for link in links
+            if link.labels is not None
+        }
+    )
+
+    htmls = "\n".join(
+        [f'click {category} href "decision-tree-subgraphs-{category}.html" "{category}"' for category in subgraphs]
+    )
+
+    flowchart_main = FlowChart(title=name, config=config)
+
+    create_html(
+        "./mermaid_graphs/decision-tree-main.html",
+        flowchart_main.script + pairs_main + "\n" + labels_per_category + "\n" + htmls,
+    )
 
 
-htmls = "\n".join(
-    [f'click {category} href "decision-tree-subgraphs-{category}.html" "{category}"' for category in subgraphs]
-)
+# Create graphs
+nodes = create_nodes(conclusions, questions)
+links = create_links(questions)
+subgraphs = create_subgraph_structure(links)
 
-flowchart_main = FlowChart(title=name, config=config)
-
-create_html(
-    "./mermaid_graphs/decision-tree-main.html",
-    flowchart_main.script + pairs_main + "\n" + labels_per_category + "\n" + htmls,
-)
+create_complete_graph_html(subgraphs)
+create_subgraph_html(subgraphs)
+create_main_graph_html(links)

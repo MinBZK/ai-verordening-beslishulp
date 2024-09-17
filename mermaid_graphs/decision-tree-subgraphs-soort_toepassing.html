@@ -1,0 +1,146 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AI Decision Tree</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+        <script src='https://unpkg.com/mermaid@11.0.2/dist/mermaid.min.js'></script>
+
+        <!-- Custom Styles -->
+        <style>
+            /* Tooltip styling */
+            .mermaidTooltip {
+                display: none; /* Hides any remaining tooltips */
+            }
+
+            /* Modal centering and responsiveness */
+            .modal.is-active {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .modal-content {
+                max-width: 80vw; /* Makes modal responsive to screen size */
+                max-height: 80vh; /* Ensures modal fits within the viewport */
+                overflow-y: auto; /* Allows scrolling inside modal if content is too long */
+                position: relative;
+                padding: 20px;
+                background-color: white;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body class="has-background-white-ter">
+
+        <!-- Modal -->
+        <div id="model1" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                <div id="modelcontent1"></div>
+            </div>
+            <button id="modealclose1" class="modal-close is-large" aria-label="close"></button>
+        </div>
+
+        <!-- Diagram (placeholder) -->
+        <pre class="mermaid has-background-white-ter">
+            ---
+title: soort_toepassing
+---
+%%{
+	init: {
+		"theme": "base",
+		"themeVariables": {
+			"primaryColor": "#007bc7",
+			"primaryTextColor": "#000000",
+			"primaryBorderColor": "#007bc7",
+			"lineColor": "#154273",
+			"secondaryColor": "#CCE7F4"
+		}
+	}
+}%%
+
+flowchart TB
+	classDef secondaryStyle fill:#FFFFFF,stroke:#39870c
+	c-15.0{{"U gebruikt geen algoritme. De AI-verordening is niet van toepassing."}}
+c-15.0:::secondaryStyle
+click c-15.0 callback "Houdt u aan bestaande wet- en regelgeving (bijv. AVG wanneer u persoonsgegevens verwerkt)."
+	q-0(("0: Algoritme"))
+click q-0 callback "Bevat de (beoogde) toepassing een algoritme?"
+	q-1.0(("1.0: AI-systeem"))
+click q-1.0 callback "Is de (beoogde) toepassing een AI-systeem?"
+	q-1.1(("1.1: AI-systeem voor algemene doeleinden"))
+click q-1.1 callback "Is de (beoogde) toepassing een AI-systeem voor algemene doeleinden?"
+	q-1.2(("1.2: AI-model voor algemene doeleinden"))
+click q-1.2 callback "Is de (beoogde) toepassing een AI-model voor algemene doeleinden?"
+	q-0 -->|Ja
+
+Opgehaalde labels: algoritme| q-1.0
+	q-0 -->|Nee
+
+Opgehaalde labels: geen algoritme| c-15.0
+	q-1.0 -->|Ja
+| q-1.1
+	q-1.0 -->|Nee
+| q-1.2
+	q-1.1 -->|Ja
+
+Opgehaalde labels: AI-systeem voor algemene doeleinden| open_source
+	q-1.1 -->|Nee
+
+Opgehaalde labels: AI-systeem| open_source
+	q-1.2 -->|Ja
+
+Opgehaalde labels: AI-model voor algemene doeleinden| open_source
+	q-1.2 -->|Nee
+| publicatiecategorie_impactvol
+
+click open_source href "decision-tree-subgraphs-open_source.html" "open_source"
+click publicatiecategorie_impactvol href "decision-tree-subgraphs-publicatiecategorie_impactvol.html" "publicatiecategorie_impactvol"
+        </pre>
+
+        <!-- Mermaid initialization -->
+        <script>mermaid.initialize({ maxTextSize: 9000000000, startOnLoad: true, securityLevel: 'loose' })</script>
+
+        <!-- JavaScript for tooltip and modal handling -->
+        <script>
+            // Function to handle modal popup when a node is clicked
+            window.callback = function (name) {
+                let cookieValue = document.getElementsByClassName("mermaidTooltip");
+                let modelcontent1 = document.getElementById("modelcontent1");
+                let model1 = document.getElementById("model1");
+
+                // If a tooltip exists, display its content in the modal
+                if (cookieValue[0]) {
+                    // Hide the tooltip when opening the modal
+                    cookieValue[0].style.display = "none";
+                    // Set the modal content from the tooltip text
+                    modelcontent1.innerHTML = cookieValue[0].innerText.replaceAll("#specialnewline#", "<br>");
+                    // Open the modal by adding the 'is-active' class
+                    model1.classList.add('is-active');
+                }
+            };
+
+            // Function to close the modal and restore tooltip visibility
+            document.addEventListener('DOMContentLoaded', () => {
+                let modealclose1 = document.getElementById("modealclose1");
+
+                // Event listener to close the modal when the close button is clicked
+                modealclose1.addEventListener('click', () => {
+                    let model1 = document.getElementById("model1");
+                    let cookieValue = document.getElementsByClassName("mermaidTooltip");
+
+                    // Close the modal by removing the 'is-active' class
+                    model1.classList.remove('is-active');
+
+                    // Restore the tooltip visibility after the modal is closed
+                });
+            });
+
+        </script>
+
+    </body>
+    </html>
+    
