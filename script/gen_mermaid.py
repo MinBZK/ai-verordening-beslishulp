@@ -183,6 +183,7 @@ class Conclusion:
 def escape_for_mermaid(text):
     return text.replace("||", "of").replace("&&", "en")
 
+
 def find_node_by_id(node_id):
     for node in nodes:
         if node.id_ == node_id:
@@ -193,10 +194,8 @@ def get_category(subgraphs, link):
     return next((key for key, values in subgraphs.items() if link in values), None)
 
 
-def create_html(file_name, flowchart_script):
-    with open(file_name, "w") as file:
-        file.write(
-            """
+def create_html(file_name: str, flowchart_script: str) -> None:
+    html_template = """
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -290,50 +289,13 @@ def create_html(file_name, flowchart_script):
     </body>
     </html>
     """.replace("{script}", flowchart_script)
-        )
-
-with open("decision-tree.yaml") as file:
-    decision_tree = yaml.safe_load(file)
-
-version: str = decision_tree.get("version")
-name: str = decision_tree.get("name")
-
-questions: list[Question] = [Question(**q) for q in decision_tree.get("questions", [])]
-conclusions: list[Conclusion] = [Conclusion(**q) for q in decision_tree.get("conclusions", [])]
-
-config = Config(
-    theme=Themes.BASE,
-    primary_color="#007bc7",
-    primary_text_color="#000000",
-    primary_border_color="#007bc7",
-    secondary_color="#CCE7F4",
-    line_color="#154273",
-)
-
-secondary_style = CustomStyle(
-                    name="secondaryStyle",
-                    fill="#FFFFFF",
-                    stroke="#39870c"
-                )
-
-orientation = Direction.TOP_TO_BOTTOM
-nodes: list[CustomNode] = []
-links: list[CustomLink] = []
+    with open(file_name, "w") as file:
+        file.write(html_template)
 
 
 # Create nodes for conclusions and questions
-
-def create_nodes(conclusions, questions):
-    for conclusion in conclusions:
-        nodes.append(
-            CustomNode(
-                id_="c-" + conclusion.conclusionId,
-                content=conclusion.conclusion,
-                shape="hexagon",
-                styles= [secondary_style],
-                callback_tooltip=conclusion.obligation,
-            )
-        )
+def create_nodes(conclusions: list[Conclusion], questions: list[Question], secondary_style: Style) -> list[CustomNode]:
+    nodes: list[CustomNode] = []
     for question in questions:
         nodes.append(
             CustomNode(
@@ -344,107 +306,89 @@ def create_nodes(conclusions, questions):
                 category=question.category,
             )
         )
+    for conclusion in conclusions:
+        nodes.append(
+            CustomNode(
+                id_="c-" + conclusion.conclusionId,
+                content=conclusion.conclusion,
+                shape="hexagon",
+                styles=[secondary_style],
+                callback_tooltip=conclusion.obligation,
+            )
+        )
     return nodes
 
-# Create links between nodes (question and conclusion
-def create_links(questions):
-    for question in questions:
 
+def create_links(questions: list[Question]) -> list[CustomLink]:
+    links: list[CustomLink] = []
+
+    for question in questions:
+        # Convert raw answers into Answer objects
         answers: list[Answer] = [Answer(**a) for a in question.answers]
-        origin = find_node_by_id("q-" + question.questionId)
+        origin = find_node_by_id(f"q-{question.questionId}")
 
         for answer in answers:
-            link_message = (
-                answer.answer
-                + "\n"
-                + (
-                    "\nOpgehaalde labels: " + ", ".join(str(label) for label in answer.labels)
-                    if answer.labels is not None
-                    else ""
+            link_message = format_link_message(answer)
+
+            # Handle nextQuestionId or nextConclusionId
+            if answer.nextQuestionId or answer.nextConclusionId:
+                end = find_node_by_id(
+                    f"q-{answer.nextQuestionId}" if answer.nextQuestionId else f"c-{answer.nextConclusionId}"
                 )
-            )
-            if answer.nextQuestionId:
-                end = find_node_by_id("q-" + answer.nextQuestionId)
-                links.append(
-                    CustomLink(
-                        origin=origin,
-                        end=end,
-                        message=link_message,
-                        labels=answer.labels,
-                    )
-                )
-            elif answer.nextConclusionId:
-                end = find_node_by_id("c-" + answer.nextConclusionId)
-                links.append(
-                    CustomLink(
-                        origin=origin,
-                        end=end,
-                        message=link_message,
-                        labels=answer.labels,
-                    )
-                )
+                links.append(create_custom_link(origin, end, link_message, answer.labels))
+
+            # Handle redirects
             elif answer.redirects:
-                redirects: list[Redirect] = [
-                    Redirect(
-                        nextQuestionId=r.get("nextQuestionId"),
-                        nextConclusionId=r.get("nextConclusionId"),
-                        if_condition=r["if"],
-                    )
-                    for r in answer.redirects
-                ]
-
-                for redirect in redirects:
-                    if redirect.nextQuestionId:
-
-                        match_list = [
-                            m[0] or m[1]
-                            for m in re.findall(
-                                r'"([^"]+)"\s+in\s+labels|(\bof\b|\ben\b)',
-                                redirect.if_condition,
-                            )
-                        ]
-
-                        redirect_message = (
-                                    answer.answer
-                                    + ",\n"
-                                    + "Als: "
-                                    + " ".join(str(m) for m in match_list)
-                                    + ".\n\n\n"
-                                    + (
-                                        "\nOpgehaalde labels: " + ", ".join(str(label) for label in answer.labels)
-                                        if answer.labels is not None
-                                        else ""
-                                    )
-                                )
-
-                        end = find_node_by_id("q-" + redirect.nextQuestionId)
-                        links.append(
-                            CustomLink(
-                                origin=origin,
-                                end=end,
-                                message=redirect_message,
-                                labels=answer.labels,
-                            )
-                        )
-                    elif redirect.nextConclusionId:
-                        end = find_node_by_id("c-" + redirect.nextConclusionId)
-                        links.append(
-                            CustomLink(
-                                origin=origin,
-                                end=end,
-                                message=redirect_message,
-                                labels=answer.labels,
-                            )
-                        )
-                    else:
-                        print(
-                            f"""Error: No nextQuestionId or nextConclusionId found
-                            in redirects for question {question.questionId}"""
-                        )
+                handle_redirects(links, origin, answer, link_message)
 
             else:
-                print(f"Error: No nextQuestionId or nextConclusionId found in answer for question {question.questionId}")
+                print(
+                    f"Error: No nextQuestionId or nextConclusionId found in answer for question {question.questionId}"
+                )
+
     return links
+
+
+# To format the link message with the answer and labels
+def format_link_message(answer: Answer) -> str:
+    label_info = f"\nOpgehaalde labels: {', '.join(str(label) for label in answer.labels)}" if answer.labels else ""
+    return f"{answer.answer}\n{label_info}"
+
+
+# To create a CustomLink
+def create_custom_link(origin: CustomNode, end: CustomNode, message: str, labels: list[str]) -> CustomLink:
+    if end is None:
+        raise ValueError(f"Error: Could not find destination node for link with message '{message}'")
+    return CustomLink(origin=origin, end=end, message=message, labels=labels)
+
+
+# Handle creation of links for redirects with nextQuestionId or nextConclusionId
+def handle_redirects(links: list[CustomLink], origin: CustomNode, answer: Answer, base_message: str) -> None:
+    redirects: list[Redirect] = [
+        Redirect(
+            nextQuestionId=r.get("nextQuestionId"), nextConclusionId=r.get("nextConclusionId"), if_condition=r["if"]
+        )
+        for r in answer.redirects
+    ]
+
+    for redirect in redirects:
+        redirect_message = format_redirect_message(answer, redirect, base_message)
+        if redirect.nextQuestionId:
+            end = find_node_by_id(f"q-{redirect.nextQuestionId}")
+            links.append(create_custom_link(origin, end, redirect_message, answer.labels))
+        elif redirect.nextConclusionId:
+            end = find_node_by_id(f"c-{redirect.nextConclusionId}")
+            links.append(create_custom_link(origin, end, redirect_message, answer.labels))
+        else:
+            print(f"Error: No nextQuestionId or nextConclusionId found in redirects for question {origin.id_}")
+
+
+def format_redirect_message(answer: Answer, redirect: Redirect, base_message: str) -> str:
+    """Helper to format the message for redirect links."""
+    match_list = [m[0] or m[1] for m in re.findall(r'"([^"]+)"\s+in\s+labels|(\bof\b|\ben\b)', redirect.if_condition)]
+    condition_message = f"Als: {' '.join(match_list)}."
+    return f"{base_message},\n{condition_message}"
+
 
 # Create structure for subgraphs
 def create_subgraph_structure(links):
@@ -456,18 +400,21 @@ def create_subgraph_structure(links):
             subgraphs[link.origin.category].append(f"{link.end.id_}")
     return subgraphs
 
+
 # Create complete graph html
 def create_complete_graph_html(subgraphs):
     subgraphs_complete = "\n".join(
         [f"subgraph {category}\n" + "\n".join(questions) + "\nend" for category, questions in subgraphs.items()]
         + [str(secondary_style)]
-        + [f"class {category} secondaryStyle" for category in subgraphs])
+        + [f"class {category} secondaryStyle" for category in subgraphs]
+    )
 
     flowchart_complete = FlowChart(title=name, nodes=nodes, links=links, orientation=orientation, config=config)
     create_html(
         "./mermaid_graphs/decision-tree-complete.html",
         flowchart_complete.script + subgraphs_complete,
     )
+
 
 # Create subgraphs and write into html files
 def create_subgraph_html(subgraphs):
@@ -536,8 +483,30 @@ def create_main_graph_html(links):
     )
 
 
+with open("decision-tree.yaml") as file:
+    decision_tree = yaml.safe_load(file)
+
+version: str = decision_tree.get("version")
+name: str = decision_tree.get("name")
+
+questions: list[Question] = [Question(**q) for q in decision_tree.get("questions", [])]
+conclusions: list[Conclusion] = [Conclusion(**q) for q in decision_tree.get("conclusions", [])]
+
+config = Config(
+    theme=Themes.BASE,
+    primary_color="#007bc7",
+    primary_text_color="#000000",
+    primary_border_color="#007bc7",
+    secondary_color="#CCE7F4",
+    line_color="#154273",
+)
+
+secondary_style = CustomStyle(name="secondaryStyle", fill="#FFFFFF", stroke="#39870c")
+
+orientation = Direction.TOP_TO_BOTTOM
+
 # Create graphs
-nodes = create_nodes(conclusions, questions)
+nodes = create_nodes(conclusions, questions, secondary_style)
 links = create_links(questions)
 subgraphs = create_subgraph_structure(links)
 

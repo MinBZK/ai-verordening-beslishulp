@@ -64,9 +64,6 @@ title: soort_toepassing
 
 flowchart TB
 	classDef secondaryStyle fill:#FFFFFF,stroke:#39870c
-	c-15.0{{"U gebruikt geen algoritme. De AI-verordening is niet van toepassing."}}
-c-15.0:::secondaryStyle
-click c-15.0 callback "Houdt u aan bestaande wet- en regelgeving (bijv. AVG wanneer u persoonsgegevens verwerkt)."
 	q-0(("0: Algoritme"))
 click q-0 callback "Bevat de (beoogde) toepassing een algoritme?"
 	q-1.0(("1.0: AI-systeem"))
@@ -75,6 +72,9 @@ click q-1.0 callback "Is de (beoogde) toepassing een AI-systeem?"
 click q-1.1 callback "Is de (beoogde) toepassing een AI-systeem voor algemene doeleinden?"
 	q-1.2(("1.2: AI-model voor algemene doeleinden"))
 click q-1.2 callback "Is de (beoogde) toepassing een AI-model voor algemene doeleinden?"
+	c-15.0{{"U gebruikt geen algoritme. De AI-verordening is niet van toepassing."}}
+c-15.0:::secondaryStyle
+click c-15.0 callback "Houdt u aan bestaande wet- en regelgeving (bijv. AVG wanneer u persoonsgegevens verwerkt)."
 	q-0 -->|Ja
 
 Opgehaalde labels: algoritme| q-1.0
@@ -143,4 +143,3 @@ click publicatiecategorie_impactvol href "decision-tree-subgraphs-publicatiecate
 
     </body>
     </html>
-    

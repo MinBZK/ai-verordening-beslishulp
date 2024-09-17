@@ -64,6 +64,10 @@ title: publicatiecategorie_impactvol
 
 flowchart TB
 	classDef secondaryStyle fill:#FFFFFF,stroke:#39870c
+	q-9.0(("9.0: Impactvol algoritme"))
+click q-9.0 callback "Gebruikt u een algoritme met impact (rechtsgevolgen voor de burger of classificatie van burgers of groepen) volgens categorie B van de Handreiking van het Algoritmeregister?"
+	q-9.1(("9.1: Uitzonderingsgronden Handreiking Algoritmeregister"))
+click q-9.1 callback "Valt uw toepassing onder één van de uitzonderingsgronden categorie C of D van de Handreiking van het Algoritmeregister?"
 	c-15.4{{"Het betreft een algoritme met impact, maar de AI-verordening is niet van toepassing."}}
 c-15.4:::secondaryStyle
 click c-15.4 callback "Omdat het een algoritme met impact betreft, dient u in algoritmeregister te publiceren."
@@ -73,10 +77,6 @@ click c-15.5 callback "U hoeft vanwege uitzonderingsgrond niet te publiceren in 
 	c-15.6{{"Uw algoritme is niet impactvol en de AI-verordening is niet van toepassing."}}
 c-15.6:::secondaryStyle
 click c-15.6 callback "Zorg ervoor dat uw algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer uw algoritme persoonsgegevens verwerkt)."
-	q-9.0(("9.0: Impactvol algoritme"))
-click q-9.0 callback "Gebruikt u een algoritme met impact (rechtsgevolgen voor de burger of classificatie van burgers of groepen) volgens categorie B van de Handreiking van het Algoritmeregister?"
-	q-9.1(("9.1: Uitzonderingsgronden Handreiking Algoritmeregister"))
-click q-9.1 callback "Valt uw toepassing onder één van de uitzonderingsgronden categorie C of D van de Handreiking van het Algoritmeregister?"
 	q-9.0 -->|Ja
 | q-9.1
 	q-9.0 -->|Nee
@@ -134,4 +134,3 @@ Opgehaalde labels: impactvol| c-15.4
 
     </body>
     </html>
-    

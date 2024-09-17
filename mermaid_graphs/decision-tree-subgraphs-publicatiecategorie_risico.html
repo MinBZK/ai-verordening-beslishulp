@@ -64,65 +64,28 @@ title: publicatiecategorie_risico
 
 flowchart TB
 	classDef secondaryStyle fill:#FFFFFF,stroke:#39870c
-	c-15.1{{"Het is verboden om dit AI-systeem te gebruiken. Er is geen sprake van een uitzondering op de lijst van verboden AI-systemen."}}
-c-15.1:::secondaryStyle
-click c-15.1 callback "Het is verboden om dit AI-systeem te gebruiken. Let op: dit verbod geldt vanaf 1 februari 2025."
-	c-15.2{{"Er is sprake van een uitzondering op de lijst van verboden AI-systemen. Dit betekent dat u moet voldoen aan de verplichtingen voor hoog-risico AI-systemen."}}
-c-15.2:::secondaryStyle
-click c-15.2 callback "Artikel 16 - Verplichtingen van aanbieders van AI-systemen met een hoog risico: 
- - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2
- - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres
- - aanbieders beschikken over een systeem voor kwaliteitsbeheer dat in overeenstemming is met Artikel 17 (systeem voor kwaliteitsbeheer)
- - aanbieders bewaren de in artikel 18 (bewaring van documentatie) bedoelde documentatie
- - aanbieders bewaren de in artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben
- - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld
- - aanbieders stellen een EU-conformiteitsverklaring op, in overeenstemming met Artikel 47
- - aanbieders brengen de CE-markering aan op het Ai-systeem met een hoog risico of, waneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, om aan te geven dat aan deze verordening is voldaan, overeenkomstig Artikel 48
- - aanbieders leven de registratieverplichtingen als bedoeld in Artikel 49 lid 1, na
- - aanbieders nemen de noodzakelijke corrigerende maatregelen en verstrekken de uit hoofde van Artikel 20 vereiste informatie
- - aanbieders tonen op een met redenen omkleed verzoek van een nationale bevoegde autoriteit de overeenstemming aan van het AI-systeem met een hoog risico met de eisen van afdeling 2
- - aanbieders zorgen ervoor dat het AI-systeem met een hoog risico voldoet aan de toegankelijkheidseisen overeenkomstig de Richtlijnen (EU) 2016/2102 en (EU) 2019/882. 
- 
- Artikel 26 - Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico: - het nemen van passende technische en organisatorische maatregelen om te waarborgen dat dergelijke systemen in overeenstemming met de gebruiksaanwijzingen die bij de systemen zijn gevoegd worden gebruikt 
- - het opdragen van menselijk toezicht aan natuurlijke personen die over de nodige bekwaamheid, opleiding en autoriteit beschikken en de nodige ondersteuning krijgen 
- - het ervoor zorgen dat, voor zover de gebruikersverantwoordelijke controle heeft over de inputdata, de inputdata relevant en voldoende representatief zijn voor het beoogde doel van het AI-systeem met een hoog risico 
- - het monitoren van de werking van het AI-systeem met een hoog risico op basis van de gebruiksaanwijzingen en in voorkomend geval het in kennis stellen van de aanbieders overeenkomstig artikel 72.
- - het bewaren van de logs die automatisch worden gegenereerd door dat AI-systeem met een hoog risico voor zover dergelijke logs onder controle van de gebruiksverantwoordelijke vallen gedurende een periode die passend is voor het beoogde doel van het AI-systeem met een hoog risico, of ten minste zes maanden 
- - voordat een AI-systeem met een hoog risico op de werkplek in gebruik wordt gesteld of wordt gebruikt, delen gebruiksverantwoordelijken die werkgever zijn werknemersvertegenwoordigers en de betrokken werknemers mee dat zij zullen worden onderworpen aan het gebruik van het AI-systeem met een hoog risico 
- - gebruiksverantwoordelijken van AI-systemen met een hoog risico die de hoedanigheid van overheidsinstanties of instellingen, organen of instanties van de Unie hebben, leven de in artikel 49 bedoelde registratieverplichtingen na. Wanneer deze gebruiksverantwoordelijke vaststellen dat het AI-systeem met een hoog risico dat zij voornemens zijn te gebruiken niet in de in artikel 71 bedoelde EU-databank is geregistreerd, gebruiken zij dat systeem niet en stellen zij de aanbieder of de distributeur daarvan in kennis 
- - indien van toepassing, gebruiken gebruiksverantwoordelijken van AI-systemen met een hoog risico de informatie die op grond van artikel 13 van deze verordening wordt verstrekt om hun verplichting na te komen om een gegevensbeschermingseffectbeoordeling uit te voeren 
- - de gebruiksverantwoordelijke van een AI-systeem met een hoog risico voor biometrische identificatie op afstand verzoekt achteraf in het kader van een onderzoek waarbij gericht wordt gezocht naar een persoon die wordt verdacht van of veroordeeld is voor het plegen van een strafbaar feit, vooraf of zonder onnodige vertraging en uiterlijk 48 uur na het feit, om toestemming van een gerechtelijke instantie of administratieve instantie, van wie de beslissing bindend is en onderworpen is aan rechterlijke toetsing, voor het gebruik van dat systeem, behalve wanneer het wordt gebruikt voor de initiële identificatie van een potentiële verdachte op basis van objectieve en verifieerbare feiten die rechtstreeks verband houden met het strafbare feit. Elk gebruik wordt beperkt tot hetgeen strikt noodzakelijk is voor het onderzoek naar een specifiek strafbaar feit 
- - gebruiksverantwoordelijken van in bijlage III bedoelde AI-systemen met een hoog risico die beslissingen met betrekking tot natuurlijke personen nemen of helpen nemen, informeren de natuurlijke personen dat het AI-systeem met een hoog risico op hen wordt toegepast 
- - gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.
- 
- Let op: de verplichtingen voor hoog-risico AI-systemen gelden vanaf 1 augustus 2026.
- De verplichtingen voor hoog-risico AI-systemen in producten die vallen onder bepaalde EU-wetgevingen gelden vanaf 1 augustus 2027.
- De verplichtingen voor hoog-risico AI-systemen gebruikt door overheidsorganisaties die al voor inwerktreding in gebruik waren gelden vanaf 1 augustus 2030."
-	c-15.3{{"Er is sprake van een uitzonderingsgrond. De AI-verordening is niet van toepassing."}}
-c-15.3:::secondaryStyle
-click c-15.3 callback "Er is geen sprake van een verplichting."
 	q-2.0(("2.0: Uitzondering AI-verordening"))
 click q-2.0 callback "We gaan nu bepalen of er sprake is van een uitzondering op de AI-verordening.
 
- Valt de (beoogde) toepassing onder een van de volgende categorieen? 
+ Valt de (beoogde) toepassing onder een van de volgende categorieen?
 
- - AI-systemen die uitsluitend in de handel worden gebracht, in gebruik worden gesteld of, al dan niet gewijzigd, worden gebruikt voor militaire, defensie- of nationale veiligheidsdoeleinden 
- - AI-systemen die niet in de Unie in de handel worden gebracht of in gebruik worden gesteld en waarvan de output in de Unie uitsluitend wordt gebruikt voor militaire, defensie- of nationale veiligheidsdoeleinden 
- - overheidsinstanties in derde landen of internationale organisaties die binnen het toepassingsgebied van de AI-verordening vallen, wanneer deze instanties of organisaties AI-systemen gebruiken in het kader van internationale samenwerking of overeenkomsten met de Unie of een of meer lidstaten op het gebied van rechtshandhaving en justitie 
- - onderzoeks-, test- of ontwikkelingsactiviteiten met betrekking tot AI-systemen of AI-modellen voor zij in de handel worden gebracht of in gebruik worden gesteld (testen onder reële omstandigheden valt hier niet onder) 
+ - AI-systemen die uitsluitend in de handel worden gebracht, in gebruik worden gesteld of, al dan niet gewijzigd, worden gebruikt voor militaire, defensie- of nationale veiligheidsdoeleinden
+ - AI-systemen die niet in de Unie in de handel worden gebracht of in gebruik worden gesteld en waarvan de output in de Unie uitsluitend wordt gebruikt voor militaire, defensie- of nationale veiligheidsdoeleinden
+ - overheidsinstanties in derde landen of internationale organisaties die binnen het toepassingsgebied van de AI-verordening vallen, wanneer deze instanties of organisaties AI-systemen gebruiken in het kader van internationale samenwerking of overeenkomsten met de Unie of een of meer lidstaten op het gebied van rechtshandhaving en justitie
+ - onderzoeks-, test- of ontwikkelingsactiviteiten met betrekking tot AI-systemen of AI-modellen voor zij in de handel worden gebracht of in gebruik worden gesteld (testen onder reële omstandigheden valt hier niet onder)
  - AI-systemen of AI-modellen, met inbegrip van hun output, die specifiek zijn ontwikkeld en in gebruik worden gesteld met wetenschappelijk onderzoek en wetenschappelijke ontwikkeling als enig doel"
 	q-3.0(("3.0: Verboden AI"))
 click q-3.0 callback "We gaan nu bepalen of het AI-systeem onder een van de verboden systemen uit Artikel 5 van de AI-verordening valt.
 
- Betreft het een AI-systeem dat: 
+ Betreft het een AI-systeem dat:
 
  - gebruik kan gaan maken van subliminale technieken om mensen onbewust of bewust kunnen manipuleren, waardoor ze beslissingen nemen die ze anders niet zouden hebben genomen?
  - gebruik kan gaan maken van kwetsbaarheden van individuen of specifieke groepen, zoals leeftijd, handicaps of sociale/economische omstandigheden, om het gedrag van die personen aanzienlijk te verstoren, wat kan leiden tot aanzienlijke schade bij henzelf of anderen?
- - gebruikt kan worden om natuurlijke personen of groepen gedurende een periode te evalueren of te classificeren op basis van hun sociale gedrag of afgeleide persoonlijke kenmerken? 
- - gebruikt kan worden voor risicobeoordelingen van natuurlijke personen om het risico op crimineel gedrag te voorspellen, gebaseerd op profilering of persoonlijkheidskenmerken? (Dit geldt niet voor AI-systemen die worden gebruikt om menselijke beoordelingen te ondersteunen, gebaseerd op objectieve en verifieerbare feiten die rechtstreeks verband houden met criminele activiteiten) 
- - gebruikt kan worden om databanken voor gezichtsherkenning aan te leggen of aan te vullen door willkeurige gezichtsafbeeldingen van internet of CCTV-beelden te scrapen? 
+ - gebruikt kan worden om natuurlijke personen of groepen gedurende een periode te evalueren of te classificeren op basis van hun sociale gedrag of afgeleide persoonlijke kenmerken?
+ - gebruikt kan worden voor risicobeoordelingen van natuurlijke personen om het risico op crimineel gedrag te voorspellen, gebaseerd op profilering of persoonlijkheidskenmerken? (Dit geldt niet voor AI-systemen die worden gebruikt om menselijke beoordelingen te ondersteunen, gebaseerd op objectieve en verifieerbare feiten die rechtstreeks verband houden met criminele activiteiten)
+ - gebruikt kan worden om databanken voor gezichtsherkenning aan te leggen of aan te vullen door willkeurige gezichtsafbeeldingen van internet of CCTV-beelden te scrapen?
  - gebruikt kan worden om emoties van een persoon op de werkplek of in het onderwijs af te leiden? (Dit is niet van toepassing als het gebruik van het AI-systeem is bedoeld voor medische- of veiligheidsdoeleinden)
- - gebruikt kan worden om natuurlijke personen individueel in categorieën in te delen op basis van biometrische gegevens om ras, politieke opvattingen, lidmaatschap van een vakbond, religieuze of levensbeschouwelijke overtuigingen, seksleven of seksuele geaardheid af te leiden? (Dit verbod geldt niet voor het labelen of filteren van rechtmatig verkregen biometrische datasets, zoals afbeeldingen, op basis van biometrische gegevens, of voor categorisering van biometrische gegevens op het gebied van rechtshandhaving) 
+ - gebruikt kan worden om natuurlijke personen individueel in categorieën in te delen op basis van biometrische gegevens om ras, politieke opvattingen, lidmaatschap van een vakbond, religieuze of levensbeschouwelijke overtuigingen, seksleven of seksuele geaardheid af te leiden? (Dit verbod geldt niet voor het labelen of filteren van rechtmatig verkregen biometrische datasets, zoals afbeeldingen, op basis van biometrische gegevens, of voor categorisering van biometrische gegevens op het gebied van rechtshandhaving)
  - gebruikt kan worden als een biometrisch systeem in de publieke ruimte voor identificatie op afstand in real-time, met het oog op de rechtshandhaving?"
 	q-3.1(("3.1: Uitzondering verboden AI"))
 click q-3.1 callback "Is er sprake van een van de volgende uitzonderingen?:
@@ -176,21 +139,54 @@ click q-5.1.0 callback "We gaan nu bepalen of er sprake is van een uitzondering 
  - Het uitvoeren van een voorbereidende taak voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?"
 	q-5.1.1(("5.1.1: Profilering"))
 click q-5.1.1 callback "Voert het AI-systeem profilering van natuurlijke personen uit? Bij profilering is er altijd sprake van een hoog risico."
+	c-15.1{{"Het is verboden om dit AI-systeem te gebruiken. Er is geen sprake van een uitzondering op de lijst van verboden AI-systemen."}}
+c-15.1:::secondaryStyle
+click c-15.1 callback "Het is verboden om dit AI-systeem te gebruiken. Let op: dit verbod geldt vanaf 1 februari 2025."
+	c-15.2{{"Er is sprake van een uitzondering op de lijst van verboden AI-systemen. Dit betekent dat u moet voldoen aan de verplichtingen voor hoog-risico AI-systemen."}}
+c-15.2:::secondaryStyle
+click c-15.2 callback "Artikel 16 - Verplichtingen van aanbieders van AI-systemen met een hoog risico:
+ - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2
+ - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres
+ - aanbieders beschikken over een systeem voor kwaliteitsbeheer dat in overeenstemming is met Artikel 17 (systeem voor kwaliteitsbeheer)
+ - aanbieders bewaren de in artikel 18 (bewaring van documentatie) bedoelde documentatie
+ - aanbieders bewaren de in artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben
+ - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld
+ - aanbieders stellen een EU-conformiteitsverklaring op, in overeenstemming met Artikel 47
+ - aanbieders brengen de CE-markering aan op het Ai-systeem met een hoog risico of, waneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, om aan te geven dat aan deze verordening is voldaan, overeenkomstig Artikel 48
+ - aanbieders leven de registratieverplichtingen als bedoeld in Artikel 49 lid 1, na
+ - aanbieders nemen de noodzakelijke corrigerende maatregelen en verstrekken de uit hoofde van Artikel 20 vereiste informatie
+ - aanbieders tonen op een met redenen omkleed verzoek van een nationale bevoegde autoriteit de overeenstemming aan van het AI-systeem met een hoog risico met de eisen van afdeling 2
+ - aanbieders zorgen ervoor dat het AI-systeem met een hoog risico voldoet aan de toegankelijkheidseisen overeenkomstig de Richtlijnen (EU) 2016/2102 en (EU) 2019/882.
+
+ Artikel 26 - Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico: - het nemen van passende technische en organisatorische maatregelen om te waarborgen dat dergelijke systemen in overeenstemming met de gebruiksaanwijzingen die bij de systemen zijn gevoegd worden gebruikt
+ - het opdragen van menselijk toezicht aan natuurlijke personen die over de nodige bekwaamheid, opleiding en autoriteit beschikken en de nodige ondersteuning krijgen
+ - het ervoor zorgen dat, voor zover de gebruikersverantwoordelijke controle heeft over de inputdata, de inputdata relevant en voldoende representatief zijn voor het beoogde doel van het AI-systeem met een hoog risico
+ - het monitoren van de werking van het AI-systeem met een hoog risico op basis van de gebruiksaanwijzingen en in voorkomend geval het in kennis stellen van de aanbieders overeenkomstig artikel 72.
+ - het bewaren van de logs die automatisch worden gegenereerd door dat AI-systeem met een hoog risico voor zover dergelijke logs onder controle van de gebruiksverantwoordelijke vallen gedurende een periode die passend is voor het beoogde doel van het AI-systeem met een hoog risico, of ten minste zes maanden
+ - voordat een AI-systeem met een hoog risico op de werkplek in gebruik wordt gesteld of wordt gebruikt, delen gebruiksverantwoordelijken die werkgever zijn werknemersvertegenwoordigers en de betrokken werknemers mee dat zij zullen worden onderworpen aan het gebruik van het AI-systeem met een hoog risico
+ - gebruiksverantwoordelijken van AI-systemen met een hoog risico die de hoedanigheid van overheidsinstanties of instellingen, organen of instanties van de Unie hebben, leven de in artikel 49 bedoelde registratieverplichtingen na. Wanneer deze gebruiksverantwoordelijke vaststellen dat het AI-systeem met een hoog risico dat zij voornemens zijn te gebruiken niet in de in artikel 71 bedoelde EU-databank is geregistreerd, gebruiken zij dat systeem niet en stellen zij de aanbieder of de distributeur daarvan in kennis
+ - indien van toepassing, gebruiken gebruiksverantwoordelijken van AI-systemen met een hoog risico de informatie die op grond van artikel 13 van deze verordening wordt verstrekt om hun verplichting na te komen om een gegevensbeschermingseffectbeoordeling uit te voeren
+ - de gebruiksverantwoordelijke van een AI-systeem met een hoog risico voor biometrische identificatie op afstand verzoekt achteraf in het kader van een onderzoek waarbij gericht wordt gezocht naar een persoon die wordt verdacht van of veroordeeld is voor het plegen van een strafbaar feit, vooraf of zonder onnodige vertraging en uiterlijk 48 uur na het feit, om toestemming van een gerechtelijke instantie of administratieve instantie, van wie de beslissing bindend is en onderworpen is aan rechterlijke toetsing, voor het gebruik van dat systeem, behalve wanneer het wordt gebruikt voor de initiële identificatie van een potentiële verdachte op basis van objectieve en verifieerbare feiten die rechtstreeks verband houden met het strafbare feit. Elk gebruik wordt beperkt tot hetgeen strikt noodzakelijk is voor het onderzoek naar een specifiek strafbaar feit
+ - gebruiksverantwoordelijken van in bijlage III bedoelde AI-systemen met een hoog risico die beslissingen met betrekking tot natuurlijke personen nemen of helpen nemen, informeren de natuurlijke personen dat het AI-systeem met een hoog risico op hen wordt toegepast
+ - gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.
+
+ Let op: de verplichtingen voor hoog-risico AI-systemen gelden vanaf 1 augustus 2026.
+ De verplichtingen voor hoog-risico AI-systemen in producten die vallen onder bepaalde EU-wetgevingen gelden vanaf 1 augustus 2027.
+ De verplichtingen voor hoog-risico AI-systemen gebruikt door overheidsorganisaties die al voor inwerktreding in gebruik waren gelden vanaf 1 augustus 2030."
+	c-15.3{{"Er is sprake van een uitzonderingsgrond. De AI-verordening is niet van toepassing."}}
+c-15.3:::secondaryStyle
+click c-15.3 callback "Er is geen sprake van een verplichting."
 	q-2.0 -->|Ja
 
 Opgehaalde labels: uitzonderingsgrond: AI-verordening niet van toepassing| c-15.3
-	q-2.0 -->|Nee,
-Als: AI-systeem of AI-systeem voor algemene doeleinden.
+	q-2.0 -->|Nee
 
+Opgehaalde labels: geen uitzonderingsgrond: AI-verordening van toepassing,
+Als: AI-systeem of AI-systeem voor algemene doeleinden.| q-3.0
+	q-2.0 -->|Nee
 
-
-Opgehaalde labels: geen uitzonderingsgrond: AI-verordening van toepassing| q-3.0
-	q-2.0 -->|Nee,
-Als: AI-model voor algemene doeleinden.
-
-
-
-Opgehaalde labels: geen uitzonderingsgrond: AI-verordening van toepassing| systeemrisico
+Opgehaalde labels: geen uitzonderingsgrond: AI-verordening van toepassing,
+Als: AI-model voor algemene doeleinden.| systeemrisico
 	q-3.0 -->|Ja
 | q-3.1
 	q-3.0 -->|Nee
@@ -233,8 +229,8 @@ Opgehaalde labels: hoog-risico AI| transparantieverplichtingen
 
 Opgehaalde labels: geen hoog-risico AI| transparantieverplichtingen
 
-click systeemrisico href "decision-tree-subgraphs-systeemrisico.html" "systeemrisico"
 click transparantieverplichtingen href "decision-tree-subgraphs-transparantieverplichtingen.html" "transparantieverplichtingen"
+click systeemrisico href "decision-tree-subgraphs-systeemrisico.html" "systeemrisico"
         </pre>
 
         <!-- Mermaid initialization -->
@@ -279,4 +275,3 @@ click transparantieverplichtingen href "decision-tree-subgraphs-transparantiever
 
     </body>
     </html>
-    

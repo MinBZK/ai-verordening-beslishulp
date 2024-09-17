@@ -63,37 +63,37 @@ title: Beslisboom AI Verordening
 }%%
 
 flowchart TB
-open_source --> publicatiecategorie_risico
+publicatiecategorie_risico --> transparantieverplichtingen
 publicatiecategorie_risico --> systeemrisico
+soort_toepassing --> publicatiecategorie_impactvol
+transparantieverplichtingen --> rol
+systeemrisico --> rol
 transparantieverplichtingen --> publicatiecategorie_impactvol
 soort_toepassing --> open_source
-systeemrisico --> rol
-publicatiecategorie_risico --> transparantieverplichtingen
-transparantieverplichtingen --> rol
-soort_toepassing --> publicatiecategorie_impactvol
-publicatiecategorie_risico~~~| geen hoog-risico AI|publicatiecategorie_risico
-open_source~~~| open-source|open_source
-soort_toepassing~~~| AI-systeem voor algemene doeleinden|soort_toepassing
-systeemrisico~~~| systeemrisico|systeemrisico
-publicatiecategorie_risico~~~| geen uitzonderingsgrond: AI-verordening van toepassing|publicatiecategorie_risico
-rol~~~| aanbieder|rol
+open_source --> publicatiecategorie_risico
 transparantieverplichtingen~~~| transparantieverplichtingen|transparantieverplichtingen
-soort_toepassing~~~| geen algoritme|soort_toepassing
 soort_toepassing~~~| algoritme|soort_toepassing
-transparantieverplichtingen~~~| geen transparantieverplichtingen|transparantieverplichtingen
-publicatiecategorie_risico~~~| niet-verboden AI|publicatiecategorie_risico
-open_source~~~| geen open-source|open_source
-publicatiecategorie_impactvol~~~| impactvol|publicatiecategorie_impactvol
-publicatiecategorie_risico~~~| hoog-risico AI|publicatiecategorie_risico
-systeemrisico~~~| geen systeemrisico|systeemrisico
-publicatiecategorie_risico~~~| uitzondering verboden AI|publicatiecategorie_risico
-publicatiecategorie_impactvol~~~| niet impactvol|publicatiecategorie_impactvol
-soort_toepassing~~~| AI-model voor algemene doeleinden|soort_toepassing
-publicatiecategorie_risico~~~| verboden AI|publicatiecategorie_risico
-publicatiecategorie_risico~~~| uitzonderingsgrond: AI-verordening niet van toepassing|publicatiecategorie_risico
-rol~~~| gebruiksverantwoordelijke|rol
+open_source~~~| open-source|open_source
 rol~~~| aanbieder + gebruiksverantwoordelijke|rol
+soort_toepassing~~~| AI-model voor algemene doeleinden|soort_toepassing
+rol~~~| aanbieder|rol
+publicatiecategorie_impactvol~~~| niet impactvol|publicatiecategorie_impactvol
+rol~~~| gebruiksverantwoordelijke|rol
+systeemrisico~~~| systeemrisico|systeemrisico
+publicatiecategorie_impactvol~~~| impactvol|publicatiecategorie_impactvol
+soort_toepassing~~~| geen algoritme|soort_toepassing
+publicatiecategorie_risico~~~| hoog-risico AI|publicatiecategorie_risico
+transparantieverplichtingen~~~| geen transparantieverplichtingen|transparantieverplichtingen
+soort_toepassing~~~| AI-systeem voor algemene doeleinden|soort_toepassing
+publicatiecategorie_risico~~~| uitzondering verboden AI|publicatiecategorie_risico
+publicatiecategorie_risico~~~| geen hoog-risico AI|publicatiecategorie_risico
+publicatiecategorie_risico~~~| geen uitzonderingsgrond: AI-verordening van toepassing|publicatiecategorie_risico
+open_source~~~| geen open-source|open_source
 soort_toepassing~~~| AI-systeem|soort_toepassing
+systeemrisico~~~| geen systeemrisico|systeemrisico
+publicatiecategorie_risico~~~| uitzonderingsgrond: AI-verordening niet van toepassing|publicatiecategorie_risico
+publicatiecategorie_risico~~~| verboden AI|publicatiecategorie_risico
+publicatiecategorie_risico~~~| niet-verboden AI|publicatiecategorie_risico
 click soort_toepassing href "decision-tree-subgraphs-soort_toepassing.html" "soort_toepassing"
 click open_source href "decision-tree-subgraphs-open_source.html" "open_source"
 click publicatiecategorie_risico href "decision-tree-subgraphs-publicatiecategorie_risico.html" "publicatiecategorie_risico"
@@ -145,4 +145,3 @@ click publicatiecategorie_impactvol href "decision-tree-subgraphs-publicatiecate
 
     </body>
     </html>
-    
