@@ -143,7 +143,6 @@ async function givenAnswer(answer: Answer) {
       questionStore.addLabelByCategory(answer.labels[i], currentCategory.value.topic)
     }
   }
-  handleNextStep(answer)
   if (answer.redirects) {
     for (const redirect of answer.redirects) {
       const context = { labels: questionStore.getJsonLabels() }
@@ -154,6 +153,8 @@ async function givenAnswer(answer: Answer) {
       }
     }
     // only works if statements don't contradict in the YAML
+  } else {
+    handleNextStep(answer)
   }
 }
 
