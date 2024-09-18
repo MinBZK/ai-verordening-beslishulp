@@ -9,3 +9,4 @@ categories.yaml @ruthkoole
 .devcontainer/devcontainer.json
 .pre-commit-config.yaml
 frontend/package.json
+frontend/package-lock.json
