@@ -293,7 +293,7 @@ def create_html(file_name: str, flowchart_script: str) -> None:
         file.write(html_template)
 
 
-# Create nodes for conclusions and questions
+# Function to create nodes for questions and conclusions
 def create_nodes(conclusions: list[Conclusion], questions: list[Question], secondary_style: Style) -> list[CustomNode]:
     nodes: list[CustomNode] = []
     for question in questions:
@@ -318,7 +318,7 @@ def create_nodes(conclusions: list[Conclusion], questions: list[Question], secon
         )
     return nodes
 
-
+# Function to create links
 def create_links(questions: list[Question]) -> list[CustomLink]:
     links: list[CustomLink] = []
 
@@ -349,20 +349,20 @@ def create_links(questions: list[Question]) -> list[CustomLink]:
     return links
 
 
-# To format the link message with the answer and labels
+# Function to format the link message with the answer and labels
 def format_link_message(answer: Answer) -> str:
     label_info = f"\nOpgehaalde labels: {', '.join(str(label) for label in answer.labels)}" if answer.labels else ""
     return f"{answer.answer}\n{label_info}"
 
 
-# To create a CustomLink
+# Function to create a CustomLink
 def create_custom_link(origin: CustomNode, end: CustomNode, message: str, labels: list[str]) -> CustomLink:
     if end is None:
         raise ValueError(f"Error: Could not find destination node for link with message '{message}'")
     return CustomLink(origin=origin, end=end, message=message, labels=labels)
 
 
-# Handle creation of links for redirects with nextQuestionId or nextConclusionId
+# Function to handle creation of links for redirects with nextQuestionId or nextConclusionId
 def handle_redirects(links: list[CustomLink], origin: CustomNode, answer: Answer, base_message: str) -> None:
     redirects: list[Redirect] = [
         Redirect(
@@ -390,8 +390,8 @@ def format_redirect_message(answer: Answer, redirect: Redirect, base_message: st
     return f"{base_message},\n{condition_message}"
 
 
-# Create structure for subgraphs
-def create_subgraph_structure(links):
+# Function to create structure for subgraphs
+def create_subgraph_structure(links: list[CustomLink]) -> defaultdict:
     subgraphs = defaultdict(list)
     for link in links:
         if f"{link.origin.id_}" not in subgraphs[link.origin.category]:
@@ -401,8 +401,8 @@ def create_subgraph_structure(links):
     return subgraphs
 
 
-# Create complete graph html
-def create_complete_graph_html(subgraphs):
+# Function to create complete graph html
+def create_complete_graph_html(subgraphs: defaultdict) -> None:
     subgraphs_complete = "\n".join(
         [f"subgraph {category}\n" + "\n".join(questions) + "\nend" for category, questions in subgraphs.items()]
         + [str(secondary_style)]
@@ -417,7 +417,7 @@ def create_complete_graph_html(subgraphs):
 
 
 # Create subgraphs and write into html files
-def create_subgraph_html(subgraphs):
+def create_subgraph_html(subgraphs: defaultdict) -> None:
     nodes_by_category = defaultdict(list)
     links_by_category = defaultdict(list)
 
@@ -454,7 +454,7 @@ def create_subgraph_html(subgraphs):
 
 
 # Create main graph and write into html
-def create_main_graph_html(links):
+def create_main_graph_html(links: list[CustomLink]) -> None:
     pairs_main = "\n".join(
         {
             f"{link.origin.category} --> {link.end.category}"
