@@ -25,19 +25,19 @@ const emit = defineEmits(['acceptDisclaimer'])
                 <p class="utrecht-paragraph">Met deze beslisboom stel je vast of de AI-verordening geldt voor jouw
                   overheidsorganisatie. En aan welke
                   vereisten je dan moet voldoen.</p>
-                <ul class="utrecht-unordered-list">
-                  <li class="utrecht-unordered-list__item">Deze beslisboom is een betaversie: de informatie is niet
+                <ul class="rvo-ul rvo-ul--no-margin rvo-ul--no-padding utrecht-unordered-list">
+                  <li>Deze beslisboom is een betaversie: de informatie is niet
                     compleet en er kunnen fouten in staan.
                   </li>
-                  <li class="utrecht-unordered-list__item">Je bent zelf verantwoordelijk voor de informatie die je
+                  <li>Je bent zelf verantwoordelijk voor de informatie die je
                     gebruikt.
                   </li>
-                  <li class="utrecht-unordered-list__item">Overleg de uitkomsten van de beslisboom met een expert.</li>
-                  <li class="utrecht-unordered-list__item">De beslisboom is bedoeld voor overheden die AI-systemen
+                  <li>Overleg de uitkomsten van de beslisboom met een expert.</li>
+                  <li>De beslisboom is bedoeld voor overheden die AI-systemen
                     aanbieden, of gebruiken onder eigen
                     verantwoordelijkheid.
                   </li>
-                  <li class="utrecht-unordered-list__item"> Voor vragen of opmerkingen over de beslisboom mail je naar:
+                  <li> Voor vragen of opmerkingen over de beslisboom mail je naar:
                     <a
                       class="rvo-link" href="mailto:ai-verordering@minbzk.nl">
                       ai-verordering@minbzk.nl</a>.
