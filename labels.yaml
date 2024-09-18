@@ -1,0 +1,32 @@
+- category: "type"
+  labels:
+   - "AI-systeem"
+   - "AI-systeem voor algemene doeleinden"
+   - "AI-model voor algemene doeleinden"
+   - "algoritme"
+   - "geen algoritme"
+- category: "open_source"
+  labels:
+   - "open-source"
+   - "geen open-source"
+- category: "publication_category"
+  labels:
+   - "impactvol algoritme"
+   - "niet-impactvol algoritme"
+   - "hoog-risico AI"
+   - "geen hoog-risico AI"
+   - "verboden AI"
+   - "uitzonderingsgrond: AI-verordening niet van toepassing"
+- category: "systemic_risk"
+  labels:
+  - "systeemrisico"
+  - "geen systeemrisico"
+- category: "transparency_obligations"
+  labels:
+  - "transparantieverplichtingen"
+  - "geen transparantieverplichtingen"
+- category: "role"
+  labels:
+  - "aanbieder"
+  - "gebruiksverantwoordelijke"
+  - "aanbieder + gebruiksverantwoordelijke"
