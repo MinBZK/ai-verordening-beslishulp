@@ -5,7 +5,7 @@ export const useQuestionStore = defineStore('question', () => {
   const initialLabelsByCategoryNTB = `{
     "Soort toepassing": ["Nader te bepalen"],
     "Open-source": ["Nader te bepalen"],
-    "Publicatiecategorie": ["Nader te bepalen"],
+    "Uitzonderingen": ["Nader te bepalen"],
     "Systeemrisico": ["Nader te bepalen"],
     "Transparantieverplichtingen": ["Nader te bepalen"],
     "Rol": ["Nader te bepalen"]
