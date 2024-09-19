@@ -15,7 +15,7 @@ export const useQuestionStore = defineStore('question', () => {
   const initialAnswers = JSON.parse(localStorage.getItem('answers') ?? '[]')
   const initialLabels = JSON.parse(localStorage.getItem('labels') ?? '{}')
   const initialLabelsByCategory = JSON.parse(localStorage.getItem('labelsbycategory') ?? initialLabelsByCategoryNTB)
-  const initialQuestionId  = localStorage.getItem('currentquestion') ?? '0'
+  const initialQuestionId  = JSON.parse(localStorage.getItem('currentquestion') ?? '0')
   const initialConclusionId = localStorage.getItem('currentconclusion') ?? ''
 
   const AcceptedDisclaimer = ref(String(initialAcceptedDisclaimer))
