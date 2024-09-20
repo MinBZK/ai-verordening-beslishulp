@@ -10,3 +10,8 @@
   font-weight: var(--utrecht-document-font-weight);
   line-height: var(--utrecht-document-line-height);
 }
+
+.progress-tracker-font {
+  color: var(--rvo-color-hemelblauw);
+  font-weight: bold;
+}

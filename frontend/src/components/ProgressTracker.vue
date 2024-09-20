@@ -24,32 +24,32 @@ function change_status(category: string) {
     >
     </div>
     <div :class="change_status(soort_toepassing_state)">
-      <a class="rvo-link rvo-progress-tracker__step-link">
+      <a class="progress-tracker-font rvo-progress-tracker__step-link">
         Soort toepassing
       </a>
     </div>
     <div :class="change_status(open_source_state)">
-      <a class="rvo-link rvo-progress-tracker__step-link">
+      <a class="progress-tracker-font rvo-progress-tracker__step-link">
         Open-source
       </a>
     </div>
     <div :class="change_status(publicatiecategorie_state)">
-      <a class="rvo-link rvo-progress-tracker__step-link">
+      <a class="progress-tracker-font rvo-progress-tracker__step-link">
         Publicatiecategorie
       </a>
     </div>
     <div :class="change_status(systeemrisico_state)">
-      <a class="rvo-link rvo-progress-tracker__step-link">
+      <a class="progress-tracker-font rvo-progress-tracker__step-link">
         Systeemrisico
       </a>
     </div>
     <div :class="change_status(transparantieverplichtingen_state)">
-      <a class="rvo-link rvo-progress-tracker__step-link">
+      <a class="progress-tracker-font rvo-progress-tracker__step-link">
         Transparantieverplichtingen
       </a>
     </div>
     <div :class="change_status(rol_state)">
-      <a class="rvo-link rvo-progress-tracker__step-link">
+      <a class="progress-tracker-font rvo-progress-tracker__step-link">
         Rol
       </a>
     </div>

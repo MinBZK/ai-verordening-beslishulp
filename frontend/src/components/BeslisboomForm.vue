@@ -32,7 +32,7 @@ const data_questions = ref<Questions>([])
 const data_conclusions = ref<Conclusions>([])
 const data_categories = ref<Categories>([])
 const questionId = QuestionId
-const conclusionId = ConclusionId
+let conclusionId = ConclusionId
 const isLoading = ref(true)
 const error = ref<string | null>(null)
 
@@ -205,7 +205,6 @@ function acceptDisclaimer() {
           :labels="questionStore.getLabelsByCategory()"
           :showButtons="null"
         />
-<!--        show if showsubresult-->
         <SubResult v-if="showSubresult === '1' && !conclusionId && currentCategory && questionStore.getLabelsByCategory()"
                    :topic="currentCategory.topic"
                    :labels="questionStore.getLabelsByCategory()"
