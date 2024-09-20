@@ -23,7 +23,7 @@ const emit = defineEmits(['reset-event'])
                   role="img"
                   aria-label="Terug"
                 ></span>
-                  Terug naar het begin
+                  Begin opnieuw
                 </a>
               </li>
             </ul>
