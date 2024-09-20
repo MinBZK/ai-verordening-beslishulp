@@ -19,14 +19,12 @@ import DefaultError from '@/components/DefaultError.vue'
 import HomePage from '@/components/HomePage.vue'
 import Header from '@/components/Header.vue'
 import ProgressTracker from '@/components/ProgressTracker.vue'
-import SubResult from '@/components/SubResult.vue'
-import { c } from 'vite/dist/node/types.d-aGj9QkWt'
 
 const questionStore = useQuestionStore()
 const { AcceptedDisclaimer, QuestionId, ConclusionId } = storeToRefs(questionStore)
 
 const categoryStore = useCategoryStore()
-const { categoryState, previousCategory, showSubresult } = storeToRefs(categoryStore)
+const { categoryState, previousCategory } = storeToRefs(categoryStore)
 
 const data_questions = ref<Questions>([])
 const data_conclusions = ref<Conclusions>([])
@@ -167,10 +165,6 @@ function back() {
   categoryStore.revertCurrentCategory()
 }
 
-function forwardSubresult(){
-  categoryStore.resetSubresult()
-}
-
 function acceptDisclaimer() {
   questionStore.acceptDisclaimer()
 }
@@ -203,21 +197,15 @@ function acceptDisclaimer() {
           :sources="findConclusion.sources"
           :topic="currentCategory.topic"
           :labels="questionStore.getLabelsByCategory()"
-          :showButtons="null"
         />
-        <SubResult v-if="showSubresult === '1' && !conclusionId && currentCategory && questionStore.getLabelsByCategory()"
-                   :topic="currentCategory.topic"
-                   :labels="questionStore.getLabelsByCategory()"
-                   @back="back"
-                   @forward="forwardSubresult"
-                  :showButtons="true"/>
-        <div v-if="showSubresult === '0' && currentQuestion && currentCategory">
+        <div v-if="currentQuestion && currentCategory">
           <Question
             :question="currentQuestion.question"
             :id="currentQuestion.questionId"
             :sources="currentQuestion.sources"
             :answers="currentQuestion.answers"
             :topic="currentCategory.topic"
+            :labels="questionStore.getLabelsByCategory()"
             @answered="givenAnswer"
             @back="back"
           />

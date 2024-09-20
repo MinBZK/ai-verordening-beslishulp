@@ -2,6 +2,7 @@
 import BetaversionLabel from '@/components/betaversion-label.vue'
 import Sources from '@/components/Sources.vue'
 import { Answer } from '@/models/DecisionTree'
+import SubResult from '@/components/SubResult.vue'
 
 interface Props {
   id: string
@@ -9,6 +10,7 @@ interface Props {
   sources: { source: string; url: string | undefined; }[] | undefined
   answers: Array<Answer>
   topic: string
+  labels: { category: string; assigned_labels: string | undefined; }[] | undefined
 }
 
 defineProps<Props>()
@@ -49,15 +51,20 @@ defineEmits(['answered', 'back'])
         </div>
       </div>
     </fieldset>
-  </div>
-  <div>
+     <SubResult
+                   :topic="topic"
+                   :labels="labels"/>
+
+  <div class="rvo-layout-margin-vertical--2xl">
     <button
       @click="$emit('back')"
       v-if="id !== '0'"
       type="button"
-      class="utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline "
+      class="flex utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline "
     >
       Vorige vraag
     </button>
   </div>
+  </div>
+
 </template>

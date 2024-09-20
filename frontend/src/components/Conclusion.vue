@@ -28,8 +28,7 @@ defineProps<Props>()
     <!--   Labels section  -->
     <SubResult
       :topic="topic"
-      :labels="labels"
-      :showButtons="null"/>
+      :labels="labels"/>
 
     <!--Obligation/Verplichtingen section-->
     <p style="white-space: pre-line" class="rvo-text--bold rvo-text--md --rvo-font-sans-serif-font-family">
