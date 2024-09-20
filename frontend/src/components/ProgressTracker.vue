@@ -17,7 +17,6 @@ function change_status(category: string) {
 </script>
 
 <template>
-  <!--  TODO: Replace link with other type same color-->
   <div class="rvo-progress-tracker">
     <div
       class="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--start rvo-image-bg-progress-tracker-start-end-md--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before"

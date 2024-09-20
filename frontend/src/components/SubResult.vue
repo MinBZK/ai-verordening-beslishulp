@@ -22,7 +22,7 @@ function get_background_color(label: string | undefined) {
 <template>
   <div class="flex-col">
     <div v-if="showButtons" class="flex">
-    <h3 v-if="showButtons" class="utrecht-heading-1" style="color: var(--rvo-color-hemelblauw)">Sub-resultaat</h3>
+    <h3 v-if="showButtons" class="utrecht-heading-1" style="color: var(--rvo-color-hemelblauw)">Tussenresultaat</h3>
           <BetaversionLabel />
     </div>
     <div class="rvo-table--responsive py-5">
