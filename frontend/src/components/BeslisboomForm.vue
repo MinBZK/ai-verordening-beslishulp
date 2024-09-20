@@ -115,6 +115,7 @@ const currentCategory = computed(() => {
   if (questionId.value){
     return handleVersions(questionId.value)
   } else {
+    questionStore.updateLabelsAtConclusion()
     return handleVersions(conclusionId.value)
   }
 })

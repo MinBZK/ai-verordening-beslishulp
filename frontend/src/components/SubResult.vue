@@ -11,7 +11,7 @@ defineProps<Props>()
 const emit = defineEmits(['back', 'forward'])
 
 function get_background_color(label: string | undefined) {
-  if (label === 'Nader te bepalen') {
+  if (label === 'Nader te bepalen' || label === 'Niet van toepassing') {
     return 'background-color: var(--rvo-color-grijs-300)'
   }
   return 'background-color: var(--rvo-color-hemelblauw-450)'

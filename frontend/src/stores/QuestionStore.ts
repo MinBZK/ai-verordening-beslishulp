@@ -15,7 +15,7 @@ export const useQuestionStore = defineStore('question', () => {
   const initialAnswers = JSON.parse(localStorage.getItem('answers') ?? '[]')
   const initialLabels = JSON.parse(localStorage.getItem('labels') ?? '{}')
   const initialLabelsByCategory = JSON.parse(localStorage.getItem('labelsbycategory') ?? initialLabelsByCategoryNTB)
-  const initialQuestionId  = JSON.parse(localStorage.getItem('currentquestion') ?? '0')
+  const initialQuestionId = JSON.parse(localStorage.getItem('currentquestion') ?? '0')
   const initialConclusionId = localStorage.getItem('currentconclusion') ?? ''
 
   const AcceptedDisclaimer = ref(String(initialAcceptedDisclaimer))
@@ -56,10 +56,23 @@ export const useQuestionStore = defineStore('question', () => {
   }
 
   function addLabelByCategory(label: string, category: string) {
-    if (JSON.stringify(LabelsByCategory.value[category]) === JSON.stringify(["Nader te bepalen"])) {
+    if (JSON.stringify(LabelsByCategory.value[category]) === JSON.stringify(['Nader te bepalen'])) {
       LabelsByCategory.value[category] = []
     }
     LabelsByCategory.value[category].push(label)
+    localStorage.setItem('labelsbycategory', JSON.stringify(LabelsByCategory.value))
+  }
+
+  function updateLabelsAtConclusion() {
+    /**
+     * This function will change all the "Nader te bepalen" labels to "Niet van Toepassing" when
+     * the conclusion of the decision tree has been reached.
+     */
+    for (let key in LabelsByCategory.value) {
+      if (JSON.stringify(LabelsByCategory.value[key]) === JSON.stringify(['Nader te bepalen'])) {
+        LabelsByCategory.value[key] = ['Niet van toepassing']
+      }
+    }
     localStorage.setItem('labelsbycategory', JSON.stringify(LabelsByCategory.value))
   }
 
@@ -71,11 +84,11 @@ export const useQuestionStore = defineStore('question', () => {
   function revertAnswer(previousCategory: string) {
     QuestionId.value = answers.value[answers.value.length - 1]
     answers.value.pop()
-    if(labels.value[QuestionId.value]) {
+    if (labels.value[QuestionId.value]) {
       const label: string = labels.value[QuestionId.value]
       LabelsByCategory.value[previousCategory].pop(label)
-      if (LabelsByCategory.value[previousCategory].length === 0){
-        LabelsByCategory.value[previousCategory].push("Nader te bepalen")
+      if (LabelsByCategory.value[previousCategory].length === 0) {
+        LabelsByCategory.value[previousCategory].push('Nader te bepalen')
       }
       delete labels.value[QuestionId.value]
     }
@@ -104,7 +117,22 @@ export const useQuestionStore = defineStore('question', () => {
   }
 
   return {
-    AcceptedDisclaimer, initialLabelsByCategoryNTB, QuestionId, ConclusionId, answers, LabelsByCategory, getLabelsByCategory, setQuestionId, setConclusionId, addAnswer, getJsonLabels, addLabel,
-    addLabelByCategory, revertAnswer, reset, acceptDisclaimer
+    AcceptedDisclaimer,
+    initialLabelsByCategoryNTB,
+    QuestionId,
+    ConclusionId,
+    answers,
+    LabelsByCategory,
+    getLabelsByCategory,
+    setQuestionId,
+    setConclusionId,
+    addAnswer,
+    getJsonLabels,
+    addLabel,
+    addLabelByCategory,
+    updateLabelsAtConclusion,
+    revertAnswer,
+    reset,
+    acceptDisclaimer
   }
 })
