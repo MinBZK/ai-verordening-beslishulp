@@ -71,6 +71,7 @@ class CustomLink(Link):
 
 
 class CustomStyle(Style):
+    # add options to __init__ method
     def __init__(
         self,
         name: str,
@@ -179,7 +180,7 @@ class Conclusion:
     sources: list[Source] | None = None
 
 
-# function to only remove all special characters
+# Function to only remove all special characters
 def escape_for_mermaid(text):
     return text.replace("||", "of").replace("&&", "en")
 
@@ -190,10 +191,67 @@ def find_node_by_id(node_id):
             return node
 
 
-def get_category(subgraphs, link):
-    return next((key for key, values in subgraphs.items() if link in values), None)
+# Main logic - Higher-level functions
 
 
+# Function to create nodes for questions and conclusions
+def create_nodes(conclusions: list[Conclusion], questions: list[Question], secondary_style: Style) -> list[CustomNode]:
+    nodes: list[CustomNode] = []
+    for question in questions:
+        nodes.append(
+            CustomNode(
+                id_="q-" + question.questionId,
+                content=question.questionId + ": " + question.simplifiedQuestion,
+                shape="circle",
+                callback_tooltip=question.question,
+                category=question.category,
+            )
+        )
+    for conclusion in conclusions:
+        nodes.append(
+            CustomNode(
+                id_="c-" + conclusion.conclusionId,
+                content=conclusion.conclusion,
+                shape="hexagon",
+                styles=[secondary_style],
+                callback_tooltip=conclusion.obligation,
+            )
+        )
+    return nodes
+
+
+# Function to create links between questions and conclusions
+def create_links(questions: list[Question]) -> list[CustomLink]:
+    links: list[CustomLink] = []
+
+    for question in questions:
+        # Convert raw answers into Answer objects
+        answers: list[Answer] = [Answer(**a) for a in question.answers]
+        origin = find_node_by_id(f"q-{question.questionId}")
+
+        for answer in answers:
+            link_message = format_link_message(answer)
+
+            # Handle nextQuestionId or nextConclusionId
+            if answer.nextQuestionId or answer.nextConclusionId:
+                end = find_node_by_id(
+                    f"q-{answer.nextQuestionId}" if answer.nextQuestionId else f"c-{answer.nextConclusionId}"
+                )
+                links.append(create_custom_link(origin, end, link_message, answer.labels))
+
+            # Handle redirects
+            elif answer.redirects:
+                handle_redirects(links, origin, answer, link_message)
+
+            else:
+                print(
+                    f"Error: No nextQuestionId or nextConclusionId found in answer for question {question.questionId}"
+                )
+
+    return links
+
+
+# Function to create html files
 def create_html(file_name: str, flowchart_script: str) -> None:
     html_template = """
     <!DOCTYPE html>
@@ -293,60 +351,145 @@ def create_html(file_name: str, flowchart_script: str) -> None:
         file.write(html_template)
 
 
-# Function to create nodes for questions and conclusions
-def create_nodes(conclusions: list[Conclusion], questions: list[Question], secondary_style: Style) -> list[CustomNode]:
-    nodes: list[CustomNode] = []
-    for question in questions:
-        nodes.append(
-            CustomNode(
-                id_="q-" + question.questionId,
-                content=question.questionId + ": " + question.simplifiedQuestion,
-                shape="circle",
-                callback_tooltip=question.question,
-                category=question.category,
-            )
+# Function to create structure for subgraphs by categorizing links question_id per category
+def create_subgraph_structure(links: list[CustomLink]) -> defaultdict:
+    if not links:
+        raise ValueError("Links cannot be empty")
+
+    subgraphs = defaultdict(list)
+
+    for link in links:
+        origin_category = link.origin.category
+        origin_id = f"{link.origin.id_}"
+        end_id = f"{link.end.id_}"
+
+        if origin_id not in subgraphs[origin_category]:
+            subgraphs[origin_category].append(origin_id)
+
+        if end_id not in subgraphs[origin_category] and end_id.startswith("c-"):
+            subgraphs[origin_category].append(end_id)
+
+    return subgraphs
+
+
+# Function to create HTML of the complete graph from subgraph structure
+def create_complete_graph_html(
+    subgraphs: defaultdict, nodes: list[CustomNode], links: list[CustomLink], name: str, orientation: str, config: dict
+) -> None:
+    # create mermaid syntax subgraphs including styling for each category
+    subgraphs_complete = "\n".join(
+        [f"subgraph {category}\n" + "\n".join(questions) + "\nend" for category, questions in subgraphs.items()]
+        + [str(secondary_style)]
+        + [f"class {category} secondaryStyle" for category in subgraphs]
+    )
+
+    flowchart_complete = FlowChart(title=name, nodes=nodes, links=links, orientation=orientation, config=config)
+
+    create_html(
+        "./mermaid_graphs/decision-tree-complete.html",
+        flowchart_complete.script + subgraphs_complete,
+    )
+
+
+# Create subgraphs and write into html files
+def create_subgraph_html(subgraphs: defaultdict, orientation: str, config: dict) -> None:
+    nodes_by_category = defaultdict(list)
+    links_by_category = defaultdict(list)
+
+    # Loop over the subgraphs/category
+    for category, cat_questions in subgraphs.items():
+        # Select nodes and links that belong to a category
+        links_by_category[category] = [link for link in links if link.origin.id_ in cat_questions]
+        nodes_by_category[category] = [node for node in nodes if node.id_ in cat_questions]
+
+        # Create flowchart for the category
+        flowchart_complete = FlowChart(
+            title=category,
+            nodes=nodes_by_category.get(category, []),
+            links=links_by_category.get(category, []),
+            orientation=orientation,
+            config=config,
         )
-    for conclusion in conclusions:
-        nodes.append(
-            CustomNode(
-                id_="c-" + conclusion.conclusionId,
-                content=conclusion.conclusion,
-                shape="hexagon",
-                styles=[secondary_style],
-                callback_tooltip=conclusion.obligation,
-            )
+
+        # Extract 'end' nodes of the category that are not already in the category's questions (link to other subgraphs)
+        external_links = {link.end.id_ for link in links_by_category[category] if link.end.id_ not in cat_questions}
+
+        # Create clickable links between subgraph HTML files in Mermaid syntax
+        links_between_subgraphs = "\n".join(
+            f'click {link} href "decision-tree-subgraphs-{end_category}.html" "{end_category}"'
+            for link in external_links
+            if (end_category := get_category(subgraphs, link)) is not None
         )
-    return nodes
 
-# Function to create links
-def create_links(questions: list[Question]) -> list[CustomLink]:
-    links: list[CustomLink] = []
+        # Initialize the script by appending links between subgraphs to the main flowchart script
+        subgraph_script = flowchart_complete.script + "\n" + links_between_subgraphs
 
-    for question in questions:
-        # Convert raw answers into Answer objects
-        answers: list[Answer] = [Answer(**a) for a in question.answers]
-        origin = find_node_by_id(f"q-{question.questionId}")
+        # Replace 'end' node IDs with their corresponding category in the subgraph script (display category and not ID)
+        subgraph_script = replace_external_ids_with_category(subgraph_script, subgraphs, external_links)
 
-        for answer in answers:
-            link_message = format_link_message(answer)
+        # Create the HTML file for the current category's subgraph
+        create_html(
+            f"./mermaid_graphs/decision-tree-subgraphs-{category}.html",
+            subgraph_script,
+        )
 
-            # Handle nextQuestionId or nextConclusionId
-            if answer.nextQuestionId or answer.nextConclusionId:
-                end = find_node_by_id(
-                    f"q-{answer.nextQuestionId}" if answer.nextQuestionId else f"c-{answer.nextConclusionId}"
-                )
-                links.append(create_custom_link(origin, end, link_message, answer.labels))
 
-            # Handle redirects
-            elif answer.redirects:
-                handle_redirects(links, origin, answer, link_message)
+def create_main_graph_html(
+    links: list[CustomLink], subgraphs: list[str], name: str, orientation: str, config: dict
+) -> None:
+    # Generate edges between different categories
+    pairs_main = "\n".join(
+        {
+            f"{link.origin.category} --> {link.end.category}"
+            for link in links
+            if link.origin.category != link.end.category and link.end.category
+        }
+    )
 
-            else:
-                print(
-                    f"Error: No nextQuestionId or nextConclusionId found in answer for question {question.questionId}"
-                )
+    # Generate labels per category for the flowchart in mermaid syntax
+    labels_per_category = "\n".join(
+        {
+            f"{link.origin.category}~~~| {link.labels[0]}|{link.origin.category}"
+            for link in links
+            if link.labels is not None
+        }
+    )
 
-    return links
+    # Generate clickable links for subgraphs in the main graph in mermaid syntax
+    htmls = "\n".join(
+        f'click {category} href "decision-tree-subgraphs-{category}.html" "{category}"' for category in subgraphs
+    )
+
+    # Create the main flowchart object
+    flowchart_main = FlowChart(title=name, orientation=orientation, config=config)
+
+    # Combine the flowchart's script with the generated pairs, labels, and clickable links.
+    create_html(
+        "./mermaid_graphs/decision-tree-main.html",
+        f"{flowchart_main.script}\n{pairs_main}\n{labels_per_category}\n{htmls}",
+    )
+
+
+# Helper logic - Low-level functions
+
+
+# Function to replace node IDs with their corresponding category in the script
+def replace_external_ids_with_category(script: str, subgraphs: defaultdict, external_links: set) -> str:
+    # Iterate through each subgraph to replace external node IDs with category names
+    for category, category_nodes in subgraphs.items():
+        # Find external nodes that belong to the current category
+        nodes_to_replace = [node_id for node_id in category_nodes if node_id in external_links]
+
+        # Replace each node ID with the category name
+        for node_id in nodes_to_replace:
+            script = script.replace(node_id, category)
+
+    return script
+
+
+# Function to find the category that contains a specific link.
+def get_category(subgraphs: dict, link: str) -> str:
+    return next((key for key, values in subgraphs.items() if link in values), None)
 
 
 # Function to format the link message with the answer and labels
@@ -383,104 +526,11 @@ def handle_redirects(links: list[CustomLink], origin: CustomNode, answer: Answer
             print(f"Error: No nextQuestionId or nextConclusionId found in redirects for question {origin.id_}")
 
 
+# Function to format the message for redirect links
 def format_redirect_message(answer: Answer, redirect: Redirect, base_message: str) -> str:
-    """Helper to format the message for redirect links."""
     match_list = [m[0] or m[1] for m in re.findall(r'"([^"]+)"\s+in\s+labels|(\bof\b|\ben\b)', redirect.if_condition)]
     condition_message = f"Als: {' '.join(match_list)}."
     return f"{base_message},\n{condition_message}"
-
-
-# Function to create structure for subgraphs
-def create_subgraph_structure(links: list[CustomLink]) -> defaultdict:
-    subgraphs = defaultdict(list)
-    for link in links:
-        if f"{link.origin.id_}" not in subgraphs[link.origin.category]:
-            subgraphs[link.origin.category].append(f"{link.origin.id_}")
-        if f"{link.end.id_}" not in subgraphs[link.origin.category] and link.end.id_.startswith("c-"):
-            subgraphs[link.origin.category].append(f"{link.end.id_}")
-    return subgraphs
-
-
-# Function to create complete graph html
-def create_complete_graph_html(subgraphs: defaultdict) -> None:
-    subgraphs_complete = "\n".join(
-        [f"subgraph {category}\n" + "\n".join(questions) + "\nend" for category, questions in subgraphs.items()]
-        + [str(secondary_style)]
-        + [f"class {category} secondaryStyle" for category in subgraphs]
-    )
-
-    flowchart_complete = FlowChart(title=name, nodes=nodes, links=links, orientation=orientation, config=config)
-    create_html(
-        "./mermaid_graphs/decision-tree-complete.html",
-        flowchart_complete.script + subgraphs_complete,
-    )
-
-
-# Create subgraphs and write into html files
-def create_subgraph_html(subgraphs: defaultdict) -> None:
-    nodes_by_category = defaultdict(list)
-    links_by_category = defaultdict(list)
-
-    for category, cat_questions in subgraphs.items():
-        links_by_category[category] = [link for link in links if link.origin.id_ in cat_questions]
-        nodes_by_category[category] = [node for node in nodes if node.id_ in cat_questions]
-        flowchart = FlowChart(
-            title=category,
-            nodes=nodes_by_category.get(category, []),
-            links=links_by_category.get(category, []),
-            orientation=orientation,
-            config=config,
-        )
-        # Add 'end' nodes to categories
-        subgraph_links = {link.end.id_ for link in links_by_category[category] if link.end.id_ not in cat_questions}
-
-        # Create links between subgraphs
-        links_between_subgraphs = "\n".join(
-            [
-                f'click {link} href "decision-tree-subgraphs-{end_category}.html" "{end_category}"'
-                for link in subgraph_links
-                if (end_category := get_category(subgraphs, link)) is not None
-            ]
-        )
-        subgraph_script = flowchart.script + "\n" + links_between_subgraphs
-        for key, values in subgraphs.items():
-            for value in (v for v in values if v in subgraph_links):
-                subgraph_script = subgraph_script.replace(value, key)
-
-        create_html(
-            "./mermaid_graphs/decision-tree-subgraphs-" + category + ".html",
-            subgraph_script,
-        )
-
-
-# Create main graph and write into html
-def create_main_graph_html(links: list[CustomLink]) -> None:
-    pairs_main = "\n".join(
-        {
-            f"{link.origin.category} --> {link.end.category}"
-            for link in links
-            if link.origin.category != link.end.category and link.end.category
-        }
-    )
-
-    labels_per_category = "\n".join(
-        {
-            f"{link.origin.category}~~~| {link.labels[0]}|{link.origin.category}"
-            for link in links
-            if link.labels is not None
-        }
-    )
-
-    htmls = "\n".join(
-        [f'click {category} href "decision-tree-subgraphs-{category}.html" "{category}"' for category in subgraphs]
-    )
-
-    flowchart_main = FlowChart(title=name, config=config)
-
-    create_html(
-        "./mermaid_graphs/decision-tree-main.html",
-        flowchart_main.script + pairs_main + "\n" + labels_per_category + "\n" + htmls,
-    )
 
 
 with open("decision-tree.yaml") as file:
@@ -505,11 +555,14 @@ secondary_style = CustomStyle(name="secondaryStyle", fill="#FFFFFF", stroke="#39
 
 orientation = Direction.TOP_TO_BOTTOM
 
-# Create graphs
-nodes = create_nodes(conclusions, questions, secondary_style)
-links = create_links(questions)
-subgraphs = create_subgraph_structure(links)
+# Create nodes, links and subgraphs
+nodes = create_nodes(conclusions=conclusions, questions=questions, secondary_style=secondary_style)
+links = create_links(questions=questions)
+subgraphs = create_subgraph_structure(links=links)
 
-create_complete_graph_html(subgraphs)
-create_subgraph_html(subgraphs)
-create_main_graph_html(links)
+# Generate HTML files
+create_complete_graph_html(
+    subgraphs=subgraphs, links=links, nodes=nodes, name=name, orientation=orientation, config=config
+)
+create_subgraph_html(subgraphs=subgraphs, orientation=orientation, config=config)
+create_main_graph_html(subgraphs=subgraphs, links=links, name=name, orientation=orientation, config=config)
