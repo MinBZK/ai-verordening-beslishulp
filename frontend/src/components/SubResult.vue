@@ -21,10 +21,9 @@ function get_background_color(label: string | undefined) {
 
 <template>
   <div class="flex-col">
-    <h3 v-if="showButtons" class="utrecht-heading-3" style="color: var(--rvo-color-hemelblauw)">Sub-resultaat</h3>
     <div v-if="showButtons" class="flex">
-      <h1 class="utrecht-heading-1"><span>{{ topic }}</span></h1>
-      <BetaversionLabel />
+    <h3 v-if="showButtons" class="utrecht-heading-1" style="color: var(--rvo-color-hemelblauw)">Sub-resultaat</h3>
+          <BetaversionLabel />
     </div>
     <div class="rvo-table--responsive py-5">
       <table class="rvo-table">
