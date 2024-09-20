@@ -36,8 +36,6 @@ const conclusionId = ConclusionId
 const isLoading = ref(true)
 const error = ref<string | null>(null)
 
-let showSubResultScreen = 0
-
 onMounted(async () => {
   // Read in the Data
   try {
@@ -185,7 +183,7 @@ function acceptDisclaimer() {
   </div>
   <div v-else>
     <Header @reset-event="reset" />
-    <div class="flex justify-center py-10">
+    <div class="flex justify-center px-10 py-10">
       <ProgressTracker
         v-if="categoryState"
         :soort_toepassing_state="categoryState.soort_toepassing_state"
