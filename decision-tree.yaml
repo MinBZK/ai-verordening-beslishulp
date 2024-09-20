@@ -16,13 +16,9 @@ questions:
     answers:
       - answer: Ja
         subresult: "Er is sprake van een algoritme."
-        labels:
-          - "algoritme"
         nextQuestionId: "1.0"
       - answer: Nee
         nextConclusionId: "15.0"
-        labels:
-          - "geen algoritme"
 
   ### check of het een AI-systeem is
   - questionId: "1.0"
@@ -71,7 +67,7 @@ questions:
             - "AI-model voor algemene doeleinden"
         nextQuestionId: "1.0.1" #check open source
       - answer: Nee
-        nextQuestionId: "9.0" #check open source
+        nextQuestionId: "9.0"
 
 
   ### check of het systeem/model open-source is
@@ -129,8 +125,6 @@ questions:
         nextConclusionId: "15.3"
       - answer: Nee
         subresult: "Er is geen sprake van een uitzonderingsgrond. De AI-verordening is van toepassing."
-        labels:
-          - "geen uitzonderingsgrond: AI-verordening van toepassing"
         redirects:
           - nextQuestionId: "3.0"
             if: '"AI-systeem" in labels || "AI-systeem voor algemene doeleinden" in labels'
@@ -161,8 +155,6 @@ questions:
         nextQuestionId: "3.1"
       - answer: Nee
         subresult: "Het AI-systeem is niet verboden. We gaan nu bepalen of er sprake is van een hoog-risico AI-systeem."
-        labels:
-          - "niet-verboden AI"
         nextQuestionId: "4.0"
 
   ### check of er een uitzondering geldt voor het verboden AI-systeem
@@ -385,8 +377,8 @@ questions:
         redirects:
           - nextQuestionId: "8.0"
             if: ('"geen open-source" in labels' || ('"open-source" in labels' && '"hoog-risico AI" in labels') || ('"open-source" in labels' && '"AI-model voor algemene doeleinden" in labels'))
-          - nextQuestionId: "9.0"
-            if: ('"open-source" in labels' && '"geen hoog-risico AI" in labels' && '"niet-verboden AI" in labels')
+          - nextQuestionId: "15.3"
+            if: ('"open-source" in labels' && '"geen hoog-risico AI" in labels')
   - questionId: "7.1"
     question: "Is er sprake van AI waarvan het bij wet is toegestaan om te gebruiken om strafbare feiten op te sporen, te voorkomen, te onderzoeken of te vervolgen?"
     simplifiedQuestion: "Uitzondering transparantieverplichtingen"
@@ -402,8 +394,8 @@ questions:
         redirects:
           - nextQuestionId: "8.0"
             if: ('"geen open-source" in labels' || ('"open-source" in labels' && '"hoog-risico AI" in labels'))
-          - nextQuestionId: "9.0"
-            if: ('"open-source" in labels' && '"geen hoog-risico AI" in labels' && '"niet-verboden AI" in labels')
+          - nextQuestionId: "15.3"
+            if: ('"open-source" in labels' && '"geen hoog-risico AI" in labels')
       - answer: Nee
         subresult: "Er is sprake van een transparantierisico."
         labels:
@@ -518,7 +510,7 @@ questions:
         nextQuestionId: "9.1"
       - answer: Nee
         labels:
-          - "niet impactvol"
+          - "niet-impactvol algoritme"
         nextConclusionId: "15.6"
   - questionId: "9.1"
     question: "Valt uw toepassing onder \xE9\xE9n van de uitzonderingsgronden categorie C of D van de Handreiking van het Algoritmeregister?"
@@ -532,11 +524,11 @@ questions:
         subresult: "Het betreft een algoritme met impact, maar de AI-verordening is niet van toepassing. U hoeft vanwege uitzonderingsgrond niet te publiceren in het register."
         nextConclusionId: "15.5"
         labels:
-          - "impactvol"
+          - "impactvol algoritme"
       - answer: Nee
         nextConclusionId: "15.4"
         labels:
-          - "impactvol"
+          - "impactvol algoritme"
 
 ### Conclusies
 conclusions:
