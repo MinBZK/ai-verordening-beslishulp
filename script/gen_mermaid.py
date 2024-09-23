@@ -383,7 +383,7 @@ def create_complete_graph_html(
         + [f"class {category} secondaryStyle" for category in subgraphs]
     )
 
-    flowchart_complete = FlowChart(title=name, nodes=nodes, links=links, orientation=orientation, config=config)
+    flowchart_complete = FlowChart(title=name, nodes=nodes, links=links, config=config)
 
     create_html(
         "./mermaid_graphs/decision-tree-complete.html",
@@ -530,7 +530,7 @@ def handle_redirects(links: list[CustomLink], origin: CustomNode, answer: Answer
 def format_redirect_message(answer: Answer, redirect: Redirect, base_message: str) -> str:
     match_list = [m[0] or m[1] for m in re.findall(r'"([^"]+)"\s+in\s+labels|(\bof\b|\ben\b)', redirect.if_condition)]
     condition_message = f"Als: {' '.join(match_list)}."
-    return f"{base_message},\n{condition_message}"
+    return f"{base_message}\n{condition_message}"
 
 
 with open("decision-tree.yaml") as file:
