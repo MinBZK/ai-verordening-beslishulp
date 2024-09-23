@@ -357,7 +357,7 @@ questions:
       - synthetische afbeeldingen, audio, video of tekst content genereert en manipuleert? Bijvoorbeeld een deepfake.\n
       - aan emotieherkenning of biometrische categorisatie doet?"
     simplifiedQuestion: "transparantieverplichtingen"
-    category: transparantieverplichtingen
+    category: transparantieverplichting
     sources:
       - source: Artikel 50 - transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
@@ -380,7 +380,7 @@ questions:
   - questionId: "7.1"
     question: "Is er sprake van AI waarvan het bij wet is toegestaan om te gebruiken om strafbare feiten op te sporen, te voorkomen, te onderzoeken of te vervolgen?"
     simplifiedQuestion: "Uitzondering transparantieverplichtingen"
-    category: transparantieverplichtingen
+    category: transparantieverplichting
     sources:
       - source: Artikel 50 - transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
