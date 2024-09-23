@@ -177,7 +177,7 @@ function acceptDisclaimer() {
   </div>
   <div v-else>
     <Header @reset-event="reset" />
-    <div class="flex justify-center px-10 py-10">
+    <div class="rvo-max-width-layout rvo-max-width-layout--md flex justify-center px-10 py-10">
       <ProgressTracker
         v-if="categoryState"
         :soort_toepassing_state="categoryState.soort_toepassing_state"
