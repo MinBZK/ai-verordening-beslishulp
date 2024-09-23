@@ -47,12 +47,12 @@ questions:
         subresult: "Er is sprake van een AI-systeem voor algemene doeleinden."
         labels:
           - "AI-systeem voor algemene doeleinden"
-        nextQuestionId: "1.0.1" #check open source
+        nextQuestionId: "1.0.1"
       - answer: Nee
         subresult: "Er is sprake van een AI-systeem"
         labels:
           - "AI-systeem"
-        nextQuestionId: "1.0.1" #check open source
+        nextQuestionId: "1.0.1"
   - questionId: "1.2"
     question: "Is de (beoogde) toepassing een AI-model voor algemene doeleinden?"
     simplifiedQuestion: "AI-model voor algemene doeleinden"
@@ -65,7 +65,7 @@ questions:
       - answer: Ja
         labels:
             - "AI-model voor algemene doeleinden"
-        nextQuestionId: "1.0.1" #check open source
+        nextQuestionId: "1.0.1"
       - answer: Nee
         nextQuestionId: "9.0"
 
@@ -120,8 +120,6 @@ questions:
         url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     answers:
       - answer: Ja
-        labels:
-          - "uitzonderingsgrond: AI-verordening niet van toepassing"
         nextConclusionId: "15.3"
       - answer: Nee
         subresult: "Er is geen sprake van een uitzonderingsgrond. De AI-verordening is van toepassing."
@@ -171,7 +169,7 @@ questions:
       - answer: Ja
         subresult: "Er is sprake van een uitzondering op de lijst van verboden AI-systemen."
         labels:
-          - "uitzondering verboden AI"
+          - "hoog-risico AI"
         nextConclusionId: "15.2"
       - answer: Nee
         labels:
