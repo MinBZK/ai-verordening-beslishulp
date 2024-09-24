@@ -11,6 +11,7 @@ interface Props {
 }
 
 defineProps<Props>()
+defineEmits(['back'])
 </script>
 
 <template>
@@ -47,6 +48,16 @@ defineProps<Props>()
 
     <!--Sources section-->
     <Sources :sources="sources" />
+
+    <div class="rvo-layout-margin-vertical--2xl">
+      <button
+        @click="$emit('back')"
+        type="button"
+        class="flex utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline "
+      >
+        Vorige vraag
+      </button>
+    </div>
 
   </div>
 </template>
