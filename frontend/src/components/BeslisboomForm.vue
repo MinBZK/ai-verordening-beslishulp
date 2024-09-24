@@ -87,20 +87,20 @@ onMounted(async () => {
   }
 })
 
-function handleVersions(question_or_conclusion_id: string){
+function handleVersions(question_or_conclusion_id: string) {
   let category: Category | undefined
-  let versions = question_or_conclusion_id.split(".")
+  let versions = question_or_conclusion_id.split('.')
   category = data_categories.value.find((q) => q.questionId === versions[0])
   if (versions.length >= 2) {
     // Only overwrite if we find something here
     let category_overwrite = data_categories.value.find((q) => q.questionId === versions[0] + '.' + versions[1])
-    if(category_overwrite != undefined){
+    if (category_overwrite != undefined) {
       category = category_overwrite
     }
   }
-  if (versions.length >= 3 ){
-    let category_overwrite = data_categories.value.find((q) => q.questionId === versions[0] + '.' + versions[1] + "." + versions[2])
-    if(category_overwrite != undefined){
+  if (versions.length >= 3) {
+    let category_overwrite = data_categories.value.find((q) => q.questionId === versions[0] + '.' + versions[1] + '.' + versions[2])
+    if (category_overwrite != undefined) {
       category = category_overwrite
     }
   }
@@ -108,7 +108,7 @@ function handleVersions(question_or_conclusion_id: string){
 }
 
 const currentCategory = computed(() => {
-  if (questionId.value){
+  if (questionId.value) {
     return handleVersions(questionId.value)
   } else {
     questionStore.updateLabelsAtConclusion()
@@ -200,18 +200,16 @@ function acceptDisclaimer() {
           :labels="questionStore.getLabelsByCategory()"
           @back="back"
         />
-        <div v-if="currentQuestion && currentCategory">
-          <Question
-            :question="currentQuestion.question"
-            :id="currentQuestion.questionId"
-            :sources="currentQuestion.sources"
-            :answers="currentQuestion.answers"
-            :topic="currentCategory.topic"
-            :labels="questionStore.getLabelsByCategory()"
-            @answered="givenAnswer"
-            @back="back"
-          />
-        </div>
+        <Question v-if="currentQuestion && currentCategory"
+                  :question="currentQuestion.question"
+                  :id="currentQuestion.questionId"
+                  :sources="currentQuestion.sources"
+                  :answers="currentQuestion.answers"
+                  :topic="currentCategory.topic"
+                  :labels="questionStore.getLabelsByCategory()"
+                  @answered="givenAnswer"
+                  @back="back"
+        />
       </div>
     </div>
   </div>
