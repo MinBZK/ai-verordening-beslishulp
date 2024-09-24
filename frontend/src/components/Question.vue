@@ -18,17 +18,19 @@ defineEmits(['answered', 'back'])
 </script>
 
 <template>
-  <div class="flex-col">
+  <div class="rvo-max-width-layout--md">
     <div class="flex">
       <h1 class="utrecht-heading-1"><span>{{ topic }}</span></h1>
-        <BetaversionLabel />
+      <BetaversionLabel />
     </div>
     <Sources :sources="sources" />
     <!-- Question and Answer section -->
-    <fieldset class="rvo-layout-margin-vertical--2xl utrecht-form-fieldset rvo-form-fieldset">
+    <div class="rvo-layout-margin-vertical--2xl">
+    <fieldset class="rvo-max-width-layout--sm utrecht-form-fieldset rvo-form-fieldset"
+    style="width: 500px">
       <!-- Question section -->
       <div>
-        <p style="white-space: pre-line" class="utrecht-paragraph rvo-max-width-layout--md">
+        <p style="white-space: pre-line" class="utrecht-paragraph">
           <span v-html="question"></span>
           <slot />
         </p>
@@ -46,25 +48,37 @@ defineEmits(['answered', 'back'])
             class="utrecht-button utrecht-button--secondary-action utrecht-button--rvo-md rvo-link--no-underline rvo-link--hover"
             :for="index.toString()"
           >
-            {{answer.answer}}
+            {{ answer.answer }}
           </button>
         </div>
       </div>
     </fieldset>
-     <SubResult
-                   :topic="topic"
-                   :labels="labels"/>
 
-  <div class="rvo-layout-margin-vertical--2xl">
-    <button
-      @click="$emit('back')"
-      v-if="id !== '0'"
-      type="button"
-      class="flex utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline "
-    >
-      Vorige vraag
-    </button>
-  </div>
+    <div class="rvo-layout-margin-vertical--xl">
+      <button
+        @click="$emit('back')"
+        v-if="id !== '0'"
+        type="button"
+        class="flex utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline "
+      >
+        <span
+                  class="utrecht-icon rvo-icon rvo-icon-terug rvo-icon--lg rvo-icon--wit"
+                  role="img"
+                  aria-label="Terug"
+                ></span>
+        Vorige vraag
+      </button>
+    </div>
+      </div>
+
+    <SubResult class="rvo-layout-margin-vertical--2xl"
+      style="width: 500px"
+      :topic="topic"
+      :labels="labels"
+      title="Tussenresultaten"
+      conclusion=""/>
+
+
   </div>
 
 </template>

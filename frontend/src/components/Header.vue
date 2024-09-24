@@ -13,7 +13,7 @@ const emit = defineEmits(['reset-event'])
     </div>
     <div class="rvo-layout-column rvo-layout-gap--2xl">
       <div class="rvo-topnav__background rvo-topnav__background--horizontal-rule">
-        <div class="rvo-max-width-layout rvo-max-width-layout--md rvo-max-width-layout-inline-padding--none">
+        <div class="rvo-max-width-layout rvo-max-width-layout--md rvo-max-width-layout-inline-padding--sm">
           <nav class="rvo-topnav rvo-topnav--lg">
             <ul class="rvo-topnav__list">
               <li class="rvo-topnav__item">

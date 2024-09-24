@@ -15,3 +15,10 @@
   color: var(--rvo-color-hemelblauw);
   font-weight: bold;
 }
+
+#progress-question-mobile {
+    @media only screen and (width <= 800px) {
+        display: flex;
+        align-items: center;
+    }
+}

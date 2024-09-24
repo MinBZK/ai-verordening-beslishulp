@@ -9,8 +9,7 @@ defineProps<Props>()
 <template>
   <div>
     <ul>
-
-      <li v-for='(source, index) in sources' :key="index" class="relative top-5 text-sm flex items-center">
+      <li v-for='(source, index) in sources' :key="index" class="text-sm flex items-center">
         <!-- When source.url exists -->
         <span
           class="utrecht-icon rvo-icon rvo-icon-info rvo-icon--xl rvo-status-icon-info"
