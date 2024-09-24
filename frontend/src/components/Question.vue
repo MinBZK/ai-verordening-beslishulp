@@ -71,7 +71,7 @@ defineEmits(['answered', 'back'])
     </div>
       </div>
 
-    <SubResult class="rvo-layout-margin-vertical--3xl"
+    <SubResult class="rvo-layout-margin-vertical--2xl"
       style="width: 500px"
       :topic="topic"
       :labels="labels"
