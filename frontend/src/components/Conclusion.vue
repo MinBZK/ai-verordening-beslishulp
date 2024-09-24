@@ -17,7 +17,7 @@ defineEmits(['back'])
 
 <template>
   <!--Conclusion/Resultaat section-->
-  <div class="flex flex-col py-5 gap-y-5">
+  <div class="flex flex-col py-5 gap-y-5 rvo-max-width-layout--md">
     <div class="flex">
       <div as="h3" class="utrecht-heading-2">Resultaat</div>
       <BetaversionLabel />
