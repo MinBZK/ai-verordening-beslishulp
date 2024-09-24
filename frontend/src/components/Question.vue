@@ -75,7 +75,8 @@ defineEmits(['answered', 'back'])
       style="width: 500px"
       :topic="topic"
       :labels="labels"
-      title="Tussenresultaten" />
+      title="Tussenresultaten"
+      conclusion=""/>
 
 
   </div>

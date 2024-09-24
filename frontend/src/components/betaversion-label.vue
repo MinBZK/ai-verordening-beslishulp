@@ -8,7 +8,7 @@
               aria-label="Waarschuwing"
             ></span>
       <div class="utrecht-alert--warning utrecht-paragraph">
-        bètaversie
+        Bètaversie
       </div>
     </div>
   </div>
