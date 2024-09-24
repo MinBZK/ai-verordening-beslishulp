@@ -129,7 +129,7 @@ function handleNextStep(object: Answer | Redirect) {
   if (object.nextConclusionId) {
     questionStore.setConclusionId(String(object.nextConclusionId))
   }
-  categoryStore.updateCurrentCategory(currentCategory.value.topic)
+  categoryStore.updateCurrentCategory(currentCategory.value?.topic)
 }
 
 async function givenAnswer(answer: Answer) {
@@ -137,7 +137,7 @@ async function givenAnswer(answer: Answer) {
   if (answer.labels) {
     for (let i in answer.labels) {
       questionStore.addLabel(answer.labels[i], questionId.value)
-      questionStore.addLabelByCategory(answer.labels[i], currentCategory.value.topic)
+      questionStore.addLabelByCategory(answer.labels[i], currentCategory.value?.topic)
     }
   }
   if (answer.redirects) {
@@ -195,7 +195,7 @@ function acceptDisclaimer() {
           :conclusion="findConclusion.conclusion"
           :obligation="findConclusion.obligation"
           :sources="findConclusion.sources"
-          :topic="currentCategory.topic"
+          :topic="currentCategory?.topic"
           :labels="questionStore.getLabelsByCategory()"
         />
         <div v-if="currentQuestion && currentCategory">

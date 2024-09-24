@@ -30,14 +30,16 @@ export const useCategoryStore = defineStore('category', () => {
   const categoryState = ref(initialCategoryState)
 
 
-  function updateCurrentCategory(category: string) {
-    previousCategory.value = currentCategory.value
-    currentCategory.value = category
-    categoryTrace.value.push(category)
-    localStorage.setItem('categoryTrace', JSON.stringify(categoryTrace.value))
-    localStorage.setItem('previousCategory', previousCategory.value)
-    localStorage.setItem('currentCategory', currentCategory.value)
-    updateCategoryState()
+  function updateCurrentCategory(category: string | undefined) {
+    if(category) {
+      previousCategory.value = currentCategory.value
+      currentCategory.value = category
+      categoryTrace.value.push(category)
+      localStorage.setItem('categoryTrace', JSON.stringify(categoryTrace.value))
+      localStorage.setItem('previousCategory', previousCategory.value)
+      localStorage.setItem('currentCategory', currentCategory.value)
+      updateCategoryState()
+    }
   }
 
   function updateCategoryState() {
