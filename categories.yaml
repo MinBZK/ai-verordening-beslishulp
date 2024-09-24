@@ -4,7 +4,10 @@
 - questionId: "1"
   topic: Soort toepassing
   topic_details: AI-systeem, AI-model of AI-model voor algemene doeleinden
-- questionId: "1.0"
+- questionId: "1.0.1"
+  topic: Open-source
+  topic_details: Open-source
+- questionId: "1.0.2"
   topic: Open-source
   topic_details: Open-source
 - questionId: "2"

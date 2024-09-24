@@ -2,20 +2,44 @@ import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
 export const useQuestionStore = defineStore('question', () => {
-  const initialAcceptedDisclaimer = JSON.parse(sessionStorage.getItem('acceptedDisclaimer') || '0')
-  const initialAnswers = JSON.parse(localStorage.getItem('answers') || '[]')
-  const initialLabels = JSON.parse(localStorage.getItem('labels') || '{}')
-  const initialQuestionId = JSON.parse(localStorage.getItem('currentquestion') || '0')
+  const initialLabelsByCategoryNTB = `{
+    "Soort toepassing": ["Nader te bepalen"],
+    "Open-source": ["Nader te bepalen"],
+    "Publicatiecategorie": ["Nader te bepalen"],
+    "Systeemrisico": ["Nader te bepalen"],
+    "Transparantieverplichtingen": ["Nader te bepalen"],
+    "Rol": ["Nader te bepalen"]
+  }`
+
+  const initialAcceptedDisclaimer = sessionStorage.getItem('acceptedDisclaimer') ?? '0'
+  const initialAnswers = JSON.parse(localStorage.getItem('answers') ?? '[]')
+  const initialLabels = JSON.parse(localStorage.getItem('labels') ?? '{}')
+  const initialLabelsByCategory = JSON.parse(localStorage.getItem('labelsbycategory') ?? initialLabelsByCategoryNTB)
+  const initialQuestionId = JSON.parse(localStorage.getItem('currentquestion') ?? '0')
+  const initialConclusionId = localStorage.getItem('currentconclusion') ?? ''
 
   const AcceptedDisclaimer = ref(String(initialAcceptedDisclaimer))
-  const QuestionId = ref(String(initialQuestionId))
+  const QuestionId = ref<any>(initialQuestionId)
+  const ConclusionId = ref(String(initialConclusionId))
   const answers = ref(initialAnswers)
   const labels = ref(initialLabels)
+  const LabelsByCategory = ref(initialLabelsByCategory)
 
-  function setQuestionId(id: string) {
+  function setQuestionId(id: string | null) {
     QuestionId.value = id
-    localStorage.setItem('currentquestion', JSON.stringify(QuestionId.value))
+    localStorage.setItem('currentquestion', QuestionId.value)
   }
+
+  function setConclusionId(id: string) {
+    ConclusionId.value = id
+    localStorage.setItem('currentconclusion', ConclusionId.value)
+  }
+
+  function getLabelsByCategory() {
+    // TODO: Research whether this variable can be access directly through refs
+    return LabelsByCategory.value
+  }
+
 
   function getJsonLabels() {
     const label_dict = JSON.parse(localStorage.getItem('labels') ?? '{}')
@@ -31,26 +55,60 @@ export const useQuestionStore = defineStore('question', () => {
     localStorage.setItem('labels', JSON.stringify(labels.value))
   }
 
+  function addLabelByCategory(label: string, category: string) {
+    if (JSON.stringify(LabelsByCategory.value[category]) === JSON.stringify(['Nader te bepalen'])) {
+      LabelsByCategory.value[category] = []
+    }
+    LabelsByCategory.value[category].push(label)
+    localStorage.setItem('labelsbycategory', JSON.stringify(LabelsByCategory.value))
+  }
+
+  function updateLabelsAtConclusion() {
+    /**
+     * This function will change all the "Nader te bepalen" labels to "Niet van Toepassing" when
+     * the conclusion of the decision tree has been reached.
+     */
+    for (let key in LabelsByCategory.value) {
+      if (JSON.stringify(LabelsByCategory.value[key]) === JSON.stringify(['Nader te bepalen'])) {
+        LabelsByCategory.value[key] = ['Niet van toepassing']
+      }
+    }
+    localStorage.setItem('labelsbycategory', JSON.stringify(LabelsByCategory.value))
+  }
+
   function addAnswer(id: string) {
     answers.value.push(id)
     localStorage.setItem('answers', JSON.stringify(answers.value))
   }
 
-  function revertAnswer() {
+  function revertAnswer(previousCategory: string) {
     QuestionId.value = answers.value[answers.value.length - 1]
     answers.value.pop()
-    delete labels.value[QuestionId.value]
+    if (labels.value[QuestionId.value]) {
+      const label: string = labels.value[QuestionId.value]
+      LabelsByCategory.value[previousCategory].pop(label)
+      if (LabelsByCategory.value[previousCategory].length === 0) {
+        LabelsByCategory.value[previousCategory].push('Nader te bepalen')
+      }
+      delete labels.value[QuestionId.value]
+    }
     localStorage.setItem('answers', JSON.stringify(answers.value))
+    localStorage.setItem('currentquestion', QuestionId.value)
     localStorage.setItem('labels', JSON.stringify(labels.value))
+    localStorage.setItem('labelsbycategory', JSON.stringify(LabelsByCategory.value))
   }
 
   function reset() {
     answers.value = []
     QuestionId.value = '0'
     labels.value = {}
-    localStorage.removeItem('answers')
-    localStorage.removeItem('currentquestion')
-    localStorage.removeItem('labels')
+    LabelsByCategory.value = JSON.parse(initialLabelsByCategoryNTB)
+    ConclusionId.value = ''
+    localStorage.setItem('answers', JSON.stringify(answers.value))
+    localStorage.setItem('currentquestion', QuestionId.value)
+    localStorage.setItem('currentconclusion', ConclusionId.value)
+    localStorage.setItem('labels', JSON.stringify(labels.value))
+    localStorage.setItem('labelsbycategory', JSON.stringify(LabelsByCategory.value))
   }
 
   function acceptDisclaimer() {
@@ -58,6 +116,23 @@ export const useQuestionStore = defineStore('question', () => {
     sessionStorage.setItem('acceptedDisclaimer', '1')
   }
 
-  return { AcceptedDisclaimer, QuestionId, answers, setQuestionId, addAnswer, getJsonLabels, addLabel, revertAnswer,
-    reset, acceptDisclaimer }
+  return {
+    AcceptedDisclaimer,
+    initialLabelsByCategoryNTB,
+    QuestionId,
+    ConclusionId,
+    answers,
+    LabelsByCategory,
+    getLabelsByCategory,
+    setQuestionId,
+    setConclusionId,
+    addAnswer,
+    getJsonLabels,
+    addLabel,
+    addLabelByCategory,
+    updateLabelsAtConclusion,
+    revertAnswer,
+    reset,
+    acceptDisclaimer
+  }
 })
