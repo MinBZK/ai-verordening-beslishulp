@@ -30,7 +30,7 @@ defineEmits(['back'])
     <SubResult
       :topic="topic"
       :labels="labels"
-      title="resultaten"/>
+      title="Resultaten"/>
 
     <!--Obligation/Verplichtingen section-->
     <p style="white-space: pre-line" class="rvo-text--bold rvo-text--md --rvo-font-sans-serif-font-family">

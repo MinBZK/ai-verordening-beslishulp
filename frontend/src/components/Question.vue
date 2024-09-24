@@ -25,7 +25,8 @@ defineEmits(['answered', 'back'])
     </div>
     <Sources :sources="sources" />
     <!-- Question and Answer section -->
-    <fieldset class="rvo-max-width-layout--sm rvo-layout-margin-vertical--2xl utrecht-form-fieldset rvo-form-fieldset"
+    <div class="rvo-layout-margin-vertical--2xl">
+    <fieldset class="rvo-max-width-layout--sm utrecht-form-fieldset rvo-form-fieldset"
     style="width: 500px">
       <!-- Question section -->
       <div>
@@ -52,21 +53,31 @@ defineEmits(['answered', 'back'])
         </div>
       </div>
     </fieldset>
-    <SubResult
-      :topic="topic"
-      :labels="labels"
-      title="tussenresultaten" />
 
-    <div class="rvo-layout-margin-vertical--2xl">
+    <div class="rvo-layout-margin-vertical--xl">
       <button
         @click="$emit('back')"
         v-if="id !== '0'"
         type="button"
         class="flex utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline "
       >
+        <span
+                  class="utrecht-icon rvo-icon rvo-icon-terug rvo-icon--lg rvo-icon--wit"
+                  role="img"
+                  aria-label="Terug"
+                ></span>
         Vorige vraag
       </button>
     </div>
+      </div>
+
+    <SubResult class="rvo-layout-margin-vertical--3xl"
+      style="width: 500px"
+      :topic="topic"
+      :labels="labels"
+      title="Tussenresultaten" />
+
+
   </div>
 
 </template>
