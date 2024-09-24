@@ -162,8 +162,13 @@ function reset() {
 
 function back() {
   questionStore.revertAnswer(previousCategory.value)
-  conclusionId.value = ''
   categoryStore.revertCurrentCategory()
+}
+
+function backButtonConclusion() {
+  conclusionId.value = ''
+  back()
+  questionStore.revertLabelsAtConclusion()
 }
 
 function acceptDisclaimer() {
@@ -200,7 +205,7 @@ function acceptDisclaimer() {
           :sources="findConclusion.sources"
           :topic="currentCategory?.topic"
           :labels="questionStore.getLabelsByCategory()"
-          @back="back"
+          @back="backButtonConclusion"
         />
         <Question v-if="currentQuestion && currentCategory"
                   :question="currentQuestion.question"
