@@ -74,7 +74,7 @@ function get_background_color(label: string | undefined) {
     </div>
   <div v-else>
     <div class="rvo-accordion">
-    <details class="rvo-accordion__item" open="">
+    <details class="rvo-accordion__item" open="true">
       <summary class="rvo-accordion__item-summary">
         <h3
           class="utrecht-heading-3 rvo-accordion__item-title rvo-heading--no-margins rvo-heading--mixed items-center"
