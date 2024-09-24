@@ -21,7 +21,7 @@ defineEmits(['answered', 'back'])
   <div class="flex-col">
     <div class="flex">
       <h1 class="utrecht-heading-1"><span>{{ topic }}</span></h1>
-        <BetaversionLabel />
+      <BetaversionLabel />
     </div>
     <Sources :sources="sources" />
     <!-- Question and Answer section -->
@@ -46,25 +46,26 @@ defineEmits(['answered', 'back'])
             class="utrecht-button utrecht-button--secondary-action utrecht-button--rvo-md rvo-link--no-underline rvo-link--hover"
             :for="index.toString()"
           >
-            {{answer.answer}}
+            {{ answer.answer }}
           </button>
         </div>
       </div>
     </fieldset>
-     <SubResult
-                   :topic="topic"
-                   :labels="labels"/>
+    <SubResult
+      :topic="topic"
+      :labels="labels"
+      title="tussenresultaten" />
 
-  <div class="rvo-layout-margin-vertical--2xl">
-    <button
-      @click="$emit('back')"
-      v-if="id !== '0'"
-      type="button"
-      class="flex utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline "
-    >
-      Vorige vraag
-    </button>
-  </div>
+    <div class="rvo-layout-margin-vertical--2xl">
+      <button
+        @click="$emit('back')"
+        v-if="id !== '0'"
+        type="button"
+        class="flex utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline "
+      >
+        Vorige vraag
+      </button>
+    </div>
   </div>
 
 </template>

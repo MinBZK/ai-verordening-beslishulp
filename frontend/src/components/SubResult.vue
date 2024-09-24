@@ -4,6 +4,7 @@ import BetaversionLabel from '@/components/betaversion-label.vue'
 interface Props {
   topic: string | undefined
   labels: { category: string; assigned_labels: string | undefined; }[] | undefined
+  title: string
 }
 
 defineProps<Props>()
@@ -35,7 +36,7 @@ function get_background_color(label: string | undefined) {
             role="img"
             aria-label="Delta omhoog"
           ></span>
-          tussenresultaten
+          {{ title }}
         </h3>
       </summary>
       <div class="rvo-accordion__content">
