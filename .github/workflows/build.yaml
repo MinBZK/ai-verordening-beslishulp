@@ -52,8 +52,11 @@ jobs:
       - name: Install dependencies
         run: pip3 install -r requirements.txt
 
-      - name: Build decision-tree.yaml
+      - name: Build decision-tree.json
         run: python script/inject_definitions_in_decision_tree.py
+
+      - name: Build categories.json
+        run: python script/convert_categories.py
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
