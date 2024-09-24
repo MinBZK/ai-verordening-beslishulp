@@ -91,7 +91,6 @@ function get_background_color(label: string | undefined) {
           ></span>
           {{ title }}
         </h3>
-              <span class="rvo-accordion-teaser">Bekijk hier je profiel tot nu toe</span>
       </summary>
       <div class="rvo-accordion__content">
         <div class="rvo-table--responsive py-5">
