@@ -176,11 +176,13 @@ function acceptDisclaimer() {
   <div v-if="AcceptedDisclaimer == '0'">
     <HomePage @accept-disclaimer="acceptDisclaimer" />
   </div>
-  <div v-else>
+  <div class="rvo-layout-column rvo-layout-gap--2xl" v-else>
     <Header @reset-event="reset" />
-    <div class="rvo-max-width-layout rvo-max-width-layout--md flex justify-center px-10 py-10">
+    <div
+      id="progress-question-mobile"
+      class="rvo-layout-column rvo-max-width-layout rvo-layout-align-items-start rvo-max-width-layout-inline-padding--sm">
       <ProgressTracker
-        v-if="categoryState"
+        v-if="categoryState && !findConclusion"
         :soort_toepassing_state="categoryState.soort_toepassing_state"
         :open_source_state="categoryState.open_source_state"
         :publicatiecategorie_state="categoryState.publicatiecategorie_state"
@@ -188,7 +190,7 @@ function acceptDisclaimer() {
         :transparantieverplichtingen_state="categoryState.transparantieverplichtingen_state"
         :rol_state="categoryState.rol_state"
       />
-      <div class="px-20">
+      <div class="rvo-layout-gap--md">
         <DefaultLoader :loading="isLoading" />
         <DefaultError :error="error" />
         <Conclusion

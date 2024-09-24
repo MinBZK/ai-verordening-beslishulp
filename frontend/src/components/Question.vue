@@ -18,17 +18,18 @@ defineEmits(['answered', 'back'])
 </script>
 
 <template>
-  <div class="flex-col">
+  <div class="rvo-max-width-layout--md">
     <div class="flex">
       <h1 class="utrecht-heading-1"><span>{{ topic }}</span></h1>
       <BetaversionLabel />
     </div>
     <Sources :sources="sources" />
     <!-- Question and Answer section -->
-    <fieldset class="rvo-layout-margin-vertical--2xl utrecht-form-fieldset rvo-form-fieldset">
+    <fieldset class="rvo-max-width-layout--sm rvo-layout-margin-vertical--2xl utrecht-form-fieldset rvo-form-fieldset"
+    style="width: 500px">
       <!-- Question section -->
       <div>
-        <p style="white-space: pre-line" class="utrecht-paragraph rvo-max-width-layout--md">
+        <p style="white-space: pre-line" class="utrecht-paragraph">
           <span v-html="question"></span>
           <slot />
         </p>
