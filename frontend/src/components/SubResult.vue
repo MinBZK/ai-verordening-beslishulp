@@ -2,7 +2,7 @@
 import BetaversionLabel from '@/components/betaversion-label.vue'
 
 interface Props {
-  topic: string | null
+  topic: string | undefined
   labels: { category: string; assigned_labels: string | undefined; }[] | undefined
 }
 

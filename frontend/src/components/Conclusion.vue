@@ -6,7 +6,7 @@ interface Props {
   conclusion: string | null
   obligation: string | null
   sources: { source: string; url: string | undefined; }[] | undefined
-  topic: string | null
+  topic: string | undefined
   'labels': { category: string; assigned_labels: string | undefined; }[] | undefined
 }
 

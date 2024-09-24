@@ -55,12 +55,14 @@ export const useQuestionStore = defineStore('question', () => {
     localStorage.setItem('labels', JSON.stringify(labels.value))
   }
 
-  function addLabelByCategory(label: string, category: string) {
-    if (JSON.stringify(LabelsByCategory.value[category]) === JSON.stringify(['Nader te bepalen'])) {
-      LabelsByCategory.value[category] = []
+  function addLabelByCategory(label: string, category: string | undefined) {
+    if (category) {
+      if (JSON.stringify(LabelsByCategory.value[category]) === JSON.stringify(['Nader te bepalen'])) {
+        LabelsByCategory.value[category] = []
+      }
+      LabelsByCategory.value[category].push(label)
+      localStorage.setItem('labelsbycategory', JSON.stringify(LabelsByCategory.value))
     }
-    LabelsByCategory.value[category].push(label)
-    localStorage.setItem('labelsbycategory', JSON.stringify(LabelsByCategory.value))
   }
 
   function updateLabelsAtConclusion() {
