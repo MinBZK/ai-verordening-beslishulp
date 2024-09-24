@@ -78,6 +78,19 @@ export const useQuestionStore = defineStore('question', () => {
     localStorage.setItem('labelsbycategory', JSON.stringify(LabelsByCategory.value))
   }
 
+  function revertLabelsAtConclusion() {
+    /**
+     * This function will change all the "Niet van Toepassing" labels to "Nader te bepalen" when
+     * the back button has been clicked at the conclusion of the decision tree.
+     */
+    for (let key in LabelsByCategory.value) {
+      if (JSON.stringify(LabelsByCategory.value[key]) === JSON.stringify(['Niet van toepassing'])) {
+        LabelsByCategory.value[key] = ['Nader te bepalen']
+      }
+    }
+    localStorage.setItem('labelsbycategory', JSON.stringify(LabelsByCategory.value))
+  }
+
   function addAnswer(id: string) {
     answers.value.push(id)
     localStorage.setItem('answers', JSON.stringify(answers.value))
@@ -133,6 +146,7 @@ export const useQuestionStore = defineStore('question', () => {
     addLabel,
     addLabelByCategory,
     updateLabelsAtConclusion,
+    revertLabelsAtConclusion,
     revertAnswer,
     reset,
     acceptDisclaimer
