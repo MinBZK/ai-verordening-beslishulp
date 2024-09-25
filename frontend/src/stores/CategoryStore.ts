@@ -9,6 +9,7 @@ export const useCategoryStore = defineStore('category', () => {
   const initialCategoryStateString = `{
   "soort_toepassing_state": "doing",
   "open_source_state": "incomplete",
+  "uitzonderingen_state": "incomplete",
   "publicatiecategorie_state": "incomplete",
   "systeemrisico_state": "incomplete",
   "transparantieverplichtingen_state": "incomplete",
@@ -17,6 +18,7 @@ export const useCategoryStore = defineStore('category', () => {
   const categoryMapper = {
     'Soort toepassing': 'soort_toepassing_state',
     'Open-source': 'open_source_state',
+    'Uitzonderingen': 'uitzonderingen_state',
     'Publicatiecategorie': 'publicatiecategorie_state',
     'Systeemrisico': 'systeemrisico_state',
     'Transparantieverplichtingen': 'transparantieverplichtingen_state',

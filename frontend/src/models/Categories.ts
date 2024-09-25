@@ -18,6 +18,7 @@ const stateValue = t.union([t.literal('completed'), t.literal('doing'), t.litera
 export const CategoryState = t.type({
   soort_toepassing_state: stateValue,
   open_source_state: stateValue,
+  uitzonderingen_state: stateValue,
   publicatiecategorie_state: stateValue,
   systeemrisico_state: stateValue,
   transparantieverplichtingen_state: stateValue,

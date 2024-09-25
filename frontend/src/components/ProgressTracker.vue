@@ -2,6 +2,7 @@
 interface Props {
   soort_toepassing_state: string,
   open_source_state: string,
+  uitzonderingen_state: string,
   publicatiecategorie_state: string,
   systeemrisico_state: string,
   transparantieverplichtingen_state: string,
@@ -30,6 +31,11 @@ function change_status(category: string) {
     <div :class="change_status(open_source_state)">
       <a class="progress-tracker-font rvo-progress-tracker__step-link">
         Open-source
+      </a>
+    </div>
+    <div :class="change_status(uitzonderingen_state)">
+      <a class="progress-tracker-font rvo-progress-tracker__step-link">
+        Uitzonderingen
       </a>
     </div>
     <div :class="change_status(publicatiecategorie_state)">
