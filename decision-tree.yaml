@@ -123,7 +123,7 @@ questions:
     answers:
       - answer: Ja
         labels:
-          - "uitzonderingsgrond: AI-verordening niet van toepassing"
+          - "uitzondering van toepassing"
         nextConclusionId: "15.3"
       - answer: Nee
         subresult: "Er is geen sprake van een uitzonderingsgrond. De AI-verordening is van toepassing."
