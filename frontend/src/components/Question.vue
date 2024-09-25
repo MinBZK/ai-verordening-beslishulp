@@ -27,7 +27,7 @@ defineEmits(['answered', 'back'])
     <!-- Question and Answer section -->
     <div class="rvo-layout-margin-vertical--2xl">
     <fieldset class="rvo-max-width-layout--sm utrecht-form-fieldset rvo-form-fieldset"
-    style="width: 500px">
+    style="width: 600px">
       <!-- Question section -->
       <div>
         <p style="white-space: pre-line" class="utrecht-paragraph">

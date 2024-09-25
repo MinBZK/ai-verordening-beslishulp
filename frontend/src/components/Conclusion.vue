@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Sources from '@/components/Sources.vue'
 import SubResult from '@/components/SubResult.vue'
+import BetaversionLabel from '@/components/betaversion-label.vue'
 
 interface Props {
   conclusion: string | null
@@ -15,11 +16,11 @@ defineEmits(['back'])
 </script>
 
 <template>
-  <div class="flex flex-col py-5 gap-y-5">
-
-    <!--Conclusion/Resultaat section-->
-    <div as="h3" class="utrecht-heading-2">
-      Resultaat
+  <!--Conclusion/Resultaat section-->
+  <div class="flex flex-col py-5 gap-y-5 rvo-max-width-layout--md">
+    <div class="flex">
+      <div as="h3" class="utrecht-heading-2">Resultaat</div>
+      <BetaversionLabel />
     </div>
     <p class="rvo-alert--success rvo-alert--padding-md">
       <span v-html="conclusion" class="rvo-text--italic rvo-text--xl --rvo-font-sans-serif-font-family"></span>
