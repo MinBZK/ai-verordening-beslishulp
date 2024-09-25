@@ -193,6 +193,7 @@ function acceptDisclaimer() {
         v-if="categoryState && !findConclusion"
         :soort_toepassing_state="categoryState.soort_toepassing_state"
         :open_source_state="categoryState.open_source_state"
+        :uitzonderingen_state="categoryState.uitzonderingen_state"
         :publicatiecategorie_state="categoryState.publicatiecategorie_state"
         :systeemrisico_state="categoryState.systeemrisico_state"
         :transparantieverplichtingen_state="categoryState.transparantieverplichtingen_state"
