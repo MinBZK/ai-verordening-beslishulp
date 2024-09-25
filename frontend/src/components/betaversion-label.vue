@@ -1,7 +1,8 @@
 <template>
   <div class="px-5">
     <div
-      class="rvo-tag rvo-tag--with-icon rvo-tag--active rvo-tag--warning">
+      class="rvo-tag rvo-tag--with-icon rvo-tag--active rvo-tag--warning"
+    style="padding-left: 12px; padding-right: 12px">
             <span
               class="utrecht-icon rvo-icon rvo-icon-waarschuwing rvo-icon--lg"
               role="img"
@@ -13,7 +14,7 @@
             Bètaversie
           </summary>
           <div class="rvo-expandable-text__details absolute"
-               style="margin: 20px;padding: 10px; border-radius: 5px; background-color: var(--rvo-alert-warning-background-color); width: 150px; z-index: 2">
+               style="margin-left: -38px; margin-top: 10px;padding: 16px; border-radius: 5px; background-color: var(--rvo-alert-warning-background-color); width: 220px; z-index: 2">
             Deze website is in ontwikkeling. Alle versies onstaan op een open manier.
             <a class="rvo-link" href="https://github.com/MinBZK/ai-act-decisiontree">
               Iedereen
