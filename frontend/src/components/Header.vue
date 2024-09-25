@@ -1,4 +1,11 @@
 <script setup lang="ts">
+
+interface Props {
+  questionId: string | undefined
+  disclaimerScreen: string | undefined
+}
+
+defineProps<Props>()
 const emit = defineEmits(['reset-event'])
 </script>
 
@@ -16,8 +23,8 @@ const emit = defineEmits(['reset-event'])
         <div class="rvo-max-width-layout rvo-max-width-layout--md rvo-max-width-layout-inline-padding--sm">
           <nav class="rvo-topnav rvo-topnav--lg">
             <ul class="rvo-topnav__list">
-              <li class="rvo-topnav__item">
-                <a class="rvo-link rvo-topnav__link rvo-link--logoblauw" @click="$emit('reset-event')">
+              <li v-if="questionId != '0' && disclaimerScreen != '0'" class="rvo-topnav__item">
+                <a  class="rvo-link rvo-topnav__link rvo-link--logoblauw" @click="$emit('reset-event')">
                 <span
                   class="utrecht-icon rvo-icon rvo-icon-terug rvo-icon--lg rvo-icon--wit"
                   role="img"
@@ -25,6 +32,9 @@ const emit = defineEmits(['reset-event'])
                 ></span>
                   Begin opnieuw
                 </a>
+              </li>
+              <li v-else style="height: 48px">
+<!--                This is an empty space so that when the back to screen button is not there the line doesn't jump-->
               </li>
             </ul>
           </nav>

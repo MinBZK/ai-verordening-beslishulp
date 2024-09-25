@@ -182,7 +182,10 @@ function acceptDisclaimer() {
     <HomePage @accept-disclaimer="acceptDisclaimer" />
   </div>
   <div class="rvo-layout-column rvo-layout-gap--2xl" v-else>
-    <Header @reset-event="reset" />
+    <Header
+      :questionId="currentQuestion?.questionId"
+      :disclaimer-screen="AcceptedDisclaimer"
+      @reset-event="reset" />
     <div
       id="progress-question-mobile"
       class="rvo-layout-column rvo-max-width-layout rvo-layout-align-items-start rvo-max-width-layout-inline-padding--sm">
