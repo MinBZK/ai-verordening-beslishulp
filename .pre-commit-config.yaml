@@ -11,7 +11,7 @@ repos:
       - id: check-json
       - id: check-toml
       - id: check-added-large-files
-        exclude: 'frontend/src/assets/decision-tree.json'
+        exclude: 'frontend/src/assets/decision-tree.json|frontend/src/assets/categories.json'
       - id: check-merge-conflict
       - id: check-toml
       - id: detect-private-key
