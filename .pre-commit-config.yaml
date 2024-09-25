@@ -5,7 +5,7 @@ repos:
     rev: v4.6.0
     hooks:
       - id: end-of-file-fixer
-        exclude: 'frontend/src/assets/decision-tree.json'
+        exclude: 'frontend/src/assets/decision-tree.json|frontend/src/assets/categories.json'
       - id: trailing-whitespace
       - id: check-yaml
       - id: check-json
