@@ -18,6 +18,8 @@ questions:
         subresult: "Er is sprake van een algoritme."
         nextQuestionId: "1.0"
       - answer: Nee
+        labels:
+          - "geen algoritme"
         nextConclusionId: "15.0"
 
   ### check of het een AI-systeem is
