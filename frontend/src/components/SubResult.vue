@@ -11,7 +11,7 @@ interface Props {
 defineProps<Props>()
 
 function get_background_color(label: string | undefined) {
-  if (label === 'Nader te bepalen' || label === 'Niet van toepassing') {
+  if (label === 'nader te bepalen' || label === 'niet van toepassing') {
     return 'background-color: var(--rvo-color-grijs-300)'
   }
   return 'background-color: var(--rvo-color-hemelblauw-450)'

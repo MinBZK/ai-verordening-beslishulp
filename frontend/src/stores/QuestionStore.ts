@@ -3,13 +3,13 @@ import { defineStore } from 'pinia'
 
 export const useQuestionStore = defineStore('question', () => {
   const initialLabelsByCategoryNTB = `{
-    "Soort toepassing": ["Nader te bepalen"],
-    "Open-source": ["Nader te bepalen"],
-    "Uitzonderingen": ["Nader te bepalen"],
-    "Publicatiecategorie": ["Nader te bepalen"],
-    "Systeemrisico": ["Nader te bepalen"],
-    "Transparantieverplichtingen": ["Nader te bepalen"],
-    "Rol": ["Nader te bepalen"]
+    "Soort toepassing": ["nader te bepalen"],
+    "Open-source": ["nader te bepalen"],
+    "Uitzonderingen": ["nader te bepalen"],
+    "Publicatiecategorie": ["nader te bepalen"],
+    "Systeemrisico": ["nader te bepalen"],
+    "Transparantieverplichtingen": ["nader te bepalen"],
+    "Rol": ["nader te bepalen"]
   }`
 
   const initialAcceptedDisclaimer = sessionStorage.getItem('acceptedDisclaimer') ?? '0'
@@ -58,7 +58,7 @@ export const useQuestionStore = defineStore('question', () => {
 
   function addLabelByCategory(label: string, category: string | undefined) {
     if (category) {
-      if (JSON.stringify(LabelsByCategory.value[category]) === JSON.stringify(['Nader te bepalen'])) {
+      if (JSON.stringify(LabelsByCategory.value[category]) === JSON.stringify(['nader te bepalen'])) {
         LabelsByCategory.value[category] = []
       }
       LabelsByCategory.value[category].push(label)
@@ -68,12 +68,12 @@ export const useQuestionStore = defineStore('question', () => {
 
   function updateLabelsAtConclusion() {
     /**
-     * This function will change all the "Nader te bepalen" labels to "Niet van Toepassing" when
+     * This function will change all the "nader te bepalen" labels to "niet van toepassing" when
      * the conclusion of the decision tree has been reached.
      */
     for (let key in LabelsByCategory.value) {
-      if (JSON.stringify(LabelsByCategory.value[key]) === JSON.stringify(['Nader te bepalen'])) {
-        LabelsByCategory.value[key] = ['Niet van toepassing']
+      if (JSON.stringify(LabelsByCategory.value[key]) === JSON.stringify(['nader te bepalen'])) {
+        LabelsByCategory.value[key] = ['niet van toepassing']
       }
     }
     localStorage.setItem('labelsbycategory', JSON.stringify(LabelsByCategory.value))
@@ -81,12 +81,12 @@ export const useQuestionStore = defineStore('question', () => {
 
   function revertLabelsAtConclusion() {
     /**
-     * This function will change all the "Niet van Toepassing" labels to "Nader te bepalen" when
+     * This function will change all the "niet van toepassing" labels to "nader te bepalen" when
      * the back button has been clicked at the conclusion of the decision tree.
      */
     for (let key in LabelsByCategory.value) {
-      if (JSON.stringify(LabelsByCategory.value[key]) === JSON.stringify(['Niet van toepassing'])) {
-        LabelsByCategory.value[key] = ['Nader te bepalen']
+      if (JSON.stringify(LabelsByCategory.value[key]) === JSON.stringify(['niet van toepassing'])) {
+        LabelsByCategory.value[key] = ['nader te bepalen']
       }
     }
     localStorage.setItem('labelsbycategory', JSON.stringify(LabelsByCategory.value))
@@ -104,7 +104,7 @@ export const useQuestionStore = defineStore('question', () => {
       const label: string = labels.value[QuestionId.value]
       LabelsByCategory.value[previousCategory].pop(label)
       if (LabelsByCategory.value[previousCategory].length === 0) {
-        LabelsByCategory.value[previousCategory].push('Nader te bepalen')
+        LabelsByCategory.value[previousCategory].push('nader te bepalen')
       }
       delete labels.value[QuestionId.value]
     }
