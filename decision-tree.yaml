@@ -380,7 +380,7 @@ questions:
           - nextQuestionId: "8.0"
             if: ('"geen open-source" in labels' || ('"open-source" in labels' && '"hoog-risico AI" in labels') || ('"open-source" in labels' && '"AI-model voor algemene doeleinden" in labels'))
           - nextConclusionId: "15.3"
-            if: ('"open-source" in labels' && '"geen hoog-risico AI" in labels')
+            if: '"open-source" in labels && "geen hoog-risico AI" in labels'
   - questionId: "7.1"
     question: "Is er sprake van AI waarvan het bij wet is toegestaan om te gebruiken om strafbare feiten op te sporen, te voorkomen, te onderzoeken of te vervolgen?"
     simplifiedQuestion: "Uitzondering transparantieverplichtingen"
