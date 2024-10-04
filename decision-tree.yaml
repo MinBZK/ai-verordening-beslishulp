@@ -963,7 +963,7 @@ conclusions:
   - conclusionId: "13.2.1"
     conclusion: "Je bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico."
     obligation: "Als gebruiksverantwoordelijke van een AI-model voor algemene doeleinden gelden er geen verplichtingen vanuit het systeemrisico.
-      Het is echter belangrijk om te realiseren dat als een GPAI-model verder wordt ontwikkeld, er mogelijk minimale transparantieverplichtingen van toepassing zijn.
+      Het is echter belangrijk om te realiseren dat als een AI-model voor algemene doeleinden verder wordt ontwikkeld het in een AI-systeem voor algemene doeleinden kan veranderen en er mogelijk minimale transparantieverplichtingen van toepassing zijn.
       Daarnaast kan het systeem, afhankelijk van de specifieke toepassing, als een hoog-risico AI-systeem worden geclassificeerd.
       Het is dus van groot belang om deze aspecten in overweging te nemen."
     sources:
@@ -974,7 +974,7 @@ conclusions:
   - conclusionId: "13.2.3"
     conclusion: "Je bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden."
     obligation: "Voor gebruiksverantwoordelijken van een AI-model voor algemene doeleinden, gelden er geen bijzondere vereisten vanuit de AI-verordening.
-      Het is echter belangrijk om te realiseren dat als een GPAI-model verder wordt ontwikkeld, er mogelijk minimale transparantieverplichtingen van toepassing zijn.
+      Het is echter belangrijk om te realiseren dat als een AI-model voor algemene doeleinden verder wordt ontwikkeld het in een AI-systeem voor algemene doeleinden kan veranderen en er mogelijk minimale transparantieverplichtingen van toepassing zijn.
       Daarnaast kan het systeem, afhankelijk van de specifieke toepassing, als een hoog-risico AI-systeem worden geclassificeerd.
       Het is dus van groot belang om deze aspecten in overweging te nemen."
     sources:
