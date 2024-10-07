@@ -197,6 +197,22 @@ questions:
     sources:
       - source: Bijlage 1 - Lijst van harmonisatiewetgeving van de Unie
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e38-124-1
+      - source: Verordening (EG) Nr. 300/2008 - Beveiliging van de burgerluchtvaart en vervanging Verordening (EG) Nr. 2320/2002
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/PDF/?uri=CELEX:32008R0300
+      - source: Verordening (EU) Nr. 168/2013 - Goedkeuring en markttoezicht op twee-of driewielige voertuigen en vierwielers
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/PDF/?uri=CELEX:32013R0168&qid=1693934047233
+      - source: Verordening (EU) Nr. 167/2013 - Goedkeuring en markttoezicht op landbouw- en bosvoertuigen
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/PDF/?uri=CELEX:32013R0167
+      - source: Richtlijn 2014/90/EU - Uitrusting van zeeschepen
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/PDF/?uri=CELEX%3A32014L0090&qid=1693316316907
+      - source: Richtlijn 2016/797 - Interoperabiliteit van het spoorwegsysteem in de EU
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/PDF/?uri=CELEX:32016L0797
+      - source: Verordening 2018/858 - Goedkeuring en markttoezicht op motorvoertuigen en aanhangwagens
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/PDF/?uri=CELEX:32018R0858
+      - source: Verorderning (EU) 2019/2144 - Typegoedkeuring van motorvoertuigen en aanhangwagens
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/PDF/?uri=CELEX:32019R2144
+      - source:  Verordening (EU) 2018/1139 - Regels op het gebied van burgerluchtvaart en Agentschap van de EU voor de veiligheid van de luchtvaart
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/PDF/?uri=CELEX:32018R1139
       - source: Overweging 47 - Veiligheidscomponent
       - source: Overweging 49 - Veiligheidscomponent
       - source: Begrippenlijst Algoritmekader
@@ -231,6 +247,29 @@ questions:
     sources:
       - source: Bijlage 1 - Lijst van harmonisatiewetgeving van de Unie
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e38-124-1
+      - source: Richtlijn 2006/42/EG - Machines
+        url: https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2006:157:0024:0086:NL:PDF
+      - source: Richtlijn 2009/48/EG - Veiligheid van speelgoed
+        url: https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2009:170:0001:0037:nl:PDF
+      - source: Richtlijn 2013/53/EU - Pleziervaartuigen en waterscooters
+        url: https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2013:354:0090:0131:NL:PDF
+      - source: Richtlijn 2014/33/EU - Harmonisatie van de wetgevingen van de lidstaten inzake (veiligheidscomponenten voor) liften
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/PDF/?uri=CELEX:32014L0033
+      - source: Richtlijn 2014/43/EU - Harmonisatie van wetgevingen van lidstaten over apparaten en beveiligingssystemen voor gebieden met ontploffingsgevaar
+      - source:  Richtlijn 2014/53/EU - Harmonisatie van wetgevingen van de lidstaten inzake het op de markt aanbieden van radioapparatuur
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/PDF/?uri=CELEX:32014L0053
+      - source: Richtlijn 2014/68/EU - Harmonisatie van wetgevingen van de lidstaten inzake het op de markt aanbieden van drukapparatuur
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/PDF/?uri=CELEX:32014L0068
+      - source: Verordening 2016/424 - Kabelbaaninstallaties
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/PDF/?uri=CELEX:32016R0424
+      - source: Verordening (EU) 2016/425 - Persoonlijke beschermingsmiddelen
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/PDF/?uri=CELEX:32016R0425
+      - source: Verordening (EU) 2016/426 - Gasverbrandingstoestellen
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/PDF/?uri=CELEX:32016R0426&from=DE
+      - source: Verordening (EU) 2017/745 - Medische hulpmiddelen
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/PDF/?uri=CELEX:32017R0745
+      - source: Verordening (EU) 2017/746 - Medische hulpmiddelen voor in-vitrodiagnostiek
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/PDF/?uri=CELEX:32017R0746
       - source: Overweging 47 - Veiligheidscomponent
       - source: Overweging 51 - Veiligheidscomponent
     answers:
@@ -257,7 +296,7 @@ questions:
 
   ### check op hoog risico AI-verordening (Bijlage III)
   - questionId: "5.0"
-    question: "We gaan nu bepalen of het AI-systeem onder een van de hoog-risico systemen uit Bijlage 3 van de AI-verordening valt. Betreft het een AI-systeem op een van de volgende gebieden? Beweeg je muis over de opties om te zien welke systemen hieronder vallen.\n
+    question: "We gaan nu bepalen of het AI-systeem onder een van de hoog-risico systemen uit Bijlage 3 van de AI-verordening valt. Betreft het een AI-systeem die binnen een van de volgende toepassingsgebieden valt? Beweeg je muis over de opties om te zien welke systemen hieronder vallen.\n
         - biometrie\n
         - kritieke infrastructuur\n
         - onderwijs en beroepsopleiding\n
@@ -285,6 +324,21 @@ questions:
 
   ### check op uitzonderingen hoog risico EU AI-verordening (bijlage III - toepassingsgebieden)
   - questionId: "5.1.0"
+    question: "Voert het AI-systeem profilering van natuurlijke personen uit? Bij profilering is er altijd sprake van een hoog risico."
+    simplifiedQuestion: "Profilering"
+    category: publicatiecategorie_risico
+    sources:
+      - source: Overweging 53 - Uitzonderingen hoog risico
+    answers:
+      - answer: Ja
+        subresult: "Het AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten."
+        labels:
+          - "hoog-risico AI"
+        nextQuestionId: "7.0"
+      - answer: Nee
+        subresult: "Het is mogelijk dat het AI-systeem toch geen hoog-risico systeem is. Het kan echter zijn dat het wel aan bepaalde transparantieverplichtingen moet voldoen."
+        nextQuestionId: "5.1.1"
+  - questionId: "5.1.1"
     question: "We gaan nu bepalen of er sprake is van een uitzondering op de lijst van hoog-risico AI systemen.\n
       Bent u een aanbieder van een AI-systeem dat is bedoeld voor een van de volgende doeleinden?\n
       - Het uitvoeren van een beperkte procedurele taak waarbij er geen significant risico is op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?\n
@@ -301,28 +355,13 @@ questions:
         url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     answers:
       - answer: Ja
-        nextQuestionId: "5.1.1"
+        nextQuestionId: "7.0"
+        labels:
+          - "geen hoog-risico AI"
       - answer: Nee
         subresult: "Het systeem valt niet onder een van de uitzonderingen. Het blijft beschouwd als een hoog-risico AI-systeem."
         labels:
           - "hoog-risico AI"
-        nextQuestionId: "7.0"
-  - questionId: "5.1.1"
-    question: "Voert het AI-systeem profilering van natuurlijke personen uit? Bij profilering is er altijd sprake van een hoog risico."
-    simplifiedQuestion: "Profilering"
-    category: publicatiecategorie_risico
-    sources:
-      - source: Overweging 53 - Uitzonderingen hoog risico
-    answers:
-      - answer: Ja
-        subresult: "Het AI-systeem wordt waarschijnlijk beschouwd als een hoog-risico AI-systeem. Het zou dan moeten voldoen aan bepaalde vereisten."
-        labels:
-          - "hoog-risico AI"
-        nextQuestionId: "7.0"
-      - answer: Nee
-        subresult: "Het is mogelijk dat het AI-systeem toch geen hoog-risico systeem is. Het kan echter zijn dat het wel aan bepaalde transparantieverplichtingen moet voldoen."
-        labels:
-          - "geen hoog-risico AI"
         nextQuestionId: "7.0"
 
   ### check op systeem risico (alleen voor AI-modellen voor algemene doeleinden)
@@ -923,7 +962,10 @@ conclusions:
       Wel moet deze AI-technologie uiteraard voldoen aan algemene veiligheidsstandaarden."
   - conclusionId: "13.2.1"
     conclusion: "Je bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico."
-    obligation: Als gebruiksverantwoordelijke van een AI-model voor algemene doeleinden gelden er geen verplichtingen vanuit het systeemrisico.
+    obligation: "Als gebruiksverantwoordelijke van een AI-model voor algemene doeleinden gelden er geen verplichtingen vanuit het systeemrisico.
+      Het is echter belangrijk om te realiseren dat als een AI-model voor algemene doeleinden verder wordt ontwikkeld het in een AI-systeem voor algemene doeleinden kan veranderen en er mogelijk minimale transparantieverplichtingen van toepassing zijn.
+      Daarnaast kan het systeem, afhankelijk van de specifieke toepassing, als een hoog-risico AI-systeem worden geclassificeerd.
+      Het is dus van groot belang om deze aspecten in overweging te nemen."
     sources:
       - source: Artikel 51 - Classificatie van AI-modellen voor algemene doeleinden als AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5489-1-1
@@ -931,7 +973,10 @@ conclusions:
         url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
   - conclusionId: "13.2.3"
     conclusion: "Je bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden."
-    obligation: "Voor gebruiksverantwoordelijken van een AI-model voor algemene doeleinden, gelden er geen bijzondere vereisten vanuit de AI-verordening."
+    obligation: "Voor gebruiksverantwoordelijken van een AI-model voor algemene doeleinden, gelden er geen bijzondere vereisten vanuit de AI-verordening.
+      Het is echter belangrijk om te realiseren dat als een AI-model voor algemene doeleinden verder wordt ontwikkeld het in een AI-systeem voor algemene doeleinden kan veranderen en er mogelijk minimale transparantieverplichtingen van toepassing zijn.
+      Daarnaast kan het systeem, afhankelijk van de specifieke toepassing, als een hoog-risico AI-systeem worden geclassificeerd.
+      Het is dus van groot belang om deze aspecten in overweging te nemen."
     sources:
       - source: Begrippenlijst Algoritmekader
         url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
