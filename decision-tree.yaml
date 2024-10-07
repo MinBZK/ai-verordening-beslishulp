@@ -517,7 +517,7 @@ questions:
     answers:
       - answer: Ja
         labels:
-          - "aanbieder + gebruiksverantwoordelijke"
+          - "aanbieder"
         redirects:
           - nextConclusionId: "14.0.1"
             if: '"AI-systeem" in labels && "hoog-risico AI" in labels && "transparantieverplichtingen" in labels'

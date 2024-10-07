@@ -16,9 +16,15 @@ jobs:
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
+
+
+      - name: Change version number from release
+        run: |
+          sed -i 's|"version": .*$|"version": ${{ github.event.release.tag_name }}|g' frontend/package.json
+
       - run: npm install --prefix frontend
       - run: npm run build --prefix frontend
       - run: npm run prepub --prefix frontend
-      - run: npm publish ./frontend/dist --access=public --tag "${{ github.event.release.tag_name }}"
+      - run: npm publish ./frontend/dist --access=public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPMJS_ACCESS_TOKEN}}
