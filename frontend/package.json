@@ -17,7 +17,7 @@
     "@headlessui/vue": "^1.7.23",
     "@heroicons/vue": "^2.1.5",
     "@nl-rvo/assets": "1.0.0-alpha.360",
-    "@nl-rvo/component-library-css": "1.1.0",
+    "@nl-rvo/component-library-css": "1.2.0",
     "@nl-rvo/design-tokens": "1.0.0-alpha.407",
     "@types/jexl": "^2.3.4",
     "fp-ts": "^2.16.9",
