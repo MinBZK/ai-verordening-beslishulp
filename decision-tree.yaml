@@ -174,7 +174,7 @@ questions:
         subresult: "Er is sprake van een uitzondering op de lijst van verboden AI-systemen."
         labels:
           - "hoog-risico AI"
-        nextConclusionId: "15.2"
+        nextQuestionId: "7.0"
       - answer: Nee
         labels:
           - "verboden AI"
