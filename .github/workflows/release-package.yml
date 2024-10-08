@@ -20,7 +20,7 @@ jobs:
 
       - name: Change version number from release
         run: |
-          sed -i 's|"version": .*$|"version": ${{ github.event.release.tag_name }}|g' frontend/package.json
+          sed -i 's|"version": .*$|"version": ${{ github.event.release.tag_name }},|g' frontend/package.json
 
       - run: npm install --prefix frontend
       - run: npm run build --prefix frontend
