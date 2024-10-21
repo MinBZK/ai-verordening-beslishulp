@@ -17,7 +17,7 @@ Voor vragen of opmerkingen over de beslisboom mail je naar: [ai-verordening@minb
 Deze git repository bevat de beslisboom op basis van de AI Verordening.
 Het AI-validatie Team heeft deze tool ontwikkeld, maar is niet verantwoordelijk voor de juridische inhoud van de beslisboom. Voor meer informatie over het AI Validatie Team, bezoek de [site van het AI-validatieteam](https://minbzk.github.io/ai-validation/). Voor vragen over de juridische inhoud, neem contact op met de experts via ai-verordening@minbzk.nl.
 
-Het project omvat 2 onderdelen.
+Het project omvat de volgende 2 onderdelen:
 
 1. De beslisboom: [decision-tree.yaml](decision-tree.yaml)
 2. Een frontend voor de visualisatie van de beslisboom: [frontend](frontend/)
