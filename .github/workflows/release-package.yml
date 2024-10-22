@@ -19,6 +19,8 @@ jobs:
       - run: npm run build --prefix frontend
       - name: Publish release assets
         uses: softprops/action-gh-release@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT_UPDATE_RELEASE }}
         with:
           files: |
             frontend/dist/index.js
