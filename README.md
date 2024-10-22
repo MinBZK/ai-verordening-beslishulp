@@ -102,9 +102,9 @@ Om door de beslisboom te lopen is een visualizatie tool gemaakt. Met deze tool k
 
 ### Frontend locaal draaien
 
-Om de development omgeving te standariseren maken we gebruik van [devcontainers](https://code.visualstudio.com/docs/devcontainers/containers#_getting-started).
+Om de development omgeving te standaardiseren maken we gebruik van [devcontainers](https://code.visualstudio.com/docs/devcontainers/containers#_getting-started).
 
-Als u in de devcontainer zit kunt u de volgende commandos uitvoeren. Voordat dit kan gaat u eerst in de frontend/ folder staan met een terminal.
+Als u in de devcontainer zit kunt u de volgende commando's uitvoeren. Voordat dit kan gaat u eerst in de frontend/ folder staan met een terminal.
 
 Start de tool:
 
@@ -143,7 +143,7 @@ kubectl apply -k infra/
 
 ## Validatie schema
 
-Door het volgende script te runnen, kunt u controlen of het bestand decision-tree.yaml en het bestand definitions.yaml (technisch) valide zijn. Eventuele (syntax)fouten worden hiermee aangegeven.
+Door het volgende script te runnen, kunt u controleren of het bestand decision-tree.yaml en het bestand definitions.yaml (technisch) valide zijn. Eventuele (syntax)fouten worden hiermee aangegeven.
 
 ```sh
 ./script/validate --file_pairs schemas/schema_decision_tree.json:decision-tree.yaml schemas/schema_definitions.json:definitions.yaml
