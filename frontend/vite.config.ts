@@ -15,6 +15,7 @@ export default defineConfig({
             output: {
                 dir: './dist',
                 entryFileNames: 'index.js',
+                assetFileNames: `assets/[name].[ext]`
             }
         }
     },
