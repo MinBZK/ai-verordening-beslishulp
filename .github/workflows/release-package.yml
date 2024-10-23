@@ -1,11 +1,11 @@
-name: Build Node.js Package and Publish to Github Packages
+name: Build Node.js Package and Publish Assets
 
 on:
   release:
     types: [created]
 
 jobs:
-  publish-gpr:
+  publish:
     runs-on: ubuntu-latest
     permissions:
       packages: write
@@ -15,16 +15,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          registry-url: https://registry.npmjs.org/
-
-
-      - name: Change version number from release
-        run: |
-          sed -i 's|"version": .*$|"version": ${{ github.event.release.tag_name }}|g' frontend/package.json
-
       - run: npm install --prefix frontend
       - run: npm run build --prefix frontend
-      - run: npm run prepub --prefix frontend
-      - run: npm publish ./frontend/dist --access=public
+      - name: Publish release assets
+        uses: softprops/action-gh-release@v2
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPMJS_ACCESS_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT_UPDATE_RELEASE }}
+        with:
+          files: |
+            frontend/dist/index.js
+            LICENSE.md

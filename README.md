@@ -14,7 +14,10 @@ Voor vragen of opmerkingen over de beslisboom mail je naar: [ai-verordening@minb
 
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/MinBZK/ai-act-decisiontree/main.svg?badge_token=d3dKEK97RwC1II15_W-nng)](https://results.pre-commit.ci/latest/github/MinBZK/ai-act-decisiontree/main?badge_token=d3dKEK97RwC1II15_W-nng)
 
-Deze git repository bevat de beslisboom op basis van de AI Verordening. Het project omvat 2 onderdelen.
+Deze git repository bevat de beslisboom op basis van de AI Verordening.
+Het AI-validatie Team heeft deze tool ontwikkeld, maar is niet verantwoordelijk voor de juridische inhoud van de beslisboom. Voor meer informatie over het AI Validatie Team, bezoek de [site van het AI-validatieteam](https://minbzk.github.io/ai-validation/). Voor vragen over de juridische inhoud, neem contact op met de experts via ai-verordening@minbzk.nl.
+
+Het project omvat de volgende 2 onderdelen:
 
 1. De beslisboom: [decision-tree.yaml](decision-tree.yaml)
 2. Een frontend voor de visualisatie van de beslisboom: [frontend](frontend/)
@@ -99,9 +102,9 @@ Om door de beslisboom te lopen is een visualizatie tool gemaakt. Met deze tool k
 
 ### Frontend locaal draaien
 
-Om de development omgeving te standariseren maken we gebruik van [devcontainers](https://code.visualstudio.com/docs/devcontainers/containers#_getting-started).
+Om de development omgeving te standaardiseren maken we gebruik van [devcontainers](https://code.visualstudio.com/docs/devcontainers/containers#_getting-started).
 
-Als u in de devcontainer zit kunt u de volgende commandos uitvoeren. Voordat dit kan gaat u eerst in de frontend/ folder staan met een terminal.
+Als u in de devcontainer zit kunt u de volgende commando's uitvoeren. Voordat dit kan gaat u eerst in de frontend/ folder staan met een terminal.
 
 Start de tool:
 
@@ -140,7 +143,7 @@ kubectl apply -k infra/
 
 ## Validatie schema
 
-Door het volgende script te runnen, kunt u controlen of het bestand decision-tree.yaml en het bestand definitions.yaml (technisch) valide zijn. Eventuele (syntax)fouten worden hiermee aangegeven.
+Door het volgende script te runnen, kunt u controleren of het bestand decision-tree.yaml en het bestand definitions.yaml (technisch) valide zijn. Eventuele (syntax)fouten worden hiermee aangegeven.
 
 ```sh
 ./script/validate --file_pairs schemas/schema_decision_tree.json:decision-tree.yaml schemas/schema_definitions.json:definitions.yaml
