@@ -8,7 +8,7 @@ const emit = defineEmits(['acceptDisclaimer'])
 
 <template>
     <Header
-      :questionId="'0'"
+      :questionId="'1.2'"
       :disclaimer-screen="'0'"/>
     <main>
       <div class="rvo-progress-tracker">
@@ -24,17 +24,21 @@ const emit = defineEmits(['acceptDisclaimer'])
               <fieldset
                 class="utrecht-form-fieldset__fieldset utrecht-form-fieldset--html-fieldset"
               >
-                <p class="utrecht-paragraph">Met deze beslisboom stel je vast of de AI-verordening geldt voor jouw
-                  overheidsorganisatie. En aan welke
-                  vereisten je dan moet voldoen.</p>
+                <p class="utrecht-paragraph">Met deze beslishulp kun je nalopen of de AI-verordening geldt
+                  voor een toepassing die jouw overheidsorganisatie gebruikt. En aan welke vereisten je dan
+                  moet voldoen voor deze toepassing. Let op: je moet dus voor elke toepassing apart nalopen
+                  of de AI-verordening geldt en wat dat betekent. Verder zijn de volgende zaken van belang:</p>
                 <ul class="rvo-ul rvo-ul--no-margin rvo-ul--no-padding utrecht-unordered-list">
-                  <li>Deze beslisboom is een betaversie: de informatie is niet
-                    compleet en er kunnen fouten in staan.
+                  <li>Deze beslishulp is een betaversie: de informatie is niet compleet en er kunnen fouten in staan.
+                    Kom je iets tegen? Mail naar:
+                    <a
+                      class="rvo-link" href="mailto:ai-verordering@minbzk.nl">
+                      ai-verordering@minbzk.nl</a>.
                   </li>
-                  <li>Je bent zelf verantwoordelijk voor de informatie die je
-                    gebruikt.
+                  <li>Je doorloopt de beslishulp op basis van je eigen antwoorden. De beslishulp kan niet vaststellen of jouw antwoorden waar zijn of niet.
                   </li>
-                  <li>Overleg de uitkomsten van de beslisboom met een expert.</li>
+                  <li>De beslishulp is geen check op jouw eigen kennis en inzichten en je blijft zelf verantwoordelijk voor de informatie die je gebruikt</li>
+                  <li>Wij adviseren de uitkomsten van de beslishulp met andere experts in jouw organisatie te delen en te bespreken.</li>
                   <li>De beslisboom is bedoeld voor overheden die AI-systemen
                     aanbieden, of gebruiken onder eigen
                     verantwoordelijkheid.
@@ -45,9 +49,14 @@ const emit = defineEmits(['acceptDisclaimer'])
                       ai-verordering@minbzk.nl</a>.
                   </li>
                 </ul>
-                <p class="utrecht-paragraph">Om u te helpen bij het beantwoorden van de vragen, zijn relevante
+                <p class="utrecht-paragraph">Om je te helpen bij het beantwoorden van de vragen, zijn relevante
                   overwegingen / artikelen / bijlagen
-                  van de AI Verordening gelinkt per vraag.</p>
+                  van de AI Verordening gelinkt per vraag. Definities van termen worden laten zien als je met je muis
+                  eroverheen gaat en zijn terug te vinden op het
+                  <a class="rvo-link" href="https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/?h=definitie" target="_blank">
+                      Algoritmekader
+                  </a>
+                  </p>
               </fieldset>
             </div>
           </div>

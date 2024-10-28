@@ -56,8 +56,6 @@ for q in decision_tree.get("questions", []):
         q["description"] = process_question_or_conclusion(q.get("description", ""), term_dict)
 
     for a in q.get("answers", []):
-        a["answer"] = process_question_or_conclusion(a.get("answer", ""), term_dict)
-
         if "subresult" in a:
             a["subresult"] = process_question_or_conclusion(a.get("subresult", ""), term_dict)
 

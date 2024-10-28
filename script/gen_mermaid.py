@@ -25,6 +25,7 @@ class CustomNode(Node):
         direction: str | Direction = "LR",
         callback_tooltip: str | None = None,
         category: str | None = None,
+        subcategory: str | None = None,
     ) -> None:
         # call super and use result to add the id
         self.callback_tooltip = callback_tooltip
@@ -158,6 +159,7 @@ class Question:
     question: str
     simplifiedQuestion: str
     category: str
+    subcategory: str
     answers: list[Answer]
     definitions: list[Definition] | None = None
     sources: list[Source] | None = None
