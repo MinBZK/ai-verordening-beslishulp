@@ -24,7 +24,7 @@
     "io-ts": "^2.2.21",
     "jexl": "^2.3.0",
     "js-yaml": "^4.1.0",
-    "pinia": "^2.2.4",
+    "pinia": "^2.2.6",
     "vite-plugin-css-injected-by-js": "^3.5.2",
     "vue": "^3.5.12"
   },
