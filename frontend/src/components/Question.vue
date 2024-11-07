@@ -3,6 +3,7 @@ import BetaversionLabel from '@/components/betaversion-label.vue'
 import Sources from '@/components/Sources.vue'
 import { Answer } from '@/models/DecisionTree'
 import SubResult from '@/components/SubResult.vue'
+import HelpWanted from '@/components/HelpWanted.vue'
 
 interface Props {
   id: string
@@ -34,6 +35,7 @@ defineEmits(['answered', 'back'])
           <span v-html="question"></span>
           <slot />
         </p>
+        <HelpWanted style="margin-top: -2%; margin-bottom: 5%"/>
       </div>
 
       <!-- Answers section -->
