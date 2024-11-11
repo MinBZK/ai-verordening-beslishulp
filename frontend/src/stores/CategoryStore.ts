@@ -40,7 +40,6 @@ export const useCategoryStore = defineStore('category', () => {
   }
 
   const initialCategoryState = JSON.parse(localStorage.getItem('categoryState') ?? initialCategoryStateString)
-  // const initialSubCategoryState = JSON.parse(localStorage.getItem('subCategoryState') ?? initialSubCategoryStateString)
   const previousCategory = ref(String(initialPreviousCategory))
   const previousSubCategory = ref(String(initialPreviousSubCategory))
   const currentCategory = ref(String(initialCurrentCategory))
@@ -48,7 +47,6 @@ export const useCategoryStore = defineStore('category', () => {
   const categoryTrace = ref(initialCategoryTrace)
   const subCategoryTrace = ref(initialSubCategoryTrace)
   const categoryState = ref(initialCategoryState)
-  // const subCategoryState = ref(initialSubCategoryState)
 
 
   function updateCurrentCategory(category: string | undefined, subcategory: string |undefined) {

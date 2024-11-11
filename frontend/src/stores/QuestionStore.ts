@@ -15,11 +15,7 @@ export const useQuestionStore = defineStore('question', () => {
   const initialAcceptedDisclaimer = sessionStorage.getItem('acceptedDisclaimer') ?? '0'
   const initialAnswers = JSON.parse(localStorage.getItem('answers') ?? '[]')
   const initialLabels = JSON.parse(localStorage.getItem('labels') ?? '{}')
-<<<<<<< HEAD
-  const initialLabelsBySubCategory = JSON.parse(localStorage.getItem('labelsbysubcategoryß') ?? initialLabelsBySubCategoryNTB)
-=======
   const initialLabelsBySubCategory = JSON.parse(localStorage.getItem('labelsbysubcategory') ?? initialLabelsBySubCategoryNTB)
->>>>>>> e1268db (Update frontend/src/stores/QuestionStore.ts)
   const initialQuestionId = localStorage.getItem('currentquestion') ?? '1.2'
   const initialConclusionId = localStorage.getItem('currentconclusion') ?? ''
 
