@@ -14,7 +14,7 @@ interface Props {
 
 // Function to check if there are any valid labels in a category
 function hasValidLabelsForCategory(assigned_labels: string[]) {
-  return assigned_labels.some(label => label !== 'nader te bepalen' && label !== 'niet van toepassing')
+  return assigned_labels.some(label => label !== 'nader te bepalen' )
 }
 
 // Filter categories that have valid labels (not 'nader te bepalen' or 'niet van toepassing')

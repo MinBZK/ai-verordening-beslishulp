@@ -12,11 +12,15 @@ export const useQuestionStore = defineStore('question', () => {
     "Transparantieverplichting": ["nader te bepalen"]
   }`
 
-  const initialAcceptedDisclaimer = sessionStorage.getItem('acceptedDisclaimer') ?? '0' //TODO: figure out why this is 0
+  const initialAcceptedDisclaimer = sessionStorage.getItem('acceptedDisclaimer') ?? '0'
   const initialAnswers = JSON.parse(localStorage.getItem('answers') ?? '[]')
   const initialLabels = JSON.parse(localStorage.getItem('labels') ?? '{}')
+<<<<<<< HEAD
+  const initialLabelsBySubCategory = JSON.parse(localStorage.getItem('labelsbysubcategoryß') ?? initialLabelsBySubCategoryNTB)
+=======
   const initialLabelsBySubCategory = JSON.parse(localStorage.getItem('labelsbysubcategory') ?? initialLabelsBySubCategoryNTB)
-  const initialQuestionId = localStorage.getItem('currentquestion') ?? '1.2' //TODO: check if this is correct
+>>>>>>> e1268db (Update frontend/src/stores/QuestionStore.ts)
+  const initialQuestionId = localStorage.getItem('currentquestion') ?? '1.2'
   const initialConclusionId = localStorage.getItem('currentconclusion') ?? ''
 
   const AcceptedDisclaimer = ref(String(initialAcceptedDisclaimer))

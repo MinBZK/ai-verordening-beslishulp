@@ -98,7 +98,6 @@ export const useCategoryStore = defineStore('category', () => {
   function revertCurrentCategory() {
     /**
      * Set the currentCategory back to incomplete when the previousCategory is different
-     * TODO: subcategory?
      */
     // Categories section
     revertCategoryState()
@@ -142,7 +141,6 @@ export const useCategoryStore = defineStore('category', () => {
     previousCategory.value = startCategory
     previousSubCategory.value = startSubCategory
     categoryState.value = JSON.parse(initialCategoryStateString)
-    // subCategoryState.value = JSON.parse(initialSubCategoryStateString)
     categoryTrace.value = []
     subCategoryTrace.value = []
     localStorage.removeItem('currentCategory')

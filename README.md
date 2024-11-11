@@ -100,7 +100,7 @@ Let op: de diagrammen kunnen het beste in Chrome, Safari of Microsoft Edge worde
 
 Om door de beslishulp te lopen is een visualizatie tool gemaakt. Met deze tool kunt u door de vragen lopen. De frontend is beschikbaar op deze [website](https://ai-act-decisiontree.apps.digilab.network).
 
-### Frontend locaal draaien
+### Frontend lokaal draaien
 
 Om de development omgeving te standaardiseren maken we gebruik van [devcontainers](https://code.visualstudio.com/docs/devcontainers/containers#_getting-started).
 
