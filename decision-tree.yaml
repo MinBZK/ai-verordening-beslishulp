@@ -1561,7 +1561,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
   - conclusionId: "14.0.3"
-    conclusion: "Je bent een gebruiksverantwoordelijke en aanbieder van een AI-systeem zonder hoog-risico. Het AI-systeem moet voldoen aan transparantieverplichtingen."
+    conclusion: "Je bent een gebruiksverantwoordelijke en aanbieder van een niet-hoog-risico AI-systeem. Het AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "
       Verplichtingen voor alle AI-systemen: \n
           - AI-geletterdheid (Artikel 4)\n
@@ -1582,7 +1582,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
   - conclusionId: "14.0.4"
-    conclusion: "Je bent een gebruiksverantwoordelijke en aanbieder van een AI-systeem zonder hoog-risico."
+    conclusion: "Je bent een gebruiksverantwoordelijke en aanbieder van een niet-hoog-risico AI-systeem."
     obligation: "
       Verplichtingen voor alle AI-systemen: \n
           - AI-geletterdheid (Artikel 4)\n
@@ -1774,7 +1774,7 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
       - source: Overweging 179 - Ingangtreding verordening
   - conclusionId: "14.1.3"
-    conclusion: "Je bent een gebruiksverantwoordelijke en aanbieder van een AI-systeem voor algemene doeleinden zonder hoog-risico.  Het AI-systeem moet voldoen aan transparantieverplichtingen."
+    conclusion: "Je bent een gebruiksverantwoordelijke en aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden.  Het AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "
       Verplichtingen voor alle AI-systemen: \n
           - AI-geletterdheid (Artikel 4)\n
@@ -1813,7 +1813,7 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
       - source: Overweging 179 - Ingangtreding verordening
   - conclusionId: "14.1.4"
-    conclusion: "Je bent een gebruiksverantwoordelijke en aanbieder van een AI-systeem voor algemene doeleinden zonder hoog-risico."
+    conclusion: "Je bent een gebruiksverantwoordelijke en aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden."
     obligation: "
       Verplichtingen voor alle AI-systemen: \n
           - AI-geletterdheid (Artikel 4)\n

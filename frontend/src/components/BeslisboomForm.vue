@@ -24,7 +24,7 @@ const questionStore = useQuestionStore()
 const { AcceptedDisclaimer, QuestionId, ConclusionId } = storeToRefs(questionStore)
 
 const categoryStore = useCategoryStore()
-const { categoryState, previousCategory } = storeToRefs(categoryStore)
+const { categoryState, previousSubCategory} = storeToRefs(categoryStore)
 
 const data_questions = ref<Questions>([])
 const data_conclusions = ref<Conclusions>([])
@@ -129,7 +129,7 @@ function handleNextStep(object: Answer | Redirect) {
   if (object.nextConclusionId) {
     questionStore.setConclusionId(String(object.nextConclusionId))
   }
-  categoryStore.updateCurrentCategory(currentCategory.value?.category)
+  categoryStore.updateCurrentCategory(currentCategory.value?.category, currentCategory.value?.subcategory)
 }
 
 async function givenAnswer(answer: Answer) {
@@ -161,7 +161,7 @@ function reset() {
 }
 
 function back() {
-  questionStore.revertAnswer(previousCategory.value)
+  questionStore.revertAnswer(previousSubCategory.value)
   categoryStore.revertCurrentCategory()
 }
 
