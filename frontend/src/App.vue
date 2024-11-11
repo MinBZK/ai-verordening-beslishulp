@@ -8,5 +8,5 @@ import '@nl-rvo/design-tokens/dist/index.css'
 </script>
 
 <template>
-  <BeslisboomForm class="rvo-theme"/>
+  <BeslisboomForm class="rvo-theme" />
 </template>
