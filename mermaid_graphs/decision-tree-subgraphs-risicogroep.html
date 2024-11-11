@@ -1,0 +1,1299 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AI Decision Tree</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+        <script src='https://unpkg.com/mermaid@11.0.2/dist/mermaid.min.js'></script>
+
+        <!-- Custom Styles -->
+        <style>
+            /* Tooltip styling */
+            .mermaidTooltip {
+                display: none; /* Hides any remaining tooltips */
+            }
+
+            /* Modal centering and responsiveness */
+            .modal.is-active {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .modal-content {
+                max-width: 80vw; /* Makes modal responsive to screen size */
+                max-height: 80vh; /* Ensures modal fits within the viewport */
+                overflow-y: auto; /* Allows scrolling inside modal if content is too long */
+                position: relative;
+                padding: 20px;
+                background-color: white;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body class="has-background-white-ter">
+
+        <!-- Modal -->
+        <div id="model1" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                <div id="modelcontent1"></div>
+            </div>
+            <button id="modealclose1" class="modal-close is-large" aria-label="close"></button>
+        </div>
+
+        <!-- Diagram (placeholder) -->
+        <pre class="mermaid has-background-white-ter">
+            ---
+title: risicogroep
+---
+%%{
+	init: {
+		"theme": "base",
+		"themeVariables": {
+			"primaryColor": "#007bc7",
+			"primaryTextColor": "#000000",
+			"primaryBorderColor": "#007bc7",
+			"lineColor": "#154273",
+			"secondaryColor": "#CCE7F4"
+		}
+	}
+}%%
+
+flowchart TB
+	classDef secondaryStyle fill:#FFFFFF,stroke:#39870c
+	q-2.1(("2.1: Verboden AI-systeem"))
+click q-2.1 callback "We gaan nu bepalen in welke risicogroep het AI-systeem valt. Hiervoor gaan we maximaal 7 vragen langslopen.
+
+ Valt de toepassing onder een van de verboden systemen uit Artikel 5 van de AI-verordening?
+
+ -	gebruik kan gaan maken van subliminale technieken om mensen onbewust of bewust kunnen manipuleren, waardoor ze beslissingen nemen die ze anders niet zouden hebben genomen?
+ -	gebruik kan gaan maken van kwetsbaarheden van individuen of specifieke groepen, zoals leeftijd, handicaps of sociale/economische omstandigheden, om het gedrag van die personen aanzienlijk te verstoren, wat kan leiden tot aanzienlijke schade bij henzelf of anderen?
+ -	gebruikt kan worden om natuurlijke personen of groepen gedurende een periode te evalueren of te classificeren op basis van hun sociale gedrag of afgeleide persoonlijke kenmerken?
+ -	gebruikt kan worden voor risicobeoordelingen van natuurlijke personen om het risico op crimineel gedrag te voorspellen, gebaseerd op profilering of persoonlijkheidskenmerken? (Dit geldt niet voor AI-systemen die worden gebruikt om menselijke beoordelingen te ondersteunen, gebaseerd op objectieve en verifieerbare feiten die rechtstreeks verband houden met criminele activiteiten)
+ -	gebruikt kan worden om databanken voor gezichtsherkenning aan te leggen of aan te vullen door willekeurige gezichtsafbeeldingen van internet of CCTV-beelden te scrapen?
+ -	gebruikt kan worden om emoties van een persoon op de werkplek of in het onderwijs af te leiden? (Dit is niet van toepassing als het gebruik van het AI-systeem is bedoeld voor medische- of veiligheidsdoeleinden)
+ -	gebruikt kan worden om natuurlijke personen individueel in categorieën in te delen op basis van biometrische gegevens om ras, politieke opvattingen, lidmaatschap van een vakbond, religieuze of levensbeschouwelijke overtuigingen, seksleven of seksuele geaardheid af te leiden? (Dit verbod geldt niet voor het labelen of filteren van rechtmatig verkregen biometrische datasets, zoals afbeeldingen, op basis van biometrische gegevens, of voor categorisering van biometrische gegevens op het gebied van rechtshandhaving)
+ -	gebruikt kan worden als een biometrisch systeem in de publieke ruimte voor identificatie op afstand in real-time, met het oog op de rechtshandhaving?"
+	q-2.2(("2.2: Uitzondering Verboden AI-systeem"))
+click q-2.2 callback "Is er sprake van een van de twee uitzonderingen voor verboden systemen?
+
+ -	Er is sprake van een rechtshandhavingsactiviteit i.v.m. een specifiek misdrijf (terrorisme, mensenhandel, seksuele uitbuiting van kinderen en materiaal over seksueel misbruik van kinderen, illegale handel in verdovende middelen en psychotrope stoffen, illegale handel in wapens, munitie en explosieven, moord, zware mishandeling, illegale handel in menselijke organen en weefsels, illegale handel in nucleaire en radioactieve stoffen, ontvoering, wederrechtelijke vrijheidsberoving en gijzeling, misdrijven die onder de rechtsmacht van het Internationaal Strafhof vallen, kaping van vliegtuigen/schepen, verkrachting, milieucriminaliteit, georganiseerde of gewapende diefstal, sabotage, deelneming aan een criminele organisatie die betrokken is bij een of meer van de bovengenoemde misdrijven).
+ -	Er is sprake van gerichte opsporing van specifieke slachtoffers, ontvoering, mensenhandel en seksuele uitbuiting van mensen, vermiste personen; of het voorkomen van bedreigingen voor het leven of de fysieke veiligheid van personen of het reageren op de huidige of voorzienbare dreiging van een terreuraanslag."
+	q-2.3(("2.3: Hoog-risico Bijlage I A en B"))
+click q-2.3 callback "Is het AI-systeem bedoeld om te worden gebruikt als een veiligheidscomponent van een product dat valt onder de lijst in Bijlage I?
+
+ Specifiek, valt het AI-systeem onder de veiligheidscomponenten van:
+ - Sectie A van bijlage I, die wetgevingen omvat zoals richtlijnen voor machines, speelgoedveiligheid, pleziervaartuigen, liften, radioapparatuur, drukapparatuur, medische hulpmiddelen en gasverbrandingstoestellen.
+
+ Of valt het AI-systeem onder:
+ - Sectie B van bijlage I, die verordeningen bevat voor de beveiliging van de luchtvaart, motorvoertuigen, landbouwvoertuigen, zeeschepen, spoorwegsystemen, en luchtvaartveiligheid?"
+	q-2.4.1(("2.4.1: Conformiteitsbeoordeling Bijlage 1A"))
+click q-2.4.1 callback "We gaan nu bepalen of het verplicht is om de conformiteitsbeoordeling uit te laten voeren door een derde partij?
+ Is jouw AI-systeem bedoeld voor gebruik door:
+ - Rechtshandhavingsinstanties?
+ - Immigratie- of asielautoriteiten?
+ - Instellingen, organen of instanties van de EU?
+
+ Of: Vereist dit product volgens de EU harmonisatiewegeving een conformiteitsbeoordeling door een derde partij?"
+	q-2.4.2(("2.4.2: Conformiteitsbeoordeling Bijlage III"))
+click q-2.4.2 callback "We gaan nu bepalen of het verplicht is om de conformiteitsbeoordeling uit te laten voeren door een derde partij?
+ Is het een toepassing voor biometrische identificatie en categorisering (bijlage III punt 1) EN is een van deze situaties van toepassing:
+ - Bestaan er geen geharmoniseerde normen of gemeenschappelijke specificaties?
+ - Heb je de geharmoniseerde norm niet of slechts gedeeltelijk toegepast?
+ - Bestaan er wel gemeenschappelijke specificaties maar heb je deze niet toegepast?
+ - Zijn er geharmoniseerde normen met beperkingen bekendgemaakt?
+
+ Of is jouw toepassing bedoeld voor gebruik door:
+ - Rechtshandhavingsinstanties?
+ - Immigratie- of asielautoriteiten?
+ - Instellingen, organen of instanties van de EU?
+"
+	q-2.5(("2.5: Profilering"))
+click q-2.5 callback "Voert het AI-systeem profilering van natuurlijke personen uit? Bij profilering is er altijd sprake van een hoog risico."
+	q-2.6(("2.6: Hoog risico Bijlage III"))
+click q-2.6 callback "We gaan nu bepalen of het AI-systeem onder een van de hoog-risico systemen uit Bijlage III van de AI-verordening valt. Betreft het een AI-systeem op een van de volgende gebieden?
+ Beweeg je muis over de opties om te zien welke systemen hieronder vallen.
+ -	biometrie
+ -	kritieke infrastructuur
+ -	onderwijs en beroepsopleiding
+ -	werkgelegenheid, personeelsbeheer en toegang tot zelfstandige arbeid
+ -	toegang tot en gebruik van essentiële particuliere en publieke diensten en uitkeringen
+ -	rechtshandhavingsinstanties - migratie-, asiel- en grenstoezichtsbeheer
+ -	rechtsbedeling en democratische processen
+"
+	q-2.7(("2.7: Uitzondering Hoog risico"))
+click q-2.7 callback "We gaan nu bepalen of er sprake is van een uitzondering op de lijst van hoog-risico AI systemen.
+ Betreft het een AI-systeem dat is bedoeld voor een van de volgende doeleinden?
+ -	Het uitvoeren van een beperkte procedurele taak waarbij er geen significant risico is op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen? -	Het verbeteren van het resultaat van een eerder voltooide menselijke activiteit en waarbij er geen significant risico is op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen? -	Het opsporen van besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen en waarbij het niet bedoeld is om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden? -	Het uitvoeren van een voorbereidende taak voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?"
+	q-2.8(("2.8: Systeemrisico"))
+click q-2.8 callback "We gaan nu bepalen of er sprake is van een systeemrisico.
+ Is er in het gebruikte AI-model sprake van een cumulatieve hoeveelheid rekenkracht van FLOPs groter dan 10^25?
+
+-	FLOPs zijn floating point operations per second.
+ -	FLOPs is een eenheid die wordt gebruikt om de rekenkracht van CPU’s aan te duiden.
+ -	CPUs zijn Central Processing Units.
+ - Dit is de centrale verwerkingseenheid van een computer, smartphone of tablet. De CPU voert het rekenwerk uit waardoor programma’s draaien en hardware wordt aangestuurd."
+	q-2.9(("2.9: Transparantieverplichting"))
+click q-2.9 callback "We gaan nu bepalen of het AI-systeem onder de transparantieverplichtingen van Artikel 50 valt.
+ Is er sprake van een AI-systeem dat:
+ -	direct communiceert met mensen (zoals chatbots)?
+ -	synthetische afbeeldingen, audio, video of tekst content genereert en manipuleert? Bijvoorbeeld een deepfake.
+ -	aan emotieherkenning of biometrische categorisatie doet?
+"
+	q-2.10(("2.10: Uitzondering Transparantieverplichting"))
+click q-2.10 callback "Er is een uitzondering mogelijk op de transparantieverplichtingen. Is er sprake van AI waarvan het bij wet is toegestaan om te gebruiken om strafbare feiten op te sporen, te voorkomen, te onderzoeken of te vervolgen?"
+	q-2.11(("2.11: Open of vrije licentie"))
+click q-2.11 callback "Wordt de toepassing onder een open of vrije licentie gedeeld? Zijn de broncodes en parameters openbaar voor eenieder?"
+	c-12.0.1{{"Je bent een aanbieder van een hoog-risico AI-systeem. Het AI-systeem moet voldoen aan transparantieverplichtingen. "}}
+c-12.0.1:::secondaryStyle
+click c-12.0.1 callback " Verplichtingen voor alle AI-systemen:
+ - AI-geletterdheid (Artikel 4)
+ - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)
+
+ Verplichtingen voor aanbieder van een hoog risico AI-systeem (Artikel 16):
+ - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2
+ - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres
+ - aanbieders beschikken over een systeem voor kwaliteitsbeheer dat in overeenstemming is met Artikel 17 (systeem voor kwaliteitsbeheer)
+ - aanbieders bewaren de in artikel 18 (bewaring van documentatie) bedoelde documentatie
+ - aanbieders bewaren de in artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben
+ - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld
+ - aanbieders stellen een EU-conformiteitsverklaring op, in overeenstemming met Artikel 47. In het geval van het label 'derde partij' dient de uitvoering door een externe derde partij te worden verzorgd.
+ - aanbieders brengen de CE-markering aan op het Ai-systeem met een hoog risico of, waneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, om aan te geven dat aan deze verordening is voldaan, overeenkomstig Artikel 48
+ - aanbieders leven de registratieverplichtingen als bedoeld in Artikel 49 lid 1, na
+ - aanbieders nemen de noodzakelijke corrigerende maatregelen en verstrekken de uit hoofde van Artikel 20 vereiste informatie
+ - aanbieders tonen op een met redenen omkleed verzoek van een nationale bevoegde autoriteit de overeenstemming aan van het AI-systeem met een hoog risico met de eisen van afdeling 2
+ - aanbieders zorgen ervoor dat het AI-systeem met een hoog risico voldoet aan de toegankelijkheidseisen overeenkomstig de Richtlijnen (EU) 2016/2102 en (EU) 2019/882.
+
+ Verplichtingen voor aanbieders en gebruiksverantwoordelijken van AI-systemen met transparantieverplichtingen (Artikel 50):
+ - aanbieders zorgen ervoor dat AI-systemen die voor directe interactie met natuurlijke personen zijn bedoeld, zodanig worden ontworpen en ontwikkeld dat de betrokken natuurlijke personen worden geinformeerd dat zij interageren met een AI-systeem, tenzij dit duidelijk is vanuit het oogpunt van een normaal geinformeerde en redelijk omzichtige en oplettende natuurlijke persoon, rekening houdend met de omstandigheden en de gebruikscontext.
+ - aanbieders van (GP)AI-systemen, die synthetische audio, beeld, video- of tekstinhoud genereren, zorgen ervoor dat de outputs van het AI-systeem worden gemarkeerd in een machineleesbaar formaat en detecteerbaar zijn als kunstmatig gegenereerd of gemanipuleerd. Aanbieders zorgen ervoor dat hun technische oplossingen doeltreffend, interoperabel robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen.
+
+ Geldig vanaf (Artikel 111):
+ - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.
+ - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.
+"
+	c-12.0.2{{"Je bent een aanbieder van een hoog-risico AI-systeem."}}
+c-12.0.2:::secondaryStyle
+click c-12.0.2 callback " Verplichtingen voor alle AI-systemen:
+ - AI-geletterdheid (Artikel 4)
+ - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)
+
+ Verplichtingen voor aanbieder van een hoog risico AI-systeem (Artikel 16):
+
+ - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2
+ - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres
+ - aanbieders beschikken over een systeem voor kwaliteitsbeheer dat in overeenstemming is met Artikel 17 (systeem voor kwaliteitsbeheer)
+ - aanbieders bewaren de in artikel 18 (bewaring van documentatie) bedoelde documentatie
+ - aanbieders bewaren de in artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben
+ - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld
+ - aanbieders stellen een EU-conformiteitsverklaring op, in overeenstemming met Artikel 47. In het geval van het label 'derde partij' dient de uitvoering door een externe derde partij te worden verzorgd.
+ - aanbieders brengen de CE-markering aan op het Ai-systeem met een hoog risico of, waneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, om aan te geven dat aan deze verordening is voldaan, overeenkomstig Artikel 48
+ - aanbieders leven de registratieverplichtingen als bedoeld in Artikel 49 lid 1, na
+ - aanbieders nemen de noodzakelijke corrigerende maatregelen en verstrekken de uit hoofde van Artikel 20 vereiste informatie
+ - aanbieders tonen op een met redenen omkleed verzoek van een nationale bevoegde autoriteit de overeenstemming aan van het AI-systeem met een hoog risico met de eisen van afdeling 2
+ - aanbieders zorgen ervoor dat het AI-systeem met een hoog risico voldoet aan de toegankelijkheidseisen overeenkomstig de Richtlijnen (EU) 2016/2102 en (EU) 2019/882.
+
+ Geldig vanaf (Artikel 111):
+ - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.
+ - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.
+"
+	c-12.0.3{{"Je bent een aanbieder van een niet-hoog-risico AI-systeem. Het AI-systeem moet voldoen aan transparantieverplichtingen."}}
+c-12.0.3:::secondaryStyle
+click c-12.0.3 callback " Verplichtingen voor alle AI-systemen:
+ - AI-geletterdheid (Artikel 4)
+ - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)
+
+ Verplichtingen voor aanbieders en gebruiksverantwoordelijken van AI-systemen met transparantieverplichtingen (Artikel 50):
+ - aanbieders zorgen ervoor dat AI-systemen die voor directe interactie met natuurlijke personen zijn bedoeld, zodanig worden ontworpen en ontwikkeld dat de betrokken natuurlijke personen worden geinformeerd dat zij interageren met een AI-systeem, tenzij dit duidelijk is vanuit het oogpunt van een normaal geinformeerde en redelijk omzichtige en oplettende natuurlijke persoon, rekening houdend met de omstandigheden en de gebruikscontext.
+ - aanbieders van (GP)AI-systemen, die synthetische audio, beeld, video- of tekstinhoud genereren, zorgen ervoor dat de outputs van het AI-systeem worden gemarkeerd in een machineleesbaar formaat en detecteerbaar zijn als kunstmatig gegenereerd of gemanipuleerd. Aanbieders zorgen ervoor dat hun technische oplossingen doeltreffend, interoperabel robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen.
+
+ Geldig vanaf (Artikel 111):
+ - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.
+ - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.
+"
+	c-12.0.4{{"Je bent een aanbieder van een niet-hoog-risico AI-systeem."}}
+c-12.0.4:::secondaryStyle
+click c-12.0.4 callback " Verplichtingen voor alle AI-systemen:
+ - AI-geletterdheid (Artikel 4)
+ - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)
+
+ Geldig vanaf (Artikel 111):
+ - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.
+ - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.
+"
+	c-12.1.1{{"Je bent een aanbieder van een hoog-risico AI-systeem voor algemene doeleinden. Het AI-systeem moet voldoen aan transparantieverplichtingen."}}
+c-12.1.1:::secondaryStyle
+click c-12.1.1 callback " Verplichtingen voor alle AI-systemen:
+ - AI-geletterdheid (Artikel 4)
+ - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)
+
+ Verplichtingen voor aanbieder van een hoog risico AI-systeem (Artikel 16):
+ - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2
+ - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres
+ - aanbieders beschikken over een systeem voor kwaliteitsbeheer dat in overeenstemming is met Artikel 17 (systeem voor kwaliteitsbeheer)
+ - aanbieders bewaren de in artikel 18 (bewaring van documentatie) bedoelde documentatie
+ - aanbieders bewaren de in artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben
+ - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld
+ - aanbieders stellen een EU-conformiteitsverklaring op, in overeenstemming met Artikel 47. In het geval van het label 'derde partij' dient de uitvoering door een externe derde partij te worden verzorgd.
+ - aanbieders brengen de CE-markering aan op het Ai-systeem met een hoog risico of, waneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, om aan te geven dat aan deze verordening is voldaan, overeenkomstig Artikel 48
+ - aanbieders leven de registratieverplichtingen als bedoeld in Artikel 49 lid 1, na
+ - aanbieders nemen de noodzakelijke corrigerende maatregelen en verstrekken de uit hoofde van Artikel 20 vereiste informatie
+ - aanbieders tonen op een met redenen omkleed verzoek van een nationale bevoegde autoriteit de overeenstemming aan van het AI-systeem met een hoog risico met de eisen van afdeling 2
+ - aanbieders zorgen ervoor dat het AI-systeem met een hoog risico voldoet aan de toegankelijkheidseisen overeenkomstig de Richtlijnen (EU) 2016/2102 en (EU) 2019/882.
+
+ Verplichtingen voor aanbieders en gebruiksverantwoordelijken van AI-systemen met transparantieverplichtingen (Artikel 50):
+ - aanbieders zorgen ervoor dat AI-systemen die voor directe interactie met natuurlijke personen zijn bedoeld, zodanig worden ontworpen en ontwikkeld dat de betrokken natuurlijke personen worden geinformeerd dat zij interageren met een AI-systeem, tenzij dit duidelijk is vanuit het oogpunt van een normaal geinformeerde en redelijk omzichtige en oplettende natuurlijke persoon, rekening houdend met de omstandigheden en de gebruikscontext.
+ - aanbieders van (GP)AI-systemen, die synthetische audio, beeld, video- of tekstinhoud genereren, zorgen ervoor dat de outputs van het AI-systeem worden gemarkeerd in een machineleesbaar formaat en detecteerbaar zijn als kunstmatig gegenereerd of gemanipuleerd. Aanbieders zorgen ervoor dat hun technische oplossingen doeltreffend, interoperabel robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen.
+
+ Geldig vanaf (Artikel 111):
+ - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.
+ - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.
+
+
+De volgende verplichtingen gelden voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54):
+ - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan
+ - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren
+ - beleid opstellen ter naleving van het Unierecht inzake auteursrechten en naburige rechten en dan met name ter vaststelling en naleving, onder meer door middel van geavanceerde technologieën
+ - een voldoende gedetailleerde samenvatting opstellen en openbaar maken over de voor het trainen van het AI-model voor algemene doeleinden gebruikte content, volgens een door het AI-bureau verstrekt sjabloon.
+
+ Geldig vanaf (Artikel 111 en Overweging 179):
+ - Voor AI-modellen in ontwikkeling gelden de verplichtingen voor aanbieders van algemene AI-modellen, zoals taal- of beeldherkenningsmodellen, vanaf 2 augustus 2025.
+ - Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.
+
+"
+	c-12.1.2{{"Je bent een aanbieder van een hoog-risico AI-systeem voor algemene doeleinden."}}
+c-12.1.2:::secondaryStyle
+click c-12.1.2 callback " Verplichtingen voor alle AI-systemen:
+ - AI-geletterdheid (Artikel 4)
+ - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)
+
+ Verplichtingen voor aanbieder van een hoog risico AI-systeem (Artikel 16):
+ - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2
+ - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres
+ - aanbieders beschikken over een systeem voor kwaliteitsbeheer dat in overeenstemming is met Artikel 17 (systeem voor kwaliteitsbeheer)
+ - aanbieders bewaren de in artikel 18 (bewaring van documentatie) bedoelde documentatie
+ - aanbieders bewaren de in artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben
+ - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld
+ - aanbieders stellen een EU-conformiteitsverklaring op, in overeenstemming met Artikel 47. In het geval van het label 'derde partij' dient de uitvoering door een externe derde partij te worden verzorgd.
+ - aanbieders brengen de CE-markering aan op het Ai-systeem met een hoog risico of, waneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, om aan te geven dat aan deze verordening is voldaan, overeenkomstig Artikel 48
+ - aanbieders leven de registratieverplichtingen als bedoeld in Artikel 49 lid 1, na
+ - aanbieders nemen de noodzakelijke corrigerende maatregelen en verstrekken de uit hoofde van Artikel 20 vereiste informatie
+ - aanbieders tonen op een met redenen omkleed verzoek van een nationale bevoegde autoriteit de overeenstemming aan van het AI-systeem met een hoog risico met de eisen van afdeling 2
+ - aanbieders zorgen ervoor dat het AI-systeem met een hoog risico voldoet aan de toegankelijkheidseisen overeenkomstig de Richtlijnen (EU) 2016/2102 en (EU) 2019/882.
+
+ Geldig vanaf (Artikel 111):
+ - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.
+ - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.
+
+
+De volgende verplichtingen gelden voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54):
+ - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan
+ - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren
+ - beleid opstellen ter naleving van het Unierecht inzake auteursrechten en naburige rechten en dan met name ter vaststelling en naleving, onder meer door middel van geavanceerde technologieën
+ - een voldoende gedetailleerde samenvatting opstellen en openbaar maken over de voor het trainen van het AI-model voor algemene doeleinden gebruikte content, volgens een door het AI-bureau verstrekt sjabloon.
+
+
+ Geldig vanaf (Artikel 111 en Overweging 179):
+ - Voor AI-modellen in ontwikkeling gelden de verplichtingen voor aanbieders van algemene AI-modellen, zoals taal- of beeldherkenningsmodellen, vanaf 2 augustus 2025.
+ - Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.
+
+"
+	c-12.1.3{{"Je bent een aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden. Het AI-systeem moet voldoen aan transparantieverplichtingen."}}
+c-12.1.3:::secondaryStyle
+click c-12.1.3 callback " Verplichtingen voor alle AI-systemen:
+ - AI-geletterdheid (Artikel 4)
+ - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)
+
+ Verplichtingen voor aanbieders en gebruiksverantwoordelijken van AI-systemen met transparantieverplichtingen (Artikel 50):
+ - aanbieders zorgen ervoor dat AI-systemen die voor directe interactie met natuurlijke personen zijn bedoeld, zodanig worden ontworpen en ontwikkeld dat de betrokken natuurlijke personen worden geinformeerd dat zij interageren met een AI-systeem, tenzij dit duidelijk is vanuit het oogpunt van een normaal geinformeerde en redelijk omzichtige en oplettende natuurlijke persoon, rekening houdend met de omstandigheden en de gebruikscontext.
+ - aanbieders van (GP)AI-systemen, die synthetische audio, beeld, video- of tekstinhoud genereren, zorgen ervoor dat de outputs van het AI-systeem worden gemarkeerd in een machineleesbaar formaat en detecteerbaar zijn als kunstmatig gegenereerd of gemanipuleerd. Aanbieders zorgen ervoor dat hun technische oplossingen doeltreffend, interoperabel robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen.
+
+ Geldig vanaf (Artikel 111):
+ - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.
+ - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.
+
+ De volgende verplichtingen gelden voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54):
+ - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan
+ - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren
+ - beleid opstellen ter naleving van het Unierecht inzake auteursrechten en naburige rechten en dan met name ter vaststelling en naleving, onder meer door middel van geavanceerde technologieën
+ - een voldoende gedetailleerde samenvatting opstellen en openbaar maken over de voor het trainen van het AI-model voor algemene doeleinden gebruikte content, volgens een door het AI-bureau verstrekt sjabloon.
+
+ Geldig vanaf (Artikel 111 en Overweging 179):
+ - Voor AI-modellen in ontwikkeling gelden de verplichtingen voor aanbieders van algemene AI-modellen, zoals taal- of beeldherkenningsmodellen, vanaf 2 augustus 2025.
+ - Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.
+
+"
+	c-12.1.4{{"Je bent een aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden."}}
+c-12.1.4:::secondaryStyle
+click c-12.1.4 callback " Verplichtingen voor alle AI-systemen:
+ - AI-geletterdheid (Artikel 4)
+ - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)
+
+ Geldig vanaf (Artikel 111):
+ - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.
+ - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.
+
+ De volgende verplichtingen gelden voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54):
+ - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan
+ - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren
+ - beleid opstellen ter naleving van het Unierecht inzake auteursrechten en naburige rechten en dan met name ter vaststelling en naleving, onder meer door middel van geavanceerde technologieën
+ - een voldoende gedetailleerde samenvatting opstellen en openbaar maken over de voor het trainen van het AI-model voor algemene doeleinden gebruikte content, volgens een door het AI-bureau verstrekt sjabloon.
+
+ Geldig vanaf (Artikel 111 en Overweging 179):
+ - Voor AI-modellen in ontwikkeling gelden de verplichtingen voor aanbieders van algemene AI-modellen, zoals taal- of beeldherkenningsmodellen, vanaf 2 augustus 2025.
+ - Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.
+
+"
+	c-12.2.1{{"Je bent een aanbieder van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico."}}
+c-12.2.1:::secondaryStyle
+click c-12.2.1 callback " Verplichtingen voor alle AI-modellen voor algemene doeleinden:
+ - Praktijkcodes (Artikel 56)
+
+ Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden (Artikel 53 en Artikel 54):
+ - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan.
+ - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren.
+ - beleid opstellen ter naleving van het Unierecht inzake auteursrechten en naburige rechten en dan met name ter vaststelling en naleving, onder meer door middel van geavanceerde technologieën.
+ - een voldoende gedetailleerde samenvatting opstellen en openbaar maken over de voor het trainen van het AI-model voor algemene doeleinden gebruikte content, volgens een door het AI-bureau verstrekt sjabloon.
+
+ Verplichtingen van aanbieders van AI-modellen voor algemene doeleinden met een systeemrisico (Artikel 55):
+ - het uitvoeren van een modelevaluatie overeenkomstig gestandaardiseerde protocollen en instrumenten die de stand van de techniek weerspiegelen, met inbegrip van het uitvoeren en documenteren van tests gericht op het ontdekken van kwetsbaarheden van het model met als doel om systeemrisico’s in kaart te brengen en te beperken.
+ - het beoordelen en beperken van mogelijke systeemrisico’s op Unieniveau, met inbegrip van de bronnen daarvan, die kunnen voortvloeien uit de ontwikkeling, het in de handel brengen of het gebruik van AI-modellen voor algemene doeleinden met een systeemrisico.
+ - het bijhouden, documenteren en onverwijld rapporteren (aan het AI-bureau (en in voorkomende gevallen aan de nationale bevoegde autoriteiten)) van relevante informatie over ernstige incidenten en mogelijke corrigerende maatregelen.
+ - het zorgen voor een passend niveau van cyberbeveiligingsbescherming voor het AI-model voor algemene doeleinden en de fysieke infrastructuur van het model.
+ Geldig vanaf (Artikel 111 en Overweging 179):
+ - Voor AI-modellen in ontwikkeling gelden de verplichtingen voor aanbieders van algemene AI-modellen, zoals taal- of beeldherkenningsmodellen, vanaf 2 augustus 2025.
+ - Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.
+
+"
+	c-12.2.2{{"Je bent een aanbieder van een open-source AI-model voor algemene doeleinden."}}
+c-12.2.2:::secondaryStyle
+click c-12.2.2 callback " Verplichtingen voor alle AI-modellen voor algemene doeleinden:
+ - Praktijkcodes (Artikel 56)
+
+ Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden (Artikel 53 en Artikel 54):
+ - beleid opstellen ter naleving van het Unierecht inzake auteursrechten en naburige rechten en dan met name ter vaststelling en naleving, onder meer door middel van geavanceerde technologieën.
+ - een voldoende gedetailleerde samenvatting opstellen en openbaar maken over de voor het trainen van het AI-model voor algemene doeleinden gebruikte content, volgens een door het AI-bureau verstrekt sjabloon.
+
+ - Door overweging 104 voor open-source AI-modellen voor algemene doeleinden hoef je niet te voldoen aan: de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan.
+ - Door overweging 104 voor open-source AI-modellen voor algemene doeleinden hoef je niet te voldoen aan:hoef je niet te voldoen aan: informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren.
+ Verplichtingen van aanbieders van AI-modellen voor algemene doeleinden met een systeemrisico (Artikel 55):
+ - het uitvoeren van een modelevaluatie overeenkomstig gestandaardiseerde protocollen en instrumenten die de stand van de techniek weerspiegelen, met inbegrip van het uitvoeren en documenteren van tests gericht op het ontdekken van kwetsbaarheden van het model met als doel om systeemrisico’s in kaart te brengen en te beperken.
+ - het beoordelen en beperken van mogelijke systeemrisico’s op Unieniveau, met inbegrip van de bronnen daarvan, die kunnen voortvloeien uit de ontwikkeling, het in de handel brengen of het gebruik van AI-modellen voor algemene doeleinden met een systeemrisico.
+ - het bijhouden, documenteren en onverwijld rapporteren (aan het AI-bureau (en in voorkomende gevallen aan de nationale bevoegde autoriteiten)) van relevante informatie over ernstige incidenten en mogelijke corrigerende maatregelen.
+ - het zorgen voor een passend niveau van cyberbeveiligingsbescherming voor het AI-model voor algemene doeleinden en de fysieke infrastructuur van het model.
+ Geldig vanaf (Artikel 111 en Overweging 179):
+ - Voor AI-modellen in ontwikkeling gelden de verplichtingen voor aanbieders van algemene AI-modellen, zoals taal- of beeldherkenningsmodellen, vanaf 2 augustus 2025.
+ - Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.
+
+"
+	c-12.2.3{{"Je bent een aanbieder van een AI-model voor algemene doeleinden."}}
+c-12.2.3:::secondaryStyle
+click c-12.2.3 callback " Verplichtingen voor alle AI-modellen voor algemene doeleinden:
+ - Praktijkcodes (Artikel 56)
+
+ Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden (Artikel 53 en Artikel 54):
+ - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan. In het geval van het label 'open-source' is er een uitzondering op deze verplichting (Overweging 104).
+ - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren. In het geval van het label 'open-source' is er een uitzondering op deze verplichting (Overweging 104).
+ - beleid opstellen ter naleving van het Unierecht inzake auteursrechten en naburige rechten en dan met name ter vaststelling en naleving, onder meer door middel van geavanceerde technologieën.
+ - een voldoende gedetailleerde samenvatting opstellen en openbaar maken over de voor het trainen van het AI-model voor algemene doeleinden gebruikte content, volgens een door het AI-bureau verstrekt sjabloon.
+
+ Verplichtingen van aanbieders van AI-modellen voor algemene doeleinden met een systeemrisico (Artikel 55):
+ - het uitvoeren van een modelevaluatie overeenkomstig gestandaardiseerde protocollen en instrumenten die de stand van de techniek weerspiegelen, met inbegrip van het uitvoeren en documenteren van tests gericht op het ontdekken van kwetsbaarheden van het model met als doel om systeemrisico’s in kaart te brengen en te beperken.
+ - het beoordelen en beperken van mogelijke systeemrisico’s op Unieniveau, met inbegrip van de bronnen daarvan, die kunnen voortvloeien uit de ontwikkeling, het in de handel brengen of het gebruik van AI-modellen voor algemene doeleinden met een systeemrisico.
+ - het bijhouden, documenteren en onverwijld rapporteren (aan het AI-bureau (en in voorkomende gevallen aan de nationale bevoegde autoriteiten)) van relevante informatie over ernstige incidenten en mogelijke corrigerende maatregelen.
+ - het zorgen voor een passend niveau van cyberbeveiligingsbescherming voor het AI-model voor algemene doeleinden en de fysieke infrastructuur van het model.
+ Geldig vanaf (Artikel 111 source: Overweging 179 - Ingangtreding verordening ):
+ - Voor AI-modellen in ontwikkeling gelden de verplichtingen voor aanbieders van algemene AI-modellen, zoals taal- of beeldherkenningsmodellen, vanaf 2 augustus 2025.
+ - Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.
+
+"
+	c-13.0.1{{"Je bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem. Het AI-systeem moet voldoen aan transparantieverplichtingen. "}}
+c-13.0.1:::secondaryStyle
+click c-13.0.1 callback " Verplichtingen voor alle AI-systemen:
+ - AI-geletterdheid (Artikel 4)
+ - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)
+
+ Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico (Artikel 26 en Artikel 27):
+ - het nemen van passende technische en organisatorische maatregelen om te waarborgen dat dergelijke systemen in overeenstemming met de gebruiksaanwijzingen die bij de systemen zijn gevoegd worden gebruikt
+ - het opdragen van menselijk toezicht aan natuurlijke personen die over de nodige bekwaamheid, opleiding en autoriteit beschikken en de nodige ondersteuning krijgen
+ - het ervoor zorgen dat, voor zover de gebruikersverantwoordelijke controle heeft over de inputdata, de inputdata relevant en voldoende representatief zijn voor het beoogde doel van het AI-systeem met een hoog risico
+ - het monitoren van de werking van het AI-systeem met een hoog risico op basis van de gebruiksaanwijzingen en in voorkomend geval het in kennis stellen van de aanbieders overeenkomstig artikel 72.
+ - het bewaren van de logs die automatisch worden gegenereerd door dat AI-systeem met een hoog risico voor zover dergelijke logs onder controle van de gebruiksverantwoordelijke vallen gedurende een periode die passend is voor het beoogde doel van het AI-systeem met een hoog risico, of ten minste zes maanden
+ - voordat een AI-systeem met een hoog risico op de werkplek in gebruik wordt gesteld of wordt gebruikt, delen gebruiksverantwoordelijken die werkgever zijn werknemersvertegenwoordigers en de betrokken werknemers mee dat zij zullen worden onderworpen aan het gebruik van het AI-systeem met een hoog risico
+ - gebruiksverantwoordelijken van AI-systemen met een hoog risico die de hoedanigheid van overheidsinstanties of instellingen, organen of instanties van de Unie hebben, leven de in artikel 49 bedoelde registratieverplichtingen na. Wanneer deze gebruiksverantwoordelijke vaststellen dat het AI-systeem met een hoog risico dat zij voornemens zijn te gebruiken niet in de in artikel 71 bedoelde EU-databank is geregistreerd, gebruiken zij dat systeem niet en stellen zij de aanbieder of de distributeur daarvan in kennis
+ - indien van toepassing, gebruiken gebruiksverantwoordelijken van AI-systemen met een hoog risico de informatie die op grond van artikel 13 van deze verordening wordt verstrekt om hun verplichting na te komen om een gegevensbeschermingseffectbeoordeling uit te voeren
+ - de gebruiksverantwoordelijke van een AI-systeem met een hoog risico voor biometrische identificatie op afstand verzoekt achteraf in het kader van een onderzoek waarbij gericht wordt gezocht naar een persoon die wordt verdacht van of veroordeeld is voor het plegen van een strafbaar feit, vooraf of zonder onnodige vertraging en uiterlijk 48 uur na het feit, om toestemming van een gerechtelijke instantie of administratieve instantie, van wie de beslissing bindend is en onderworpen is aan rechterlijke toetsing, voor het gebruik van dat systeem, behalve wanneer het wordt gebruikt voor de initiële identificatie van een potentiële verdachte op basis van objectieve en verifieerbare feiten die rechtstreeks verband houden met het strafbare feit. Elk gebruik wordt beperkt tot hetgeen strikt noodzakelijk is voor het onderzoek naar een specifiek strafbaar feit
+ - gebruiksverantwoordelijken van in bijlage III bedoelde AI-systemen met een hoog risico die beslissingen met betrekking tot natuurlijke personen nemen of helpen nemen, informeren de natuurlijke personen dat het AI-systeem met een hoog risico op hen wordt toegepast.
+ - gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.
+ - gebruiksverantwoordelijken die publiekrechtelijke organen zijn of particuliere entiteiten zijn die openbare diensten verlenen, en gebruiksverantwoordelijken van AI-systemen met een hoog risico gebruikt in krediet/verzekering (bijlage III, 5, c en d) een beoordeling uit van de gevolgen voor de grondrechten die het gebruik van een dergelijk systeem kan opleveren (Artikel 27).
+
+ Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen (Artikel 50):
+ - gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680, indien van toepassing
+ - gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent genereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief, satirisch, fictief of analoog werk of programma, zijn de transparantieverplichtingen beperkt tot de openbaarmaking van het bestaan van dergelijke gegenereerde of bewerkte content op een passende wijze die de weergave of het genot van het werk niet belemmert.
+
+ Geldig vanaf (Artikel 111):
+ - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.
+ - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.
+
+"
+	c-13.0.2{{"Je bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem."}}
+c-13.0.2:::secondaryStyle
+click c-13.0.2 callback " Verplichtingen voor alle AI-systemen:
+ - AI-geletterdheid (Artikel 4)
+ - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)
+
+ Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico (Artikel 26 en Artikel 27):
+ - het nemen van passende technische en organisatorische maatregelen om te waarborgen dat dergelijke systemen in overeenstemming met de gebruiksaanwijzingen die bij de systemen zijn gevoegd worden gebruikt
+ - het opdragen van menselijk toezicht aan natuurlijke personen die over de nodige bekwaamheid, opleiding en autoriteit beschikken en de nodige ondersteuning krijgen
+ - het ervoor zorgen dat, voor zover de gebruikersverantwoordelijke controle heeft over de inputdata, de inputdata relevant en voldoende representatief zijn voor het beoogde doel van het AI-systeem met een hoog risico
+ - het monitoren van de werking van het AI-systeem met een hoog risico op basis van de gebruiksaanwijzingen en in voorkomend geval het in kennis stellen van de aanbieders overeenkomstig artikel 72.
+ - het bewaren van de logs die automatisch worden gegenereerd door dat AI-systeem met een hoog risico voor zover dergelijke logs onder controle van de gebruiksverantwoordelijke vallen gedurende een periode die passend is voor het beoogde doel van het AI-systeem met een hoog risico, of ten minste zes maanden
+ - voordat een AI-systeem met een hoog risico op de werkplek in gebruik wordt gesteld of wordt gebruikt, delen gebruiksverantwoordelijken die werkgever zijn werknemersvertegenwoordigers en de betrokken werknemers mee dat zij zullen worden onderworpen aan het gebruik van het AI-systeem met een hoog risico
+ - gebruiksverantwoordelijken van AI-systemen met een hoog risico die de hoedanigheid van overheidsinstanties of instellingen, organen of instanties van de Unie hebben, leven de in artikel 49 bedoelde registratieverplichtingen na. Wanneer deze gebruiksverantwoordelijke vaststellen dat het AI-systeem met een hoog risico dat zij voornemens zijn te gebruiken niet in de in artikel 71 bedoelde EU-databank is geregistreerd, gebruiken zij dat systeem niet en stellen zij de aanbieder of de distributeur daarvan in kennis
+ - indien van toepassing, gebruiken gebruiksverantwoordelijken van AI-systemen met een hoog risico de informatie die op grond van artikel 13 van deze verordening wordt verstrekt om hun verplichting na te komen om een gegevensbeschermingseffectbeoordeling uit te voeren
+ - de gebruiksverantwoordelijke van een AI-systeem met een hoog risico voor biometrische identificatie op afstand verzoekt achteraf in het kader van een onderzoek waarbij gericht wordt gezocht naar een persoon die wordt verdacht van of veroordeeld is voor het plegen van een strafbaar feit, vooraf of zonder onnodige vertraging en uiterlijk 48 uur na het feit, om toestemming van een gerechtelijke instantie of administratieve instantie, van wie de beslissing bindend is en onderworpen is aan rechterlijke toetsing, voor het gebruik van dat systeem, behalve wanneer het wordt gebruikt voor de initiële identificatie van een potentiële verdachte op basis van objectieve en verifieerbare feiten die rechtstreeks verband houden met het strafbare feit. Elk gebruik wordt beperkt tot hetgeen strikt noodzakelijk is voor het onderzoek naar een specifiek strafbaar feit
+ - gebruiksverantwoordelijken van in bijlage III bedoelde AI-systemen met een hoog risico die beslissingen met betrekking tot natuurlijke personen nemen of helpen nemen, informeren de natuurlijke personen dat het AI-systeem met een hoog risico op hen wordt toegepast.
+ - gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.
+ - gebruiksverantwoordelijken die publiekrechtelijke organen zijn of particuliere entiteiten zijn die openbare diensten verlenen, en gebruiksverantwoordelijken van AI-systemen met een hoog risico gebruikt in krediet/verzekering (bijlage III, 5, c en d) een beoordeling uit van de gevolgen voor de grondrechten die het gebruik van een dergelijk systeem kan opleveren (Artikel 27).
+
+ Geldig vanaf (Artikel 111):
+ - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.
+ - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.
+
+"
+	c-13.0.3{{"Je bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem. Het AI-systeem moet voldoen aan transparantieverplichtingen."}}
+c-13.0.3:::secondaryStyle
+click c-13.0.3 callback " Verplichtingen voor alle AI-systemen:
+ - AI-geletterdheid (Artikel 4)
+ - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)
+
+ Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen (Artikel 50):
+ - gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680, indien van toepassing
+ - gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent genereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief, satirisch, fictief of analoog werk of programma, zijn de transparantieverplichtingen beperkt tot de openbaarmaking van het bestaan van dergelijke gegenereerde of bewerkte content op een passende wijze die de weergave of het genot van het werk niet belemmert.
+
+ Geldig vanaf (Artikel 111):
+ - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.
+ - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.
+
+"
+	c-13.0.4{{"Je bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem."}}
+c-13.0.4:::secondaryStyle
+click c-13.0.4 callback " Verplichtingen voor alle AI-systemen:
+ - AI-geletterdheid (Artikel 4)
+ - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)
+
+ Geldig vanaf (Artikel 111):
+ - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.
+ - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.
+
+"
+	c-13.1.1{{"Je bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem voor algemene doeleinden. Het AI-systeem moet voldoen aan transparantieverplichtingen."}}
+c-13.1.1:::secondaryStyle
+click c-13.1.1 callback " Verplichtingen voor alle AI-systemen:
+ - AI-geletterdheid (Artikel 4)
+ - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)
+
+ Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico (Artikel 26 en Artikel 27):
+ - het nemen van passende technische en organisatorische maatregelen om te waarborgen dat dergelijke systemen in overeenstemming met de gebruiksaanwijzingen die bij de systemen zijn gevoegd worden gebruikt
+ - het opdragen van menselijk toezicht aan natuurlijke personen die over de nodige bekwaamheid, opleiding en autoriteit beschikken en de nodige ondersteuning krijgen
+ - het ervoor zorgen dat, voor zover de gebruikersverantwoordelijke controle heeft over de inputdata, de inputdata relevant en voldoende representatief zijn voor het beoogde doel van het AI-systeem met een hoog risico
+ - het monitoren van de werking van het AI-systeem met een hoog risico op basis van de gebruiksaanwijzingen en in voorkomend geval het in kennis stellen van de aanbieders overeenkomstig artikel 72.
+ - het bewaren van de logs die automatisch worden gegenereerd door dat AI-systeem met een hoog risico voor zover dergelijke logs onder controle van de gebruiksverantwoordelijke vallen gedurende een periode die passend is voor het beoogde doel van het AI-systeem met een hoog risico, of ten minste zes maanden
+ - voordat een AI-systeem met een hoog risico op de werkplek in gebruik wordt gesteld of wordt gebruikt, delen gebruiksverantwoordelijken die werkgever zijn werknemersvertegenwoordigers en de betrokken werknemers mee dat zij zullen worden onderworpen aan het gebruik van het AI-systeem met een hoog risico
+ - gebruiksverantwoordelijken van AI-systemen met een hoog risico die de hoedanigheid van overheidsinstanties of instellingen, organen of instanties van de Unie hebben, leven de in artikel 49 bedoelde registratieverplichtingen na. Wanneer deze gebruiksverantwoordelijke vaststellen dat het AI-systeem met een hoog risico dat zij voornemens zijn te gebruiken niet in de in artikel 71 bedoelde EU-databank is geregistreerd, gebruiken zij dat systeem niet en stellen zij de aanbieder of de distributeur daarvan in kennis
+ - indien van toepassing, gebruiken gebruiksverantwoordelijken van AI-systemen met een hoog risico de informatie die op grond van artikel 13 van deze verordening wordt verstrekt om hun verplichting na te komen om een gegevensbeschermingseffectbeoordeling uit te voeren
+ - de gebruiksverantwoordelijke van een AI-systeem met een hoog risico voor biometrische identificatie op afstand verzoekt achteraf in het kader van een onderzoek waarbij gericht wordt gezocht naar een persoon die wordt verdacht van of veroordeeld is voor het plegen van een strafbaar feit, vooraf of zonder onnodige vertraging en uiterlijk 48 uur na het feit, om toestemming van een gerechtelijke instantie of administratieve instantie, van wie de beslissing bindend is en onderworpen is aan rechterlijke toetsing, voor het gebruik van dat systeem, behalve wanneer het wordt gebruikt voor de initiële identificatie van een potentiële verdachte op basis van objectieve en verifieerbare feiten die rechtstreeks verband houden met het strafbare feit. Elk gebruik wordt beperkt tot hetgeen strikt noodzakelijk is voor het onderzoek naar een specifiek strafbaar feit
+ - gebruiksverantwoordelijken van in bijlage III bedoelde AI-systemen met een hoog risico die beslissingen met betrekking tot natuurlijke personen nemen of helpen nemen, informeren de natuurlijke personen dat het AI-systeem met een hoog risico op hen wordt toegepast.
+ - gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.
+ - gebruiksverantwoordelijken die publiekrechtelijke organen zijn of particuliere entiteiten zijn die openbare diensten verlenen, en gebruiksverantwoordelijken van AI-systemen met een hoog risico gebruikt in krediet/verzekering (bijlage III, 5, c en d) een beoordeling uit van de gevolgen voor de grondrechten die het gebruik van een dergelijk systeem kan opleveren (Artikel 27).
+
+ Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen (Artikel 50):
+ - gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680, indien van toepassing
+ - gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent genereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief, satirisch, fictief of analoog werk of programma, zijn de transparantieverplichtingen beperkt tot de openbaarmaking van het bestaan van dergelijke gegenereerde of bewerkte content op een passende wijze die de weergave of het genot van het werk niet belemmert.
+
+ Geldig vanaf (Artikel 111):
+ - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.
+ - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.
+
+"
+	c-13.1.2{{"Je bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem voor algemene doeleinden."}}
+c-13.1.2:::secondaryStyle
+click c-13.1.2 callback " Verplichtingen voor alle AI-systemen:
+ - AI-geletterdheid (Artikel 4)
+ - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)
+
+ Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico (Artikel 26 en Artikel 27):
+ - het nemen van passende technische en organisatorische maatregelen om te waarborgen dat dergelijke systemen in overeenstemming met de gebruiksaanwijzingen die bij de systemen zijn gevoegd worden gebruikt
+ - het opdragen van menselijk toezicht aan natuurlijke personen die over de nodige bekwaamheid, opleiding en autoriteit beschikken en de nodige ondersteuning krijgen
+ - het ervoor zorgen dat, voor zover de gebruikersverantwoordelijke controle heeft over de inputdata, de inputdata relevant en voldoende representatief zijn voor het beoogde doel van het AI-systeem met een hoog risico
+ - het monitoren van de werking van het AI-systeem met een hoog risico op basis van de gebruiksaanwijzingen en in voorkomend geval het in kennis stellen van de aanbieders overeenkomstig artikel 72.
+ - het bewaren van de logs die automatisch worden gegenereerd door dat AI-systeem met een hoog risico voor zover dergelijke logs onder controle van de gebruiksverantwoordelijke vallen gedurende een periode die passend is voor het beoogde doel van het AI-systeem met een hoog risico, of ten minste zes maanden
+ - voordat een AI-systeem met een hoog risico op de werkplek in gebruik wordt gesteld of wordt gebruikt, delen gebruiksverantwoordelijken die werkgever zijn werknemersvertegenwoordigers en de betrokken werknemers mee dat zij zullen worden onderworpen aan het gebruik van het AI-systeem met een hoog risico
+ - gebruiksverantwoordelijken van AI-systemen met een hoog risico die de hoedanigheid van overheidsinstanties of instellingen, organen of instanties van de Unie hebben, leven de in artikel 49 bedoelde registratieverplichtingen na. Wanneer deze gebruiksverantwoordelijke vaststellen dat het AI-systeem met een hoog risico dat zij voornemens zijn te gebruiken niet in de in artikel 71 bedoelde EU-databank is geregistreerd, gebruiken zij dat systeem niet en stellen zij de aanbieder of de distributeur daarvan in kennis
+ - indien van toepassing, gebruiken gebruiksverantwoordelijken van AI-systemen met een hoog risico de informatie die op grond van artikel 13 van deze verordening wordt verstrekt om hun verplichting na te komen om een gegevensbeschermingseffectbeoordeling uit te voeren
+ - de gebruiksverantwoordelijke van een AI-systeem met een hoog risico voor biometrische identificatie op afstand verzoekt achteraf in het kader van een onderzoek waarbij gericht wordt gezocht naar een persoon die wordt verdacht van of veroordeeld is voor het plegen van een strafbaar feit, vooraf of zonder onnodige vertraging en uiterlijk 48 uur na het feit, om toestemming van een gerechtelijke instantie of administratieve instantie, van wie de beslissing bindend is en onderworpen is aan rechterlijke toetsing, voor het gebruik van dat systeem, behalve wanneer het wordt gebruikt voor de initiële identificatie van een potentiële verdachte op basis van objectieve en verifieerbare feiten die rechtstreeks verband houden met het strafbare feit. Elk gebruik wordt beperkt tot hetgeen strikt noodzakelijk is voor het onderzoek naar een specifiek strafbaar feit
+ - gebruiksverantwoordelijken van in bijlage III bedoelde AI-systemen met een hoog risico die beslissingen met betrekking tot natuurlijke personen nemen of helpen nemen, informeren de natuurlijke personen dat het AI-systeem met een hoog risico op hen wordt toegepast.
+ - gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.
+ - gebruiksverantwoordelijken die publiekrechtelijke organen zijn of particuliere entiteiten zijn die openbare diensten verlenen, en gebruiksverantwoordelijken van AI-systemen met een hoog risico gebruikt in krediet/verzekering (bijlage III, 5, c en d) een beoordeling uit van de gevolgen voor de grondrechten die het gebruik van een dergelijk systeem kan opleveren (Artikel 27).
+
+ Geldig vanaf (Artikel 111):
+ - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.
+ - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.
+
+"
+	c-13.1.3{{"Je bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem voor algemene doeleinden. Het AI-systeem moet voldoen aan transparantieverplichtingen."}}
+c-13.1.3:::secondaryStyle
+click c-13.1.3 callback " Verplichtingen voor alle AI-systemen:
+ - AI-geletterdheid (Artikel 4)
+ - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)
+
+ Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen (Artikel 50):
+ - gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680, indien van toepassing
+ - gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent genereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief, satirisch, fictief of analoog werk of programma, zijn de transparantieverplichtingen beperkt tot de openbaarmaking van het bestaan van dergelijke gegenereerde of bewerkte content op een passende wijze die de weergave of het genot van het werk niet belemmert.
+
+ Geldig vanaf (Artikel 111):
+ - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.
+ - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.
+
+"
+	c-13.1.4{{"Je bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem voor algemene doeleinden."}}
+c-13.1.4:::secondaryStyle
+click c-13.1.4 callback " Verplichtingen voor alle AI-systemen:
+ - AI-geletterdheid (Artikel 4)
+ - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)
+
+ Geldig vanaf (Artikel 111 en Overweging 179):
+ - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.
+ - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.
+
+"
+	c-14.0.1{{"Je bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem. Het AI-systeem moet voldoen aan transparantieverplichtingen."}}
+c-14.0.1:::secondaryStyle
+click c-14.0.1 callback " Verplichtingen voor alle AI-systemen:
+ - AI-geletterdheid (Artikel 4)
+ - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)
+
+ Verplichtingen voor aanbieder van een hoog risico AI-systeem (Artikel 16):
+ - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2
+ - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres
+ - aanbieders beschikken over een systeem voor kwaliteitsbeheer dat in overeenstemming is met Artikel 17 (systeem voor kwaliteitsbeheer)
+ - aanbieders bewaren de in artikel 18 (bewaring van documentatie) bedoelde documentatie
+ - aanbieders bewaren de in artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben
+ - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld
+ - aanbieders stellen een EU-conformiteitsverklaring op, in overeenstemming met Artikel 47. In het geval van het label 'derde partij' dient de uitvoering door een externe derde partij te worden verzorgd.
+ - aanbieders brengen de CE-markering aan op het Ai-systeem met een hoog risico of, waneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, om aan te geven dat aan deze verordening is voldaan, overeenkomstig Artikel 48
+ - aanbieders leven de registratieverplichtingen als bedoeld in Artikel 49 lid 1, na
+ - aanbieders nemen de noodzakelijke corrigerende maatregelen en verstrekken de uit hoofde van Artikel 20 vereiste informatie
+ - aanbieders tonen op een met redenen omkleed verzoek van een nationale bevoegde autoriteit de overeenstemming aan van het AI-systeem met een hoog risico met de eisen van afdeling 2
+ - aanbieders zorgen ervoor dat het AI-systeem met een hoog risico voldoet aan de toegankelijkheidseisen overeenkomstig de Richtlijnen (EU) 2016/2102 en (EU) 2019/882.
+
+ Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico (Artikel 26 en Artikel 27):
+ - het nemen van passende technische en organisatorische maatregelen om te waarborgen dat dergelijke systemen in overeenstemming met de gebruiksaanwijzingen die bij de systemen zijn gevoegd worden gebruikt
+ - het opdragen van menselijk toezicht aan natuurlijke personen die over de nodige bekwaamheid, opleiding en autoriteit beschikken en de nodige ondersteuning krijgen
+ - het ervoor zorgen dat, voor zover de gebruikersverantwoordelijke controle heeft over de inputdata, de inputdata relevant en voldoende representatief zijn voor het beoogde doel van het AI-systeem met een hoog risico
+ - het monitoren van de werking van het AI-systeem met een hoog risico op basis van de gebruiksaanwijzingen en in voorkomend geval het in kennis stellen van de aanbieders overeenkomstig artikel 72.
+ - het bewaren van de logs die automatisch worden gegenereerd door dat AI-systeem met een hoog risico voor zover dergelijke logs onder controle van de gebruiksverantwoordelijke vallen gedurende een periode die passend is voor het beoogde doel van het AI-systeem met een hoog risico, of ten minste zes maanden
+ - voordat een AI-systeem met een hoog risico op de werkplek in gebruik wordt gesteld of wordt gebruikt, delen gebruiksverantwoordelijken die werkgever zijn werknemersvertegenwoordigers en de betrokken werknemers mee dat zij zullen worden onderworpen aan het gebruik van het AI-systeem met een hoog risico
+ - gebruiksverantwoordelijken van AI-systemen met een hoog risico die de hoedanigheid van overheidsinstanties of instellingen, organen of instanties van de Unie hebben, leven de in artikel 49 bedoelde registratieverplichtingen na. Wanneer deze gebruiksverantwoordelijke vaststellen dat het AI-systeem met een hoog risico dat zij voornemens zijn te gebruiken niet in de in artikel 71 bedoelde EU-databank is geregistreerd, gebruiken zij dat systeem niet en stellen zij de aanbieder of de distributeur daarvan in kennis
+ - indien van toepassing, gebruiken gebruiksverantwoordelijken van AI-systemen met een hoog risico de informatie die op grond van artikel 13 van deze verordening wordt verstrekt om hun verplichting na te komen om een gegevensbeschermingseffectbeoordeling uit te voeren
+ - de gebruiksverantwoordelijke van een AI-systeem met een hoog risico voor biometrische identificatie op afstand verzoekt achteraf in het kader van een onderzoek waarbij gericht wordt gezocht naar een persoon die wordt verdacht van of veroordeeld is voor het plegen van een strafbaar feit, vooraf of zonder onnodige vertraging en uiterlijk 48 uur na het feit, om toestemming van een gerechtelijke instantie of administratieve instantie, van wie de beslissing bindend is en onderworpen is aan rechterlijke toetsing, voor het gebruik van dat systeem, behalve wanneer het wordt gebruikt voor de initiële identificatie van een potentiële verdachte op basis van objectieve en verifieerbare feiten die rechtstreeks verband houden met het strafbare feit. Elk gebruik wordt beperkt tot hetgeen strikt noodzakelijk is voor het onderzoek naar een specifiek strafbaar feit
+ - gebruiksverantwoordelijken van in bijlage III bedoelde AI-systemen met een hoog risico die beslissingen met betrekking tot natuurlijke personen nemen of helpen nemen, informeren de natuurlijke personen dat het AI-systeem met een hoog risico op hen wordt toegepast.
+ - gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.
+ - gebruiksverantwoordelijken die publiekrechtelijke organen zijn of particuliere entiteiten zijn die openbare diensten verlenen, en gebruiksverantwoordelijken van AI-systemen met een hoog risico gebruikt in krediet/verzekering (bijlage III, 5, c en d) een beoordeling uit van de gevolgen voor de grondrechten die het gebruik van een dergelijk systeem kan opleveren (Artikel 27).
+
+ Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen (Artikel 50):
+ - gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680, indien van toepassing
+ - gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent genereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief, satirisch, fictief of analoog werk of programma, zijn de transparantieverplichtingen beperkt tot de openbaarmaking van het bestaan van dergelijke gegenereerde of bewerkte content op een passende wijze die de weergave of het genot van het werk niet belemmert.
+
+ Geldig vanaf (Artikel 111):
+ - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.
+ - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.
+
+"
+	c-14.0.2{{"Je bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem."}}
+c-14.0.2:::secondaryStyle
+click c-14.0.2 callback " Verplichtingen voor alle AI-systemen:
+ - AI-geletterdheid (Artikel 4)
+ - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)
+
+ Verplichtingen voor aanbieder van een hoog risico AI-systeem (Artikel 16):
+ - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2
+ - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres
+ - aanbieders beschikken over een systeem voor kwaliteitsbeheer dat in overeenstemming is met Artikel 17 (systeem voor kwaliteitsbeheer)
+ - aanbieders bewaren de in artikel 18 (bewaring van documentatie) bedoelde documentatie
+ - aanbieders bewaren de in artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben
+ - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld
+ - aanbieders stellen een EU-conformiteitsverklaring op, in overeenstemming met Artikel 47. In het geval van het label 'derde partij' dient de uitvoering door een externe derde partij te worden verzorgd.
+ - aanbieders brengen de CE-markering aan op het Ai-systeem met een hoog risico of, waneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, om aan te geven dat aan deze verordening is voldaan, overeenkomstig Artikel 48
+ - aanbieders leven de registratieverplichtingen als bedoeld in Artikel 49 lid 1, na
+ - aanbieders nemen de noodzakelijke corrigerende maatregelen en verstrekken de uit hoofde van Artikel 20 vereiste informatie
+ - aanbieders tonen op een met redenen omkleed verzoek van een nationale bevoegde autoriteit de overeenstemming aan van het AI-systeem met een hoog risico met de eisen van afdeling 2
+ - aanbieders zorgen ervoor dat het AI-systeem met een hoog risico voldoet aan de toegankelijkheidseisen overeenkomstig de Richtlijnen (EU) 2016/2102 en (EU) 2019/882.
+
+ Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico (Artikel 26 en Artikel 27):
+ - het nemen van passende technische en organisatorische maatregelen om te waarborgen dat dergelijke systemen in overeenstemming met de gebruiksaanwijzingen die bij de systemen zijn gevoegd worden gebruikt
+ - het opdragen van menselijk toezicht aan natuurlijke personen die over de nodige bekwaamheid, opleiding en autoriteit beschikken en de nodige ondersteuning krijgen
+ - het ervoor zorgen dat, voor zover de gebruikersverantwoordelijke controle heeft over de inputdata, de inputdata relevant en voldoende representatief zijn voor het beoogde doel van het AI-systeem met een hoog risico
+ - het monitoren van de werking van het AI-systeem met een hoog risico op basis van de gebruiksaanwijzingen en in voorkomend geval het in kennis stellen van de aanbieders overeenkomstig artikel 72.
+ - het bewaren van de logs die automatisch worden gegenereerd door dat AI-systeem met een hoog risico voor zover dergelijke logs onder controle van de gebruiksverantwoordelijke vallen gedurende een periode die passend is voor het beoogde doel van het AI-systeem met een hoog risico, of ten minste zes maanden
+ - voordat een AI-systeem met een hoog risico op de werkplek in gebruik wordt gesteld of wordt gebruikt, delen gebruiksverantwoordelijken die werkgever zijn werknemersvertegenwoordigers en de betrokken werknemers mee dat zij zullen worden onderworpen aan het gebruik van het AI-systeem met een hoog risico
+ - gebruiksverantwoordelijken van AI-systemen met een hoog risico die de hoedanigheid van overheidsinstanties of instellingen, organen of instanties van de Unie hebben, leven de in artikel 49 bedoelde registratieverplichtingen na. Wanneer deze gebruiksverantwoordelijke vaststellen dat het AI-systeem met een hoog risico dat zij voornemens zijn te gebruiken niet in de in artikel 71 bedoelde EU-databank is geregistreerd, gebruiken zij dat systeem niet en stellen zij de aanbieder of de distributeur daarvan in kennis
+ - indien van toepassing, gebruiken gebruiksverantwoordelijken van AI-systemen met een hoog risico de informatie die op grond van artikel 13 van deze verordening wordt verstrekt om hun verplichting na te komen om een gegevensbeschermingseffectbeoordeling uit te voeren
+ - de gebruiksverantwoordelijke van een AI-systeem met een hoog risico voor biometrische identificatie op afstand verzoekt achteraf in het kader van een onderzoek waarbij gericht wordt gezocht naar een persoon die wordt verdacht van of veroordeeld is voor het plegen van een strafbaar feit, vooraf of zonder onnodige vertraging en uiterlijk 48 uur na het feit, om toestemming van een gerechtelijke instantie of administratieve instantie, van wie de beslissing bindend is en onderworpen is aan rechterlijke toetsing, voor het gebruik van dat systeem, behalve wanneer het wordt gebruikt voor de initiële identificatie van een potentiële verdachte op basis van objectieve en verifieerbare feiten die rechtstreeks verband houden met het strafbare feit. Elk gebruik wordt beperkt tot hetgeen strikt noodzakelijk is voor het onderzoek naar een specifiek strafbaar feit
+ - gebruiksverantwoordelijken van in bijlage III bedoelde AI-systemen met een hoog risico die beslissingen met betrekking tot natuurlijke personen nemen of helpen nemen, informeren de natuurlijke personen dat het AI-systeem met een hoog risico op hen wordt toegepast.
+ - gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.
+ - gebruiksverantwoordelijken die publiekrechtelijke organen zijn of particuliere entiteiten zijn die openbare diensten verlenen, en gebruiksverantwoordelijken van AI-systemen met een hoog risico gebruikt in krediet/verzekering (bijlage III, 5, c en d) een beoordeling uit van de gevolgen voor de grondrechten die het gebruik van een dergelijk systeem kan opleveren (Artikel 27).
+
+ Geldig vanaf (Artikel 111):
+ - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.
+ - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.
+
+"
+	c-14.0.3{{"Je bent een gebruiksverantwoordelijke en aanbieder van een AI-systeem zonder hoog-risico. Het AI-systeem moet voldoen aan transparantieverplichtingen."}}
+c-14.0.3:::secondaryStyle
+click c-14.0.3 callback " Verplichtingen voor alle AI-systemen:
+ - AI-geletterdheid (Artikel 4)
+ - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)
+
+ Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen (Artikel 50):
+ - gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680, indien van toepassing
+ - gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent genereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief, satirisch, fictief of analoog werk of programma, zijn de transparantieverplichtingen beperkt tot de openbaarmaking van het bestaan van dergelijke gegenereerde of bewerkte content op een passende wijze die de weergave of het genot van het werk niet belemmert.
+
+ Geldig vanaf (Artikel 111):
+ - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.
+ - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.
+
+"
+	c-14.0.4{{"Je bent een gebruiksverantwoordelijke en aanbieder van een AI-systeem zonder hoog-risico."}}
+c-14.0.4:::secondaryStyle
+click c-14.0.4 callback " Verplichtingen voor alle AI-systemen:
+ - AI-geletterdheid (Artikel 4)
+ - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)
+
+ Geldig vanaf (Artikel 111):
+ - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.
+ - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.
+
+"
+	c-14.1.1{{"Je bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem voor algemene doeleinden. Het AI-systeem moet voldoen aan transparantieverplichtingen."}}
+c-14.1.1:::secondaryStyle
+click c-14.1.1 callback " Verplichtingen voor alle AI-systemen:
+ - AI-geletterdheid (Artikel 4)
+ - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)
+
+ Verplichtingen voor aanbieder van een hoog risico AI-systeem (Artikel 16):
+ - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2
+ - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres
+ - aanbieders beschikken over een systeem voor kwaliteitsbeheer dat in overeenstemming is met Artikel 17 (systeem voor kwaliteitsbeheer)
+ - aanbieders bewaren de in artikel 18 (bewaring van documentatie) bedoelde documentatie
+ - aanbieders bewaren de in artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben
+ - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld
+ - aanbieders stellen een EU-conformiteitsverklaring op, in overeenstemming met Artikel 47. In het geval van het label 'derde partij' dient de uitvoering door een externe derde partij te worden verzorgd.
+ - aanbieders brengen de CE-markering aan op het Ai-systeem met een hoog risico of, waneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, om aan te geven dat aan deze verordening is voldaan, overeenkomstig Artikel 48
+ - aanbieders leven de registratieverplichtingen als bedoeld in Artikel 49 lid 1, na
+ - aanbieders nemen de noodzakelijke corrigerende maatregelen en verstrekken de uit hoofde van Artikel 20 vereiste informatie
+ - aanbieders tonen op een met redenen omkleed verzoek van een nationale bevoegde autoriteit de overeenstemming aan van het AI-systeem met een hoog risico met de eisen van afdeling 2
+ - aanbieders zorgen ervoor dat het AI-systeem met een hoog risico voldoet aan de toegankelijkheidseisen overeenkomstig de Richtlijnen (EU) 2016/2102 en (EU) 2019/882.
+
+ Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico (Artikel 26 en Artikel 27):
+ - het nemen van passende technische en organisatorische maatregelen om te waarborgen dat dergelijke systemen in overeenstemming met de gebruiksaanwijzingen die bij de systemen zijn gevoegd worden gebruikt
+ - het opdragen van menselijk toezicht aan natuurlijke personen die over de nodige bekwaamheid, opleiding en autoriteit beschikken en de nodige ondersteuning krijgen
+ - het ervoor zorgen dat, voor zover de gebruikersverantwoordelijke controle heeft over de inputdata, de inputdata relevant en voldoende representatief zijn voor het beoogde doel van het AI-systeem met een hoog risico
+ - het monitoren van de werking van het AI-systeem met een hoog risico op basis van de gebruiksaanwijzingen en in voorkomend geval het in kennis stellen van de aanbieders overeenkomstig artikel 72.
+ - het bewaren van de logs die automatisch worden gegenereerd door dat AI-systeem met een hoog risico voor zover dergelijke logs onder controle van de gebruiksverantwoordelijke vallen gedurende een periode die passend is voor het beoogde doel van het AI-systeem met een hoog risico, of ten minste zes maanden
+ - voordat een AI-systeem met een hoog risico op de werkplek in gebruik wordt gesteld of wordt gebruikt, delen gebruiksverantwoordelijken die werkgever zijn werknemersvertegenwoordigers en de betrokken werknemers mee dat zij zullen worden onderworpen aan het gebruik van het AI-systeem met een hoog risico
+ - gebruiksverantwoordelijken van AI-systemen met een hoog risico die de hoedanigheid van overheidsinstanties of instellingen, organen of instanties van de Unie hebben, leven de in artikel 49 bedoelde registratieverplichtingen na. Wanneer deze gebruiksverantwoordelijke vaststellen dat het AI-systeem met een hoog risico dat zij voornemens zijn te gebruiken niet in de in artikel 71 bedoelde EU-databank is geregistreerd, gebruiken zij dat systeem niet en stellen zij de aanbieder of de distributeur daarvan in kennis
+ - indien van toepassing, gebruiken gebruiksverantwoordelijken van AI-systemen met een hoog risico de informatie die op grond van artikel 13 van deze verordening wordt verstrekt om hun verplichting na te komen om een gegevensbeschermingseffectbeoordeling uit te voeren
+ - de gebruiksverantwoordelijke van een AI-systeem met een hoog risico voor biometrische identificatie op afstand verzoekt achteraf in het kader van een onderzoek waarbij gericht wordt gezocht naar een persoon die wordt verdacht van of veroordeeld is voor het plegen van een strafbaar feit, vooraf of zonder onnodige vertraging en uiterlijk 48 uur na het feit, om toestemming van een gerechtelijke instantie of administratieve instantie, van wie de beslissing bindend is en onderworpen is aan rechterlijke toetsing, voor het gebruik van dat systeem, behalve wanneer het wordt gebruikt voor de initiële identificatie van een potentiële verdachte op basis van objectieve en verifieerbare feiten die rechtstreeks verband houden met het strafbare feit. Elk gebruik wordt beperkt tot hetgeen strikt noodzakelijk is voor het onderzoek naar een specifiek strafbaar feit
+ - gebruiksverantwoordelijken van in bijlage III bedoelde AI-systemen met een hoog risico die beslissingen met betrekking tot natuurlijke personen nemen of helpen nemen, informeren de natuurlijke personen dat het AI-systeem met een hoog risico op hen wordt toegepast.
+ - gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.
+ - gebruiksverantwoordelijken die publiekrechtelijke organen zijn of particuliere entiteiten zijn die openbare diensten verlenen, en gebruiksverantwoordelijken van AI-systemen met een hoog risico gebruikt in krediet/verzekering (bijlage III, 5, c en d) een beoordeling uit van de gevolgen voor de grondrechten die het gebruik van een dergelijk systeem kan opleveren (Artikel 27).
+
+ Verplichtingen voor aanbieders en gebruiksverantwoordelijken van AI-systemen met transparantieverplichtingen (Artikel 50):
+ - aanbieders zorgen ervoor dat AI-systemen die voor directe interactie met natuurlijke personen zijn bedoeld, zodanig worden ontworpen en ontwikkeld dat de betrokken natuurlijke personen worden geinformeerd dat zij interageren met een AI-systeem, tenzij dit duidelijk is vanuit het oogpunt van een normaal geinformeerde en redelijk omzichtige en oplettende natuurlijke persoon, rekening houdend met de omstandigheden en de gebruikscontext.
+ - aanbieders van (GP)AI-systemen, die synthetische audio, beeld, video- of tekstinhoud genereren, zorgen ervoor dat de outputs van het AI-systeem worden gemarkeerd in een machineleesbaar formaat en detecteerbaar zijn als kunstmatig gegenereerd of gemanipuleerd. Aanbieders zorgen ervoor dat hun technische oplossingen doeltreffend, interoperabel robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen.
+
+ Geldig vanaf (Artikel 111):
+ - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.
+ - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.
+
+ De volgende verplichtingen gelden voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54):
+ - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan
+ - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren
+ - beleid opstellen ter naleving van het Unierecht inzake auteursrechten en naburige rechten en dan met name ter vaststelling en naleving, onder meer door middel van geavanceerde technologieën
+ - een voldoende gedetailleerde samenvatting opstellen en openbaar maken over de voor het trainen van het AI-model voor algemene doeleinden gebruikte content, volgens een door het AI-bureau verstrekt sjabloon.
+
+ Geldig vanaf (Artikel 111 en Overweging 179):
+ - Voor AI-modellen in ontwikkeling gelden de verplichtingen voor aanbieders van algemene AI-modellen, zoals taal- of beeldherkenningsmodellen, vanaf 2 augustus 2025.
+ - Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.
+
+"
+	c-14.1.2{{"Je bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem voor algemene doeleinden."}}
+c-14.1.2:::secondaryStyle
+click c-14.1.2 callback " Verplichtingen voor alle AI-systemen:
+ - AI-geletterdheid (Artikel 4)
+ - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)
+
+ Verplichtingen voor aanbieder van een hoog risico AI-systeem (Artikel 16):
+ - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2
+ - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres
+ - aanbieders beschikken over een systeem voor kwaliteitsbeheer dat in overeenstemming is met Artikel 17 (systeem voor kwaliteitsbeheer)
+ - aanbieders bewaren de in artikel 18 (bewaring van documentatie) bedoelde documentatie
+ - aanbieders bewaren de in artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben
+ - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld
+ - aanbieders stellen een EU-conformiteitsverklaring op, in overeenstemming met Artikel 47. In het geval van het label 'derde partij' dient de uitvoering door een externe derde partij te worden verzorgd.
+ - aanbieders brengen de CE-markering aan op het Ai-systeem met een hoog risico of, waneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, om aan te geven dat aan deze verordening is voldaan, overeenkomstig Artikel 48
+ - aanbieders leven de registratieverplichtingen als bedoeld in Artikel 49 lid 1, na
+ - aanbieders nemen de noodzakelijke corrigerende maatregelen en verstrekken de uit hoofde van Artikel 20 vereiste informatie
+ - aanbieders tonen op een met redenen omkleed verzoek van een nationale bevoegde autoriteit de overeenstemming aan van het AI-systeem met een hoog risico met de eisen van afdeling 2
+ - aanbieders zorgen ervoor dat het AI-systeem met een hoog risico voldoet aan de toegankelijkheidseisen overeenkomstig de Richtlijnen (EU) 2016/2102 en (EU) 2019/882.
+
+ Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico (Artikel 26 en Artikel 27):
+ - het nemen van passende technische en organisatorische maatregelen om te waarborgen dat dergelijke systemen in overeenstemming met de gebruiksaanwijzingen die bij de systemen zijn gevoegd worden gebruikt
+ - het opdragen van menselijk toezicht aan natuurlijke personen die over de nodige bekwaamheid, opleiding en autoriteit beschikken en de nodige ondersteuning krijgen
+ - het ervoor zorgen dat, voor zover de gebruikersverantwoordelijke controle heeft over de inputdata, de inputdata relevant en voldoende representatief zijn voor het beoogde doel van het AI-systeem met een hoog risico
+ - het monitoren van de werking van het AI-systeem met een hoog risico op basis van de gebruiksaanwijzingen en in voorkomend geval het in kennis stellen van de aanbieders overeenkomstig artikel 72.
+ - het bewaren van de logs die automatisch worden gegenereerd door dat AI-systeem met een hoog risico voor zover dergelijke logs onder controle van de gebruiksverantwoordelijke vallen gedurende een periode die passend is voor het beoogde doel van het AI-systeem met een hoog risico, of ten minste zes maanden
+ - voordat een AI-systeem met een hoog risico op de werkplek in gebruik wordt gesteld of wordt gebruikt, delen gebruiksverantwoordelijken die werkgever zijn werknemersvertegenwoordigers en de betrokken werknemers mee dat zij zullen worden onderworpen aan het gebruik van het AI-systeem met een hoog risico
+ - gebruiksverantwoordelijken van AI-systemen met een hoog risico die de hoedanigheid van overheidsinstanties of instellingen, organen of instanties van de Unie hebben, leven de in artikel 49 bedoelde registratieverplichtingen na. Wanneer deze gebruiksverantwoordelijke vaststellen dat het AI-systeem met een hoog risico dat zij voornemens zijn te gebruiken niet in de in artikel 71 bedoelde EU-databank is geregistreerd, gebruiken zij dat systeem niet en stellen zij de aanbieder of de distributeur daarvan in kennis
+ - indien van toepassing, gebruiken gebruiksverantwoordelijken van AI-systemen met een hoog risico de informatie die op grond van artikel 13 van deze verordening wordt verstrekt om hun verplichting na te komen om een gegevensbeschermingseffectbeoordeling uit te voeren
+ - de gebruiksverantwoordelijke van een AI-systeem met een hoog risico voor biometrische identificatie op afstand verzoekt achteraf in het kader van een onderzoek waarbij gericht wordt gezocht naar een persoon die wordt verdacht van of veroordeeld is voor het plegen van een strafbaar feit, vooraf of zonder onnodige vertraging en uiterlijk 48 uur na het feit, om toestemming van een gerechtelijke instantie of administratieve instantie, van wie de beslissing bindend is en onderworpen is aan rechterlijke toetsing, voor het gebruik van dat systeem, behalve wanneer het wordt gebruikt voor de initiële identificatie van een potentiële verdachte op basis van objectieve en verifieerbare feiten die rechtstreeks verband houden met het strafbare feit. Elk gebruik wordt beperkt tot hetgeen strikt noodzakelijk is voor het onderzoek naar een specifiek strafbaar feit
+ - gebruiksverantwoordelijken van in bijlage III bedoelde AI-systemen met een hoog risico die beslissingen met betrekking tot natuurlijke personen nemen of helpen nemen, informeren de natuurlijke personen dat het AI-systeem met een hoog risico op hen wordt toegepast.
+ - gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.
+ - gebruiksverantwoordelijken die publiekrechtelijke organen zijn of particuliere entiteiten zijn die openbare diensten verlenen, en gebruiksverantwoordelijken van AI-systemen met een hoog risico gebruikt in krediet/verzekering (bijlage III, 5, c en d) een beoordeling uit van de gevolgen voor de grondrechten die het gebruik van een dergelijk systeem kan opleveren (Artikel 27).
+
+ Geldig vanaf (Artikel 111):
+ - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.
+ - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.
+
+ De volgende verplichtingen gelden voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54):
+ - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan
+ - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren
+ - beleid opstellen ter naleving van het Unierecht inzake auteursrechten en naburige rechten en dan met name ter vaststelling en naleving, onder meer door middel van geavanceerde technologieën
+ - een voldoende gedetailleerde samenvatting opstellen en openbaar maken over de voor het trainen van het AI-model voor algemene doeleinden gebruikte content, volgens een door het AI-bureau verstrekt sjabloon.
+
+ Geldig vanaf (Artikel 111 en Overweging 179):
+ - Voor AI-modellen in ontwikkeling gelden de verplichtingen voor aanbieders van algemene AI-modellen, zoals taal- of beeldherkenningsmodellen, vanaf 2 augustus 2025.
+ - Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.
+
+"
+	c-14.1.3{{"Je bent een gebruiksverantwoordelijke en aanbieder van een AI-systeem voor algemene doeleinden zonder hoog-risico.  Het AI-systeem moet voldoen aan transparantieverplichtingen."}}
+c-14.1.3:::secondaryStyle
+click c-14.1.3 callback " Verplichtingen voor alle AI-systemen:
+ - AI-geletterdheid (Artikel 4)
+ - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)
+
+ Verplichtingen voor aanbieders en gebruiksverantwoordelijken van AI-systemen met transparantieverplichtingen (Artikel 50):
+ - aanbieders zorgen ervoor dat AI-systemen die voor directe interactie met natuurlijke personen zijn bedoeld, zodanig worden ontworpen en ontwikkeld dat de betrokken natuurlijke personen worden geinformeerd dat zij interageren met een AI-systeem, tenzij dit duidelijk is vanuit het oogpunt van een normaal geinformeerde en redelijk omzichtige en oplettende natuurlijke persoon, rekening houdend met de omstandigheden en de gebruikscontext.
+ - aanbieders van (GP)AI-systemen, die synthetische audio, beeld, video- of tekstinhoud genereren, zorgen ervoor dat de outputs van het AI-systeem worden gemarkeerd in een machineleesbaar formaat en detecteerbaar zijn als kunstmatig gegenereerd of gemanipuleerd. Aanbieders zorgen ervoor dat hun technische oplossingen doeltreffend, interoperabel robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen.
+
+ Geldig vanaf (Artikel 111):
+ - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.
+ - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.
+
+ De volgende verplichtingen gelden voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54):
+ - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan
+ - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren
+ - beleid opstellen ter naleving van het Unierecht inzake auteursrechten en naburige rechten en dan met name ter vaststelling en naleving, onder meer door middel van geavanceerde technologieën
+ - een voldoende gedetailleerde samenvatting opstellen en openbaar maken over de voor het trainen van het AI-model voor algemene doeleinden gebruikte content, volgens een door het AI-bureau verstrekt sjabloon.
+
+ Geldig vanaf (Artikel 111 en Overweging 179):
+ - Voor AI-modellen in ontwikkeling gelden de verplichtingen voor aanbieders van algemene AI-modellen, zoals taal- of beeldherkenningsmodellen, vanaf 2 augustus 2025.
+ - Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.
+
+"
+	c-14.1.4{{"Je bent een gebruiksverantwoordelijke en aanbieder van een AI-systeem voor algemene doeleinden zonder hoog-risico."}}
+c-14.1.4:::secondaryStyle
+click c-14.1.4 callback " Verplichtingen voor alle AI-systemen:
+ - AI-geletterdheid (Artikel 4)
+ - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)
+
+ Geldig vanaf (Artikel 111):
+ - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.
+ - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.
+
+ De volgende verplichtingen gelden voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54):
+ - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan
+ - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren
+ - beleid opstellen ter naleving van het Unierecht inzake auteursrechten en naburige rechten en dan met name ter vaststelling en naleving, onder meer door middel van geavanceerde technologieën
+ - een voldoende gedetailleerde samenvatting opstellen en openbaar maken over de voor het trainen van het AI-model voor algemene doeleinden gebruikte content, volgens een door het AI-bureau verstrekt sjabloon.
+
+ Geldig vanaf (Artikel 111 en Overweging 179):
+ - Voor AI-modellen in ontwikkeling gelden de verplichtingen voor aanbieders van algemene AI-modellen, zoals taal- of beeldherkenningsmodellen, vanaf 2 augustus 2025.
+ - Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.
+
+"
+	c-14.2.1{{"Je bent een aanbieder en gebruiksverantwoordelijke van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico."}}
+c-14.2.1:::secondaryStyle
+click c-14.2.1 callback " Verplichtingen voor alle AI-modellen voor algemene doeleinden:
+ - Praktijkcodes (Artikel 56)
+
+ Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden (Artikel 53 en Artikel 54):
+ - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan.
+ - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren.
+ - beleid opstellen ter naleving van het Unierecht inzake auteursrechten en naburige rechten en dan met name ter vaststelling en naleving, onder meer door middel van geavanceerde technologieën.
+ - een voldoende gedetailleerde samenvatting opstellen en openbaar maken over de voor het trainen van het AI-model voor algemene doeleinden gebruikte content, volgens een door het AI-bureau verstrekt sjabloon.
+
+ Verplichtingen van aanbieders van AI-modellen voor algemene doeleinden met een systeemrisico (Artikel 55):
+ - het uitvoeren van een modelevaluatie overeenkomstig gestandaardiseerde protocollen en instrumenten die de stand van de techniek weerspiegelen, met inbegrip van het uitvoeren en documenteren van tests gericht op het ontdekken van kwetsbaarheden van het model met als doel om systeemrisico’s in kaart te brengen en te beperken.
+ - het beoordelen en beperken van mogelijke systeemrisico’s op Unieniveau, met inbegrip van de bronnen daarvan, die kunnen voortvloeien uit de ontwikkeling, het in de handel brengen of het gebruik van AI-modellen voor algemene doeleinden met een systeemrisico.
+ - het bijhouden, documenteren en onverwijld rapporteren (aan het AI-bureau (en in voorkomende gevallen aan de nationale bevoegde autoriteiten)) van relevante informatie over ernstige incidenten en mogelijke corrigerende maatregelen.
+ - het zorgen voor een passend niveau van cyberbeveiligingsbescherming voor het AI-model voor algemene doeleinden en de fysieke infrastructuur van het model.
+ Geldig vanaf (Artikel 111 en Overweging 179):
+ - Voor AI-modellen in ontwikkeling gelden de verplichtingen voor aanbieders van algemene AI-modellen, zoals taal- of beeldherkenningsmodellen, vanaf 2 augustus 2025.
+ - Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.
+
+"
+	c-14.2.2{{"Je bent een aanbieder en gebruiksverantwoordelijke van een AI-model voor algemene doeleinden."}}
+c-14.2.2:::secondaryStyle
+click c-14.2.2 callback " Verplichtingen voor alle AI-modellen voor algemene doeleinden:
+ - Praktijkcodes (Artikel 56)
+
+ Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden (Artikel 53 en Artikel 54):
+ - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan.
+ - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren.
+ - beleid opstellen ter naleving van het Unierecht inzake auteursrechten en naburige rechten en dan met name ter vaststelling en naleving, onder meer door middel van geavanceerde technologieën.
+ - een voldoende gedetailleerde samenvatting opstellen en openbaar maken over de voor het trainen van het AI-model voor algemene doeleinden gebruikte content, volgens een door het AI-bureau verstrekt sjabloon.
+
+ Geldig vanaf (Artikel 111 en Overweging 179):
+ - Voor AI-modellen in ontwikkeling gelden de verplichtingen voor aanbieders van algemene AI-modellen, zoals taal- of beeldherkenningsmodellen, vanaf 2 augustus 2025.
+ - Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.
+
+"
+	c-15.0.1{{"Je bent een importeur van een AI-systeem een hoog risico."}}
+c-15.0.1:::secondaryStyle
+click c-15.0.1 callback " Verplichtingen voor importeur van een hoog risico AI-systeem (Artikel 23):
+ - Importeurs zorgen ervoor dat een AI-systeem met een hoog risico in overeenstemming is met de verordening voordat het in de handel wordt gebracht door na te gaan of de relevante conformiteitsbeoordelingsprocedure is uitgevoerd (artikel 43), de technische documentatie is opgesteld (artikel 11 en bijlage IV), de CE-markering is aangebracht en de EU-conformiteitsverklaring en gebruiksaanwijzingen aanwezig zijn (artikel 47), en of de aanbieder een gemachtigde heeft aangewezen (artikel 22, lid 1).
+ - Indien een importeur vermoedt dat het AI-systeem met een hoog risico niet in overeenstemming is met de verordening, vervalst is of vergezeld gaat van vervalste documenten, mag het systeem niet in de handel worden gebracht totdat het aan de eisen voldoet. Als het systeem een risico vormt (artikel 79, lid 1), moet de importeur de aanbieder, gemachtigden en markttoezichtautoriteiten informeren.
+ - Importeurs moeten hun naam, geregistreerde handelsnaam of merk en contactadres vermelden op de verpakking of in de bijgevoegde documentatie van het AI-systeem met een hoog risico.
+ - Importeurs zorgen ervoor dat de opslag- en vervoersomstandigheden van het AI-systeem met een hoog risico de naleving van de eisen van afdeling 2 niet in gevaar brengen.
+ - Importeurs moeten gedurende tien jaar een kopie bewaren van het door de aangemelde instantie afgegeven certificaat en, indien van toepassing, de gebruiksaanwijzing en de EU-conformiteitsverklaring (artikel 47).
+ - Bij verzoek van bevoegde autoriteiten moeten importeurs alle benodigde informatie en documentatie verstrekken ter staving van de naleving van de eisen van afdeling 2, in een voor de autoriteit begrijpelijke taal.
+ - Importeurs werken samen met bevoegde autoriteiten bij het nemen van maatregelen om de risico’s van het AI-systeem te verminderen en te beperken.
+"
+	c-15.0.3{{"Je bent een importeur van een niet-hoog-risico AI-systeem."}}
+c-15.0.3:::secondaryStyle
+click c-15.0.3 callback "Er zijn geen verplichtingen voor importeurs van niet-hoog-risico AI-systemen, alleen voor hoog-risico."
+	c-15.1.1{{"Je bent een importeur van een hoog risico AI-systeem voor algemene doeleinden."}}
+c-15.1.1:::secondaryStyle
+click c-15.1.1 callback " Verplichtingen voor importeur van een hoog risico AI-systeem (Artikel 23):
+ - Importeurs zorgen ervoor dat een AI-systeem met een hoog risico in overeenstemming is met de verordening voordat het in de handel wordt gebracht door na te gaan of de relevante conformiteitsbeoordelingsprocedure is uitgevoerd (artikel 43), de technische documentatie is opgesteld (artikel 11 en bijlage IV), de CE-markering is aangebracht en de EU-conformiteitsverklaring en gebruiksaanwijzingen aanwezig zijn (artikel 47), en of de aanbieder een gemachtigde heeft aangewezen (artikel 22, lid 1).
+ - Indien een importeur vermoedt dat het AI-systeem met een hoog risico niet in overeenstemming is met de verordening, vervalst is of vergezeld gaat van vervalste documenten, mag het systeem niet in de handel worden gebracht totdat het aan de eisen voldoet. Als het systeem een risico vormt (artikel 79, lid 1), moet de importeur de aanbieder, gemachtigden en markttoezichtautoriteiten informeren.
+ - Importeurs moeten hun naam, geregistreerde handelsnaam of merk en contactadres vermelden op de verpakking of in de bijgevoegde documentatie van het AI-systeem met een hoog risico.
+ - Importeurs zorgen ervoor dat de opslag- en vervoersomstandigheden van het AI-systeem met een hoog risico de naleving van de eisen van afdeling 2 niet in gevaar brengen.
+ - Importeurs moeten gedurende tien jaar een kopie bewaren van het door de aangemelde instantie afgegeven certificaat en, indien van toepassing, de gebruiksaanwijzing en de EU-conformiteitsverklaring (artikel 47).
+ - Bij verzoek van bevoegde autoriteiten moeten importeurs alle benodigde informatie en documentatie verstrekken ter staving van de naleving van de eisen van afdeling 2, in een voor de autoriteit begrijpelijke taal.
+ - Importeurs werken samen met bevoegde autoriteiten bij het nemen van maatregelen om de risico’s van het AI-systeem te verminderen en te beperken.
+"
+	c-15.1.3{{"Je bent een importeur van een niet-hoog-risico AI-systeem voor algemene doeleinden."}}
+c-15.1.3:::secondaryStyle
+click c-15.1.3 callback "Er zijn geen verplichtingen voor importeurs van niet-hoog-risico AI-systemen voor algemene doeleinden, alleen voor hoog-risico."
+	c-16.0.1{{"Je bent een distributeur van een hoog-risico AI-systeem."}}
+c-16.0.1:::secondaryStyle
+click c-16.0.1 callback " Verplichtingen voor distributeur van een hoog risico AI-systeem (Artikel 24):
+ - Distributeurs controleren of het AI-systeem met een hoog risico de vereiste CE-markering heeft, vergezeld gaat van de EU-conformiteitsverklaring en gebruiksinstructies, en of de aanbieder en importeur hun verplichtingen uit Artikel 16 (b en c) en Artikel 23 (3) hebben nageleefd.
+ - Wanneer een distributeur vermoedt dat een AI-systeem met een hoog risico niet voldoet aan de eisen, mag het systeem niet op de markt worden gebracht totdat het in overeenstemming is gebracht met de vereisten en de aanbieder of importeur moet worden geïnformeerd als het systeem een risico vormt (Artikel 79 (1)).
+ - Distributeurs zorgen ervoor dat de opslag- en vervoersomstandigheden van het AI-systeem met een hoog risico geen invloed hebben op de naleving van de eisen van afdeling 2.
+ - Wanneer een distributeur vermoedt dat een AI-systeem met een hoog risico niet voldoet aan de eisen na het op de markt te hebben gebracht, moet de distributeur corrigerende maatregelen nemen of zorgen dat de aanbieder/importeur dit doet, zoals het systeem uit de handel nemen of terugroepen, en de bevoegde autoriteiten informeren.
+ - Distributeurs moeten op verzoek van bevoegde autoriteiten de nodige informatie en documentatie verstrekken om aan te tonen dat het AI-systeem voldoet aan de eisen van afdeling 2.
+ - Distributeurs werken samen met de bevoegde autoriteiten met betrekking tot maatregelen die genomen worden om de risico's van het AI-systeem dat zij op de markt hebben aangeboden te verminderen of te beperken."
+	c-16.0.3{{"Je bent een distributeur van een niet-hoog-risico AI-systeem."}}
+c-16.0.3:::secondaryStyle
+click c-16.0.3 callback "Er zijn geen verplichtingen voor distributeurs van niet-hoog-risico AI-systemen, alleen voor hoog-risico."
+	c-16.1.1{{"Je bent een distributeur van een hoog-risico AI-systeem voor algemene doeleinden."}}
+c-16.1.1:::secondaryStyle
+click c-16.1.1 callback " Verplichtingen voor distributeur van een hoog risico AI-systeem (Artikel 24):
+ - Distributeurs controleren of het AI-systeem met een hoog risico de vereiste CE-markering heeft, vergezeld gaat van de EU-conformiteitsverklaring en gebruiksinstructies, en of de aanbieder en importeur hun verplichtingen uit Artikel 16 (b en c) en Artikel 23 (3) hebben nageleefd.
+ - Wanneer een distributeur vermoedt dat een AI-systeem met een hoog risico niet voldoet aan de eisen, mag het systeem niet op de markt worden gebracht totdat het in overeenstemming is gebracht met de vereisten en de aanbieder of importeur moet worden geïnformeerd als het systeem een risico vormt (Artikel 79 (1)).
+ - Distributeurs zorgen ervoor dat de opslag- en vervoersomstandigheden van het AI-systeem met een hoog risico geen invloed hebben op de naleving van de eisen van afdeling 2.
+ - Wanneer een distributeur vermoedt dat een AI-systeem met een hoog risico niet voldoet aan de eisen na het op de markt te hebben gebracht, moet de distributeur corrigerende maatregelen nemen of zorgen dat de aanbieder/importeur dit doet, zoals het systeem uit de handel nemen of terugroepen, en de bevoegde autoriteiten informeren.
+ - Distributeurs moeten op verzoek van bevoegde autoriteiten de nodige informatie en documentatie verstrekken om aan te tonen dat het AI-systeem voldoet aan de eisen van afdeling 2.
+ - Distributeurs werken samen met de bevoegde autoriteiten met betrekking tot maatregelen die genomen worden om de risico's van het AI-systeem dat zij op de markt hebben aangeboden te verminderen of te beperken."
+	c-16.1.3{{"Je bent een distributeur van een niet-hoog-risico AI-systeem voor algemene doeleinden"}}
+c-16.1.3:::secondaryStyle
+click c-16.1.3 callback "Er zijn geen verplichtingen voor distributeurs van niet-hoog-risico AI-systemen voor algemene doeleinden, alleen voor hoog-risico."
+	c-11.1{{"Het is verboden om dit AI-systeem of model te gebruiken."}}
+c-11.1:::secondaryStyle
+click c-11.1 callback "Het is verboden om dit AI-systeem te gebruiken. Let op: dit verbod geldt vanaf 1 februari 2025."
+	q-2.1 -->|Ja
+| q-2.2
+	q-2.1 -->|Nee
+| q-2.3
+	q-2.2 -->|Ja
+
+Opgehaalde labels: hoog-risico AI
+Als: aanbieder of gebruiksverantwoordelijke of aanbieder & gebruiksverantwoordelijke.| q-2.3
+	q-2.2 -->|Ja
+
+Opgehaalde labels: hoog-risico AI
+Als: distributeur en AI-systeem.| c-16.0.1
+	q-2.2 -->|Ja
+
+Opgehaalde labels: hoog-risico AI
+Als: distributeur en AI-systeem voor algemene doeleinden.| c-16.1.1
+	q-2.2 -->|Ja
+
+Opgehaalde labels: hoog-risico AI
+Als: importeur en AI-systeem.| c-15.0.1
+	q-2.2 -->|Ja
+
+Opgehaalde labels: hoog-risico AI
+Als: importeur en AI-systeem voor algemene doeleinden.| c-15.1.1
+	q-2.2 -->|Nee
+
+Opgehaalde labels: verboden AI| c-11.1
+	q-2.3 -->|Ja Sectie A van Bijlage I
+
+Opgehaalde labels: hoog-risico AI
+Als: aanbieder of gebruiksverantwoordelijke of aanbieder & gebruiksverantwoordelijke.| q-2.4.1
+	q-2.3 -->|Ja Sectie A van Bijlage I
+
+Opgehaalde labels: hoog-risico AI
+Als: distributeur en AI-systeem.| c-16.0.1
+	q-2.3 -->|Ja Sectie A van Bijlage I
+
+Opgehaalde labels: hoog-risico AI
+Als: distributeur en AI-systeem voor algemene doeleinden.| c-16.1.1
+	q-2.3 -->|Ja Sectie A van Bijlage I
+
+Opgehaalde labels: hoog-risico AI
+Als: importeur en AI-systeem.| c-15.0.1
+	q-2.3 -->|Ja Sectie A van Bijlage I
+
+Opgehaalde labels: hoog-risico AI
+Als: importeur en AI-systeem voor algemene doeleinden.| c-15.1.1
+	q-2.3 -->|Ja Sectie B van Bijlage I
+
+Opgehaalde labels: hoog-risico AI
+Als: aanbieder of gebruiksverantwoordelijke of aanbieder & gebruiksverantwoordelijke.| q-2.9
+	q-2.3 -->|Ja Sectie B van Bijlage I
+
+Opgehaalde labels: hoog-risico AI
+Als: distributeur en AI-systeem.| c-16.0.1
+	q-2.3 -->|Ja Sectie B van Bijlage I
+
+Opgehaalde labels: hoog-risico AI
+Als: distributeur en AI-systeem voor algemene doeleinden.| c-16.1.1
+	q-2.3 -->|Ja Sectie B van Bijlage I
+
+Opgehaalde labels: hoog-risico AI
+Als: importeur en AI-systeem.| c-15.0.1
+	q-2.3 -->|Ja Sectie B van Bijlage I
+
+Opgehaalde labels: hoog-risico AI
+Als: importeur en AI-systeem voor algemene doeleinden.| c-15.1.1
+	q-2.3 -->|Geen van beide
+| q-2.5
+	q-2.4.1 -->|Ja
+
+Opgehaalde labels: derde partij| q-2.9
+	q-2.4.1 -->|Nee
+
+Opgehaalde labels: interne controle| q-2.9
+	q-2.4.2 -->|Ja
+
+Opgehaalde labels: derde partij| q-2.9
+	q-2.4.2 -->|Nee
+
+Opgehaalde labels: interne controle| q-2.9
+	q-2.5 -->|Ja
+
+Opgehaalde labels: hoog-risico AI
+Als: aanbieder of gebruiksverantwoordelijke of aanbieder & gebruiksverantwoordelijke.| q-2.9
+	q-2.5 -->|Ja
+
+Opgehaalde labels: hoog-risico AI
+Als: distributeur en AI-systeem.| c-16.0.1
+	q-2.5 -->|Ja
+
+Opgehaalde labels: hoog-risico AI
+Als: distributeur en AI-systeem voor algemene doeleinden.| c-16.1.1
+	q-2.5 -->|Ja
+
+Opgehaalde labels: hoog-risico AI
+Als: importeur en AI-systeem.| c-15.0.1
+	q-2.5 -->|Ja
+
+Opgehaalde labels: hoog-risico AI
+Als: importeur en AI-systeem voor algemene doeleinden.| c-15.1.1
+	q-2.5 -->|Nee
+| q-2.6
+	q-2.6 -->|Ja
+| q-2.7
+	q-2.6 -->|Nee
+
+Opgehaalde labels: geen hoog-risico AI
+Als: aanbieder of gebruiksverantwoordelijke of aanbieder & gebruiksverantwoordelijke.| q-2.9
+	q-2.6 -->|Nee
+
+Opgehaalde labels: geen hoog-risico AI
+Als: distributeur en AI-systeem.| c-16.0.3
+	q-2.6 -->|Nee
+
+Opgehaalde labels: geen hoog-risico AI
+Als: distributeur en AI-systeem voor algemene doeleinden.| c-16.1.3
+	q-2.6 -->|Nee
+
+Opgehaalde labels: geen hoog-risico AI
+Als: importeur en AI-systeem.| c-15.0.3
+	q-2.6 -->|Nee
+
+Opgehaalde labels: geen hoog-risico AI
+Als: importeur en AI-systeem voor algemene doeleinden.| c-15.1.3
+	q-2.7 -->|Ja
+
+Opgehaalde labels: geen hoog-risico AI
+Als: aanbieder of gebruiksverantwoordelijke of aanbieder & gebruiksverantwoordelijke.| q-2.9
+	q-2.7 -->|Ja
+
+Opgehaalde labels: geen hoog-risico AI
+Als: distributeur en AI-systeem.| c-16.0.3
+	q-2.7 -->|Ja
+
+Opgehaalde labels: geen hoog-risico AI
+Als: distributeur en AI-systeem voor algemene doeleinden.| c-16.1.3
+	q-2.7 -->|Ja
+
+Opgehaalde labels: geen hoog-risico AI
+Als: importeur en AI-systeem.| c-15.0.3
+	q-2.7 -->|Ja
+
+Opgehaalde labels: geen hoog-risico AI
+Als: importeur en AI-systeem voor algemene doeleinden.| c-15.1.3
+	q-2.7 -->|Nee
+
+Opgehaalde labels: hoog-risico AI
+Als: aanbieder of gebruiksverantwoordelijke of aanbieder & gebruiksverantwoordelijke.| q-2.4.2
+	q-2.7 -->|Nee
+
+Opgehaalde labels: hoog-risico AI
+Als: distributeur en AI-systeem.| c-16.0.1
+	q-2.7 -->|Nee
+
+Opgehaalde labels: hoog-risico AI
+Als: distributeur en AI-systeem voor algemene doeleinden.| c-16.1.1
+	q-2.7 -->|Nee
+
+Opgehaalde labels: hoog-risico AI
+Als: importeur en AI-systeem.| c-15.0.1
+	q-2.7 -->|Nee
+
+Opgehaalde labels: hoog-risico AI
+Als: importeur en AI-systeem voor algemene doeleinden.| c-15.1.1
+	q-2.8 -->|Ja
+
+Opgehaalde labels: systeemrisico
+Als: aanbieder.| c-12.2.1
+	q-2.8 -->|Ja
+
+Opgehaalde labels: systeemrisico
+Als: aanbieder & gebruiksverantwoordelijke.| c-14.2.1
+	q-2.8 -->|Nee
+
+Opgehaalde labels: geen systeemrisico
+Als: aanbieder.| q-2.11
+	q-2.8 -->|Nee
+
+Opgehaalde labels: geen systeemrisico
+Als: aanbieder & gebruiksverantwoordelijke.| c-14.2.2
+	q-2.9 -->|Ja
+| q-2.10
+	q-2.9 -->|Nee
+
+Opgehaalde labels: geen transparantieverplichting
+Als: aanbieder en AI-systeem en hoog-risico AI.| c-12.0.2
+	q-2.9 -->|Nee
+
+Opgehaalde labels: geen transparantieverplichting
+Als: aanbieder en AI-systeem en geen hoog-risico AI.| c-12.0.4
+	q-2.9 -->|Nee
+
+Opgehaalde labels: geen transparantieverplichting
+Als: aanbieder en AI-systeem voor algemene doeleinden en hoog-risico AI.| c-12.1.2
+	q-2.9 -->|Nee
+
+Opgehaalde labels: geen transparantieverplichting
+Als: aanbieder en AI-systeem voor algemene doeleinden en geen hoog-risico AI.| c-12.1.4
+	q-2.9 -->|Nee
+
+Opgehaalde labels: geen transparantieverplichting
+Als: gebruiksverantwoordelijke en AI-systeem en hoog-risico AI.| c-13.0.2
+	q-2.9 -->|Nee
+
+Opgehaalde labels: geen transparantieverplichting
+Als: gebruiksverantwoordelijke en AI-systeem en geen hoog-risico AI.| c-13.0.4
+	q-2.9 -->|Nee
+
+Opgehaalde labels: geen transparantieverplichting
+Als: gebruiksverantwoordelijke en AI-systeem voor algemene doeleinden en hoog-risico AI.| c-13.1.2
+	q-2.9 -->|Nee
+
+Opgehaalde labels: geen transparantieverplichting
+Als: gebruiksverantwoordelijke en AI-systeem voor algemene doeleinden en geen hoog-risico AI.| c-13.1.4
+	q-2.9 -->|Nee
+
+Opgehaalde labels: geen transparantieverplichting
+Als: aanbieder & gebruiksverantwoordelijke en AI-systeem en hoog-risico AI.| c-14.0.2
+	q-2.9 -->|Nee
+
+Opgehaalde labels: geen transparantieverplichting
+Als: aanbieder & gebruiksverantwoordelijke en AI-systeem en geen hoog-risico AI.| c-14.0.4
+	q-2.9 -->|Nee
+
+Opgehaalde labels: geen transparantieverplichting
+Als: aanbieder & gebruiksverantwoordelijke en AI-systeem voor algemene doeleinden en hoog-risico AI.| c-14.1.2
+	q-2.9 -->|Nee
+
+Opgehaalde labels: geen transparantieverplichting
+Als: aanbieder & gebruiksverantwoordelijke en AI-systeem voor algemene doeleinden en geen hoog-risico AI.| c-14.1.4
+	q-2.10 -->|Ja
+
+Opgehaalde labels: geen transparantieverplichting
+Als: aanbieder en AI-systeem en hoog-risico AI.| c-12.0.2
+	q-2.10 -->|Ja
+
+Opgehaalde labels: geen transparantieverplichting
+Als: aanbieder en AI-systeem en geen hoog-risico AI.| c-12.0.4
+	q-2.10 -->|Ja
+
+Opgehaalde labels: geen transparantieverplichting
+Als: aanbieder en AI-systeem voor algemene doeleinden en hoog-risico AI.| c-12.1.2
+	q-2.10 -->|Ja
+
+Opgehaalde labels: geen transparantieverplichting
+Als: aanbieder en AI-systeem voor algemene doeleinden en geen hoog-risico AI.| c-12.1.4
+	q-2.10 -->|Ja
+
+Opgehaalde labels: geen transparantieverplichting
+Als: gebruiksverantwoordelijke en AI-systeem en hoog-risico AI.| c-13.0.2
+	q-2.10 -->|Ja
+
+Opgehaalde labels: geen transparantieverplichting
+Als: gebruiksverantwoordelijke en AI-systeem en geen hoog-risico AI.| c-13.0.4
+	q-2.10 -->|Ja
+
+Opgehaalde labels: geen transparantieverplichting
+Als: gebruiksverantwoordelijke en AI-systeem voor algemene doeleinden en hoog-risico AI.| c-13.1.2
+	q-2.10 -->|Ja
+
+Opgehaalde labels: geen transparantieverplichting
+Als: gebruiksverantwoordelijke en AI-systeem voor algemene doeleinden en geen hoog-risico AI.| c-13.1.4
+	q-2.10 -->|Ja
+
+Opgehaalde labels: geen transparantieverplichting
+Als: aanbieder & gebruiksverantwoordelijke en AI-systeem en hoog-risico AI.| c-14.0.2
+	q-2.10 -->|Ja
+
+Opgehaalde labels: geen transparantieverplichting
+Als: aanbieder & gebruiksverantwoordelijke en AI-systeem en geen hoog-risico AI.| c-14.0.4
+	q-2.10 -->|Ja
+
+Opgehaalde labels: geen transparantieverplichting
+Als: aanbieder & gebruiksverantwoordelijke en AI-systeem voor algemene doeleinden en hoog-risico AI.| c-14.1.2
+	q-2.10 -->|Ja
+
+Opgehaalde labels: geen transparantieverplichting
+Als: aanbieder & gebruiksverantwoordelijke en AI-systeem voor algemene doeleinden en geen hoog-risico AI.| c-14.1.4
+	q-2.10 -->|Nee
+
+Opgehaalde labels: transparantieverplichting
+Als: aanbieder en AI-systeem en hoog-risico AI.| c-12.0.1
+	q-2.10 -->|Nee
+
+Opgehaalde labels: transparantieverplichting
+Als: aanbieder en AI-systeem en geen hoog-risico AI.| c-12.0.3
+	q-2.10 -->|Nee
+
+Opgehaalde labels: transparantieverplichting
+Als: aanbieder en AI-systeem voor algemene doeleinden en hoog-risico AI.| c-12.1.1
+	q-2.10 -->|Nee
+
+Opgehaalde labels: transparantieverplichting
+Als: aanbieder en AI-systeem voor algemene doeleinden en geen hoog-risico AI.| c-12.1.3
+	q-2.10 -->|Nee
+
+Opgehaalde labels: transparantieverplichting
+Als: gebruiksverantwoordelijke en AI-systeem en hoog-risico AI.| c-13.0.1
+	q-2.10 -->|Nee
+
+Opgehaalde labels: transparantieverplichting
+Als: gebruiksverantwoordelijke en AI-systeem en geen hoog-risico AI.| c-13.0.3
+	q-2.10 -->|Nee
+
+Opgehaalde labels: transparantieverplichting
+Als: gebruiksverantwoordelijke en AI-systeem voor algemene doeleinden en hoog-risico AI.| c-13.1.1
+	q-2.10 -->|Nee
+
+Opgehaalde labels: transparantieverplichting
+Als: gebruiksverantwoordelijke en AI-systeem voor algemene doeleinden en geen hoog-risico AI.| c-13.1.3
+	q-2.10 -->|Nee
+
+Opgehaalde labels: transparantieverplichting
+Als: aanbieder & gebruiksverantwoordelijke en AI-systeem en hoog-risico AI.| c-14.0.1
+	q-2.10 -->|Nee
+
+Opgehaalde labels: transparantieverplichting
+Als: aanbieder & gebruiksverantwoordelijke en AI-systeem en geen hoog-risico AI.| c-14.0.3
+	q-2.10 -->|Nee
+
+Opgehaalde labels: transparantieverplichting
+Als: aanbieder & gebruiksverantwoordelijke en AI-systeem voor algemene doeleinden en hoog-risico AI.| c-14.1.1
+	q-2.10 -->|Nee
+
+Opgehaalde labels: transparantieverplichting
+Als: aanbieder & gebruiksverantwoordelijke en AI-systeem voor algemene doeleinden en geen hoog-risico AI.| c-14.1.3
+	q-2.11 -->|Ja
+
+Opgehaalde labels: open-source| c-12.2.2
+	q-2.11 -->|Nee
+
+Opgehaalde labels: geen open-source| c-12.2.3
+
+
+        </pre>
+
+        <!-- Mermaid initialization -->
+        <script>mermaid.initialize({ maxTextSize: 9000000000, startOnLoad: true, securityLevel: 'loose' })</script>
+
+        <!-- JavaScript for tooltip and modal handling -->
+        <script>
+            // Function to handle modal popup when a node is clicked
+            window.callback = function (name) {
+                let cookieValue = document.getElementsByClassName("mermaidTooltip");
+                let modelcontent1 = document.getElementById("modelcontent1");
+                let model1 = document.getElementById("model1");
+
+                // If a tooltip exists, display its content in the modal
+                if (cookieValue[0]) {
+                    // Hide the tooltip when opening the modal
+                    cookieValue[0].style.display = "none";
+                    // Set the modal content from the tooltip text
+                    modelcontent1.innerHTML = cookieValue[0].innerText.replaceAll("#specialnewline#", "<br>");
+                    // Open the modal by adding the 'is-active' class
+                    model1.classList.add('is-active');
+                }
+            };
+
+            // Function to close the modal and restore tooltip visibility
+            document.addEventListener('DOMContentLoaded', () => {
+                let modealclose1 = document.getElementById("modealclose1");
+
+                // Event listener to close the modal when the close button is clicked
+                modealclose1.addEventListener('click', () => {
+                    let model1 = document.getElementById("model1");
+                    let cookieValue = document.getElementsByClassName("mermaidTooltip");
+
+                    // Close the modal by removing the 'is-active' class
+                    model1.classList.remove('is-active');
+
+                    // Restore the tooltip visibility after the modal is closed
+                });
+            });
+
+        </script>
+
+    </body>
+    </html>
