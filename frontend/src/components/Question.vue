@@ -10,7 +10,7 @@ interface Props {
   question: string
   sources: { source: string; url: string | undefined; }[] | undefined
   answers: Array<Answer>
-  topic: string
+  category: string
   labels: { category: string; assigned_labels: string | undefined; }[] | undefined
 }
 
@@ -21,12 +21,12 @@ defineEmits(['answered', 'back'])
 <template>
   <div class="rvo-max-width-layout--md">
     <div class="flex">
-      <h1 class="utrecht-heading-1"><span>{{ topic }}</span></h1>
+      <h1 class="utrecht-heading-1"><span>{{ category }}</span></h1>
       <BetaversionLabel />
     </div>
-    <Sources :sources="sources" />
+
     <!-- Question and Answer section -->
-    <div class="rvo-layout-margin-vertical--2xl">
+    <div class="rvo-layout-margin-vertical--s">
     <fieldset class="rvo-max-width-layout--sm utrecht-form-fieldset rvo-form-fieldset"
     style="width: 600px">
       <!-- Question section -->
@@ -37,25 +37,46 @@ defineEmits(['answered', 'back'])
         </p>
         <HelpWanted style="margin-top: -2%; margin-bottom: 5%"/>
       </div>
+      <div>
+        <!-- Controleer of er meer dan 2 antwoorden zijn -->
+        <div v-if="answers.length > 2">
+          <ul class="rvo-layout-column rvo-layout-gap--sm">
+          <li v-for="(answer, index) in answers" :key="index">
+            <button
+              :key="id + index.toString()"
+              aria-roledescription="button"
+              @click="$emit('answered', answer)"
+              :value="id + index.toString()"
+              :id="index.toString()"
+              class="utrecht-button utrecht-button--secondary-action utrecht-button--rvo-md rvo-link--no-underline rvo-link--hover"
+            >
+              {{ answer.answer }}
+            </button>
+          </li>
+        </ul>
+        </div>
 
-      <!-- Answers section -->
-      <div class="flex items-center gap-x-3">
-        <div v-for="(answer, index) in answers" :key="index">
-          <button
-            :key="id + index.toString()"
-            aria-roledescription="button"
-            @click="$emit('answered', answer)"
-            :value="id + index.toString()"
-            :id="index.toString()"
-            class="utrecht-button utrecht-button--secondary-action utrecht-button--rvo-md rvo-link--no-underline rvo-link--hover"
-            :for="index.toString()"
-          >
-            {{ answer.answer }}
-          </button>
+        <!-- Als er 2 of minder antwoorden zijn, toon ze als losse knoppen -->
+        <div class= "rvo-layout-row rvo-layout-gap--sm" v-else>
+          <div v-for="(answer, index) in answers" :key="index">
+            <button
+              :key="id + index.toString()"
+              aria-roledescription="button"
+              @click="$emit('answered', answer)"
+              :value="id + index.toString()"
+              :id="index.toString()"
+              class="utrecht-button utrecht-button--secondary-action utrecht-button--rvo-md rvo-link--no-underline rvo-link--hover"
+            >
+              {{ answer.answer }}
+            </button>
+          </div>
         </div>
       </div>
-    </fieldset>
 
+    </fieldset>
+    <div class="rvo-layout-margin-vertical--xl">
+      <Sources :sources="sources" />
+    </div>
     <div class="rvo-layout-margin-vertical--xl">
       <button
         @click="$emit('back')"
@@ -71,14 +92,17 @@ defineEmits(['answered', 'back'])
         Vorige vraag
       </button>
     </div>
-      </div>
-
     <SubResult class="rvo-layout-margin-vertical--2xl"
       style="width: 500px"
-      :topic="topic"
+      :category="category"
       :labels="labels"
       title="Tussenresultaten"
       conclusion=""/>
+
+
+      </div>
+
+
 
 
   </div>

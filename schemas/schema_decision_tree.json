@@ -175,6 +175,9 @@
         "category": {
           "$ref": "#/$defs/Category"
         },
+        "subcategory": {
+          "$ref": "#/$defs/Category"
+        },
         "sources": {
           "type": "array",
           "items": {
@@ -191,10 +194,10 @@
             "$ref": "#/$defs/Answer"
           },
           "minItems": 2,
-          "maxItems": 2
+          "maxItems": 10
         }
       },
-      "required": ["questionId", "question", "simplifiedQuestion", "category", "answers"]
+      "required": ["questionId", "question", "simplifiedQuestion", "category", "subcategory", "answers"]
     },
     "Conclusion": {
       "id": "#/$defs/Conclusion",

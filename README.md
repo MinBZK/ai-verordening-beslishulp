@@ -1,30 +1,30 @@
-# Beslisboom AI-Verordening bètaversie
+# Beslishulp AI-Verordening bètaversie
 
-**Met deze beslisboom stel je vast of de AI-verordening geldt voor jouw overheidsorganisatie. En aan welke vereisten je dan moet voldoen.**
+**Met deze beslishulp stel je vast of de AI-verordening geldt voor jouw overheidsorganisatie. En aan welke vereisten je dan moet voldoen.**
 
-- Deze beslisboom is een bètaversie (betekenende dat deze website in ontwikkeling is. Volgende versies ontstaan op een open manier.)
+- Deze beslishulp is een bètaversie (betekenende dat deze website in ontwikkeling is. Volgende versies ontstaan op een open manier.)
 - De informatie is niet compleet en er kunnen fouten in staan.
 - Je bent zelf verantwoordelijk voor de informatie die je gebruikt.
-- Overleg de uitkomsten van de beslisboom met een expert.
-- In de beslisboom staat alleen informatie over de rollen van de overheid als [aanbieder](https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst) en als [gebruiksverantwoordelijke](https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst).
+- Overleg de uitkomsten van de beslishulp met een expert.
+- In de beslishulp staat alleen informatie over de rollen van de overheid als [aanbieder](https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst) en als [gebruiksverantwoordelijke](https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst).
 
-Voor vragen of opmerkingen over de beslisboom mail je naar: [ai-verordening@minbzk.nl](mailto::ai-verordening@minbzk.nl).
+Voor vragen of opmerkingen over de beslishulp mail je naar: [ai-verordening@minbzk.nl](mailto::ai-verordening@minbzk.nl).
 
-# AI-act-beslisboom
+# AI-act-beslishulp
 
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/MinBZK/ai-act-decisiontree/main.svg?badge_token=d3dKEK97RwC1II15_W-nng)](https://results.pre-commit.ci/latest/github/MinBZK/ai-act-decisiontree/main?badge_token=d3dKEK97RwC1II15_W-nng)
 
-Deze git repository bevat de beslisboom op basis van de AI Verordening.
-Het AI-validatie Team heeft deze tool ontwikkeld, maar is niet verantwoordelijk voor de juridische inhoud van de beslisboom. Voor meer informatie over het AI Validatie Team, bezoek de [site van het AI-validatieteam](https://minbzk.github.io/ai-validation/). Voor vragen over de juridische inhoud, neem contact op met de experts via ai-verordening@minbzk.nl.
+Deze git repository bevat de beslishulp op basis van de AI Verordening.
+Het AI-validatie Team heeft deze tool ontwikkeld, maar is niet verantwoordelijk voor de juridische inhoud van de beslishulp. Voor meer informatie over het AI Validatie Team, bezoek de [site van het AI-validatieteam](https://minbzk.github.io/ai-validation/). Voor vragen over de juridische inhoud, neem contact op met de experts via ai-verordening@minbzk.nl.
 
 Het project omvat de volgende 2 onderdelen:
 
-1. De beslisboom: [decision-tree.yaml](decision-tree.yaml)
-2. Een frontend voor de visualisatie van de beslisboom: [frontend](frontend/)
+1. De beslishulp: [decision-tree.yaml](decision-tree.yaml)
+2. Een frontend voor de visualisatie van de beslishulp: [frontend](frontend/)
 
-De Kubernetes deployment code staat bij  [infra](https://github.com/MinBZK/ai-validation-infra/apps/ai-act-beslisboom)
+De Kubernetes deployment code staat bij  [infra](https://github.com/MinBZK/ai-validation-infra/apps/ai-act-beslishulp)
 
-Door deze beslisboom te doorlopen, krijgt uw organisatie inzicht in de volgende vragen:
+Door deze beslishulp te doorlopen, krijgt uw organisatie inzicht in de volgende vragen:
 
 - Is er sprake van een **AI-systeem**, een **AI-systeem voor algemene doeleinden** of een **AI-model voor algemene doeleinden**?
 - Is het systeem/model **open source** of niet?
@@ -36,13 +36,13 @@ Door deze beslisboom te doorlopen, krijgt uw organisatie inzicht in de volgende 
 
 Om u te helpen bij het beantwoorden van de vragen, zijn relevante overwegingen / artikelen / bijlagen van de AI Verordening gelinkt per vraag.
 
-## Beslisboom componenten
+## Beslishulp componenten
 
-De beslisboom is gevat in [decision-tree.yaml](decision-tree.yaml). U kunt deze bekijken met elke editor die u fijn vindt.
+De beslishulp is gevat in [decision-tree.yaml](decision-tree.yaml). U kunt deze bekijken met elke editor die u fijn vindt.
 
-De beslisboom heeft componenten die vastgelegd zijn in een schema. Zie [schema_decision_tree.json](schemas/schema_decision_tree.json). Dit schema zorgt ervoor dat het systeem weet welke velden verwacht worden.
+De beslishulp heeft componenten die vastgelegd zijn in een schema. Zie [schema_decision_tree.json](schemas/schema_decision_tree.json). Dit schema zorgt ervoor dat het systeem weet welke velden verwacht worden.
 
-De beslisboom is opgebouwd uit de volgende componenten:
+De beslishulp is opgebouwd uit de volgende componenten:
 
 ```sh
 version: string           # versie van decisionTree
@@ -76,31 +76,31 @@ Conclusion:               # definitie van 1 eindconclusie
   source_url: string      # optioneel: een link naar de bovengenoemde verwijzing
 ```
 
-Naast de beslisboom is er ook een [definitions.yaml](definitions.yaml) bestand. Dit bestand bevat alle relevante definities die de beslisboom ondersteunen en extra uitleg nodig hebben, gebaseerd op de [Begrippenlijst van het algoritmekader](https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst). Het verwachte schema van velden is gedocumenteerd in [schema_definitions.json](schemas/schema_definitions.json).
+Naast de beslishulp is er ook een [definitions.yaml](definitions.yaml) bestand. Dit bestand bevat alle relevante definities die de beslishulp ondersteunen en extra uitleg nodig hebben, gebaseerd op de [Begrippenlijst van het algoritmekader](https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst). Het verwachte schema van velden is gedocumenteerd in [schema_definitions.json](schemas/schema_definitions.json).
 
-## Beslisboom diagram
+## Beslishulp diagram
 
-De beslisboom is schematisch weergegeven verschillende diagrammen:
+De beslishulp is schematisch weergegeven verschillende diagrammen:
 
-1. [een doorklikbaar diagram](https://minbzk.github.io/ai-act-decisiontree/mermaid_graphs/decision-tree-main.html): in dit diagram is de beslisboom op een versimpelde manier weergeven. Dit diagram bevat de volgende componenten:
+1. [een doorklikbaar diagram](https://minbzk.github.io/ai-act-decisiontree/mermaid_graphs/decision-tree-main.html): in dit diagram is de beslishulp op een versimpelde manier weergeven. Dit diagram bevat de volgende componenten:
 
-    - donkerblauwe rechthoeken: dit zijn doorklikbare componenten die doorverwijzen naar een volgende categorie uit de beslisboom.
-    - lichtblauwe rechthoeken: dit zijn de 'labels' uit de beslisboom. De labels geven de karakteristieken die u door de beslisboom te doorlopen kunt verzamelen weer.
-    - donkerblauwe cirkels: dit zijn de vragen uit de beslisboom. Wanneer u op een cirkel klikt, verschijnt de volledige vraag in een pop-up op het scherm. Deze kan vervolgens weer weg worden geklikt door rechtsboven op het kruisje te klikken.
-    - witte hexagons met groene rand: dit zijn de conclusies uit de beslisboom. Wanneer u op een hexagon klikt, verschijnen de bij de conclusie behorende verplichtingen in een pop-up op het scherm.
+    - donkerblauwe rechthoeken: dit zijn doorklikbare componenten die doorverwijzen naar een volgende categorie uit de beslishulp.
+    - lichtblauwe rechthoeken: dit zijn de 'labels' uit de beslishulp. De labels geven de karakteristieken die u door de beslishulp te doorlopen kunt verzamelen weer.
+    - donkerblauwe cirkels: dit zijn de vragen uit de beslishulp. Wanneer u op een cirkel klikt, verschijnt de volledige vraag in een pop-up op het scherm. Deze kan vervolgens weer weg worden geklikt door rechtsboven op het kruisje te klikken.
+    - witte hexagons met groene rand: dit zijn de conclusies uit de beslishulp. Wanneer u op een hexagon klikt, verschijnen de bij de conclusie behorende verplichtingen in een pop-up op het scherm.
 
     U kunt terug naar het vorige diagram door de vorige pagina-knop in uw browser te gebruiken.
 
-2. een [overzichtsdiagram](https://minbzk.github.io/ai-act-decisiontree/mermaid_graphs/decision-tree-complete.html): in dit diagram is de gehele beslisboom gevat. Dit diagram is niet doorklikbaar. De vragen zijn gegroepeerd categorieen, weergeven in witte rechthoeken met groene randen.
+2. een [overzichtsdiagram](https://minbzk.github.io/ai-act-decisiontree/mermaid_graphs/decision-tree-complete.html): in dit diagram is de gehele beslishulp gevat. Dit diagram is niet doorklikbaar. De vragen zijn gegroepeerd categorieen, weergeven in witte rechthoeken met groene randen.
 
 Let op: de diagrammen kunnen het beste in Chrome, Safari of Microsoft Edge worden geopend.
 
 
 ## Frontend
 
-Om door de beslisboom te lopen is een visualizatie tool gemaakt. Met deze tool kunt u door de vragen lopen. De frontend is beschikbaar op deze [website](https://ai-act-decisiontree.apps.digilab.network).
+Om door de beslishulp te lopen is een visualizatie tool gemaakt. Met deze tool kunt u door de vragen lopen. De frontend is beschikbaar op deze [website](https://ai-act-decisiontree.apps.digilab.network).
 
-### Frontend locaal draaien
+### Frontend lokaal draaien
 
 Om de development omgeving te standaardiseren maken we gebruik van [devcontainers](https://code.visualstudio.com/docs/devcontainers/containers#_getting-started).
 

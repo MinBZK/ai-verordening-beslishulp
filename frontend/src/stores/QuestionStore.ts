@@ -2,20 +2,21 @@ import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
 export const useQuestionStore = defineStore('question', () => {
-  const initialLabelsByCategoryNTB = `{
+  const initialLabelsBySubCategoryNTB = `{
+    "Rol": ["nader te bepalen"],
+    "Operationeel": ["nader te bepalen"],
     "Soort toepassing": ["nader te bepalen"],
-    "Open-source": ["nader te bepalen"],
-    "Publicatiecategorie": ["nader te bepalen"],
+    "Risicogroep": ["nader te bepalen"],
+    "Conformiteitsbeoordeling": ["nader te bepalen"],
     "Systeemrisico": ["nader te bepalen"],
-    "Transparantieverplichtingen": ["nader te bepalen"],
-    "Rol": ["nader te bepalen"]
+    "Transparantieverplichting": ["nader te bepalen"]
   }`
 
   const initialAcceptedDisclaimer = sessionStorage.getItem('acceptedDisclaimer') ?? '0'
   const initialAnswers = JSON.parse(localStorage.getItem('answers') ?? '[]')
   const initialLabels = JSON.parse(localStorage.getItem('labels') ?? '{}')
-  const initialLabelsByCategory = JSON.parse(localStorage.getItem('labelsbycategory') ?? initialLabelsByCategoryNTB)
-  const initialQuestionId = localStorage.getItem('currentquestion') ?? '0'
+  const initialLabelsBySubCategory = JSON.parse(localStorage.getItem('labelsbysubcategory') ?? initialLabelsBySubCategoryNTB)
+  const initialQuestionId = localStorage.getItem('currentquestion') ?? '1.2'
   const initialConclusionId = localStorage.getItem('currentconclusion') ?? ''
 
   const AcceptedDisclaimer = ref(String(initialAcceptedDisclaimer))
@@ -23,7 +24,7 @@ export const useQuestionStore = defineStore('question', () => {
   const ConclusionId = ref(String(initialConclusionId))
   const answers = ref(initialAnswers)
   const labels = ref(initialLabels)
-  const LabelsByCategory = ref(initialLabelsByCategory)
+  const LabelsBySubCategory =  ref(initialLabelsBySubCategory)
 
   function setQuestionId(id: string | null) {
     QuestionId.value = id
@@ -35,9 +36,9 @@ export const useQuestionStore = defineStore('question', () => {
     localStorage.setItem('currentconclusion', ConclusionId.value)
   }
 
-  function getLabelsByCategory() {
+  function getLabelsBySubCategory() {
     // TODO: Research whether this variable can be access directly through refs
-    return LabelsByCategory.value
+    return LabelsBySubCategory.value
   }
 
 
@@ -55,13 +56,13 @@ export const useQuestionStore = defineStore('question', () => {
     localStorage.setItem('labels', JSON.stringify(labels.value))
   }
 
-  function addLabelByCategory(label: string, category: string | undefined) {
-    if (category) {
-      if (JSON.stringify(LabelsByCategory.value[category]) === JSON.stringify(['nader te bepalen'])) {
-        LabelsByCategory.value[category] = []
+  function addLabelBySubCategory(label: string, subcategory: string | undefined) {
+    if (subcategory) {
+      if (JSON.stringify(LabelsBySubCategory.value[subcategory]) === JSON.stringify(['nader te bepalen'])) {
+        LabelsBySubCategory.value[subcategory] = []
       }
-      LabelsByCategory.value[category].push(label)
-      localStorage.setItem('labelsbycategory', JSON.stringify(LabelsByCategory.value))
+      LabelsBySubCategory.value[subcategory].push(label)
+      localStorage.setItem('labelsbysubcategory', JSON.stringify(LabelsBySubCategory.value))
     }
   }
 
@@ -70,12 +71,12 @@ export const useQuestionStore = defineStore('question', () => {
      * This function will change all the "nader te bepalen" labels to "niet van toepassing" when
      * the conclusion of the decision tree has been reached.
      */
-    for (let key in LabelsByCategory.value) {
-      if (JSON.stringify(LabelsByCategory.value[key]) === JSON.stringify(['nader te bepalen'])) {
-        LabelsByCategory.value[key] = ['niet van toepassing']
+    for (let key in LabelsBySubCategory.value) {
+      if (JSON.stringify(LabelsBySubCategory.value[key]) === JSON.stringify(['nader te bepalen'])) {
+        LabelsBySubCategory.value[key] = ['niet van toepassing']
       }
     }
-    localStorage.setItem('labelsbycategory', JSON.stringify(LabelsByCategory.value))
+    localStorage.setItem('labelsbysubcategory', JSON.stringify(LabelsBySubCategory.value))
   }
 
   function revertLabelsAtConclusion() {
@@ -83,12 +84,12 @@ export const useQuestionStore = defineStore('question', () => {
      * This function will change all the "niet van toepassing" labels to "nader te bepalen" when
      * the back button has been clicked at the conclusion of the decision tree.
      */
-    for (let key in LabelsByCategory.value) {
-      if (JSON.stringify(LabelsByCategory.value[key]) === JSON.stringify(['niet van toepassing'])) {
-        LabelsByCategory.value[key] = ['nader te bepalen']
+    for (let key in LabelsBySubCategory.value) {
+      if (JSON.stringify(LabelsBySubCategory.value[key]) === JSON.stringify(['niet van toepassing'])) {
+        LabelsBySubCategory.value[key] = ['nader te bepalen']
       }
     }
-    localStorage.setItem('labelsbycategory', JSON.stringify(LabelsByCategory.value))
+    localStorage.setItem('labelsbysubcategory', JSON.stringify(LabelsBySubCategory.value))
   }
 
   function addAnswer(id: string) {
@@ -96,34 +97,34 @@ export const useQuestionStore = defineStore('question', () => {
     localStorage.setItem('answers', JSON.stringify(answers.value))
   }
 
-  function revertAnswer(previousCategory: string) {
+  function revertAnswer(previousSubCategory: string) {
     QuestionId.value = answers.value[answers.value.length - 1]
     answers.value.pop()
     if (labels.value[QuestionId.value]) {
       const label: string = labels.value[QuestionId.value]
-      LabelsByCategory.value[previousCategory].pop(label)
-      if (LabelsByCategory.value[previousCategory].length === 0) {
-        LabelsByCategory.value[previousCategory].push('nader te bepalen')
+      LabelsBySubCategory.value[previousSubCategory].pop(label)
+      if (LabelsBySubCategory.value[previousSubCategory].length === 0) {
+        LabelsBySubCategory.value[previousSubCategory].push('nader te bepalen')
       }
       delete labels.value[QuestionId.value]
     }
     localStorage.setItem('answers', JSON.stringify(answers.value))
     localStorage.setItem('currentquestion', QuestionId.value)
     localStorage.setItem('labels', JSON.stringify(labels.value))
-    localStorage.setItem('labelsbycategory', JSON.stringify(LabelsByCategory.value))
+    localStorage.setItem('labelsbysubcategory', JSON.stringify(LabelsBySubCategory.value))
   }
 
   function reset() {
     answers.value = []
-    QuestionId.value = '0'
+    QuestionId.value = '1.2'
     labels.value = {}
-    LabelsByCategory.value = JSON.parse(initialLabelsByCategoryNTB)
+    LabelsBySubCategory.value = JSON.parse(initialLabelsBySubCategoryNTB)
     ConclusionId.value = ''
     localStorage.setItem('answers', JSON.stringify(answers.value))
     localStorage.setItem('currentquestion', QuestionId.value)
     localStorage.setItem('currentconclusion', ConclusionId.value)
     localStorage.setItem('labels', JSON.stringify(labels.value))
-    localStorage.setItem('labelsbycategory', JSON.stringify(LabelsByCategory.value))
+    localStorage.setItem('labelsbysubcategory', JSON.stringify(LabelsBySubCategory.value))
   }
 
   function acceptDisclaimer() {
@@ -133,18 +134,18 @@ export const useQuestionStore = defineStore('question', () => {
 
   return {
     AcceptedDisclaimer,
-    initialLabelsByCategoryNTB,
+    initialLabelsBySubCategoryNTB,
     QuestionId,
     ConclusionId,
     answers,
-    LabelsByCategory,
-    getLabelsByCategory,
+    LabelsBySubCategory,
+    getLabelsBySubCategory,
     setQuestionId,
     setConclusionId,
     addAnswer,
     getJsonLabels,
     addLabel,
-    addLabelByCategory,
+    addLabelBySubCategory,
     updateLabelsAtConclusion,
     revertLabelsAtConclusion,
     revertAnswer,

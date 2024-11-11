@@ -24,7 +24,7 @@ const questionStore = useQuestionStore()
 const { AcceptedDisclaimer, QuestionId, ConclusionId } = storeToRefs(questionStore)
 
 const categoryStore = useCategoryStore()
-const { categoryState, previousCategory } = storeToRefs(categoryStore)
+const { categoryState, previousSubCategory} = storeToRefs(categoryStore)
 
 const data_questions = ref<Questions>([])
 const data_conclusions = ref<Conclusions>([])
@@ -129,7 +129,7 @@ function handleNextStep(object: Answer | Redirect) {
   if (object.nextConclusionId) {
     questionStore.setConclusionId(String(object.nextConclusionId))
   }
-  categoryStore.updateCurrentCategory(currentCategory.value?.topic)
+  categoryStore.updateCurrentCategory(currentCategory.value?.category, currentCategory.value?.subcategory)
 }
 
 async function givenAnswer(answer: Answer) {
@@ -137,7 +137,7 @@ async function givenAnswer(answer: Answer) {
   if (answer.labels) {
     for (let i in answer.labels) {
       questionStore.addLabel(answer.labels[i], questionId.value)
-      questionStore.addLabelByCategory(answer.labels[i], currentCategory.value?.topic)
+      questionStore.addLabelBySubCategory(answer.labels[i], currentCategory.value?.subcategory)
     }
   }
   if (answer.redirects) {
@@ -161,7 +161,7 @@ function reset() {
 }
 
 function back() {
-  questionStore.revertAnswer(previousCategory.value)
+  questionStore.revertAnswer(previousSubCategory.value)
   categoryStore.revertCurrentCategory()
 }
 
@@ -191,23 +191,19 @@ function acceptDisclaimer() {
       class="rvo-layout-column rvo-max-width-layout rvo-layout-align-items-start rvo-max-width-layout-inline-padding--sm">
       <ProgressTracker
         v-if="categoryState && !findConclusion"
-        :soort_toepassing_state="categoryState.soort_toepassing_state"
-        :open_source_state="categoryState.open_source_state"
-        :publicatiecategorie_state="categoryState.publicatiecategorie_state"
-        :systeemrisico_state="categoryState.systeemrisico_state"
-        :transparantieverplichtingen_state="categoryState.transparantieverplichtingen_state"
-        :rol_state="categoryState.rol_state"
+        :ai_act_applicable_state="categoryState.ai_act_applicable_state"
+        :risk_group_state="categoryState.risk_group_state"
       />
       <div class="rvo-layout-gap--md">
         <DefaultLoader :loading="isLoading" />
         <DefaultError :error="error" />
         <Conclusion
-          v-if="findConclusion && questionStore.getLabelsByCategory()"
+          v-if="findConclusion && questionStore.getLabelsBySubCategory()"
           :conclusion="findConclusion.conclusion"
           :obligation="findConclusion.obligation"
           :sources="findConclusion.sources"
-          :topic="currentCategory?.topic"
-          :labels="questionStore.getLabelsByCategory()"
+          :category="currentCategory?.category"
+          :labels="questionStore.getLabelsBySubCategory()"
           @back="backButtonConclusion"
         />
         <Question v-if="currentQuestion && currentCategory"
@@ -215,8 +211,8 @@ function acceptDisclaimer() {
                   :id="currentQuestion.questionId"
                   :sources="currentQuestion.sources"
                   :answers="currentQuestion.answers"
-                  :topic="currentCategory.topic"
-                  :labels="questionStore.getLabelsByCategory()"
+                  :category="currentCategory.category"
+                  :labels="questionStore.getLabelsBySubCategory()"
                   @answered="givenAnswer"
                   @back="back"
         />
