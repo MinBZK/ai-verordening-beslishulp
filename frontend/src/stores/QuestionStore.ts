@@ -13,11 +13,11 @@ export const useQuestionStore = defineStore('question', () => {
   }`
 
   const initialAcceptedDisclaimer = sessionStorage.getItem('acceptedDisclaimer') ?? '0'
-  const initialAnswers = JSON.parse(localStorage.getItem('answers') ?? '[]')
-  const initialLabels = JSON.parse(localStorage.getItem('labels') ?? '{}')
-  const initialLabelsBySubCategory = JSON.parse(localStorage.getItem('labelsbysubcategory') ?? initialLabelsBySubCategoryNTB)
-  const initialQuestionId = localStorage.getItem('currentquestion') ?? '1.2'
-  const initialConclusionId = localStorage.getItem('currentconclusion') ?? ''
+  const initialAnswers = JSON.parse(sessionStorage.getItem('answers') ?? '[]')
+  const initialLabels = JSON.parse(sessionStorage.getItem('labels') ?? '{}')
+  const initialLabelsBySubCategory = JSON.parse(sessionStorage.getItem('labelsbysubcategory') ?? initialLabelsBySubCategoryNTB)
+  const initialQuestionId = sessionStorage.getItem('currentquestion') ?? '1.2'
+  const initialConclusionId = sessionStorage.getItem('currentconclusion') ?? ''
 
   const AcceptedDisclaimer = ref(String(initialAcceptedDisclaimer))
   const QuestionId = ref<any>(initialQuestionId)
@@ -28,12 +28,12 @@ export const useQuestionStore = defineStore('question', () => {
 
   function setQuestionId(id: string | null) {
     QuestionId.value = id
-    localStorage.setItem('currentquestion', QuestionId.value)
+    sessionStorage.setItem('currentquestion', QuestionId.value)
   }
 
   function setConclusionId(id: string) {
     ConclusionId.value = id
-    localStorage.setItem('currentconclusion', ConclusionId.value)
+    sessionStorage.setItem('currentconclusion', ConclusionId.value)
   }
 
   function getLabelsBySubCategory() {
@@ -43,7 +43,7 @@ export const useQuestionStore = defineStore('question', () => {
 
 
   function getJsonLabels() {
-    const label_dict = JSON.parse(localStorage.getItem('labels') ?? '{}')
+    const label_dict = JSON.parse(sessionStorage.getItem('labels') ?? '{}')
     const label_list = Object.values(label_dict).map(String)
     return label_list
   }
@@ -53,7 +53,7 @@ export const useQuestionStore = defineStore('question', () => {
       labels.value[question_id] = []
     }
     labels.value[question_id].push(label)
-    localStorage.setItem('labels', JSON.stringify(labels.value))
+    sessionStorage.setItem('labels', JSON.stringify(labels.value))
   }
 
   function addLabelBySubCategory(label: string, subcategory: string | undefined) {
@@ -62,7 +62,7 @@ export const useQuestionStore = defineStore('question', () => {
         LabelsBySubCategory.value[subcategory] = []
       }
       LabelsBySubCategory.value[subcategory].push(label)
-      localStorage.setItem('labelsbysubcategory', JSON.stringify(LabelsBySubCategory.value))
+      sessionStorage.setItem('labelsbysubcategory', JSON.stringify(LabelsBySubCategory.value))
     }
   }
 
@@ -76,7 +76,7 @@ export const useQuestionStore = defineStore('question', () => {
         LabelsBySubCategory.value[key] = ['niet van toepassing']
       }
     }
-    localStorage.setItem('labelsbysubcategory', JSON.stringify(LabelsBySubCategory.value))
+    sessionStorage.setItem('labelsbysubcategory', JSON.stringify(LabelsBySubCategory.value))
   }
 
   function revertLabelsAtConclusion() {
@@ -89,12 +89,12 @@ export const useQuestionStore = defineStore('question', () => {
         LabelsBySubCategory.value[key] = ['nader te bepalen']
       }
     }
-    localStorage.setItem('labelsbysubcategory', JSON.stringify(LabelsBySubCategory.value))
+    sessionStorage.setItem('labelsbysubcategory', JSON.stringify(LabelsBySubCategory.value))
   }
 
   function addAnswer(id: string) {
     answers.value.push(id)
-    localStorage.setItem('answers', JSON.stringify(answers.value))
+    sessionStorage.setItem('answers', JSON.stringify(answers.value))
   }
 
   function revertAnswer(previousSubCategory: string) {
@@ -108,10 +108,10 @@ export const useQuestionStore = defineStore('question', () => {
       }
       delete labels.value[QuestionId.value]
     }
-    localStorage.setItem('answers', JSON.stringify(answers.value))
-    localStorage.setItem('currentquestion', QuestionId.value)
-    localStorage.setItem('labels', JSON.stringify(labels.value))
-    localStorage.setItem('labelsbysubcategory', JSON.stringify(LabelsBySubCategory.value))
+    sessionStorage.setItem('answers', JSON.stringify(answers.value))
+    sessionStorage.setItem('currentquestion', QuestionId.value)
+    sessionStorage.setItem('labels', JSON.stringify(labels.value))
+    sessionStorage.setItem('labelsbysubcategory', JSON.stringify(LabelsBySubCategory.value))
   }
 
   function reset() {
@@ -120,11 +120,11 @@ export const useQuestionStore = defineStore('question', () => {
     labels.value = {}
     LabelsBySubCategory.value = JSON.parse(initialLabelsBySubCategoryNTB)
     ConclusionId.value = ''
-    localStorage.setItem('answers', JSON.stringify(answers.value))
-    localStorage.setItem('currentquestion', QuestionId.value)
-    localStorage.setItem('currentconclusion', ConclusionId.value)
-    localStorage.setItem('labels', JSON.stringify(labels.value))
-    localStorage.setItem('labelsbysubcategory', JSON.stringify(LabelsBySubCategory.value))
+    sessionStorage.setItem('answers', JSON.stringify(answers.value))
+    sessionStorage.setItem('currentquestion', QuestionId.value)
+    sessionStorage.setItem('currentconclusion', ConclusionId.value)
+    sessionStorage.setItem('labels', JSON.stringify(labels.value))
+    sessionStorage.setItem('labelsbysubcategory', JSON.stringify(LabelsBySubCategory.value))
   }
 
   function acceptDisclaimer() {
