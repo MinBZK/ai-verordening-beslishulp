@@ -23,7 +23,7 @@ questions:
         nextConclusionId: "11.0"
 # Rol
   - questionId: "1.3"
-    question: "Ontwikkelen jullie de toepassing in eigen beheer of is/wordt deze ontwikkeld door een andere partij?"
+    question: "Ontwikkelen jullie de toepassing in eigen beheer of is/wordt deze ontwikkeld door een andere partij? Op basis van het antwoord op deze vraag zal je rol worden toegewezen: aanbieder, gebruiksverantwoordelijke, importeur en/of distributeur?"
     simplifiedQuestion: "Rol"
     category: van_toepassing
     subcategory: rol
@@ -39,11 +39,13 @@ questions:
         nextQuestionId: "1.4"
       - answer: We ontwikkelen, maar gebruiken het niet alleen zelf
         labels:
-          - "aanbieder & gebruiksverantwoordelijke"
+          - "aanbieder"
+          - "gebruiksverantwoordelijke"
         nextQuestionId: "1.4"
       - answer: We ontwikkelen en gebruiken het zelf
         labels:
-          - "aanbieder & gebruiksverantwoordelijke"
+          - "aanbieder"
+          - "gebruiksverantwoordelijke"
         nextQuestionId: "1.4"
       - answer: We hebben opdracht gegeven om de toepassing te ontwikkelen
         labels:
@@ -52,7 +54,8 @@ questions:
         nextQuestionId: "1.4"
       - answer: We hebben een toepassing gekocht en daarop doorontwikkeld
         labels:
-          - "aanbieder & gebruiksverantwoordelijke"
+          - "aanbieder"
+          - "gebruiksverantwoordelijke"
         nextQuestionId: "1.4"
       - answer: We hebben een toepassing gekocht en gebruiken deze zonder aanpassingen
         labels:
@@ -124,7 +127,7 @@ questions:
           - "AI-model voor algemene doeleinden"
         redirects:
          - nextQuestionId: "1.6"
-           if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels || "aanbieder & gebruiksverantwoordelijke" in labels'
+           if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels'
          - nextConclusionId: "16.2.1"
            if: '"distributeur" in labels'
          - nextConclusionId: "15.2.1"
@@ -143,7 +146,7 @@ questions:
       Is er volgens deze uitleg sprake van een van deze uitzonderingsgronden voor de toepassing waarover je deze beslishulp invult?"
     simplifiedQuestion: "Uitzonderingsgrond AI Act"
     category: van_toepassing
-    subcategory: soort_toepassing
+    subcategory: risicogroep
     sources:
       - source: Artikel 2 - Toepassingsgebied
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e1978-1-1
@@ -251,7 +254,7 @@ questions:
           - "hoog-risico AI"
         redirects:
          - nextQuestionId: "2.3"
-           if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels || "aanbieder & gebruiksverantwoordelijke" in labels'
+           if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels || "aanbieder" in labels && "gebruiksverantwoordelijke" in labels'
          - nextConclusionId: "16.0.1"
            if: '"distributeur" in labels && "AI-systeem" in labels'
          - nextConclusionId: "16.1.1"
@@ -329,7 +332,7 @@ questions:
           - "hoog-risico AI"
         redirects:
           - nextQuestionId: "2.4.1" #2.9 = transparantieverplichting, 2.4.1 = conformiteitsbeoordeling derde partij
-            if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels || "aanbieder & gebruiksverantwoordelijke" in labels'
+            if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels'
           - nextConclusionId: "16.0.1"
             if: '"distributeur" in labels && "AI-systeem" in labels'
           - nextConclusionId: "16.1.1"
@@ -343,7 +346,7 @@ questions:
           - "hoog-risico AI"
         redirects:
           - nextQuestionId: "2.9" #transparantieverplichting
-            if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels || "aanbieder & gebruiksverantwoordelijke" in labels'
+            if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels'
           - nextConclusionId: "16.0.1"
             if: '"distributeur" in labels && "AI-systeem" in labels'
           - nextConclusionId: "16.1.1"
@@ -449,7 +452,7 @@ questions:
           - "hoog-risico AI"
         redirects:
           - nextQuestionId: "2.9" #transparantieverplichting
-            if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels || "aanbieder & gebruiksverantwoordelijke" in labels'
+            if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels'
           - nextConclusionId: "16.0.1"
             if: '"distributeur" in labels && "AI-systeem" in labels'
           - nextConclusionId: "16.1.1"
@@ -488,7 +491,7 @@ questions:
           - "geen hoog-risico AI"
         redirects:
          - nextQuestionId: "2.9" #transparantieverplichting
-           if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels || "aanbieder & gebruiksverantwoordelijke" in labels'
+           if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels'
          - nextConclusionId: "16.0.3"
            if: '"distributeur" in labels && "AI-systeem" in labels'
          - nextConclusionId: "16.1.3"
@@ -517,7 +520,7 @@ questions:
           - "geen hoog-risico AI"
         redirects:
          - nextQuestionId: "2.9" #transparantieverplichting
-           if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels || "aanbieder & gebruiksverantwoordelijke" in labels'
+           if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels'
          - nextConclusionId: "16.0.3"
            if: '"distributeur" in labels && "AI-systeem" in labels'
          - nextConclusionId: "16.1.3"
@@ -531,7 +534,7 @@ questions:
           - "hoog-risico AI"
         redirects:
          - nextQuestionId: "2.4.2" #2.9 = transparantieverplichting, 2.4.2 =conformiteitsbeoordeling derde partij
-           if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels || "aanbieder & gebruiksverantwoordelijke" in labels'
+           if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels '
          - nextConclusionId: "16.0.1"
            if: '"distributeur" in labels && "AI-systeem" in labels'
          - nextConclusionId: "16.1.1"
@@ -563,7 +566,7 @@ questions:
           - nextConclusionId: "12.2.1"
             if: '"aanbieder" in labels'
           - nextConclusionId: "14.2.1"
-            if: '"aanbieder & gebruiksverantwoordelijke" in labels'
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels'
       - answer: Nee
         labels:
           - "geen systeemrisico"
@@ -571,7 +574,7 @@ questions:
           - nextQuestionId: "2.11"
             if: '"aanbieder" in labels'
           - nextConclusionId: "14.2.2"
-            if: '"aanbieder & gebruiksverantwoordelijke" in labels'
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels'
 
 ## Transparantieverplichting
   - questionId: "2.9"
@@ -610,13 +613,13 @@ questions:
           - nextConclusionId: "13.1.4"
             if: '"gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
           - nextConclusionId: "14.0.2"
-            if: '"aanbieder & gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
           - nextConclusionId: "14.0.4"
-            if: '"aanbieder & gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels'
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels'
           - nextConclusionId: "14.1.2"
-            if: '"aanbieder & gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels'
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels'
           - nextConclusionId: "14.1.4"
-            if: '"aanbieder & gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
 
 ## Uitzondering Transparantieverplichting
   - questionId: "2.10"
@@ -649,13 +652,13 @@ questions:
           - nextConclusionId: "13.1.4"
             if: '"gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
           - nextConclusionId: "14.0.2"
-            if: '"aanbieder & gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
           - nextConclusionId: "14.0.4"
-            if: '"aanbieder & gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels'
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels'
           - nextConclusionId: "14.1.2"
-            if: '"aanbieder & gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels'
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels'
           - nextConclusionId: "14.1.4"
-            if: '"aanbieder & gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
       - answer: Nee
         labels:
           - "transparantieverplichting"
@@ -677,13 +680,13 @@ questions:
           - nextConclusionId: "13.1.3"
             if: '"gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
           - nextConclusionId: "14.0.1"
-            if: '"aanbieder & gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
           - nextConclusionId: "14.0.3"
-            if: '"aanbieder & gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels'
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels'
           - nextConclusionId: "14.1.1"
-            if: '"aanbieder & gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels'
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels'
           - nextConclusionId: "14.1.3"
-            if: '"aanbieder & gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
 
 ## Open-source "Zijn de broncodes en parameters openbaar voor eenieder?"
   - questionId: "2.11"
@@ -2039,7 +2042,7 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2816-1-1
   - conclusionId: "11.2"
     conclusion: "De AI-verordening niet van toepassing, want je hebt een uitzonderingsgrond geselecteerd."
-    obligation: "Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt)."
+    obligation: "Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt). Verder dien je te registreren in het algoritmeregister."
     sources:
       - source: Artikel 2 - Toepassingsgebied
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e1978-1-1
