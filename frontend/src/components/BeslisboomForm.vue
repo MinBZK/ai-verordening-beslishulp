@@ -161,8 +161,8 @@ function reset() {
 }
 
 function back() {
-  questionStore.revertAnswer(previousSubCategory.value)
   categoryStore.revertCurrentCategory()
+  questionStore.revertAnswer(previousSubCategory.value)
 }
 
 function backButtonConclusion() {
