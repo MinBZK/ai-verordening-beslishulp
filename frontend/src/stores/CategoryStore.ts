@@ -19,26 +19,6 @@ export const useCategoryStore = defineStore('category', () => {
     'Welke risicogroep?': 'risk_group_state'
   }
 
-  const subCategoryCategoryMapper = {
-    'Rol': 'ai_act_applicable_state',
-    'Operationeel': 'ai_act_applicable_state',
-    'Soort toepassing': 'ai_act_applicable_state',
-    'Risicogroep': 'risk_group_state',
-    'Conformiteitsbeoordeling': 'risk_group_state',
-    'Systeemrisico': 'risk_group_state',
-    'Transparantieverplichting': 'risk_group_state'
-  }
-
-  const subCategoryCategoryMapperString = {
-    'Rol': 'AI verordening van toepassing?',
-    'Operationeel': 'AI verordening van toepassing?',
-    'Soort toepassing': 'AI verordening van toepassing?',
-    'Risicogroep': 'Welke risicogroep?',
-    'Conformiteitsbeoordeling': 'Welke risicogroep?',
-    'Systeemrisico': 'Welke risicogroep?',
-    'Transparantieverplichting': 'Welke risicogroep?'
-  }
-
   const initialCategoryState = JSON.parse(sessionStorage.getItem('categoryState') ?? initialCategoryStateString)
   const previousCategory = ref(String(initialPreviousCategory))
   const previousSubCategory = ref(String(initialPreviousSubCategory))
