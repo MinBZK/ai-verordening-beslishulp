@@ -8,8 +8,8 @@ export const useCategoryStore = defineStore('category', () => {
   const initialPreviousSubCategory = localStorage.getItem('previousSubCategory') ?? startSubCategory
   const initialCurrentCategory = localStorage.getItem('currentCategory') ?? startCategory
   const initialCurrentSubCategory = localStorage.getItem('currentSubCategory') ?? startSubCategory
-  const initialCategoryTrace = JSON.parse(localStorage.getItem('categoryTrace') ?? '[]')
-  const initialSubCategoryTrace = JSON.parse(localStorage.getItem('subCategoryTrace') ?? '[]')
+  const initialCategoryTrace = JSON.parse(localStorage.getItem('categoryTrace') ?? '["AI verordening van toepassing?"]')
+  const initialSubCategoryTrace = JSON.parse(localStorage.getItem('subCategoryTrace') ?? '["Soort toepassing"]')
   const initialCategoryStateString = `{
   "ai_act_applicable_state": "doing",
   "risk_group_state": "incomplete"
@@ -99,28 +99,28 @@ export const useCategoryStore = defineStore('category', () => {
      */
     // Categories section
     revertCategoryState()
-    if(categoryTrace.value.length - 2 > 0){
-      currentCategory.value = categoryTrace.value[categoryTrace.value.length - 2]
+    if(categoryTrace.value.length - 1 > 0){
+      currentCategory.value = categoryTrace.value[categoryTrace.value.length - 1]
     }else{
       currentCategory.value = startCategory
     }
     categoryTrace.value.pop()
 
-    if(categoryTrace.value.length - 2 > 0) {
-      previousCategory.value = categoryTrace.value[categoryTrace.value.length - 2]
+    if(categoryTrace.value.length - 1 > 0) {
+      previousCategory.value = categoryTrace.value[categoryTrace.value.length - 1]
     } else {
       previousCategory.value = startCategory
     }
     // Subcategories section
-    if(subCategoryTrace.value.length - 2 > 0){
-      currentSubCategory.value = subCategoryTrace.value[subCategoryTrace.value.length - 2]
+    if(subCategoryTrace.value.length - 1 > 0){
+      currentSubCategory.value = subCategoryTrace.value[subCategoryTrace.value.length - 1]
     }else{
       currentSubCategory.value = startSubCategory
     }
     subCategoryTrace.value.pop()
 
-    if(subCategoryTrace.value.length - 2 > 0) {
-      previousSubCategory.value = subCategoryTrace.value[subCategoryTrace.value.length - 2]
+    if(subCategoryTrace.value.length - 1 > 0) {
+      previousSubCategory.value = subCategoryTrace.value[subCategoryTrace.value.length - 1]
     } else {
       previousSubCategory.value = startSubCategory
     }
@@ -139,8 +139,8 @@ export const useCategoryStore = defineStore('category', () => {
     previousCategory.value = startCategory
     previousSubCategory.value = startSubCategory
     categoryState.value = JSON.parse(initialCategoryStateString)
-    categoryTrace.value = []
-    subCategoryTrace.value = []
+    categoryTrace.value = [startCategory]
+    subCategoryTrace.value = [startSubCategory]
     localStorage.removeItem('currentCategory')
     localStorage.removeItem('currentSubCategory')
     localStorage.removeItem('previousCategory')
