@@ -29,7 +29,7 @@ defineEmits(['back'])
     </p>
     <div class="rvo-accordion">
       <!--   Profile labels section  -->
-      <SubResult :category="category" :labels="labels" title="Profiel" conclusion="conclusion" />
+      <SubResult :category="category" :labels="labels" title="AI Verordening Profiel" conclusion="conclusion" />
 
       <!-- Accordion for Obligation/Verplichtingen section, visible only if there are obligations -->
       <div v-if="obligation">
@@ -45,7 +45,7 @@ defineEmits(['back'])
                 role="img" aria-label="Delta omhoog"></span>
               Verplichtingen
             </h3>
-            <span class="rvo-accordion-teaser">Bekijk hier de verplichtingen die voor u gelden</span>
+            <span class="rvo-accordion-teaser">Hier kun je de voor jou geldende verplichtingen bekijken</span>
           </summary>
           <div class="rvo-accordion__content">
             <p class="rvo-text--md --rvo-font-sans-serif-font-family">
