@@ -580,7 +580,7 @@ questions:
         redirects:
           - nextQuestionId: "2.11"
             if: '"aanbieder" in labels || "aanbieder & gebruiksverantwoordelijke" in labels' #open-source
-          - nextConclusionId: "13.2.2"
+          - nextConclusionId: "13.2.1"
             if: '"gebruiksverantwoordelijke " in labels'
 
 ## Transparantieverplichting
@@ -711,7 +711,7 @@ questions:
         redirects:
           - nextConclusionId: "12.2.2"
             if: '"aanbieder" in labels'
-          - nextConclusionId: "13.2.2"
+          - nextConclusionId: "14.2.2"
             if: '"aanbieder & gebruiksverantwoordelijke" in labels'
       - answer: Nee
         labels:
@@ -719,7 +719,7 @@ questions:
         redirects:
          - nextConclusionId: "12.2.3"
            if: '"aanbieder" in labels'
-         - nextConclusionId: "13.2.3"
+         - nextConclusionId: "14.2.3"
            if: '"aanbieder & gebruiksverantwoordelijke" in labels'
 
 ### Conclusies
@@ -1115,12 +1115,7 @@ conclusions:
       - beleid opstellen ter naleving van het Unierecht inzake auteursrechten en naburige rechten en dan met name ter vaststelling en naleving, onder meer door middel van geavanceerde technologieën.<br>
       - een voldoende gedetailleerde samenvatting opstellen en openbaar maken over de voor het trainen van het AI-model voor algemene doeleinden gebruikte content, volgens een door het AI-bureau verstrekt sjabloon.<br><br>
       - Door overweging 104 voor open-source AI-modellen voor algemene doeleinden hoef je niet te voldoen aan: de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan.<br>
-      - Door overweging 104 voor open-source AI-modellen voor algemene doeleinden hoef je niet te voldoen aan:hoef je niet te voldoen aan: informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren.<br>
-      Verplichtingen van aanbieders van AI-modellen voor algemene doeleinden met een systeemrisico (Artikel 55):<br>
-      - het uitvoeren van een modelevaluatie overeenkomstig gestandaardiseerde protocollen en instrumenten die de stand van de techniek weerspiegelen, met inbegrip van het uitvoeren en documenteren van tests gericht op het ontdekken van kwetsbaarheden van het model met als doel om systeemrisico’s in kaart te brengen en te beperken.<br>
-      - het beoordelen en beperken van mogelijke systeemrisico’s op Unieniveau, met inbegrip van de bronnen daarvan, die kunnen voortvloeien uit de ontwikkeling, het in de handel brengen of het gebruik van AI-modellen voor algemene doeleinden met een systeemrisico.<br>
-      - het bijhouden, documenteren en onverwijld rapporteren (aan het AI-bureau (en in voorkomende gevallen aan de nationale bevoegde autoriteiten)) van relevante informatie over ernstige incidenten en mogelijke corrigerende maatregelen.<br>
-      - het zorgen voor een passend niveau van cyberbeveiligingsbescherming voor het AI-model voor algemene doeleinden en de fysieke infrastructuur van het model.<br>
+      - Door overweging 104 voor open-source AI-modellen voor algemene doeleinden hoef je niet te voldoen aan:hoef je niet te voldoen aan: informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren.<br><br>
       Geldig vanaf (Artikel 111 en Overweging 179):<br>
       - Voor AI-modellen in ontwikkeling gelden de verplichtingen voor aanbieders van algemene AI-modellen, zoals taal- of beeldherkenningsmodellen, vanaf 2 augustus 2025.<br>
       - Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.<br><br>"
@@ -1147,15 +1142,10 @@ conclusions:
       Verplichtingen voor alle AI-modellen voor algemene doeleinden:<br>
         - Praktijkcodes (Artikel 56)<br><br>
       Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden (Artikel 53 en Artikel 54):<br>
-      - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan. In het geval van het label 'open-source' is er een uitzondering op deze verplichting (Overweging 104).<br>
-      - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren. In het geval van het label 'open-source' is er een uitzondering op deze verplichting (Overweging 104).<br>
+      - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan. <br>
+      - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren. <br>
       - beleid opstellen ter naleving van het Unierecht inzake auteursrechten en naburige rechten en dan met name ter vaststelling en naleving, onder meer door middel van geavanceerde technologieën.<br>
       - een voldoende gedetailleerde samenvatting opstellen en openbaar maken over de voor het trainen van het AI-model voor algemene doeleinden gebruikte content, volgens een door het AI-bureau verstrekt sjabloon.<br><br>
-      Verplichtingen van aanbieders van AI-modellen voor algemene doeleinden met een systeemrisico (Artikel 55):<br>
-      - het uitvoeren van een modelevaluatie overeenkomstig gestandaardiseerde protocollen en instrumenten die de stand van de techniek weerspiegelen, met inbegrip van het uitvoeren en documenteren van tests gericht op het ontdekken van kwetsbaarheden van het model met als doel om systeemrisico’s in kaart te brengen en te beperken.<br>
-      - het beoordelen en beperken van mogelijke systeemrisico’s op Unieniveau, met inbegrip van de bronnen daarvan, die kunnen voortvloeien uit de ontwikkeling, het in de handel brengen of het gebruik van AI-modellen voor algemene doeleinden met een systeemrisico.<br>
-      - het bijhouden, documenteren en onverwijld rapporteren (aan het AI-bureau (en in voorkomende gevallen aan de nationale bevoegde autoriteiten)) van relevante informatie over ernstige incidenten en mogelijke corrigerende maatregelen.<br>
-      - het zorgen voor een passend niveau van cyberbeveiligingsbescherming voor het AI-model voor algemene doeleinden en de fysieke infrastructuur van het model.<br>
       Geldig vanaf (Artikel 111 source: Overweging 179 - Ingangtreding verordening ):<br>
       - Voor AI-modellen in ontwikkeling gelden de verplichtingen voor aanbieders van algemene AI-modellen, zoals taal- of beeldherkenningsmodellen, vanaf 2 augustus 2025.<br>
       - Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.<br><br>"
@@ -1418,7 +1408,7 @@ conclusions:
       - source: Overweging 179 - Ingangtreding verordening
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_179
   - conclusionId: "13.2.1"
-    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden."
     obligation: "
       Verplichtingen voor alle AI-modellen voor algemene doeleinden:<br>
         - Praktijkcodes (Artikel 56)<br><br>
@@ -1911,6 +1901,32 @@ conclusions:
       Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden (Artikel 53 en Artikel 54):<br>
       - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan.<br>
       - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren.<br>
+      - Door overweging 104 voor open-source AI-modellen voor algemene doeleinden hoef je niet te voldoen aan: de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan.<br>
+      - Door overweging 104 voor open-source AI-modellen voor algemene doeleinden hoef je niet te voldoen aan:hoef je niet te voldoen aan: informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren.<br><br>
+      Geldig vanaf (Artikel 111 en Overweging 179):<br>
+      - Voor AI-modellen in ontwikkeling gelden de verplichtingen voor aanbieders van algemene AI-modellen, zoals taal- of beeldherkenningsmodellen, vanaf 2 augustus 2025.<br>
+      - Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.<br><br>"
+    sources:
+      - source: Artikel 51 - Classificatie van AI-modellen voor algemene doeleinden als AI-modellen voor algemene doeleinden met een systeemrisico
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5489-1-1
+      - source: Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5576-1-1
+      - source: Artikel 54 - Gemachtigden van aanbieders van AI-modellen voor algemene doeleinden
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5657-1-1
+      - source: Artikel 56 - Praktijkcodes
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5788-1-1
+      - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
+      - source: Overweging 179 - Ingangtreding verordening
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_179
+  - conclusionId: "14.2.3"
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder en gebruiksverantwoordelijke van een AI-model voor algemene doeleinden."
+    obligation: "
+      Verplichtingen voor alle AI-modellen voor algemene doeleinden:<br>
+        - Praktijkcodes (Artikel 56)<br><br>
+      Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden (Artikel 53 en Artikel 54):<br>
+      - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan. <br>
+      - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren. <br>
       - beleid opstellen ter naleving van het Unierecht inzake auteursrechten en naburige rechten en dan met name ter vaststelling en naleving, onder meer door middel van geavanceerde technologieën.<br>
       - een voldoende gedetailleerde samenvatting opstellen en openbaar maken over de voor het trainen van het AI-model voor algemene doeleinden gebruikte content, volgens een door het AI-bureau verstrekt sjabloon.<br><br>
       Geldig vanaf (Artikel 111 en Overweging 179):<br>
