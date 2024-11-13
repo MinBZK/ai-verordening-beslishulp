@@ -80,6 +80,7 @@ questions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
       - source: Overweging 177 - Aanpassingsperiode en uitzonderingen voor bestaande hoogrisico AI-systemen
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_177
       - source: Begrippenlijst Algoritmekader
         url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     answers:
@@ -105,9 +106,13 @@ questions:
       - source: Artikel 3 - Definities
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2093-1-1
       - source: Overweging 12 - Begrip "AI-systeem"
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_12
       - source: Overweging 97 - Begrip "AI-model voor algemene doeleinden"
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_97
       - source: Overweging 99 - Generatieve AI-modellen als voorbeeld van AI-modellen voor algemene doeleinden
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_99
       - source: Overweging 100 - Classificatie van AI-systemen met geïntegreerde AI-modellen voor algemene doeleinden
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_100
       - source: Begrippenlijst Algoritmekader
         url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     answers:
@@ -242,7 +247,9 @@ questions:
       - source: Artikel 5 - Verboden AI
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2816-1-1
       - source: Overweging 33 - Biometrische identificatie voor rechtshandhaving
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_33
       - source: Overweging 34 - Biometrische identificatie in openbare ruimten voor rechtshandhaving
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_34
       - source: Begrippenlijst Algoritmekader
         url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     answers:
@@ -320,7 +327,9 @@ questions:
           - source: Verordening (EU) 2017/746 - Medische hulpmiddelen voor in-vitrodiagnostiek
             url: https://eur-lex.europa.eu/legal-content/NL/TXT/PDF/?uri=CELEX:32017R0746
           - source: Overweging 47 - Veiligheidscomponent
+            url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_47
           - source: Overweging 49 - Veiligheidscomponent
+            url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_49
           - source: Begrippenlijst Algoritmekader
             url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     answers:
@@ -370,6 +379,7 @@ questions:
         - source: Artikel 43 - Conformiteitsbeoordeling
           url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5074-1-1
         - source: Overweging 50 - Conformiteitsbeoordelingsprocedure
+          url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_50
         - source: Bijlage 1 - Lijst van harmonisatiewetgeving van de Unie
           url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e38-124-1
         - source: Richtlijn 2006/42/EG - Machines
@@ -511,6 +521,7 @@ questions:
     subcategory: risicogroep
     sources:
       - source: Overweging 53 - Laag risico
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_53
     answers:
       - answer: Ja
         labels:
@@ -693,6 +704,7 @@ questions:
     subcategory: open-source
     sources:
       - source: Overweging 102 - Begrip open-source
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_102
     answers:
       - answer: Ja
         labels:
@@ -922,6 +934,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
       - source: Overweging 179 - Ingangtreding verordening
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_179
   - conclusionId: "12.1.2"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een hoog-risico AI-systeem voor algemene doeleinden."
     obligation: "
@@ -982,6 +995,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
       - source: Overweging 179 - Ingangtreding verordening
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_179
   - conclusionId: "12.1.3"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden. Het AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "
@@ -1021,6 +1035,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
       - source: Overweging 179 - Ingangtreding verordening
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_179
   - conclusionId: "12.1.4"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden."
     obligation: "
@@ -1050,6 +1065,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
       - source: Overweging 179 - Ingangtreding verordening
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_179
   - conclusionId: "12.2.1"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico."
     obligation: "
@@ -1082,6 +1098,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
       - source: Overweging 179 - Ingangtreding verordening
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_179
   - conclusionId: "12.2.2"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een open-source AI-model voor algemene doeleinden."
     obligation: "
@@ -1114,7 +1131,9 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
       - source: Overweging 104 - Transparantie-uitzonderingen open-source AI-modellen
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_104
       - source: Overweging 179 - Ingangtreding verordening
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_179
   - conclusionId: "12.2.3"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een AI-model voor algemene doeleinden."
     obligation: "
@@ -1147,6 +1166,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
       - source: Overweging 179 - Ingangtreding verordening
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_179
 # Conclusies 13.0.1 tm 13.2.2 voor gebruiksverantwoordelijken
   - conclusionId: "13.0.1"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem. Het AI-systeem moet voldoen aan transparantieverplichtingen. "
@@ -1389,6 +1409,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
       - source: Overweging 179 - Ingangtreding verordening
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_179
   - conclusionId: "13.2.1"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico."
     obligation: "
@@ -1408,6 +1429,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
       - source: Overweging 179 - Ingangtreding verordening
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_179
 
 
 # Conclusies 14.0.1 tm 14.1.2 voor gebruiksverantwoordelijken && aanbieders
@@ -1686,6 +1708,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
       - source: Overweging 179 - Ingangtreding verordening
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_179
   - conclusionId: "14.1.2"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem voor algemene doeleinden."
     obligation: "
@@ -1769,6 +1792,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
       - source: Overweging 179 - Ingangtreding verordening
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_179
   - conclusionId: "14.1.3"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke en aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden.  Het AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "
@@ -1808,6 +1832,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
       - source: Overweging 179 - Ingangtreding verordening
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_179
   - conclusionId: "14.1.4"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke en aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden."
     obligation: "
@@ -1837,6 +1862,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
       - source: Overweging 179 - Ingangtreding verordening
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_179
   - conclusionId: "14.2.1"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder en gebruiksverantwoordelijke van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico."
     obligation: "
@@ -1869,6 +1895,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
       - source: Overweging 179 - Ingangtreding verordening
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_179
   - conclusionId: "14.2.2"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder en gebruiksverantwoordelijke van een AI-model voor algemene doeleinden."
     obligation: "
@@ -1894,6 +1921,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
       - source: Overweging 179 - Ingangtreding verordening
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_179
 
 ## Conclusies voor importeur (13)
   - conclusionId: "15.0.1"
@@ -2034,7 +2062,7 @@ conclusions:
       - source: Artikel 5 - Verboden AI praktijken
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2816-1-1
   - conclusionId: "11.2"
-    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat een uitzonderingsgrond hebt geselecteerd."
+    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat je een uitzonderingsgrond hebt geselecteerd."
     obligation: "Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt). Verder dien je te registreren in het algoritmeregister."
     sources:
       - source: Artikel 2 - Toepassingsgebied
