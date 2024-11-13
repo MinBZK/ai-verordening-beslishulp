@@ -7,7 +7,7 @@ export const useQuestionStore = defineStore('question', () => {
     "Operationeel": ["nader te bepalen"],
     "Soort toepassing": ["nader te bepalen"],
     "Risicogroep": ["nader te bepalen"],
-    "Conformiteitsbeoordeling": ["nader te bepalen"],
+    "Conformiteitsbeoordelingsinstantie": ["nader te bepalen"],
     "Systeemrisico": ["nader te bepalen"],
     "Transparantieverplichting": ["nader te bepalen"]
   }`
