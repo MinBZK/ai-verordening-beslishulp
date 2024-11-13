@@ -93,7 +93,6 @@ defineEmits(['answered', 'back'])
       </button>
     </div>
     <SubResult class="rvo-layout-margin-vertical--2xl"
-      style="width: 500px"
       :category="category"
       :labels="labels"
       title="Tussenresultaten"
