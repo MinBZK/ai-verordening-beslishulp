@@ -581,7 +581,7 @@ questions:
           - nextQuestionId: "2.11"
             if: '"aanbieder" in labels || "aanbieder & gebruiksverantwoordelijke" in labels' #open-source
           - nextConclusionId: "13.2.1"
-            if: '"gebruiksverantwoordelijke " in labels'
+            if: '"gebruiksverantwoordelijke" in labels'
 
 ## Transparantieverplichting
   - questionId: "2.9"
@@ -1145,8 +1145,9 @@ conclusions:
       - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan. <br>
       - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren. <br>
       - beleid opstellen ter naleving van het Unierecht inzake auteursrechten en naburige rechten en dan met name ter vaststelling en naleving, onder meer door middel van geavanceerde technologieën.<br>
-      - een voldoende gedetailleerde samenvatting opstellen en openbaar maken over de voor het trainen van het AI-model voor algemene doeleinden gebruikte content, volgens een door het AI-bureau verstrekt sjabloon.<br><br>
-      Geldig vanaf (Artikel 111 source: Overweging 179 - Ingangtreding verordening ):<br>
+      - een voldoende gedetailleerde samenvatting opstellen en openbaar maken over de voor het trainen van het AI-model voor algemene doeleinden gebruikte content, volgens een door het AI-bureau verstrekt sjabloon.<br>
+      Aangezien het geen open-source toepassing is, gelden er geen uitzonderingen. <br><br>
+      Geldig vanaf (Artikel 111 en Overweging 179 ):<br>
       - Voor AI-modellen in ontwikkeling gelden de verplichtingen voor aanbieders van algemene AI-modellen, zoals taal- of beeldherkenningsmodellen, vanaf 2 augustus 2025.<br>
       - Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.<br><br>"
     sources:
@@ -1928,7 +1929,8 @@ conclusions:
       - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan. <br>
       - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren. <br>
       - beleid opstellen ter naleving van het Unierecht inzake auteursrechten en naburige rechten en dan met name ter vaststelling en naleving, onder meer door middel van geavanceerde technologieën.<br>
-      - een voldoende gedetailleerde samenvatting opstellen en openbaar maken over de voor het trainen van het AI-model voor algemene doeleinden gebruikte content, volgens een door het AI-bureau verstrekt sjabloon.<br><br>
+      - een voldoende gedetailleerde samenvatting opstellen en openbaar maken over de voor het trainen van het AI-model voor algemene doeleinden gebruikte content, volgens een door het AI-bureau verstrekt sjabloon.<br>
+      Aangezien het geen open-source toepassing is, gelden er geen uitzonderingen. <br><br>
       Geldig vanaf (Artikel 111 en Overweging 179):<br>
       - Voor AI-modellen in ontwikkeling gelden de verplichtingen voor aanbieders van algemene AI-modellen, zoals taal- of beeldherkenningsmodellen, vanaf 2 augustus 2025.<br>
       - Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.<br><br>"
