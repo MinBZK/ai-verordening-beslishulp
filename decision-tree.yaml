@@ -707,7 +707,7 @@ questions:
 conclusions:
 ###Conclusies 12.0.1 tm 12.1.2 voor aanbieders
   - conclusionId: "12.0.1"
-    conclusion: "Je bent een aanbieder van een hoog-risico AI-systeem. Het AI-systeem moet voldoen aan transparantieverplichtingen. "
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een hoog-risico AI-systeem. Het AI-systeem moet voldoen aan transparantieverplichtingen. "
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
         - AI-geletterdheid (Artikel 4)<br>
@@ -764,7 +764,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
   - conclusionId: "12.0.2"
-    conclusion: "Je bent een aanbieder van een hoog-risico AI-systeem."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een hoog-risico AI-systeem."
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
         - AI-geletterdheid (Artikel 4)<br>
@@ -811,7 +811,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
   - conclusionId: "12.0.3"
-    conclusion: "Je bent een aanbieder van een niet-hoog-risico AI-systeem. Het AI-systeem moet voldoen aan transparantieverplichtingen."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een niet-hoog-risico AI-systeem. Het AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
         - AI-geletterdheid (Artikel 4)<br>
@@ -853,7 +853,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
   - conclusionId: "12.1.1"
-    conclusion: "Je bent een aanbieder van een hoog-risico AI-systeem voor algemene doeleinden. Het AI-systeem moet voldoen aan transparantieverplichtingen."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een hoog-risico AI-systeem voor algemene doeleinden. Het AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
         - AI-geletterdheid (Artikel 4)<br>
@@ -923,7 +923,7 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
       - source: Overweging 179 - Ingangtreding verordening
   - conclusionId: "12.1.2"
-    conclusion: "Je bent een aanbieder van een hoog-risico AI-systeem voor algemene doeleinden."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een hoog-risico AI-systeem voor algemene doeleinden."
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
         - AI-geletterdheid (Artikel 4)<br>
@@ -983,7 +983,7 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
       - source: Overweging 179 - Ingangtreding verordening
   - conclusionId: "12.1.3"
-    conclusion: "Je bent een aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden. Het AI-systeem moet voldoen aan transparantieverplichtingen."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden. Het AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
         - AI-geletterdheid (Artikel 4)<br>
@@ -1022,7 +1022,7 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
       - source: Overweging 179 - Ingangtreding verordening
   - conclusionId: "12.1.4"
-    conclusion: "Je bent een aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden."
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
         - AI-geletterdheid (Artikel 4)<br>
@@ -1051,7 +1051,7 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
       - source: Overweging 179 - Ingangtreding verordening
   - conclusionId: "12.2.1"
-    conclusion: "Je bent een aanbieder van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico."
     obligation: "
       Verplichtingen voor alle AI-modellen voor algemene doeleinden:<br>
         - Praktijkcodes (Artikel 56)<br><br>
@@ -1083,7 +1083,7 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
       - source: Overweging 179 - Ingangtreding verordening
   - conclusionId: "12.2.2"
-    conclusion: "Je bent een aanbieder van een open-source AI-model voor algemene doeleinden."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een open-source AI-model voor algemene doeleinden."
     obligation: "
       Verplichtingen voor alle AI-modellen voor algemene doeleinden:<br>
         - Praktijkcodes (Artikel 56)<br><br>
@@ -1116,7 +1116,7 @@ conclusions:
       - source: Overweging 104 - Transparantie-uitzonderingen open-source AI-modellen
       - source: Overweging 179 - Ingangtreding verordening
   - conclusionId: "12.2.3"
-    conclusion: "Je bent een aanbieder van een AI-model voor algemene doeleinden."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een AI-model voor algemene doeleinden."
     obligation: "
       Verplichtingen voor alle AI-modellen voor algemene doeleinden:<br>
         - Praktijkcodes (Artikel 56)<br><br>
@@ -1149,7 +1149,7 @@ conclusions:
       - source: Overweging 179 - Ingangtreding verordening
 # Conclusies 13.0.1 tm 13.2.2 voor gebruiksverantwoordelijken
   - conclusionId: "13.0.1"
-    conclusion: "Je bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem. Het AI-systeem moet voldoen aan transparantieverplichtingen. "
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem. Het AI-systeem moet voldoen aan transparantieverplichtingen. "
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
@@ -1193,7 +1193,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
   - conclusionId: "13.0.2"
-    conclusion: "Je bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem."
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
@@ -1232,7 +1232,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
   - conclusionId: "13.0.3"
-    conclusion: "Je bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem. Het AI-systeem moet voldoen aan transparantieverplichtingen."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem. Het AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
@@ -1253,7 +1253,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
   - conclusionId: "13.0.4"
-    conclusion: "Je bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem."
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
@@ -1269,7 +1269,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
   - conclusionId: "13.1.1"
-    conclusion: "Je bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem voor algemene doeleinden. Het AI-systeem moet voldoen aan transparantieverplichtingen."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem voor algemene doeleinden. Het AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
@@ -1313,7 +1313,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
   - conclusionId: "13.1.2"
-    conclusion: "Je bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem voor algemene doeleinden."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem voor algemene doeleinden."
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
@@ -1352,7 +1352,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
   - conclusionId: "13.1.3"
-    conclusion: "Je bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem voor algemene doeleinden. Het AI-systeem moet voldoen aan transparantieverplichtingen."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem voor algemene doeleinden. Het AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
@@ -1373,7 +1373,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
   - conclusionId: "13.1.4"
-    conclusion: "Je bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem voor algemene doeleinden."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem voor algemene doeleinden."
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
@@ -1390,7 +1390,7 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
       - source: Overweging 179 - Ingangtreding verordening
   - conclusionId: "13.2.1"
-    conclusion: "Je bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico."
     obligation: "
       Verplichtingen voor alle AI-modellen voor algemene doeleinden:<br>
         - Praktijkcodes (Artikel 56)<br><br>
@@ -1412,7 +1412,7 @@ conclusions:
 
 # Conclusies 14.0.1 tm 14.1.2 voor gebruiksverantwoordelijken && aanbieders
   - conclusionId: "14.0.1"
-    conclusion: "Je bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem. Het AI-systeem moet voldoen aan transparantieverplichtingen."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem. Het AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
@@ -1487,7 +1487,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
   - conclusionId: "14.0.2"
-    conclusion: "Je bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem."
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
@@ -1557,7 +1557,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
   - conclusionId: "14.0.3"
-    conclusion: "Je bent een gebruiksverantwoordelijke en aanbieder van een niet-hoog-risico AI-systeem. Het AI-systeem moet voldoen aan transparantieverplichtingen."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke en aanbieder van een niet-hoog-risico AI-systeem. Het AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
@@ -1578,7 +1578,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
   - conclusionId: "14.0.4"
-    conclusion: "Je bent een gebruiksverantwoordelijke en aanbieder van een niet-hoog-risico AI-systeem."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke en aanbieder van een niet-hoog-risico AI-systeem."
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
@@ -1594,7 +1594,7 @@ conclusions:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
   - conclusionId: "14.1.1"
-    conclusion: "Je bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem voor algemene doeleinden. Het AI-systeem moet voldoen aan transparantieverplichtingen."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem voor algemene doeleinden. Het AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
@@ -1687,7 +1687,7 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
       - source: Overweging 179 - Ingangtreding verordening
   - conclusionId: "14.1.2"
-    conclusion: "Je bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem voor algemene doeleinden."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem voor algemene doeleinden."
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
@@ -1770,7 +1770,7 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
       - source: Overweging 179 - Ingangtreding verordening
   - conclusionId: "14.1.3"
-    conclusion: "Je bent een gebruiksverantwoordelijke en aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden.  Het AI-systeem moet voldoen aan transparantieverplichtingen."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke en aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden.  Het AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
@@ -1809,7 +1809,7 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
       - source: Overweging 179 - Ingangtreding verordening
   - conclusionId: "14.1.4"
-    conclusion: "Je bent een gebruiksverantwoordelijke en aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke en aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden."
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
@@ -1838,7 +1838,7 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
       - source: Overweging 179 - Ingangtreding verordening
   - conclusionId: "14.2.1"
-    conclusion: "Je bent een aanbieder en gebruiksverantwoordelijke van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder en gebruiksverantwoordelijke van een AI-model voor algemene doeleinden. Er is sprake van een systeemrisico."
     obligation: "
       Verplichtingen voor alle AI-modellen voor algemene doeleinden:<br>
         - Praktijkcodes (Artikel 56)<br><br>
@@ -1870,7 +1870,7 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
       - source: Overweging 179 - Ingangtreding verordening
   - conclusionId: "14.2.2"
-    conclusion: "Je bent een aanbieder en gebruiksverantwoordelijke van een AI-model voor algemene doeleinden."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder en gebruiksverantwoordelijke van een AI-model voor algemene doeleinden."
     obligation: "
       Verplichtingen voor alle AI-modellen voor algemene doeleinden:<br>
         - Praktijkcodes (Artikel 56)<br><br>
@@ -1897,7 +1897,7 @@ conclusions:
 
 ## Conclusies voor importeur (13)
   - conclusionId: "15.0.1"
-    conclusion: "Je bent een importeur van een AI-systeem een hoog risico."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een importeur van een AI-systeem een hoog risico."
     obligation: "
       Verplichtingen voor importeur van een hoog risico AI-systeem (Artikel 23):<br>
       - Importeurs zorgen ervoor dat een AI-systeem met een hoog risico in overeenstemming is met de verordening voordat het in de handel wordt gebracht door na te gaan of de relevante conformiteitsbeoordelingsprocedure is uitgevoerd (artikel 43), de technische documentatie is opgesteld (artikel 11 en bijlage IV), de CE-markering is aangebracht en de EU-conformiteitsverklaring en gebruiksaanwijzingen aanwezig zijn (artikel 47), en of de aanbieder een gemachtigde heeft aangewezen (artikel 22, lid 1).<br>
@@ -1921,7 +1921,7 @@ conclusions:
       - source: Artikel 79 - Procedure op nationaal niveau voor de omgang met AI-systemen die een risico vormen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e7480-1-1
   - conclusionId: "15.0.3"
-    conclusion: "Je bent een importeur van een niet-hoog-risico AI-systeem."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een importeur van een niet-hoog-risico AI-systeem."
     obligation: "Er zijn geen verplichtingen voor importeurs van niet-hoog-risico AI-systemen, alleen voor hoog-risico."
     sources:
       - source: Artikel 23 - Verplichtingen van importeurs
@@ -1951,13 +1951,13 @@ conclusions:
       - source: Artikel 79 - Procedure op nationaal niveau voor de omgang met AI-systemen die een risico vormen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e7480-1-1
   - conclusionId: "15.1.3"
-    conclusion: "Je bent een importeur van een niet-hoog-risico AI-systeem voor algemene doeleinden."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een importeur van een niet-hoog-risico AI-systeem voor algemene doeleinden."
     obligation: "Er zijn geen verplichtingen voor importeurs van niet-hoog-risico AI-systemen voor algemene doeleinden, alleen voor hoog-risico."
     sources:
       - source: Artikel 23 - Verplichtingen van importeurs
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e3823-1-1
   - conclusionId: "15.2.1"
-    conclusion: "Je bent een importeur van een AI-model voor algemene doeleinden."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een importeur van een AI-model voor algemene doeleinden."
     obligation: "Er zijn geen verplichtingen voor importeurs van AI-modellen voor algemene doeleinden, alleen voor hoog-risico AI-systemen."
     sources:
       - source: Artikel 23 - Verplichtingen van importeurs
@@ -1966,7 +1966,7 @@ conclusions:
 
 ## Conclusies voor distributeur (14)
   - conclusionId: "16.0.1"
-    conclusion: "Je bent een distributeur van een hoog-risico AI-systeem."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een distributeur van een hoog-risico AI-systeem."
     obligation: "
       Verplichtingen voor distributeur van een hoog risico AI-systeem (Artikel 24):<br>
       - Distributeurs controleren of het AI-systeem met een hoog risico de vereiste CE-markering heeft, vergezeld gaat van de EU-conformiteitsverklaring en gebruiksinstructies, en of de aanbieder en importeur hun verplichtingen uit Artikel 16 (b en c) en Artikel 23 (3) hebben nageleefd.<br>
@@ -1985,13 +1985,13 @@ conclusions:
       - source: Artikel 79 - Procedure op nationaal niveau voor de omgang met AI-systemen die een risico vormen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e7480-1-1
   - conclusionId: "16.0.3"
-    conclusion: "Je bent een distributeur van een niet-hoog-risico AI-systeem."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een distributeur van een niet-hoog-risico AI-systeem."
     obligation: "Er zijn geen verplichtingen voor distributeurs van niet-hoog-risico AI-systemen, alleen voor hoog-risico."
     sources:
       - source: Artikel 24 - Verplichtingen van distributeurs
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e4246-1-1
   - conclusionId: "16.1.1"
-    conclusion: "Je bent een distributeur van een hoog-risico AI-systeem voor algemene doeleinden."
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een distributeur van een hoog-risico AI-systeem voor algemene doeleinden."
     obligation: "
       Verplichtingen voor distributeur van een hoog risico AI-systeem (Artikel 24):<br>
       - Distributeurs controleren of het AI-systeem met een hoog risico de vereiste CE-markering heeft, vergezeld gaat van de EU-conformiteitsverklaring en gebruiksinstructies, en of de aanbieder en importeur hun verplichtingen uit Artikel 16 (b en c) en Artikel 23 (3) hebben nageleefd.<br>
@@ -2010,13 +2010,13 @@ conclusions:
       - source: Artikel 79 - Procedure op nationaal niveau voor de omgang met AI-systemen die een risico vormen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e7480-1-1
   - conclusionId: "16.1.3"
-    conclusion: "Je bent een distributeur van een niet-hoog-risico AI-systeem voor algemene doeleinden"
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een distributeur van een niet-hoog-risico AI-systeem voor algemene doeleinden."
     obligation: "Er zijn geen verplichtingen voor distributeurs van niet-hoog-risico AI-systemen voor algemene doeleinden, alleen voor hoog-risico."
     sources:
       - source: Artikel 24 - Verplichtingen van distributeurs
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e4246-1-1
   - conclusionId: "16.2.1"
-    conclusion: "Je bent een distributeur van een AI-model voor algemene doeleinden"
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een distributeur van een AI-model voor algemene doeleinden."
     obligation: "Er zijn geen verplichtingen voor distributeurs van AI-model voor algemene doeleinden, alleen voor hoog-risico AI-systemen. "
     sources:
       - source: Artikel 24 - Verplichtingen van distributeurs
@@ -2025,7 +2025,7 @@ conclusions:
 
 ## COnclusies voor geen rol (15)
   - conclusionId: "11.0"
-    conclusion: "Je hebt geantwoord dat er geen sprake is van een algoritme. Op basis van je antwoorden is het niet nodig om door te gaan naar Stap 2 – bepalen risicogroep. "
+    conclusion: "Je hebt geantwoord dat er geen sprake is van een algoritme, hierdoor is de AI verordening niet voor jou van toepassing. Op basis van je antwoorden is het niet nodig om door te gaan naar Stap 2 – bepalen risicogroep. "
     obligation: "Houd je aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)."
   - conclusionId: "11.1"
     conclusion: "Het is verboden om dit AI-systeem of model te gebruiken."
@@ -2034,20 +2034,29 @@ conclusions:
       - source: Artikel 5 - Verboden AI praktijken
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2816-1-1
   - conclusionId: "11.2"
-    conclusion: "De AI-verordening niet van toepassing, want je hebt een uitzonderingsgrond geselecteerd."
+    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat een uitzonderingsgrond hebt geselecteerd."
     obligation: "Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt). Verder dien je te registreren in het algoritmeregister."
     sources:
       - source: Artikel 2 - Toepassingsgebied
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e1978-1-1
   - conclusionId: "11.3"
-    conclusion: "Het betreft een algoritme met impact, maar de AI-verordening is niet van toepassing."
+    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat het algoritme niet valt onder de definitie van een AI-systeem of AI-model volgens de AI verordening. Volgens de handreiking algoritmeregister is de toepassing een impactvol algoritme."
     obligation: "Omdat het een algoritme met impact betreft, dien je in algoritmeregister te publiceren. Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt)."
+    sources:
+      - source: Handreiking Algoritmeregister
+        url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
   - conclusionId: "11.4"
-    conclusion: "Het betreft een algoritme met impact, maar de AI-verordening is niet van toepassing."
+    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat het algoritme niet valt onder de definitie van een AI-systeem of AI-model volgens de AI verordening. Volgens de handreiking algoritmeregister is de toepassing een impactvol algoritme en val je in de uitzonderingsgrond."
     obligation: "Je hoeft vanwege uitzonderingsgrond niet te publiceren in het algoritmeregister. Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt)."
+    sources:
+      - source: Handreiking Algoritmeregister
+        url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
   - conclusionId: "11.5"
-    conclusion: "Het algoritme is niet impactvol en de AI-verordening is niet van toepassing."
+    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat het algoritme niet valt onder de definitie van een AI-systeem of AI-model volgens de AI verordening. Volgens de handreiking algoritmeregister is de toepassing geen impactvol algoritme."
     obligation: "Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt)."
+    sources:
+      - source: Handreiking Algoritmeregister
+        url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
   - conclusionId: "11.6"
-    conclusion: "Je bent geen aanbieder, gebruiksverantwoordelijke, importeur of distributeur. De AI-verordening is alleen voor deze vier rollen van toepassing. Controleer nog een keer goed of één van deze rollen misschien toch op jou van toepassing is."
+    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat je geen aanbieder, verantwoordelijke voor het gebruik, importeur of distributeur bent. Controleer echter zorgvuldig of een van deze rollen mogelijk toch op jou van toepassing is."
     obligation: "Er is geen sprake van een verplichting."
