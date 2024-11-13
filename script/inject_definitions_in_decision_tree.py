@@ -15,7 +15,14 @@ with open("definitions.yaml") as file:
 
 # Create a dictionary to lookup terms
 term_dict = {
-    definition["term"]: (f"<dfn><abbr title=\"{definition['definition']}\">{definition['term']}</abbr></dfn>")
+    definition["term"]: (
+        f"<div class='aiv-definition'>"
+        f"{definition['term']}"
+        f" <span class='aiv-definition-text'>"
+        f"     {definition['definition']}"
+        f" </span>"
+        f"</div>"
+    )
     for definition in definitions["definitions"]
 }
 
