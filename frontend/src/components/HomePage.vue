@@ -19,7 +19,7 @@ const emit = defineEmits(['acceptDisclaimer'])
             <h2 class="flex justify-center utrecht-heading-2">Beslisboom AI-verordering</h2>
             <BetaversionLabel />
           </div>
-          <div class="rvo-layout-column rvo-layout-gap--md">
+          <div class="rvo-layout-column rvo-layout-gap--md rvo-max-width-layout rvo-max-width-layout--lg">
             <div class="utrecht-form-fieldset rvo-form-fieldset">
               <fieldset
                 class="utrecht-form-fieldset__fieldset utrecht-form-fieldset--html-fieldset"
