@@ -9,7 +9,8 @@ export const useQuestionStore = defineStore('question', () => {
     "Risicogroep": ["nader te bepalen"],
     "Conformiteitsbeoordelingsinstantie": ["nader te bepalen"],
     "Systeemrisico": ["nader te bepalen"],
-    "Transparantieverplichting": ["nader te bepalen"]
+    "Transparantieverplichting": ["nader te bepalen"],
+    "Open source": ["nader te bepalen"]
   }`
 
   const initialAcceptedDisclaimer = sessionStorage.getItem('acceptedDisclaimer') ?? '0'
