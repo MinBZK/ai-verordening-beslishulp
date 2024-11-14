@@ -257,7 +257,7 @@ questions:
         labels:
           - "hoog-risico AI"
         redirects:
-         - nextQuestionId: "2.3"
+         - nextQuestionId: "2.4.2"
            if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels || "aanbieder & gebruiksverantwoordelijke" in labels'
          - nextConclusionId: "16.0.1"
            if: '"distributeur" in labels && "AI-systeem" in labels'
