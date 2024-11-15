@@ -16,7 +16,7 @@ const emit = defineEmits(['acceptDisclaimer'])
       <div class="rvo-form">
         <div class="flex items-center rvo-layout-column rvo-layout-gap--xl">
           <div class="flex justify-center rvo-form-intro inline-flex py-5">
-            <h2 class="flex justify-center utrecht-heading-2">Beslisboom AI-verordering</h2>
+            <h2 class="flex justify-center utrecht-heading-2">Beslisboom AI-verordening</h2>
             <BetaversionLabel />
           </div>
           <div class="rvo-layout-column rvo-layout-gap--md rvo-max-width-layout rvo-max-width-layout--lg">
@@ -32,8 +32,8 @@ const emit = defineEmits(['acceptDisclaimer'])
                   <li>Deze beslishulp is een betaversie: de informatie is niet compleet en er kunnen fouten in staan.
                     Kom je iets tegen? Mail naar:
                     <a
-                      class="rvo-link" href="mailto:ai-verordering@minbzk.nl">
-                      ai-verordering@minbzk.nl</a>.
+                      class="rvo-link" href="mailto:ai-verordening@minbzk.nl">
+                      ai-verordening@minbzk.nl</a>.
                   </li>
                   <li>Je doorloopt de beslishulp op basis van je eigen antwoorden. De beslishulp kan niet vaststellen of jouw antwoorden waar zijn of niet.
                   </li>
@@ -45,13 +45,13 @@ const emit = defineEmits(['acceptDisclaimer'])
                   </li>
                   <li> Voor vragen of opmerkingen over de beslisboom mail je naar:
                     <a
-                      class="rvo-link" href="mailto:ai-verordering@minbzk.nl">
-                      ai-verordering@minbzk.nl</a>.
+                      class="rvo-link" href="mailto:ai-verordening@minbzk.nl">
+                      ai-verordening@minbzk.nl</a>.
                   </li>
                 </ul>
                 <p class="utrecht-paragraph">Om je te helpen bij het beantwoorden van de vragen, zijn relevante
                   overwegingen / artikelen / bijlagen
-                  van de AI Verordening gelinkt per vraag. Definities van termen worden laten zien als je met je muis
+                  van de AI-verordening gelinkt per vraag. Definities van termen worden laten zien als je met je muis
                   eroverheen gaat en zijn terug te vinden op het
                   <a class="rvo-link" href="https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/?h=definitie" target="_blank">
                       Algoritmekader

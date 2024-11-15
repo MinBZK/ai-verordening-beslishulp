@@ -1,5 +1,5 @@
 version: 1.0.0
-name: Beslishulp AI Verordening
+name: Beslishulp AI-verordening
 questions:
   ### check definitie algoritme
   - questionId: "1.2" # TO do: check of 0 is gehardcode als 'start'?
@@ -1092,7 +1092,7 @@ conclusions:
       - het uitvoeren van een modelevaluatie overeenkomstig gestandaardiseerde protocollen en instrumenten die de stand van de techniek weerspiegelen, met inbegrip van het uitvoeren en documenteren van tests gericht op het ontdekken van kwetsbaarheden van het model met als doel om systeemrisico’s in kaart te brengen en te beperken.<br>
       - het beoordelen en beperken van mogelijke systeemrisico’s op Unieniveau, met inbegrip van de bronnen daarvan, die kunnen voortvloeien uit de ontwikkeling, het in de handel brengen of het gebruik van AI-modellen voor algemene doeleinden met een systeemrisico.<br>
       - het bijhouden, documenteren en onverwijld rapporteren (aan het AI-bureau (en in voorkomende gevallen aan de nationale bevoegde autoriteiten)) van relevante informatie over ernstige incidenten en mogelijke corrigerende maatregelen.<br>
-      - het zorgen voor een passend niveau van cyberbeveiligingsbescherming voor het AI-model voor algemene doeleinden en de fysieke infrastructuur van het model.<br>
+      - het zorgen voor een passend niveau van cyberbeveiligingsbescherming voor het AI-model voor algemene doeleinden en de fysieke infrastructuur van het model.<br><br>
       Geldig vanaf (Artikel 111 en Overweging 179):<br>
       - Voor AI-modellen in ontwikkeling gelden de verplichtingen voor aanbieders van algemene AI-modellen, zoals taal- of beeldherkenningsmodellen, vanaf 2 augustus 2025.<br>
       - Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.<br><br>"
@@ -1880,7 +1880,7 @@ conclusions:
       - het uitvoeren van een modelevaluatie overeenkomstig gestandaardiseerde protocollen en instrumenten die de stand van de techniek weerspiegelen, met inbegrip van het uitvoeren en documenteren van tests gericht op het ontdekken van kwetsbaarheden van het model met als doel om systeemrisico’s in kaart te brengen en te beperken.<br>
       - het beoordelen en beperken van mogelijke systeemrisico’s op Unieniveau, met inbegrip van de bronnen daarvan, die kunnen voortvloeien uit de ontwikkeling, het in de handel brengen of het gebruik van AI-modellen voor algemene doeleinden met een systeemrisico.<br>
       - het bijhouden, documenteren en onverwijld rapporteren (aan het AI-bureau (en in voorkomende gevallen aan de nationale bevoegde autoriteiten)) van relevante informatie over ernstige incidenten en mogelijke corrigerende maatregelen.<br>
-      - het zorgen voor een passend niveau van cyberbeveiligingsbescherming voor het AI-model voor algemene doeleinden en de fysieke infrastructuur van het model.<br>
+      - het zorgen voor een passend niveau van cyberbeveiligingsbescherming voor het AI-model voor algemene doeleinden en de fysieke infrastructuur van het model.<br><br>
       Geldig vanaf (Artikel 111 en Overweging 179):<br>
       - Voor AI-modellen in ontwikkeling gelden de verplichtingen voor aanbieders van algemene AI-modellen, zoals taal- of beeldherkenningsmodellen, vanaf 2 augustus 2025.<br>
       - Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.<br><br>"
@@ -2083,7 +2083,7 @@ conclusions:
 
 ## COnclusies voor geen rol (15)
   - conclusionId: "11.0"
-    conclusion: "Je hebt geantwoord dat er geen sprake is van een algoritme, hierdoor is de AI verordening niet voor jou van toepassing. Op basis van je antwoorden is het niet nodig om door te gaan naar Stap 2 – bepalen risicogroep. "
+    conclusion: "Je hebt geantwoord dat er geen sprake is van een algoritme, hierdoor is de AI-verordening niet voor jou van toepassing. Op basis van je antwoorden is het niet nodig om door te gaan naar Stap 2 – bepalen risicogroep. "
     obligation: "Houd je aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)."
   - conclusionId: "11.1"
     conclusion: "Het is verboden om dit AI-systeem of model te gebruiken."
@@ -2098,19 +2098,19 @@ conclusions:
       - source: Artikel 2 - Toepassingsgebied
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e1978-1-1
   - conclusionId: "11.3"
-    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat het algoritme niet valt onder de definitie van een AI-systeem of AI-model volgens de AI verordening. Volgens de handreiking algoritmeregister is de toepassing een impactvol algoritme."
+    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat het algoritme niet valt onder de definitie van een AI-systeem of AI-model volgens de AI-verordening. Volgens de handreiking algoritmeregister is de toepassing een impactvol algoritme."
     obligation: "Omdat het een algoritme met impact betreft, dien je in algoritmeregister te publiceren. Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt)."
     sources:
       - source: Handreiking Algoritmeregister
         url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
   - conclusionId: "11.4"
-    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat het algoritme niet valt onder de definitie van een AI-systeem of AI-model volgens de AI verordening. Volgens de handreiking algoritmeregister is de toepassing een impactvol algoritme en val je in de uitzonderingsgrond."
+    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat het algoritme niet valt onder de definitie van een AI-systeem of AI-model volgens de AI-verordening. Volgens de handreiking algoritmeregister is de toepassing een impactvol algoritme en val je in de uitzonderingsgrond."
     obligation: "Je hoeft vanwege uitzonderingsgrond niet te publiceren in het algoritmeregister. Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt)."
     sources:
       - source: Handreiking Algoritmeregister
         url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
   - conclusionId: "11.5"
-    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat het algoritme niet valt onder de definitie van een AI-systeem of AI-model volgens de AI verordening. Volgens de handreiking algoritmeregister is de toepassing geen impactvol algoritme."
+    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat het algoritme niet valt onder de definitie van een AI-systeem of AI-model volgens de AI-verordening. Volgens de handreiking algoritmeregister is de toepassing geen impactvol algoritme."
     obligation: "Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt)."
     sources:
       - source: Handreiking Algoritmeregister
