@@ -91,7 +91,7 @@ function get_background_color(label: string | undefined) {
           ></span>
           {{ title }}
         </h3>
-        <span class="rvo-accordion-teaser">Hier kun je het AI Verordening profiel bekijken dat voor jou van toepassing is</span>
+        <span class="rvo-accordion-teaser">Bekijk hier het AI Verordening profiel dat voor jou van toepassing is</span>
       </summary>
       <div class="rvo-accordion__content">
         <div class="rvo-table--responsive py-5">
