@@ -15,7 +15,7 @@
         <a class="rvo-link" href="mailto:ai-verordening@minbzk.nl">
           ai-verordening@minbzk.nl
         </a> of op de pleio-omgeving <a class="rvo-link" target="_blank" href="https://algoritmes.pleio.nl">
-          https://algoritmes.pleio.nl</a></div>.
+          https://algoritmes.pleio.nl</a>.</div>
     </details>
   </div>
 </template>
