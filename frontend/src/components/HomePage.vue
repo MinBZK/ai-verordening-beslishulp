@@ -37,7 +37,7 @@ const emit = defineEmits(['acceptDisclaimer'])
                   </li>
                   <li>Je doorloopt de beslishulp op basis van je eigen antwoorden. De beslishulp kan niet vaststellen of jouw antwoorden waar zijn of niet.
                   </li>
-                  <li>De beslishulp is geen check op jouw eigen kennis en inzichten en je blijft zelf verantwoordelijk voor de informatie die je gebruikt</li>
+                  <li>De beslishulp is geen check op jouw eigen kennis en inzichten en je blijft zelf verantwoordelijk voor de informatie die je gebruikt.</li>
                   <li>Wij adviseren de uitkomsten van de beslishulp met andere experts in jouw organisatie te delen en te bespreken.</li>
                   <li>De beslisboom is bedoeld voor overheden die AI-systemen
                     aanbieden, of gebruiken onder eigen
@@ -54,7 +54,7 @@ const emit = defineEmits(['acceptDisclaimer'])
                   van de AI-verordening gelinkt per vraag. Definities van termen worden laten zien als je met je muis
                   eroverheen gaat en zijn terug te vinden op het
                   <a class="rvo-link" href="https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/?h=definitie" target="_blank">
-                      Algoritmekader
+                      Algoritmekader.
                   </a>
                   </p>
               </fieldset>
