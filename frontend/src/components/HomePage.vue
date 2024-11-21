@@ -16,7 +16,7 @@ const emit = defineEmits(['acceptDisclaimer'])
       <div class="rvo-form">
         <div class="flex items-center rvo-layout-column rvo-layout-gap--xl">
           <div class="flex justify-center rvo-form-intro inline-flex py-5">
-            <h2 class="flex justify-center utrecht-heading-2">Beslisboom AI-verordening</h2>
+            <h2 class="flex justify-center utrecht-heading-2">Beslishulp AI-verordening</h2>
             <BetaversionLabel />
           </div>
           <div class="rvo-layout-column rvo-layout-gap--md rvo-max-width-layout rvo-max-width-layout--lg">
