@@ -86,7 +86,7 @@ defineEmits(['back'])
       <div class="rvo-alert-text">
         <div>
           <div>
-            Mocht u vragen of opmerkingen hebben naar aanleiding van deze beslisboom, mail dan gerust naar
+            Mocht u vragen of opmerkingen hebben naar aanleiding van deze beslishulp, mail dan gerust naar
             <a href="mailto:ai-verordening@minbzk.nl" class="rvo-link rvo-link--logoblauw">ai-verordening@minbzk.nl</a>
           </div>
         </div>
