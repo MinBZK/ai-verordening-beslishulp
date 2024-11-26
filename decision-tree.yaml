@@ -161,10 +161,8 @@ questions:
         nextConclusionId: "11.2" # Hoeft niet te voldoen aan de AI-vo
       - answer: Nee
         redirects:
-          - nextQuestionId: "2.1"
-            if: '"AI-systeem" in labels || "AI-systeem voor algemene doeleinden" in labels'
-          - nextQuestionId: "2.8"
-            if: '"AI-model voor algemene doeleinden" in labels'
+          - nextQuestionId: "2.0"
+            if: '"AI-systeem" in labels || "AI-systeem voor algemene doeleinden" in labels || "AI-model voor algemene doeleinden" in labels'
           - nextConclusionId: "13.2.1"
             if: '"AI-model voor algemene doeleinden" in labels && "gebruiksverantwoordelijke" in labels'
 
@@ -208,9 +206,20 @@ questions:
           - "impactvol algoritme"
 
 ## Verboden AI ysteem
+  - questionId: "2.0"
+    question: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. We gaan nu bepalen in welke risicogroep het AI-systeem valt. Hiervoor gaan we maximaal 7 vragen langslopen.<br><br>"
+    simplifiedQuestion: "Verboden AI-systeem"
+    category: tussenscherm
+    subcategory: tussenscherm
+    answers:
+      - answer: Volgende vraag
+        redirects:
+            - nextQuestionId: "2.1"
+              if: '"AI-systeem" in labels || "AI-systeem voor algemene doeleinden" in labels'
+            - nextQuestionId: "2.8"
+              if: '"AI-model voor algemene doeleinden" in labels'
   - questionId: "2.1"
-    question: "We gaan nu bepalen in welke risicogroep het AI-systeem valt. Hiervoor gaan we maximaal 7 vragen langslopen.<br><br>
-      Valt de toepassing onder een van de verboden systemen uit Artikel 5 van de AI-verordening?<br>
+    question: "Valt de toepassing onder een van de verboden systemen uit Artikel 5 van de AI-verordening?<br>
      <br>
       -	gebruik kan gaan maken van subliminale technieken om mensen onbewust of bewust kunnen manipuleren, waardoor ze beslissingen nemen die ze anders niet zouden hebben genomen?<br>
       -	gebruik kan gaan maken van kwetsbaarheden van individuen of specifieke groepen, zoals leeftijd, handicaps of sociale/economische omstandigheden, om het gedrag van die personen aanzienlijk te verstoren, wat kan leiden tot aanzienlijke schade bij henzelf of anderen?<br>
@@ -413,6 +422,8 @@ questions:
           - "beoordeling door derde partij"
         nextQuestionId: "2.9" #transparantieverplichting
       - answer: Nee
+        labels:
+          - "niet van toepassing"
         nextQuestionId: "2.9" ##transparantieverplichting
 
 ## Conformiteitsbeoordeling door derde partij bijlage III
@@ -441,6 +452,8 @@ questions:
           - "beoordeling door derde partij"
         nextQuestionId: "2.9" #transparantieverplichting
       - answer: Nee
+        labels:
+          - "niet van toepassing"
         nextQuestionId: "2.9" #transparantieverplichting
 
 # Profilering
@@ -2140,5 +2153,5 @@ conclusions:
       - source: Handreiking Algoritmeregister
         url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
   - conclusionId: "11.6"
-    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat je geen aanbieder, verantwoordelijke voor het gebruik, importeur of distributeur bent. Controleer echter zorgvuldig of een van deze rollen mogelijk toch op jou van toepassing is."
+    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat je geen aanbieder, gebruiksverantwoordelijke, importeur of distributeur bent. Controleer echter zorgvuldig of een van deze rollen mogelijk toch op jou van toepassing is."
     obligation: "Er is geen sprake van een verplichting."
