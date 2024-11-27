@@ -9,3 +9,8 @@ updates:
     directory: "/frontend/"
     schedule:
       interval: weekly
+    ignore:
+      - dependency-name: "typescript"
+      - dependency-name: "@nl-rvo/assets"
+      - dependency-name: "@nl-rvo/component-library-css"
+      - dependency-name: "@nl-rvo/design-tokens"
