@@ -59,24 +59,12 @@ def process_question_or_conclusion(text, term_dict):
 for q in decision_tree.get("questions", []):
     q["question"] = process_question_or_conclusion(q.get("question", ""), term_dict)
 
-    if "description" in q:
-        q["description"] = process_question_or_conclusion(q.get("description", ""), term_dict)
-
-    for a in q.get("answers", []):
-        if "subresult" in a:
-            a["subresult"] = process_question_or_conclusion(a.get("subresult", ""), term_dict)
-
-        if "answerComment" in a:
-            a["answerComment"] = process_question_or_conclusion(a.get("answerComment", ""), term_dict)
-
 # Process conclusions
 for c in decision_tree.get("conclusions", []):
     c["conclusion"] = process_question_or_conclusion(c.get("conclusion", ""), term_dict)
 
     c["obligation"] = process_question_or_conclusion(c.get("obligation", ""), term_dict)
 
-    if "conclusionComment" in c:
-        c["conclusionComment"] = process_question_or_conclusion(c.get("conclusionComment", ""), term_dict)
 
 # Save the modified decision_tree back to a YAML file
 with open("frontend/src/assets/decision-tree.json", "w+") as file:
