@@ -95,7 +95,7 @@ questions:
 
 # AI-systeem
   - questionId: "1.5"
-    question: "Hoe zou je jouw (beoogde) toepassing classificeren, gezien de volgende definities: een AI-systeem, een AI-systeem voor algemene doeleinden, of een AI-model voor algemene doeleinden?<br>
+    question: "Hoe zou je jouw (beoogde) toepassing classificeren, gezien de volgende definities: een AI-systeem, een AI-systeem voor algemene doeleinden, of een AI-model voor algemene doeleinden?<br><br>
       - AI-systeem: Een machine-gebaseerd systeem dat autonoom werkt, zichzelf kan aanpassen na inzet, en output levert zoals voorspellingen, inhoud, aanbevelingen of beslissingen. Deze output kan fysieke of virtuele omgevingen beïnvloeden. AI-systemen gebruiken inferentie, waarbij modellen of algoritmen worden afgeleid uit data, en combineren technieken als machinaal leren, logica en kennisrepresentatie.<br>
       - AI-model voor algemene doeleinden: Een flexibel AI-model, zoals een generatief model, dat ingezet kan worden voor meerdere taken zoals tekst, beeld, audio of video en gemakkelijk integreerbaar is in andere systemen.<br>
       - AI-systeem voor algemene doeleinden: Een systeem dat een AI-model voor algemene doeleinden bevat en breed inzetbaar is, zowel direct als via integratie in andere systemen."
@@ -161,10 +161,8 @@ questions:
         nextConclusionId: "11.2" # Hoeft niet te voldoen aan de AI-vo
       - answer: Nee
         redirects:
-          - nextQuestionId: "2.1"
-            if: '"AI-systeem" in labels || "AI-systeem voor algemene doeleinden" in labels'
-          - nextQuestionId: "2.8"
-            if: '"AI-model voor algemene doeleinden" in labels'
+          - nextQuestionId: "2.0"
+            if: '"AI-systeem" in labels || "AI-systeem voor algemene doeleinden" in labels || "AI-model voor algemene doeleinden" in labels'
           - nextConclusionId: "13.2.1"
             if: '"AI-model voor algemene doeleinden" in labels && "gebruiksverantwoordelijke" in labels'
 
@@ -208,10 +206,20 @@ questions:
           - "impactvol algoritme"
 
 ## Verboden AI ysteem
+  - questionId: "2.0"
+    question: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. We gaan nu bepalen in welke risicogroep het AI-systeem valt. Hiervoor gaan we maximaal 7 vragen langslopen.<br><br>"
+    simplifiedQuestion: "Tussenscherm"
+    category: tussenscherm
+    subcategory: tussenscherm
+    answers:
+      - answer: Naar risicogroep bepaling
+        redirects:
+            - nextQuestionId: "2.1"
+              if: '"AI-systeem" in labels || "AI-systeem voor algemene doeleinden" in labels'
+            - nextQuestionId: "2.8"
+              if: '"AI-model voor algemene doeleinden" in labels'
   - questionId: "2.1"
-    question: "We gaan nu bepalen in welke risicogroep het AI-systeem valt. Hiervoor gaan we maximaal 7 vragen langslopen.<br><br>
-      Valt de toepassing onder een van de verboden systemen uit Artikel 5 van de AI-verordening?<br>
-     <br>
+    question: "Valt de toepassing onder een van de verboden systemen uit Artikel 5 van de AI-verordening?<br><br>
       -	gebruik kan gaan maken van subliminale technieken om mensen onbewust of bewust kunnen manipuleren, waardoor ze beslissingen nemen die ze anders niet zouden hebben genomen?<br>
       -	gebruik kan gaan maken van kwetsbaarheden van individuen of specifieke groepen, zoals leeftijd, handicaps of sociale/economische omstandigheden, om het gedrag van die personen aanzienlijk te verstoren, wat kan leiden tot aanzienlijke schade bij henzelf of anderen?<br>
       -	gebruikt kan worden om natuurlijke personen of groepen gedurende een periode te evalueren of te classificeren op basis van hun sociale gedrag of afgeleide persoonlijke kenmerken?<br>
@@ -236,8 +244,7 @@ questions:
 
 # Uitzondering verboden AI
   - questionId: "2.2"
-    question: "Is er sprake van een van de twee uitzonderingen voor verboden systemen?<br>
-     <br>
+    question: "Is er sprake van een van de twee uitzonderingen voor verboden systemen?<br><br>
       -	Er is sprake van een rechtshandhavingsactiviteit i.v.m. een specifiek misdrijf (terrorisme, mensenhandel, seksuele uitbuiting van kinderen en materiaal over seksueel misbruik van kinderen, illegale handel in verdovende middelen en psychotrope stoffen, illegale handel in wapens, munitie en explosieven, moord, zware mishandeling, illegale handel in menselijke organen en weefsels, illegale handel in nucleaire en radioactieve stoffen, ontvoering, wederrechtelijke vrijheidsberoving en gijzeling, misdrijven die onder de rechtsmacht van het Internationaal Strafhof vallen, kaping van vliegtuigen/schepen, verkrachting, milieucriminaliteit, georganiseerde of gewapende diefstal, sabotage, deelneming aan een criminele organisatie die betrokken is bij een of meer van de bovengenoemde misdrijven).<br>
       -	Er is sprake van gerichte opsporing van specifieke slachtoffers, ontvoering, mensenhandel en seksuele uitbuiting van mensen, vermiste personen; of het voorkomen van bedreigingen voor het leven of de fysieke veiligheid van personen of het reageren op de huidige of voorzienbare dreiging van een terreuraanslag."
     simplifiedQuestion: "Uitzondering Verboden AI-systeem"
@@ -366,8 +373,8 @@ questions:
 
 ## Conformiteitsbeoordeling door derde partij bijlage IA
   - questionId: "2.4.1"
-    question: "We gaan nu bepalen of het verplicht is om de conformiteitsbeoordeling door een derde partij, namelijk een conformiteitsbeoordelingsinstantie, uit te laten voeren.<br>
-      Is jouw AI-systeem bedoeld voor gebruik door:<br>
+    question: "We gaan nu bepalen of het verplicht is om de conformiteitsbeoordeling door een derde partij, namelijk een conformiteitsbeoordelingsinstantie, uit te laten voeren.<br><br>
+      Is jouw AI-systeem bedoeld voor gebruik door:<br><br>
       - Rechtshandhavingsinstanties?<br>
       - Immigratie- of asielautoriteiten?<br>
       - Instellingen, organen of instanties van de EU?<br><br>
@@ -413,17 +420,19 @@ questions:
           - "beoordeling door derde partij"
         nextQuestionId: "2.9" #transparantieverplichting
       - answer: Nee
+        labels:
+          - "niet van toepassing"
         nextQuestionId: "2.9" ##transparantieverplichting
 
 ## Conformiteitsbeoordeling door derde partij bijlage III
   - questionId: "2.4.2"
     question: "We gaan nu bepalen of het verplicht is om de conformiteitsbeoordeling door een derde partij, namelijk een conformiteitsbeoordelingsinstantie, uit te laten voeren.<br>
-      Is het een toepassing voor biometrische identificatie en categorisering (bijlage III punt 1) EN is een van deze situaties van toepassing:<br>
+      Is het een toepassing voor biometrische identificatie en categorisering (bijlage III punt 1) EN is een van deze situaties van toepassing:<br><br>
       - Bestaan er geen geharmoniseerde normen of gemeenschappelijke specificaties?<br>
       - Heb je de geharmoniseerde norm niet of slechts gedeeltelijk toegepast?<br>
       - Bestaan er wel gemeenschappelijke specificaties maar heb je deze niet toegepast?<br>
       - Zijn er geharmoniseerde normen met beperkingen bekendgemaakt?<br><br>
-      Of is jouw toepassing bedoeld voor gebruik door:<br>
+      Of is jouw toepassing bedoeld voor gebruik door:<br><br>
       - Rechtshandhavingsinstanties?<br>
       - Immigratie- of asielautoriteiten?<br>
       - Instellingen, organen of instanties van de EU?<br>"
@@ -441,6 +450,8 @@ questions:
           - "beoordeling door derde partij"
         nextQuestionId: "2.9" #transparantieverplichting
       - answer: Nee
+        labels:
+          - "niet van toepassing"
         nextQuestionId: "2.9" #transparantieverplichting
 
 # Profilering
@@ -475,7 +486,7 @@ questions:
 # Hoog risico bijlage III
   - questionId: "2.6"
     question: "We gaan nu bepalen of het AI-systeem onder een van de hoog-risico systemen uit Bijlage III van de AI-verordening valt. Betreft het een AI-systeem op een van de volgende gebieden?<br>
-      Beweeg je muis over de opties om te zien welke systemen hieronder vallen.<br>
+      Beweeg je muis over de opties om te zien welke systemen hieronder vallen.<br><br>
       -	biometrie<br>
       -	kritieke infrastructuur<br>
       -	onderwijs en beroepsopleiding<br>
@@ -512,7 +523,7 @@ questions:
 # Uitzondering
   - questionId: "2.7"
     question: "We gaan nu bepalen of er sprake is van een uitzondering op de lijst van hoog-risico AI systemen.<br>
-      Betreft het een AI-systeem dat is bedoeld voor een van de volgende doeleinden?<br>
+      Betreft het een AI-systeem dat is bedoeld voor een van de volgende doeleinden?<br><br>
       -	Het uitvoeren van een beperkte procedurele taak waarbij er geen significant risico is op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?
       -	Het verbeteren van het resultaat van een eerder voltooide menselijke activiteit en waarbij er geen significant risico is op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?
       -	Het opsporen van besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen en waarbij het niet bedoeld is om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?
@@ -556,8 +567,7 @@ questions:
 ## Systeemrisico van het gebruike AI-model voor algemene doeleinden
   - questionId: "2.8"
     question: "We gaan nu bepalen of er sprake is van een systeemrisico.<br>
-      Is er in het gebruikte AI-model sprake van een cumulatieve hoeveelheid rekenkracht van FLOPs groter dan 10^25?<br>
-
+      Is er in het gebruikte AI-model sprake van een cumulatieve hoeveelheid rekenkracht van FLOPs groter dan 10^25?<br><br>
       -	FLOPs zijn floating point operations per second.<br>
       -	FLOPs is een eenheid die wordt gebruikt om de rekenkracht van CPU’s aan te duiden.<br>
       -	CPUs zijn Central Processing Units.<br>
@@ -591,7 +601,7 @@ questions:
 ## Transparantieverplichting
   - questionId: "2.9"
     question: "We gaan nu bepalen of het AI-systeem onder de transparantieverplichtingen van Artikel 50 valt.<br>
-      Is er sprake van een AI-systeem dat:<br>
+      Is er sprake van een AI-systeem dat:<br><br>
       -	direct communiceert met mensen (zoals chatbots)?<br>
       -	synthetische afbeeldingen, audio, video of tekst content genereert en manipuleert? Bijvoorbeeld een deepfake.<br>
       -	aan emotieherkenning of biometrische categorisatie doet?<br>"
@@ -2140,5 +2150,5 @@ conclusions:
       - source: Handreiking Algoritmeregister
         url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
   - conclusionId: "11.6"
-    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat je geen aanbieder, verantwoordelijke voor het gebruik, importeur of distributeur bent. Controleer echter zorgvuldig of een van deze rollen mogelijk toch op jou van toepassing is."
+    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat je geen aanbieder, gebruiksverantwoordelijke, importeur of distributeur bent. Controleer echter zorgvuldig of een van deze rollen mogelijk toch op jou van toepassing is."
     obligation: "Er is geen sprake van een verplichting."
