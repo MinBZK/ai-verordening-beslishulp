@@ -11,7 +11,7 @@ concurrency:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: "minbzk/ai-act-beslishulp"
+  IMAGE_NAME: "minbzk/ai-verordening-beslishulp"
 
 jobs:
   build:

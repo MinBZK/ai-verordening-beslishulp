@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/MinBZK/AI-act-beslishulp/main/schemas/base.schema",
+  "$id": "https://raw.githubusercontent.com/MinBZK/ai-verordening-beslishulp/main/schemas/base.schema",
   "title": "Decision tree schema",
   "description": "Decision tree schema",
   "type": "object",
