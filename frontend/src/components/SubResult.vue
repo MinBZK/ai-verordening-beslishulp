@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import BetaversionLabel from '@/components/betaversion-label.vue'
+import { computed } from 'vue'
 
 interface Props {
   category: string | undefined
@@ -7,8 +8,9 @@ interface Props {
   title: string
   conclusion: string
 }
+type FilteredLabels = { [category: string]: string[] }
 
-defineProps<Props>()
+const props = defineProps<Props>()
 
 function get_background_color(label: string | undefined) {
   if (label === 'nader te bepalen' || label === 'niet van toepassing') {
@@ -16,6 +18,46 @@ function get_background_color(label: string | undefined) {
   }
   return 'background-color: var(--rvo-color-hemelblauw-450)'
 }
+
+const filteredLabels = computed<FilteredLabels>(() => {
+  const filtered: FilteredLabels = {}
+
+  if (!props.labels || typeof props.labels !== 'object') {
+    return filtered
+  }
+
+  const entries = Array.isArray(props.labels)
+    ? props.labels
+    : Object.entries(props.labels).map(([category, assigned_labels]) => ({
+        category,
+        assigned_labels
+      }))
+
+  entries.forEach((item) => {
+    if (item.assigned_labels && typeof item.assigned_labels === 'string') {
+      const validLabels = item.assigned_labels.split(',').filter(label =>
+        label !== 'niet van toepassing' &&
+        label !== 'nader te bepalen'
+      )
+
+      if (validLabels.length > 0) {
+        filtered[item.category] = validLabels
+      }
+    } else if (Array.isArray(item.assigned_labels)) {
+      const validLabels = item.assigned_labels.filter(label =>
+        label !== 'niet van toepassing' &&
+        label !== 'nader te bepalen'
+      )
+
+      if (validLabels.length > 0) {
+        filtered[item.category] = validLabels
+      }
+    }
+  })
+
+  return filtered
+})
+
 
 </script>
 
@@ -56,10 +98,10 @@ function get_background_color(label: string | undefined) {
             </tr>
             </thead>
             <tbody class="rvo-table-body">
-            <tr v-for='(assigned_labels, category) in labels' :key="category" class="rvo-table-row">
+            <tr v-for='(assigned_labels, category) in filteredLabels' :key="category" class="rvo-table-row">
               <td class="rvo-table-cell rvo-text--bold rvo-text--md">{{ category }}</td>
               <td class="flex rvo-table-cell gap-x-3">
-                <div v-for='(label) in assigned_labels' :key="label"
+               <div v-for='(label) in assigned_labels' :key="label"
                      class="rvo-tag rvo-tag--default" :style="get_background_color(label)">
                   {{ label }}
                 </div>
@@ -108,7 +150,7 @@ function get_background_color(label: string | undefined) {
             </tr>
             </thead>
             <tbody class="rvo-table-body">
-            <tr v-for='(assigned_labels, category) in labels' :key="category" class="rvo-table-row">
+            <tr v-for='(assigned_labels, category) in filteredLabels' :key="category" class="rvo-table-row">
               <td class="rvo-table-cell rvo-text--bold rvo-text--md">{{ category }}</td>
               <td class="flex rvo-table-cell gap-x-3">
                 <div v-for='(label) in assigned_labels' :key="label"
