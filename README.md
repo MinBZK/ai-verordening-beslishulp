@@ -10,9 +10,9 @@
 
 Voor vragen of opmerkingen over de beslishulp mail je naar: [ai-verordening@minbzk.nl](mailto::ai-verordening@minbzk.nl).
 
-# AI-act-beslishulp
+# AI-Verordening-Beslishulp
 
-[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/MinBZK/ai-act-decisiontree/main.svg?badge_token=d3dKEK97RwC1II15_W-nng)](https://results.pre-commit.ci/latest/github/MinBZK/ai-act-decisiontree/main?badge_token=d3dKEK97RwC1II15_W-nng)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/MinBZK/ai-verordening-beslishulp/main.svg?badge_token=d3dKEK97RwC1II15_W-nng)](https://results.pre-commit.ci/latest/github/MinBZK/ai-verordening-beslishulp/main?badge_token=d3dKEK97RwC1II15_W-nng)
 
 Deze git repository bevat de beslishulp op basis van de AI Verordening.
 Het AI-validatie Team heeft deze tool ontwikkeld, maar is niet verantwoordelijk voor de juridische inhoud van de beslishulp. Voor meer informatie over het AI Validatie Team, bezoek de [site van het AI-validatieteam](https://minbzk.github.io/ai-validation/). Voor vragen over de juridische inhoud, neem contact op met de experts via ai-verordening@minbzk.nl.
@@ -22,7 +22,7 @@ Het project omvat de volgende 2 onderdelen:
 1. De beslishulp: [decision-tree.yaml](decision-tree.yaml)
 2. Een frontend voor de visualisatie van de beslishulp: [frontend](frontend/)
 
-De Kubernetes deployment code staat bij  [infra](https://github.com/MinBZK/ai-validation-infra/apps/ai-act-beslishulp)
+De Kubernetes deployment code staat bij  [infra](https://github.com/MinBZK/ai-validation-infra/apps/ai-verordening-beslishulp)
 
 Door deze beslishulp te doorlopen, krijgt uw organisatie inzicht in de volgende vragen:
 
@@ -82,7 +82,7 @@ Naast de beslishulp is er ook een [definitions.yaml](definitions.yaml) bestand. 
 
 De beslishulp is schematisch weergegeven verschillende diagrammen:
 
-1. [een doorklikbaar diagram](https://minbzk.github.io/ai-act-decisiontree/mermaid_graphs/decision-tree-main.html): in dit diagram is de beslishulp op een versimpelde manier weergeven. Dit diagram bevat de volgende componenten:
+1. [een doorklikbaar diagram](https://minbzk.github.io/ai-verordening-beslishulp/mermaid_graphs/decision-tree-main.html): in dit diagram is de beslishulp op een versimpelde manier weergeven. Dit diagram bevat de volgende componenten:
 
     - donkerblauwe rechthoeken: dit zijn doorklikbare componenten die doorverwijzen naar een volgende categorie uit de beslishulp.
     - lichtblauwe rechthoeken: dit zijn de 'labels' uit de beslishulp. De labels geven de karakteristieken die u door de beslishulp te doorlopen kunt verzamelen weer.
@@ -91,14 +91,14 @@ De beslishulp is schematisch weergegeven verschillende diagrammen:
 
     U kunt terug naar het vorige diagram door de vorige pagina-knop in uw browser te gebruiken.
 
-2. een [overzichtsdiagram](https://minbzk.github.io/ai-act-decisiontree/mermaid_graphs/decision-tree-complete.html): in dit diagram is de gehele beslishulp gevat. Dit diagram is niet doorklikbaar. De vragen zijn gegroepeerd categorieen, weergeven in witte rechthoeken met groene randen.
+2. een [overzichtsdiagram](https://minbzk.github.io/ai-verordening-beslishulp/mermaid_graphs/decision-tree-complete.html): in dit diagram is de gehele beslishulp gevat. Dit diagram is niet doorklikbaar. De vragen zijn gegroepeerd categorieen, weergeven in witte rechthoeken met groene randen.
 
 Let op: de diagrammen kunnen het beste in Chrome, Safari of Microsoft Edge worden geopend.
 
 
 ## Frontend
 
-Om door de beslishulp te lopen is een visualizatie tool gemaakt. Met deze tool kunt u door de vragen lopen. De frontend is beschikbaar op deze [website](https://ai-act-decisiontree.apps.digilab.network).
+Om door de beslishulp te lopen is een visualizatie tool gemaakt. Met deze tool kunt u door de vragen lopen. De frontend is beschikbaar op deze [website](https://ai-verordening-beslishulp.apps.digilab.network).
 
 ### Frontend lokaal draaien
 

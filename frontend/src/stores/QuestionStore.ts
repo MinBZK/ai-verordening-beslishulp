@@ -70,7 +70,7 @@ export const useQuestionStore = defineStore('question', () => {
   function updateLabelsAtConclusion() {
     /**
      * This function will change all the "nader te bepalen" labels to "niet van toepassing" when
-     * the conclusion of the decision tree has been reached.
+     * the conclusion of the beslishulp has been reached.
      */
     for (let key in LabelsBySubCategory.value) {
       if (JSON.stringify(LabelsBySubCategory.value[key]) === JSON.stringify(['nader te bepalen'])) {

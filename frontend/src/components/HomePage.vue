@@ -39,11 +39,11 @@ const emit = defineEmits(['acceptDisclaimer'])
                   </li>
                   <li>De beslishulp is geen check op jouw eigen kennis en inzichten en je blijft zelf verantwoordelijk voor de informatie die je gebruikt.</li>
                   <li>Wij adviseren de uitkomsten van de beslishulp met andere experts in jouw organisatie te delen en te bespreken.</li>
-                  <li>De beslisboom is bedoeld voor overheden die AI-systemen
+                  <li>De beslishulp is bedoeld voor overheden die AI-systemen
                     aanbieden, of gebruiken onder eigen
                     verantwoordelijkheid.
                   </li>
-                  <li> Voor vragen of opmerkingen over de beslisboom mail je naar:
+                  <li> Voor vragen of opmerkingen over de beslishulp mail je naar:
                     <a
                       class="rvo-link" href="mailto:ai-verordening@minbzk.nl">
                       ai-verordening@minbzk.nl</a>.
