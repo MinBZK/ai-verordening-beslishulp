@@ -374,11 +374,17 @@ questions:
 ## Conformiteitsbeoordeling door derde partij bijlage IA
   - questionId: "2.4.1"
     question: "We gaan nu bepalen of het verplicht is om de conformiteitsbeoordeling door een derde partij, namelijk een conformiteitsbeoordelingsinstantie, uit te laten voeren.<br><br>
-      Is jouw AI-systeem bedoeld voor gebruik door:<br><br>
-      - Rechtshandhavingsinstanties?<br>
-      - Immigratie- of asielautoriteiten?<br>
-      - Instellingen, organen of instanties van de EU?<br><br>
-      Of: Vereist dit product volgens de EU harmonisatiewegeving een conformiteitsbeoordeling door een derde partij?"
+      Dit is het geval als één van deze situaties van toepassing is: <br><br>
+      Situatie 1: <br>
+      Is jouw AI-systeem bedoeld voor gebruik door:<br>
+        - Rechtshandhavingsinstanties?<br>
+        - Immigratie- of asielautoriteiten?<br>
+        - Instellingen, organen of instanties van de EU?<br><br>
+
+      Situatie 2: <br>
+      Vereist dit product volgens de EU harmonisatiewegeving een conformiteitsbeoordeling door een derde partij?<br><br>
+
+      Antwoord met 'Ja' als één van deze twee situaties van toepassing is."
     simplifiedQuestion: "Conformiteitsbeoordeling Bijlage 1A"
     category: risicogroep
     subcategory: conformiteitsbeoordelingsinstanties
@@ -426,16 +432,22 @@ questions:
 
 ## Conformiteitsbeoordeling door derde partij bijlage III
   - questionId: "2.4.2"
-    question: "We gaan nu bepalen of het verplicht is om de conformiteitsbeoordeling door een derde partij, namelijk een conformiteitsbeoordelingsinstantie, uit te laten voeren.<br>
-      Is het een toepassing voor biometrische identificatie en categorisering (bijlage III punt 1) EN is een van deze situaties van toepassing:<br><br>
+    question: "We gaan nu bepalen of het verplicht is om de conformiteitsbeoordeling door een derde partij, namelijk een conformiteitsbeoordelingsinstantie, uit te laten voeren.<br><br>
+      Dit is het geval als één van deze twee situaties van toepassing is: <br><br>
+      Situatie 1:<br>
+      Is het een toepassing voor biometrische identificatie en categorisering (bijlage III punt 1) <br>
+      EN is een van deze punten van toepassing:<br>
       - Bestaan er geen geharmoniseerde normen of gemeenschappelijke specificaties?<br>
       - Heb je de geharmoniseerde norm niet of slechts gedeeltelijk toegepast?<br>
       - Bestaan er wel gemeenschappelijke specificaties maar heb je deze niet toegepast?<br>
       - Zijn er geharmoniseerde normen met beperkingen bekendgemaakt?<br><br>
-      Of is jouw toepassing bedoeld voor gebruik door:<br><br>
+
+      Situatie 2: <br>
+      Of is jouw toepassing bedoeld voor gebruik door:<br>
       - Rechtshandhavingsinstanties?<br>
       - Immigratie- of asielautoriteiten?<br>
-      - Instellingen, organen of instanties van de EU?<br>"
+      - Instellingen, organen of instanties van de EU?<br><br>
+      Antwoord met 'Ja' als één van deze twee situaties van toepassing is."
     simplifiedQuestion: "Conformiteitsbeoordeling Bijlage III"
     category: risicogroep
     subcategory: conformiteitsbeoordelingsinstanties
@@ -498,7 +510,7 @@ questions:
     category: risicogroep
     subcategory: risicogroep
     sources:
-      - source: Bijlage III - In artikel 6, lid 2, bedoelde AI-systemen met een hoog risico
+      - source: Bijlage III - In Artikel 6, lid 2, bedoelde AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e38-127-1
       - source: Artikel 6 (lid 3) - Classificatieregels voor AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2986-1-1
@@ -750,9 +762,9 @@ conclusions:
           - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2<br>
           - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres<br>
           - aanbieders beschikken over een systeem voor kwaliteitsbeheer dat in overeenstemming is met Artikel 17 (systeem voor kwaliteitsbeheer)<br>
-          - aanbieders bewaren de in artikel 18 (bewaring van documentatie) bedoelde documentatie<br>
-          - aanbieders bewaren de in artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben<br>
-          - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld<br>
+          - aanbieders bewaren de in Artikel 18 (bewaring van documentatie) bedoelde documentatie<br>
+          - aanbieders bewaren de in Artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben<br>
+          - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in Artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld<br>
           - aanbieders stellen een EU-conformiteitsverklaring op, in overeenstemming met Artikel 47. In het geval van het label 'beoordeling door derde partij' dient de uitvoering door een conformiteitsbeoordelingsinstantie te worden verzorgd.<br>
           - aanbieders brengen de CE-markering aan op het Ai-systeem met een hoog risico of, waneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, om aan te geven dat aan deze verordening is voldaan, overeenkomstig Artikel 48<br>
           - aanbieders leven de registratieverplichtingen als bedoeld in Artikel 49 lid 1, na<br>
@@ -809,9 +821,9 @@ conclusions:
           - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2<br>
           - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres<br>
           - aanbieders beschikken over een systeem voor kwaliteitsbeheer dat in overeenstemming is met Artikel 17 (systeem voor kwaliteitsbeheer)<br>
-          - aanbieders bewaren de in artikel 18 (bewaring van documentatie) bedoelde documentatie<br>
-          - aanbieders bewaren de in artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben<br>
-          - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld<br>
+          - aanbieders bewaren de in Artikel 18 (bewaring van documentatie) bedoelde documentatie<br>
+          - aanbieders bewaren de in Artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben<br>
+          - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in Artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld<br>
           - aanbieders stellen een EU-conformiteitsverklaring op, in overeenstemming met Artikel 47. In het geval van het label 'beoordeling door derde partij' dient de uitvoering door een conformiteitsbeoordelingsinstantie te worden verzorgd.<br>
           - aanbieders brengen de CE-markering aan op het Ai-systeem met een hoog risico of, waneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, om aan te geven dat aan deze verordening is voldaan, overeenkomstig Artikel 48<br>
           - aanbieders leven de registratieverplichtingen als bedoeld in Artikel 49 lid 1, na<br>
@@ -900,9 +912,9 @@ conclusions:
           - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2<br>
           - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres<br>
           - aanbieders beschikken over een systeem voor kwaliteitsbeheer dat in overeenstemming is met Artikel 17 (systeem voor kwaliteitsbeheer)<br>
-          - aanbieders bewaren de in artikel 18 (bewaring van documentatie) bedoelde documentatie<br>
-          - aanbieders bewaren de in artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben<br>
-          - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld<br>
+          - aanbieders bewaren de in Artikel 18 (bewaring van documentatie) bedoelde documentatie<br>
+          - aanbieders bewaren de in Artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben<br>
+          - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in Artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld<br>
           - aanbieders stellen een EU-conformiteitsverklaring op, in overeenstemming met Artikel 47. In het geval van het label 'beoordeling door derde partij' dient de uitvoering door een conformiteitsbeoordelingsinstantie te worden verzorgd.<br>
           - aanbieders brengen de CE-markering aan op het Ai-systeem met een hoog risico of, waneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, om aan te geven dat aan deze verordening is voldaan, overeenkomstig Artikel 48<br>
           - aanbieders leven de registratieverplichtingen als bedoeld in Artikel 49 lid 1, na<br>
@@ -973,9 +985,9 @@ conclusions:
           - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2<br>
           - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres<br>
           - aanbieders beschikken over een systeem voor kwaliteitsbeheer dat in overeenstemming is met Artikel 17 (systeem voor kwaliteitsbeheer)<br>
-          - aanbieders bewaren de in artikel 18 (bewaring van documentatie) bedoelde documentatie<br>
-          - aanbieders bewaren de in artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben<br>
-          - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld<br>
+          - aanbieders bewaren de in Artikel 18 (bewaring van documentatie) bedoelde documentatie<br>
+          - aanbieders bewaren de in Artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben<br>
+          - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in Artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld<br>
           - aanbieders stellen een EU-conformiteitsverklaring op, in overeenstemming met Artikel 47. In het geval van het label 'beoordeling door derde partij' dient de uitvoering door een conformiteitsbeoordelingsinstantie te worden verzorgd.<br>
           - aanbieders brengen de CE-markering aan op het Ai-systeem met een hoog risico of, waneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, om aan te geven dat aan deze verordening is voldaan, overeenkomstig Artikel 48<br>
           - aanbieders leven de registratieverplichtingen als bedoeld in Artikel 49 lid 1, na<br>
@@ -1199,11 +1211,11 @@ conclusions:
         - het nemen van passende technische en organisatorische maatregelen om te waarborgen dat dergelijke systemen in overeenstemming met de gebruiksaanwijzingen die bij de systemen zijn gevoegd worden gebruikt<br>
         - het opdragen van menselijk toezicht aan natuurlijke personen die over de nodige bekwaamheid, opleiding en autoriteit beschikken en de nodige ondersteuning krijgen<br>
         - het ervoor zorgen dat, voor zover de gebruikersverantwoordelijke controle heeft over de inputdata, de inputdata relevant en voldoende representatief zijn voor het beoogde doel van het AI-systeem met een hoog risico<br>
-        - het monitoren van de werking van het AI-systeem met een hoog risico op basis van de gebruiksaanwijzingen en in voorkomend geval het in kennis stellen van de aanbieders overeenkomstig artikel 72.<br>
+        - het monitoren van de werking van het AI-systeem met een hoog risico op basis van de gebruiksaanwijzingen en in voorkomend geval het in kennis stellen van de aanbieders overeenkomstig Artikel 72.<br>
         - het bewaren van de logs die automatisch worden gegenereerd door dat AI-systeem met een hoog risico voor zover dergelijke logs onder controle van de gebruiksverantwoordelijke vallen gedurende een periode die passend is voor het beoogde doel van het AI-systeem met een hoog risico, of ten minste zes maanden<br>
         - voordat een AI-systeem met een hoog risico op de werkplek in gebruik wordt gesteld of wordt gebruikt, delen gebruiksverantwoordelijken die werkgever zijn werknemersvertegenwoordigers en de betrokken werknemers mee dat zij zullen worden onderworpen aan het gebruik van het AI-systeem met een hoog risico<br>
-        - gebruiksverantwoordelijken van AI-systemen met een hoog risico die de hoedanigheid van overheidsinstanties of instellingen, organen of instanties van de Unie hebben, leven de in artikel 49 bedoelde registratieverplichtingen na. Wanneer deze gebruiksverantwoordelijke vaststellen dat het AI-systeem met een hoog risico dat zij voornemens zijn te gebruiken niet in de in artikel 71 bedoelde EU-databank is geregistreerd, gebruiken zij dat systeem niet en stellen zij de aanbieder of de distributeur daarvan in kennis<br>
-        - indien van toepassing, gebruiken gebruiksverantwoordelijken van AI-systemen met een hoog risico de informatie die op grond van artikel 13 van deze verordening wordt verstrekt om hun verplichting na te komen om een gegevensbeschermingseffectbeoordeling uit te voeren<br>
+        - gebruiksverantwoordelijken van AI-systemen met een hoog risico die de hoedanigheid van overheidsinstanties of instellingen, organen of instanties van de Unie hebben, leven de in Artikel 49 bedoelde registratieverplichtingen na. Wanneer deze gebruiksverantwoordelijke vaststellen dat het AI-systeem met een hoog risico dat zij voornemens zijn te gebruiken niet in de in Artikel 71 bedoelde EU-databank is geregistreerd, gebruiken zij dat systeem niet en stellen zij de aanbieder of de distributeur daarvan in kennis<br>
+        - indien van toepassing, gebruiken gebruiksverantwoordelijken van AI-systemen met een hoog risico de informatie die op grond van Artikel 13 van deze verordening wordt verstrekt om hun verplichting na te komen om een gegevensbeschermingseffectbeoordeling uit te voeren<br>
         - de gebruiksverantwoordelijke van een AI-systeem met een hoog risico voor biometrische identificatie op afstand verzoekt achteraf in het kader van een onderzoek waarbij gericht wordt gezocht naar een persoon die wordt verdacht van of veroordeeld is voor het plegen van een strafbaar feit, vooraf of zonder onnodige vertraging en uiterlijk 48 uur na het feit, om toestemming van een gerechtelijke instantie of administratieve instantie, van wie de beslissing bindend is en onderworpen is aan rechterlijke toetsing, voor het gebruik van dat systeem, behalve wanneer het wordt gebruikt voor de initiële identificatie van een potentiële verdachte op basis van objectieve en verifieerbare feiten die rechtstreeks verband houden met het strafbare feit. Elk gebruik wordt beperkt tot hetgeen strikt noodzakelijk is voor het onderzoek naar een specifiek strafbaar feit<br>
         - gebruiksverantwoordelijken van in bijlage III bedoelde AI-systemen met een hoog risico die beslissingen met betrekking tot natuurlijke personen nemen of helpen nemen, informeren de natuurlijke personen dat het AI-systeem met een hoog risico op hen wordt toegepast.<br>
         - gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.<br>
@@ -1243,11 +1255,11 @@ conclusions:
         - het nemen van passende technische en organisatorische maatregelen om te waarborgen dat dergelijke systemen in overeenstemming met de gebruiksaanwijzingen die bij de systemen zijn gevoegd worden gebruikt<br>
         - het opdragen van menselijk toezicht aan natuurlijke personen die over de nodige bekwaamheid, opleiding en autoriteit beschikken en de nodige ondersteuning krijgen<br>
         - het ervoor zorgen dat, voor zover de gebruikersverantwoordelijke controle heeft over de inputdata, de inputdata relevant en voldoende representatief zijn voor het beoogde doel van het AI-systeem met een hoog risico<br>
-        - het monitoren van de werking van het AI-systeem met een hoog risico op basis van de gebruiksaanwijzingen en in voorkomend geval het in kennis stellen van de aanbieders overeenkomstig artikel 72.<br>
+        - het monitoren van de werking van het AI-systeem met een hoog risico op basis van de gebruiksaanwijzingen en in voorkomend geval het in kennis stellen van de aanbieders overeenkomstig Artikel 72.<br>
         - het bewaren van de logs die automatisch worden gegenereerd door dat AI-systeem met een hoog risico voor zover dergelijke logs onder controle van de gebruiksverantwoordelijke vallen gedurende een periode die passend is voor het beoogde doel van het AI-systeem met een hoog risico, of ten minste zes maanden<br>
         - voordat een AI-systeem met een hoog risico op de werkplek in gebruik wordt gesteld of wordt gebruikt, delen gebruiksverantwoordelijken die werkgever zijn werknemersvertegenwoordigers en de betrokken werknemers mee dat zij zullen worden onderworpen aan het gebruik van het AI-systeem met een hoog risico<br>
-        - gebruiksverantwoordelijken van AI-systemen met een hoog risico die de hoedanigheid van overheidsinstanties of instellingen, organen of instanties van de Unie hebben, leven de in artikel 49 bedoelde registratieverplichtingen na. Wanneer deze gebruiksverantwoordelijke vaststellen dat het AI-systeem met een hoog risico dat zij voornemens zijn te gebruiken niet in de in artikel 71 bedoelde EU-databank is geregistreerd, gebruiken zij dat systeem niet en stellen zij de aanbieder of de distributeur daarvan in kennis<br>
-        - indien van toepassing, gebruiken gebruiksverantwoordelijken van AI-systemen met een hoog risico de informatie die op grond van artikel 13 van deze verordening wordt verstrekt om hun verplichting na te komen om een gegevensbeschermingseffectbeoordeling uit te voeren<br>
+        - gebruiksverantwoordelijken van AI-systemen met een hoog risico die de hoedanigheid van overheidsinstanties of instellingen, organen of instanties van de Unie hebben, leven de in Artikel 49 bedoelde registratieverplichtingen na. Wanneer deze gebruiksverantwoordelijke vaststellen dat het AI-systeem met een hoog risico dat zij voornemens zijn te gebruiken niet in de in Artikel 71 bedoelde EU-databank is geregistreerd, gebruiken zij dat systeem niet en stellen zij de aanbieder of de distributeur daarvan in kennis<br>
+        - indien van toepassing, gebruiken gebruiksverantwoordelijken van AI-systemen met een hoog risico de informatie die op grond van Artikel 13 van deze verordening wordt verstrekt om hun verplichting na te komen om een gegevensbeschermingseffectbeoordeling uit te voeren<br>
         - de gebruiksverantwoordelijke van een AI-systeem met een hoog risico voor biometrische identificatie op afstand verzoekt achteraf in het kader van een onderzoek waarbij gericht wordt gezocht naar een persoon die wordt verdacht van of veroordeeld is voor het plegen van een strafbaar feit, vooraf of zonder onnodige vertraging en uiterlijk 48 uur na het feit, om toestemming van een gerechtelijke instantie of administratieve instantie, van wie de beslissing bindend is en onderworpen is aan rechterlijke toetsing, voor het gebruik van dat systeem, behalve wanneer het wordt gebruikt voor de initiële identificatie van een potentiële verdachte op basis van objectieve en verifieerbare feiten die rechtstreeks verband houden met het strafbare feit. Elk gebruik wordt beperkt tot hetgeen strikt noodzakelijk is voor het onderzoek naar een specifiek strafbaar feit<br>
         - gebruiksverantwoordelijken van in bijlage III bedoelde AI-systemen met een hoog risico die beslissingen met betrekking tot natuurlijke personen nemen of helpen nemen, informeren de natuurlijke personen dat het AI-systeem met een hoog risico op hen wordt toegepast.<br>
         - gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.<br>
@@ -1319,11 +1331,11 @@ conclusions:
         - het nemen van passende technische en organisatorische maatregelen om te waarborgen dat dergelijke systemen in overeenstemming met de gebruiksaanwijzingen die bij de systemen zijn gevoegd worden gebruikt<br>
         - het opdragen van menselijk toezicht aan natuurlijke personen die over de nodige bekwaamheid, opleiding en autoriteit beschikken en de nodige ondersteuning krijgen<br>
         - het ervoor zorgen dat, voor zover de gebruikersverantwoordelijke controle heeft over de inputdata, de inputdata relevant en voldoende representatief zijn voor het beoogde doel van het AI-systeem met een hoog risico<br>
-        - het monitoren van de werking van het AI-systeem met een hoog risico op basis van de gebruiksaanwijzingen en in voorkomend geval het in kennis stellen van de aanbieders overeenkomstig artikel 72.<br>
+        - het monitoren van de werking van het AI-systeem met een hoog risico op basis van de gebruiksaanwijzingen en in voorkomend geval het in kennis stellen van de aanbieders overeenkomstig Artikel 72.<br>
         - het bewaren van de logs die automatisch worden gegenereerd door dat AI-systeem met een hoog risico voor zover dergelijke logs onder controle van de gebruiksverantwoordelijke vallen gedurende een periode die passend is voor het beoogde doel van het AI-systeem met een hoog risico, of ten minste zes maanden<br>
         - voordat een AI-systeem met een hoog risico op de werkplek in gebruik wordt gesteld of wordt gebruikt, delen gebruiksverantwoordelijken die werkgever zijn werknemersvertegenwoordigers en de betrokken werknemers mee dat zij zullen worden onderworpen aan het gebruik van het AI-systeem met een hoog risico<br>
-        - gebruiksverantwoordelijken van AI-systemen met een hoog risico die de hoedanigheid van overheidsinstanties of instellingen, organen of instanties van de Unie hebben, leven de in artikel 49 bedoelde registratieverplichtingen na. Wanneer deze gebruiksverantwoordelijke vaststellen dat het AI-systeem met een hoog risico dat zij voornemens zijn te gebruiken niet in de in artikel 71 bedoelde EU-databank is geregistreerd, gebruiken zij dat systeem niet en stellen zij de aanbieder of de distributeur daarvan in kennis<br>
-        - indien van toepassing, gebruiken gebruiksverantwoordelijken van AI-systemen met een hoog risico de informatie die op grond van artikel 13 van deze verordening wordt verstrekt om hun verplichting na te komen om een gegevensbeschermingseffectbeoordeling uit te voeren<br>
+        - gebruiksverantwoordelijken van AI-systemen met een hoog risico die de hoedanigheid van overheidsinstanties of instellingen, organen of instanties van de Unie hebben, leven de in Artikel 49 bedoelde registratieverplichtingen na. Wanneer deze gebruiksverantwoordelijke vaststellen dat het AI-systeem met een hoog risico dat zij voornemens zijn te gebruiken niet in de in Artikel 71 bedoelde EU-databank is geregistreerd, gebruiken zij dat systeem niet en stellen zij de aanbieder of de distributeur daarvan in kennis<br>
+        - indien van toepassing, gebruiken gebruiksverantwoordelijken van AI-systemen met een hoog risico de informatie die op grond van Artikel 13 van deze verordening wordt verstrekt om hun verplichting na te komen om een gegevensbeschermingseffectbeoordeling uit te voeren<br>
         - de gebruiksverantwoordelijke van een AI-systeem met een hoog risico voor biometrische identificatie op afstand verzoekt achteraf in het kader van een onderzoek waarbij gericht wordt gezocht naar een persoon die wordt verdacht van of veroordeeld is voor het plegen van een strafbaar feit, vooraf of zonder onnodige vertraging en uiterlijk 48 uur na het feit, om toestemming van een gerechtelijke instantie of administratieve instantie, van wie de beslissing bindend is en onderworpen is aan rechterlijke toetsing, voor het gebruik van dat systeem, behalve wanneer het wordt gebruikt voor de initiële identificatie van een potentiële verdachte op basis van objectieve en verifieerbare feiten die rechtstreeks verband houden met het strafbare feit. Elk gebruik wordt beperkt tot hetgeen strikt noodzakelijk is voor het onderzoek naar een specifiek strafbaar feit<br>
         - gebruiksverantwoordelijken van in bijlage III bedoelde AI-systemen met een hoog risico die beslissingen met betrekking tot natuurlijke personen nemen of helpen nemen, informeren de natuurlijke personen dat het AI-systeem met een hoog risico op hen wordt toegepast.<br>
         - gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.<br>
@@ -1363,11 +1375,11 @@ conclusions:
         - het nemen van passende technische en organisatorische maatregelen om te waarborgen dat dergelijke systemen in overeenstemming met de gebruiksaanwijzingen die bij de systemen zijn gevoegd worden gebruikt<br>
         - het opdragen van menselijk toezicht aan natuurlijke personen die over de nodige bekwaamheid, opleiding en autoriteit beschikken en de nodige ondersteuning krijgen<br>
         - het ervoor zorgen dat, voor zover de gebruikersverantwoordelijke controle heeft over de inputdata, de inputdata relevant en voldoende representatief zijn voor het beoogde doel van het AI-systeem met een hoog risico<br>
-        - het monitoren van de werking van het AI-systeem met een hoog risico op basis van de gebruiksaanwijzingen en in voorkomend geval het in kennis stellen van de aanbieders overeenkomstig artikel 72.<br>
+        - het monitoren van de werking van het AI-systeem met een hoog risico op basis van de gebruiksaanwijzingen en in voorkomend geval het in kennis stellen van de aanbieders overeenkomstig Artikel 72.<br>
         - het bewaren van de logs die automatisch worden gegenereerd door dat AI-systeem met een hoog risico voor zover dergelijke logs onder controle van de gebruiksverantwoordelijke vallen gedurende een periode die passend is voor het beoogde doel van het AI-systeem met een hoog risico, of ten minste zes maanden<br>
         - voordat een AI-systeem met een hoog risico op de werkplek in gebruik wordt gesteld of wordt gebruikt, delen gebruiksverantwoordelijken die werkgever zijn werknemersvertegenwoordigers en de betrokken werknemers mee dat zij zullen worden onderworpen aan het gebruik van het AI-systeem met een hoog risico<br>
-        - gebruiksverantwoordelijken van AI-systemen met een hoog risico die de hoedanigheid van overheidsinstanties of instellingen, organen of instanties van de Unie hebben, leven de in artikel 49 bedoelde registratieverplichtingen na. Wanneer deze gebruiksverantwoordelijke vaststellen dat het AI-systeem met een hoog risico dat zij voornemens zijn te gebruiken niet in de in artikel 71 bedoelde EU-databank is geregistreerd, gebruiken zij dat systeem niet en stellen zij de aanbieder of de distributeur daarvan in kennis<br>
-        - indien van toepassing, gebruiken gebruiksverantwoordelijken van AI-systemen met een hoog risico de informatie die op grond van artikel 13 van deze verordening wordt verstrekt om hun verplichting na te komen om een gegevensbeschermingseffectbeoordeling uit te voeren<br>
+        - gebruiksverantwoordelijken van AI-systemen met een hoog risico die de hoedanigheid van overheidsinstanties of instellingen, organen of instanties van de Unie hebben, leven de in Artikel 49 bedoelde registratieverplichtingen na. Wanneer deze gebruiksverantwoordelijke vaststellen dat het AI-systeem met een hoog risico dat zij voornemens zijn te gebruiken niet in de in Artikel 71 bedoelde EU-databank is geregistreerd, gebruiken zij dat systeem niet en stellen zij de aanbieder of de distributeur daarvan in kennis<br>
+        - indien van toepassing, gebruiken gebruiksverantwoordelijken van AI-systemen met een hoog risico de informatie die op grond van Artikel 13 van deze verordening wordt verstrekt om hun verplichting na te komen om een gegevensbeschermingseffectbeoordeling uit te voeren<br>
         - de gebruiksverantwoordelijke van een AI-systeem met een hoog risico voor biometrische identificatie op afstand verzoekt achteraf in het kader van een onderzoek waarbij gericht wordt gezocht naar een persoon die wordt verdacht van of veroordeeld is voor het plegen van een strafbaar feit, vooraf of zonder onnodige vertraging en uiterlijk 48 uur na het feit, om toestemming van een gerechtelijke instantie of administratieve instantie, van wie de beslissing bindend is en onderworpen is aan rechterlijke toetsing, voor het gebruik van dat systeem, behalve wanneer het wordt gebruikt voor de initiële identificatie van een potentiële verdachte op basis van objectieve en verifieerbare feiten die rechtstreeks verband houden met het strafbare feit. Elk gebruik wordt beperkt tot hetgeen strikt noodzakelijk is voor het onderzoek naar een specifiek strafbaar feit<br>
         - gebruiksverantwoordelijken van in bijlage III bedoelde AI-systemen met een hoog risico die beslissingen met betrekking tot natuurlijke personen nemen of helpen nemen, informeren de natuurlijke personen dat het AI-systeem met een hoog risico op hen wordt toegepast.<br>
         - gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.<br>
@@ -1464,9 +1476,9 @@ conclusions:
           - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2<br>
           - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres<br>
           - aanbieders beschikken over een systeem voor kwaliteitsbeheer dat in overeenstemming is met Artikel 17 (systeem voor kwaliteitsbeheer)<br>
-          - aanbieders bewaren de in artikel 18 (bewaring van documentatie) bedoelde documentatie<br>
-          - aanbieders bewaren de in artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben<br>
-          - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld<br>
+          - aanbieders bewaren de in Artikel 18 (bewaring van documentatie) bedoelde documentatie<br>
+          - aanbieders bewaren de in Artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben<br>
+          - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in Artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld<br>
           - aanbieders stellen een EU-conformiteitsverklaring op, in overeenstemming met Artikel 47. In het geval van het label 'beoordeling door derde partij' dient de uitvoering door een conformiteitsbeoordelingsinstantie te worden verzorgd.<br>
           - aanbieders brengen de CE-markering aan op het Ai-systeem met een hoog risico of, waneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, om aan te geven dat aan deze verordening is voldaan, overeenkomstig Artikel 48<br>
           - aanbieders leven de registratieverplichtingen als bedoeld in Artikel 49 lid 1, na<br>
@@ -1477,11 +1489,11 @@ conclusions:
         - het nemen van passende technische en organisatorische maatregelen om te waarborgen dat dergelijke systemen in overeenstemming met de gebruiksaanwijzingen die bij de systemen zijn gevoegd worden gebruikt<br>
         - het opdragen van menselijk toezicht aan natuurlijke personen die over de nodige bekwaamheid, opleiding en autoriteit beschikken en de nodige ondersteuning krijgen<br>
         - het ervoor zorgen dat, voor zover de gebruikersverantwoordelijke controle heeft over de inputdata, de inputdata relevant en voldoende representatief zijn voor het beoogde doel van het AI-systeem met een hoog risico<br>
-        - het monitoren van de werking van het AI-systeem met een hoog risico op basis van de gebruiksaanwijzingen en in voorkomend geval het in kennis stellen van de aanbieders overeenkomstig artikel 72.<br>
+        - het monitoren van de werking van het AI-systeem met een hoog risico op basis van de gebruiksaanwijzingen en in voorkomend geval het in kennis stellen van de aanbieders overeenkomstig Artikel 72.<br>
         - het bewaren van de logs die automatisch worden gegenereerd door dat AI-systeem met een hoog risico voor zover dergelijke logs onder controle van de gebruiksverantwoordelijke vallen gedurende een periode die passend is voor het beoogde doel van het AI-systeem met een hoog risico, of ten minste zes maanden<br>
         - voordat een AI-systeem met een hoog risico op de werkplek in gebruik wordt gesteld of wordt gebruikt, delen gebruiksverantwoordelijken die werkgever zijn werknemersvertegenwoordigers en de betrokken werknemers mee dat zij zullen worden onderworpen aan het gebruik van het AI-systeem met een hoog risico<br>
-        - gebruiksverantwoordelijken van AI-systemen met een hoog risico die de hoedanigheid van overheidsinstanties of instellingen, organen of instanties van de Unie hebben, leven de in artikel 49 bedoelde registratieverplichtingen na. Wanneer deze gebruiksverantwoordelijke vaststellen dat het AI-systeem met een hoog risico dat zij voornemens zijn te gebruiken niet in de in artikel 71 bedoelde EU-databank is geregistreerd, gebruiken zij dat systeem niet en stellen zij de aanbieder of de distributeur daarvan in kennis<br>
-        - indien van toepassing, gebruiken gebruiksverantwoordelijken van AI-systemen met een hoog risico de informatie die op grond van artikel 13 van deze verordening wordt verstrekt om hun verplichting na te komen om een gegevensbeschermingseffectbeoordeling uit te voeren<br>
+        - gebruiksverantwoordelijken van AI-systemen met een hoog risico die de hoedanigheid van overheidsinstanties of instellingen, organen of instanties van de Unie hebben, leven de in Artikel 49 bedoelde registratieverplichtingen na. Wanneer deze gebruiksverantwoordelijke vaststellen dat het AI-systeem met een hoog risico dat zij voornemens zijn te gebruiken niet in de in Artikel 71 bedoelde EU-databank is geregistreerd, gebruiken zij dat systeem niet en stellen zij de aanbieder of de distributeur daarvan in kennis<br>
+        - indien van toepassing, gebruiken gebruiksverantwoordelijken van AI-systemen met een hoog risico de informatie die op grond van Artikel 13 van deze verordening wordt verstrekt om hun verplichting na te komen om een gegevensbeschermingseffectbeoordeling uit te voeren<br>
         - de gebruiksverantwoordelijke van een AI-systeem met een hoog risico voor biometrische identificatie op afstand verzoekt achteraf in het kader van een onderzoek waarbij gericht wordt gezocht naar een persoon die wordt verdacht van of veroordeeld is voor het plegen van een strafbaar feit, vooraf of zonder onnodige vertraging en uiterlijk 48 uur na het feit, om toestemming van een gerechtelijke instantie of administratieve instantie, van wie de beslissing bindend is en onderworpen is aan rechterlijke toetsing, voor het gebruik van dat systeem, behalve wanneer het wordt gebruikt voor de initiële identificatie van een potentiële verdachte op basis van objectieve en verifieerbare feiten die rechtstreeks verband houden met het strafbare feit. Elk gebruik wordt beperkt tot hetgeen strikt noodzakelijk is voor het onderzoek naar een specifiek strafbaar feit<br>
         - gebruiksverantwoordelijken van in bijlage III bedoelde AI-systemen met een hoog risico die beslissingen met betrekking tot natuurlijke personen nemen of helpen nemen, informeren de natuurlijke personen dat het AI-systeem met een hoog risico op hen wordt toegepast.<br>
         - gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.<br>
@@ -1541,9 +1553,9 @@ conclusions:
           - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2<br>
           - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres<br>
           - aanbieders beschikken over een systeem voor kwaliteitsbeheer dat in overeenstemming is met Artikel 17 (systeem voor kwaliteitsbeheer)<br>
-          - aanbieders bewaren de in artikel 18 (bewaring van documentatie) bedoelde documentatie<br>
-          - aanbieders bewaren de in artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben<br>
-          - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld<br>
+          - aanbieders bewaren de in Artikel 18 (bewaring van documentatie) bedoelde documentatie<br>
+          - aanbieders bewaren de in Artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben<br>
+          - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in Artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld<br>
           - aanbieders stellen een EU-conformiteitsverklaring op, in overeenstemming met Artikel 47. In het geval van het label 'beoordeling door derde partij' dient de uitvoering door een conformiteitsbeoordelingsinstantie te worden verzorgd.<br>
           - aanbieders brengen de CE-markering aan op het Ai-systeem met een hoog risico of, waneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, om aan te geven dat aan deze verordening is voldaan, overeenkomstig Artikel 48<br>
           - aanbieders leven de registratieverplichtingen als bedoeld in Artikel 49 lid 1, na<br>
@@ -1554,11 +1566,11 @@ conclusions:
         - het nemen van passende technische en organisatorische maatregelen om te waarborgen dat dergelijke systemen in overeenstemming met de gebruiksaanwijzingen die bij de systemen zijn gevoegd worden gebruikt<br>
         - het opdragen van menselijk toezicht aan natuurlijke personen die over de nodige bekwaamheid, opleiding en autoriteit beschikken en de nodige ondersteuning krijgen<br>
         - het ervoor zorgen dat, voor zover de gebruikersverantwoordelijke controle heeft over de inputdata, de inputdata relevant en voldoende representatief zijn voor het beoogde doel van het AI-systeem met een hoog risico<br>
-        - het monitoren van de werking van het AI-systeem met een hoog risico op basis van de gebruiksaanwijzingen en in voorkomend geval het in kennis stellen van de aanbieders overeenkomstig artikel 72.<br>
+        - het monitoren van de werking van het AI-systeem met een hoog risico op basis van de gebruiksaanwijzingen en in voorkomend geval het in kennis stellen van de aanbieders overeenkomstig Artikel 72.<br>
         - het bewaren van de logs die automatisch worden gegenereerd door dat AI-systeem met een hoog risico voor zover dergelijke logs onder controle van de gebruiksverantwoordelijke vallen gedurende een periode die passend is voor het beoogde doel van het AI-systeem met een hoog risico, of ten minste zes maanden<br>
         - voordat een AI-systeem met een hoog risico op de werkplek in gebruik wordt gesteld of wordt gebruikt, delen gebruiksverantwoordelijken die werkgever zijn werknemersvertegenwoordigers en de betrokken werknemers mee dat zij zullen worden onderworpen aan het gebruik van het AI-systeem met een hoog risico<br>
-        - gebruiksverantwoordelijken van AI-systemen met een hoog risico die de hoedanigheid van overheidsinstanties of instellingen, organen of instanties van de Unie hebben, leven de in artikel 49 bedoelde registratieverplichtingen na. Wanneer deze gebruiksverantwoordelijke vaststellen dat het AI-systeem met een hoog risico dat zij voornemens zijn te gebruiken niet in de in artikel 71 bedoelde EU-databank is geregistreerd, gebruiken zij dat systeem niet en stellen zij de aanbieder of de distributeur daarvan in kennis<br>
-        - indien van toepassing, gebruiken gebruiksverantwoordelijken van AI-systemen met een hoog risico de informatie die op grond van artikel 13 van deze verordening wordt verstrekt om hun verplichting na te komen om een gegevensbeschermingseffectbeoordeling uit te voeren<br>
+        - gebruiksverantwoordelijken van AI-systemen met een hoog risico die de hoedanigheid van overheidsinstanties of instellingen, organen of instanties van de Unie hebben, leven de in Artikel 49 bedoelde registratieverplichtingen na. Wanneer deze gebruiksverantwoordelijke vaststellen dat het AI-systeem met een hoog risico dat zij voornemens zijn te gebruiken niet in de in Artikel 71 bedoelde EU-databank is geregistreerd, gebruiken zij dat systeem niet en stellen zij de aanbieder of de distributeur daarvan in kennis<br>
+        - indien van toepassing, gebruiken gebruiksverantwoordelijken van AI-systemen met een hoog risico de informatie die op grond van Artikel 13 van deze verordening wordt verstrekt om hun verplichting na te komen om een gegevensbeschermingseffectbeoordeling uit te voeren<br>
         - de gebruiksverantwoordelijke van een AI-systeem met een hoog risico voor biometrische identificatie op afstand verzoekt achteraf in het kader van een onderzoek waarbij gericht wordt gezocht naar een persoon die wordt verdacht van of veroordeeld is voor het plegen van een strafbaar feit, vooraf of zonder onnodige vertraging en uiterlijk 48 uur na het feit, om toestemming van een gerechtelijke instantie of administratieve instantie, van wie de beslissing bindend is en onderworpen is aan rechterlijke toetsing, voor het gebruik van dat systeem, behalve wanneer het wordt gebruikt voor de initiële identificatie van een potentiële verdachte op basis van objectieve en verifieerbare feiten die rechtstreeks verband houden met het strafbare feit. Elk gebruik wordt beperkt tot hetgeen strikt noodzakelijk is voor het onderzoek naar een specifiek strafbaar feit<br>
         - gebruiksverantwoordelijken van in bijlage III bedoelde AI-systemen met een hoog risico die beslissingen met betrekking tot natuurlijke personen nemen of helpen nemen, informeren de natuurlijke personen dat het AI-systeem met een hoog risico op hen wordt toegepast.<br>
         - gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.<br>
@@ -1650,9 +1662,9 @@ conclusions:
           - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2<br>
           - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres<br>
           - aanbieders beschikken over een systeem voor kwaliteitsbeheer dat in overeenstemming is met Artikel 17 (systeem voor kwaliteitsbeheer)<br>
-          - aanbieders bewaren de in artikel 18 (bewaring van documentatie) bedoelde documentatie<br>
-          - aanbieders bewaren de in artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben<br>
-          - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld<br>
+          - aanbieders bewaren de in Artikel 18 (bewaring van documentatie) bedoelde documentatie<br>
+          - aanbieders bewaren de in Artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben<br>
+          - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in Artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld<br>
           - aanbieders stellen een EU-conformiteitsverklaring op, in overeenstemming met Artikel 47. In het geval van het label 'beoordeling door derde partij' dient de uitvoering door een conformiteitsbeoordelingsinstantie te worden verzorgd.<br>
           - aanbieders brengen de CE-markering aan op het Ai-systeem met een hoog risico of, waneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, om aan te geven dat aan deze verordening is voldaan, overeenkomstig Artikel 48<br>
           - aanbieders leven de registratieverplichtingen als bedoeld in Artikel 49 lid 1, na<br>
@@ -1663,11 +1675,11 @@ conclusions:
         - het nemen van passende technische en organisatorische maatregelen om te waarborgen dat dergelijke systemen in overeenstemming met de gebruiksaanwijzingen die bij de systemen zijn gevoegd worden gebruikt<br>
         - het opdragen van menselijk toezicht aan natuurlijke personen die over de nodige bekwaamheid, opleiding en autoriteit beschikken en de nodige ondersteuning krijgen<br>
         - het ervoor zorgen dat, voor zover de gebruikersverantwoordelijke controle heeft over de inputdata, de inputdata relevant en voldoende representatief zijn voor het beoogde doel van het AI-systeem met een hoog risico<br>
-        - het monitoren van de werking van het AI-systeem met een hoog risico op basis van de gebruiksaanwijzingen en in voorkomend geval het in kennis stellen van de aanbieders overeenkomstig artikel 72.<br>
+        - het monitoren van de werking van het AI-systeem met een hoog risico op basis van de gebruiksaanwijzingen en in voorkomend geval het in kennis stellen van de aanbieders overeenkomstig Artikel 72.<br>
         - het bewaren van de logs die automatisch worden gegenereerd door dat AI-systeem met een hoog risico voor zover dergelijke logs onder controle van de gebruiksverantwoordelijke vallen gedurende een periode die passend is voor het beoogde doel van het AI-systeem met een hoog risico, of ten minste zes maanden<br>
         - voordat een AI-systeem met een hoog risico op de werkplek in gebruik wordt gesteld of wordt gebruikt, delen gebruiksverantwoordelijken die werkgever zijn werknemersvertegenwoordigers en de betrokken werknemers mee dat zij zullen worden onderworpen aan het gebruik van het AI-systeem met een hoog risico<br>
-        - gebruiksverantwoordelijken van AI-systemen met een hoog risico die de hoedanigheid van overheidsinstanties of instellingen, organen of instanties van de Unie hebben, leven de in artikel 49 bedoelde registratieverplichtingen na. Wanneer deze gebruiksverantwoordelijke vaststellen dat het AI-systeem met een hoog risico dat zij voornemens zijn te gebruiken niet in de in artikel 71 bedoelde EU-databank is geregistreerd, gebruiken zij dat systeem niet en stellen zij de aanbieder of de distributeur daarvan in kennis<br>
-        - indien van toepassing, gebruiken gebruiksverantwoordelijken van AI-systemen met een hoog risico de informatie die op grond van artikel 13 van deze verordening wordt verstrekt om hun verplichting na te komen om een gegevensbeschermingseffectbeoordeling uit te voeren<br>
+        - gebruiksverantwoordelijken van AI-systemen met een hoog risico die de hoedanigheid van overheidsinstanties of instellingen, organen of instanties van de Unie hebben, leven de in Artikel 49 bedoelde registratieverplichtingen na. Wanneer deze gebruiksverantwoordelijke vaststellen dat het AI-systeem met een hoog risico dat zij voornemens zijn te gebruiken niet in de in Artikel 71 bedoelde EU-databank is geregistreerd, gebruiken zij dat systeem niet en stellen zij de aanbieder of de distributeur daarvan in kennis<br>
+        - indien van toepassing, gebruiken gebruiksverantwoordelijken van AI-systemen met een hoog risico de informatie die op grond van Artikel 13 van deze verordening wordt verstrekt om hun verplichting na te komen om een gegevensbeschermingseffectbeoordeling uit te voeren<br>
         - de gebruiksverantwoordelijke van een AI-systeem met een hoog risico voor biometrische identificatie op afstand verzoekt achteraf in het kader van een onderzoek waarbij gericht wordt gezocht naar een persoon die wordt verdacht van of veroordeeld is voor het plegen van een strafbaar feit, vooraf of zonder onnodige vertraging en uiterlijk 48 uur na het feit, om toestemming van een gerechtelijke instantie of administratieve instantie, van wie de beslissing bindend is en onderworpen is aan rechterlijke toetsing, voor het gebruik van dat systeem, behalve wanneer het wordt gebruikt voor de initiële identificatie van een potentiële verdachte op basis van objectieve en verifieerbare feiten die rechtstreeks verband houden met het strafbare feit. Elk gebruik wordt beperkt tot hetgeen strikt noodzakelijk is voor het onderzoek naar een specifiek strafbaar feit<br>
         - gebruiksverantwoordelijken van in bijlage III bedoelde AI-systemen met een hoog risico die beslissingen met betrekking tot natuurlijke personen nemen of helpen nemen, informeren de natuurlijke personen dat het AI-systeem met een hoog risico op hen wordt toegepast.<br>
         - gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.<br>
@@ -1746,9 +1758,9 @@ conclusions:
           - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2<br>
           - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres<br>
           - aanbieders beschikken over een systeem voor kwaliteitsbeheer dat in overeenstemming is met Artikel 17 (systeem voor kwaliteitsbeheer)<br>
-          - aanbieders bewaren de in artikel 18 (bewaring van documentatie) bedoelde documentatie<br>
-          - aanbieders bewaren de in artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben<br>
-          - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld<br>
+          - aanbieders bewaren de in Artikel 18 (bewaring van documentatie) bedoelde documentatie<br>
+          - aanbieders bewaren de in Artikel 19 bedoelde logs die automatisch door hun AI-systemen met een hoog risico zijn gegenereerd, wanneer zij hierover de controle hebben<br>
+          - aanbieders zorgen ervoor dat voor het AI-systeem met een hoog risico de desbetreffende in Artikel 43 bedoelde conformiteitsbeoordelingsprocedure wordt uitgevoerd voordat dit systeem in de handel wordt gebracht of in gebruik wordt gesteld<br>
           - aanbieders stellen een EU-conformiteitsverklaring op, in overeenstemming met Artikel 47. In het geval van het label 'beoordeling door derde partij' dient de uitvoering door een conformiteitsbeoordelingsinstantie te worden verzorgd.<br>
           - aanbieders brengen de CE-markering aan op het Ai-systeem met een hoog risico of, waneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, om aan te geven dat aan deze verordening is voldaan, overeenkomstig Artikel 48<br>
           - aanbieders leven de registratieverplichtingen als bedoeld in Artikel 49 lid 1, na<br>
@@ -1759,11 +1771,11 @@ conclusions:
         - het nemen van passende technische en organisatorische maatregelen om te waarborgen dat dergelijke systemen in overeenstemming met de gebruiksaanwijzingen die bij de systemen zijn gevoegd worden gebruikt<br>
         - het opdragen van menselijk toezicht aan natuurlijke personen die over de nodige bekwaamheid, opleiding en autoriteit beschikken en de nodige ondersteuning krijgen<br>
         - het ervoor zorgen dat, voor zover de gebruikersverantwoordelijke controle heeft over de inputdata, de inputdata relevant en voldoende representatief zijn voor het beoogde doel van het AI-systeem met een hoog risico<br>
-        - het monitoren van de werking van het AI-systeem met een hoog risico op basis van de gebruiksaanwijzingen en in voorkomend geval het in kennis stellen van de aanbieders overeenkomstig artikel 72.<br>
+        - het monitoren van de werking van het AI-systeem met een hoog risico op basis van de gebruiksaanwijzingen en in voorkomend geval het in kennis stellen van de aanbieders overeenkomstig Artikel 72.<br>
         - het bewaren van de logs die automatisch worden gegenereerd door dat AI-systeem met een hoog risico voor zover dergelijke logs onder controle van de gebruiksverantwoordelijke vallen gedurende een periode die passend is voor het beoogde doel van het AI-systeem met een hoog risico, of ten minste zes maanden<br>
         - voordat een AI-systeem met een hoog risico op de werkplek in gebruik wordt gesteld of wordt gebruikt, delen gebruiksverantwoordelijken die werkgever zijn werknemersvertegenwoordigers en de betrokken werknemers mee dat zij zullen worden onderworpen aan het gebruik van het AI-systeem met een hoog risico<br>
-        - gebruiksverantwoordelijken van AI-systemen met een hoog risico die de hoedanigheid van overheidsinstanties of instellingen, organen of instanties van de Unie hebben, leven de in artikel 49 bedoelde registratieverplichtingen na. Wanneer deze gebruiksverantwoordelijke vaststellen dat het AI-systeem met een hoog risico dat zij voornemens zijn te gebruiken niet in de in artikel 71 bedoelde EU-databank is geregistreerd, gebruiken zij dat systeem niet en stellen zij de aanbieder of de distributeur daarvan in kennis<br>
-        - indien van toepassing, gebruiken gebruiksverantwoordelijken van AI-systemen met een hoog risico de informatie die op grond van artikel 13 van deze verordening wordt verstrekt om hun verplichting na te komen om een gegevensbeschermingseffectbeoordeling uit te voeren<br>
+        - gebruiksverantwoordelijken van AI-systemen met een hoog risico die de hoedanigheid van overheidsinstanties of instellingen, organen of instanties van de Unie hebben, leven de in Artikel 49 bedoelde registratieverplichtingen na. Wanneer deze gebruiksverantwoordelijke vaststellen dat het AI-systeem met een hoog risico dat zij voornemens zijn te gebruiken niet in de in Artikel 71 bedoelde EU-databank is geregistreerd, gebruiken zij dat systeem niet en stellen zij de aanbieder of de distributeur daarvan in kennis<br>
+        - indien van toepassing, gebruiken gebruiksverantwoordelijken van AI-systemen met een hoog risico de informatie die op grond van Artikel 13 van deze verordening wordt verstrekt om hun verplichting na te komen om een gegevensbeschermingseffectbeoordeling uit te voeren<br>
         - de gebruiksverantwoordelijke van een AI-systeem met een hoog risico voor biometrische identificatie op afstand verzoekt achteraf in het kader van een onderzoek waarbij gericht wordt gezocht naar een persoon die wordt verdacht van of veroordeeld is voor het plegen van een strafbaar feit, vooraf of zonder onnodige vertraging en uiterlijk 48 uur na het feit, om toestemming van een gerechtelijke instantie of administratieve instantie, van wie de beslissing bindend is en onderworpen is aan rechterlijke toetsing, voor het gebruik van dat systeem, behalve wanneer het wordt gebruikt voor de initiële identificatie van een potentiële verdachte op basis van objectieve en verifieerbare feiten die rechtstreeks verband houden met het strafbare feit. Elk gebruik wordt beperkt tot hetgeen strikt noodzakelijk is voor het onderzoek naar een specifiek strafbaar feit<br>
         - gebruiksverantwoordelijken van in bijlage III bedoelde AI-systemen met een hoog risico die beslissingen met betrekking tot natuurlijke personen nemen of helpen nemen, informeren de natuurlijke personen dat het AI-systeem met een hoog risico op hen wordt toegepast.<br>
         - gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.<br>
@@ -1984,11 +1996,11 @@ conclusions:
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een importeur van een AI-systeem een hoog risico."
     obligation: "
       Verplichtingen voor importeur van een hoog risico AI-systeem (Artikel 23):<br>
-      - Importeurs zorgen ervoor dat een AI-systeem met een hoog risico in overeenstemming is met de verordening voordat het in de handel wordt gebracht door na te gaan of de relevante conformiteitsbeoordelingsprocedure is uitgevoerd (artikel 43), de technische documentatie is opgesteld (artikel 11 en bijlage IV), de CE-markering is aangebracht en de EU-conformiteitsverklaring en gebruiksaanwijzingen aanwezig zijn (artikel 47), en of de aanbieder een gemachtigde heeft aangewezen (artikel 22, lid 1).<br>
-      - Indien een importeur vermoedt dat het AI-systeem met een hoog risico niet in overeenstemming is met de verordening, vervalst is of vergezeld gaat van vervalste documenten, mag het systeem niet in de handel worden gebracht totdat het aan de eisen voldoet. Als het systeem een risico vormt (artikel 79, lid 1), moet de importeur de aanbieder, gemachtigden en markttoezichtautoriteiten informeren.<br>
+      - Importeurs zorgen ervoor dat een AI-systeem met een hoog risico in overeenstemming is met de verordening voordat het in de handel wordt gebracht door na te gaan of de relevante conformiteitsbeoordelingsprocedure is uitgevoerd (Artikel 43), de technische documentatie is opgesteld (Artikel 11 en bijlage IV), de CE-markering is aangebracht en de EU-conformiteitsverklaring en gebruiksaanwijzingen aanwezig zijn (Artikel 47), en of de aanbieder een gemachtigde heeft aangewezen (Artikel 22, lid 1).<br>
+      - Indien een importeur vermoedt dat het AI-systeem met een hoog risico niet in overeenstemming is met de verordening, vervalst is of vergezeld gaat van vervalste documenten, mag het systeem niet in de handel worden gebracht totdat het aan de eisen voldoet. Als het systeem een risico vormt (Artikel 79, lid 1), moet de importeur de aanbieder, gemachtigden en markttoezichtautoriteiten informeren.<br>
       - Importeurs moeten hun naam, geregistreerde handelsnaam of merk en contactadres vermelden op de verpakking of in de bijgevoegde documentatie van het AI-systeem met een hoog risico.<br>
       - Importeurs zorgen ervoor dat de opslag- en vervoersomstandigheden van het AI-systeem met een hoog risico de naleving van de eisen van afdeling 2 niet in gevaar brengen.<br>
-      - Importeurs moeten gedurende tien jaar een kopie bewaren van het door de aangemelde instantie afgegeven certificaat en, indien van toepassing, de gebruiksaanwijzing en de EU-conformiteitsverklaring (artikel 47).<br>
+      - Importeurs moeten gedurende tien jaar een kopie bewaren van het door de aangemelde instantie afgegeven certificaat en, indien van toepassing, de gebruiksaanwijzing en de EU-conformiteitsverklaring (Artikel 47).<br>
       - Bij verzoek van bevoegde autoriteiten moeten importeurs alle benodigde informatie en documentatie verstrekken ter staving van de naleving van de eisen van afdeling 2, in een voor de autoriteit begrijpelijke taal.<br>
       - Importeurs werken samen met bevoegde autoriteiten bij het nemen van maatregelen om de risico’s van het AI-systeem te verminderen en te beperken.<br>"
     sources:
@@ -2008,7 +2020,7 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e7480-1-1
   - conclusionId: "15.0.3"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een importeur van een niet-hoog-risico AI-systeem."
-    obligation: "Er zijn geen verplichtingen voor importeurs van niet-hoog-risico AI-systemen, alleen voor hoog-risico."
+    obligation: "Er zijn geen verplichtingen voor importeurs van niet-hoog-risico AI-systemen, alleen voor hoog-risico. In de bronnen is Artikel 23 opgenomen, deze bevat de verplichtingen voor importeurs van hoog-risico AI-systemen."
     sources:
       - source: Artikel 23 - Verplichtingen van importeurs
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e3823-1-1
@@ -2016,11 +2028,11 @@ conclusions:
     conclusion: "Je bent een importeur van een hoog risico AI-systeem voor algemene doeleinden."
     obligation: "
       Verplichtingen voor importeur van een hoog risico AI-systeem (Artikel 23):<br>
-      - Importeurs zorgen ervoor dat een AI-systeem met een hoog risico in overeenstemming is met de verordening voordat het in de handel wordt gebracht door na te gaan of de relevante conformiteitsbeoordelingsprocedure is uitgevoerd (artikel 43), de technische documentatie is opgesteld (artikel 11 en bijlage IV), de CE-markering is aangebracht en de EU-conformiteitsverklaring en gebruiksaanwijzingen aanwezig zijn (artikel 47), en of de aanbieder een gemachtigde heeft aangewezen (artikel 22, lid 1).<br>
-      - Indien een importeur vermoedt dat het AI-systeem met een hoog risico niet in overeenstemming is met de verordening, vervalst is of vergezeld gaat van vervalste documenten, mag het systeem niet in de handel worden gebracht totdat het aan de eisen voldoet. Als het systeem een risico vormt (artikel 79, lid 1), moet de importeur de aanbieder, gemachtigden en markttoezichtautoriteiten informeren.<br>
+      - Importeurs zorgen ervoor dat een AI-systeem met een hoog risico in overeenstemming is met de verordening voordat het in de handel wordt gebracht door na te gaan of de relevante conformiteitsbeoordelingsprocedure is uitgevoerd (Artikel 43), de technische documentatie is opgesteld (Artikel 11 en bijlage IV), de CE-markering is aangebracht en de EU-conformiteitsverklaring en gebruiksaanwijzingen aanwezig zijn (Artikel 47), en of de aanbieder een gemachtigde heeft aangewezen (Artikel 22, lid 1).<br>
+      - Indien een importeur vermoedt dat het AI-systeem met een hoog risico niet in overeenstemming is met de verordening, vervalst is of vergezeld gaat van vervalste documenten, mag het systeem niet in de handel worden gebracht totdat het aan de eisen voldoet. Als het systeem een risico vormt (Artikel 79, lid 1), moet de importeur de aanbieder, gemachtigden en markttoezichtautoriteiten informeren.<br>
       - Importeurs moeten hun naam, geregistreerde handelsnaam of merk en contactadres vermelden op de verpakking of in de bijgevoegde documentatie van het AI-systeem met een hoog risico.<br>
       - Importeurs zorgen ervoor dat de opslag- en vervoersomstandigheden van het AI-systeem met een hoog risico de naleving van de eisen van afdeling 2 niet in gevaar brengen.<br>
-      - Importeurs moeten gedurende tien jaar een kopie bewaren van het door de aangemelde instantie afgegeven certificaat en, indien van toepassing, de gebruiksaanwijzing en de EU-conformiteitsverklaring (artikel 47).<br>
+      - Importeurs moeten gedurende tien jaar een kopie bewaren van het door de aangemelde instantie afgegeven certificaat en, indien van toepassing, de gebruiksaanwijzing en de EU-conformiteitsverklaring (Artikel 47).<br>
       - Bij verzoek van bevoegde autoriteiten moeten importeurs alle benodigde informatie en documentatie verstrekken ter staving van de naleving van de eisen van afdeling 2, in een voor de autoriteit begrijpelijke taal.<br>
       - Importeurs werken samen met bevoegde autoriteiten bij het nemen van maatregelen om de risico’s van het AI-systeem te verminderen en te beperken.<br>"
     sources:
@@ -2040,13 +2052,13 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e7480-1-1
   - conclusionId: "15.1.3"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een importeur van een niet-hoog-risico AI-systeem voor algemene doeleinden."
-    obligation: "Er zijn geen verplichtingen voor importeurs van niet-hoog-risico AI-systemen voor algemene doeleinden, alleen voor hoog-risico."
+    obligation: "Er zijn geen verplichtingen voor importeurs van niet-hoog-risico AI-systemen voor algemene doeleinden, alleen voor hoog-risico. In de bronnen is Artikel 23 opgenomen, deze bevat de verplichtingen voor importeurs van hoog-risico AI-systemen."
     sources:
       - source: Artikel 23 - Verplichtingen van importeurs
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e3823-1-1
   - conclusionId: "15.2.1"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een importeur van een AI-model voor algemene doeleinden."
-    obligation: "Er zijn geen verplichtingen voor importeurs van AI-modellen voor algemene doeleinden, alleen voor hoog-risico AI-systemen."
+    obligation: "Er zijn geen verplichtingen voor importeurs van AI-modellen voor algemene doeleinden, alleen voor hoog-risico AI-systemen. In de bronnen is Artikel 23 opgenomen, deze bevat de verplichtingen voor importeurs van hoog-risico AI-systemen."
     sources:
       - source: Artikel 23 - Verplichtingen van importeurs
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e3823-1-1
@@ -2076,7 +2088,7 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e7480-1-1
   - conclusionId: "16.0.3"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een distributeur van een niet-hoog-risico AI-systeem."
-    obligation: "Er zijn geen verplichtingen voor distributeurs van niet-hoog-risico AI-systemen, alleen voor hoog-risico."
+    obligation: "Er zijn geen verplichtingen voor distributeurs van niet-hoog-risico AI-systemen, alleen voor hoog-risico. In de bronnen is Artikel 24 opgenomen, deze bevat de verplichtingen voor distributeurs van hoog-risico AI-systemen."
     sources:
       - source: Artikel 24 - Verplichtingen van distributeurs
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e4246-1-1
@@ -2103,13 +2115,13 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e7480-1-1
   - conclusionId: "16.1.3"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een distributeur van een niet-hoog-risico AI-systeem voor algemene doeleinden."
-    obligation: "Er zijn geen verplichtingen voor distributeurs van niet-hoog-risico AI-systemen voor algemene doeleinden, alleen voor hoog-risico."
+    obligation: "Er zijn geen verplichtingen voor distributeurs van niet-hoog-risico AI-systemen, alleen voor hoog-risico. In de bronnen is Artikel 24 opgenomen, deze bevat de verplichtingen voor distributeurs van hoog-risico AI-systemen."
     sources:
       - source: Artikel 24 - Verplichtingen van distributeurs
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e4246-1-1
   - conclusionId: "16.2.1"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een distributeur van een AI-model voor algemene doeleinden."
-    obligation: "Er zijn geen verplichtingen voor distributeurs van AI-model voor algemene doeleinden, alleen voor hoog-risico AI-systemen. "
+    obligation: "Er zijn geen verplichtingen voor distributeurs van AI-model voor algemene doeleinden, alleen voor hoog-risico AI-systemen. In de bronnen is Artikel 24 opgenomen, deze bevat de verplichtingen voor distributeurs van hoog-risico AI-systemen."
     sources:
       - source: Artikel 24 - Verplichtingen van distributeurs
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e4246-1-1
