@@ -418,8 +418,6 @@ questions:
           url: https://eur-lex.europa.eu/legal-content/NL/TXT/PDF/?uri=CELEX:32017R0745
         - source: Verordening (EU) 2017/746 - Medische hulpmiddelen voor in-vitrodiagnostiek
           url: https://eur-lex.europa.eu/legal-content/NL/TXT/PDF/?uri=CELEX:32017R0746
-        - source: Overweging 50 - Conformiteitsbeoordeling AI-systemen
-          url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_50
     answers:
       - answer: Ja
         labels:
