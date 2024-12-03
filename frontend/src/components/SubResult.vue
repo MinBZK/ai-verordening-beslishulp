@@ -12,13 +12,6 @@ type FilteredLabels = { [category: string]: string[] }
 
 const props = defineProps<Props>()
 
-// function get_background_color(label: string | undefined) {
-//   if (label === 'nader te bepalen' || label === 'niet van toepassing') {
-//     return 'background-color: var(--rvo-color-grijs-300)'
-//   }
-//   return 'background-color: var(--rvo-color-hemelblauw-450)'
-// }
-
 const filteredLabels = computed<FilteredLabels>(() => {
   const filtered: FilteredLabels = {}
 
