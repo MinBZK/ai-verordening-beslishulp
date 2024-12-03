@@ -12,12 +12,12 @@ type FilteredLabels = { [category: string]: string[] }
 
 const props = defineProps<Props>()
 
-function get_background_color(label: string | undefined) {
-  if (label === 'nader te bepalen' || label === 'niet van toepassing') {
-    return 'background-color: var(--rvo-color-grijs-300)'
-  }
-  return 'background-color: var(--rvo-color-hemelblauw-450)'
-}
+// function get_background_color(label: string | undefined) {
+//   if (label === 'nader te bepalen' || label === 'niet van toepassing') {
+//     return 'background-color: var(--rvo-color-grijs-300)'
+//   }
+//   return 'background-color: var(--rvo-color-hemelblauw-450)'
+// }
 
 const filteredLabels = computed<FilteredLabels>(() => {
   const filtered: FilteredLabels = {}
@@ -99,7 +99,7 @@ const hasLabels = computed(() => {
                     <td class="rvo-table-cell rvo-text--bold rvo-text--md">{{ category }}</td>
                     <td class="flex rvo-table-cell gap-x-3">
                       <div v-for="label in assigned_labels" :key="label"
-                           class="rvo-tag rvo-tag--default" :style="get_background_color(label)">
+                           class="rvo-tag rvo-tag--default" :style="{ backgroundColor: 'var(--rvo-color-hemelblauw-450)' }">
                         {{ label }}
                       </div>
                     </td>
@@ -144,7 +144,7 @@ const hasLabels = computed(() => {
                     <td class="rvo-table-cell rvo-text--bold rvo-text--md">{{ category }}</td>
                     <td class="flex rvo-table-cell gap-x-3">
                       <div v-for="label in assigned_labels" :key="label"
-                           class="rvo-tag rvo-tag--default" :style="get_background_color(label)">
+                           class="rvo-tag rvo-tag--default" :style="{ backgroundColor: 'var(--rvo-color-hemelblauw-450)' }">
                         {{ label }}
                       </div>
                     </td>

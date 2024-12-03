@@ -2018,7 +2018,7 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e7480-1-1
   - conclusionId: "15.0.3"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een importeur van een niet-hoog-risico AI-systeem."
-    obligation: "Er zijn geen verplichtingen voor importeurs van niet-hoog-risico AI-systemen, alleen voor hoog-risico. In de bronnen is Artikel 23 opgenomen, deze bevat de verplichtingen voor importeurs van hoog-risico AI-systemen."
+    obligation: "Er zijn geen verplichtingen voor importeurs van niet-hoog-risico AI-systemen, alleen voor hoog-risico. In de bronnen is Artikel 23 opgenomen, deze bevat de verplichtingen voor importeurs van hoog-risico AI-systemen ter informatie ter informatie."
     sources:
       - source: Artikel 23 - Verplichtingen van importeurs
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e3823-1-1
@@ -2050,13 +2050,13 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e7480-1-1
   - conclusionId: "15.1.3"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een importeur van een niet-hoog-risico AI-systeem voor algemene doeleinden."
-    obligation: "Er zijn geen verplichtingen voor importeurs van niet-hoog-risico AI-systemen voor algemene doeleinden, alleen voor hoog-risico. In de bronnen is Artikel 23 opgenomen, deze bevat de verplichtingen voor importeurs van hoog-risico AI-systemen."
+    obligation: "Er zijn geen verplichtingen voor importeurs van niet-hoog-risico AI-systemen voor algemene doeleinden, alleen voor hoog-risico. In de bronnen is Artikel 23 opgenomen, deze bevat de verplichtingen voor importeurs van hoog-risico AI-systemen ter informatie."
     sources:
       - source: Artikel 23 - Verplichtingen van importeurs
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e3823-1-1
   - conclusionId: "15.2.1"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een importeur van een AI-model voor algemene doeleinden."
-    obligation: "Er zijn geen verplichtingen voor importeurs van AI-modellen voor algemene doeleinden, alleen voor hoog-risico AI-systemen. In de bronnen is Artikel 23 opgenomen, deze bevat de verplichtingen voor importeurs van hoog-risico AI-systemen."
+    obligation: "Er zijn geen verplichtingen voor importeurs van AI-modellen voor algemene doeleinden, alleen voor hoog-risico AI-systemen. In de bronnen is Artikel 23 opgenomen, deze bevat de verplichtingen voor importeurs van hoog-risico AI-systemen ter informatie."
     sources:
       - source: Artikel 23 - Verplichtingen van importeurs
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e3823-1-1
@@ -2086,7 +2086,7 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e7480-1-1
   - conclusionId: "16.0.3"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een distributeur van een niet-hoog-risico AI-systeem."
-    obligation: "Er zijn geen verplichtingen voor distributeurs van niet-hoog-risico AI-systemen, alleen voor hoog-risico. In de bronnen is Artikel 24 opgenomen, deze bevat de verplichtingen voor distributeurs van hoog-risico AI-systemen."
+    obligation: "Er zijn geen verplichtingen voor distributeurs van niet-hoog-risico AI-systemen, alleen voor hoog-risico. In de bronnen is Artikel 24 opgenomen, deze bevat de verplichtingen voor distributeurs van hoog-risico AI-systemen ter informatie."
     sources:
       - source: Artikel 24 - Verplichtingen van distributeurs
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e4246-1-1
@@ -2113,13 +2113,13 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e7480-1-1
   - conclusionId: "16.1.3"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een distributeur van een niet-hoog-risico AI-systeem voor algemene doeleinden."
-    obligation: "Er zijn geen verplichtingen voor distributeurs van niet-hoog-risico AI-systemen, alleen voor hoog-risico. In de bronnen is Artikel 24 opgenomen, deze bevat de verplichtingen voor distributeurs van hoog-risico AI-systemen."
+    obligation: "Er zijn geen verplichtingen voor distributeurs van niet-hoog-risico AI-systemen, alleen voor hoog-risico. In de bronnen is Artikel 24 opgenomen, deze bevat de verplichtingen voor distributeurs van hoog-risico AI-systemen ter informatie."
     sources:
       - source: Artikel 24 - Verplichtingen van distributeurs
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e4246-1-1
   - conclusionId: "16.2.1"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een distributeur van een AI-model voor algemene doeleinden."
-    obligation: "Er zijn geen verplichtingen voor distributeurs van AI-model voor algemene doeleinden, alleen voor hoog-risico AI-systemen. In de bronnen is Artikel 24 opgenomen, deze bevat de verplichtingen voor distributeurs van hoog-risico AI-systemen."
+    obligation: "Er zijn geen verplichtingen voor distributeurs van AI-model voor algemene doeleinden, alleen voor hoog-risico AI-systemen. In de bronnen is Artikel 24 opgenomen, deze bevat de verplichtingen voor distributeurs van hoog-risico AI-systemen ter informatie."
     sources:
       - source: Artikel 24 - Verplichtingen van distributeurs
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e4246-1-1
