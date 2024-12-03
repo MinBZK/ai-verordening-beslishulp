@@ -1,5 +1,4 @@
 # !/usr/bin/env python3
-
 import json
 import re
 
@@ -18,40 +17,65 @@ term_dict = {
     definition["term"]: (
         f"<div class='aiv-definition'>"
         f"{definition['term']}"
-        f" <span class='aiv-definition-text'>"
-        f"     {definition['definition']}"
-        f" </span>"
+        f"<span class='aiv-definition-text'>"
+        f"{definition['definition']}"
+        f"</span>"
         f"</div>"
     )
     for definition in definitions["definitions"]
 }
 
-pattern = re.compile("|".join([re.escape(term) for term in sorted(term_dict.keys(), key=len, reverse=True)]))
+
+def create_pattern(terms):
+    """Create a regex pattern from a list of terms."""
+    return re.compile("|".join([re.escape(term) for term in sorted(terms, key=len, reverse=True)]))
 
 
-def replace_terms_callback(match):
+def replace_terms_with_tracking(text, term_dict):
     """
-    Callback function for replacing terms with their <dfn><abbr>...</abbr></dfn> version.
+    Replace terms in text with their definitions, but only the first occurrence of each term.
+    Returns the modified text and a set of terms that were already used.
     """
-    term = match.group(0)
-    return term_dict.get(term, term)
+    if not text:
+        return text
 
+    used_terms = set()
+    result = []
+    current_pos = 0
 
-def replace_terms(text, term_dict):
-    """
-    Replace all occurrences of terms in the text with their corresponding <dfn><abbr title=""></abbr></dfn> wrapped
-    terms. Uses a regular expression with a callback function to ensure the longest term is replaced first.
-    """
-    return pattern.sub(replace_terms_callback, text)
+    # Create pattern from all available terms
+    pattern = create_pattern(term_dict.keys())
+
+    # Find all matches in the text
+    for match in pattern.finditer(text):
+        term = match.group(0)
+        start, end = match.span()
+
+        # Add text before the match
+        result.append(text[current_pos:start])
+
+        # If this is the first occurrence of the term, add the definition
+        if term not in used_terms:
+            result.append(term_dict[term])
+            used_terms.add(term)
+        else:
+            result.append(term)
+
+        current_pos = end
+
+    # Add any remaining text
+    result.append(text[current_pos:])
+
+    return "".join(result)
 
 
 def process_question_or_conclusion(text, term_dict):
     """
     Process a question or conclusion, replacing terms and returning the modified text.
+    Each term will only be defined once within the given text.
     """
     if text:
-        modified_text = replace_terms(text, term_dict)
-        return modified_text
+        return replace_terms_with_tracking(text, term_dict)
     return text
 
 
@@ -62,10 +86,9 @@ for q in decision_tree.get("questions", []):
 # Process conclusions
 for c in decision_tree.get("conclusions", []):
     c["conclusion"] = process_question_or_conclusion(c.get("conclusion", ""), term_dict)
-
+    # Process obligation separately to allow for one definition per field
     c["obligation"] = process_question_or_conclusion(c.get("obligation", ""), term_dict)
 
-
-# Save the modified decision_tree back to a YAML file
+# Save the modified decision_tree back to a JSON file
 with open("frontend/src/assets/decision-tree.json", "w+") as file:
     json.dump(decision_tree, file)
