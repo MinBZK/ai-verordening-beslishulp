@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "python file",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "args": [
+        "-f",
+        "decision-tree.json"
+      ]
+    },
+    {
+      "name": "frontend tool chrome",
+      "type": "chrome",
+      "request": "launch",
+      "skipFiles": [
+        "${workspaceFolder}/frontend/node_modules/**/*.js"
+      ],
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}/frontend/"
+    }
+  ]
+}

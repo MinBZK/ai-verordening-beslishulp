@@ -1,0 +1,6 @@
+.devcontainer/
+.github/
+.venv/
+.vscode/
+*.md
+!README.md
