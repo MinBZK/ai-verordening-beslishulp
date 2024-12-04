@@ -464,37 +464,8 @@ questions:
           - "niet van toepassing"
         nextQuestionId: "2.9" #transparantieverplichting
 
-# Profilering
-  - questionId: "2.5"
-    question: "Voert het AI-systeem profilering van natuurlijke personen uit? Bij profilering is er altijd sprake van een hoog risico."
-    simplifiedQuestion: "Profilering"
-    category: risicogroep
-    subcategory: risicogroep
-    sources:
-      - source: Bijlage I - Lijst van harmonisatiewetgeving van de Unie
-        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e38-124-1
-      - source: Artikel 6 (lid 1)- Classificatieregels voor AI-systemen met een hoog risico
-        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2986-1-1
-    answers:
-      - answer: Ja
-        labels:
-          - "hoog-risico AI"
-        redirects:
-          - nextQuestionId: "2.9" #transparantieverplichting
-            if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels || "aanbieder & gebruiksverantwoordelijke" in labels'
-          - nextConclusionId: "16.0.1"
-            if: '"distributeur" in labels && "AI-systeem" in labels'
-          - nextConclusionId: "16.1.1"
-            if: '"distributeur" in labels && "AI-systeem voor algemene doeleinden" in labels'
-          - nextConclusionId: "15.0.1"
-            if: '"importeur" in labels && "AI-systeem" in labels'
-          - nextConclusionId: "15.1.1"
-            if: '"importeur" in labels && "AI-systeem voor algemene doeleinden" in labels'
-      - answer: Nee
-        nextQuestionId: "2.6"
-
 # Hoog risico bijlage III
-  - questionId: "2.6"
+  - questionId: "2.5"
     question: "We gaan nu bepalen of het AI-systeem onder een van de hoog-risico systemen uit Bijlage III van de AI-verordening valt. Betreft het een AI-systeem op een van de volgende gebieden?<br>
       Beweeg je muis over de opties om te zien welke systemen hieronder vallen.<br><br>
       -	biometrie<br>
@@ -514,7 +485,7 @@ questions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2986-1-1
     answers:
       - answer: Ja
-        nextQuestionId: "2.7" #2j
+        nextQuestionId: "2.6" # profilering
       - answer: Nee
         labels:
           - "geen hoog-risico AI"
@@ -530,24 +501,57 @@ questions:
          - nextConclusionId: "15.1.3"
            if: '"importeur" in labels && "AI-systeem voor algemene doeleinden" in labels'
 
-# Uitzondering
-  - questionId: "2.7"
-    question: "We gaan nu bepalen of er sprake is van een uitzondering op de lijst van hoog-risico AI systemen.<br>
-      Betreft het een AI-systeem dat is bedoeld voor een van de volgende doeleinden?<br><br>
-      -	Het uitvoeren van een beperkte procedurele taak waarbij er geen significant risico is op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?
-      -	Het verbeteren van het resultaat van een eerder voltooide menselijke activiteit en waarbij er geen significant risico is op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?
-      -	Het opsporen van besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen en waarbij het niet bedoeld is om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?
-      -	Het uitvoeren van een voorbereidende taak voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?"
-    simplifiedQuestion: "Uitzondering Hoog risico"
+# Profilering
+  - questionId: "2.6"
+    question: "Voert het AI-systeem profilering van natuurlijke personen uit? Bij profilering is er altijd sprake van een hoog risico."
+    simplifiedQuestion: "Profilering"
     category: risicogroep
     subcategory: risicogroep
     sources:
-      - source: Overweging 53 - Laag risico
-        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_53
+      - source: Bijlage III - Lijst van harmonisatiewetgeving van de Unie
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#anx_III
+      - source: Artikel 6 (lid 3)- Classificatieregels voor AI-systemen met een hoog risico
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2986-1-1
     answers:
       - answer: Ja
         labels:
-          - "geen hoog-risico AI"
+          - "hoog-risico AI"
+        redirects:
+          - nextQuestionId: "2.9" #transparantieverplichting
+            if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels || "aanbieder & gebruiksverantwoordelijke" in labels'
+          - nextConclusionId: "16.0.1"
+            if: '"distributeur" in labels && "AI-systeem" in labels'
+          - nextConclusionId: "16.1.1"
+            if: '"distributeur" in labels && "AI-systeem voor algemene doeleinden" in labels'
+          - nextConclusionId: "15.0.1"
+            if: '"importeur" in labels && "AI-systeem" in labels'
+          - nextConclusionId: "15.1.1"
+            if: '"importeur" in labels && "AI-systeem voor algemene doeleinden" in labels'
+      - answer: Nee
+        nextQuestionId: "2.7" #uitzondering bijlage III hoog risico
+
+# Uitzondering Bijlage III
+  - questionId: "2.7"
+    question: "We gaan nu bepalen of er sprake is van een uitzondering op de lijst van hoog-risico AI systemen (uit bijlage III).<br>
+      Betreft het een AI-systeem dat is bedoeld voor een van de volgende doeleinden?<br><br>
+      -	Het uitvoeren van een beperkte procedurele taak waarbij er geen significant risico is op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?<br>
+      -	Het verbeteren van het resultaat van een eerder voltooide menselijke activiteit en waarbij er geen significant risico is op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?<br>
+      -	Het opsporen van besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen en waarbij het niet bedoeld is om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?<br>
+      -	Het uitvoeren van een voorbereidende taak voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?"
+    simplifiedQuestion: "Uitzondering Hoog risico bijlage III"
+    category: risicogroep
+    subcategory: risicogroep
+    sources:
+      - source: Overweging 53 - Beoordelingscriteria AI-risico's toepassingen
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_53
+      - source: Bijlage III - Lijst van harmonisatiewetgeving van de Unie
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#anx_III
+      - source: Artikel 6 (lid 3)- Classificatieregels voor AI-systemen met een hoog risico
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2986-1-1
+    answers:
+      - answer: Ja
+        labels:
+            - "geen hoog-risico AI"
         redirects:
          - nextQuestionId: "2.9" #transparantieverplichting
            if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels || "aanbieder & gebruiksverantwoordelijke" in labels'
@@ -561,18 +565,19 @@ questions:
            if: '"importeur" in labels && "AI-systeem voor algemene doeleinden" in labels'
       - answer: Nee
         labels:
-          - "hoog-risico AI"
+            - "hoog-risico AI"
         redirects:
-         - nextQuestionId: "2.4.2" #2.9 = transparantieverplichting, 2.4.2 =conformiteitsbeoordeling derde partij
-           if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels || "aanbieder & gebruiksverantwoordelijke" in labels'
-         - nextConclusionId: "16.0.1"
-           if: '"distributeur" in labels && "AI-systeem" in labels'
-         - nextConclusionId: "16.1.1"
-           if: '"distributeur" in labels && "AI-systeem voor algemene doeleinden" in labels'
-         - nextConclusionId: "15.0.1"
-           if: '"importeur" in labels && "AI-systeem" in labels'
-         - nextConclusionId: "15.1.1"
-           if: '"importeur" in labels && "AI-systeem voor algemene doeleinden" in labels'
+            - nextQuestionId: "2.9" #transparantieverplichting
+              if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels || "aanbieder & gebruiksverantwoordelijke" in labels'
+            - nextConclusionId: "16.0.1"
+              if: '"distributeur" in labels && "AI-systeem" in labels'
+            - nextConclusionId: "16.1.1"
+              if: '"distributeur" in labels && "AI-systeem voor algemene doeleinden" in labels'
+            - nextConclusionId: "15.0.1"
+              if: '"importeur" in labels && "AI-systeem" in labels'
+            - nextConclusionId: "15.1.1"
+              if: '"importeur" in labels && "AI-systeem voor algemene doeleinden" in labels'
+
 
 ## Systeemrisico van het gebruike AI-model voor algemene doeleinden
   - questionId: "2.8"
