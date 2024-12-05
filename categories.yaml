@@ -26,6 +26,10 @@
   category: AI verordening van toepassing?
   subcategory: Soort toepassing
 
+- questionId: "1.9"
+  category: AI verordening van toepassing?
+  subcategory: Soort toepassing
+
 - questionId: "2"
   category: Welke risicogroep?
   subcategory: Risicogroep
