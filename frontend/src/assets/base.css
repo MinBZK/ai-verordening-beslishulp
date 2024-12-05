@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.rvo-theme {
+  background-color: var(--utrecht-document-background-color);
+  color: var(--utrecht-document-color);
+  font-family: var(--utrecht-document-font-family);
+  font-size: var(--utrecht-document-font-size);
+  font-weight: var(--utrecht-document-font-weight);
+  line-height: var(--utrecht-document-line-height);
+}
+
+.progress-tracker-font {
+  color: var(--rvo-color-hemelblauw);
+  font-weight: bold;
+}
+
+#progress-question-mobile {
+    @media only screen and (width <= 800px) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.aiv-definition {
+  position: relative;
+  display: inline-block;
+  border-bottom: 2px dotted black;
+}
+
+.aiv-definition .aiv-definition-text {
+  visibility: hidden;
+  width: 300px;
+  background-color: var(--rvo-color-wit);
+  color: var(--rvo-color-zwart);
+  filter: drop-shadow(0 4px 4px rgba(115, 142, 171, 0.5));
+  text-align: left;
+  border-radius: var(--rvo-border-radius-xl);
+  border-color: var(--rvo-color-grijs-200);
+  border: 1px;
+  padding: var(--rvo-alert-padding-sm-padding-block-end);
+  position: absolute;
+  z-index: 1;
+}
+
+.aiv-definition:hover .aiv-definition-text {
+  visibility: visible;
+}
