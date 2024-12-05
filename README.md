@@ -14,7 +14,7 @@ Voor vragen of opmerkingen over de beslishulp mail je naar: [ai-verordening@minb
 
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/MinBZK/ai-verordening-beslishulp/main.svg?badge_token=d3dKEK97RwC1II15_W-nng)](https://results.pre-commit.ci/latest/github/MinBZK/ai-verordening-beslishulp/main?badge_token=d3dKEK97RwC1II15_W-nng)
 
-Deze git repository bevat de beslishulp op basis van de AI Verordening.
+Deze git repository bevat de beslishulp op basis van de AI-verordening.
 Het AI-validatie Team heeft deze tool ontwikkeld, maar is niet verantwoordelijk voor de juridische inhoud van de beslishulp. Voor meer informatie over het AI Validatie Team, bezoek de [site van het AI-validatieteam](https://minbzk.github.io/ai-validation/). Voor vragen over de juridische inhoud, neem contact op met de experts via ai-verordening@minbzk.nl.
 
 Het project omvat de volgende 2 onderdelen:
@@ -34,7 +34,7 @@ Door deze beslishulp te doorlopen, krijgt uw organisatie inzicht in de volgende 
 - Bent u een **aanbieder** of een **gebruiksverantwoordelijke** van het AI-systeem?
 - Aan welke **verplichtingen** moet u voldoen bij de inzet van het AI-systeem?
 
-Om u te helpen bij het beantwoorden van de vragen, zijn relevante overwegingen / artikelen / bijlagen van de AI Verordening gelinkt per vraag.
+Om u te helpen bij het beantwoorden van de vragen, zijn relevante overwegingen / artikelen / bijlagen van de AI-verordening gelinkt per vraag.
 
 ## Beslishulp componenten
 
@@ -71,7 +71,7 @@ Answer:                   # definitie van 1 antwoord
 Conclusion:               # definitie van 1 eindconclusie
   conslusion: string      # de eindconclusie
   conclusionComment: string   #optioneel: een extra opmerking bij de conclusie
-  obligation: string      # de bij de conclusie bebehorende verplichtingen uit de AI verordening
+  obligation: string      # de bij de conclusie bebehorende verplichtingen uit de AI-verordening
   source: string          # optioneel: een verwijzing, naar bijvoorbeeld een wetsartikel
   source_url: string      # optioneel: een link naar de bovengenoemde verwijzing
 ```

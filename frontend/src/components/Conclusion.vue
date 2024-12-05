@@ -29,7 +29,7 @@ defineEmits(['back'])
     </p>
     <div class="rvo-accordion">
       <!--   Profile labels section  -->
-      <SubResult :category="category" :labels="labels" title="AI Verordening Profiel" conclusion="conclusion" />
+      <SubResult :category="category" :labels="labels" title="AI-verordening Profiel" conclusion="conclusion" />
 
       <!-- Accordion for Obligation/Verplichtingen section, visible only if there are obligations -->
       <div v-if="obligation">

@@ -2,20 +2,20 @@ import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
 export const useCategoryStore = defineStore('category', () => {
-  const startCategory = 'AI verordening van toepassing?'
+  const startCategory = 'AI-verordening van toepassing?'
   const startSubCategory = 'Soort toepassing'
   const initialPreviousCategory = sessionStorage.getItem('previousCategory') ?? startCategory
   const initialPreviousSubCategory = sessionStorage.getItem('previousSubCategory') ?? startSubCategory
   const initialCurrentCategory = sessionStorage.getItem('currentCategory') ?? startCategory
   const initialCurrentSubCategory = sessionStorage.getItem('currentSubCategory') ?? startSubCategory
-  const initialCategoryTrace = JSON.parse(sessionStorage.getItem('categoryTrace') ?? '["AI verordening van toepassing?"]')
+  const initialCategoryTrace = JSON.parse(sessionStorage.getItem('categoryTrace') ?? '["AI-verordening van toepassing?"]')
   const initialSubCategoryTrace = JSON.parse(sessionStorage.getItem('subCategoryTrace') ?? '["Soort toepassing"]')
   const initialCategoryStateString = `{
   "ai_act_applicable_state": "doing",
   "risk_group_state": "incomplete"
 }`
   const categoryMapper = {
-    'AI verordening van toepassing?': 'ai_act_applicable_state',
+    'AI-verordening van toepassing?': 'ai_act_applicable_state',
     'Welke risicogroep?': 'risk_group_state'
   }
 
