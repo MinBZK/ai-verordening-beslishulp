@@ -277,7 +277,18 @@ questions:
       - answer: Nee
         labels:
           - "verboden AI"
-        nextConclusionId: "11.1" #conclusie verboden AI
+        redirects:
+          - nextConclusionId: "12.0.0"
+            if: '"aanbieder" in labels'
+          - nextConclusionId: "13.0.0"
+            if: '"gebruiksverantwoordelijke" in labels'
+          - nextConclusionId: "14.0.0"
+            if: '"aanbieder & gebruiksverantwoordelijke" in labels'
+          - nextConclusionId: "15.0.0"
+            if: '"importeur" in labels'
+          - nextConclusionId: "16.0.0"
+            if: '"distributeur" in labels'
+
 
 # Rol in of als veiligheidscomponent van een product onder Bijlage I
   - questionId: "2.3"
@@ -755,6 +766,12 @@ questions:
 ### Conclusies
 conclusions:
 ###Conclusies 12.0.1 tm 12.1.2 voor aanbieders
+  - conclusionId: "12.0.0"
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent aanbieder van een verboden AI-systeem."
+    obligation: "Het AI-systeem moet van de markt worden gehaald. Let op: dit verbod geldt vanaf 1 februari 2025."
+    sources:
+      - source: Artikel 5 - Verboden AI praktijken
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2816-1-1
   - conclusionId: "12.0.1"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een hoog-risico AI-systeem. Het AI-systeem moet voldoen aan transparantieverplichtingen. "
     obligation: "
@@ -1204,6 +1221,12 @@ conclusions:
       - source: Overweging 179 - Ingangtreding verordening
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_179
 # Conclusies 13.0.1 tm 13.2.1 voor gebruiksverantwoordelijken
+  - conclusionId: "13.0.0"
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent gebruiksverantwoordelijke van een verboden AI-systeem."
+    obligation: "Het gebruik van het AI-systeem moet worden stop gezet. Let op: dit geldt vanaf 1 februari 2025."
+    sources:
+      - source: Artikel 5 - Verboden AI praktijken
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2816-1-1
   - conclusionId: "13.0.1"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem. Het AI-systeem moet voldoen aan transparantieverplichtingen. "
     obligation: "
@@ -1469,6 +1492,12 @@ conclusions:
 
 
 # Conclusies 14.0.1 tm 14.1.2 voor gebruiksverantwoordelijken && aanbieders
+  - conclusionId: "14.0.0"
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent aanbieder en gebruiksverantwoordelijke van een verboden AI-systeem."
+    obligation: "Het AI-systeem moet van de markt worden gehaald en het gebruik ervan stop gezet. Let op: dit geldt vanaf 1 februari 2025."
+    sources:
+      - source: Artikel 5 - Verboden AI praktijken
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2816-1-1
   - conclusionId: "14.0.1"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem. Het AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "
@@ -1995,6 +2024,12 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_179
 
 ## Conclusies voor importeur (13)
+  - conclusionId: "15.0.0"
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent importeur van een verboden AI-systeem."
+    obligation: "Het AI-systeem moet van de markt worden gehaald en het gebruik ervan stop gezet. Let op: dit geldt vanaf 1 februari 2025."
+    sources:
+      - source: Artikel 5 - Verboden AI praktijken
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2816-1-1
   - conclusionId: "15.0.1"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een importeur van een AI-systeem een hoog risico."
     obligation: "
@@ -2068,6 +2103,12 @@ conclusions:
 
 
 ## Conclusies voor distributeur (14)
+  - conclusionId: "16.0.0"
+    conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent distributeur van een verboden AI-systeem."
+    obligation: "Het AI-systeem moet van de markt worden gehaald en het gebruik ervan stop gezet. Let op: dit geldt vanaf 1 februari 2025."
+    sources:
+      - source: Artikel 5 - Verboden AI praktijken
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2816-1-1
   - conclusionId: "16.0.1"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een distributeur van een hoog-risico AI-systeem."
     obligation: "
@@ -2134,12 +2175,6 @@ conclusions:
   - conclusionId: "11.0"
     conclusion: "Je hebt geantwoord dat er geen sprake is van een algoritme, hierdoor is de AI-verordening niet voor jou van toepassing. Op basis van je antwoorden is het niet nodig om door te gaan naar Stap 2 – bepalen risicogroep. "
     obligation: "Houd je aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)."
-  - conclusionId: "11.1"
-    conclusion: "Het is verboden om dit AI-systeem of model te gebruiken."
-    obligation: "Het is verboden om dit AI-systeem te gebruiken. Let op: dit verbod geldt vanaf 1 februari 2025."
-    sources:
-      - source: Artikel 5 - Verboden AI praktijken
-        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2816-1-1
   - conclusionId: "11.2"
     conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat je een uitzonderingsgrond hebt geselecteerd."
     obligation: "Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt). Verder dien je te registreren in het algoritmeregister."
