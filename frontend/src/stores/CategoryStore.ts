@@ -16,7 +16,7 @@ export const useCategoryStore = defineStore('category', () => {
 }`
   const categoryMapper = {
     'AI-verordening van toepassing?': 'ai_act_applicable_state',
-    'Welke risicogroep?': 'risk_group_state'
+    'Welke risicogroep geldt?': 'risk_group_state'
   }
 
   const initialCategoryState = JSON.parse(sessionStorage.getItem('categoryState') ?? initialCategoryStateString)
