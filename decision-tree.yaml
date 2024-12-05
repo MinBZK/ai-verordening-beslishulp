@@ -1,8 +1,8 @@
 version: 1.0.0
 name: Beslishulp AI-verordening
 questions:
-  ### check definitie algoritme
-  - questionId: "1.2" # TO do: check of 0 is gehardcode als 'start'?
+  # Definitie algoritme
+  - questionId: "1.2"
     question: "Bevat de (beoogde) toepassing een algoritme?"
     simplifiedQuestion: "Algoritme"
     category: van_toepassing
@@ -69,7 +69,7 @@ questions:
       - answer: Geen van bovenstaande
         nextConclusionId: "11.6"
 
-# in gebruik
+# In gebruik?
   - questionId: "1.4"
     question: "Is de toepassing al in gebruik of niet?<br>
       Dit is van belang omdat er verschillende deadlines zijn voor het voldoen aan de AI-verordening: toepassingen die al in gebruik zijn, moeten uiterlijk in 2030 voldoen. Voor nieuwe toepassingen gelden kortere termijnen, afhankelijk van het type toepassing. In de volgende vragen gaan we het type toepassing bepalen om de exacte deadline te kunnen vaststellen."
@@ -158,7 +158,7 @@ questions:
       - answer: Ja
         labels:
           - "uitzondering van toepassing"
-        nextConclusionId: "11.2" # Hoeft niet te voldoen aan de AI-vo
+        nextConclusionId: "11.2"
       - answer: Nee
         redirects:
           - nextQuestionId: "2.0"
@@ -166,7 +166,7 @@ questions:
           - nextConclusionId: "13.2.1"
             if: '"AI-model voor algemene doeleinden" in labels && "gebruiksverantwoordelijke" in labels'
 
- #### Impactvol algoritme
+ # Impactvol algoritme
   - questionId: "1.7"
     question: "Valt jouw algoritme onder categorie B van de Handreiking Algoritmeregister, waarbij het gebruik impact heeft op burgers of groepen,
       bijvoorbeeld door rechtsgevolgen (zoals een boete of subsidieafwijzing) of door classificatie van burgers (zoals profilering of risico-indicatie voor controle)?"
@@ -205,7 +205,7 @@ questions:
         labels:
           - "impactvol algoritme"
 
-## Verboden AI ysteem
+# Verboden AI ysteem
   - questionId: "2.0"
     question: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. We gaan nu bepalen in welke risicogroep het AI-systeem valt. Hiervoor gaan we maximaal 7 vragen langslopen.<br><br>"
     simplifiedQuestion: "Tussenscherm"
@@ -240,7 +240,7 @@ questions:
       - answer: Ja
         nextQuestionId: "2.2" #uitzondering verboden AI
       - answer: Nee
-        nextQuestionId: "2.3" #verkenning risicogroep
+        nextQuestionId: "2.3" #risicogroep
 
 # Uitzondering verboden AI
   - questionId: "2.2"
@@ -264,7 +264,7 @@ questions:
         labels:
           - "hoog-risico AI"
         redirects:
-         - nextQuestionId: "2.4.2"
+         - nextQuestionId: "2.4.2" #conformiteitsbeoordeling
            if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels || "aanbieder & gebruiksverantwoordelijke" in labels'
          - nextConclusionId: "16.0.1"
            if: '"distributeur" in labels && "AI-systeem" in labels'
@@ -279,7 +279,7 @@ questions:
           - "verboden AI"
         nextConclusionId: "11.1" #conclusie verboden AI
 
-### Rol in of als veiligheidscomponent van een product onder Bijlage I
+# Rol in of als veiligheidscomponent van een product onder Bijlage I
   - questionId: "2.3"
     question: "Is het AI-systeem bedoeld om te worden gebruikt als een veiligheidscomponent van een product dat valt onder de lijst in Bijlage I?<br><br>
       Specifiek, valt het AI-systeem onder de veiligheidscomponenten van:<br>
@@ -608,8 +608,8 @@ questions:
         labels:
           - "geen systeemrisico"
         redirects:
-          - nextQuestionId: "2.11"
-            if: '"aanbieder" in labels || "aanbieder & gebruiksverantwoordelijke" in labels' #open-source
+          - nextQuestionId: "2.11" # open-source
+            if: '"aanbieder" in labels || "aanbieder & gebruiksverantwoordelijke" in labels'
           - nextConclusionId: "13.2.1"
             if: '"gebruiksverantwoordelijke" in labels'
 
@@ -727,7 +727,7 @@ questions:
 
 ## Open-source "Zijn de broncodes en parameters openbaar voor eenieder?"
   - questionId: "2.11"
-    question: "Wordt de toepassing onder een open of vrije licentie gedeeld? Zijn de broncodes en parameters openbaar voor eenieder?"
+    question: "Wordt de toepassing onder een open of vrije licentie gedeeld en zijn de broncodes en parameters openbaar voor eenieder?"
     simplifiedQuestion: "Open of vrije licentie"
     category: risicogroep
     subcategory: open-source
