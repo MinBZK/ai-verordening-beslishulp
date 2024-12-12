@@ -98,22 +98,50 @@ export const useQuestionStore = defineStore('question', () => {
     sessionStorage.setItem('answers', JSON.stringify(answers.value))
   }
 
+
   function revertAnswer(previousSubCategory: string) {
-    QuestionId.value = answers.value[answers.value.length - 1]
-    answers.value.pop()
-    if (labels.value[QuestionId.value]) {
-      const label: string = labels.value[QuestionId.value]
-      LabelsBySubCategory.value[previousSubCategory].pop(label)
+    // Haal de laatste vraag ID op en verwijder deze uit de antwoorden
+    const currentQuestionId = answers.value[answers.value.length - 1];
+    answers.value.pop();
+
+    // Update QuestionId naar de nieuwe huidige vraag (de vorige in de lijst)
+    const newQuestionId = answers.value.length > 0
+      ? answers.value[answers.value.length - 1]
+      : '1'; // of je startwaarde
+
+    // Verwerk labels voor de verwijderde vraag
+    if (labels.value[currentQuestionId]) {
+      const questionLabels = labels.value[currentQuestionId];
+
+      // Converteer enkele label naar array voor consistente verwerking
+      const labelArray = Array.isArray(questionLabels) ? questionLabels : [questionLabels];
+
+      // Verwijder alle labels van deze vraag uit de subcategorie
+      labelArray.forEach(label => {
+        const index = LabelsBySubCategory.value[previousSubCategory].indexOf(label);
+        if (index > -1) {
+          LabelsBySubCategory.value[previousSubCategory].splice(index, 1);
+        }
+      });
+
+      // Als er geen labels meer zijn in de subcategorie, voeg 'nader te bepalen' toe
       if (LabelsBySubCategory.value[previousSubCategory].length === 0) {
-        LabelsBySubCategory.value[previousSubCategory].push('nader te bepalen')
+        LabelsBySubCategory.value[previousSubCategory] = ['nader te bepalen'];
       }
-      delete labels.value[QuestionId.value]
+
+      // Verwijder de labels voor deze vraag
+      delete labels.value[currentQuestionId];
     }
-    sessionStorage.setItem('answers', JSON.stringify(answers.value))
-    sessionStorage.setItem('currentquestion', QuestionId.value)
-    sessionStorage.setItem('labels', JSON.stringify(labels.value))
-    sessionStorage.setItem('labelsbysubcategory', JSON.stringify(LabelsBySubCategory.value))
+
+    // Update sessionStorage met de nieuwe QuestionId
+    sessionStorage.setItem('answers', JSON.stringify(answers.value));
+    sessionStorage.setItem('currentquestion', newQuestionId);
+    sessionStorage.setItem('labels', JSON.stringify(labels.value));
+    sessionStorage.setItem('labelsbysubcategory', JSON.stringify(LabelsBySubCategory.value));
+
+    return newQuestionId; // Optioneel: return de nieuwe QuestionId als je deze nodig hebt
   }
+
 
   function reset() {
     answers.value = []
