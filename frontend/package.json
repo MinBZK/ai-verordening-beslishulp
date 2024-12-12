@@ -24,7 +24,7 @@
     "io-ts": "^2.2.21",
     "jexl": "^2.3.0",
     "js-yaml": "^4.1.0",
-    "pinia": "^2.2.6",
+    "pinia": "^2.3.0",
     "vite-plugin-css-injected-by-js": "^3.5.2",
     "vue": "^3.5.13"
   },
@@ -32,7 +32,7 @@
     "@rushstack/eslint-patch": "^1.10.4",
     "@tsconfig/node20": "^20.1.4",
     "@types/js-yaml": "^4.0.9",
-    "@types/node": "^22.9.3",
+    "@types/node": "^22.10.1",
     "@vitejs/plugin-vue": "^5.2.0",
     "@vue/eslint-config-prettier": "^10.1.0",
     "@vue/eslint-config-typescript": "^13.0.0",
@@ -42,8 +42,8 @@
     "eslint-plugin-vue": "^9.32.0",
     "npm-run-all2": "^7.0.1",
     "postcss": "^8.4.49",
-    "prettier": "^3.3.3",
-    "tailwindcss": "^3.4.15",
+    "prettier": "^3.4.2",
+    "tailwindcss": "^3.4.16",
     "typescript": "~5.6.3",
     "vite": "^5.4.11",
     "vue-tsc": "^2.1.10"
