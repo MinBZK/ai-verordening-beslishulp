@@ -45,7 +45,7 @@ export const useQuestionStore = defineStore('question', () => {
 
   function getJsonLabels() {
     const label_dict = JSON.parse(sessionStorage.getItem('labels') ?? '{}')
-    const label_list = Object.values(label_dict).map(String)
+    const label_list = Object.values(label_dict).flat()
     return label_list
   }
 
@@ -99,16 +99,31 @@ export const useQuestionStore = defineStore('question', () => {
   }
 
   function revertAnswer(previousSubCategory: string) {
+    /**
+     * This function reverts the answer to the question if the user goes back a question.
+     * For this purpose the QuestionId, answers, labels for the subcategory are reverted.
+     * If there is no label for the subcategory, "nader te bepalen" is assigned.
+     */
     QuestionId.value = answers.value[answers.value.length - 1]
     answers.value.pop()
+
     if (labels.value[QuestionId.value]) {
-      const label: string = labels.value[QuestionId.value]
-      LabelsBySubCategory.value[previousSubCategory].pop(label)
+      const questionLabels: string[] = labels.value[QuestionId.value]
+
+      questionLabels.forEach(label => {
+        const labelIndex = LabelsBySubCategory.value[previousSubCategory].indexOf(label)
+        if (labelIndex !== -1) {
+          LabelsBySubCategory.value[previousSubCategory].splice(labelIndex, 1)
+        }
+      })
+
       if (LabelsBySubCategory.value[previousSubCategory].length === 0) {
-        LabelsBySubCategory.value[previousSubCategory].push('nader te bepalen')
+        LabelsBySubCategory.value[previousSubCategory] = ['nader te bepalen']
       }
+
       delete labels.value[QuestionId.value]
     }
+
     sessionStorage.setItem('answers', JSON.stringify(answers.value))
     sessionStorage.setItem('currentquestion', QuestionId.value)
     sessionStorage.setItem('labels', JSON.stringify(labels.value))
