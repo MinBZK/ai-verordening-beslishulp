@@ -88,20 +88,20 @@ questions:
     answers:
       - answer: In gebruik
         labels:
-          - "in gebruik"
-        nextQuestionId: "1.5"
+           - "in gebruik"
+        nextQuestionId: "1.5.1"
       - answer: In ontwikkeling
         labels:
           - "in ontwikkeling"
-        nextQuestionId: "1.5"
+        nextQuestionId: "1.5.1"
 
-# AI-systeem
-  - questionId: "1.5"
-    question: "Hoe zou je jouw (beoogde) toepassing classificeren, gezien de volgende definities: een AI-systeem, een AI-systeem voor algemene doeleinden, of een AI-model voor algemene doeleinden?"
+ # AI-systeem
+  - questionId: "1.5.1"
+    question: "Is jouw (beoogde) toepassing een AI-systeem?"
     explanation: "
-      - AI-systeem: Een machine-gebaseerd systeem dat autonoom werkt, zichzelf kan aanpassen na inzet, en output levert zoals voorspellingen, inhoud, aanbevelingen of beslissingen. Deze output kan fysieke of virtuele omgevingen beïnvloeden. AI-systemen gebruiken inferentie, waarbij modellen of algoritmen worden afgeleid uit data, en combineren technieken als machinaal leren, logica en kennisrepresentatie.<br><br>
-      - AI-model voor algemene doeleinden: Een flexibel AI-model, zoals een generatief model, dat ingezet kan worden voor meerdere taken zoals tekst, beeld, audio of video en gemakkelijk integreerbaar is in andere systemen.<br><br>
-      - AI-systeem voor algemene doeleinden: Een systeem dat een AI-model voor algemene doeleinden bevat en breed inzetbaar is, zowel direct als via integratie in andere systemen."
+      Een AI-systeem is een machine-gebaseerd systeem dat autonoom werkt, zichzelf kan aanpassen na inzet, en output levert zoals voorspellingen, inhoud, aanbevelingen of beslissingen. Deze output kan fysieke of virtuele omgevingen beïnvloeden. AI-systemen gebruiken inferentie, waarbij modellen of algoritmen worden afgeleid uit data, en combineren technieken als machinaal leren, logica en kennisrepresentatie. <br><br>
+      Let op: AI-systemen voor algemene doeleinden, zoals generatieve AI, vallen niet onder deze definitie. Ook systemen die een AI-model voor algemene doeleinden gebruiken, worden niet meegerekend. <br><br>
+      Ben je niet zeker of jouw (beoogde) toepassing onder deze definitie valt? Klik dan op 'Ik weet het niet' en beantwoord maximaal drie aanvullende vragen om het te achterhalen."
     category: van_toepassing
     subcategory: "AI-systeem"
     sources:
@@ -118,10 +118,38 @@ questions:
       - source: Begrippenlijst Algoritmekader
         url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
     answers:
-      - answer: AI-systeem
-        labels:
-          - "AI-systeem"
-        nextQuestionId: "1.6"
+        - answer: Ja, het is een AI-systeem
+          labels:
+            - "AI-systeem"
+          nextQuestionId: "1.6"
+        - answer: Nee, het is geen AI-systeem
+          nextQuestionId: "1.5.2"
+        - answer: Ik weet het niet
+          nextQuestionId: "1.9.1"
+
+# AI-systeem
+  - questionId: "1.5.2"
+    question: "Is jouw (beoogde) toepassing een AI-model voor algemene doeleinden of AI-systeem voor algemene doeleinden?"
+    explanation: "
+      - Een AI-model voor algemene doeleinden is een flexibel AI-model, zoals een generatief model, dat ingezet kan worden voor meerdere taken zoals tekst, beeld, audio of video en gemakkelijk integreerbaar is in andere systemen.<br><br>
+      - Een AI-systeem voor algemene doeleinden is een systeem dat een AI-model voor algemene doeleinden bevat en breed inzetbaar is, zowel direct als via integratie in andere systemen."
+    simplifiedQuestion:
+    category: van_toepassing
+    subcategory: "GPAI-systeem of GPAI-model"
+    sources:
+      - source: Artikel 3 - Definities
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2093-1-1
+      - source: Overweging 12 - Begrip "AI-systeem"
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_12
+      - source: Overweging 97 - Begrip "AI-model voor algemene doeleinden"
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_97
+      - source: Overweging 99 - Generatieve AI-modellen als voorbeeld van AI-modellen voor algemene doeleinden
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_99
+      - source: Overweging 100 - Classificatie van AI-systemen met geïntegreerde AI-modellen voor algemene doeleinden
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_100
+      - source: Begrippenlijst Algoritmekader
+        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
+    answers:
       - answer: AI-systeem voor algemene doeleinden
         labels:
           - "AI-systeem voor algemene doeleinden"
@@ -130,14 +158,76 @@ questions:
         labels:
           - "AI-model voor algemene doeleinden"
         redirects:
-         - nextQuestionId: "1.6"
-           if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels'
-         - nextConclusionId: "16.2.1"
-           if: '"distributeur" in labels'
-         - nextConclusionId: "15.2.1"
-           if: '"importeur" in labels'
+          - nextQuestionId: "1.6"
+            if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels || "aanbieder & gebruiksverantwoordelijke" in labels'
+          - nextConclusionId: "16.2.1"
+            if: '"distributeur" in labels'
+          - nextConclusionId: "15.2.1"
+            if: '"importeur" in labels'
       - answer: Geen van bovenstaande
         nextQuestionId: "1.7" # Impactvol algoritme
+
+# Hulp bij AI-systeem definitie
+  - questionId: "1.9.1"
+    question: "Is jouw (beoogde) toepassing gebaseerd op door mensen gedefinieerde regels om operaties te automatiseren, waarbij deze regels niet zijn afgeleid uit data of kennis?"
+    explanation: "Als het systeem wegingsfactoren of beoordelingen gebruikt van experts of gegevens uit andere modellen of bronnen bevat, wordt het beschouwd als gebaseerd op data. Dit komt doordat dergelijke factoren voortkomen uit ervaringsgegevens van experts of uit data die is gebruikt om de wegingsfactoren te bepalen.<br><br>
+      Als je 'Ja' antwoordt, valt jouw toepassing niet onder de definitie van een AI-systeem volgens de AI-verordening. Je wordt dan doorgestuurd naar vragen over de mogelijke classificatie als een impactvol algoritme."
+    category: van_toepassing
+    subcategory: "Definitie AI-systeem - Beslisregels"
+    sources:
+      - source: Artikel 3 - Definities
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2093-1-1
+      - source: Overweging 12 - Begrip "AI-systeem"
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_12
+    answers:
+      - answer: Ja
+        nextQuestionId: "1.7" # Impactvol algoritme
+      - answer: Nee
+        nextQuestionId: "1.9.2"
+
+# Hulp bij AI-systeem definitie
+  - questionId: "1.9.2"
+    question: "Maakt het jouw (beoogde) toepassing inferenties?"
+    explanation: "Dit omvat alle technieken en benaderingen voor inferentie. Geen enkele techniek wordt uitgesloten, inclusief bijvoorbeeld ‘scorecards’ met wegingsfactoren die door experts zijn gedefinieerd of verkregen vanuit een separaat model.<br><br>
+      Als je ja antwoordt, valt jouw toepassing onder de definitie van een AI-systeem volgens de AI-verordening. Je wordt dan doorgestuurd naar verdere vragen om de impact van de inferentie te beoordelen."
+    category: van_toepassing
+    subcategory: "Definitie AI-systeem - Inferentie"
+    sources:
+      - source: Artikel 3 - Definities
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2093-1-1
+      - source: Overweging 12 - Begrip "AI-systeem"
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_12
+    answers:
+      - answer: Ja
+        nextQuestionId: "1.7" # Impactvol algoritme
+      - answer: Nee
+        nextQuestionId: "1.9.3"
+
+
+# Hulp bij AI-systeem definitie
+  - questionId: "1.9.3"
+    question: "Kan jouw (beoogde) toepassing de omgeving beinvloeden?"
+    explanation: "Dit betreft systemen waarvan de uitvoer gekoppeld is aan een actie of besluit dat daadwerkelijk de omgeving beïnvloedt. Voorbeelden zijn systemen die beslissingen nemen die gevolgen hebben voor de fysieke of digitale omgeving. Systemen die onder de OESO-classificatie “Autonomie zonder actie” vallen, vallen niet onder deze categorie.<br><br>
+
+      Als je ja antwoordt, betekent dit dat jouw toepassing de omgeving kan beïnvloeden. Je wordt dan doorgestuurd naar verdere vragen om de mate van invloed en de mogelijke impact te beoordelen."
+    simplifiedQuestion:
+    category: van_toepassing
+    subcategory: "Definitie AI-systeem - Omgeving"
+    sources:
+      - source: Artikel 3 - Definities
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2093-1-1
+      - source: Overweging 12 - Begrip "AI-systeem"
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_12
+      - source: Factsheet OESO richtlijnen voor multinationale ondernemingen
+        url: https://www.oesorichtlijnen.nl/oeso-richtlijnen/algemene-informatie-oeso-richtlijnen/documenten/publicatie/2021/10/07/factsheet-oeso-richtlijnen-voor-multinationale-ondernemingen
+    answers:
+      - answer: Ja
+        nextQuestionId: "1.7" # Impactvol algoritme
+      - answer: Nee
+        labels:
+          - "AI-systeem"
+        nextQuestionId: "1.6" # Impactvol algoritme
+
 
 # Uitzonderingsgrond
   - questionId: "1.6"
