@@ -203,7 +203,7 @@ def create_nodes(conclusions: list[Conclusion], questions: list[Question], secon
         nodes.append(
             CustomNode(
                 id_="q-" + question.questionId,
-                content=question.questionId + ": " + question.simplifiedQuestion,
+                content=question.questionId + ": " + question.subcategory,
                 shape="circle",
                 callback_tooltip=question.question,
                 category=question.category,

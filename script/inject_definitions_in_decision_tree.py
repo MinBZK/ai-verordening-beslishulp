@@ -82,6 +82,7 @@ def process_question_or_conclusion(text, term_dict):
 # Process questions
 for q in decision_tree.get("questions", []):
     q["question"] = process_question_or_conclusion(q.get("question", ""), term_dict)
+    q["explanation"] = process_question_or_conclusion(q.get("explanation", ""), term_dict)
 
 # Process conclusions
 for c in decision_tree.get("conclusions", []):

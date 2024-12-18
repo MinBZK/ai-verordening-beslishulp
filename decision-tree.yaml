@@ -4,9 +4,9 @@ questions:
   # Definitie algoritme
   - questionId: "1.2"
     question: "Bevat de (beoogde) toepassing een algoritme?"
-    simplifiedQuestion: "Algoritme"
+    explanation: ""
     category: van_toepassing
-    subcategory: soort_toepassing
+    subcategory: "Algoritme"
     sources:
       - source: Aandacht voor Algoritmes, Algemene Rekenkamer, 2021
         url: https://www.rekenkamer.nl/onderwerpen/algoritmes/documenten/rapporten/2021/01/26/aandacht-voor-algoritmes
@@ -23,10 +23,10 @@ questions:
         nextConclusionId: "11.0"
 # Rol
   - questionId: "1.3"
-    question: "Ontwikkelen jullie de toepassing in eigen beheer of is/wordt deze ontwikkeld door een andere partij? Op basis van het antwoord op deze vraag zal je rol worden toegewezen: aanbieder, gebruiksverantwoordelijke, importeur en/of distributeur?"
-    simplifiedQuestion: "Rol"
+    question: "Ontwikkelen jullie de toepassing in eigen beheer of is/wordt deze ontwikkeld door een andere partij?"
+    explanation: "Op basis van het antwoord op deze vraag zal je rol worden toegewezen: aanbieder, gebruiksverantwoordelijke, importeur en/of distributeur. "
     category: van_toepassing
-    subcategory: rol
+    subcategory: "Rol"
     sources:
       - source: Artikel 3 - Definities
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2093-1-1
@@ -74,11 +74,10 @@ questions:
 
 # In gebruik?
   - questionId: "1.4"
-    question: "Is de toepassing al in gebruik of niet?<br>
-      Dit is van belang omdat er verschillende deadlines zijn voor het voldoen aan de AI-verordening: toepassingen die al in gebruik zijn, moeten uiterlijk in 2030 voldoen. Voor nieuwe toepassingen gelden kortere termijnen, afhankelijk van het type toepassing. In de volgende vragen gaan we het type toepassing bepalen om de exacte deadline te kunnen vaststellen."
-    simplifiedQuestion: "In gebruik"
+    question: "Is de toepassing al in gebruik of niet?"
+    explanation: "Dit is van belang omdat er verschillende deadlines zijn voor het voldoen aan de AI-verordening: toepassingen die al in gebruik zijn, moeten uiterlijk in 2030 voldoen. Voor nieuwe toepassingen gelden kortere termijnen, afhankelijk van het type toepassing. In de volgende vragen gaan we het type toepassing bepalen om de exacte deadline te kunnen vaststellen."
     category: van_toepassing
-    subcategory: soort_toepassing
+    subcategory: "In gebruik"
     sources:
       - source: Artikel 111 - Reeds in de handel gebrachte of in gebruik gestelde AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e8928-1-1
@@ -98,13 +97,13 @@ questions:
 
 # AI-systeem
   - questionId: "1.5"
-    question: "Hoe zou je jouw (beoogde) toepassing classificeren, gezien de volgende definities: een AI-systeem, een AI-systeem voor algemene doeleinden, of een AI-model voor algemene doeleinden?<br><br>
-      - AI-systeem: Een machine-gebaseerd systeem dat autonoom werkt, zichzelf kan aanpassen na inzet, en output levert zoals voorspellingen, inhoud, aanbevelingen of beslissingen. Deze output kan fysieke of virtuele omgevingen beïnvloeden. AI-systemen gebruiken inferentie, waarbij modellen of algoritmen worden afgeleid uit data, en combineren technieken als machinaal leren, logica en kennisrepresentatie.<br>
-      - AI-model voor algemene doeleinden: Een flexibel AI-model, zoals een generatief model, dat ingezet kan worden voor meerdere taken zoals tekst, beeld, audio of video en gemakkelijk integreerbaar is in andere systemen.<br>
+    question: "Hoe zou je jouw (beoogde) toepassing classificeren, gezien de volgende definities: een AI-systeem, een AI-systeem voor algemene doeleinden, of een AI-model voor algemene doeleinden?"
+    explanation: "
+      - AI-systeem: Een machine-gebaseerd systeem dat autonoom werkt, zichzelf kan aanpassen na inzet, en output levert zoals voorspellingen, inhoud, aanbevelingen of beslissingen. Deze output kan fysieke of virtuele omgevingen beïnvloeden. AI-systemen gebruiken inferentie, waarbij modellen of algoritmen worden afgeleid uit data, en combineren technieken als machinaal leren, logica en kennisrepresentatie.<br><br>
+      - AI-model voor algemene doeleinden: Een flexibel AI-model, zoals een generatief model, dat ingezet kan worden voor meerdere taken zoals tekst, beeld, audio of video en gemakkelijk integreerbaar is in andere systemen.<br><br>
       - AI-systeem voor algemene doeleinden: Een systeem dat een AI-model voor algemene doeleinden bevat en breed inzetbaar is, zowel direct als via integratie in andere systemen."
-    simplifiedQuestion: "AI-systeem"
     category: van_toepassing
-    subcategory: soort_toepassing
+    subcategory: "AI-systeem"
     sources:
       - source: Artikel 3 - Definities
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2093-1-1
@@ -142,16 +141,15 @@ questions:
 
 # Uitzonderingsgrond
   - questionId: "1.6"
-    question: "Is er voor de (beoogde) toepassing sprake van een uitzonderingsgrond?<br><br>
-      - AI-systemen die uitsluitend in de handel worden gebracht, in gebruik worden gesteld of, al dan niet gewijzigd, worden gebruikt voor militaire, defensie- of nationale veiligheidsdoeleinden<br>
-      - AI-systemen die niet in de Unie in de handel worden gebracht of in gebruik worden gesteld en waarvan de output in de Unie uitsluitend wordt gebruikt voor militaire, defensie- of nationale veiligheidsdoeleinden<br>
-      - overheidsinstanties in derde landen of internationale organisaties die binnen het toepassingsgebied van de AI-verordening vallen, wanneer deze instanties of organisaties AI-systemen gebruiken in het kader van internationale samenwerking of overeenkomsten met de Unie of een of meer lidstaten op het gebied van rechtshandhaving en justitie<br>
-      - onderzoeks-, test- of ontwikkelingsactiviteiten met betrekking tot AI-systemen of AI-modellen voor zij in de handel worden gebracht of in gebruik worden gesteld (testen onder reële omstandigheden valt hier niet onder)<br>
-      - AI-systemen of AI-modellen, met inbegrip van hun output, die specifiek zijn ontwikkeld en in gebruik worden gesteld met wetenschappelijk onderzoek en wetenschappelijke ontwikkeling als enig doel<br><br>
-      Is er volgens deze uitleg sprake van een van deze uitzonderingsgronden voor de toepassing waarover je deze beslishulp invult?"
-    simplifiedQuestion: "Uitzonderingsgrond AI Act"
+    question: "Is er voor de (beoogde) toepassing sprake van een uitzonderingsgrond?"
+    explanation: "Uitzonderingsgronden: <br><br>
+      - AI-systemen die uitsluitend in de handel worden gebracht, in gebruik worden gesteld of, al dan niet gewijzigd, worden gebruikt voor militaire, defensie- of nationale veiligheidsdoeleinden<br><br>
+      - AI-systemen die niet in de Unie in de handel worden gebracht of in gebruik worden gesteld en waarvan de output in de Unie uitsluitend wordt gebruikt voor militaire, defensie- of nationale veiligheidsdoeleinden<br><br>
+      - overheidsinstanties in derde landen of internationale organisaties die binnen het toepassingsgebied van de AI-verordening vallen, wanneer deze instanties of organisaties AI-systemen gebruiken in het kader van internationale samenwerking of overeenkomsten met de Unie of een of meer lidstaten op het gebied van rechtshandhaving en justitie<br><br>
+      - onderzoeks-, test- of ontwikkelingsactiviteiten met betrekking tot AI-systemen of AI-modellen voor zij in de handel worden gebracht of in gebruik worden gesteld (testen onder reële omstandigheden valt hier niet onder)<br><br>
+      - AI-systemen of AI-modellen, met inbegrip van hun output, die specifiek zijn ontwikkeld en in gebruik worden gesteld met wetenschappelijk onderzoek en wetenschappelijke ontwikkeling als enig doel<br><br>"
     category: van_toepassing
-    subcategory: risicogroep
+    subcategory: "Uitzonderingsgrond AI-verordening"
     sources:
       - source: Artikel 2 - Toepassingsgebied
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e1978-1-1
@@ -171,11 +169,11 @@ questions:
 
  # Impactvol algoritme
   - questionId: "1.7"
-    question: "Valt jouw algoritme onder categorie B van de Handreiking Algoritmeregister, waarbij het gebruik impact heeft op burgers of groepen,
-      bijvoorbeeld door rechtsgevolgen (zoals een boete of subsidieafwijzing) of door classificatie van burgers (zoals profilering of risico-indicatie voor controle)?"
-    simplifiedQuestion: "Impactvol algoritme"
+    question: "Is jouw algoritme impactvol, bijvoorbeeld doordat het gevolgen heeft voor burgers of groepen, zoals rechtsgevolgen of profilering?"
+    explanation: "Een algoritme is impactvol als het valt onder categorie B van de Handreiking Algoritmeregister, waarbij het gebruik van het algoritme impact heeft op burgers of groepen,
+      bijvoorbeeld door rechtsgevolgen (zoals een boete of subsidieafwijzing) of door classificatie van burgers (zoals profilering of risico-indicatie voor controle)."
     category: van_toepassing
-    subcategory: impactvol
+    subcategory: "Impactvol algoritme"
     sources:
       - source: Handreiking Algoritmeregister
         url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
@@ -188,12 +186,12 @@ questions:
         nextConclusionId: "11.5"
 
   - questionId: "1.8"
-    question: "Valt de toepassing onder \xE9\xE9n van de uitzonderingsgronden categorie C of D van de Handreiking van het Algoritmeregister?<br><br>
+    question: "Valt de toepassing onder \xE9\xE9n van de uitzonderingsgronden categorie C of D van de Handreiking van het Algoritmeregister?"
+    explanation: "Uitzonderingsgronden impactvol algoritme: <br><br>
       - Categorie C: Algoritmes die maatschappelijk relevant zijn of veel aandacht krijgen, zoals complexe modellen, algoritmes in onderzoek, of die vaak door burgers of media worden bevraagd (bijv. stikstofmodellen, toeslagen, of visumaanvragen).<br>
       - Categorie D: Algoritmes die wettelijk of operationeel beschermd zijn, bijvoorbeeld in opsporing, defensie, of handhaving, of die kunnen leiden tot misbruik van informatie, zoals bij bedrijfssubsidies."
-    simplifiedQuestion: "Uitzonderingsgronden Handreiking Algoritmeregister"
     category: van_toepassing
-    subcategory: impactvol
+    subcategory: "Uitzonderingsgronden Handreiking Algoritmeregister"
     sources:
       - source: Handreiking Algoritmeregister
         url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
@@ -210,10 +208,10 @@ questions:
 
 # Verboden AI ysteem
   - questionId: "2.0"
-    question: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. We gaan nu bepalen in welke risicogroep het AI-systeem valt. Hiervoor gaan we maximaal 7 vragen langslopen.<br><br>"
-    simplifiedQuestion: "Tussenscherm"
+    explanation: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. We gaan nu bepalen in welke risicogroep het AI-systeem valt. Hiervoor gaan we maximaal 7 vragen langslopen.<br><br>"
+    question: "Tussenscherm"
     category: tussenscherm
-    subcategory: tussenscherm
+    subcategory: "Tussenscherm"
     answers:
       - answer: Naar risicogroep bepaling
         redirects:
@@ -222,18 +220,18 @@ questions:
             - nextQuestionId: "2.8"
               if: '"AI-model voor algemene doeleinden" in labels'
   - questionId: "2.1"
-    question: "Valt de toepassing onder een van de verboden systemen uit Artikel 5 van de AI-verordening?<br><br>
-      -	gebruik kan gaan maken van subliminale technieken om mensen onbewust of bewust kunnen manipuleren, waardoor ze beslissingen nemen die ze anders niet zouden hebben genomen?<br>
-      -	gebruik kan gaan maken van kwetsbaarheden van individuen of specifieke groepen, zoals leeftijd, handicaps of sociale/economische omstandigheden, om het gedrag van die personen aanzienlijk te verstoren, wat kan leiden tot aanzienlijke schade bij henzelf of anderen?<br>
-      -	gebruikt kan worden om natuurlijke personen of groepen gedurende een periode te evalueren of te classificeren op basis van hun sociale gedrag of afgeleide persoonlijke kenmerken?<br>
-      -	gebruikt kan worden voor risicobeoordelingen van natuurlijke personen om het risico op crimineel gedrag te voorspellen, gebaseerd op profilering of persoonlijkheidskenmerken? (Dit geldt niet voor AI-systemen die worden gebruikt om menselijke beoordelingen te ondersteunen, gebaseerd op objectieve en verifieerbare feiten die rechtstreeks verband houden met criminele activiteiten)<br>
-      -	gebruikt kan worden om databanken voor gezichtsherkenning aan te leggen of aan te vullen door willekeurige gezichtsafbeeldingen van internet of CCTV-beelden te scrapen?<br>
-      -	gebruikt kan worden om emoties van een persoon op de werkplek of in het onderwijs af te leiden? (Dit is niet van toepassing als het gebruik van het AI-systeem is bedoeld voor medische- of veiligheidsdoeleinden)<br>
-      -	gebruikt kan worden om natuurlijke personen individueel in categorieën in te delen op basis van biometrische gegevens om ras, politieke opvattingen, lidmaatschap van een vakbond, religieuze of levensbeschouwelijke overtuigingen, seksleven of seksuele geaardheid af te leiden? (Dit verbod geldt niet voor het labelen of filteren van rechtmatig verkregen biometrische datasets, zoals afbeeldingen, op basis van biometrische gegevens, of voor categorisering van biometrische gegevens op het gebied van rechtshandhaving)<br>
+    question: "Valt de toepassing onder een van de verboden systemen uit Artikel 5 van de AI-verordening?"
+    explanation: "
+      -	gebruik kan gaan maken van subliminale technieken om mensen onbewust of bewust kunnen manipuleren, waardoor ze beslissingen nemen die ze anders niet zouden hebben genomen?<br><br>
+      -	gebruik kan gaan maken van kwetsbaarheden van individuen of specifieke groepen, zoals leeftijd, handicaps of sociale/economische omstandigheden, om het gedrag van die personen aanzienlijk te verstoren, wat kan leiden tot aanzienlijke schade bij henzelf of anderen?<br><br>
+      -	gebruikt kan worden om natuurlijke personen of groepen gedurende een periode te evalueren of te classificeren op basis van hun sociale gedrag of afgeleide persoonlijke kenmerken?<br><br>
+      -	gebruikt kan worden voor risicobeoordelingen van natuurlijke personen om het risico op crimineel gedrag te voorspellen, gebaseerd op profilering of persoonlijkheidskenmerken? (Dit geldt niet voor AI-systemen die worden gebruikt om menselijke beoordelingen te ondersteunen, gebaseerd op objectieve en verifieerbare feiten die rechtstreeks verband houden met criminele activiteiten)<br><br>
+      -	gebruikt kan worden om databanken voor gezichtsherkenning aan te leggen of aan te vullen door willekeurige gezichtsafbeeldingen van internet of CCTV-beelden te scrapen?<br><br>
+      -	gebruikt kan worden om emoties van een persoon op de werkplek of in het onderwijs af te leiden? (Dit is niet van toepassing als het gebruik van het AI-systeem is bedoeld voor medische- of veiligheidsdoeleinden)<br><br>
+      -	gebruikt kan worden om natuurlijke personen individueel in categorieën in te delen op basis van biometrische gegevens om ras, politieke opvattingen, lidmaatschap van een vakbond, religieuze of levensbeschouwelijke overtuigingen, seksleven of seksuele geaardheid af te leiden? (Dit verbod geldt niet voor het labelen of filteren van rechtmatig verkregen biometrische datasets, zoals afbeeldingen, op basis van biometrische gegevens, of voor categorisering van biometrische gegevens op het gebied van rechtshandhaving)<br><br>
       -	gebruikt kan worden als een biometrisch systeem in de publieke ruimte voor identificatie op afstand in real-time, met het oog op de rechtshandhaving?"
-    simplifiedQuestion: "Verboden AI-systeem"
     category: risicogroep
-    subcategory: risicogroep
+    subcategory: "Verboden AI-systeem"
     sources:
       - source: Artikel 5 - Verboden AI
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2816-1-1
@@ -247,12 +245,12 @@ questions:
 
 # Uitzondering verboden AI
   - questionId: "2.2"
-    question: "Is er sprake van een van de twee uitzonderingen voor verboden systemen?<br><br>
+    question: "Is er sprake van een van de twee uitzonderingen voor verboden systemen?"
+    explanation: "Uitzonderingen voor verboden systemen:
       -	Er is sprake van een rechtshandhavingsactiviteit i.v.m. een specifiek misdrijf (terrorisme, mensenhandel, seksuele uitbuiting van kinderen en materiaal over seksueel misbruik van kinderen, illegale handel in verdovende middelen en psychotrope stoffen, illegale handel in wapens, munitie en explosieven, moord, zware mishandeling, illegale handel in menselijke organen en weefsels, illegale handel in nucleaire en radioactieve stoffen, ontvoering, wederrechtelijke vrijheidsberoving en gijzeling, misdrijven die onder de rechtsmacht van het Internationaal Strafhof vallen, kaping van vliegtuigen/schepen, verkrachting, milieucriminaliteit, georganiseerde of gewapende diefstal, sabotage, deelneming aan een criminele organisatie die betrokken is bij een of meer van de bovengenoemde misdrijven).<br>
       -	Er is sprake van gerichte opsporing van specifieke slachtoffers, ontvoering, mensenhandel en seksuele uitbuiting van mensen, vermiste personen; of het voorkomen van bedreigingen voor het leven of de fysieke veiligheid van personen of het reageren op de huidige of voorzienbare dreiging van een terreuraanslag."
-    simplifiedQuestion: "Uitzondering Verboden AI-systeem"
     category: risicogroep
-    subcategory: risicogroep
+    subcategory: "Uitzondering Verboden AI-systeem"
     sources:
       - source: Artikel 5 - Verboden AI
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2816-1-1
@@ -295,14 +293,14 @@ questions:
 
 # Rol in of als veiligheidscomponent van een product onder Bijlage I
   - questionId: "2.3"
-    question: "Is het AI-systeem bedoeld om te worden gebruikt als een veiligheidscomponent van een product dat valt onder de lijst in Bijlage I?<br><br>
+    question: "Is het AI-systeem bedoeld om te worden gebruikt als een veiligheidscomponent van een product dat valt onder de lijst in Bijlage I?"
+    explanation: "
       Specifiek, valt het AI-systeem onder de veiligheidscomponenten van:<br>
       - Sectie A van bijlage I, die wetgevingen omvat zoals richtlijnen voor machines, speelgoedveiligheid, pleziervaartuigen, liften, radioapparatuur, drukapparatuur, medische hulpmiddelen en gasverbrandingstoestellen.<br><br>
       Of valt het AI-systeem onder:<br>
       - Sectie B van bijlage I, die verordeningen bevat voor de beveiliging van de luchtvaart, motorvoertuigen, landbouwvoertuigen, zeeschepen, spoorwegsystemen, en luchtvaartveiligheid?"
-    simplifiedQuestion: "Hoog-risico Bijlage I A en B"
     category: risicogroep
-    subcategory: risicogroep
+    subcategory: "Hoog-risico Bijlage I A en B"
     sources:
           - source: Bijlage I - Lijst van harmonisatiewetgeving van de Unie
             url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e38-124-1
@@ -387,7 +385,8 @@ questions:
 
 ## Conformiteitsbeoordeling door derde partij bijlage IA
   - questionId: "2.4.1"
-    question: "We gaan nu bepalen of het verplicht is om de conformiteitsbeoordeling door een derde partij, namelijk een conformiteitsbeoordelingsinstantie, uit te laten voeren.<br><br>
+    question: "Is het verplicht om de conformiteitsbeoordeling door een derde partij, zoals een conformiteitsbeoordelingsinstantie, uit te laten voeren?"
+    explanation: "
       Dit is het geval als één van deze situaties van toepassing is: <br><br>
       Situatie 1: <br>
       Is jouw AI-systeem bedoeld voor gebruik door:<br>
@@ -399,9 +398,8 @@ questions:
       Vereist dit product volgens de EU harmonisatiewegeving een conformiteitsbeoordeling door een derde partij?<br><br>
 
       Antwoord met 'Ja' als één van deze twee situaties van toepassing is."
-    simplifiedQuestion: "Conformiteitsbeoordeling Bijlage 1A"
     category: risicogroep
-    subcategory: conformiteitsbeoordelingsinstanties
+    subcategory: "Conformiteitsbeoordeling Bijlage 1A"
     sources:
         - source: Artikel 43 - Conformiteitsbeoordeling
           url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5074-1-1
@@ -444,7 +442,8 @@ questions:
 
 ## Conformiteitsbeoordeling door derde partij bijlage III
   - questionId: "2.4.2"
-    question: "We gaan nu bepalen of het verplicht is om de conformiteitsbeoordeling door een derde partij, namelijk een conformiteitsbeoordelingsinstantie, uit te laten voeren.<br><br>
+    question: "Is het verplicht om de conformiteitsbeoordeling door een derde partij, zoals een conformiteitsbeoordelingsinstantie, uit te laten voeren?"
+    explanation: "
       Dit is het geval als één van deze twee situaties van toepassing is: <br><br>
       Situatie 1:<br>
       Is het een toepassing voor biometrische identificatie en categorisering (bijlage III punt 1) <br>
@@ -460,9 +459,8 @@ questions:
       - Immigratie- of asielautoriteiten?<br>
       - Instellingen, organen of instanties van de EU?<br><br>
       Antwoord met 'Ja' als één van deze twee situaties van toepassing is."
-    simplifiedQuestion: "Conformiteitsbeoordeling Bijlage III"
     category: risicogroep
-    subcategory: conformiteitsbeoordelingsinstanties
+    subcategory: "Conformiteitsbeoordeling Bijlage III"
     sources:
       - source: Artikel 43 - Conformiteitsbeoordeling
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5074-1-1
@@ -480,18 +478,18 @@ questions:
 
 # Hoog risico bijlage III
   - questionId: "2.5"
-    question: "We gaan nu bepalen of het AI-systeem onder een van de hoog-risico systemen uit Bijlage III van de AI-verordening valt. Betreft het een AI-systeem op een van de volgende gebieden?<br>
-      Beweeg je muis over de opties om te zien welke systemen hieronder vallen.<br><br>
+    question: "Valt het AI-systeem onder een van de hoog-risico systemen uit Bijlage III van de AI-verordening?"
+    explanation: "Dit betreft een AI-systeem in een van de volgende gebieden:<br><br>
       -	biometrie<br>
       -	kritieke infrastructuur<br>
       -	onderwijs en beroepsopleiding<br>
       -	werkgelegenheid, personeelsbeheer en toegang tot zelfstandige arbeid<br>
       -	toegang tot en gebruik van essentiële particuliere en publieke diensten en uitkeringen<br>
       -	rechtshandhavingsinstanties - migratie-, asiel- en grenstoezichtsbeheer<br>
-      -	rechtsbedeling en democratische processen<br>"
-    simplifiedQuestion: "Hoog risico Bijlage III"
+      -	rechtsbedeling en democratische processen<br>
+      Beweeg je muis over de opties om te zien welke systemen hieronder vallen."
     category: risicogroep
-    subcategory: risicogroep
+    subcategory: "Hoog risico Bijlage III"
     sources:
       - source: Bijlage III - In Artikel 6, lid 2, bedoelde AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e38-127-1
@@ -517,10 +515,10 @@ questions:
 
 # Profilering
   - questionId: "2.6"
-    question: "Voert het AI-systeem profilering van natuurlijke personen uit? Bij profilering is er altijd sprake van een hoog risico."
-    simplifiedQuestion: "Profilering"
+    question: "Voert het AI-systeem profilering van natuurlijke personen uit?"
+    explanation: "Bij profilering is er altijd sprake van een hoog risico."
     category: risicogroep
-    subcategory: risicogroep
+    subcategory: "Profilering"
     sources:
       - source: Bijlage III - Lijst van harmonisatiewetgeving van de Unie
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#anx_III
@@ -546,15 +544,15 @@ questions:
 
 # Uitzondering Bijlage III
   - questionId: "2.7"
-    question: "We gaan nu bepalen of er sprake is van een uitzondering op de lijst van hoog-risico AI systemen (uit bijlage III).<br>
-      Betreft het een AI-systeem dat is bedoeld voor een van de volgende doeleinden?<br><br>
+    question: "Is er sprake van een uitzondering op de lijst van hoog-risico AI-systemen (uit bijlage III)?"
+    explanation: "
+      Dit betreft een AI-systeem dat is bedoeld voor een van de volgende doeleinden:<br><br>
       -	Het uitvoeren van een beperkte procedurele taak waarbij er geen significant risico is op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?<br>
       -	Het verbeteren van het resultaat van een eerder voltooide menselijke activiteit en waarbij er geen significant risico is op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?<br>
       -	Het opsporen van besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen en waarbij het niet bedoeld is om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?<br>
       -	Het uitvoeren van een voorbereidende taak voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?"
-    simplifiedQuestion: "Uitzondering Hoog risico bijlage III"
     category: risicogroep
-    subcategory: risicogroep
+    subcategory: "Uitzondering Hoog risico bijlage III"
     sources:
       - source: Overweging 53 - Beoordelingscriteria AI-risico's toepassingen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_53
@@ -595,15 +593,15 @@ questions:
 
 ## Systeemrisico van het gebruike AI-model voor algemene doeleinden
   - questionId: "2.8"
-    question: "We gaan nu bepalen of er sprake is van een systeemrisico.<br>
+    question: "Is er sprake van een systeemrisico?"
+    explanation: "
       Is er in het gebruikte AI-model sprake van een cumulatieve hoeveelheid rekenkracht van FLOPs groter dan 10^25?<br><br>
       -	FLOPs zijn floating point operations per second.<br>
       -	FLOPs is een eenheid die wordt gebruikt om de rekenkracht van CPU’s aan te duiden.<br>
       -	CPUs zijn Central Processing Units.<br>
       - Dit is de centrale verwerkingseenheid van een computer, smartphone of tablet. De CPU voert het rekenwerk uit waardoor programma’s draaien en hardware wordt aangestuurd."
-    simplifiedQuestion: "Systeemrisico"
     category: risicogroep
-    subcategory: systeemrisico
+    subcategory: "Systeemrisico"
     sources:
       - source: Artikel 55 - Systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#art_55
@@ -629,14 +627,14 @@ questions:
 
 ## Transparantieverplichting
   - questionId: "2.9"
-    question: "We gaan nu bepalen of het AI-systeem onder de transparantieverplichtingen van Artikel 50 valt.<br>
-      Is er sprake van een AI-systeem dat:<br><br>
-      -	direct communiceert met mensen (zoals chatbots)?<br>
-      -	synthetische afbeeldingen, audio, video of tekst content genereert en manipuleert? Bijvoorbeeld een deepfake.<br>
-      -	aan emotieherkenning of biometrische categorisatie doet?<br>"
-    simplifiedQuestion: "Transparantieverplichting"
+    question: "Moet het AI-systeem voldoen aan de transparantieverplichtingen?"
+    explanation: "
+      Dit betreft een AI-systeem dat bedoeld is voor een van de volgende doeleinden:<br><br>
+      -	direct communiceert met mensen (zoals chatbots)?<br><br>
+      -	synthetische afbeeldingen, audio, video of tekst content genereert en manipuleert? Bijvoorbeeld een deepfake.<br><br>
+      -	aan emotieherkenning of biometrische categorisatie doet?"
     category: risicogroep
-    subcategory: transparantieverplichting
+    subcategory: "Transparantieverplichting"
     sources:
       - source: Artikel 50 - Transparantieverplichting
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
@@ -675,10 +673,10 @@ questions:
 
 ## Uitzondering Transparantieverplichting
   - questionId: "2.10"
-    question: "Er is een uitzondering mogelijk op de transparantieverplichtingen. Is er sprake van AI waarvan het bij wet is toegestaan om te gebruiken om strafbare feiten op te sporen, te voorkomen, te onderzoeken of te vervolgen?"
-    simplifiedQuestion: "Uitzondering Transparantieverplichting"
+    question: "Is er een uitzondering mogelijk op de transparantieverplichtingen?"
+    explanation: "Dit betreft AI waarvan het bij wet is toegestaan om te gebruiken voor het opsporen, voorkomen, onderzoeken of vervolgen van strafbare feiten."
     category: risicogroep
-    subcategory: Uitzondering transparantieverplichting
+    subcategory: "Uitzondering Transparantieverplichting"
     sources:
       - source: Artikel 50 - Transparantieverplichting
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5426-1-1
@@ -743,9 +741,9 @@ questions:
 ## Open-source "Zijn de broncodes en parameters openbaar voor eenieder?"
   - questionId: "2.11"
     question: "Wordt de toepassing onder een open of vrije licentie gedeeld en zijn de broncodes en parameters openbaar voor eenieder?"
-    simplifiedQuestion: "Open of vrije licentie"
+    explanation: ""
     category: risicogroep
-    subcategory: open-source
+    subcategory: "Open of vrije licentie"
     sources:
       - source: Overweging 102 - Begrip open-source
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_102

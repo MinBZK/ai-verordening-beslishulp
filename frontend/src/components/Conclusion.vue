@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import Sources from '@/components/Sources.vue'
 import SubResult from '@/components/SubResult.vue'
-import BetaversionLabel from '@/components/betaversion-label.vue'
 
 interface Props {
   conclusion: string | null
@@ -20,7 +19,6 @@ defineEmits(['back'])
   <div class="flex flex-col py-5 gap-y-5 rvo-max-width-layout--md">
     <div class="flex">
       <div as="h3" class="utrecht-heading-2">Resultaat</div>
-      <BetaversionLabel />
     </div>
     <!--Conclusion/Resultaat section-->
     <p class="rvo-alert--success rvo-alert--padding-md">

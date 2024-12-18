@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import BetaversionLabel from '@/components/betaversion-label.vue'
 import Sources from '@/components/Sources.vue'
 import { Answer } from '@/models/DecisionTree'
 import SubResult from '@/components/SubResult.vue'
@@ -8,6 +7,7 @@ import HelpWanted from '@/components/HelpWanted.vue'
 interface Props {
   id: string
   question: string
+  explanation: string
   sources: { source: string; url: string | undefined; }[] | undefined
   answers: Array<Answer>
   category: string
@@ -20,19 +20,24 @@ defineEmits(['answered', 'back'])
 
 <template>
   <div class="rvo-max-width-layout--md">
-    <div class="flex">
-      <h1 class="utrecht-heading-1"><span>{{ category }}</span></h1>
-      <BetaversionLabel />
-    </div>
-
     <!-- Question and Answer section -->
     <div class="rvo-layout-margin-vertical--s">
     <fieldset class="rvo-max-width-layout--sm utrecht-form-fieldset rvo-form-fieldset"
     style="width: 600px">
       <!-- Question section -->
+      <div class="flex">
+      <h1 class="utrecht-heading-3"><span v-html="question" ></span></h1>
+      </div>
+      <div>
+      <p style="white-space: pre-line" class="utrecht-paragraph">
+          <span ></span>
+          <slot />
+        </p>
+      </div>
+      <!-- Explanation section -->
       <div>
         <p style="white-space: pre-line" class="utrecht-paragraph">
-          <span v-html="question"></span>
+          <span v-html="explanation"></span>
           <slot />
         </p>
         <HelpWanted style="margin-top: -2%; margin-bottom: 5%"/>
@@ -97,13 +102,6 @@ defineEmits(['answered', 'back'])
       :labels="labels"
       title="Tussenresultaten"
       conclusion=""/>
-
-
       </div>
-
-
-
-
   </div>
-
 </template>
