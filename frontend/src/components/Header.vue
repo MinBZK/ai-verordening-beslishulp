@@ -10,8 +10,6 @@ const emit = defineEmits(['reset-event'])
 </script>
 
 <template>
-  <div class="rvo-layout-column rvo-theme">
-  </div>
   <header class="header">
     <div id="header_logo">
       <!-- Place holder div for logo based on who implements the decision tree -->
