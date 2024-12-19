@@ -100,7 +100,7 @@ questions:
     question: "Is jouw (beoogde) toepassing een AI-systeem?"
     explanation: "
       Een AI-systeem is een machine-gebaseerd systeem dat autonoom werkt, zichzelf kan aanpassen na inzet, en output levert zoals voorspellingen, inhoud, aanbevelingen of beslissingen. Deze output kan fysieke of virtuele omgevingen beïnvloeden. AI-systemen gebruiken inferentie, waarbij modellen of algoritmen worden afgeleid uit data, en combineren technieken als machinaal leren, logica en kennisrepresentatie. <br><br>
-      Let op: Een AI-systeem voor algemene doeleinden, zoals generatieve AI, vallen niet onder deze definitie. Ook systemen die een AI-model voor algemene doeleinden gebruiken, worden niet meegerekend. <br><br>
+      Let op: Voor een AI-model voor algemene doeleinden geldt een specifieke definitie. <br><br>
       Ben je niet zeker of jouw (beoogde) toepassing onder deze definitie valt? Klik dan op 'Ik weet het niet' en beantwoord maximaal drie aanvullende vragen om het te achterhalen. Tot er verdere duiding vanuit de EU komt over de definitie van een AI-systeem, hanteren we deze vragen."
     category: van_toepassing
     subcategory: "AI-systeem"
@@ -159,7 +159,7 @@ questions:
           - "AI-model voor algemene doeleinden"
         redirects:
           - nextQuestionId: "1.6"
-            if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels || "aanbieder & gebruiksverantwoordelijke" in labels'
+            if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels'
           - nextConclusionId: "16.2.1"
             if: '"distributeur" in labels'
           - nextConclusionId: "15.2.1"
