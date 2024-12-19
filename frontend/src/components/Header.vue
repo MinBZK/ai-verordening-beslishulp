@@ -14,7 +14,7 @@ const emit = defineEmits(['reset-event'])
     <div id="header_logo">
       <!-- Place holder div for logo based on who implements the decision tree -->
     </div>
-    <div class="rvo-layout-column rvo-layout-gap--2xl">
+    <div class="rvo-layout-column">
       <div class="rvo-topnav__background rvo-topnav__background--horizontal-rule">
         <div class="rvo-max-width-layout rvo-max-width-layout--md rvo-max-width-layout-inline-padding--sm">
           <nav class="rvo-topnav rvo-topnav--lg">

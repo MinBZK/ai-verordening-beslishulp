@@ -27,6 +27,7 @@ export type Source = t.TypeOf<typeof Source>
 export const Question = t.type({
   questionId: t.string,
   question: t.string,
+  explanation: t.string,
   sources: t.union([t.array(Source), t.undefined]),
   description: t.union([t.string, t.undefined]),
   answers: t.array(Answer)

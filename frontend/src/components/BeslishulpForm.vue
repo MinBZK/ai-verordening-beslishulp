@@ -208,6 +208,7 @@ function acceptDisclaimer() {
         />
         <Question v-if="currentQuestion && currentCategory"
                   :question="currentQuestion.question"
+                  :explanation="currentQuestion.explanation"
                   :id="currentQuestion.questionId"
                   :sources="currentQuestion.sources"
                   :answers="currentQuestion.answers"

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import BetaversionLabel from '@/components/betaversion-label.vue'
 import { computed } from 'vue'
 
 interface Props {
