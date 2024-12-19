@@ -26,6 +26,10 @@
   category: Geldt de AI-verorderning voor mij?
   subcategory: Soort toepassing
 
+- questionId: "1.9"
+  category: Geldt de AI-verorderning voor mij?
+  subcategory: Soort toepassing
+
 - questionId: "2"
   category: In welke risicogroep valt de toepassing?
   subcategory: Risicogroep
