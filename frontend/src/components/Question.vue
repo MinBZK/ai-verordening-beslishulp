@@ -80,9 +80,6 @@ defineEmits(['answered', 'back'])
 
     </fieldset>
     <div class="rvo-layout-margin-vertical--xl">
-      <Sources :sources="sources" />
-    </div>
-    <div class="rvo-layout-margin-vertical--xl">
       <button
         @click="$emit('back')"
         v-if="id !== '1.2'"
@@ -97,6 +94,10 @@ defineEmits(['answered', 'back'])
         Vorige vraag
       </button>
     </div>
+    <div class="rvo-layout-margin-vertical--xl">
+      <Sources :sources="sources" />
+    </div>
+
     <SubResult class="rvo-layout-margin-vertical--2xl"
       :category="category"
       :labels="labels"
