@@ -1,0 +1,121 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AI Act Beslishulp</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+        <script src='https://unpkg.com/mermaid@11.0.2/dist/mermaid.min.js'></script>
+
+        <!-- Custom Styles -->
+        <style>
+            /* Tooltip styling */
+            .mermaidTooltip {
+                display: none; /* Hides any remaining tooltips */
+            }
+
+            /* Modal centering and responsiveness */
+            .modal.is-active {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .modal-content {
+                max-width: 80vw; /* Makes modal responsive to screen size */
+                max-height: 80vh; /* Ensures modal fits within the viewport */
+                overflow-y: auto; /* Allows scrolling inside modal if content is too long */
+                position: relative;
+                padding: 20px;
+                background-color: white;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body class="has-background-white-ter">
+
+        <!-- Modal -->
+        <div id="model1" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                <div id="modelcontent1"></div>
+            </div>
+            <button id="modealclose1" class="modal-close is-large" aria-label="close"></button>
+        </div>
+
+        <!-- Diagram (placeholder) -->
+        <pre class="mermaid has-background-white-ter">
+            ---
+title: tussenscherm
+---
+%%{
+	init: {
+		"theme": "base",
+		"themeVariables": {
+			"primaryColor": "#007bc7",
+			"primaryTextColor": "#000000",
+			"primaryBorderColor": "#007bc7",
+			"lineColor": "#154273",
+			"secondaryColor": "#CCE7F4"
+		}
+	}
+}%%
+
+flowchart TB
+	q-2.0(("2.0: Tussenscherm"))
+click q-2.0 callback "Tussenscherm"
+	q-2.0 -->|Naar risicogroep bepaling
+
+Als: AI-systeem of AI-systeem voor algemene doeleinden.| risicogroep
+	q-2.0 -->|Naar risicogroep bepaling
+
+Als: AI-model voor algemene doeleinden.| risicogroep
+
+click risicogroep href "decision-tree-subgraphs-risicogroep.html" "risicogroep"
+click risicogroep href "decision-tree-subgraphs-risicogroep.html" "risicogroep"
+        </pre>
+
+        <!-- Mermaid initialization -->
+        <script>mermaid.initialize({ maxTextSize: 9000000000, startOnLoad: true, securityLevel: 'loose' })</script>
+
+        <!-- JavaScript for tooltip and modal handling -->
+        <script>
+            // Function to handle modal popup when a node is clicked
+            window.callback = function (name) {
+                let cookieValue = document.getElementsByClassName("mermaidTooltip");
+                let modelcontent1 = document.getElementById("modelcontent1");
+                let model1 = document.getElementById("model1");
+
+                // If a tooltip exists, display its content in the modal
+                if (cookieValue[0]) {
+                    // Hide the tooltip when opening the modal
+                    cookieValue[0].style.display = "none";
+                    // Set the modal content from the tooltip text
+                    modelcontent1.innerHTML = cookieValue[0].innerText.replaceAll("#specialnewline#", "<br>");
+                    // Open the modal by adding the 'is-active' class
+                    model1.classList.add('is-active');
+                }
+            };
+
+            // Function to close the modal and restore tooltip visibility
+            document.addEventListener('DOMContentLoaded', () => {
+                let modealclose1 = document.getElementById("modealclose1");
+
+                // Event listener to close the modal when the close button is clicked
+                modealclose1.addEventListener('click', () => {
+                    let model1 = document.getElementById("model1");
+                    let cookieValue = document.getElementsByClassName("mermaidTooltip");
+
+                    // Close the modal by removing the 'is-active' class
+                    model1.classList.remove('is-active');
+
+                    // Restore the tooltip visibility after the modal is closed
+                });
+            });
+
+        </script>
+
+    </body>
+    </html>
+    

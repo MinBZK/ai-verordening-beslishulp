@@ -157,7 +157,7 @@ class Answer:
 class Question:
     questionId: str
     question: str
-    simplifiedQuestion: str
+    explanation: str
     category: str
     subcategory: str
     answers: list[Answer]
