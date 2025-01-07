@@ -32,7 +32,7 @@
     "@rushstack/eslint-patch": "^1.10.4",
     "@tsconfig/node20": "^20.1.4",
     "@types/js-yaml": "^4.0.9",
-    "@types/node": "^22.10.1",
+    "@types/node": "^22.10.5",
     "@vitejs/plugin-vue": "^5.2.0",
     "@vue/eslint-config-prettier": "^10.1.0",
     "@vue/eslint-config-typescript": "^13.0.0",
@@ -40,12 +40,12 @@
     "autoprefixer": "^10.4.20",
     "eslint": "^8.57.1",
     "eslint-plugin-vue": "^9.32.0",
-    "npm-run-all2": "^7.0.1",
+    "npm-run-all2": "^7.0.2",
     "postcss": "^8.4.49",
     "prettier": "^3.4.2",
-    "tailwindcss": "^3.4.16",
+    "tailwindcss": "^3.4.17",
     "typescript": "~5.6.3",
     "vite": "^5.4.11",
-    "vue-tsc": "^2.1.10"
+    "vue-tsc": "^2.2.0"
   }
 }
