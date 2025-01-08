@@ -908,7 +908,10 @@ conclusions:
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
         - AI-geletterdheid (Artikel 4)<br>
-        - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
+        - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
+      Geldig vanaf:<br>
+          - AI-geletterdheid (Artikel 4) gaat vanaf februari 2025 in werking. <br>
+          - Gedragscodes (Artikel 95) zijn vrijwillig en kunnen op elk moment na de inwerkingtreding van de AI-verordening worden opgesteld en toegepast.<br><br>
       Verplichtingen voor aanbieder van een hoog risico AI-systeem (Artikel 16):<br>
           - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2<br>
           - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres<br>
@@ -931,7 +934,7 @@ conclusions:
             robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten
             en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen.<br><br>
         Geldig vanaf (Artikel 111):<br>
-         - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.<br>
+         - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
          - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br>"
     sources:
       - source: Afdeling 2 - Eisen voor AI-systemen met een hoog risico
@@ -966,8 +969,11 @@ conclusions:
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een hoog-risico AI-systeem."
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
-        - AI-geletterdheid (Artikel 4)<br>
-        - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
+        - Bevordering van AI-geletterdheid (Artikel 4)<br>
+        - Gedragscodes voor de vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
+      Geldig vanaf:<br>
+          - AI-geletterdheid (Artikel 4) gaat vanaf februari 2025 in werking.<br>
+          - Gedragscodes (Artikel 95) zijn vrijwillig en kunnen op elk moment na de inwerkingtreding van de AI-verordening worden opgesteld en toegepast.<br><br>
       Verplichtingen voor aanbieder van een hoog risico AI-systeem (Artikel 16):<br>
           - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2<br>
           - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres<br>
@@ -982,7 +988,7 @@ conclusions:
           - aanbieders tonen op een met redenen omkleed verzoek van een nationale bevoegde autoriteit de overeenstemming aan van het AI-systeem met een hoog risico met de eisen van afdeling 2<br>
           - aanbieders zorgen ervoor dat het AI-systeem met een hoog risico voldoet aan de toegankelijkheidseisen overeenkomstig de Richtlijnen (EU) 2016/2102 en (EU) 2019/882.<br><br>
         Geldig vanaf (Artikel 111):<br>
-         - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.<br>
+         - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
          - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br>"
     sources:
       - source: Afdeling 2 - Eisen voor AI-systemen met een hoog risico
@@ -1015,8 +1021,11 @@ conclusions:
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een niet-hoog-risico AI-systeem. Het AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
-        - AI-geletterdheid (Artikel 4)<br>
-        - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
+        - Bevordering van AI-geletterdheid (Artikel 4)<br>
+        - Gedragscodes voor de vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
+      Geldig vanaf:<br>
+          - AI-geletterdheid (Artikel 4) gaat vanaf februari 2025 in werking.<br>
+          - Gedragscodes (Artikel 95) zijn vrijwillig en kunnen op elk moment na de inwerkingtreding van de AI-verordening worden opgesteld en toegepast.<br><br>
       Verplichtingen voor aanbieders en gebruiksverantwoordelijken van AI-systemen met transparantieverplichtingen (Artikel 50):<br>
           - aanbieders zorgen ervoor dat AI-systemen die voor directe interactie met natuurlijke personen zijn bedoeld, zodanig worden ontworpen en ontwikkeld
             dat de betrokken natuurlijke personen worden geinformeerd dat zij interageren met een AI-systeem, tenzij dit duidelijk is vanuit het oogpunt van een normaal geinformeerde
@@ -1026,7 +1035,7 @@ conclusions:
             robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten
             en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen.<br><br>
       Geldig vanaf (Artikel 111):<br>
-         - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.<br>
+         - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
          - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br>"
     sources:
       - source: Artikel 4 - AI-geletterdheid
@@ -1041,10 +1050,13 @@ conclusions:
     conclusion: "Je bent een aanbieder van een niet-hoog-risico AI-systeem."
     obligation: "
      Verplichtingen voor alle AI-systemen:<br>
-        - AI-geletterdheid (Artikel 4)<br>
-        - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
+        - Bevordering van AI-geletterdheid (Artikel 4)<br>
+        - Gedragscodes voor de vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
+      Geldig vanaf:<br>
+          - AI-geletterdheid (Artikel 4) gaat vanaf februari 2025 in werking.<br>
+          - Gedragscodes (Artikel 95) zijn vrijwillig en kunnen op elk moment na de inwerkingtreding van de AI-verordening worden opgesteld en toegepast.<br><br>
       Geldig vanaf (Artikel 111):<br>
-         - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.<br>
+         - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
          - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br>"
     sources:
       - source: Artikel 4 - AI-geletterdheid
@@ -1057,8 +1069,11 @@ conclusions:
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een hoog-risico AI-systeem voor algemene doeleinden. Het AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
-        - AI-geletterdheid (Artikel 4)<br>
-        - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
+        - Bevordering van AI-geletterdheid (Artikel 4)<br>
+        - Gedragscodes voor de vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
+      Geldig vanaf:<br>
+          - AI-geletterdheid (Artikel 4) gaat vanaf februari 2025 in werking.<br>
+          - Gedragscodes (Artikel 95) zijn vrijwillig en kunnen op elk moment na de inwerkingtreding van de AI-verordening worden opgesteld en toegepast.<br><br>
       Verplichtingen voor aanbieder van een hoog risico AI-systeem (Artikel 16):<br>
           - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2<br>
           - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres<br>
@@ -1081,7 +1096,7 @@ conclusions:
             robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten
             en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen.<br><br>
      Geldig vanaf (Artikel 111):<br>
-         - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.<br>
+         - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
          - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
      De volgende verplichtingen gelden voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54):<br>
       - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan<br>
@@ -1130,8 +1145,11 @@ conclusions:
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een hoog-risico AI-systeem voor algemene doeleinden."
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
-        - AI-geletterdheid (Artikel 4)<br>
-        - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
+        - Bevordering van AI-geletterdheid (Artikel 4)<br>
+        - Gedragscodes voor de vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
+      Geldig vanaf:<br>
+          - AI-geletterdheid (Artikel 4) gaat vanaf februari 2025 in werking.<br>
+          - Gedragscodes (Artikel 95) zijn vrijwillig en kunnen op elk moment na de inwerkingtreding van de AI-verordening worden opgesteld en toegepast.<br><br>
       Verplichtingen voor aanbieder van een hoog risico AI-systeem (Artikel 16):<br>
           - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2<br>
           - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres<br>
@@ -1146,7 +1164,7 @@ conclusions:
           - aanbieders tonen op een met redenen omkleed verzoek van een nationale bevoegde autoriteit de overeenstemming aan van het AI-systeem met een hoog risico met de eisen van afdeling 2<br>
           - aanbieders zorgen ervoor dat het AI-systeem met een hoog risico voldoet aan de toegankelijkheidseisen overeenkomstig de Richtlijnen (EU) 2016/2102 en (EU) 2019/882.<br><br>
      Geldig vanaf (Artikel 111):<br>
-         - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.<br>
+         - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
          - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
      De volgende verplichtingen gelden voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54):<br>
       - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan<br>
@@ -1193,8 +1211,11 @@ conclusions:
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden. Het AI-systeem moet voldoen aan transparantieverplichtingen."
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
-        - AI-geletterdheid (Artikel 4)<br>
-        - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
+        - Bevordering van AI-geletterdheid (Artikel 4)<br>
+        - Gedragscodes voor de vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
+      Geldig vanaf:<br>
+          - AI-geletterdheid (Artikel 4) gaat vanaf februari 2025 in werking.<br>
+          - Gedragscodes (Artikel 95) zijn vrijwillig en kunnen op elk moment na de inwerkingtreding van de AI-verordening worden opgesteld en toegepast.<br><br>
       Verplichtingen voor aanbieders en gebruiksverantwoordelijken van AI-systemen met transparantieverplichtingen (Artikel 50):<br>
           - aanbieders zorgen ervoor dat AI-systemen die voor directe interactie met natuurlijke personen zijn bedoeld, zodanig worden ontworpen en ontwikkeld
             dat de betrokken natuurlijke personen worden geinformeerd dat zij interageren met een AI-systeem, tenzij dit duidelijk is vanuit het oogpunt van een normaal geinformeerde
@@ -1204,7 +1225,7 @@ conclusions:
             robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten
             en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen.<br><br>
      Geldig vanaf (Artikel 111):<br>
-         - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.<br>
+         - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
          - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
      De volgende verplichtingen gelden voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54):<br>
       - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan<br>
@@ -1233,11 +1254,11 @@ conclusions:
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden."
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
-        - AI-geletterdheid (Artikel 4)<br>
-        - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
-     Geldig vanaf (Artikel 111):<br>
-         - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.<br>
-         - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
+        - Bevordering van AI-geletterdheid (Artikel 4)<br>
+        - Gedragscodes voor de vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
+      Geldig vanaf:<br>
+          - AI-geletterdheid (Artikel 4) gaat vanaf februari 2025 in werking.<br>
+          - Gedragscodes (Artikel 95) zijn vrijwillig en kunnen op elk moment na de inwerkingtreding van de AI-verordening worden opgesteld en toegepast.<br><br>
      De volgende verplichtingen gelden voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54):<br>
       - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan<br>
       - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren<br>
@@ -1363,7 +1384,10 @@ conclusions:
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
-          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
+          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
+      Geldig vanaf:<br>
+          - AI-geletterdheid (Artikel 4) gaat vanaf februari 2025 in werking.<br>
+          - Gedragscodes (Artikel 95) zijn vrijwillig en kunnen op elk moment na de inwerkingtreding van de AI-verordening worden opgesteld en toegepast.<br><br>
       Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico (Artikel 26 en Artikel 27):<br>
         - het nemen van passende technische en organisatorische maatregelen om te waarborgen dat dergelijke systemen in overeenstemming met de gebruiksaanwijzingen die bij de systemen zijn gevoegd worden gebruikt<br>
         - het opdragen van menselijk toezicht aan natuurlijke personen die over de nodige bekwaamheid, opleiding en autoriteit beschikken en de nodige ondersteuning krijgen<br>
@@ -1381,7 +1405,7 @@ conclusions:
           - gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680, indien van toepassing<br>
           - gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent genereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief, satirisch, fictief of analoog werk of programma, zijn de transparantieverplichtingen beperkt tot de openbaarmaking van het bestaan van dergelijke gegenereerde of bewerkte content op een passende wijze die de weergave of het genot van het werk niet belemmert.<br><br>
       Geldig vanaf (Artikel 111):<br>
-          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.<br>
+          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
           - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Artikel 4 - AI-geletterdheid
@@ -1407,7 +1431,10 @@ conclusions:
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
-          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
+          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
+      Geldig vanaf:<br>
+          - AI-geletterdheid (Artikel 4) gaat vanaf februari 2025 in werking.<br>
+          - Gedragscodes (Artikel 95) zijn vrijwillig en kunnen op elk moment na de inwerkingtreding van de AI-verordening worden opgesteld en toegepast.<br><br>
       Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico (Artikel 26 en Artikel 27):<br>
         - het nemen van passende technische en organisatorische maatregelen om te waarborgen dat dergelijke systemen in overeenstemming met de gebruiksaanwijzingen die bij de systemen zijn gevoegd worden gebruikt<br>
         - het opdragen van menselijk toezicht aan natuurlijke personen die over de nodige bekwaamheid, opleiding en autoriteit beschikken en de nodige ondersteuning krijgen<br>
@@ -1422,7 +1449,7 @@ conclusions:
         - gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.<br>
         - gebruiksverantwoordelijken die publiekrechtelijke organen zijn of particuliere entiteiten zijn die openbare diensten verlenen, en gebruiksverantwoordelijken van AI-systemen met een hoog risico gebruikt in krediet/verzekering (bijlage III, 5, c en d) een beoordeling uit van de gevolgen voor de grondrechten die het gebruik van een dergelijk systeem kan opleveren (Artikel 27).<br><br>
       Geldig vanaf (Artikel 111):<br>
-          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.<br>
+          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
           - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Artikel 4 - AI-geletterdheid
@@ -1446,12 +1473,15 @@ conclusions:
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
-          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
+          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
+      Geldig vanaf:<br>
+          - AI-geletterdheid (Artikel 4) gaat vanaf februari 2025 in werking.<br>
+          - Gedragscodes (Artikel 95) zijn vrijwillig en kunnen op elk moment na de inwerkingtreding van de AI-verordening worden opgesteld en toegepast.<br><br>
       Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen (Artikel 50):<br>
           - gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680, indien van toepassing<br>
           - gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent genereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief, satirisch, fictief of analoog werk of programma, zijn de transparantieverplichtingen beperkt tot de openbaarmaking van het bestaan van dergelijke gegenereerde of bewerkte content op een passende wijze die de weergave of het genot van het werk niet belemmert.<br><br>
       Geldig vanaf (Artikel 111):<br>
-          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.<br>
+          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
           - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Artikel 4 - AI-geletterdheid
@@ -1467,9 +1497,12 @@ conclusions:
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
-          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
+          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
+      Geldig vanaf:<br>
+          - AI-geletterdheid (Artikel 4) gaat vanaf februari 2025 in werking.<br>
+          - Gedragscodes (Artikel 95) zijn vrijwillig en kunnen op elk moment na de inwerkingtreding van de AI-verordening worden opgesteld en toegepast.<br><br>
       Geldig vanaf (Artikel 111):<br>
-          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.<br>
+          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
           - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Artikel 4 - AI-geletterdheid
@@ -1483,7 +1516,10 @@ conclusions:
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
-          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
+          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
+      Geldig vanaf:<br>
+          - AI-geletterdheid (Artikel 4) gaat vanaf februari 2025 in werking.<br>
+          - Gedragscodes (Artikel 95) zijn vrijwillig en kunnen op elk moment na de inwerkingtreding van de AI-verordening worden opgesteld en toegepast.<br><br>
       Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico (Artikel 26 en Artikel 27):<br>
         - het nemen van passende technische en organisatorische maatregelen om te waarborgen dat dergelijke systemen in overeenstemming met de gebruiksaanwijzingen die bij de systemen zijn gevoegd worden gebruikt<br>
         - het opdragen van menselijk toezicht aan natuurlijke personen die over de nodige bekwaamheid, opleiding en autoriteit beschikken en de nodige ondersteuning krijgen<br>
@@ -1501,7 +1537,7 @@ conclusions:
           - gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680, indien van toepassing<br>
           - gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent genereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief, satirisch, fictief of analoog werk of programma, zijn de transparantieverplichtingen beperkt tot de openbaarmaking van het bestaan van dergelijke gegenereerde of bewerkte content op een passende wijze die de weergave of het genot van het werk niet belemmert.<br><br>
       Geldig vanaf (Artikel 111):<br>
-          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.<br>
+          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
           - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Artikel 4 - AI-geletterdheid
@@ -1527,7 +1563,10 @@ conclusions:
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
-          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
+          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
+      Geldig vanaf:<br>
+          - AI-geletterdheid (Artikel 4) gaat vanaf februari 2025 in werking.<br>
+          - Gedragscodes (Artikel 95) zijn vrijwillig en kunnen op elk moment na de inwerkingtreding van de AI-verordening worden opgesteld en toegepast.<br><br>
       Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico (Artikel 26 en Artikel 27):<br>
         - het nemen van passende technische en organisatorische maatregelen om te waarborgen dat dergelijke systemen in overeenstemming met de gebruiksaanwijzingen die bij de systemen zijn gevoegd worden gebruikt<br>
         - het opdragen van menselijk toezicht aan natuurlijke personen die over de nodige bekwaamheid, opleiding en autoriteit beschikken en de nodige ondersteuning krijgen<br>
@@ -1542,7 +1581,7 @@ conclusions:
         - gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.<br>
         - gebruiksverantwoordelijken die publiekrechtelijke organen zijn of particuliere entiteiten zijn die openbare diensten verlenen, en gebruiksverantwoordelijken van AI-systemen met een hoog risico gebruikt in krediet/verzekering (bijlage III, 5, c en d) een beoordeling uit van de gevolgen voor de grondrechten die het gebruik van een dergelijk systeem kan opleveren (Artikel 27).<br><br>
       Geldig vanaf (Artikel 111):<br>
-          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.<br>
+          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
           - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Artikel 4 - AI-geletterdheid
@@ -1566,12 +1605,15 @@ conclusions:
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
-          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
+          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
+      Geldig vanaf:<br>
+          - AI-geletterdheid (Artikel 4) gaat vanaf februari 2025 in werking.<br>
+          - Gedragscodes (Artikel 95) zijn vrijwillig en kunnen op elk moment na de inwerkingtreding van de AI-verordening worden opgesteld en toegepast.<br><br>
       Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen (Artikel 50):<br>
           - gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680, indien van toepassing<br>
           - gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent genereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief, satirisch, fictief of analoog werk of programma, zijn de transparantieverplichtingen beperkt tot de openbaarmaking van het bestaan van dergelijke gegenereerde of bewerkte content op een passende wijze die de weergave of het genot van het werk niet belemmert.<br><br>
       Geldig vanaf (Artikel 111):<br>
-          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.<br>
+          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
           - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Artikel 4 - AI-geletterdheid
@@ -1587,9 +1629,12 @@ conclusions:
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
-          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
+          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
+      Geldig vanaf:<br>
+          - AI-geletterdheid (Artikel 4) gaat vanaf februari 2025 in werking.<br>
+          - Gedragscodes (Artikel 95) zijn vrijwillig en kunnen op elk moment na de inwerkingtreding van de AI-verordening worden opgesteld en toegepast.<br><br>
       Geldig vanaf (Artikel 111 en Overweging 179):<br>
-          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.<br>
+          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
           - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Artikel 4 - AI-geletterdheid
@@ -1634,7 +1679,10 @@ conclusions:
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
-          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
+          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
+      Geldig vanaf:<br>
+          - AI-geletterdheid (Artikel 4) gaat vanaf februari 2025 in werking.<br>
+          - Gedragscodes (Artikel 95) zijn vrijwillig en kunnen op elk moment na de inwerkingtreding van de AI-verordening worden opgesteld en toegepast.<br><br>
       Verplichtingen voor aanbieder van een hoog risico AI-systeem (Artikel 16):<br>
           - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2<br>
           - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres<br>
@@ -1665,7 +1713,7 @@ conclusions:
           - gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680, indien van toepassing<br>
           - gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent genereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief, satirisch, fictief of analoog werk of programma, zijn de transparantieverplichtingen beperkt tot de openbaarmaking van het bestaan van dergelijke gegenereerde of bewerkte content op een passende wijze die de weergave of het genot van het werk niet belemmert.<br><br>
       Geldig vanaf (Artikel 111):<br>
-          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.<br>
+          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
           - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Afdeling 2 - Eisen voor AI-systemen met een hoog risico
@@ -1711,7 +1759,10 @@ conclusions:
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
-          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
+          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
+      Geldig vanaf:<br>
+          - AI-geletterdheid (Artikel 4) gaat vanaf februari 2025 in werking.<br>
+          - Gedragscodes (Artikel 95) zijn vrijwillig en kunnen op elk moment na de inwerkingtreding van de AI-verordening worden opgesteld en toegepast.<br><br>
       Verplichtingen voor aanbieder van een hoog risico AI-systeem (Artikel 16):<br>
           - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2<br>
           - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres<br>
@@ -1739,7 +1790,7 @@ conclusions:
         - gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.<br>
         - gebruiksverantwoordelijken die publiekrechtelijke organen zijn of particuliere entiteiten zijn die openbare diensten verlenen, en gebruiksverantwoordelijken van AI-systemen met een hoog risico gebruikt in krediet/verzekering (bijlage III, 5, c en d) een beoordeling uit van de gevolgen voor de grondrechten die het gebruik van een dergelijk systeem kan opleveren (Artikel 27).<br><br>
       Geldig vanaf (Artikel 111):<br>
-          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.<br>
+          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
           - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Afdeling 2 - Eisen voor AI-systemen met een hoog risico
@@ -1783,12 +1834,15 @@ conclusions:
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
-          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
+          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
+      Geldig vanaf:<br>
+          - AI-geletterdheid (Artikel 4) gaat vanaf februari 2025 in werking.<br>
+          - Gedragscodes (Artikel 95) zijn vrijwillig en kunnen op elk moment na de inwerkingtreding van de AI-verordening worden opgesteld en toegepast.<br><br>
       Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen (Artikel 50):<br>
           - gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680, indien van toepassing<br>
           - gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent genereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief, satirisch, fictief of analoog werk of programma, zijn de transparantieverplichtingen beperkt tot de openbaarmaking van het bestaan van dergelijke gegenereerde of bewerkte content op een passende wijze die de weergave of het genot van het werk niet belemmert.<br><br>
       Geldig vanaf (Artikel 111):<br>
-          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.<br>
+          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
           - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Artikel 4 - AI-geletterdheid
@@ -1804,9 +1858,12 @@ conclusions:
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
-          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
+          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
+      Geldig vanaf:<br>
+          - AI-geletterdheid (Artikel 4) gaat vanaf februari 2025 in werking.<br>
+          - Gedragscodes (Artikel 95) zijn vrijwillig en kunnen op elk moment na de inwerkingtreding van de AI-verordening worden opgesteld en toegepast.<br><br>
       Geldig vanaf (Artikel 111):<br>
-          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.<br>
+          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
           - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Artikel 4 - AI-geletterdheid
@@ -1820,7 +1877,10 @@ conclusions:
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
-          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
+          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
+      Geldig vanaf:<br>
+          - AI-geletterdheid (Artikel 4) gaat vanaf februari 2025 in werking.<br>
+          - Gedragscodes (Artikel 95) zijn vrijwillig en kunnen op elk moment na de inwerkingtreding van de AI-verordening worden opgesteld en toegepast.<br><br>
       Verplichtingen voor aanbieder van een hoog risico AI-systeem (Artikel 16):<br>
           - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2<br>
           - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres<br>
@@ -1856,7 +1916,7 @@ conclusions:
             robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten
             en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen.<br><br>
       Geldig vanaf (Artikel 111):<br>
-          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.<br>
+          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
           - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
       De volgende verplichtingen gelden voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54):<br>
       - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan<br>
@@ -1916,7 +1976,10 @@ conclusions:
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
-          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
+          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
+      Geldig vanaf:<br>
+          - AI-geletterdheid (Artikel 4) gaat vanaf februari 2025 in werking.<br>
+          - Gedragscodes (Artikel 95) zijn vrijwillig en kunnen op elk moment na de inwerkingtreding van de AI-verordening worden opgesteld en toegepast.<br><br>
       Verplichtingen voor aanbieder van een hoog risico AI-systeem (Artikel 16):<br>
           - aanbieders zorgen ervoor dat hun AI-systemen met een hoog risico in overeenstemming zijn met de eisen van afdeling 2<br>
           - aanbieders vermelden op het AI-systeem met een hoog risico of, wanneer dit niet mogelijk is, op de verpakking of in de bij het product gevoegde documentatie, naargelang het geval, hun naam, geregistreerde handelsnaam of geregistreerd merk en hun contactadres<br>
@@ -1944,7 +2007,7 @@ conclusions:
         - gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.<br>
         - gebruiksverantwoordelijken die publiekrechtelijke organen zijn of particuliere entiteiten zijn die openbare diensten verlenen, en gebruiksverantwoordelijken van AI-systemen met een hoog risico gebruikt in krediet/verzekering (bijlage III, 5, c en d) een beoordeling uit van de gevolgen voor de grondrechten die het gebruik van een dergelijk systeem kan opleveren (Artikel 27).<br><br>
       Geldig vanaf (Artikel 111):<br>
-          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.<br>
+          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
           - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
       De volgende verplichtingen gelden voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54):<br>
       - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan<br>
@@ -2002,7 +2065,10 @@ conclusions:
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
-          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
+          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
+      Geldig vanaf:<br>
+          - AI-geletterdheid (Artikel 4) gaat vanaf februari 2025 in werking.<br>
+          - Gedragscodes (Artikel 95) zijn vrijwillig en kunnen op elk moment na de inwerkingtreding van de AI-verordening worden opgesteld en toegepast.<br><br>
       Verplichtingen voor aanbieders en gebruiksverantwoordelijken van AI-systemen met transparantieverplichtingen (Artikel 50):<br>
           - aanbieders zorgen ervoor dat AI-systemen die voor directe interactie met natuurlijke personen zijn bedoeld, zodanig worden ontworpen en ontwikkeld
             dat de betrokken natuurlijke personen worden geinformeerd dat zij interageren met een AI-systeem, tenzij dit duidelijk is vanuit het oogpunt van een normaal geinformeerde
@@ -2012,7 +2078,7 @@ conclusions:
             robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten
             en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen.<br><br>
       Geldig vanaf (Artikel 111):<br>
-          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.<br>
+          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
           - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
       De volgende verplichtingen gelden voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54):<br>
       - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan<br>
@@ -2042,9 +2108,12 @@ conclusions:
     obligation: "
       Verplichtingen voor alle AI-systemen:<br>
           - AI-geletterdheid (Artikel 4)<br>
-          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
+          - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
+      Geldig vanaf:<br>
+          - AI-geletterdheid (Artikel 4) gaat vanaf februari 2025 in werking.<br>
+          - Gedragscodes (Artikel 95) zijn vrijwillig en kunnen op elk moment na de inwerkingtreding van de AI-verordening worden opgesteld en toegepast.<br><br>
       Geldig vanaf (Artikel 111):<br>
-          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen, hoewel de algemene en specifieke verplichtingen in hoofdstukken I en II al van toepassing zijn vanaf 2 februari 2025.<br>
+          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
           - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
       De volgende verplichtingen gelden voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54):<br>
       - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan<br>
