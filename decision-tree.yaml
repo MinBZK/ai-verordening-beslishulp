@@ -337,8 +337,8 @@ questions:
 
 # Verboden AI systeem
   - questionId: "2.0"
-    explanation: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. We gaan nu bepalen in welke risicogroep jouw (beoogde) toepassing valt. Hiervoor gaan we maximaal 7 vragen langslopen.<br><br>"
-    question: "Tussenscherm"
+    question: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing."
+    explanation: "We gaan nu bepalen in welke risicogroep jouw (beoogde) toepassing valt. Hiervoor gaan we maximaal 7 vragen langslopen.<br><br>"
     category: tussenscherm
     subcategory: "Tussenscherm"
     answers:
