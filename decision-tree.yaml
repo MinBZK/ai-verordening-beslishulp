@@ -375,7 +375,7 @@ questions:
 # Uitzondering verboden AI
   - questionId: "2.2"
     question: "Is er sprake van een van de twee uitzonderingen voor verboden systemen?"
-    explanation: "Uitzonderingen voor verboden systemen:
+    explanation: "Uitzonderingen voor verboden systemen:<br><br>
       -	Er is sprake van een rechtshandhavingsactiviteit i.v.m. een specifiek misdrijf (terrorisme, mensenhandel, seksuele uitbuiting van kinderen en materiaal over seksueel misbruik van kinderen, illegale handel in verdovende middelen en psychotrope stoffen, illegale handel in wapens, munitie en explosieven, moord, zware mishandeling, illegale handel in menselijke organen en weefsels, illegale handel in nucleaire en radioactieve stoffen, ontvoering, wederrechtelijke vrijheidsberoving en gijzeling, misdrijven die onder de rechtsmacht van het Internationaal Strafhof vallen, kaping van vliegtuigen/schepen, verkrachting, milieucriminaliteit, georganiseerde of gewapende diefstal, sabotage, deelneming aan een criminele organisatie die betrokken is bij een of meer van de bovengenoemde misdrijven).<br>
       -	Er is sprake van gerichte opsporing van specifieke slachtoffers, ontvoering, mensenhandel en seksuele uitbuiting van mensen, vermiste personen; of het voorkomen van bedreigingen voor het leven of de fysieke veiligheid van personen of het reageren op de huidige of voorzienbare dreiging van een terreuraanslag."
     category: risicogroep
@@ -515,25 +515,18 @@ questions:
 ## Conformiteitsbeoordeling door derde partij bijlage IA
   - questionId: "2.4.1"
     question: "Is het verplicht om de conformiteitsbeoordeling door een derde partij, zoals een conformiteitsbeoordelingsinstantie, uit te laten voeren?"
-    explanation: "
-      Dit is het geval als één van deze situaties van toepassing is: <br><br>
-      Situatie 1: <br>
-      Is jouw AI-systeem bedoeld voor gebruik door:<br>
-        - Rechtshandhavingsinstanties?<br>
-        - Immigratie- of asielautoriteiten?<br>
-        - Instellingen, organen of instanties van de EU?<br><br>
-
-      Situatie 2: <br>
-      Vereist dit product volgens de EU harmonisatiewegeving een conformiteitsbeoordeling door een derde partij?<br><br>
-
-      Antwoord met 'Ja' als één van deze twee situaties van toepassing is."
+    explanation: "Het is verplicht om een conformiteitsbeoordeling door een derde partij uit te laten voeren als de toepassing waarvan het AI-systeem een veiligheidscomponent is, of het AI-systeem zelf onder de harmonisatiewetgeving van de EU valt en een dergelijke beoordeling nodig is om het product in de handel te brengen of te gebruiken."
     category: risicogroep
     subcategory: "Conformiteitsbeoordeling Bijlage 1A"
     sources:
         - source: Artikel 43 - Conformiteitsbeoordeling
           url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5074-1-1
+        - source: Artikel 6 - Classificatieregels voor AI-systemen met een hoog risico
+          url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#art_6
         - source: Overweging 50 - Conformiteitsbeoordelingsprocedure
           url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_50
+        - source: Overwerging 124 - Conformiteitsbeoordeling en harmonisatiewetgeving
+          url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_124
         - source: Bijlage 1 - Lijst van harmonisatiewetgeving van de Unie
           url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e38-124-1
         - source: Richtlijn 2006/42/EG - Machines
@@ -572,27 +565,14 @@ questions:
 ## Conformiteitsbeoordeling door derde partij bijlage III
   - questionId: "2.4.2"
     question: "Is het verplicht om de conformiteitsbeoordeling door een derde partij, zoals een conformiteitsbeoordelingsinstantie, uit te laten voeren?"
-    explanation: "
-      Dit is het geval als één van deze twee situaties van toepassing is: <br><br>
-      Situatie 1:<br>
-      Is het een toepassing voor biometrische identificatie en categorisering (bijlage III punt 1) <br>
-      EN is een van deze punten van toepassing:<br>
-      - Bestaan er geen geharmoniseerde normen of gemeenschappelijke specificaties?<br>
-      - Heb je de geharmoniseerde norm niet of slechts gedeeltelijk toegepast?<br>
-      - Bestaan er wel gemeenschappelijke specificaties maar heb je deze niet toegepast?<br>
-      - Zijn er geharmoniseerde normen met beperkingen bekendgemaakt?<br><br>
-
-      Situatie 2: <br>
-      Of is jouw toepassing bedoeld voor gebruik door:<br>
-      - Rechtshandhavingsinstanties?<br>
-      - Immigratie- of asielautoriteiten?<br>
-      - Instellingen, organen of instanties van de EU?<br><br>
-      Antwoord met 'Ja' als één van deze twee situaties van toepassing is."
+    explanation: "Een conformiteitsbeoordeling door een derde partij is verplicht indien het AI-systemen is bedoeld om voor biometrie te worden gebruikt."
     category: risicogroep
     subcategory: "Conformiteitsbeoordeling Bijlage III"
     sources:
       - source: Artikel 43 - Conformiteitsbeoordeling
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5074-1-1
+      - source: Overweging 125 - conformiteitsbeoordeling biometrie
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_125
       - source: Bijlage III
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#anx_III
     answers:
@@ -626,7 +606,7 @@ questions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2986-1-1
     answers:
       - answer: Ja
-        nextQuestionId: "2.6" # profilering
+        nextQuestionId: "2.4.2" #conformiteitsbeoordeling derde partij
       - answer: Nee
         labels:
           - "geen hoog-risico AI"
@@ -988,8 +968,8 @@ conclusions:
           - aanbieders tonen op een met redenen omkleed verzoek van een nationale bevoegde autoriteit de overeenstemming aan van het AI-systeem met een hoog risico met de eisen van afdeling 2<br>
           - aanbieders zorgen ervoor dat het AI-systeem met een hoog risico voldoet aan de toegankelijkheidseisen overeenkomstig de Richtlijnen (EU) 2016/2102 en (EU) 2019/882.<br><br>
         Geldig vanaf (Artikel 111):<br>
-         - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-         - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br>"
+         - Voor AI-systemen in ontwikkeling vgeldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+         - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd voor de overheid moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br>"
     sources:
       - source: Afdeling 2 - Eisen voor AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#cpt_III.sct_2
