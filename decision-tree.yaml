@@ -579,11 +579,11 @@ questions:
       - answer: Ja
         labels:
           - "beoordeling door derde partij"
-        nextQuestionId: "2.9" #transparantieverplichting
+        nextQuestionId: "2.6" #transparantieverplichting
       - answer: Nee
         labels:
           - "niet van toepassing"
-        nextQuestionId: "2.9" #transparantieverplichting
+        nextQuestionId: "2.6" #transparantieverplichting
 
 # Hoog risico bijlage III
   - questionId: "2.5"
