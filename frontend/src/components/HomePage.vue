@@ -7,7 +7,7 @@ const emit = defineEmits(['acceptDisclaimer'])
 
 <template>
     <Header
-      :questionId="'1.2'"
+      :questionId="'1.1'"
       :disclaimer-screen="'0'"/>
     <main>
       <div class="rvo-progress-tracker">
