@@ -396,7 +396,7 @@ questions:
         labels:
           - "hoog-risico AI"
         redirects:
-         - nextQuestionId: "2.3" #conformiteitsbeoordeling
+         - nextQuestionId: "2.3" #hoog risico bijlage III
            if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels'
          - nextConclusionId: "16.0.1"
            if: '"distributeur" in labels && "AI-systeem" in labels'
