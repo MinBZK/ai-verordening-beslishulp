@@ -396,7 +396,7 @@ questions:
         labels:
           - "hoog-risico AI"
         redirects:
-         - nextQuestionId: "2.7.2" #conformiteitsbeoordeling
+         - nextQuestionId: "2.3" #conformiteitsbeoordeling
            if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels'
          - nextConclusionId: "16.0.1"
            if: '"distributeur" in labels && "AI-systeem" in labels'
@@ -631,25 +631,18 @@ questions:
 ## Conformiteitsbeoordeling door derde partij bijlage IA
   - questionId: "2.7.1"
     question: "Is het verplicht om de conformiteitsbeoordeling door een derde partij, zoals een conformiteitsbeoordelingsinstantie, uit te laten voeren?"
-    explanation: "
-      Dit is het geval als één van deze situaties van toepassing is: <br><br>
-      Situatie 1: <br>
-      Is jouw AI-systeem bedoeld voor gebruik door:<br>
-        - Rechtshandhavingsinstanties?<br>
-        - Immigratie- of asielautoriteiten?<br>
-        - Instellingen, organen of instanties van de EU?<br><br>
-
-      Situatie 2: <br>
-      Vereist dit product volgens de EU harmonisatiewegeving een conformiteitsbeoordeling door een derde partij?<br><br>
-
-      Antwoord met 'Ja' als één van deze twee situaties van toepassing is."
+    explanation: "Het is verplicht om een conformiteitsbeoordeling door een derde partij uit te laten voeren als de toepassing waarvan het AI-systeem een veiligheidscomponent is, of het AI-systeem zelf onder de harmonisatiewetgeving van de EU valt en een dergelijke beoordeling nodig is om het product in de handel te brengen of te gebruiken."
     category: risicogroep
     subcategory: "Conformiteitsbeoordeling Bijlage 1A"
     sources:
         - source: Artikel 43 - Conformiteitsbeoordeling
           url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5074-1-1
+        - source: Artikel 6 - Classificatieregels voor AI-systemen met een hoog risico
+          url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#art_6
         - source: Overweging 50 - Conformiteitsbeoordelingsprocedure
           url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_50
+        - source: Overwerging 124 - Conformiteitsbeoordeling en harmonisatiewetgeving
+          url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_124
         - source: Bijlage 1 - Lijst van harmonisatiewetgeving van de Unie
           url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e38-124-1
         - source: Richtlijn 2006/42/EG - Machines
@@ -688,39 +681,25 @@ questions:
 ## Conformiteitsbeoordeling door derde partij bijlage III
   - questionId: "2.7.2"
     question: "Is het verplicht om de conformiteitsbeoordeling door een derde partij, zoals een conformiteitsbeoordelingsinstantie, uit te laten voeren?"
-    explanation: "
-      Dit is het geval als één van deze twee situaties van toepassing is: <br><br>
-      Situatie 1:<br>
-      Is het een toepassing voor biometrische identificatie en categorisering (bijlage III punt 1) <br>
-      EN is een van deze punten van toepassing:<br>
-      - Bestaan er geen geharmoniseerde normen of gemeenschappelijke specificaties?<br>
-      - Heb je de geharmoniseerde norm niet of slechts gedeeltelijk toegepast?<br>
-      - Bestaan er wel gemeenschappelijke specificaties maar heb je deze niet toegepast?<br>
-      - Zijn er geharmoniseerde normen met beperkingen bekendgemaakt?<br><br>
-
-      Situatie 2: <br>
-      Of is jouw toepassing bedoeld voor gebruik door:<br>
-      - Rechtshandhavingsinstanties?<br>
-      - Immigratie- of asielautoriteiten?<br>
-      - Instellingen, organen of instanties van de EU?<br><br>
-      Antwoord met 'Ja' als één van deze twee situaties van toepassing is."
+    explanation: "Een conformiteitsbeoordeling door een derde partij is verplicht indien het AI-systemen is bedoeld om voor biometrie te worden gebruikt."
     category: risicogroep
     subcategory: "Conformiteitsbeoordeling Bijlage III"
     sources:
       - source: Artikel 43 - Conformiteitsbeoordeling
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5074-1-1
+      - source: Overweging 125 - Conformiteitsbeoordeling biometrie
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_125
       - source: Bijlage III
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#anx_III
     answers:
       - answer: Ja
         labels:
           - "beoordeling door derde partij"
-        nextQuestionId: "2.9" #transparantieverplichting
+        nextQuestionId: "2.5" #profilering
       - answer: Nee
         labels:
           - "niet van toepassing"
-        nextQuestionId: "2.9" #transparantieverplichting
-
+        nextQuestionId: "2.5" #profilering
 
 ## Systeemrisico van het gebruike AI-model voor algemene doeleinden
   - questionId: "2.8"
