@@ -82,7 +82,7 @@ defineEmits(['answered', 'back'])
     <div class="rvo-layout-margin-vertical--xl">
       <button
         @click="$emit('back')"
-        v-if="id !== '1.2'"
+        v-if="id !== '1.1'"
         type="button"
         class="flex utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline "
       >

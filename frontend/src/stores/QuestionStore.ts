@@ -17,7 +17,7 @@ export const useQuestionStore = defineStore('question', () => {
   const initialAnswers = JSON.parse(sessionStorage.getItem('answers') ?? '[]')
   const initialLabels = JSON.parse(sessionStorage.getItem('labels') ?? '{}')
   const initialLabelsBySubCategory = JSON.parse(sessionStorage.getItem('labelsbysubcategory') ?? initialLabelsBySubCategoryNTB)
-  const initialQuestionId = sessionStorage.getItem('currentquestion') ?? '1.2'
+  const initialQuestionId = sessionStorage.getItem('currentquestion') ?? '1.1'
   const initialConclusionId = sessionStorage.getItem('currentconclusion') ?? ''
 
   const AcceptedDisclaimer = ref(String(initialAcceptedDisclaimer))
@@ -132,7 +132,7 @@ export const useQuestionStore = defineStore('question', () => {
 
   function reset() {
     answers.value = []
-    QuestionId.value = '1.2'
+    QuestionId.value = '1.1'
     labels.value = {}
     LabelsBySubCategory.value = JSON.parse(initialLabelsBySubCategoryNTB)
     ConclusionId.value = ''

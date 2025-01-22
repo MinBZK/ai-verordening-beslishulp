@@ -19,7 +19,7 @@ const emit = defineEmits(['reset-event'])
         <div class="rvo-max-width-layout rvo-max-width-layout--md rvo-max-width-layout-inline-padding--sm">
           <nav class="rvo-topnav rvo-topnav--lg">
             <ul class="rvo-topnav__list">
-              <li v-if="questionId != '1.2' && disclaimerScreen != '0'" class="rvo-topnav__item">
+              <li v-if="questionId != '1.1' && disclaimerScreen != '0'" class="rvo-topnav__item">
                 <a  class="rvo-link rvo-topnav__link rvo-link--logoblauw" @click="$emit('reset-event')">
                 <span
                   class="utrecht-icon rvo-icon rvo-icon-terug rvo-icon--lg rvo-icon--wit"
