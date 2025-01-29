@@ -804,6 +804,8 @@ questions:
     category: risicogroep
     subcategory: "Open of vrije licentie"
     sources:
+      - source: Artikel 2 - Toepassingsgebied
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e1978-1-1
       - source: Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5576-1-1
       - source: Overweging 102 - Begrip open-source
