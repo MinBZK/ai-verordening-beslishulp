@@ -538,6 +538,8 @@ questions:
         labels:
           - "geen hoog-risico AI"
         redirects:
+         - nextQuestionId: "2.11" #open-source
+           if:
          - nextQuestionId: "2.9" #transparantieverplichting
            if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels'
          - nextConclusionId: "16.0.3"
@@ -752,32 +754,7 @@ questions:
       - answer: Nee
         labels:
           - "geen transparantieverplichting"
-        redirects:
-          - nextConclusionId: "14.0.2"
-            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
-          - nextConclusionId: "14.0.4"
-            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels'
-          - nextConclusionId: "14.1.2"
-            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels'
-          - nextConclusionId: "14.1.4"
-            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
-          - nextConclusionId: "13.0.2"
-            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
-          - nextConclusionId: "13.0.4"
-            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels'
-          - nextConclusionId: "13.1.2"
-            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels'
-          - nextConclusionId: "13.1.4"
-            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
-          - nextConclusionId: "12.0.2"
-            if: '"aanbieder" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
-          - nextConclusionId: "12.0.4"
-            if: '"aanbieder" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels'
-          - nextConclusionId: "12.1.2"
-            if: '"aanbieder" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels '
-          - nextConclusionId: "12.1.4"
-            if: '"aanbieder" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels '
-
+        nextQuestionId: "2.11" #open-source
 
 ## Uitzondering Transparantieverplichting
   - questionId: "2.10"
@@ -792,6 +769,55 @@ questions:
       - answer: Ja
         labels:
           - "geen transparantieverplichting"
+        nextQuestionId: "2.11" #open-source
+      - answer: Nee
+        labels:
+          - "transparantieverplichting"
+        redirects:
+          - nextConclusionId: "14.0.1"
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
+          - nextConclusionId: "14.0.3"
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels'
+          - nextConclusionId: "14.1.1"
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels'
+          - nextConclusionId: "14.1.3"
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
+          - nextConclusionId: "13.1.1"
+            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels'
+          - nextConclusionId: "13.1.3"
+            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
+          - nextConclusionId: "12.1.1"
+            if: '"aanbieder" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels'
+          - nextConclusionId: "12.1.3"
+            if: '"aanbieder" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
+
+## Open-source "Zijn de broncodes en parameters openbaar voor eenieder?"
+  - questionId: "2.11"
+    question: "Wordt de toepassing onder een open of vrije licentie gedeeld en zijn de broncodes en parameters openbaar voor eenieder?"
+    explanation: "" #to do: Voeg hier een uitleg toe wanneer welke uitzondering geldt
+    category: risicogroep
+    subcategory: "Open of vrije licentie"
+    sources:
+      - source: Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5576-1-1
+      - source: Overweging 102 - Begrip open-source
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_102
+      - source: Overweging 104 - Transparantie-uitzonderingen open-source AI-modellen
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_104
+    answers:
+      - answer: Ja
+        labels:
+          - "open-source"
+        redirects:
+          - nextConclusionId: "11.2"
+            if: '"AI-systeem" in labels && ("geen transparantieverplichting" in labels || "geen hoog-risico" in labels)'
+          - nextConclusionId: "14.2.2"
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-model voor algemene doeleinden" in labels'
+          - nextConclusionId: "12.2.2"
+            if: '"aanbieder" in labels && "AI-model voor algemene doeleinden" in labels'
+      - answer: Nee
+        labels:
+          - "geen open-source"
         redirects:
           - nextConclusionId: "14.0.2"
             if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
@@ -814,67 +840,45 @@ questions:
           - nextConclusionId: "12.0.4"
             if: '"aanbieder" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels'
           - nextConclusionId: "12.1.2"
-            if: '"aanbieder" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels '
-          - nextConclusionId: "12.1.4"
-            if: '"aanbieder" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels '
-      - answer: Nee
-        labels:
-          - "transparantieverplichting"
-        redirects:
-          - nextConclusionId: "14.0.1"
-            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
-          - nextConclusionId: "14.0.3"
-            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels'
-          - nextConclusionId: "14.1.1"
-            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels'
-          - nextConclusionId: "14.1.3"
-            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
-          - nextConclusionId: "13.0.1"
-            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
-          - nextConclusionId: "13.0.3"
-            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels'
-          - nextConclusionId: "13.1.1"
-            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels'
-          - nextConclusionId: "13.1.3"
-            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
-          - nextConclusionId: "12.0.1"
-            if: '"aanbieder" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
-          - nextConclusionId: "12.0.3"
-            if: '"aanbieder" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels'
-          - nextConclusionId: "12.1.1"
             if: '"aanbieder" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels'
-          - nextConclusionId: "12.1.3"
+          - nextConclusionId: "12.1.4"
             if: '"aanbieder" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
-
-## Open-source "Zijn de broncodes en parameters openbaar voor eenieder?"
-  - questionId: "2.11"
-    question: "Wordt de toepassing onder een open of vrije licentie gedeeld en zijn de broncodes en parameters openbaar voor eenieder?"
-    explanation: ""
-    category: risicogroep
-    subcategory: "Open of vrije licentie"
-    sources:
-      - source: Overweging 102 - Begrip open-source
-        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_102
-    answers:
-      - answer: Ja
-        labels:
-          - "open-source"
-        redirects:
-          - nextConclusionId: "14.2.2"
-            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels'
-          - nextConclusionId: "12.2.2"
-            if: '"aanbieder" in labels'
-      - answer: Nee
-        labels:
-          - "geen open-source"
-        redirects:
-         - nextConclusionId: "14.2.3"
-           if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels'
-         - nextConclusionId: "12.2.3"
-           if: '"aanbieder" in labels'
 
 ### Conclusies
 conclusions:
+## Conclusies voor geen rol (11)
+  - conclusionId: "11.0"
+    conclusion: "Je hebt geantwoord dat er geen sprake is van een algoritme, hierdoor is de AI-verordening niet voor jou van toepassing. Op basis van je antwoorden is het niet nodig om door te gaan naar Stap 2 – bepalen risicogroep. "
+    obligation: "Houd je aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)."
+  - conclusionId: "11.2"
+    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat je een uitzonderingsgrond hebt geselecteerd."
+    obligation: "Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt). Verder dien je te registreren in het algoritmeregister."
+    sources:
+      - source: Artikel 2 - Toepassingsgebied
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e1978-1-1
+  - conclusionId: "11.3"
+    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat het algoritme niet valt onder de definitie van een AI-systeem of AI-model volgens de AI-verordening. Volgens de handreiking algoritmeregister is de toepassing een impactvol algoritme."
+    obligation: "Omdat het een algoritme met impact betreft, dien je in algoritmeregister te publiceren. Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt)."
+    sources:
+      - source: Handreiking Algoritmeregister
+        url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
+  - conclusionId: "11.4"
+    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat het algoritme niet valt onder de definitie van een AI-systeem of AI-model volgens de AI-verordening. Volgens de handreiking algoritmeregister is de toepassing een impactvol algoritme en val je in de uitzonderingsgrond."
+    obligation: "Je hoeft vanwege uitzonderingsgrond niet te publiceren in het algoritmeregister. Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt)."
+    sources:
+      - source: Handreiking Algoritmeregister
+        url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
+  - conclusionId: "11.5"
+    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat het algoritme niet valt onder de definitie van een AI-systeem of AI-model volgens de AI-verordening. Volgens de handreiking algoritmeregister is de toepassing geen impactvol algoritme."
+    obligation: "Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt)."
+    sources:
+      - source: Handreiking Algoritmeregister
+        url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
+  - conclusionId: "11.6"
+    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat je geen aanbieder, gebruiksverantwoordelijke, importeur of distributeur bent. Controleer echter zorgvuldig of een van deze rollen mogelijk toch op jou van toepassing is."
+    obligation: "Er is geen sprake van een verplichting."
+
+
 ###Conclusies 12.0.1 tm 12.1.2 voor aanbieders
   - conclusionId: "12.0.0"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent aanbieder van een verboden AI-systeem."
@@ -2350,34 +2354,4 @@ conclusions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e4246-1-1
 
 
-## COnclusies voor geen rol (15)
-  - conclusionId: "11.0"
-    conclusion: "Je hebt geantwoord dat er geen sprake is van een algoritme, hierdoor is de AI-verordening niet voor jou van toepassing. Op basis van je antwoorden is het niet nodig om door te gaan naar Stap 2 – bepalen risicogroep. "
-    obligation: "Houd je aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)."
-  - conclusionId: "11.2"
-    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat je een uitzonderingsgrond hebt geselecteerd."
-    obligation: "Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt). Verder dien je te registreren in het algoritmeregister."
-    sources:
-      - source: Artikel 2 - Toepassingsgebied
-        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e1978-1-1
-  - conclusionId: "11.3"
-    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat het algoritme niet valt onder de definitie van een AI-systeem of AI-model volgens de AI-verordening. Volgens de handreiking algoritmeregister is de toepassing een impactvol algoritme."
-    obligation: "Omdat het een algoritme met impact betreft, dien je in algoritmeregister te publiceren. Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt)."
-    sources:
-      - source: Handreiking Algoritmeregister
-        url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
-  - conclusionId: "11.4"
-    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat het algoritme niet valt onder de definitie van een AI-systeem of AI-model volgens de AI-verordening. Volgens de handreiking algoritmeregister is de toepassing een impactvol algoritme en val je in de uitzonderingsgrond."
-    obligation: "Je hoeft vanwege uitzonderingsgrond niet te publiceren in het algoritmeregister. Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt)."
-    sources:
-      - source: Handreiking Algoritmeregister
-        url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
-  - conclusionId: "11.5"
-    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat het algoritme niet valt onder de definitie van een AI-systeem of AI-model volgens de AI-verordening. Volgens de handreiking algoritmeregister is de toepassing geen impactvol algoritme."
-    obligation: "Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt)."
-    sources:
-      - source: Handreiking Algoritmeregister
-        url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
-  - conclusionId: "11.6"
-    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat je geen aanbieder, gebruiksverantwoordelijke, importeur of distributeur bent. Controleer echter zorgvuldig of een van deze rollen mogelijk toch op jou van toepassing is."
-    obligation: "Er is geen sprake van een verplichting."
+
