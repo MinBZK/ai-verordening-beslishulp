@@ -865,7 +865,7 @@ conclusions:
     conclusion: "Je hebt geantwoord dat er geen sprake is van een algoritme, hierdoor is de AI-verordening niet voor jou van toepassing. Op basis van je antwoorden is het niet nodig om door te gaan naar Stap 2 – bepalen risicogroep. "
     obligation: "Houd je aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)."
   - conclusionId: "11.2"
-    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat je een uitzonderingsgrond hebt geselecteerd."
+    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat je een uitzonderingsgrond hebt geselecteerd en buiten het toepassingsgebied valt."
     obligation: "Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt). Verder dien je te registreren in het algoritmeregister."
     sources:
       - source: Artikel 2 - Toepassingsgebied
