@@ -835,6 +835,8 @@ questions:
             if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "geen transparantieverplichting" in labels'
           - nextConclusionId: "14.1.4"
             if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels && "geen transparantieverplichting" in labels'
+          - nextConclusionId: "14.2.3"
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-model voor algemene doeleinden" in labels'
           - nextConclusionId: "13.0.2"
             if: '"gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels && "geen transparantieverplichting" in labels'
           - nextConclusionId: "13.0.4"
@@ -851,6 +853,8 @@ questions:
             if: '"aanbieder" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "geen transparantieverplichting" in labels'
           - nextConclusionId: "12.1.4"
             if: '"aanbieder" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels && "geen transparantieverplichting" in labels'
+          - nextConclusionId: "12.2.3"
+            if: '"aanbieder" in labels && "AI-model voor algemene doeleinden" in labels'
           - nextQuestionId: "2.9" #transparantieverplichting
             if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels' #this should actually be an 'else' statement
 
