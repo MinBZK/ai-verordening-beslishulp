@@ -538,8 +538,6 @@ questions:
         labels:
           - "geen hoog-risico AI"
         redirects:
-         - nextQuestionId: "2.11" #open-source
-           if:
          - nextQuestionId: "2.9" #transparantieverplichting
            if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels'
          - nextConclusionId: "16.0.3"
@@ -2352,6 +2350,3 @@ conclusions:
     sources:
       - source: Artikel 24 - Verplichtingen van distributeurs
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e4246-1-1
-
-
-
