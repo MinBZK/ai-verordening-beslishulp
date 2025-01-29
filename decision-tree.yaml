@@ -792,7 +792,7 @@ questions:
 ## Open-source "Zijn de broncodes en parameters openbaar voor eenieder?"
   - questionId: "2.11"
     question: "Wordt de toepassing onder een open of vrije licentie gedeeld en zijn de broncodes en parameters openbaar voor eenieder?"
-    explanation: "" #to do: Voeg hier een uitleg toe wanneer welke uitzondering geldt
+    explanation: "In het geval van een open-source toepassing kan er een uitzondering zijn op (een deel van) de verplichtingen vanuit de AI-verordening."
     category: risicogroep
     subcategory: "Open of vrije licentie"
     sources:
