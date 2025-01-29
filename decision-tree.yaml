@@ -52,13 +52,13 @@ questions:
           - "aanbieder"
         subresult: "Tenzij het duidelijk is dat de ontwikkelaar de AI onder hun eigen naam of merk in de handel brengt"
         nextQuestionId: "1.3"
-      - answer: We hebben een toepassing gekocht en daarop doorontwikkeld
+      - answer: We gebruiken een extern ontwikkelde toepassing zonder aanpassingen
         labels:
-          - "aanbieder"
           - "gebruiksverantwoordelijke"
         nextQuestionId: "1.3"
-      - answer: We hebben een toepassing gekocht en gebruiken deze zonder aanpassingen
+      - answer: We gebruiken een extern ontwikkelde toepassing met aanpassingen
         labels:
+          - "aanbieder"
           - "gebruiksverantwoordelijke"
         nextQuestionId: "1.3"
       - answer: We importeren van een leverancier buiten de EU
