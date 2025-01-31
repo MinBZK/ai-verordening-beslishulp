@@ -190,10 +190,10 @@ questions:
         nextConclusionId: "11.2" #uitzondering AI-verordening
       - answer: Nee
         redirects:
-          - nextQuestionId: "2.0"
-            if: '"AI-systeem" in labels || "AI-systeem voor algemene doeleinden" in labels || "AI-model voor algemene doeleinden" in labels'
-          - nextConclusionId: "13.2.1"
+          - nextConclusionId: "13.2.1" #omdat gebruiksverantwoordelijke van GPAI-modellen geen verplichtingen hebben bij systeemrisico
             if: '"AI-model voor algemene doeleinden" in labels && "gebruiksverantwoordelijke" in labels'
+          - nextQuestionId: "2.0" #risicogroep classificering
+            if: '"AI-systeem" in labels || "AI-systeem voor algemene doeleinden" in labels || "AI-model voor algemene doeleinden" in labels'
 
  # Impactvol algoritme
   - questionId: "1.6"
@@ -752,7 +752,33 @@ questions:
       - answer: Nee
         labels:
           - "geen transparantieverplichting"
-        nextQuestionId: "2.11" #open-source
+        redirects:
+          - nextQuestionId: "2.11" #open-source
+            if: '!("open-source" in labels) || !("geen open-source" in labels)'
+          - nextConclusionId: "14.0.2"
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
+          - nextConclusionId: "14.0.4"
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels'
+          - nextConclusionId: "14.1.2"
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels'
+          - nextConclusionId: "14.1.4"
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
+          - nextConclusionId: "13.0.2"
+            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
+          - nextConclusionId: "13.0.4"
+            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels'
+          - nextConclusionId: "13.1.2"
+            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels'
+          - nextConclusionId: "13.1.4"
+            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
+          - nextConclusionId: "12.0.2"
+            if: '"aanbieder" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
+          - nextConclusionId: "12.0.4"
+            if: '"aanbieder" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels'
+          - nextConclusionId: "12.1.2"
+            if: '"aanbieder" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels'
+          - nextConclusionId: "12.1.4"
+            if: '"aanbieder" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
 
 ## Uitzondering Transparantieverplichting
   - questionId: "2.10"
@@ -767,7 +793,34 @@ questions:
       - answer: Ja
         labels:
           - "geen transparantieverplichting"
-        nextQuestionId: "2.11" #open-source
+        redirects:
+          - nextQuestionId: "2.11"
+            if: '!("open-source" in labels) || !("geen open-source" in labels)'
+          - nextConclusionId: "14.0.2"
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
+          - nextConclusionId: "14.0.4"
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels'
+          - nextConclusionId: "14.1.2"
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels'
+          - nextConclusionId: "14.1.4"
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
+          - nextConclusionId: "13.0.2"
+            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
+          - nextConclusionId: "13.0.4"
+            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels'
+          - nextConclusionId: "13.1.2"
+            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels'
+          - nextConclusionId: "13.1.4"
+            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
+          - nextConclusionId: "12.0.2"
+            if: '"aanbieder" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
+          - nextConclusionId: "12.0.4"
+            if: '"aanbieder" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels'
+          - nextConclusionId: "12.1.2"
+            if: '"aanbieder" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels'
+          - nextConclusionId: "12.1.4"
+            if: '"aanbieder" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
+
       - answer: Nee
         labels:
           - "transparantieverplichting"
@@ -818,7 +871,7 @@ questions:
           - "open-source"
         redirects:
           - nextConclusionId: "11.2" #uitzondering AI-verordening
-            if: '("AI-systeem" in labels || "AI-systeem voor algemene doeleinden" in labels) && ("geen transparantieverplichting" in labels || "geen hoog-risico" in labels)'
+            if: '("AI-systeem" in labels || "AI-systeem voor algemene doeleinden" in labels) && ("geen transparantieverplichting" in labels || "geen hoog-risico AI" in labels)'
           - nextConclusionId: "14.2.2"
             if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-model voor algemene doeleinden" in labels'
           - nextConclusionId: "12.2.2"
@@ -827,36 +880,37 @@ questions:
         labels:
           - "geen open-source"
         redirects:
+          - nextQuestionId: "2.9" #transparantieverplichting
+            if: '!("transparantieverplichting" in labels) || !("geen transparantieverplichting" in labels)'
           - nextConclusionId: "14.0.2"
-            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels && "geen transparantieverplichting" in labels'
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
           - nextConclusionId: "14.0.4"
-            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels && "geen transparantieverplichting" in labels'
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels'
           - nextConclusionId: "14.1.2"
-            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "geen transparantieverplichting" in labels'
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels'
           - nextConclusionId: "14.1.4"
-            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels && "geen transparantieverplichting" in labels'
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
           - nextConclusionId: "14.2.3"
             if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-model voor algemene doeleinden" in labels'
           - nextConclusionId: "13.0.2"
-            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels && "geen transparantieverplichting" in labels'
+            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
           - nextConclusionId: "13.0.4"
-            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels && "geen transparantieverplichting" in labels'
+            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels'
           - nextConclusionId: "13.1.2"
-            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "geen transparantieverplichting" in labels'
+            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels'
           - nextConclusionId: "13.1.4"
-            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels && "geen transparantieverplichting" in labels'
+            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
           - nextConclusionId: "12.0.2"
-            if: '"aanbieder" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels && "geen transparantieverplichting" in labels'
+            if: '"aanbieder" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
           - nextConclusionId: "12.0.4"
-            if: '"aanbieder" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels && "geen transparantieverplichting" in labels'
+            if: '"aanbieder" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels'
           - nextConclusionId: "12.1.2"
-            if: '"aanbieder" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels && "geen transparantieverplichting" in labels'
+            if: '"aanbieder" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels'
           - nextConclusionId: "12.1.4"
-            if: '"aanbieder" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels && "geen transparantieverplichting" in labels'
+            if: '"aanbieder" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
           - nextConclusionId: "12.2.3"
             if: '"aanbieder" in labels && "AI-model voor algemene doeleinden" in labels'
-          - nextQuestionId: "2.9" #transparantieverplichting
-            if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels' #this should actually be an 'else' statement
+
 
 ### Conclusies
 conclusions:
