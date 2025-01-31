@@ -190,10 +190,10 @@ questions:
         nextConclusionId: "11.2" #uitzondering AI-verordening
       - answer: Nee
         redirects:
-           - nextQuestionId: "2.0"
-             if: '"AI-systeem" in labels || "AI-systeem voor algemene doeleinden" in labels || "AI-model voor algemene doeleinden" in labels'
-           - nextConclusionId: "13.2.1"
-             if: '"AI-model voor algemene doeleinden" in labels && "gebruiksverantwoordelijke" in labels'
+          - nextQuestionId: "2.0"
+            if: '"AI-systeem" in labels || "AI-systeem voor algemene doeleinden" in labels || "AI-model voor algemene doeleinden" in labels'
+          - nextConclusionId: "13.2.1"
+            if: '"AI-model voor algemene doeleinden" in labels && "gebruiksverantwoordelijke" in labels'
 
  # Impactvol algoritme
   - questionId: "1.6"
