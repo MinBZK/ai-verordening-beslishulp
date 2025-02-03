@@ -187,7 +187,7 @@ questions:
       - answer: Ja
         labels:
           - "uitzondering van toepassing"
-        nextConclusionId: "11.2"
+        nextConclusionId: "11.2" #uitzondering AI-verordening
       - answer: Nee
         redirects:
           - nextQuestionId: "2.0"
@@ -538,7 +538,7 @@ questions:
         labels:
           - "geen hoog-risico AI"
         redirects:
-         - nextQuestionId: "2.9" #transparantieverplichting
+         - nextQuestionId: "2.11" #open-source
            if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels'
          - nextConclusionId: "16.0.3"
            if: '"distributeur" in labels && "AI-systeem" in labels'
@@ -601,7 +601,7 @@ questions:
         labels:
             - "geen hoog-risico AI"
         redirects:
-         - nextQuestionId: "2.9" #transparantieverplichting
+         - nextQuestionId: "2.11" #open-source
            if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels'
          - nextConclusionId: "16.0.3"
            if: '"distributeur" in labels && "AI-systeem" in labels'
@@ -753,6 +753,8 @@ questions:
         labels:
           - "geen transparantieverplichting"
         redirects:
+          - nextQuestionId: "2.11" #open-source
+            if: '!("open-source" in labels) || !("geen open-source" in labels)'
           - nextConclusionId: "14.0.2"
             if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
           - nextConclusionId: "14.0.4"
@@ -774,10 +776,9 @@ questions:
           - nextConclusionId: "12.0.4"
             if: '"aanbieder" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels'
           - nextConclusionId: "12.1.2"
-            if: '"aanbieder" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels '
+            if: '"aanbieder" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels'
           - nextConclusionId: "12.1.4"
-            if: '"aanbieder" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels '
-
+            if: '"aanbieder" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
 
 ## Uitzondering Transparantieverplichting
   - questionId: "2.10"
@@ -793,6 +794,8 @@ questions:
         labels:
           - "geen transparantieverplichting"
         redirects:
+          - nextQuestionId: "2.11"
+            if: '!("open-source" in labels) || !("geen open-source" in labels)'
           - nextConclusionId: "14.0.2"
             if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
           - nextConclusionId: "14.0.4"
@@ -814,9 +817,10 @@ questions:
           - nextConclusionId: "12.0.4"
             if: '"aanbieder" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels'
           - nextConclusionId: "12.1.2"
-            if: '"aanbieder" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels '
+            if: '"aanbieder" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels'
           - nextConclusionId: "12.1.4"
-            if: '"aanbieder" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels '
+            if: '"aanbieder" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
+
       - answer: Nee
         labels:
           - "transparantieverplichting"
@@ -849,32 +853,100 @@ questions:
 ## Open-source "Zijn de broncodes en parameters openbaar voor eenieder?"
   - questionId: "2.11"
     question: "Wordt de toepassing onder een open of vrije licentie gedeeld en zijn de broncodes en parameters openbaar voor eenieder?"
-    explanation: ""
+    explanation: "In het geval van een open-source toepassing kan er een uitzondering zijn op (een deel van) de verplichtingen vanuit de AI-verordening."
     category: risicogroep
     subcategory: "Open of vrije licentie"
     sources:
+      - source: Artikel 2 - Toepassingsgebied
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e1978-1-1
+      - source: Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5576-1-1
       - source: Overweging 102 - Begrip open-source
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_102
+      - source: Overweging 104 - Transparantie-uitzonderingen open-source AI-modellen
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_104
     answers:
       - answer: Ja
         labels:
           - "open-source"
         redirects:
+          - nextConclusionId: "11.2" #uitzondering AI-verordening
+            if: '("AI-systeem" in labels || "AI-systeem voor algemene doeleinden" in labels) && ("geen transparantieverplichting" in labels || "geen hoog-risico AI" in labels)'
           - nextConclusionId: "14.2.2"
-            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels'
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-model voor algemene doeleinden" in labels'
           - nextConclusionId: "12.2.2"
-            if: '"aanbieder" in labels'
+            if: '"aanbieder" in labels && "AI-model voor algemene doeleinden" in labels'
       - answer: Nee
         labels:
           - "geen open-source"
         redirects:
-         - nextConclusionId: "14.2.3"
-           if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels'
-         - nextConclusionId: "12.2.3"
-           if: '"aanbieder" in labels'
+          - nextQuestionId: "2.9" #transparantieverplichting
+            if: '!("transparantieverplichting" in labels) || !("geen transparantieverplichting" in labels)'
+          - nextConclusionId: "14.0.2"
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
+          - nextConclusionId: "14.0.4"
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels'
+          - nextConclusionId: "14.1.2"
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels'
+          - nextConclusionId: "14.1.4"
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
+          - nextConclusionId: "14.2.3"
+            if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-model voor algemene doeleinden" in labels'
+          - nextConclusionId: "13.0.2"
+            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
+          - nextConclusionId: "13.0.4"
+            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels'
+          - nextConclusionId: "13.1.2"
+            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels'
+          - nextConclusionId: "13.1.4"
+            if: '"gebruiksverantwoordelijke" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
+          - nextConclusionId: "12.0.2"
+            if: '"aanbieder" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
+          - nextConclusionId: "12.0.4"
+            if: '"aanbieder" in labels && "AI-systeem" in labels && "geen hoog-risico AI" in labels'
+          - nextConclusionId: "12.1.2"
+            if: '"aanbieder" in labels && "AI-systeem voor algemene doeleinden" in labels && "hoog-risico AI" in labels'
+          - nextConclusionId: "12.1.4"
+            if: '"aanbieder" in labels && "AI-systeem voor algemene doeleinden" in labels && "geen hoog-risico AI" in labels'
+          - nextConclusionId: "12.2.3"
+            if: '"aanbieder" in labels && "AI-model voor algemene doeleinden" in labels'
+
 
 ### Conclusies
 conclusions:
+## Conclusies voor geen rol (11)
+  - conclusionId: "11.0"
+    conclusion: "Je hebt geantwoord dat er geen sprake is van een algoritme, hierdoor is de AI-verordening niet voor jou van toepassing. Op basis van je antwoorden is het niet nodig om door te gaan naar Stap 2 – bepalen risicogroep. "
+    obligation: "Houd je aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)."
+  - conclusionId: "11.2"
+    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat je een uitzonderingsgrond hebt geselecteerd en buiten het toepassingsgebied valt."
+    obligation: "Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt). Verder dien je te registreren in het algoritmeregister."
+    sources:
+      - source: Artikel 2 - Toepassingsgebied
+        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e1978-1-1
+  - conclusionId: "11.3"
+    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat het algoritme niet valt onder de definitie van een AI-systeem of AI-model volgens de AI-verordening. Volgens de handreiking algoritmeregister is de toepassing een impactvol algoritme."
+    obligation: "Omdat het een algoritme met impact betreft, dien je in algoritmeregister te publiceren. Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt)."
+    sources:
+      - source: Handreiking Algoritmeregister
+        url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
+  - conclusionId: "11.4"
+    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat het algoritme niet valt onder de definitie van een AI-systeem of AI-model volgens de AI-verordening. Volgens de handreiking algoritmeregister is de toepassing een impactvol algoritme en val je in de uitzonderingsgrond."
+    obligation: "Je hoeft vanwege uitzonderingsgrond niet te publiceren in het algoritmeregister. Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt)."
+    sources:
+      - source: Handreiking Algoritmeregister
+        url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
+  - conclusionId: "11.5"
+    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat het algoritme niet valt onder de definitie van een AI-systeem of AI-model volgens de AI-verordening. Volgens de handreiking algoritmeregister is de toepassing geen impactvol algoritme."
+    obligation: "Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt)."
+    sources:
+      - source: Handreiking Algoritmeregister
+        url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
+  - conclusionId: "11.6"
+    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat je geen aanbieder, gebruiksverantwoordelijke, importeur of distributeur bent. Controleer echter zorgvuldig of een van deze rollen mogelijk toch op jou van toepassing is."
+    obligation: "Er is geen sprake van een verplichting."
+
+
 ###Conclusies 12.0.1 tm 12.1.2 voor aanbieders
   - conclusionId: "12.0.0"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent aanbieder van een verboden AI-systeem."
@@ -1300,8 +1372,9 @@ conclusions:
       Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden (Artikel 53 en Artikel 54):<br>
       - beleid opstellen ter naleving van het Unierecht inzake auteursrechten en naburige rechten en dan met name ter vaststelling en naleving, onder meer door middel van geavanceerde technologieën.<br>
       - een voldoende gedetailleerde samenvatting opstellen en openbaar maken over de voor het trainen van het AI-model voor algemene doeleinden gebruikte content, volgens een door het AI-bureau verstrekt sjabloon.<br><br>
-      - Door overweging 104 voor open-source AI-modellen voor algemene doeleinden hoef je niet te voldoen aan: de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan.<br>
-      - Door overweging 104 voor open-source AI-modellen voor algemene doeleinden hoef je niet te voldoen aan: informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren.<br><br>
+      Door overweging 104 voor open-source AI-modellen voor algemene doeleinden hoef je niet te voldoen aan (delen van Artikel 53 en Artikel 54): <br>
+      - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan.<br>
+      - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren.<br><br>
       Geldig vanaf (Artikel 111 en Overweging 179):<br>
       - Voor AI-modellen in ontwikkeling gelden de verplichtingen voor aanbieders van algemene AI-modellen, zoals taal- of beeldherkenningsmodellen, vanaf 2 augustus 2025.<br>
       - Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.<br><br>"
@@ -2154,10 +2227,11 @@ conclusions:
       Verplichtingen voor alle AI-modellen voor algemene doeleinden:<br>
         - Praktijkcodes (Artikel 56)<br><br>
       Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden (Artikel 53 en Artikel 54):<br>
+      - beleid opstellen ter naleving van het Unierecht inzake auteursrechten en naburige rechten en dan met name ter vaststelling en naleving, onder meer door middel van geavanceerde technologieën.<br>
+      - een voldoende gedetailleerde samenvatting opstellen en openbaar maken over de voor het trainen van het AI-model voor algemene doeleinden gebruikte content, volgens een door het AI-bureau verstrekt sjabloon.<br><br>
+      Door overweging 104 voor open-source AI-modellen voor algemene doeleinden hoef je niet te voldoen aan (delen van Artikel 53 en Artikel 54): <br>
       - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan.<br>
-      - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren.<br>
-      - Door overweging 104 voor open-source AI-modellen voor algemene doeleinden hoef je niet te voldoen aan: de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan.<br>
-      - Door overweging 104 voor open-source AI-modellen voor algemene doeleinden hoef je niet te voldoen aan: informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren.<br><br>
+      - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren.<br><br>
       Geldig vanaf (Artikel 111 en Overweging 179):<br>
       - Voor AI-modellen in ontwikkeling gelden de verplichtingen voor aanbieders van algemene AI-modellen, zoals taal- of beeldherkenningsmodellen, vanaf 2 augustus 2025.<br>
       - Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.<br><br>"
@@ -2348,36 +2422,3 @@ conclusions:
     sources:
       - source: Artikel 24 - Verplichtingen van distributeurs
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e4246-1-1
-
-
-## COnclusies voor geen rol (15)
-  - conclusionId: "11.0"
-    conclusion: "Je hebt geantwoord dat er geen sprake is van een algoritme, hierdoor is de AI-verordening niet voor jou van toepassing. Op basis van je antwoorden is het niet nodig om door te gaan naar Stap 2 – bepalen risicogroep. "
-    obligation: "Houd je aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)."
-  - conclusionId: "11.2"
-    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat je een uitzonderingsgrond hebt geselecteerd."
-    obligation: "Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt). Verder dien je te registreren in het algoritmeregister."
-    sources:
-      - source: Artikel 2 - Toepassingsgebied
-        url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e1978-1-1
-  - conclusionId: "11.3"
-    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat het algoritme niet valt onder de definitie van een AI-systeem of AI-model volgens de AI-verordening. Volgens de handreiking algoritmeregister is de toepassing een impactvol algoritme."
-    obligation: "Omdat het een algoritme met impact betreft, dien je in algoritmeregister te publiceren. Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt)."
-    sources:
-      - source: Handreiking Algoritmeregister
-        url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
-  - conclusionId: "11.4"
-    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat het algoritme niet valt onder de definitie van een AI-systeem of AI-model volgens de AI-verordening. Volgens de handreiking algoritmeregister is de toepassing een impactvol algoritme en val je in de uitzonderingsgrond."
-    obligation: "Je hoeft vanwege uitzonderingsgrond niet te publiceren in het algoritmeregister. Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt)."
-    sources:
-      - source: Handreiking Algoritmeregister
-        url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
-  - conclusionId: "11.5"
-    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat het algoritme niet valt onder de definitie van een AI-systeem of AI-model volgens de AI-verordening. Volgens de handreiking algoritmeregister is de toepassing geen impactvol algoritme."
-    obligation: "Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt)."
-    sources:
-      - source: Handreiking Algoritmeregister
-        url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
-  - conclusionId: "11.6"
-    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat je geen aanbieder, gebruiksverantwoordelijke, importeur of distributeur bent. Controleer echter zorgvuldig of een van deze rollen mogelijk toch op jou van toepassing is."
-    obligation: "Er is geen sprake van een verplichting."
