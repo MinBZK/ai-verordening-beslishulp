@@ -881,13 +881,13 @@ questions:
           - nextConclusionId: "12.2.2"
             if: '"aanbieder" in labels && "AI-model voor algemene doeleinden" in labels'
           - nextQuestionId: "2.9" #transparantieverplichting
-            if: '!("transparantieverplichting" in labels) && !("geen transparantieverplichting" in labels)'
+            if: '!("transparantieverplichting" in labels) && !("geen transparantieverplichting" in labels) && !("hoog-risico AI" in labels)'
       - answer: Nee
         labels:
           - "geen open-source"
         redirects:
           - nextQuestionId: "2.9" #transparantieverplichting
-            if: '!("transparantieverplichting" in labels) && !("geen transparantieverplichting" in labels)'
+            if: '!("transparantieverplichting" in labels) && !("geen transparantieverplichting" in labels) && !("hoog-risico AI" in labels)'
           - nextConclusionId: "14.0.2"
             if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
           - nextConclusionId: "14.0.4"
