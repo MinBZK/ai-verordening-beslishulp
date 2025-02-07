@@ -754,7 +754,9 @@ questions:
           - "geen transparantieverplichting"
         redirects:
           - nextQuestionId: "2.11" #open-source
-            if: '!("open-source" in labels) && !("geen open-source" in labels)'
+            if: '!("open-source" in labels) && !("geen open-source" in labels) && !("hoog-risico AI" in labels)'
+          - nextConclusionId: "11.2" #uitzondering AI-verordening
+            if: '("AI-systeem" in labels || "AI-systeem voor algemene doeleinden" in labels) && "open-source" in labels && "geen hoog-risico AI" in labels'
           - nextConclusionId: "14.0.2"
             if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
           - nextConclusionId: "14.0.4"
@@ -795,7 +797,9 @@ questions:
           - "geen transparantieverplichting"
         redirects:
           - nextQuestionId: "2.11"
-            if: '!("open-source" in labels) && !("geen open-source" in labels)'
+            if: '!("open-source" in labels) && !("geen open-source" in labels) && !("hoog-risico AI" in labels)'
+          - nextConclusionId: "11.2" #uitzondering AI-verordening
+            if: '("AI-systeem" in labels || "AI-systeem voor algemene doeleinden" in labels) && "open-source" in labels && "geen hoog-risico AI" in labels'
           - nextConclusionId: "14.0.2"
             if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-systeem" in labels && "hoog-risico AI" in labels'
           - nextConclusionId: "14.0.4"
@@ -871,11 +875,13 @@ questions:
           - "open-source"
         redirects:
           - nextConclusionId: "11.2" #uitzondering AI-verordening
-            if: '("AI-systeem" in labels || "AI-systeem voor algemene doeleinden" in labels) && ("geen transparantieverplichting" in labels || "geen hoog-risico AI" in labels)'
+            if: '("AI-systeem" in labels || "AI-systeem voor algemene doeleinden" in labels) && "geen transparantieverplichting" in labels && "geen hoog-risico AI" in labels'
           - nextConclusionId: "14.2.2"
             if: '"aanbieder" in labels && "gebruiksverantwoordelijke" in labels && "AI-model voor algemene doeleinden" in labels'
           - nextConclusionId: "12.2.2"
             if: '"aanbieder" in labels && "AI-model voor algemene doeleinden" in labels'
+          - nextQuestionId: "2.9" #transparantieverplichting
+            if: '!("transparantieverplichting" in labels) && !("geen transparantieverplichting" in labels)'
       - answer: Nee
         labels:
           - "geen open-source"
