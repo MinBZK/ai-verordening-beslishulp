@@ -29,12 +29,12 @@ Door deze beslishulp te doorlopen, krijgt uw organisatie inzicht in de volgende 
 
 - Bent u een **aanbieder**, **gebruiksverantwoordelijke**, **importeur** en/of ** **distributeur**?
 - Is er sprake van een **AI-systeem**, een **AI-systeem voor algemene doeleinden**, een **AI-model voor algemene doeleinden**, een **impactvol algoritme**, een **niet-impactvol algoritme** of wellicht **geen algoritme**?
-- Binnen welke **risicogroep** valt het AI-systeem? **hoog-risico AI**, **geen-hoog risico AI**, **verboden AI** of is er een **uitzondering van toepassing** waardoor de AI-verordening niet geldt?
+- Binnen welke risicogroep valt het AI-systeem? **hoog-risico AI**, **geen-hoog risico AI**, **verboden AI** of is er een **uitzondering van toepassing** waardoor de AI-verordening niet geldt?
 - Is er sprake van een **systeemrisico** of **geen systeemrisico**?
 - Is er sprake van een **transparantieverplichting** of **geen transparantieverplichting**?
-- Is het systeem/model **open-source** of **geen open-source**?
+- Is de toepassing **open-source** ontwikkeld of **geen open-source**?
 - Indien er een conformiteitsbeoordeling moet worden uitgevoerd? Is er sprake van een **beoordeling door derde partij** of is dit **niet van toepassing**?
-- Is de toepassing operationeel? Is de toepassing **in gebruik** of **in ontwikkeling?
+- Is de toepassing operationeel? Is de toepassing **in gebruik** of **in ontwikkeling**?
 
 Gezamenlijk zorgen deze labels ervoor dat de toepassing binnen een bepaald AI-Verordening Profiel valt, waardoor specifieke verplichtingen van toepassing zijn.
 
