@@ -1,6 +1,18 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
+import {getCurrentInstance} from 'vue'
+
+const showCloseOnEnd = getCurrentInstance()!.appContext.config.globalProperties.showCloseOnEnd
+
+let showCloseOnEndMsg = function() {
+  if (getCurrentInstance()!.appContext.config.globalProperties.showCloseOnEndMsg) {
+    return getCurrentInstance()!.appContext.config.globalProperties.showCloseOnEndMsg;
+  } else {
+    return "Resultaten overnemen en afsluiten"
+  }
+}()
+
 interface Props {
   category: string | undefined
   labels: { category: string; assigned_labels: string | undefined; }[] | undefined
@@ -54,6 +66,20 @@ const hasLabels = computed(() => {
   return Object.keys(filteredLabels.value).length > 0
 })
 
+const informDone = function() {
+  const isInIframe = window !== window.parent;
+  if (isInIframe) {
+    window.parent.postMessage({
+      event: 'beslishulp-done',
+      value: 'true'
+    }, '*');
+  } else {
+    const event = new CustomEvent('beslishulp-done', {
+      detail: { value: 'true' }
+    });
+    window.dispatchEvent(event);
+  }
+}
 </script>
 
 <template>
@@ -144,6 +170,20 @@ const hasLabels = computed(() => {
                 </tbody>
               </table>
             </div>
+            <div v-if="showCloseOnEnd" class="rvo-layout-margin-vertical--xl">
+              <button
+                @click="informDone"
+                type="button"
+                class="flex utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline "
+              >
+              <span
+                class="utrecht-icon rvo-icon rvo-icon-bewerken rvo-icon--lg rvo-icon--wit"
+                role="img"
+                aria-label="Afsluiten"
+              ></span>
+                      {{ showCloseOnEndMsg }}
+                    </button>
+                  </div>
           </div>
         </details>
       </div>
