@@ -27,16 +27,46 @@ De Kubernetes deployment code staat bij  [infra](https://github.com/MinBZK/ai-va
 
 Door deze beslishulp te doorlopen, krijgt uw organisatie inzicht in de volgende vragen:
 
-- Bent u een **aanbieder**, **gebruiksverantwoordelijke**, **importeur** en/of ** **distributeur**?
+- Bent u een **aanbieder**, **gebruiksverantwoordelijke**, **importeur** en/of **distributeur**?
 - Is er sprake van een **AI-systeem**, een **AI-systeem voor algemene doeleinden**, een **AI-model voor algemene doeleinden**, een **impactvol algoritme**, een **niet-impactvol algoritme** of wellicht **geen algoritme**?
-- Binnen welke risicogroep valt het AI-systeem? **hoog-risico AI**, **geen-hoog risico AI**, **verboden AI** of is er een **uitzondering van toepassing** waardoor de AI-verordening niet geldt?
+- Binnen welke risicogroep valt het AI-systeem? **hoog-risico AI**, **geen hoog-risico AI**, **verboden AI**, of is er een **uitzondering van toepassing** waardoor de AI-verordening niet geldt?
 - Is er sprake van een **systeemrisico** of **geen systeemrisico**?
 - Is er sprake van een **transparantieverplichting** of **geen transparantieverplichting**?
 - Is de toepassing **open-source** ontwikkeld of **geen open-source**?
-- Indien er een conformiteitsbeoordeling moet worden uitgevoerd? Is er sprake van een **beoordeling door derde partij** of is dit **niet van toepassing**?
+- Indien er een conformiteitsbeoordeling moet worden uitgevoerd, is er sprake van een **beoordeling door derde partij** of is dit **niet van toepassing**?
 - Is de toepassing operationeel? Is de toepassing **in gebruik** of **in ontwikkeling**?
 
-Gezamenlijk zorgen deze labels ervoor dat de toepassing binnen een bepaald AI-Verordening Profiel valt, waardoor specifieke verplichtingen van toepassing zijn.
+De volgende tabel deelt de labels in per categorie.
+Gezamenlijk zorgen de opgehaalde labels ervoor dat de toepassing binnen een bepaald AI-verordening profiel valt, waardoor specifieke verplichtingen van toepassing zijn.
+
+
+| Categorie                    | Beslishulp                   | AK                               |
+|------------------------------|------------------------------|-----------------------------------|
+| Geldt de AI-verorderning voor mij? | Soort toepassing             | AI-systeem                       |
+|                              |                              | AI-systeem voor algemene doeleinden |
+|                              |                              | AI-model voor algemene doeleinden |
+|                              |                              | geen algoritme                   |
+|                              |                              | niet-impactvol algoritme         |
+|                              |                              | impactvol-algoritme              |
+|                              | Operationeel                 | in gebruik                       |
+|                              |                              | in ontwikkeling                  |
+| Zo ja, in welke risicogroep valt de toepassing? | Risicogroep                  | hoog-risico AI                   |
+|                              |                              | geen hoog-risico AI              |
+|                              |                              | verboden AI                      |
+|                              |                              | uitzondering van toepassing       |
+|                              | Rol                          | aanbieder                        |
+|                              |                              | gebruiksverantwoordelijke        |
+|                              |                              | importeur                        |
+|                              |                              | distributeur                     |
+|                              | Systeemrisico                | systeemrisico                    |
+|                              |                              | geen systeemrisico               |
+|                              | Transparantieverplichting    | transparantieverplichting        |
+|                              |                              | geen transparantieverplichting   |
+|                              | Open-source                  | open-source                      |
+|                              |                              | geen open-source                 |
+|                              | Conformiteitsbeoordelingsinstantie | beoordeling door derde partij   |
+|                              |                              | niet van toepassing              |
+
 
 Om u te helpen bij het beantwoorden van de vragen, zijn relevante overwegingen / artikelen / bijlagen van de AI-verordening gelinkt per vraag.
 
