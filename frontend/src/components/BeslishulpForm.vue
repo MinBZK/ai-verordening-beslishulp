@@ -130,6 +130,10 @@ function handleNextStep(object: Answer | Redirect) {
     questionStore.setConclusionId(String(object.nextConclusionId))
   }
   categoryStore.updateCurrentCategory(currentCategory.value?.category, currentCategory.value?.subcategory)
+  // ugly hack, we do not know for sure when the DOM is fully updated with the new situation, this works
+  setTimeout(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, 200)
 }
 
 async function givenAnswer(answer: Answer) {
