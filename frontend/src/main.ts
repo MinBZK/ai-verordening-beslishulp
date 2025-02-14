@@ -34,13 +34,21 @@ function injectCSS(css: string) {
     fontPath = new URLSearchParams(window.location.search).get('fontPath');
   }
   if (fontPath) {
-    const css = "@font-face {" +
+    injectCSS("@font-face {" +
       "font-family: RijksoverheidSansWebText;" +
       "font-stretch: 75% 125%;font-style:normal;" +
       "font-weight:200 800;" +
-      "src:url(" + fontPath + ")" +
+      "src:url(" + fontPath + "RijksSansWeb-Regular.woff2)" +
       "format(\"woff2-variations\")}"
-    injectCSS(css);
+    );
+    injectCSS("@font-face {" +
+      "font-family: RijksoverheidSansWebText;" +
+      "font-stretch: 75% 125%;font-style:normal;" +
+      "font-weight:200 800;" +
+      "font-style:italic;" +
+      "src:url(" + fontPath + "RijksSansWeb-Italic.woff2)" +
+      "format(\"woff2-variations\")}"
+    );
   }
 
 })();

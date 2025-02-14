@@ -42,6 +42,8 @@
   padding: var(--rvo-alert-padding-sm-padding-block-end);
   position: absolute;
   z-index: 1;
+  /* hack for Safari, https://stackoverflow.com/questions/38762661/css-drop-shadow-not-working-properly-in-safari/75027316#75027316 **/
+  backdrop-filter: blur(0);
 }
 
 .aiv-definition:hover .aiv-definition-text {
