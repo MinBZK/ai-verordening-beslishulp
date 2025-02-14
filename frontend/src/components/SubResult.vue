@@ -174,7 +174,7 @@ const informDone = function() {
               <button
                 @click="informDone"
                 type="button"
-                class="flex utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline "
+                class="flex utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline "
               >
               <span
                 class="utrecht-icon rvo-icon rvo-icon-bewerken rvo-icon--lg rvo-icon--wit"
