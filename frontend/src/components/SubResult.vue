@@ -5,7 +5,7 @@ import {getCurrentInstance} from 'vue'
 
 const showCloseOnEnd = getCurrentInstance()!.appContext.config.globalProperties.showCloseOnEnd
 
-let showCloseOnEndMsg = function() {
+const showCloseOnEndMsg = function() {
   if (getCurrentInstance()!.appContext.config.globalProperties.showCloseOnEndMsg) {
     return getCurrentInstance()!.appContext.config.globalProperties.showCloseOnEndMsg;
   } else {
