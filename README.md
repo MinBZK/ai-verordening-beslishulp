@@ -40,7 +40,7 @@ De volgende tabel deelt de labels in per categorie.
 Gezamenlijk zorgen de opgehaalde labels ervoor dat de toepassing binnen een bepaald AI-verordening profiel valt, waardoor specifieke verplichtingen van toepassing zijn.
 
 
-| Categorie                    | Beslishulp                   | AK                               |
+| Categorie                    | Subcategorie                 | Label                               |
 |------------------------------|------------------------------|-----------------------------------|
 | Geldt de AI-verorderning voor mij? | Soort toepassing             | AI-systeem                       |
 |                              |                              | AI-systeem voor algemene doeleinden |
