@@ -1,0 +1,120 @@
+#!/bin/bash
+# support for options in format: --name value
+while [ $# -gt 0 ]; do
+    if [[ $1 == "--"* ]]; then
+        v="${1/--/}"
+        declare "$v"="$2"
+        shift
+    fi
+    shift
+done
+
+REMOTE_BRANCH="${branch:-latest}" # on latest, the last tag is used
+REMOTE_GIT="https://github.com/MinBZK/Algoritmekader.git"
+TMP_DIR="${tmpdir:-tmp-sync}"
+MODE="${mode:-compare}" # use: compare, sync
+VERBOSE="${verbose:-true}"
+
+# Function to check GitHub connectivity
+check_github_access() {
+    if ! curl --silent --head --fail https://github.com > /dev/null; then
+        echo "Warning: Cannot access GitHub. If you're running this in CI/CD:"
+        echo "1. This is expected behavior if running offline"
+        echo "2. The definitions check will be skipped"
+        echo "3. Please run './sync.sh --mode compare' locally before merging"
+        if [ "$MODE" = "compare" ]; then
+            exit 0  # Exit successfully in compare mode
+        else
+            exit 1  # Exit with error in sync mode
+        fi
+    fi
+}
+
+if [ "$VERBOSE" = "true" ]; then
+    printf "This script will compare or sync the status of the Algoritmekader.\n"
+    printf "Settings can be provided using the syntax: --name1 value1 --name2 value2 etc.\n"
+    printf "Current settings:\n"
+    echo "branch: ${REMOTE_BRANCH}"
+    echo "tmpdir: ${TMP_DIR}"
+    echo "mode: ${MODE} (options: compare,sync)"
+    echo "verbose: ${VERBOSE} (options: true,false)"
+    printf "\n\n"
+fi
+
+# Check GitHub access before proceeding
+check_github_access
+
+# Store the root directory
+ROOT_DIR=$(pwd)
+
+# create and use tmp location
+rm -Rf "$TMP_DIR"
+mkdir "$TMP_DIR"
+cd "$TMP_DIR" || exit
+
+if [ "$REMOTE_BRANCH" = "latest" ]; then
+    if ! REMOTE_BRANCH=$(git ls-remote --tags --exit-code --refs --sort="version:refname" "$REMOTE_GIT" | awk -F/ 'END{print$NF}'); then
+        echo "Error: Failed to get latest tag from repository"
+        cd "$ROOT_DIR"
+        rm -rf "$TMP_DIR"
+        exit 1
+    fi
+fi
+
+# Clone the repository with timeout and retry
+MAX_RETRIES=3
+RETRY_COUNT=0
+while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
+    if timeout 30 git clone --depth 1 -b "$REMOTE_BRANCH" "$REMOTE_GIT" "algoritmekader"; then
+        break
+    fi
+    RETRY_COUNT=$((RETRY_COUNT + 1))
+    if [ $RETRY_COUNT -eq $MAX_RETRIES ]; then
+        echo "Error: Failed to clone repository after $MAX_RETRIES attempts"
+        cd "$ROOT_DIR"
+        rm -rf "$TMP_DIR"
+        exit 1
+    fi
+    echo "Retry $RETRY_COUNT of $MAX_RETRIES..."
+    sleep 2
+done
+
+# Ensure root definitions.yaml exists (create empty if needed)
+if [ ! -f "$ROOT_DIR/definitions.yaml" ]; then
+    echo "definitions: []" > "$ROOT_DIR/definitions.yaml"
+fi
+
+# Run the conversion script directly with python
+python3 "$ROOT_DIR/script/convert_definitions_from_AK.py" algoritmekader/includes/begrippenlijst.md "$ROOT_DIR/definitions.yaml"
+if [[ $? -ne 0 ]]; then
+    echo "Error: convert_definitions_from_AK.py failed"
+    cd "$ROOT_DIR"
+    rm -rf "$TMP_DIR"
+    exit 1
+fi
+
+if [ "$MODE" = "compare" ]; then
+    # For compare mode, we need to make a temporary copy to diff against
+    cp "$ROOT_DIR/definitions.yaml" temp_definitions.yaml
+    python3 "$ROOT_DIR/script/convert_definitions_from_AK.py" algoritmekader/includes/begrippenlijst.md temp_definitions.yaml
+    if [ -f "$ROOT_DIR/definitions.yaml" ]; then
+        diff -burN temp_definitions.yaml "$ROOT_DIR/definitions.yaml"
+        exit_status=$?
+        cd "$ROOT_DIR"
+        rm -rf "$TMP_DIR"
+        exit "$exit_status"
+    else
+        echo "Warning: definitions.yaml does not exist in root directory for comparison"
+        cd "$ROOT_DIR"
+        rm -rf "$TMP_DIR"
+        exit 1
+    fi
+fi
+
+# Clean up
+cd "$ROOT_DIR"
+rm -rf "$TMP_DIR"
+
+if [ "$MODE" = "sync" ]; then
+    echo "Successfully synchronized definitions.yaml"
+fi

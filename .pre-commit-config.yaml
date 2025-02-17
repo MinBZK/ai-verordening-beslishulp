@@ -22,11 +22,17 @@ repos:
       - id: ruff-format
   - repo: local
     hooks:
-    -   id: validate-schema
+      - id: validate-schema
         name: validate schema
         entry: sh -c './script/validate --file_pairs schemas/schema_decision_tree.json:decision-tree.yaml schemas/schema_definitions.json:definitions.yaml'
         language: python
         additional_dependencies: [jsonschema, pyyaml]
+        pass_filenames: false
+        always_run: true
+      - id: check-definitions-sync
+        name: Check if definitions are in sync with Algoritmekader
+        entry: ./script/sync --mode compare
+        language: script
         pass_filenames: false
         always_run: true
 
