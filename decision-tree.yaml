@@ -131,7 +131,7 @@ questions:
   - questionId: "1.4.2"
     question: "Is jouw (beoogde) toepassing een AI-model voor algemene doeleinden of AI-systeem voor algemene doeleinden?"
     explanation: "
-      - Een AI-model voor algemene doeleinden is een flexibel AI-model, zoals een generatief model, dat ingezet kan worden voor meerdere taken zoals tekst, beeld, audio of video en gemakkelijk integreerbaar is in andere systemen.<br><br>
+      - Een AI-model voor algemene doeleinden is een flexibel AI-model, zoals een generatief model (o.a. Large Language Models, LLMs), dat ingezet kan worden voor meerdere taken zoals tekst, beeld, audio of video en gemakkelijk integreerbaar is in andere systemen.<br><br>
       - Een AI-systeem voor algemene doeleinden is een systeem dat een AI-model voor algemene doeleinden bevat en breed inzetbaar is, zowel direct als via integratie in andere systemen.<br><br>
       Als jouw toepassing niet binnen een van deze definities valt, is de AI-verordening niet van toepassing."
     category: van_toepassing
