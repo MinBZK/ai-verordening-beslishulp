@@ -61,7 +61,7 @@ const emit = defineEmits(['acceptDisclaimer'])
           <div class="py-5 px-5">
             <button @click="$emit('acceptDisclaimer')" type="button"
                     class="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline">
-              Accepteer voorwaarden
+              Akkoord en begin met de beslishulp
             </button>
           </div>
         </div>

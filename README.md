@@ -28,7 +28,7 @@ De Kubernetes deployment code staat bij  [infra](https://github.com/MinBZK/ai-va
 Door deze beslishulp te doorlopen, krijgt uw organisatie inzicht in de volgende vragen:
 
 - Bent u een **aanbieder**, **gebruiksverantwoordelijke**, **importeur** en/of **distributeur**?
-- Is er sprake van een **AI-systeem**, een **AI-systeem voor algemene doeleinden**, een **AI-model voor algemene doeleinden**, een **impactvol algoritme**, een **niet-impactvol algoritme** of wellicht **geen algoritme**?
+- Is er sprake van een **AI-systeem**, een **AI-systeem voor algemene doeleinden**, een **AI-model voor algemene doeleinden** of wellicht **geen algoritme**?
 - Binnen welke risicogroep valt het AI-systeem? **hoog-risico AI**, **geen hoog-risico AI**, **verboden AI**, of is er een **uitzondering van toepassing** waardoor de AI-verordening niet geldt?
 - Is er sprake van een **systeemrisico** of **geen systeemrisico**?
 - Is er sprake van een **transparantieverplichting** of **geen transparantieverplichting**?
@@ -46,8 +46,6 @@ Gezamenlijk zorgen de opgehaalde labels ervoor dat de toepassing binnen een bepa
 |                              |                              | AI-systeem voor algemene doeleinden |
 |                              |                              | AI-model voor algemene doeleinden |
 |                              |                              | geen algoritme                   |
-|                              |                              | niet-impactvol algoritme         |
-|                              |                              | impactvol-algoritme              |
 |                              | Operationeel                 | in gebruik                       |
 |                              |                              | in ontwikkeling                  |
 | Zo ja, in welke risicogroep valt de toepassing? | Risicogroep                  | hoog-risico AI                   |
