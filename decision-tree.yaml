@@ -697,11 +697,11 @@ questions:
 ## Transparantieverplichting
   - questionId: "2.9"
     question: "Moet het AI-systeem voldoen aan de transparantieverplichtingen?"
-    explanation: "
-      Dit betreft een AI-systeem dat bedoeld is voor een van de volgende doeleinden:<br><br>
-      -	direct communiceert met mensen (zoals chatbots)?<br><br>
-      -	synthetische afbeeldingen, audio, video of tekst content genereert en manipuleert? Bijvoorbeeld een deepfake.<br><br>
-      -	aan emotieherkenning of biometrische categorisatie doet?"
+    explanation:
+      "Een AI-systeem dat onder de transparantieverplichtingen valt, is bedoeld is voor een van de volgende doeleinden::<br><br>
+      -	Direct communiceren met mensen (zoals chatbots);<br><br>
+      -	Het genereren of manipuleren van synthetische afbeeldingen, audio, video of tekst content (zoals deepfake);<br><br>
+      -	Het herkennen van emotie(s) of biometrische categorisatie."
     category: risicogroep
     subcategory: "Transparantieverplichting"
     sources:
