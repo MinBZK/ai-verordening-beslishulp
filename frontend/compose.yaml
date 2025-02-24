@@ -1,0 +1,9 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    image: ghcr.io/minbzk/ai-verordening-beslishulp:main
+    ports:
+      - '9090:80'
