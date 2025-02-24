@@ -70,7 +70,7 @@ questions:
           - "distributeur"
         nextQuestionId: "1.3"
       - answer: Geen van bovenstaande
-        nextConclusionId: "11.6"
+        nextConclusionId: "11.3"
 
 # In gebruik?
   - questionId: "1.3"
@@ -125,7 +125,7 @@ questions:
         - answer: Nee, het is geen AI-systeem
           nextQuestionId: "1.4.2"
         - answer: Ik weet het niet
-          nextQuestionId: "1.8.1" # Hulp bij definitie AI-systeem - Beslisregels
+          nextQuestionId: "1.6.1" # Hulp bij definitie AI-systeem - Beslisregels
 
 # AI-systeem
   - questionId: "1.4.2"
@@ -165,7 +165,7 @@ questions:
           - nextConclusionId: "15.2.1"
             if: '"importeur" in labels'
       - answer: Geen van bovenstaande
-        nextQuestionId: "1.6" # Impactvol algoritme
+        nextConclusionId: "11.1" #AI-verordening niet van toepassing
 
 # Uitzonderingsgrond
   - questionId: "1.5"
@@ -195,47 +195,9 @@ questions:
           - nextConclusionId: "13.2.1"
             if: '"AI-model voor algemene doeleinden" in labels && "gebruiksverantwoordelijke" in labels'
 
- # Impactvol algoritme
-  - questionId: "1.6"
-    question: "Is jouw algoritme impactvol, bijvoorbeeld doordat het gevolgen heeft voor burgers of groepen, zoals rechtsgevolgen of profilering?"
-    explanation: "Een algoritme is impactvol als het valt onder categorie B van de Handreiking Algoritmeregister, waarbij het gebruik van het algoritme impact heeft op burgers of groepen,
-      bijvoorbeeld door rechtsgevolgen (zoals een boete of subsidieafwijzing) of door classificatie van burgers (zoals profilering of risico-indicatie voor controle)."
-    category: van_toepassing
-    subcategory: "Impactvol algoritme"
-    sources:
-      - source: Handreiking Algoritmeregister
-        url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
-    answers:
-      - answer: Ja
-        nextQuestionId: "1.7"
-      - answer: Nee
-        labels:
-          - "niet-impactvol algoritme"
-        nextConclusionId: "11.5"
-
-  - questionId: "1.7"
-    question: "Valt de toepassing onder \xE9\xE9n van de uitzonderingsgronden categorie C of D van de Handreiking van het Algoritmeregister?"
-    explanation: "Uitzonderingsgronden impactvol algoritme: <br><br>
-      - Categorie C: Algoritmes die maatschappelijk relevant zijn of veel aandacht krijgen, zoals complexe modellen, algoritmes in onderzoek, of die vaak door burgers of media worden bevraagd (bijv. stikstofmodellen, toeslagen, of visumaanvragen).<br>
-      - Categorie D: Algoritmes die wettelijk of operationeel beschermd zijn, bijvoorbeeld in opsporing, defensie, of handhaving, of die kunnen leiden tot misbruik van informatie, zoals bij bedrijfssubsidies."
-    category: van_toepassing
-    subcategory: "Uitzonderingsgronden Handreiking Algoritmeregister"
-    sources:
-      - source: Handreiking Algoritmeregister
-        url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
-    answers:
-      - answer: Ja
-        subresult: "Het betreft een algoritme met impact, maar de AI-verordening is niet van toepassing. Je hoeft vanwege uitzonderingsgrond niet te publiceren in het register."
-        nextConclusionId: "11.4"
-        labels:
-          - "impactvol algoritme"
-      - answer: Nee
-        nextConclusionId: "11.3"
-        labels:
-          - "impactvol algoritme"
 
 # Hulp bij AI-systeem definitie
-  - questionId: "1.8.1"
+  - questionId: "1.6.1"
     question: "Is jouw (beoogde) toepassing gebaseerd op door mensen gedefinieerde regels om operaties te automatiseren, waarbij deze regels niet zijn afgeleid uit data of kennis?"
     explanation: "
       Als je 'Nee' antwoordt, maakt jouw toepassing  gebruik van gegevens, wegingsfactoren, beoordelingen van experts of modellen om operaties te automatiseren. In dit geval is een mogelijkheid dat jouw toepassing onder de definitie van een AI-systeem valt; dit wordt vastgesteld door nog maximaal twee aanvullende vragen te beantwoorden. <br>
@@ -262,12 +224,12 @@ questions:
         url: https://www.linkedin.com/posts/algorithm-audit_10-examples-of-non-ai-systems-activity-7274353190588891136-FiMD?utm_source=share&utm_medium=member_desktop
     answers:
       - answer: Ja
-        nextQuestionId: "1.6" # Impactvol algoritme
+        nextConclusionId: "11.1" # AI-verordening niet van toepassing
       - answer: Nee
-        nextQuestionId: "1.8.2" # Hulp bij definitie AI-systeem - Inferentie
+        nextQuestionId: "1.6.2" # Hulp bij definitie AI-systeem - Inferentie
 
 # Hulp bij AI-systeem definitie
-  - questionId: "1.8.2"
+  - questionId: "1.6.2"
     question: "Maakt jouw (beoogde) toepassing inferenties?"
     explanation: "Dit omvat alle technieken en benaderingen voor inferentie. Geen enkele techniek wordt uitgesloten, inclusief bijvoorbeeld ‘scorecards’ met wegingsfactoren die door experts zijn gedefinieerd of verkregen vanuit een separaat model.<br><br>
       Als je 'Ja' antwoord, is er een mogelijkheid dat jouw toepassing onder de definitie van een AI-systeem valt; dit wordt vastgesteld door één aanvullende vraag te beantwoorden. <br>
@@ -295,13 +257,12 @@ questions:
         url: https://www.linkedin.com/posts/algorithm-audit_10-examples-of-non-ai-systems-activity-7274353190588891136-FiMD?utm_source=share&utm_medium=member_desktop
     answers:
       - answer: Ja
-        nextQuestionId: "1.8.3" # Hulp bij definitie AI-systeem - Omgeving
+        nextQuestionId: "1.6.3" # Hulp bij definitie AI-systeem - Omgeving
       - answer: Nee
-        nextQuestionId: "1.6" # Impactvol algoritme
-
+        nextConclusionId: "11.1" # AI-verordening niet van toepassing
 
 # Hulp bij AI-systeem definitie
-  - questionId: "1.8.3"
+  - questionId: "1.6.3"
     question: "Kan jouw (beoogde) toepassing de omgeving beinvloeden?"
     explanation: "Dit betreft systemen waarvan de uitvoer gekoppeld is aan een actie of besluit dat daadwerkelijk de omgeving beïnvloedt. <br><br>
       Als je 'Ja' antwoord, valt jouw toepassing onde de definitie van een 'AI-systeem' en zul je de beslishulp voortzetten. <br>
@@ -333,7 +294,7 @@ questions:
           - "AI-systeem"
         nextQuestionId: "1.5" # Uitzonderingsgrond
       - answer: Nee
-        nextQuestionId: "1.6" # Impactvol algoritme
+        nextConclusionId: "11.1" # AI-verordening niet van toepassing
 
 # Tussenscherm
   - questionId: "2.0"
@@ -924,6 +885,12 @@ conclusions:
   - conclusionId: "11.0"
     conclusion: "Je hebt geantwoord dat er geen sprake is van een algoritme, hierdoor is de AI-verordening niet voor jou van toepassing. Op basis van je antwoorden is het niet nodig om door te gaan naar Stap 2 – bepalen risicogroep. "
     obligation: "Houd je aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)."
+  - conclusionId: "11.1"
+    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat het algoritme niet valt onder de definitie van een AI-systeem of AI-model volgens de AI-verordening."
+    obligation: "Controleer of het algoritme als impactvol kan worden aangemerkt en of publicatie in het algoritmeregister aanbevolen is volgens de Handreiking Algoritmeregister. Zorg er ook voor dat het algoritme voldoet aan de geldende wet- en regelgeving, zoals de AVG wanneer persoonsgegevens worden verwerkt."
+    sources:
+      - source: Handreiking Algoritmeregister
+        url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
   - conclusionId: "11.2"
     conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat je een uitzonderingsgrond hebt geselecteerd en buiten het toepassingsgebied valt."
     obligation: "Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt). Verder dien je te registreren in het algoritmeregister."
@@ -931,27 +898,8 @@ conclusions:
       - source: Artikel 2 - Toepassingsgebied
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e1978-1-1
   - conclusionId: "11.3"
-    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat het algoritme niet valt onder de definitie van een AI-systeem of AI-model volgens de AI-verordening. Volgens de handreiking algoritmeregister is de toepassing een impactvol algoritme."
-    obligation: "Omdat het een algoritme met impact betreft, dien je in algoritmeregister te publiceren. Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt)."
-    sources:
-      - source: Handreiking Algoritmeregister
-        url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
-  - conclusionId: "11.4"
-    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat het algoritme niet valt onder de definitie van een AI-systeem of AI-model volgens de AI-verordening. Volgens de handreiking algoritmeregister is de toepassing een impactvol algoritme en val je in de uitzonderingsgrond."
-    obligation: "Je hoeft vanwege uitzonderingsgrond niet te publiceren in het algoritmeregister. Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt)."
-    sources:
-      - source: Handreiking Algoritmeregister
-        url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
-  - conclusionId: "11.5"
-    conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat het algoritme niet valt onder de definitie van een AI-systeem of AI-model volgens de AI-verordening. Volgens de handreiking algoritmeregister is de toepassing geen impactvol algoritme."
-    obligation: "Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt)."
-    sources:
-      - source: Handreiking Algoritmeregister
-        url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
-  - conclusionId: "11.6"
     conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat je geen aanbieder, gebruiksverantwoordelijke, importeur of distributeur bent. Controleer echter zorgvuldig of een van deze rollen mogelijk toch op jou van toepassing is."
     obligation: "Er is geen sprake van een verplichting."
-
 
 ###Conclusies 12.0.1 tm 12.1.2 voor aanbieders
   - conclusionId: "12.0.0"
