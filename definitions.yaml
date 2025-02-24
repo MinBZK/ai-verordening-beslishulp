@@ -526,3 +526,8 @@ definitions:
     een subset vormen van de reële getallen die gewoonlijk op computers worden gerepresenteerd
     door een geheel getal met een vaste precisie, geschaald door een gehele exponent
     van een vaste basi
+- term: open-source
+  definition: Open source toepassingen omvatten modellen, software, gegevens, tools
+    en processen die onder een vrije licentie worden vrijgegeven, zodat gebruikers
+    deze vrij kunnen gebruiken, aanpassen en verspreiden, met transparantie over parameters,
+    gebruiksinformatie en respect voor de licentievoorwaarden.
