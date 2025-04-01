@@ -383,12 +383,12 @@ questions:
 
 # Rol in of als veiligheidscomponent van een product onder Bijlage I
   - questionId: "2.3"
-    question: "Is het AI-systeem bedoeld om te worden gebruikt als een veiligheidscomponent van een product dat valt onder de lijst in Bijlage I?"
+    question: "Is het AI-systeem bedoeld als veiligheidscomponent of zelf een product dat valt onder de lijst in Bijlage I, sectie A of sectie B?"
     explanation: "
-      Specifiek, valt het AI-systeem onder de veiligheidscomponenten van:<br>
-      - Sectie A van bijlage I, die wetgevingen omvat zoals richtlijnen voor machines, speelgoedveiligheid, pleziervaartuigen, liften, radioapparatuur, drukapparatuur, medische hulpmiddelen en gasverbrandingstoestellen.<br><br>
-      Of valt het AI-systeem onder:<br>
-      - Sectie B van bijlage I, die verordeningen bevat voor de beveiliging van de luchtvaart, motorvoertuigen, landbouwvoertuigen, zeeschepen, spoorwegsystemen, en luchtvaartveiligheid?"
+      <br>
+      -	Is het AI-systeem bedoeld als veiligheidscomponent of zelf een product dat valt onder de wetgeving van sectie A van Bijlage I, zoals machines, speelgoed, medische hulpmiddelen, pleziervaartuigen, liften, radioapparatuur, drukapparatuur of gasverbrandingstoestellen?
+      -	Of is het AI-systeem bedoeld als veiligheidscomponent of zelf een product dat valt onder de wetgeving van sectie B van Bijlage I, zoals motorvoertuigen, luchtvaartuigen, landbouwvoertuigen, zeeschepen, spoorwegsystemen, of producten voor de beveiliging van de luchtvaart?"
+
     category: risicogroep
     subcategory: "Hoog-risico Bijlage I A en B"
     sources:
