@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Sources from '@/components/Sources.vue'
 import SubResult from '@/components/SubResult.vue'
+import { ref, onMounted } from 'vue'
 
 interface Props {
   conclusion: string | null
@@ -12,22 +13,69 @@ interface Props {
 
 defineProps<Props>()
 defineEmits(['back'])
+
+// Gebruik ref voor reactieve data
+const sessionUserDecisionPath = ref(null)
+
+// onMounted voor lifecycle hook
+onMounted(() => {
+  // Haal de answers op uit sessionStorage wanneer de component wordt geladen
+  const userDecisionPathData = sessionStorage.getItem('userDecisionPath')
+  if (userDecisionPathData) {
+    sessionUserDecisionPath.value = JSON.parse(userDecisionPathData)
+  }
+})
+
 </script>
 
 <template>
-
   <div class="flex flex-col py-5 gap-y-5 rvo-max-width-layout--md">
     <div class="flex">
       <div as="h3" class="utrecht-heading-2">Resultaat</div>
     </div>
+
     <!--Conclusion/Resultaat section-->
     <p class="rvo-alert--success rvo-alert--padding-md">
       <span v-html="conclusion" class="rvo-text--italic rvo-text--xl --rvo-font-sans-serif-font-family"></span>
       <slot />
     </p>
+
     <div class="rvo-accordion">
       <!--   Profile labels section  -->
       <SubResult :category="category" :labels="labels" title="AI-verordening Profiel" conclusion="conclusion" />
+
+      <!-- Accordion voor Antwoorden, zichtbaar als er sessionUserDecisionPath zijn -->
+      <div v-if="sessionUserDecisionPath">
+        <details class="rvo-accordion__item">
+          <summary class="rvo-accordion__item-summary rvo-heading--no-margins rvo-heading--mixed">
+            <h3 class="utrecht-heading-3 rvo-accordion__item-title rvo-heading--no-margins rvo-heading--mixed items-center">
+              <span
+                class="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw rvo-accordion__item-icon--closed"
+                role="img" aria-label="Delta omlaag"></span>
+              <span
+                class="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw rvo-accordion__item-icon--open"
+                role="img" aria-label="Delta omhoog"></span>
+              Antwoorden
+            </h3>
+            <span class="rvo-accordion-teaser">Bekijk hier het door jou bewandelde pad door de beslishulp</span>
+          </summary>
+          <div class="rvo-accordion__content">
+            <div class="rvo-text--md --rvo-font-sans-serif-font-family">
+              <ul class="rvo-list rvo-list--unordered">
+                <li v-for="(answer, index) in sessionUserDecisionPath" :key="index">
+                  <template v-if="answer.split(':').length === 3">
+                    <strong>Vraag <span>{{ answer.split(':')[0] }}</span>:</strong> <span v-html="answer.split(':')[1]"></span><br>
+                    <i>Antwoord:</i> <span>{{ answer.split(':')[2] }}</span>
+                  </template>
+                  <template v-else>
+                    <span>Ongeldige invoer: {{ answer }}</span>
+                  </template>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </details>
+      </div>
 
       <!-- Accordion for Obligation/Verplichtingen section, visible only if there are obligations -->
       <div v-if="obligation">
@@ -90,6 +138,7 @@ defineEmits(['back'])
         </div>
       </div>
     </div>
+
     <!--Vorige vraag section-->
     <div class="rvo-layout-margin-vertical--2xl">
       <button @click="$emit('back')" type="button"
@@ -97,6 +146,5 @@ defineEmits(['back'])
         Vorige vraag
       </button>
     </div>
-
   </div>
 </template>

@@ -51,7 +51,6 @@ defineEmits(['answered', 'back'])
               :key="id + index.toString()"
               aria-roledescription="button"
               @click="$emit('answered', answer)"
-              :value="id + index.toString()"
               :id="index.toString()"
               class="utrecht-button utrecht-button--secondary-action utrecht-button--rvo-md rvo-link--no-underline rvo-link--hover"
             >
@@ -68,7 +67,6 @@ defineEmits(['answered', 'back'])
               :key="id + index.toString()"
               aria-roledescription="button"
               @click="$emit('answered', answer)"
-              :value="id + index.toString()"
               :id="index.toString()"
               class="utrecht-button utrecht-button--secondary-action utrecht-button--rvo-md rvo-link--no-underline rvo-link--hover"
             >
