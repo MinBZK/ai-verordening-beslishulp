@@ -527,7 +527,7 @@ definitions:
     door een geheel getal met een vaste precisie, geschaald door een gehele exponent
     van een vaste basi
 - term: open-source
-  definition: Open source toepassingen omvatten modellen, software, gegevens, tools
-    en processen die onder een vrije licentie worden vrijgegeven, zodat gebruikers
-    deze vrij kunnen gebruiken, aanpassen en verspreiden, met transparantie over parameters,
-    gebruiksinformatie en respect voor de licentievoorwaarden.
+  definition: Open source is een manier van werken waarbij de makers de broncode,
+    documentatie en ontwerp openbaar beschikbaar stellen onder een opensourcelicentie.
+    Hierdoor kan iedereen de software bekijken, kopiëren, aanpassen of delen. Mensen
+    kunnen voorstellen doen voor verbeteringen of toevoegingen.
