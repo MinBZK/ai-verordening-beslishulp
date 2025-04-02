@@ -32,14 +32,10 @@ def create_pattern(terms):
     sorted_terms = sorted(terms, key=len, reverse=True)
 
     # Create patterns that consider hyphens as part of words
-    escaped_terms = []
-    for term in sorted_terms:
-        escaped_term = re.escape(term)
-        # Custom word boundary that treats hyphens as part of words
-        # (?<![a-zA-Z0-9_-]) = negative lookbehind for word chars or hyphen
-        # (?![a-zA-Z0-9_-]) = negative lookahead for word chars or hyphen
-        pattern = r"(?<![a-zA-Z0-9_-])" + escaped_term + r"(?![a-zA-Z0-9_-])"
-        escaped_terms.append(pattern)
+    # Custom word boundary that treats hyphens as part of words
+    # (?<![a-zA-Z0-9_-]) = negative lookbehind for word chars or hyphen
+    # (?![a-zA-Z0-9_-]) = negative lookahead for word chars or hyphen
+    escaped_terms = [r"(?<![a-zA-Z0-9_-])" + re.escape(term) + r"(?![a-zA-Z0-9_-])" for term in sorted_terms]
 
     # Join with OR operator
     pattern_string = "|".join(escaped_terms)

@@ -80,7 +80,7 @@ questions:
       - Toepassingen die al voor de inwerktreding van de AI-verordening in gebruik zijn, moeten uiterlijk in 2030 voldoen. <br>
       - Voor nieuwe toepassingen gelden kortere termijnen, afhankelijk van het type toepassing. <br> <br>
 
-      <strong>Let op: </strong>Een toepassing wordt als 'in gebruik' beschouwd zodra het daadwerkelijk wordt toegepast, ook wanneer dit gebeurt in de vorm van een pilot of testen onder reële omstandigheden waarbij de toepassing reële effecten heeft of beslissingen beïnvloedt. Het noemen van een systeem als 'pilot' betekent niet dat het vrijgesteld is van de verplichtingen van de AI-verordening als het al in de praktijk werkt."
+      <strong>Let op:</strong> Een toepassing wordt als 'in gebruik' beschouwd zodra het daadwerkelijk wordt toegepast, ook wanneer dit gebeurt in de vorm van een pilot of testen onder reële omstandigheden waarbij de toepassing reële effecten heeft of beslissingen beïnvloedt. Het noemen van een systeem als 'pilot' betekent niet dat het vrijgesteld is van de verplichtingen van de AI-verordening als het al in de praktijk werkt."
     category: van_toepassing
     subcategory: "In gebruik"
     sources:
@@ -176,12 +176,12 @@ questions:
   - questionId: "1.5"
     question: "Is er voor de (beoogde) toepassing sprake van een uitzonderingsgrond?"
     explanation: "Uitzonderingsgronden: <br><br>
-        - <strong> Militaire, defensie of nationale veiligheidsdoeleinden: </strong> AI-systemen die uitsluitend in de handel worden gebracht, in gebruik worden gesteld of, al dan niet gewijzigd, worden gebruikt voor militaire, defensie- of nationale veiligheidsdoeleinden<br><br>
-        - <strong> Niet in de Unie in de handel gebracht of in gebruik gesteld: </strong> AI-systemen die niet in de Unie in de handel worden gebracht of in gebruik worden gesteld en waarvan de output in de Unie uitsluitend wordt gebruikt voor militaire, defensie- of nationale veiligheidsdoeleinden<br><br>
-        - <strong> Internationale samenwerking met overheidsinstanties: </strong>overheidsinstanties in derde landen of internationale organisaties die binnen het toepassingsgebied van de AI-verordening vallen, wanneer deze instanties of organisaties AI-systemen gebruiken in het kader van internationale samenwerking of overeenkomsten met de Unie of een of meer lidstaten op het gebied van rechtshandhaving en justitie<br><br>
-        - <strong> Onderzoeks-, test- of ontwikkelingsactiviteiten: </strong>onderzoeks-, test- of ontwikkelingsactiviteiten met betrekking tot AI-systemen of AI-modellen voor zij in de handel worden gebracht of in gebruik worden gesteld (testen onder reële omstandigheden valt hier niet onder)<br><br>
-        - <strong> Wetenschappelijk onderzoek en wetenschappelijke ontwikkeling: </strong>AI-systemen of AI-modellen, met inbegrip van hun output, die specifiek zijn ontwikkeld en in gebruik worden gesteld met wetenschappelijk onderzoek en wetenschappelijke ontwikkeling als enig doel<br><br>
-      <strong>Let op: </strong> Voor hoog-risico AI-systemen met transparantieverplichtingen geldt een uitzondering op de AI-verordening. Deze uitzondering wordt later in de beslis-hulp behandeld, nadat er nadere toelichting is gegeven over de risicogroep en de transparantieverplichting.<br>"
+        - <strong>Militaire, defensie of nationale veiligheidsdoeleinden:</strong> AI-systemen die uitsluitend in de handel worden gebracht, in gebruik worden gesteld of, al dan niet gewijzigd, worden gebruikt voor militaire, defensie- of nationale veiligheidsdoeleinden<br><br>
+        - <strong>Niet in de Unie in de handel gebracht of in gebruik gesteld:</strong> AI-systemen die niet in de Unie in de handel worden gebracht of in gebruik worden gesteld en waarvan de output in de Unie uitsluitend wordt gebruikt voor militaire, defensie- of nationale veiligheidsdoeleinden<br><br>
+        - <strong>Internationale samenwerking met overheidsinstanties:</strong>overheidsinstanties in derde landen of internationale organisaties die binnen het toepassingsgebied van de AI-verordening vallen, wanneer deze instanties of organisaties AI-systemen gebruiken in het kader van internationale samenwerking of overeenkomsten met de Unie of een of meer lidstaten op het gebied van rechtshandhaving en justitie<br><br>
+        - <strong>Onderzoeks-, test- of ontwikkelingsactiviteiten:</strong>onderzoeks-, test- of ontwikkelingsactiviteiten met betrekking tot AI-systemen of AI-modellen voor zij in de handel worden gebracht of in gebruik worden gesteld (testen onder reële omstandigheden valt hier niet onder)<br><br>
+        - <strong>Wetenschappelijk onderzoek en wetenschappelijke ontwikkeling:</strong>AI-systemen of AI-modellen, met inbegrip van hun output, die specifiek zijn ontwikkeld en in gebruik worden gesteld met wetenschappelijk onderzoek en wetenschappelijke ontwikkeling als enig doel<br><br>
+      <strong>Let op:</strong> Voor hoog-risico AI-systemen met transparantieverplichtingen geldt een uitzondering op de AI-verordening. Deze uitzondering wordt later in de beslishulp behandeld, nadat er nadere toelichting is gegeven over de risicogroep en de transparantieverplichting.<br>"
     category: van_toepassing
     subcategory: "Uitzonderingsgrond AI-verordening"
     sources:
@@ -320,14 +320,14 @@ questions:
   - questionId: "2.1"
     question: "Valt de toepassing onder een van de verboden systemen uit Artikel 5 van de AI-verordening?"
     explanation: "De volgende AI-praktijken zijn verboden indien de toepassing: <br><br>
-      -	<strong>Subliminale manipulatie-systemen: </strong> gebruik kan maken van subliminale technieken om mensen onbewust of bewust kunnen manipuleren, waardoor ze beslissingen nemen die ze anders niet zouden hebben genomen;<br><br>
-      -	<strong>Kwetsbaarheidsexploitatie-systemen: </strong>gebruik kan maken van kwetsbaarheden van individuen of specifieke groepen, zoals leeftijd, handicaps of sociale/economische omstandigheden, om het gedrag van die personen aanzienlijk te verstoren, wat kan leiden tot aanzienlijke schade bij henzelf of anderen;<br><br>
-      -	<strong>Sociale classificatie-systemen: </strong>gebruikt kan worden om natuurlijke personen of groepen gedurende een periode te evalueren of te classificeren op basis van hun sociale gedrag of afgeleide persoonlijke kenmerken;<br><br>
-      -	<strong>Predictieve criminele profileringssystemen: </strong>gebruikt kan worden voor risicobeoordelingen van natuurlijke personen om het risico op crimineel gedrag te voorspellen, gebaseerd op profilering of persoonlijkheidskenmerken. Dit geldt niet voor AI-systemen die worden gebruikt om menselijke beoordelingen te ondersteunen, gebaseerd op objectieve en verifieerbare feiten die rechtstreeks verband houden met criminele activiteiten;<br><br>
-      -	<strong>Ongeautoriseerde gezichtsherkenningsdatabases: </strong>gebruikt kan worden om databanken voor gezichtsherkenning aan te leggen of aan te vullen door willekeurige gezichtsafbeeldingen van internet of CCTV-beelden te scrapen;<br><br>
-      -	<strong>Emotionele surveillancesystemen (op werk/onderwijs): </strong>gebruikt kan worden om emoties van een persoon op de werkplek of in het onderwijs af te leiden. Dit is niet van toepassing als het gebruik van het AI-systeem is bedoeld voor medische- of veiligheidsdoeleinden;<br><br>
-      -	<strong>Biometrische discriminatiesystemen: </strong>gebruikt kan worden om natuurlijke personen individueel in categorieën in te delen op basis van biometrische gegevens om ras, politieke opvattingen, lidmaatschap van een vakbond, religieuze of levensbeschouwelijke overtuigingen, seksleven of seksuele geaardheid af te leiden. Dit verbod geldt niet voor het labelen of filteren van rechtmatig verkregen biometrische datasets, zoals afbeeldingen, op basis van biometrische gegevens, of voor categorisering van biometrische gegevens op het gebied van rechtshandhaving; <br><br>
-      -	<strong>Real-time biometrische identificatiesystemen (in publieke ruimte): </strong>gebruikt kan worden als een biometrisch systeem in de publieke ruimte voor identificatie op afstand in real-time, met het oog op de rechtshandhaving."
+      -	<strong>Subliminale manipulatie-systemen:</strong> gebruik kan maken van subliminale technieken om mensen onbewust of bewust kunnen manipuleren, waardoor ze beslissingen nemen die ze anders niet zouden hebben genomen;<br><br>
+      -	<strong>Kwetsbaarheidsexploitatie-systemen:</strong> gebruik kan maken van kwetsbaarheden van individuen of specifieke groepen, zoals leeftijd, handicaps of sociale/economische omstandigheden, om het gedrag van die personen aanzienlijk te verstoren, wat kan leiden tot aanzienlijke schade bij henzelf of anderen;<br><br>
+      -	<strong>Sociale classificatie-systemen:</strong> gebruikt kan worden om natuurlijke personen of groepen gedurende een periode te evalueren of te classificeren op basis van hun sociale gedrag of afgeleide persoonlijke kenmerken;<br><br>
+      -	<strong>Predictieve criminele profileringssystemen:</strong> gebruikt kan worden voor risicobeoordelingen van natuurlijke personen om het risico op crimineel gedrag te voorspellen, gebaseerd op profilering of persoonlijkheidskenmerken. Dit geldt niet voor AI-systemen die worden gebruikt om menselijke beoordelingen te ondersteunen, gebaseerd op objectieve en verifieerbare feiten die rechtstreeks verband houden met criminele activiteiten;<br><br>
+      -	<strong>Ongeautoriseerde gezichtsherkenningsdatabases:</strong> gebruikt kan worden om databanken voor gezichtsherkenning aan te leggen of aan te vullen door willekeurige gezichtsafbeeldingen van internet of CCTV-beelden te scrapen;<br><br>
+      -	<strong>Emotionele surveillancesystemen (op werk/onderwijs):</strong> gebruikt kan worden om emoties van een persoon op de werkplek of in het onderwijs af te leiden. Dit is niet van toepassing als het gebruik van het AI-systeem is bedoeld voor medische- of veiligheidsdoeleinden;<br><br>
+      -	<strong>Biometrische discriminatiesystemen:</strong> gebruikt kan worden om natuurlijke personen individueel in categorieën in te delen op basis van biometrische gegevens om ras, politieke opvattingen, lidmaatschap van een vakbond, religieuze of levensbeschouwelijke overtuigingen, seksleven of seksuele geaardheid af te leiden. Dit verbod geldt niet voor het labelen of filteren van rechtmatig verkregen biometrische datasets, zoals afbeeldingen, op basis van biometrische gegevens, of voor categorisering van biometrische gegevens op het gebied van rechtshandhaving; <br><br>
+      -	<strong>Real-time biometrische identificatiesystemen (in publieke ruimte):</strong> gebruikt kan worden als een biometrisch systeem in de publieke ruimte voor identificatie op afstand in real-time, met het oog op de rechtshandhaving."
     category: risicogroep
     subcategory: "Verboden AI-systeem"
     sources:
@@ -345,8 +345,8 @@ questions:
   - questionId: "2.2"
     question: "Is er sprake van een van de twee uitzonderingen voor verboden systemen?"
     explanation: "Uitzonderingen voor verboden systemen:<br><br>
-      -	<strong>Rechtshandhavingsactiviteit specifiek misdrijf: </strong>Er is sprake van een rechtshandhavingsactiviteit i.v.m. een specifiek misdrijf (terrorisme, mensenhandel, seksuele uitbuiting van kinderen en materiaal over seksueel misbruik van kinderen, illegale handel in verdovende middelen en psychotrope stoffen, illegale handel in wapens, munitie en explosieven, moord, zware mishandeling, illegale handel in menselijke organen en weefsels, illegale handel in nucleaire en radioactieve stoffen, ontvoering, wederrechtelijke vrijheidsberoving en gijzeling, misdrijven die onder de rechtsmacht van het Internationaal Strafhof vallen, kaping van vliegtuigen/schepen, verkrachting, milieucriminaliteit, georganiseerde of gewapende diefstal, sabotage, deelneming aan een criminele organisatie die betrokken is bij een of meer van de bovengenoemde misdrijven).<br><br>
-      -	<strong>Gerichte opsporing specifieke slachtoffers: </strong>Er is sprake van gerichte opsporing van specifieke slachtoffers, ontvoering, mensenhandel en seksuele uitbuiting van mensen, vermiste personen; of het voorkomen van bedreigingen voor het leven of de fysieke veiligheid van personen of het reageren op de huidige of voorzienbare dreiging van een terreuraanslag."
+      -	<strong>Rechtshandhavingsactiviteit specifiek misdrijf:</strong> Er is sprake van een rechtshandhavingsactiviteit i.v.m. een specifiek misdrijf (terrorisme, mensenhandel, seksuele uitbuiting van kinderen en materiaal over seksueel misbruik van kinderen, illegale handel in verdovende middelen en psychotrope stoffen, illegale handel in wapens, munitie en explosieven, moord, zware mishandeling, illegale handel in menselijke organen en weefsels, illegale handel in nucleaire en radioactieve stoffen, ontvoering, wederrechtelijke vrijheidsberoving en gijzeling, misdrijven die onder de rechtsmacht van het Internationaal Strafhof vallen, kaping van vliegtuigen/schepen, verkrachting, milieucriminaliteit, georganiseerde of gewapende diefstal, sabotage, deelneming aan een criminele organisatie die betrokken is bij een of meer van de bovengenoemde misdrijven).<br><br>
+      -	<strong>Gerichte opsporing specifieke slachtoffers:</strong> Er is sprake van gerichte opsporing van specifieke slachtoffers, ontvoering, mensenhandel en seksuele uitbuiting van mensen, vermiste personen; of het voorkomen van bedreigingen voor het leven of de fysieke veiligheid van personen of het reageren op de huidige of voorzienbare dreiging van een terreuraanslag."
     category: risicogroep
     subcategory: "Uitzondering Verboden AI-systeem"
     sources:
@@ -923,7 +923,7 @@ conclusions:
   - conclusionId: "12.0.1"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een hoog-risico AI-systeem met transparantieverplichtingen."
     obligation: "
-      <strong>Verplichtingen voor alle AI-systemen: </strong><br>
+      <strong>Verplichtingen voor alle AI-systemen:</strong><br>
         - AI-geletterdheid (Artikel 4)<br>
         - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
       <i>Geldig vanaf:</i><br>
@@ -991,7 +991,7 @@ conclusions:
   - conclusionId: "12.0.2"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een hoog-risico AI-systeem."
     obligation: "
-      <strong>Verplichtingen voor alle AI-systemen: </strong><br>
+      <strong>Verplichtingen voor alle AI-systemen:</strong><br>
         - Bevordering van AI-geletterdheid (Artikel 4)<br>
         - Gedragscodes voor de vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
       <i>Geldig vanaf:</i><br>
@@ -1045,7 +1045,7 @@ conclusions:
   - conclusionId: "12.0.3"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een niet-hoog-risico AI-systeem met transparantieverplichtingen."
     obligation: "
-      <strong>Verplichtingen voor alle AI-systemen: </strong><br>
+      <strong>Verplichtingen voor alle AI-systemen:</strong><br>
         - Bevordering van AI-geletterdheid (Artikel 4)<br>
         - Gedragscodes voor de vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
       <i>Geldig vanaf:</i><br>
@@ -1076,7 +1076,7 @@ conclusions:
   - conclusionId: "12.0.4"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een niet-hoog-risico AI-systeem."
     obligation: "
-     <strong>Verplichtingen voor alle AI-systemen: </strong><br>
+     <strong>Verplichtingen voor alle AI-systemen:</strong><br>
         - Bevordering van AI-geletterdheid (Artikel 4)<br>
         - Gedragscodes voor de vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
       <i>Geldig vanaf:</i><br>
@@ -1097,7 +1097,7 @@ conclusions:
   - conclusionId: "12.1.1"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een hoog-risico AI-systeem voor algemene doeleinden met transparantieverplichtingen."
     obligation: "
-      <strong>Verplichtingen voor alle AI-systemen: </strong><br>
+      <strong>Verplichtingen voor alle AI-systemen:</strong><br>
         - Bevordering van AI-geletterdheid (Artikel 4)<br>
         - Gedragscodes voor de vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
       <i>Geldig vanaf:</i><br>
@@ -1178,7 +1178,7 @@ conclusions:
   - conclusionId: "12.1.2"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een hoog-risico AI-systeem voor algemene doeleinden."
     obligation: "
-      <strong>Verplichtingen voor alle AI-systemen: </strong><br>
+      <strong>Verplichtingen voor alle AI-systemen:</strong><br>
         - Bevordering van AI-geletterdheid (Artikel 4)<br>
         - Gedragscodes voor de vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
       <i>Geldig vanaf:</i><br>
@@ -1200,7 +1200,7 @@ conclusions:
      <i>Geldig vanaf (Artikel 111):</i><br>
          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
          - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
-     <strong>Verplichtingen voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54): </strong><br>
+     <strong>Verplichtingen voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54):</strong><br>
       - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan<br>
       - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren<br>
       - beleid opstellen ter naleving van het Unierecht inzake auteursrechten en naburige rechten en dan met name ter vaststelling en naleving, onder meer door middel van geavanceerde technologieën<br>
@@ -1246,7 +1246,7 @@ conclusions:
   - conclusionId: "12.1.3"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden met transparantieverplichtingen."
     obligation: "
-      <strong>Verplichtingen voor alle AI-systemen: </strong><br>
+      <strong>Verplichtingen voor alle AI-systemen:</strong><br>
         - Bevordering van AI-geletterdheid (Artikel 4)<br>
         - Gedragscodes voor de vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
       <i>Geldig vanaf:</i><br>
@@ -1263,7 +1263,7 @@ conclusions:
      <i>Geldig vanaf (Artikel 111):</i><br>
          - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
          - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
-     <strong>Verplichtingen voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54): </strong><br>
+     <strong>Verplichtingen voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54):</strong><br>
       - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan<br>
       - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren<br>
       - beleid opstellen ter naleving van het Unierecht inzake auteursrechten en naburige rechten en dan met name ter vaststelling en naleving, onder meer door middel van geavanceerde technologieën<br>
@@ -1291,13 +1291,13 @@ conclusions:
   - conclusionId: "12.1.4"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden."
     obligation: "
-      <strong>Verplichtingen voor alle AI-systemen: </strong><br>
+      <strong>Verplichtingen voor alle AI-systemen:</strong><br>
         - Bevordering van AI-geletterdheid (Artikel 4)<br>
         - Gedragscodes voor de vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br>
       <i>Geldig vanaf:</i><br>
           - AI-geletterdheid (Artikel 4) gaat vanaf februari 2025 in werking.<br>
           - Gedragscodes (Artikel 95) zijn vrijwillig en kunnen op elk moment na de inwerkingtreding van de AI-verordening worden opgesteld en toegepast.<br><br>
-     <strong>Verplichtingen voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54): </strong><br>
+     <strong>Verplichtingen voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54):</strong><br>
       - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan<br>
       - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren<br>
       - beleid opstellen ter naleving van het Unierecht inzake auteursrechten en naburige rechten en dan met name ter vaststelling en naleving, onder meer door middel van geavanceerde technologieën<br>
@@ -1436,7 +1436,7 @@ conclusions:
   - conclusionId: "13.0.1"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem met transparantieverplichtingen. "
     obligation: "
-      <strong>Verplichtingen voor alle AI-systemen: </strong><br>
+      <strong>Verplichtingen voor alle AI-systemen:</strong><br>
           - AI-geletterdheid (Artikel 4)<br>
           - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
       <i>Geldig vanaf:</i><br>
@@ -1488,7 +1488,7 @@ conclusions:
   - conclusionId: "13.0.2"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem."
     obligation: "
-      <strong>Verplichtingen voor alle AI-systemen: </strong><br>
+      <strong>Verplichtingen voor alle AI-systemen:</strong><br>
           - AI-geletterdheid (Artikel 4)<br>
           - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
       <i>Geldig vanaf:</i><br>
@@ -1532,7 +1532,7 @@ conclusions:
   - conclusionId: "13.0.3"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem met transparantieverplichtingen."
     obligation: "
-      <strong>Verplichtingen voor alle AI-systemen: </strong><br>
+      <strong>Verplichtingen voor alle AI-systemen:</strong><br>
           - AI-geletterdheid (Artikel 4)<br>
           - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
       <i>Geldig vanaf:</i><br>
@@ -1558,7 +1558,7 @@ conclusions:
   - conclusionId: "13.0.4"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem."
     obligation: "
-      <strong>Verplichtingen voor alle AI-systemen: </strong><br>
+      <strong>Verplichtingen voor alle AI-systemen:</strong><br>
           - AI-geletterdheid (Artikel 4)<br>
           - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
       <i>Geldig vanaf:</i><br>
@@ -1576,7 +1576,7 @@ conclusions:
   - conclusionId: "13.1.1"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke van een hoog-risico AI-systeem voor algemene doeleinden met transparantieverplichtingen."
     obligation: "
-      <strong>Verplichtingen voor alle AI-systemen: </strong><br>
+      <strong>Verplichtingen voor alle AI-systemen:</strong><br>
           - AI-geletterdheid (Artikel 4)<br>
           - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
       <i>Geldig vanaf:</i><br>
@@ -1672,7 +1672,7 @@ conclusions:
   - conclusionId: "13.1.3"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem voor algemene doeleinden met transparantieverplichtingen."
     obligation: "
-      <strong>Verplichtingen voor alle AI-systemen: </strong><br>
+      <strong>Verplichtingen voor alle AI-systemen:</strong><br>
           - AI-geletterdheid (Artikel 4)<br>
           - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
       <i>Geldig vanaf:</i><br>
@@ -1698,7 +1698,7 @@ conclusions:
   - conclusionId: "13.1.4"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke van een niet-hoog-risico AI-systeem voor algemene doeleinden."
     obligation: "
-      <strong>Verplichtingen voor alle AI-systemen: </strong><br>
+      <strong>Verplichtingen voor alle AI-systemen:</strong><br>
           - AI-geletterdheid (Artikel 4)<br>
           - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
       <i>Geldig vanaf:</i><br>
@@ -1750,7 +1750,7 @@ conclusions:
   - conclusionId: "14.0.1"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem met transparantieverplichtingen."
     obligation: "
-      <strong>Verplichtingen voor alle AI-systemen: </strong><br>
+      <strong>Verplichtingen voor alle AI-systemen:</strong><br>
           - AI-geletterdheid (Artikel 4)<br>
           - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
       <i>Geldig vanaf:</i><br>
@@ -1838,7 +1838,7 @@ conclusions:
   - conclusionId: "14.0.2"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem."
     obligation: "
-      <strong>Verplichtingen voor alle AI-systemen: </strong><br>
+      <strong>Verplichtingen voor alle AI-systemen:</strong><br>
           - AI-geletterdheid (Artikel 4)<br>
           - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
       <i>Geldig vanaf:</i><br>
@@ -1918,7 +1918,7 @@ conclusions:
   - conclusionId: "14.0.3"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke en aanbieder van een niet-hoog-risico AI-systeem met transparantieverplichtingen."
     obligation: "
-      <strong>Verplichtingen voor alle AI-systemen: </strong><br>
+      <strong>Verplichtingen voor alle AI-systemen:</strong><br>
           - AI-geletterdheid (Artikel 4)<br>
           - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
       <i>Geldig vanaf:</i><br>
@@ -1944,7 +1944,7 @@ conclusions:
   - conclusionId: "14.0.4"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke en aanbieder van een niet-hoog-risico AI-systeem."
     obligation: "
-      <strong>Verplichtingen voor alle AI-systemen: </strong><br>
+      <strong>Verplichtingen voor alle AI-systemen:</strong><br>
           - AI-geletterdheid (Artikel 4)<br>
           - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
       <i>Geldig vanaf:</i><br>
@@ -1962,7 +1962,7 @@ conclusions:
   - conclusionId: "14.1.1"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem voor algemene doeleinden met transparantieverplichtingen."
     obligation: "
-      <strong>Verplichtingen voor alle AI-systemen: </strong><br>
+      <strong>Verplichtingen voor alle AI-systemen:</strong><br>
           - AI-geletterdheid (Artikel 4)<br>
           - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
       <i>Geldig vanaf:</i><br>
@@ -2011,7 +2011,7 @@ conclusions:
       <i>Geldig vanaf (Artikel 111):</i><br>
           - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
           - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
-      <strong>Verplichtingen voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54): </strong><br>
+      <strong>Verplichtingen voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54):</strong><br>
       - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan<br>
       - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren<br>
       - beleid opstellen ter naleving van het Unierecht inzake auteursrechten en naburige rechten en dan met name ter vaststelling en naleving, onder meer door middel van geavanceerde technologieën<br>
@@ -2069,7 +2069,7 @@ conclusions:
   - conclusionId: "14.1.2"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke en aanbieder van een hoog-risico AI-systeem voor algemene doeleinden."
     obligation: "
-      <strong>Verplichtingen voor alle AI-systemen: </strong><br>
+      <strong>Verplichtingen voor alle AI-systemen:</strong><br>
           - AI-geletterdheid (Artikel 4)<br>
           - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
       <i>Geldig vanaf:</i><br>
@@ -2107,7 +2107,7 @@ conclusions:
       <i>Geldig vanaf (Artikel 111):</i><br>
           - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
           - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
-      <strong>Verplichtingen voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54): </strong><br>
+      <strong>Verplichtingen voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54):</strong><br>
       - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan<br>
       - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren<br>
       - beleid opstellen ter naleving van het Unierecht inzake auteursrechten en naburige rechten en dan met name ter vaststelling en naleving, onder meer door middel van geavanceerde technologieën<br>
@@ -2163,7 +2163,7 @@ conclusions:
   - conclusionId: "14.1.3"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke en aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden met transparantieverplichtingen."
     obligation: "
-      <strong>Verplichtingen voor alle AI-systemen: </strong><br>
+      <strong>Verplichtingen voor alle AI-systemen:</strong><br>
           - AI-geletterdheid (Artikel 4)<br>
           - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
       <i>Geldig vanaf:</i><br>
@@ -2180,7 +2180,7 @@ conclusions:
       <i>Geldig vanaf (Artikel 111):</i><br>
           - Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
           - Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
-      <strong>Verplichtingen voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54): </strong><br>
+      <strong>Verplichtingen voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54):</strong><br>
       - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan<br>
       - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren<br>
       - beleid opstellen ter naleving van het Unierecht inzake auteursrechten en naburige rechten en dan met name ter vaststelling en naleving, onder meer door middel van geavanceerde technologieën<br>
@@ -2208,13 +2208,13 @@ conclusions:
   - conclusionId: "14.1.4"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent een gebruiksverantwoordelijke en aanbieder van een niet-hoog-risico AI-systeem voor algemene doeleinden."
     obligation: "
-      <strong>Verplichtingen voor alle AI-systemen: </strong><br>
+      <strong>Verplichtingen voor alle AI-systemen:</strong><br>
           - AI-geletterdheid (Artikel 4)<br>
           - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften (Artikel 95)<br><br>
       <i>Geldig vanaf:</i><br>
           - AI-geletterdheid (Artikel 4) gaat vanaf februari 2025 in werking.<br>
           - Gedragscodes (Artikel 95) zijn vrijwillig en kunnen op elk moment na de inwerkingtreding van de AI-verordening worden opgesteld en toegepast.<br><br>
-      <strong>Verplichtingen voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54): </strong><br>
+      <strong>Verplichtingen voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54):</strong><br>
       - de technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan<br>
       - informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren<br>
       - beleid opstellen ter naleving van het Unierecht inzake auteursrechten en naburige rechten en dan met name ter vaststelling en naleving, onder meer door middel van geavanceerde technologieën<br>
@@ -2336,7 +2336,7 @@ conclusions:
 ## Conclusies voor importeur (13)
   - conclusionId: "15.0.0"
     conclusion: "Op basis van de ingevulde antwoorden is de AI-verordening op jou van toepassing. Je bent importeur van een verboden AI-systeem."
-    obligation: "Het AI-systeem moet van de markt worden gehaald en het gebruik ervan stop gezet. <strong>Let op: </strong>  dit geldt vanaf 1 februari 2025."
+    obligation: "Het AI-systeem moet van de markt worden gehaald en het gebruik ervan stop gezet. <strong>Let op:</strong>  dit geldt vanaf 1 februari 2025."
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
         url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
