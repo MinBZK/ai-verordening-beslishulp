@@ -1,0 +1,40 @@
+{
+  "name": "Frontend",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "forwardPorts": [
+    5173
+  ],
+  "postCreateCommand": "cd frontend; npm install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "editorconfig.editorconfig",
+        "streetsidesoftware.code-spell-checker",
+        "mhutchie.git-graph",
+        "ms-vsliveshare.vsliveshare",
+        "Vue.volar",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ],
+      "settings": {
+        "editor.formatOnPaste": false,
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.renderWhitespace": "boundary",
+        "files.trimTrailingWhitespace": true,
+        "terminal.integrated.inheritEnv": true,
+        "debug.toolBarLocation": "commandCenter",
+        "terminal.integrated.profiles.linux": {
+          "zsh": {
+            "path": "/usr/bin/zsh"
+          }
+        },
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "editor.codeActionsOnSave": {
+          "source.fixAll": "explicit"
+        },
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      }
+    }
+  }
+}
