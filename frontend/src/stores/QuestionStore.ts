@@ -29,7 +29,7 @@ export const useQuestionStore = defineStore('question', () => {
   const userDecisionPath = ref(initialUserAnswers)
   const LabelsBySubCategory =  ref(initialLabelsBySubCategory)
 
-  function addUserAnswer(answer: string) {
+  function addUserDecisionPath(answer: string) {
     userDecisionPath.value.push(answer)
     sessionStorage.setItem('userDecisionPath', JSON.stringify(userDecisionPath.value))
   }
@@ -170,7 +170,7 @@ export const useQuestionStore = defineStore('question', () => {
     setQuestionId,
     setConclusionId,
     addAnswer,
-    addUserAnswer,
+    addUserDecisionPath,
     getJsonLabels,
     addLabel,
     addLabelBySubCategory,
