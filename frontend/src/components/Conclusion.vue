@@ -15,14 +15,14 @@ defineProps<Props>()
 defineEmits(['back'])
 
 // Gebruik ref voor reactieve data
-const sessionAnswers = ref(null)
+const sessionUserDecisionPath = ref(null)
 
 // onMounted voor lifecycle hook
 onMounted(() => {
   // Haal de answers op uit sessionStorage wanneer de component wordt geladen
-  const answersData = sessionStorage.getItem('userAnswers')
-  if (answersData) {
-    sessionAnswers.value = JSON.parse(answersData)
+  const userDecisionPathData = sessionStorage.getItem('userDecisionPath')
+  if (userDecisionPathData) {
+    sessionUserDecisionPath.value = JSON.parse(userDecisionPathData)
   }
 })
 
@@ -44,8 +44,8 @@ onMounted(() => {
       <!--   Profile labels section  -->
       <SubResult :category="category" :labels="labels" title="AI-verordening Profiel" conclusion="conclusion" />
 
-      <!-- Accordion voor Antwoorden, zichtbaar als er sessionAnswers zijn -->
-      <div v-if="sessionAnswers">
+      <!-- Accordion voor Antwoorden, zichtbaar als er sessionUserDecisionPath zijn -->
+      <div v-if="sessionUserDecisionPath">
         <details class="rvo-accordion__item">
           <summary class="rvo-accordion__item-summary rvo-heading--no-margins rvo-heading--mixed">
             <h3 class="utrecht-heading-3 rvo-accordion__item-title rvo-heading--no-margins rvo-heading--mixed items-center">
@@ -62,7 +62,7 @@ onMounted(() => {
           <div class="rvo-accordion__content">
             <div class="rvo-text--md --rvo-font-sans-serif-font-family">
               <ul class="rvo-list rvo-list--unordered">
-                <li v-for="(answer, index) in sessionAnswers" :key="index">
+                <li v-for="(answer, index) in sessionUserDecisionPath" :key="index">
                   <template v-if="answer.split(':').length === 3">
                     <strong>Vraag <span>{{ answer.split(':')[0] }}</span>:</strong> <span v-html="answer.split(':')[1]"></span><br>
                     <i>Antwoord:</i> <span>{{ answer.split(':')[2] }}</span>

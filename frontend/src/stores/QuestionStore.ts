@@ -15,7 +15,7 @@ export const useQuestionStore = defineStore('question', () => {
 
   const initialAcceptedDisclaimer = sessionStorage.getItem('acceptedDisclaimer') ?? '0'
   const initialAnswers = JSON.parse(sessionStorage.getItem('answers') ?? '[]')
-  const initialUserAnswers = JSON.parse(sessionStorage.getItem('userAnswers') ?? '[]')
+  const initialUserAnswers = JSON.parse(sessionStorage.getItem('userDecisionPath') ?? '[]')
   const initialLabels = JSON.parse(sessionStorage.getItem('labels') ?? '{}')
   const initialLabelsBySubCategory = JSON.parse(sessionStorage.getItem('labelsbysubcategory') ?? initialLabelsBySubCategoryNTB)
   const initialQuestionId = sessionStorage.getItem('currentquestion') ?? '1.1'
@@ -26,12 +26,12 @@ export const useQuestionStore = defineStore('question', () => {
   const ConclusionId = ref(String(initialConclusionId))
   const answers = ref(initialAnswers)
   const labels = ref(initialLabels)
-  const userAnswers = ref(initialUserAnswers)
+  const userDecisionPath = ref(initialUserAnswers)
   const LabelsBySubCategory =  ref(initialLabelsBySubCategory)
 
   function addUserAnswer(answer: string) {
-    userAnswers.value.push(answer)
-    sessionStorage.setItem('userAnswers', JSON.stringify(userAnswers.value))
+    userDecisionPath.value.push(answer)
+    sessionStorage.setItem('userDecisionPath', JSON.stringify(userDecisionPath.value))
   }
 
   function setQuestionId(id: string | null) {
@@ -113,7 +113,7 @@ export const useQuestionStore = defineStore('question', () => {
      */
     QuestionId.value = answers.value[answers.value.length - 1]
     answers.value.pop()
-    userAnswers.value.pop()
+    userDecisionPath.value.pop()
 
     if (labels.value[QuestionId.value]) {
       const questionLabels: string[] = labels.value[QuestionId.value]
@@ -133,7 +133,7 @@ export const useQuestionStore = defineStore('question', () => {
     }
 
     sessionStorage.setItem('answers', JSON.stringify(answers.value))
-    sessionStorage.setItem('userAnswers', JSON.stringify(userAnswers.value))
+    sessionStorage.setItem('userDecisionPath', JSON.stringify(userDecisionPath.value))
     sessionStorage.setItem('currentquestion', QuestionId.value)
     sessionStorage.setItem('labels', JSON.stringify(labels.value))
     sessionStorage.setItem('labelsbysubcategory', JSON.stringify(LabelsBySubCategory.value))
@@ -141,13 +141,13 @@ export const useQuestionStore = defineStore('question', () => {
 
   function reset() {
     answers.value = []
-    userAnswers.value = []
+    userDecisionPath.value = []
     QuestionId.value = '1.1'
     labels.value = {}
     LabelsBySubCategory.value = JSON.parse(initialLabelsBySubCategoryNTB)
     ConclusionId.value = ''
     sessionStorage.setItem('answers', JSON.stringify(answers.value))
-    sessionStorage.setItem('userAnswers', JSON.stringify(userAnswers.value))
+    sessionStorage.setItem('userDecisionPath', JSON.stringify(userDecisionPath.value))
     sessionStorage.setItem('currentquestion', QuestionId.value)
     sessionStorage.setItem('currentconclusion', ConclusionId.value)
     sessionStorage.setItem('labels', JSON.stringify(labels.value))
