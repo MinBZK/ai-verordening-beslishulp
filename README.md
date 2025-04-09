@@ -26,7 +26,7 @@ Daarnaast bestaat de mogelijkheid een knop aan de conclusiepagina toe te voegen.
 tekst worden voorzien en 'onclick' stuurt dit een javascript event 'beslishulp-done'. Zie ook het [voorbeeld](voorbeeld.html) hoe je dit kunt gebruiken.
 
 Als de beslishulp in een eigen website wordt gebruikt, is de kans groot dat de CSS gaat mengen en dit
-ongewenste effecten heeft. Overweeg een iframe te gebruiken om dit te voorkomen, zie ook het [iframe voorbeeld](iframe_voorbeeld.html). Merk op dat het javascript event hier een 'message' is i.v.m. cross-origin communication.
+ongewenste effecten heeft. Overweeg een iframe te gebruiken om dit te voorkomen, zie ook het [iframe voorbeeld](iframe-voorbeeld.html). Merk op dat het javascript event hier een 'message' is i.v.m. cross-origin communication.
 
 # AI-Verordening-Beslishulp
 
