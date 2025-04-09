@@ -37,7 +37,7 @@ onMounted(() => {
     <!--Conclusion/Resultaat section-->
     <p class="rvo-alert--success rvo-alert--padding-md">
       <span v-html="conclusion" class="rvo-text--italic rvo-text--xl --rvo-font-sans-serif-font-family"></span>
-      <slot />
+      <slot/>
     </p>
 
     <div class="rvo-accordion">
@@ -63,9 +63,9 @@ onMounted(() => {
             <div class="rvo-text--md --rvo-font-sans-serif-font-family">
               <ul class="rvo-list rvo-list--unordered">
                 <li v-for="(answer, index) in sessionUserDecisionPath" :key="index">
-                  <template v-if="answer.split(':').length === 3">
-                    <strong>Vraag <span>{{ answer.split(':')[0] }}</span>:</strong> <span v-html="answer.split(':')[1]"></span><br>
-                    <i>Antwoord:</i> <span>{{ answer.split(':')[2] }}</span>
+                  <template v-if="String(answer).split(':').length === 3">
+                    <strong>Vraag <span>{{ String(answer).split(':')[0] }}</span>:</strong> <span v-html="String(answer).split(':')[1]"></span><br>
+                    <i>Antwoord:</i> <span>{{ String(answer).split(':')[2] }}</span>
                   </template>
                   <template v-else>
                     <span>Ongeldige invoer: {{ answer }}</span>
