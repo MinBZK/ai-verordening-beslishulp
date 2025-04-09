@@ -137,6 +137,7 @@ function handleNextStep(object: Answer | Redirect) {
 }
 
 async function givenAnswer(answer: Answer) {
+  questionStore.addUserDecisionPath(questionId.value + ": " + currentQuestion.value.question + ":" + answer.answer)
   questionStore.addAnswer(questionId.value)
   if (answer.labels) {
     for (let i in answer.labels) {
