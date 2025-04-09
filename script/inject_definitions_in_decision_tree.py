@@ -27,8 +27,19 @@ term_dict = {
 
 
 def create_pattern(terms):
-    """Create a regex pattern from a list of terms."""
-    return re.compile("|".join([re.escape(term) for term in sorted(terms, key=len, reverse=True)]))
+    """Create a regex pattern from a list of terms that matches only full words, including hyphens."""
+    # Sort terms by length (descending) to match longer terms first
+    sorted_terms = sorted(terms, key=len, reverse=True)
+
+    # Create patterns that consider hyphens as part of words
+    # Custom word boundary that treats hyphens as part of words
+    # (?<![a-zA-Z0-9_-]) = negative lookbehind for word chars or hyphen
+    # (?![a-zA-Z0-9_-]) = negative lookahead for word chars or hyphen
+    escaped_terms = [r"(?<![a-zA-Z0-9_-])" + re.escape(term) + r"(?![a-zA-Z0-9_-])" for term in sorted_terms]
+
+    # Join with OR operator
+    pattern_string = "|".join(escaped_terms)
+    return re.compile(pattern_string)
 
 
 def replace_terms_with_tracking(text, term_dict):
