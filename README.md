@@ -10,6 +10,10 @@
 
 Voor vragen of opmerkingen over de beslishulp mail je naar: [ai-verordening@minbzk.nl](mailto::ai-verordening@minbzk.nl).
 
+# Gebruik beslishulp in je eigen website
+
+Uitleg hier.
+
 # AI-Verordening-Beslishulp
 
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/MinBZK/ai-verordening-beslishulp/main.svg?badge_token=d3dKEK97RwC1II15_W-nng)](https://results.pre-commit.ci/latest/github/MinBZK/ai-verordening-beslishulp/main?badge_token=d3dKEK97RwC1II15_W-nng)
