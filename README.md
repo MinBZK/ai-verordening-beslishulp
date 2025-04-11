@@ -12,7 +12,21 @@ Voor vragen of opmerkingen over de beslishulp mail je naar: [ai-verordening@minb
 
 # Gebruik beslishulp in je eigen website
 
-Uitleg hier.
+De beslishulp met alle styling is te downloaden van de [release pagina](https://github.com/MinBZK/ai-verordening-beslishulp/releases).
+
+Om de beslishulp op te nemen in een pagina, is minimaal de volgende code nodig. Let op dat je ook de
+class 'rvo-theme' meeneemt, anders werkt de CSS niet.
+
+```html
+<div id="app" class="rvo-theme"></div>
+<script src="index.js"></script>
+```
+
+Daarnaast bestaat de mogelijkheid een knop aan de conclusiepagina toe te voegen. Deze kan van een eigen
+tekst worden voorzien en 'onclick' stuurt dit een javascript event 'beslishulp-done'. Zie ook het [voorbeeld](voorbeeld.html) hoe je dit kunt gebruiken.
+
+Als de beslishulp in een eigen website wordt gebruikt, is de kans groot dat de CSS gaat mengen en dit
+ongewenste effecten heeft. Overweeg een iframe te gebruiken om dit te voorkomen, zie ook het [iframe voorbeeld](iframe_voorbeeld.html). Merk op dat het javascript event hier een 'message' is i.v.m. cross-origin communication.
 
 # AI-Verordening-Beslishulp
 

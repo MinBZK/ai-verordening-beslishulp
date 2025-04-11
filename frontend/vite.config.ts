@@ -11,6 +11,7 @@ const SVG_ALLOW_LIST = [
   'logo.svg',
   'info.svg',
   'terug.svg',
+  'bewerken.svg',
   'progress-tracker-', // This allows all SVGs starting with 'progress-tracker-'
 ];
 
