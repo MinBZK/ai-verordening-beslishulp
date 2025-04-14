@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title>Voorbeeld gebruik beslishulp</title>
+  <script type="text/javascript">
+    window.addEventListener("message", (event) => {
+      if (event.data.event === "beslishulp-done") {
+      document.querySelector("dialog").removeAttribute("open");
+      document.querySelector("pre").innerHTML = "";
+      for (const key of ["answers", "labels"]) {
+        document.querySelector("pre").innerHTML += `
+Sleutel: ${key}\n
+Waarde: ${JSON.stringify(JSON.parse(sessionStorage.getItem(key)), null, 2)}\n\n`
+      }
+    }});
+  </script>
+</head>
+<body>
+<dialog open style="margin-top: 5vh; width: 75vw; height: 75vh">
+  <iframe style="width: 100%; height: 100%; border:0; padding: 0" srcdoc='<div id="app" class="rvo-theme"></div><script src="index.js" data-showCloseOnEndMsg="Resultaten overnemen en afsluiten" data-showCloseOnEnd="true"></script>'>
+  </iframe>
+</dialog>
+<pre id="results">
+
+</pre>
+</body>
+</html>
