@@ -11,6 +11,8 @@ const SVG_ALLOW_LIST = [
   'logo.svg',
   'info.svg',
   'terug.svg',
+  'delta-omhoog.svg',
+  'delta-omlaag.svg',
   'bewerken.svg',
   'progress-tracker-', // This allows all SVGs starting with 'progress-tracker-'
 ];
@@ -31,6 +33,8 @@ function createSvgFilterPlugin(): Plugin {
         if (!isAllowed) {
           console.info(`Filtering disallowed SVG import: ${svgFileName}`);
           return `\0empty-svg:${id}`;
+        } else {
+          console.info(`Using SVG import: ${svgFileName}`);
         }
       }
       return null;
@@ -64,9 +68,10 @@ function createSvgFilterPlugin(): Plugin {
 
         if (!isAllowed) {
           console.info(`Filtering CSS reference to disallowed SVG: ${svgFileName}`);
-          // Replace with empty SVG data URL
           newCode = newCode.replace(fullUrl, `url('${EMPTY_SVG}')`);
           modified = true;
+        } else {
+          console.info(`Using SVG import: ${svgFileName}`);
         }
       }
       return modified ? newCode : null;
@@ -90,6 +95,8 @@ function createSvgOutputFilter(): Plugin {
             if (!isAllowed) {
               console.info(`Removing SVG from final output: ${svgFileName}`);
               delete bundle[fileName];
+            } else {
+              console.info(`Using SVG import: ${svgFileName}`);
             }
           }
         }
@@ -121,8 +128,10 @@ export default defineConfig({
               svgFileName === allowedSvg || svgFileName.includes(allowedSvg)
             );
             if (!isAllowed) {
-              console.info(`Excluding SVG from chunks: ${svgFileName}`);
+              // console.info(`Excluding SVG from chunks: ${svgFileName}`);
               return 'empty-svgs';
+            } else {
+              console.info(`Using SVG import: ${svgFileName}`);
             }
           }
           return null;
