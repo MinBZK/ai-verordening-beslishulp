@@ -57,3 +57,25 @@ ol, ul, menu {
   margin: 0;
   padding: 0;
 }
+
+/* Custom class for active answer buttons - using higher specificity */
+.rvo-form-fieldset .utrecht-button.utrecht-button--active {
+  background-color: var(--rvo-color-hemelblauw) !important;
+  color: var(--rvo-color-wit) !important;
+  border-color: var(--rvo-color-hemelblauw) !important;
+  box-shadow: 0 0 0 3px var(--rvo-color-hemelblauw-tint-3) !important;
+}
+
+/* Ensure hover state on active buttons maintains the active styling */
+.rvo-form-fieldset .utrecht-button.utrecht-button--active:hover {
+  background-color: var(--rvo-color-hemelblauw) !important;
+  color: var(--rvo-color-wit) !important;
+  border-color: var(--rvo-color-hemelblauw) !important;
+}
+
+/* Ensure focus state on active buttons maintains the active styling */
+.rvo-form-fieldset .utrecht-button.utrecht-button--active:focus {
+  background-color: var(--rvo-color-hemelblauw) !important;
+  color: var(--rvo-color-wit) !important;
+  border-color: var(--rvo-color-hemelblauw) !important;
+}
