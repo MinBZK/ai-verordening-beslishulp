@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import jexl from 'jexl'
 import { computed, onMounted, ref } from 'vue'
-import { Answer, Conclusions, DecisionTree, Questions, Redirect } from '@/models/DecisionTree'
+import {Answer, Conclusions, DecisionTree, Questions, Redirect, UserDecision} from '@/models/DecisionTree'
 import { Categories, Category } from '@/models/Categories'
 import { storeToRefs } from 'pinia'
 import { fold } from 'fp-ts/lib/Either'
@@ -19,6 +19,7 @@ import DefaultError from '@/components/DefaultError.vue'
 import HomePage from '@/components/HomePage.vue'
 import Header from '@/components/Header.vue'
 import ProgressTracker from '@/components/ProgressTracker.vue'
+import {UserDecisionsService} from "@/services/userDecisionsService.ts";
 
 const questionStore = useQuestionStore()
 const { AcceptedDisclaimer, QuestionId, ConclusionId } = storeToRefs(questionStore)
@@ -33,6 +34,8 @@ const questionId = QuestionId
 let conclusionId = ConclusionId
 const isLoading = ref(true)
 const error = ref<string | null>(null)
+
+const userDecisions = UserDecisionsService();
 
 onMounted(async () => {
   // Read in the Data
@@ -137,7 +140,14 @@ function handleNextStep(object: Answer | Redirect) {
 }
 
 async function givenAnswer(answer: Answer) {
-  questionStore.addUserDecisionPath(questionId.value + ": " + currentQuestion.value?.question + ":" + answer.answer)
+  const decision: t.TypeOf<typeof UserDecision> = {
+    questionId: questionId.value,
+    question: currentQuestion.value?.question,
+    answer: answer.answer,
+    explanation: answer.explanation
+  };
+  userDecisions.updatePreviousUserDecision(decision);
+  questionStore.addUserDecisionPath(decision)
   questionStore.addAnswer(questionId.value)
   if (answer.labels) {
     for (let i in answer.labels) {
@@ -219,6 +229,7 @@ function acceptDisclaimer() {
                   :answers="currentQuestion.answers"
                   :category="currentCategory.category"
                   :labels="questionStore.getLabelsBySubCategory()"
+                  :userDecisions=userDecisions
                   @answered="givenAnswer"
                   @back="back"
         />

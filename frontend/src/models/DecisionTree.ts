@@ -14,9 +14,18 @@ export const Answer = t.type({
   nextConclusionId: t.union([t.string, t.undefined]),
   subresult: t.union([t.string, t.undefined]),
   labels: t.union([t.array(t.string), t.undefined]),
-  redirects: t.union([t.array(Redirect), t.undefined])
+  redirects: t.union([t.array(Redirect), t.undefined]),
+  explanation: t.union([t.string, t.undefined])
 })
 export type Answer = t.TypeOf<typeof Answer>
+
+export const UserDecision = t.type({
+  questionId: t.string,
+  question: t.union([t.string, t.undefined]),
+  answer: t.union([t.string, t.undefined]),
+  explanation: t.union([t.string, t.undefined])
+})
+export type UserDecision = t.TypeOf<typeof UserDecision>
 
 export const Source = t.type({
   source: t.string,

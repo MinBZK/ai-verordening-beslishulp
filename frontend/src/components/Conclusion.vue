@@ -2,6 +2,7 @@
 import Sources from '@/components/Sources.vue'
 import SubResult from '@/components/SubResult.vue'
 import { ref, onMounted } from 'vue'
+import type {UserDecision} from "@/models/DecisionTree.ts";
 
 interface Props {
   conclusion: string | null
@@ -15,7 +16,7 @@ defineProps<Props>()
 defineEmits(['back'])
 
 // Gebruik ref voor reactieve data
-const sessionUserDecisionPath = ref(null)
+const sessionUserDecisionPath = ref<UserDecision[]>([])
 
 // onMounted voor lifecycle hook
 onMounted(() => {
@@ -62,14 +63,12 @@ onMounted(() => {
           <div class="rvo-accordion__content">
             <div class="rvo-text--md --rvo-font-sans-serif-font-family">
               <ul class="rvo-list rvo-list--unordered">
-                <li v-for="(answer, index) in sessionUserDecisionPath" :key="index">
-                  <template v-if="String(answer).split(':').length === 3">
-                    <strong>Vraag <span>{{ String(answer).split(':')[0] }}</span>:</strong> <span v-html="String(answer).split(':')[1]"></span><br>
-                    <i>Antwoord:</i> <span>{{ String(answer).split(':')[2] }}</span>
-                  </template>
-                  <template v-else>
-                    <span>Ongeldige invoer: {{ answer }}</span>
-                  </template>
+                <li class="rvo-layout-margin-vertical--lg" v-for="userDecision in sessionUserDecisionPath">
+                    <strong>Vraag <span>{{ String(userDecision.questionId) }}</span>:</strong> <span v-html="userDecision.question"></span><br>
+                    <i>Antwoord:</i> <span>{{ userDecision.answer }}</span>
+                    <div v-if="userDecision.explanation">
+                      <i>Toelichting:</i> <span>{{ userDecision.explanation }}</span>
+                    </div>
                 </li>
               </ul>
             </div>

@@ -1,5 +1,6 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
+import type {UserDecision} from "@/models/DecisionTree.ts";
 
 export const useQuestionStore = defineStore('question', () => {
   const initialLabelsBySubCategoryNTB = `{
@@ -29,8 +30,8 @@ export const useQuestionStore = defineStore('question', () => {
   const userDecisionPath = ref(initialUserAnswers)
   const LabelsBySubCategory =  ref(initialLabelsBySubCategory)
 
-  function addUserDecisionPath(answer: string) {
-    userDecisionPath.value.push(answer)
+  function addUserDecisionPath(userDecision: UserDecision) {
+    userDecisionPath.value.push(userDecision)
     sessionStorage.setItem('userDecisionPath', JSON.stringify(userDecisionPath.value))
   }
 
