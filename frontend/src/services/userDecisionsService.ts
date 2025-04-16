@@ -22,7 +22,6 @@ export function UserDecisionsService() {
         decision => decision.questionId === questionId
       );
       if (decisionIndex !== -1) {
-        console.log("Removing index: " + decisionIndex);
         previousUserDecisions.value.splice(decisionIndex, 1);
       }
     },

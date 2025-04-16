@@ -3,7 +3,7 @@ import Sources from '@/components/Sources.vue'
 import {Answer, type UserDecision} from '@/models/DecisionTree'
 import SubResult from '@/components/SubResult.vue'
 import HelpWanted from '@/components/HelpWanted.vue'
-import {nextTick, ref, watch} from 'vue'
+import {nextTick, onMounted, ref, watch} from 'vue'
 import * as t from 'io-ts'
 import type {UserDecisionsServiceType} from "@/services/userDecisionsService.ts";
 
@@ -14,6 +14,7 @@ interface Props {
   sources: { source: string; url: string | undefined; }[] | undefined
   answers: Array<Answer>
   category: string
+  question_category: string
   labels: { category: string; assigned_labels: string | undefined; }[] | undefined
   userDecisions: UserDecisionsServiceType
 }
@@ -25,27 +26,29 @@ const selectedAnswer = ref<Answer | null>(null)
 const userExplanation = ref('')
 const explanationFieldRef = ref<HTMLTextAreaElement | null>(null)
 
-// Reset the form values when the question changes
-watch(() => props.id, () => {
+function updateFromPreviousDecision() {
   const previousUserDecision = props.userDecisions.getPreviousUserDecision(props.id);
-  if (previousUserDecision) {
-    const matchingAnswer = props.answers.find(answer => answer.answer == previousUserDecision.answer)
+  if (previousUserDecision && props.answers.length > 1) {
+    const matchingAnswer = props.answers.find(answer => answer.answer == previousUserDecision.answer);
     if (matchingAnswer) {
       selectedAnswer.value = matchingAnswer;
     }
     if (previousUserDecision.explanation) {
       userExplanation.value = previousUserDecision.explanation;
     } else {
-      userExplanation.value = ''
+      userExplanation.value = '';
     }
   } else {
-    selectedAnswer.value = null
-    userExplanation.value = ''
+    selectedAnswer.value = null;
+    userExplanation.value = '';
   }
   nextTick(() => {
     adjustHeight();
   });
-})
+}
+
+watch(() => props.id, updateFromPreviousDecision);
+onMounted(updateFromPreviousDecision);
 
 function adjustHeight() {
   const textarea: HTMLTextAreaElement | null = explanationFieldRef.value;
@@ -126,14 +129,13 @@ function optionalSaveUserDecision() {
               </li>
             </ul>
           </div>
-
           <!-- Als er 2 of minder antwoorden zijn, toon ze als losse knoppen -->
           <div class="rvo-layout-row rvo-layout-gap--sm" v-else>
             <div v-for="(answer, index) in answers" :key="index">
               <button
                 :key="id + index.toString()"
                 aria-roledescription="button"
-                @click="() => selectAnswer(answer)"
+                @click="() => {selectAnswer(answer); if (answers.length == 1) { $emit('answered', submitAnswer()) }}"
                 :id="index.toString()"
                 :class="['utrecht-button utrecht-button--secondary-action utrecht-button--rvo-md rvo-link--no-underline rvo-link--hover',
                       {'utrecht-button--active': selectedAnswer && selectedAnswer.answer === answer.answer}]"
@@ -144,7 +146,8 @@ function optionalSaveUserDecision() {
           </div>
         </div>
 
-        <div class="rvo-layout-margin-vertical--md">
+        <!-- TODO: maybe we need a better check to determine if we want to show the explanation field -->
+        <div class="rvo-layout-margin-vertical--md" v-if="question_category != 'tussenscherm'">
           <label for="explanation-field" class="utrecht-form-label"><span class="rvo-text--bold">Toelichting</span> (niet verplicht)</label>
           <textarea
             @input="adjustHeight"
@@ -175,6 +178,7 @@ function optionalSaveUserDecision() {
           Vorige vraag
         </button>
         <button
+          v-if="answers.length > 1"
           @click="$emit('answered', submitAnswer())"
           type="button"
           :disabled="!selectedAnswer"

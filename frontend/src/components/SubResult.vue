@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-
-import {getCurrentInstance} from 'vue'
+import {computed, getCurrentInstance, inject} from 'vue'
+import {filterLabels} from "@/services/labelsService.ts";
 
 const showCloseOnEnd = getCurrentInstance()!.appContext.config.globalProperties.showCloseOnEnd
 
-const showCloseOnEndMsg = function() {
+const showCloseOnEndMsg = function () {
   if (getCurrentInstance()!.appContext.config.globalProperties.showCloseOnEndMsg) {
     return getCurrentInstance()!.appContext.config.globalProperties.showCloseOnEndMsg;
   } else {
@@ -17,56 +16,25 @@ interface Props {
   category: string | undefined
   labels: { category: string; assigned_labels: string | undefined; }[] | undefined
   title: string
-  conclusion: string
+  conclusion: string | null
 }
+
 type FilteredLabels = { [category: string]: string[] }
 
 const props = defineProps<Props>()
 
-const filteredLabels = computed<FilteredLabels>(() => {
-  const filtered: FilteredLabels = {}
+// Access openExportDialog function from parent component
+const openExportDialog = inject('openExportDialog', () => {
+  console.warn('openExportDialog function not provided');
+});
 
-  if (!props.labels || typeof props.labels !== 'object') {
-    return filtered
-  }
-
-  const entries = Array.isArray(props.labels)
-    ? props.labels
-    : Object.entries(props.labels).map(([category, assigned_labels]) => ({
-        category,
-        assigned_labels
-      }))
-
-  entries.forEach((item) => {
-    if (item.assigned_labels && typeof item.assigned_labels === 'string') {
-      const validLabels = item.assigned_labels.split(',').filter(label =>
-        label !== 'niet van toepassing' &&
-        label !== 'nader te bepalen'
-      )
-
-      if (validLabels.length > 0) {
-        filtered[item.category] = validLabels
-      }
-    } else if (Array.isArray(item.assigned_labels)) {
-      const validLabels = item.assigned_labels.filter(label =>
-        label !== 'niet van toepassing' &&
-        label !== 'nader te bepalen'
-      )
-
-      if (validLabels.length > 0) {
-        filtered[item.category] = validLabels
-      }
-    }
-  })
-
-  return filtered
-})
+const filteredLabels = computed<FilteredLabels>(() => filterLabels(props.labels));
 
 const hasLabels = computed(() => {
   return Object.keys(filteredLabels.value).length > 0
 })
 
-const informDone = function() {
+const informDone = function () {
   const isInIframe = window !== window.parent;
   if (isInIframe) {
     window.parent.postMessage({
@@ -75,11 +43,12 @@ const informDone = function() {
     }, '*');
   } else {
     const event = new CustomEvent('beslishulp-done', {
-      detail: { value: 'true' }
+      detail: {value: 'true'}
     });
     window.dispatchEvent(event);
   }
 }
+
 </script>
 
 <template>
@@ -88,7 +57,8 @@ const informDone = function() {
       <div class="rvo-accordion">
         <details class="rvo-accordion__item">
           <summary class="rvo-accordion__item-summary">
-            <h3 class="utrecht-heading-3 rvo-accordion__item-title rvo-heading--no-margins rvo-heading--mixed items-center">
+            <h3
+              class="utrecht-heading-3 rvo-accordion__item-title rvo-heading--no-margins rvo-heading--mixed items-center">
               <span
                 class="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw rvo-accordion__item-icon--closed"
                 role="img"
@@ -107,21 +77,22 @@ const informDone = function() {
             <div class="rvo-table--responsive py-5">
               <table class="rvo-table">
                 <thead class="rvo-table-head">
-                  <tr class="rvo-table-row">
-                    <th scope="col" class="rvo-table-header">Categorie</th>
-                    <th scope="col" class="rvo-table-header rvo-table-header">Resultaat</th>
-                  </tr>
+                <tr class="rvo-table-row">
+                  <th scope="col" class="rvo-table-header">Categorie</th>
+                  <th scope="col" class="rvo-table-header rvo-table-header">Resultaat</th>
+                </tr>
                 </thead>
                 <tbody class="rvo-table-body">
-                  <tr v-for="(assigned_labels, category) in filteredLabels" :key="category" class="rvo-table-row">
-                    <td class="rvo-table-cell rvo-text--bold rvo-text--md">{{ category }}</td>
-                    <td class="flex rvo-table-cell gap-x-3">
-                      <div v-for="label in assigned_labels" :key="label"
-                           class="rvo-tag rvo-tag--default" :style="{ backgroundColor: 'var(--rvo-color-hemelblauw-450)' }">
-                        {{ label }}
-                      </div>
-                    </td>
-                  </tr>
+                <tr v-for="(assigned_labels, category) in filteredLabels" :key="category" class="rvo-table-row">
+                  <td class="rvo-table-cell rvo-text--bold rvo-text--md">{{ category }}</td>
+                  <td class="flex rvo-table-cell gap-x-3">
+                    <div v-for="label in assigned_labels" :key="label"
+                         class="rvo-tag rvo-tag--default"
+                         :style="{ backgroundColor: 'var(--rvo-color-hemelblauw-450)' }">
+                      {{ label }}
+                    </div>
+                  </td>
+                </tr>
                 </tbody>
               </table>
             </div>
@@ -133,7 +104,8 @@ const informDone = function() {
       <div class="rvo-accordion">
         <details class="rvo-accordion__item" open="true">
           <summary class="rvo-accordion__item-summary">
-            <h3 class="utrecht-heading-3 rvo-accordion__item-title rvo-heading--no-margins rvo-heading--mixed items-center">
+            <h3
+              class="utrecht-heading-3 rvo-accordion__item-title rvo-heading--no-margins rvo-heading--mixed items-center">
               <span
                 class="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw rvo-accordion__item-icon--closed"
                 role="img"
@@ -146,27 +118,29 @@ const informDone = function() {
               ></span>
               {{ title }}
             </h3>
-            <span class="rvo-accordion-teaser">Bekijk hier het AI-verordening profiel dat voor jou van toepassing is</span>
+            <span
+              class="rvo-accordion-teaser">Bekijk hier het AI-verordening profiel dat voor jou van toepassing is</span>
           </summary>
           <div class="rvo-accordion__content">
             <div class="rvo-table--responsive py-5">
               <table class="rvo-table">
                 <thead class="rvo-table-head">
-                  <tr class="rvo-table-row">
-                    <th scope="col" class="rvo-table-header">Categorie</th>
-                    <th scope="col" class="rvo-table-header rvo-table-header">Resultaat</th>
-                  </tr>
+                <tr class="rvo-table-row">
+                  <th scope="col" class="rvo-table-header">Categorie</th>
+                  <th scope="col" class="rvo-table-header rvo-table-header">Resultaat</th>
+                </tr>
                 </thead>
                 <tbody class="rvo-table-body">
-                  <tr v-for="(assigned_labels, category) in filteredLabels" :key="category" class="rvo-table-row">
-                    <td class="rvo-table-cell rvo-text--bold rvo-text--md">{{ category }}</td>
-                    <td class="flex rvo-table-cell gap-x-3">
-                      <div v-for="label in assigned_labels" :key="label"
-                           class="rvo-tag rvo-tag--default" :style="{ backgroundColor: 'var(--rvo-color-hemelblauw-450)' }">
-                        {{ label }}
-                      </div>
-                    </td>
-                  </tr>
+                <tr v-for="(assigned_labels, category) in filteredLabels" :key="category" class="rvo-table-row">
+                  <td class="rvo-table-cell rvo-text--bold rvo-text--md">{{ category }}</td>
+                  <td class="flex rvo-table-cell gap-x-3">
+                    <div v-for="label in assigned_labels" :key="label"
+                         class="rvo-tag rvo-tag--default"
+                         :style="{ backgroundColor: 'var(--rvo-color-hemelblauw-450)' }">
+                      {{ label }}
+                    </div>
+                  </td>
+                </tr>
                 </tbody>
               </table>
             </div>
@@ -181,9 +155,23 @@ const informDone = function() {
                 role="img"
                 aria-label="Afsluiten"
               ></span>
-                      {{ showCloseOnEndMsg }}
-                    </button>
-                  </div>
+                {{ showCloseOnEndMsg }}
+              </button>
+            </div>
+          </div>
+          <div class="rvo-layout-margin-vertical--xl">
+            <button
+              @click="openExportDialog"
+              type="button"
+              class="flex utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline "
+            >
+              <span
+                class="utrecht-icon rvo-icon rvo-icon-bewerken rvo-icon--lg rvo-icon--wit"
+                role="img"
+                aria-label="Afsluiten"
+              ></span>
+              Opslaan als PDF
+            </button>
           </div>
         </details>
       </div>

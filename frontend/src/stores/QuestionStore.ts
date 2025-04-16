@@ -167,6 +167,7 @@ export const useQuestionStore = defineStore('question', () => {
     ConclusionId,
     answers,
     LabelsBySubCategory,
+    userDecisionPath,
     getLabelsBySubCategory,
     setQuestionId,
     setConclusionId,

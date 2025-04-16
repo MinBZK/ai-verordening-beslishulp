@@ -227,6 +227,7 @@ function acceptDisclaimer() {
                   :id="currentQuestion.questionId"
                   :sources="currentQuestion.sources"
                   :answers="currentQuestion.answers"
+                  :question_category="currentQuestion.category"
                   :category="currentCategory.category"
                   :labels="questionStore.getLabelsBySubCategory()"
                   :userDecisions=userDecisions

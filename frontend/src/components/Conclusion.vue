@@ -1,22 +1,26 @@
 <script setup lang="ts">
 import Sources from '@/components/Sources.vue'
 import SubResult from '@/components/SubResult.vue'
-import { ref, onMounted } from 'vue'
+import ExportForm from '@/components/ExportForm.vue'
+import { ref, onMounted, computed, provide } from 'vue'
 import type {UserDecision} from "@/models/DecisionTree.ts";
+import { exportToPdf } from '@/services/pdfExport'
+import {filterLabels} from '@/services/labelsService'
 
 interface Props {
   conclusion: string | null
   obligation: string | null
   sources: { source: string; url: string | undefined; }[] | undefined
   category: string | undefined
-  'labels': { category: string; assigned_labels: string | undefined; }[] | undefined
+  labels: any,
 }
 
-defineProps<Props>()
+const props = defineProps<Props>()
 defineEmits(['back'])
 
 // Gebruik ref voor reactieve data
 const sessionUserDecisionPath = ref<UserDecision[]>([])
+const isExportDialogOpen = ref(false)
 
 // onMounted voor lifecycle hook
 onMounted(() => {
@@ -26,6 +30,33 @@ onMounted(() => {
     sessionUserDecisionPath.value = JSON.parse(userDecisionPathData)
   }
 })
+
+const openExportDialog = () => {
+  isExportDialogOpen.value = true
+}
+
+const closeExportDialog = () => {
+  isExportDialogOpen.value = false
+}
+
+// Provide the openExportDialog function to child components
+provide('openExportDialog', openExportDialog)
+
+const handleExport = (formData: { algorithmName: string, description: string, filledBy: string }) => {
+  if (props.conclusion) {
+    const processedLabels = filterLabels(props.labels);
+    exportToPdf(
+      `${formData.algorithmName.trim() || 'beslishulp'}.pdf`,
+      sessionUserDecisionPath.value,
+      props.conclusion,
+      props.sources,
+      formData.algorithmName.trim(),
+      formData.description.trim(),
+      formData.filledBy.trim(),
+      processedLabels
+    )
+  }
+}
 
 </script>
 
@@ -43,7 +74,7 @@ onMounted(() => {
 
     <div class="rvo-accordion">
       <!--   Profile labels section  -->
-      <SubResult :category="category" :labels="labels" title="AI-verordening Profiel" conclusion="conclusion" />
+      <SubResult :category="category" :labels="labels" title="AI-verordening Profiel" :conclusion="conclusion" />
 
       <!-- Accordion voor Antwoorden, zichtbaar als er sessionUserDecisionPath zijn -->
       <div v-if="sessionUserDecisionPath">
@@ -138,12 +169,24 @@ onMounted(() => {
       </div>
     </div>
 
-    <!--Vorige vraag section-->
-    <div class="rvo-layout-margin-vertical--2xl">
+    <!--Vorige vraag and export buttons section-->
+    <div class="rvo-layout-margin-vertical--2xl flex justify-between">
       <button @click="$emit('back')" type="button"
-        class="flex utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline ">
+        class="flex utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline">
         Vorige vraag
       </button>
+
+      <button @click="openExportDialog" type="button"
+        class="flex utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline">
+        Exporteren
+      </button>
     </div>
+
+    <!-- Export Form Dialog -->
+    <ExportForm
+      :is-open="isExportDialogOpen"
+      @close="closeExportDialog"
+      @export="handleExport"
+    />
   </div>
 </template>

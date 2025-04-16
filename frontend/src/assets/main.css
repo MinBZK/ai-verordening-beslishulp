@@ -52,7 +52,7 @@
 }
 
 /* reset some styles without using tailwind pre-flight */
-ol, ul, menu {
+ol, ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -78,4 +78,111 @@ ol, ul, menu {
   background-color: var(--rvo-color-hemelblauw) !important;
   color: var(--rvo-color-wit) !important;
   border-color: var(--rvo-color-hemelblauw) !important;
+}
+
+/* Modal is not implemented in NLDS yet, so we implement it here. */
+.minbzk-modal {
+  /* Underlay covers entire screen. */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  /* Change to appropriate color from NLDS. */
+  background-color: rgba(0 0 0 / 50%);
+  z-index: 1000;
+
+  /* Flexbox centers the .modal-content vertically and horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* Animate when opening */
+  animation-name: fade-in;
+  animation-duration: 150ms;
+  animation-timing-function: ease;
+}
+
+.display-none {
+  display: none !important;
+}
+
+.minbzk-modal > .modal-underlay {
+  /* underlay takes up the entire viewport. This is only
+  required if you want to click to dismiss the popup */
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.model-content-auto-size {
+  width: auto !important;
+  height: auto !important;
+}
+
+.modal-content {
+  overflow: auto;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0 2px 0 2px; /* add minimal padding so the outline/focus borders are displayed correctly */
+}
+
+.modal-content-close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  z-index: 1000;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+.modal-content-container {
+  overflow: hidden;
+  position: relative;
+
+  /* Position visible dialog near the top of the window */
+  margin-top: 5vh;
+  transition: height 0.3s ease,
+  width 0.3s ease;
+
+  /* Sizing for visible dialog */
+  width: 80%;
+  height: 80%;
+
+  /* Display properties for visible dialog */
+  border: solid 1px #999;
+  border-radius: 1em;
+
+  /* Change to appropriate color from NLDS. */
+  box-shadow: 0 0 1em 0 rgba(0 0 0 / 30%);
+  background-color: #fff;
+  padding: 1em;
+
+  /* Animate when opening */
+  animation-name: zoom-in;
+  animation-duration: 150ms;
+  animation-timing-function: ease;
+}
+
+/* Animation keyframes */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoom-in {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Default list styling class to restore browser defaults */
+ol.rvo-default-list, ul.rvo-default-list {
+  list-style: initial;
+  margin: initial;
+  padding: 0 0 0 40px;
 }
