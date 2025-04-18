@@ -1,7 +1,7 @@
 * @MinBZK/ai-validation-team
 
-decision-tree.yaml @ruthkoole
-categories.yaml @ruthkoole
+decision-tree.yaml @ravimeijerrig
+categories.yaml @ravimeijerrig
 
 # excluded files so github actions bot can auto update dependencies
 #  see https://github.com/orgs/community/discussions/23064
