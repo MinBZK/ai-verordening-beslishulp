@@ -1,0 +1,23 @@
+name: Vraag stellen
+description: Stel een vraag over de AI-verordening beslishulp
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Vraag stellen
+        Stel een vraag over de AI-verordening beslishulp
+
+  - type: textarea
+    id: vraag-beschrijving
+    attributes:
+      label: Beschrijf je vraag
+      description: Beschrijf je vraag over de AI-verordening beslishulp.
+      placeholder: Beschrijf je vraag
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        **Let op:** Zorg ervoor dat je een **Titel** invult voor je vraag als de verzendknop uitgeschakeld is.
