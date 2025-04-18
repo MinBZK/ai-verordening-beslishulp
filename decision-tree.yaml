@@ -24,7 +24,11 @@ questions:
 # Rol
   - questionId: "1.2"
     question: "Ontwikkelen jullie de toepassing in eigen beheer of is/wordt deze ontwikkeld door een andere partij?"
-    explanation: "Op basis van het antwoord op deze vraag zal je rol worden toegewezen: aanbieder, gebruiksverantwoordelijke, importeur en/of distributeur. "
+    explanation: "Op basis van het antwoord op deze vraag zal je rol worden toegewezen: aanbieder, gebruiksverantwoordelijke, importeur en/of distributeur. <br><br>
+        Bij deze vraag is het belangrijk om de overweging te maken of een substantiële wijziging kan leiden tot een andere rolverdeling.
+        Als je als gebruiker van een AI-systeem namelijk een substantiële wijziging uitvoert, word je aanbieder van een AI-systeem.
+        Een substantiële wijziging wordt gedefinieerd als een verandering aan een AI-systeem dat niet is opgenomen in de initiële
+        conformiteitsbeoordeling nadat het AI-systeem in de handel is gebracht of in gebruik is gesteld. Dit kan een wijziging zijn die leidt tot een aanpassing van het beoogde doel waarvoor een AI-systeem is beoordeeld."
     category: van_toepassing
     subcategory: "Rol"
     sources:
