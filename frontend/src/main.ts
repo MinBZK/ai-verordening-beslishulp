@@ -4,54 +4,42 @@ import {createApp} from 'vue'
 import {createPinia} from 'pinia'
 import App from './App.vue'
 
-const app = createApp(App);
+const app = createApp(App)
 
-function injectCSS(css: string) {
-  let el = document.createElement('style');
-  el.type = 'text/css';
-  el.innerText = css;
-  document.head.appendChild(el);
+function parseBoolean(str: string | null | undefined): boolean {
+  if (!str) return false;
+  return str.toLowerCase() === 'true';
 }
 
-(function () {
-  if (document?.currentScript?.hasAttribute("data-showCloseOnEnd")) {
-    app.config.globalProperties.showCloseOnEnd = document.currentScript.getAttribute('data-showCloseOnEnd') === 'true';
-  } else {
-    app.config.globalProperties.showCloseOnEnd = new URLSearchParams(window.location.search).get('showCloseOnEnd') === 'true';
+/**
+ * Gets a configuration value from either a script tag attribute or URL parameter
+ * with URL parameters taking precedence over script attributes.
+ * @param name - The name of the configuration parameter to look for
+ * @param defaultValue - The default value to return if the parameter is not found
+ * @returns The value of the parameter or the default value with the same type as defaultValue
+ */
+function getConfiguration(name: string, defaultValue: boolean | string): boolean | string {
+  const URLParam = new URLSearchParams(window.location.search).get(name);
+  if (URLParam !== null) {
+    return typeof defaultValue === 'boolean'
+      ? parseBoolean(URLParam)
+      : URLParam;
   }
-  if (document?.currentScript?.hasAttribute("data-showCloseOnEndMsg")) {
-    app.config.globalProperties.showCloseOnEndMsg = document.currentScript.getAttribute('data-showCloseOnEndMsg');
-  } else {
-    const closeOnEndMsg = new URLSearchParams(window.location.search).get('showCloseOnEndMsg');
-    if (closeOnEndMsg) {
-      app.config.globalProperties.showCloseOnEndMsg = closeOnEndMsg;
+  if (document?.currentScript?.hasAttribute('data-' + name)) {
+    const attrValue = document.currentScript.getAttribute('data-' + name);
+    if (attrValue !== null) {
+      return typeof defaultValue === 'boolean'
+        ? parseBoolean(attrValue)
+        : attrValue;
     }
   }
-  let fontPath;
-  if (document?.currentScript?.hasAttribute("data-fontPath")) {
-    fontPath = document.currentScript.getAttribute('data-fontPath');
-  } else {
-    fontPath = new URLSearchParams(window.location.search).get('fontPath');
-  }
-  if (fontPath) {
-    injectCSS("@font-face {" +
-      "font-family: RijksoverheidSansWebText;" +
-      "font-stretch: 75% 125%;font-style:normal;" +
-      "font-weight:200 800;" +
-      "src:url(" + fontPath + "RijksSansWeb-Regular.woff2)" +
-      "format(\"woff2-variations\")}"
-    );
-    injectCSS("@font-face {" +
-      "font-family: RijksoverheidSansWebText;" +
-      "font-stretch: 75% 125%;font-style:normal;" +
-      "font-weight:200 800;" +
-      "font-style:italic;" +
-      "src:url(" + fontPath + "RijksSansWeb-Italic.woff2)" +
-      "format(\"woff2-variations\")}"
-    );
-  }
+  return defaultValue;
+}
 
-})();
+app.config.globalProperties.showCloseOnEnd = getConfiguration('showCloseOnEnd', false)
+app.config.globalProperties.showCloseOnEndMsg = getConfiguration('showCloseOnEndMsg', "Resultaten overnemen en afsluiten")
+app.config.globalProperties.showExportPDF = getConfiguration('showExportPDF', true)
+app.config.globalProperties.showExplanationField = getConfiguration('showExplanationField', true)
 
 app.use(createPinia())
 

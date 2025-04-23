@@ -5,11 +5,16 @@ export const useCategoryStore = defineStore('category', () => {
   const startCategory = 'AI-verordening van toepassing?'
   const startSubCategory = 'Soort toepassing'
   const initialPreviousCategory = sessionStorage.getItem('previousCategory') ?? startCategory
-  const initialPreviousSubCategory = sessionStorage.getItem('previousSubCategory') ?? startSubCategory
+  const initialPreviousSubCategory =
+    sessionStorage.getItem('previousSubCategory') ?? startSubCategory
   const initialCurrentCategory = sessionStorage.getItem('currentCategory') ?? startCategory
   const initialCurrentSubCategory = sessionStorage.getItem('currentSubCategory') ?? startSubCategory
-  const initialCategoryTrace = JSON.parse(sessionStorage.getItem('categoryTrace') ?? '["AI-verordening van toepassing?"]')
-  const initialSubCategoryTrace = JSON.parse(sessionStorage.getItem('subCategoryTrace') ?? '["Soort toepassing"]')
+  const initialCategoryTrace = JSON.parse(
+    sessionStorage.getItem('categoryTrace') ?? '["AI-verordening van toepassing?"]'
+  )
+  const initialSubCategoryTrace = JSON.parse(
+    sessionStorage.getItem('subCategoryTrace') ?? '["Soort toepassing"]'
+  )
   const initialCategoryStateString = `{
   "ai_act_applicable_state": "doing",
   "risk_group_state": "incomplete"
@@ -19,7 +24,9 @@ export const useCategoryStore = defineStore('category', () => {
     'Welke risicogroep geldt?': 'risk_group_state'
   }
 
-  const initialCategoryState = JSON.parse(sessionStorage.getItem('categoryState') ?? initialCategoryStateString)
+  const initialCategoryState = JSON.parse(
+    sessionStorage.getItem('categoryState') ?? initialCategoryStateString
+  )
   const previousCategory = ref(String(initialPreviousCategory))
   const previousSubCategory = ref(String(initialPreviousSubCategory))
   const currentCategory = ref(String(initialCurrentCategory))
@@ -28,9 +35,8 @@ export const useCategoryStore = defineStore('category', () => {
   const subCategoryTrace = ref(initialSubCategoryTrace)
   const categoryState = ref(initialCategoryState)
 
-
-  function updateCurrentCategory(category: string | undefined, subcategory: string |undefined) {
-    if(category && subcategory) {
+  function updateCurrentCategory(category: string | undefined, subcategory: string | undefined) {
+    if (category && subcategory) {
       previousCategory.value = currentCategory.value
       previousSubCategory.value = currentSubCategory.value
       currentCategory.value = category
@@ -52,10 +58,11 @@ export const useCategoryStore = defineStore('category', () => {
      * Update the CategoryState by looking at the currentCategory only
      */
     const currentCategoryKey = categoryMapper[currentCategory.value as keyof typeof categoryMapper]
-    const previousCategoryKey = categoryMapper[previousCategory.value as keyof typeof categoryMapper]
+    const previousCategoryKey =
+      categoryMapper[previousCategory.value as keyof typeof categoryMapper]
     if (previousCategoryKey != currentCategoryKey) {
-      categoryState.value[previousCategoryKey] = "completed"
-      categoryState.value[currentCategoryKey] = "doing"
+      categoryState.value[previousCategoryKey] = 'completed'
+      categoryState.value[currentCategoryKey] = 'doing'
       sessionStorage.setItem('categoryState', JSON.stringify(categoryState.value))
     }
   }
@@ -65,10 +72,11 @@ export const useCategoryStore = defineStore('category', () => {
      * Update the CategoryState by looking at the currentCategory only
      */
     const currentCategoryKey = categoryMapper[currentCategory.value as keyof typeof categoryMapper]
-    const previousCategoryKey = categoryMapper[previousCategory.value as keyof typeof categoryMapper]
+    const previousCategoryKey =
+      categoryMapper[previousCategory.value as keyof typeof categoryMapper]
     if (previousCategoryKey != currentCategoryKey) {
-      categoryState.value[currentCategoryKey] = "incomplete"
-      categoryState.value[previousCategoryKey] = "doing"
+      categoryState.value[currentCategoryKey] = 'incomplete'
+      categoryState.value[previousCategoryKey] = 'doing'
       sessionStorage.setItem('categoryState', JSON.stringify(categoryState.value))
     }
   }
@@ -79,27 +87,27 @@ export const useCategoryStore = defineStore('category', () => {
      */
     // Categories section
     revertCategoryState()
-    if(categoryTrace.value.length - 1 > 0){
+    if (categoryTrace.value.length - 1 > 0) {
       currentCategory.value = categoryTrace.value[categoryTrace.value.length - 1]
-    }else{
+    } else {
       currentCategory.value = startCategory
     }
     categoryTrace.value.pop()
 
-    if(categoryTrace.value.length - 1 > 0) {
+    if (categoryTrace.value.length - 1 > 0) {
       previousCategory.value = categoryTrace.value[categoryTrace.value.length - 1]
     } else {
       previousCategory.value = startCategory
     }
     // Subcategories section
-    if(subCategoryTrace.value.length - 1 > 0){
+    if (subCategoryTrace.value.length - 1 > 0) {
       currentSubCategory.value = subCategoryTrace.value[subCategoryTrace.value.length - 1]
-    }else{
+    } else {
       currentSubCategory.value = startSubCategory
     }
     subCategoryTrace.value.pop()
 
-    if(subCategoryTrace.value.length - 1 > 0) {
+    if (subCategoryTrace.value.length - 1 > 0) {
       previousSubCategory.value = subCategoryTrace.value[subCategoryTrace.value.length - 1]
     } else {
       previousSubCategory.value = startSubCategory
