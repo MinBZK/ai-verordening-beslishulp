@@ -113,7 +113,7 @@ questions:
 
       <strong>Voorbeelden </strong><br>
       Technieken die sowieso onder de definitie vallen:<br>
-      -	Supervised learning, waarbij een AI-systeem leert van gelbalede data en input gekoppeld is aan de juiste output.<br>
+      -	Supervised learning, waarbij een AI-systeem leert van gelabelde data en input gekoppeld is aan de juiste output.<br>
       -	Unsupervised learning, waarbij een AI-systeem leert van data dat niet gelabeld is.<br>
       -	Self-supervised learning, een sub-categorie van unsupervised learning, waarbij een AI-systeem leert van data dat niet gelabeld is en eigen data gebruikt om labels te creëren.<br>
       -	Reinforcement learning, waarbij een AI-systeem patronen in data leert de herkennen met behulp van een beloningsfunctie.<br>
