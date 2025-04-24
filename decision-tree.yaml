@@ -109,7 +109,30 @@ questions:
     question: "Is jouw (beoogde) toepassing een AI-systeem?"
     explanation: "
       Een AI-systeem is een machine-gebaseerd systeem dat autonoom werkt, zichzelf kan aanpassen na inzet, en output levert zoals voorspellingen, inhoud, aanbevelingen of beslissingen. Deze output kan fysieke of virtuele omgevingen beïnvloeden. AI-systemen gebruiken inferentie, waarbij modellen of algoritmen worden afgeleid uit data, en combineren technieken als machinaal leren, logica en kennisrepresentatie. <br><br>
-      <strong>Let op: </strong>  Voor een AI-model voor algemene doeleinden geldt een specifieke definitie. <br><br>
+      <strong>Let op: </strong>  Voor een AI-model voor algemene doeleinden geldt een specifieke definitie.<br>
+
+      <strong>Voorbeelden </strong><br>
+      Technieken die sowieso onder de definitie vallen:<br>
+      -	Supervised learning, waarbij een AI-systeem leert van gelbalede data en input gekoppeld is aan de juiste output.<br>
+      -	Unsupervised learning, waarbij een AI-systeem leert van data dat niet gelabeld is.<br>
+      -	Self-supervised learning, een sub-categorie van unsupervised learning, waarbij een AI-systeem leert van data dat niet gelabeld is en eigen data gebruikt om labels te creëren.<br>
+      -	Reinforcement learning, waarbij een AI-systeem patronen in data leert de herkennen met behulp van een beloningsfunctie.<br>
+      -	Deep learning, een sub-categorie van machine learning, waarbij een AI-systeem gebruik maakt van neurale netwerken (gelaagde architecturen) om representaties te leren.<br>
+      -	Logica- en kennis-gebaseerde technieken, waarbij een AI-systeem op basis van kennis van menselijke experts (feiten, regels, relaties in data, etc.) kan redeneren of modelleren.<br>
+
+      Technieken die sowieso <strong>niet</strong> onder de definitie vallen:<br>
+      -	Een systeem dat op basis van bestaande beleidsregels beslissingen maakt en logisch kan redeneren. Hierbij is er geen sprake van inferentie.<br>
+      -	Standaard gegevensverwerking, waarbij een systeem op-voorhand-bepaalde regels volgt om een taak uit te voeren zonder dat er sprake is van logisch redeneren of modelleren.<br>
+      -	Een systeem dat alleen bestemd is voor beschrijvende statistiek, hypothese testen en visualisatie.<br>
+      -	Een systeem dat gebruik maakt van klassieke heuristiek technieken, zoals op-regel-gebaseerde systemen, patroonherkenning of trial-and-error strategieën.<br>
+
+      Mogelijke uitkomsten van een AI-systeem:<br>
+      -	Een ingeschatte score, rangschikking of kans.<br>
+      -	Een ingeschat label of classificatie zoals ja/nee, hoog/laag of een indeling in groepen.<br>
+      -	Bijvoorbeeld ten behoeve van routering, communicatiecampagnes of risicoclassificatie.<br>
+      -	Content, zoals geschreven tekst, video, audio of afbeeldingen.<br>
+      -	Objectherkenning, gezichtsherkenning of stemherkenning.<br>
+
       Ben je niet zeker of jouw (beoogde) toepassing onder deze definitie valt? Klik dan op 'Ik weet het niet' en beantwoord maximaal drie aanvullende vragen om het te achterhalen. Tot er verdere duiding vanuit de EU komt over de definitie van een AI-systeem, hanteren we deze vragen."
     category: van_toepassing
     subcategory: "AI-systeem"
