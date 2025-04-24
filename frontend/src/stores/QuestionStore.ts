@@ -1,6 +1,6 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
-import type {UserDecision} from "@/models/DecisionTree.ts";
+import type { UserDecision } from '@/models/DecisionTree.ts'
 
 export const useQuestionStore = defineStore('question', () => {
   const initialLabelsBySubCategoryNTB = `{
@@ -18,7 +18,9 @@ export const useQuestionStore = defineStore('question', () => {
   const initialAnswers = JSON.parse(sessionStorage.getItem('answers') ?? '[]')
   const initialUserAnswers = JSON.parse(sessionStorage.getItem('userDecisionPath') ?? '[]')
   const initialLabels = JSON.parse(sessionStorage.getItem('labels') ?? '{}')
-  const initialLabelsBySubCategory = JSON.parse(sessionStorage.getItem('labelsbysubcategory') ?? initialLabelsBySubCategoryNTB)
+  const initialLabelsBySubCategory = JSON.parse(
+    sessionStorage.getItem('labelsbysubcategory') ?? initialLabelsBySubCategoryNTB
+  )
   const initialQuestionId = sessionStorage.getItem('currentquestion') ?? '1.1'
   const initialConclusionId = sessionStorage.getItem('currentconclusion') ?? ''
 
@@ -28,7 +30,7 @@ export const useQuestionStore = defineStore('question', () => {
   const answers = ref(initialAnswers)
   const labels = ref(initialLabels)
   const userDecisionPath = ref(initialUserAnswers)
-  const LabelsBySubCategory =  ref(initialLabelsBySubCategory)
+  const LabelsBySubCategory = ref(initialLabelsBySubCategory)
 
   function addUserDecisionPath(userDecision: UserDecision) {
     userDecisionPath.value.push(userDecision)
@@ -50,7 +52,6 @@ export const useQuestionStore = defineStore('question', () => {
     return LabelsBySubCategory.value
   }
 
-
   function getJsonLabels() {
     const label_dict = JSON.parse(sessionStorage.getItem('labels') ?? '{}')
     const label_list = Object.values(label_dict).flat()
@@ -67,7 +68,10 @@ export const useQuestionStore = defineStore('question', () => {
 
   function addLabelBySubCategory(label: string, subcategory: string | undefined) {
     if (subcategory) {
-      if (JSON.stringify(LabelsBySubCategory.value[subcategory]) === JSON.stringify(['nader te bepalen'])) {
+      if (
+        JSON.stringify(LabelsBySubCategory.value[subcategory]) ===
+        JSON.stringify(['nader te bepalen'])
+      ) {
         LabelsBySubCategory.value[subcategory] = []
       }
       LabelsBySubCategory.value[subcategory].push(label)
@@ -94,7 +98,9 @@ export const useQuestionStore = defineStore('question', () => {
      * the back button has been clicked at the conclusion of the decision tree.
      */
     for (let key in LabelsBySubCategory.value) {
-      if (JSON.stringify(LabelsBySubCategory.value[key]) === JSON.stringify(['niet van toepassing'])) {
+      if (
+        JSON.stringify(LabelsBySubCategory.value[key]) === JSON.stringify(['niet van toepassing'])
+      ) {
         LabelsBySubCategory.value[key] = ['nader te bepalen']
       }
     }
@@ -119,7 +125,7 @@ export const useQuestionStore = defineStore('question', () => {
     if (labels.value[QuestionId.value]) {
       const questionLabels: string[] = labels.value[QuestionId.value]
 
-      questionLabels.forEach(label => {
+      questionLabels.forEach((label) => {
         const labelIndex = LabelsBySubCategory.value[previousSubCategory].indexOf(label)
         if (labelIndex !== -1) {
           LabelsBySubCategory.value[previousSubCategory].splice(labelIndex, 1)
@@ -167,6 +173,7 @@ export const useQuestionStore = defineStore('question', () => {
     ConclusionId,
     answers,
     LabelsBySubCategory,
+    userDecisionPath,
     getLabelsBySubCategory,
     setQuestionId,
     setConclusionId,
