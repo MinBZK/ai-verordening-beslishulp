@@ -46,10 +46,16 @@ const emit = defineEmits(['acceptDisclaimer'])
                       class="rvo-link" href="mailto:ai-verordening@minbzk.nl">
                       ai-verordening@minbzk.nl</a>.
                   </li>
+                  <li>
+                    Aan het einde van de beslissingshulp kan je de resultaten exporteren in een rapport.
+                    Eventuele toelichtingen die je hebt toegevoegd, worden hierin opgenomen.
+                    Dit helpt om extra informatie of context vast te leggen bij je keuzes.
+                  </li>
                 </ul>
+                <br>
                 <p class="utrecht-paragraph">Om je te helpen bij het beantwoorden van de vragen, zijn relevante
                   overwegingen / artikelen / bijlagen
-                  van de AI-verordening gelinkt per vraag. Definities van termen worden laten zien als je met je muis
+                  van de AI-verordening gelinkt per vraag. Definities van termen worden getoond als je met je muis
                   eroverheen gaat en zijn terug te vinden op het
                   <a class="rvo-link" href="https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/?h=definitie" target="_blank">
                       Algoritmekader.
