@@ -137,6 +137,8 @@ questions:
     category: van_toepassing
     subcategory: "AI-systeem"
     sources:
+      - source: Algorithm Audit AI Implementatie tool
+        url: https://algorithmaudit.eu/technical-tools/implementation-tool/
       - source: Artikel 3 - Definities
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2093-1-1
       - source: Overweging 12 - Begrip "AI-systeem"
