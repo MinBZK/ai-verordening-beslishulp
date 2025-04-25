@@ -47,7 +47,7 @@ const emit = defineEmits(['acceptDisclaimer'])
                       ai-verordening@minbzk.nl</a>.
                   </li>
                   <li>
-                    Aan het einde van de beslissingshulp kan je de resultaten exporteren in een rapport.
+                    Aan het einde van de beslishulp kan je de resultaten exporteren in een rapport.
                     Eventuele toelichtingen die je hebt toegevoegd, worden hierin opgenomen.
                     Dit helpt om extra informatie of context vast te leggen bij je keuzes.
                   </li>
