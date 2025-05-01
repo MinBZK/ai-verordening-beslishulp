@@ -50,16 +50,17 @@ const emit = defineEmits(['acceptDisclaimer'])
                     Eventuele toelichtingen die je hebt toegevoegd, worden hierin opgenomen.
                     Dit helpt om extra informatie of context vast te leggen bij je keuzes.
                   </li>
+                  <li>
+                    Om je te helpen bij het beantwoorden van de vragen, zijn relevante
+                    overwegingen / artikelen / bijlagen
+                    van de AI-verordening gelinkt per vraag. Definities van termen worden getoond als je met je muis
+                    eroverheen gaat en zijn terug te vinden op het
+                    <a class="rvo-link" href="https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/?h=definitie" target="_blank">
+                      Algoritmekader.
+                    </a>
+                  </li>
                 </ul>
                 <br>
-                <p class="utrecht-paragraph">Om je te helpen bij het beantwoorden van de vragen, zijn relevante
-                  overwegingen / artikelen / bijlagen
-                  van de AI-verordening gelinkt per vraag. Definities van termen worden getoond als je met je muis
-                  eroverheen gaat en zijn terug te vinden op het
-                  <a class="rvo-link" href="https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/?h=definitie" target="_blank">
-                      Algoritmekader.
-                  </a>
-                  </p>
               </fieldset>
             </div>
           </div>
@@ -70,16 +71,6 @@ const emit = defineEmits(['acceptDisclaimer'])
             </button>
           </div>
         </div>
-        <div class="py-5 px-5">
-          <button
-            @click="$emit('acceptDisclaimer')"
-            type="button"
-            class="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
-          >
-            Akkoord en begin met de beslishulp
-          </button>
-        </div>
       </div>
-    </div>
   </main>
 </template>
