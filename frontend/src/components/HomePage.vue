@@ -2,7 +2,6 @@
 import Header from '@/components/Header.vue'
 
 const emit = defineEmits(['acceptDisclaimer'])
-
 </script>
 
 <template>
@@ -71,8 +70,16 @@ const emit = defineEmits(['acceptDisclaimer'])
             </button>
           </div>
         </div>
-
+        <div class="py-5 px-5">
+          <button
+            @click="$emit('acceptDisclaimer')"
+            type="button"
+            class="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
+          >
+            Akkoord en begin met de beslishulp
+          </button>
+        </div>
       </div>
-
-    </main>
+    </div>
+  </main>
 </template>

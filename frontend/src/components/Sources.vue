@@ -1,6 +1,6 @@
 <script setup lang="ts">
 interface Props {
-  'sources': { source: string; url: string | undefined; }[] | undefined
+  sources: { source: string; url: string | undefined }[] | undefined
 }
 
 defineProps<Props>()
@@ -9,7 +9,7 @@ defineProps<Props>()
 <template>
   <div>
     <ul>
-      <li v-for='(source, index) in sources' :key="index" class="text-sm flex items-center">
+      <li v-for="(source, index) in sources" :key="index" class="text-sm flex items-center">
         <!-- When source.url exists -->
         <span
           class="utrecht-icon rvo-icon rvo-icon-info rvo-icon--xl rvo-status-icon-info"
@@ -24,9 +24,9 @@ defineProps<Props>()
 
         <!-- When source.url does not exist -->
         <span v-else class="rvo-link--no-underline">
-            {{ source.source }}
-            <slot />
-          </span>
+          {{ source.source }}
+          <slot />
+        </span>
       </li>
     </ul>
   </div>

@@ -39,7 +39,8 @@ export const Question = t.type({
   explanation: t.string,
   sources: t.union([t.array(Source), t.undefined]),
   description: t.union([t.string, t.undefined]),
-  answers: t.array(Answer)
+  answers: t.array(Answer),
+  category: t.string
 })
 export type Question = t.TypeOf<typeof Question>
 

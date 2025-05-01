@@ -1,7 +1,14 @@
 <script setup lang="ts">
 import jexl from 'jexl'
 import { computed, onMounted, ref } from 'vue'
-import {Answer, Conclusions, DecisionTree, Questions, Redirect, UserDecision} from '@/models/DecisionTree'
+import {
+  Answer,
+  Conclusions,
+  DecisionTree,
+  Questions,
+  Redirect,
+  UserDecision
+} from '@/models/DecisionTree'
 import { Categories, Category } from '@/models/Categories'
 import { storeToRefs } from 'pinia'
 import { fold } from 'fp-ts/lib/Either'
@@ -19,13 +26,13 @@ import DefaultError from '@/components/DefaultError.vue'
 import HomePage from '@/components/HomePage.vue'
 import Header from '@/components/Header.vue'
 import ProgressTracker from '@/components/ProgressTracker.vue'
-import {UserDecisionsService} from "@/services/userDecisionsService.ts";
+import { UserDecisionsService } from '@/services/userDecisionsService.ts'
 
 const questionStore = useQuestionStore()
 const { AcceptedDisclaimer, QuestionId, ConclusionId } = storeToRefs(questionStore)
 
 const categoryStore = useCategoryStore()
-const { categoryState, previousSubCategory} = storeToRefs(categoryStore)
+const { categoryState, previousSubCategory } = storeToRefs(categoryStore)
 
 const data_questions = ref<Questions>([])
 const data_conclusions = ref<Conclusions>([])
@@ -35,7 +42,7 @@ let conclusionId = ConclusionId
 const isLoading = ref(true)
 const error = ref<string | null>(null)
 
-const userDecisions = UserDecisionsService();
+const userDecisions = UserDecisionsService()
 
 onMounted(async () => {
   // Read in the Data
@@ -78,7 +85,6 @@ onMounted(async () => {
         data_categories.value = validData
       }
     )(validationResultCategories)
-
   } catch (e: unknown) {
     if (e instanceof Error) {
       error.value = e.message
@@ -96,13 +102,17 @@ function handleVersions(question_or_conclusion_id: string) {
   category = data_categories.value.find((q) => q.questionId === versions[0])
   if (versions.length >= 2) {
     // Only overwrite if we find something here
-    let category_overwrite = data_categories.value.find((q) => q.questionId === versions[0] + '.' + versions[1])
+    let category_overwrite = data_categories.value.find(
+      (q) => q.questionId === versions[0] + '.' + versions[1]
+    )
     if (category_overwrite != undefined) {
       category = category_overwrite
     }
   }
   if (versions.length >= 3) {
-    let category_overwrite = data_categories.value.find((q) => q.questionId === versions[0] + '.' + versions[1] + '.' + versions[2])
+    let category_overwrite = data_categories.value.find(
+      (q) => q.questionId === versions[0] + '.' + versions[1] + '.' + versions[2]
+    )
     if (category_overwrite != undefined) {
       category = category_overwrite
     }
@@ -132,7 +142,10 @@ function handleNextStep(object: Answer | Redirect) {
   if (object.nextConclusionId) {
     questionStore.setConclusionId(String(object.nextConclusionId))
   }
-  categoryStore.updateCurrentCategory(currentCategory.value?.category, currentCategory.value?.subcategory)
+  categoryStore.updateCurrentCategory(
+    currentCategory.value?.category,
+    currentCategory.value?.subcategory
+  )
   // ugly hack, we do not know for sure when the DOM is fully updated with the new situation, this works
   setTimeout(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -145,8 +158,8 @@ async function givenAnswer(answer: Answer) {
     question: currentQuestion.value?.question,
     answer: answer.answer,
     explanation: answer.explanation
-  };
-  userDecisions.updatePreviousUserDecision(decision);
+  }
+  userDecisions.updatePreviousUserDecision(decision)
   questionStore.addUserDecisionPath(decision)
   questionStore.addAnswer(questionId.value)
   if (answer.labels) {
@@ -173,6 +186,7 @@ async function givenAnswer(answer: Answer) {
 function reset() {
   questionStore.reset()
   categoryStore.reset()
+  userDecisions.reset()
 }
 
 function back() {
@@ -189,7 +203,6 @@ function backButtonConclusion() {
 function acceptDisclaimer() {
   questionStore.acceptDisclaimer()
 }
-
 </script>
 
 <template>
@@ -200,10 +213,12 @@ function acceptDisclaimer() {
     <Header
       :questionId="currentQuestion?.questionId"
       :disclaimer-screen="AcceptedDisclaimer"
-      @reset-event="reset" />
+      @reset-event="reset"
+    />
     <div
       id="progress-question-mobile"
-      class="rvo-layout-column rvo-max-width-layout rvo-layout-align-items-start rvo-max-width-layout-inline-padding--sm">
+      class="rvo-layout-column rvo-max-width-layout rvo-layout-align-items-start rvo-max-width-layout-inline-padding--sm"
+    >
       <ProgressTracker
         v-if="categoryState && !findConclusion"
         :ai_act_applicable_state="categoryState.ai_act_applicable_state"
@@ -221,17 +236,19 @@ function acceptDisclaimer() {
           :labels="questionStore.getLabelsBySubCategory()"
           @back="backButtonConclusion"
         />
-        <Question v-if="currentQuestion && currentCategory"
-                  :question="currentQuestion.question"
-                  :explanation="currentQuestion.explanation"
-                  :id="currentQuestion.questionId"
-                  :sources="currentQuestion.sources"
-                  :answers="currentQuestion.answers"
-                  :category="currentCategory.category"
-                  :labels="questionStore.getLabelsBySubCategory()"
-                  :userDecisions=userDecisions
-                  @answered="givenAnswer"
-                  @back="back"
+        <Question
+          v-if="currentQuestion && currentCategory"
+          :question="currentQuestion.question"
+          :explanation="currentQuestion.explanation"
+          :id="currentQuestion.questionId"
+          :sources="currentQuestion.sources"
+          :answers="currentQuestion.answers"
+          :question_category="currentQuestion.category"
+          :category="currentCategory.category"
+          :labels="questionStore.getLabelsBySubCategory()"
+          :userDecisions="userDecisions"
+          @answered="givenAnswer"
+          @back="back"
         />
       </div>
     </div>

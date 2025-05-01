@@ -5,12 +5,12 @@ import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 import path from 'node:path';
 import type { Plugin } from 'vite';
 import tailwindcss from '@tailwindcss/vite'
-import { resolve } from 'path'
 
 const SVG_ALLOW_LIST = [
   'logo.svg',
   'info.svg',
   'terug.svg',
+  'downloaden.svg',
   'delta-omhoog.svg',
   'delta-omlaag.svg',
   'bewerken.svg',
@@ -31,10 +31,7 @@ function createSvgFilterPlugin(): Plugin {
           svgFileName === allowedSvg || svgFileName.includes(allowedSvg)
         );
         if (!isAllowed) {
-          console.info(`Filtering disallowed SVG import: ${svgFileName}`);
           return `\0empty-svg:${id}`;
-        } else {
-          console.info(`Using SVG import: ${svgFileName}`);
         }
       }
       return null;
@@ -67,11 +64,8 @@ function createSvgFilterPlugin(): Plugin {
         );
 
         if (!isAllowed) {
-          console.info(`Filtering CSS reference to disallowed SVG: ${svgFileName}`);
           newCode = newCode.replace(fullUrl, `url('${EMPTY_SVG}')`);
           modified = true;
-        } else {
-          console.info(`Using SVG import: ${svgFileName}`);
         }
       }
       return modified ? newCode : null;
@@ -93,10 +87,7 @@ function createSvgOutputFilter(): Plugin {
               svgFileName === allowedSvg || svgFileName.includes(allowedSvg)
             );
             if (!isAllowed) {
-              console.info(`Removing SVG from final output: ${svgFileName}`);
               delete bundle[fileName];
-            } else {
-              console.info(`Using SVG import: ${svgFileName}`);
             }
           }
         }
@@ -107,6 +98,7 @@ function createSvgOutputFilter(): Plugin {
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  logLevel: 'info',
   plugins: [
     createSvgFilterPlugin(),
     vue(),
@@ -128,10 +120,7 @@ export default defineConfig({
               svgFileName === allowedSvg || svgFileName.includes(allowedSvg)
             );
             if (!isAllowed) {
-              // console.info(`Excluding SVG from chunks: ${svgFileName}`);
               return 'empty-svgs';
-            } else {
-              console.info(`Using SVG import: ${svgFileName}`);
             }
           }
           return null;

@@ -28,6 +28,17 @@ tekst worden voorzien en 'onclick' stuurt dit een javascript event 'beslishulp-d
 Als de beslishulp in een eigen website wordt gebruikt, is de kans groot dat de CSS gaat mengen en dit
 ongewenste effecten heeft. Overweeg een iframe te gebruiken om dit te voorkomen, zie ook het [iframe voorbeeld](iframe-voorbeeld.html). Merk op dat het javascript event hier een 'message' is i.v.m. cross-origin communication.
 
+## Configuratie opties
+
+Configuratie opties kunnen als URL parameter worden meegegeven, of als attribuut bij de 'script' tag. Bij het gebruik in de script tag, moet de parameter de prefix _data-_ krijgen.
+
+| Parameter            | Standaard waarde                  | Toelichting                                                                                                      |
+|----------------------|-----------------------------------|------------------------------------------------------------------------------------------------------------------|
+| showCloseOnEnd       | false                             | Toont een knop bij de conlusie dat een javascript event/bericht stuurt. Zie ook het [voorbeeld](voorbeeld.html). |
+| showCloseOnEndMsg    | Resultaten overnemen en afsluiten | De tekst die getoond wordt in bovenstaande knop.                                                                 |
+| showExportPDF        | true                              | Toont een knop bij de conclusie waarmee een PDF export gemaakt kan worden.                                       |
+| showExplanationField | true                              | Toont een invoerveld voor een toelichting bij elke vraag.                                                        |
+
 # AI-Verordening-Beslishulp
 
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/MinBZK/ai-verordening-beslishulp/main.svg?badge_token=d3dKEK97RwC1II15_W-nng)](https://results.pre-commit.ci/latest/github/MinBZK/ai-verordening-beslishulp/main?badge_token=d3dKEK97RwC1II15_W-nng)

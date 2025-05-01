@@ -17,9 +17,7 @@ import { ExclamationTriangleIcon } from '@heroicons/vue/24/outline'
           <ExclamationTriangleIcon class="h-6 w-6 text-red-600" aria-hidden="true" />
         </div>
         <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-          <div as="h3" class="text-base font-semibold leading-6 text-gray-900"
-            >Error</div
-          >
+          <div as="h3" class="text-base font-semibold leading-6 text-gray-900">Error</div>
           <div class="mt-2">
             <p class="text-sm text-gray-500">
               {{ error }}
