@@ -109,9 +109,9 @@ questions:
     question: "Is jouw (beoogde) toepassing een AI-systeem?"
     explanation: "
       Een AI-systeem is een machine-gebaseerd systeem dat autonoom werkt, zichzelf kan aanpassen na inzet, en output levert zoals voorspellingen, inhoud, aanbevelingen of beslissingen. Deze output kan fysieke of virtuele omgevingen beïnvloeden. AI-systemen gebruiken inferentie, waarbij modellen of algoritmen worden afgeleid uit data, en combineren technieken als machinaal leren, logica en kennisrepresentatie. <br><br>
-      <strong>Let op: </strong>  Voor een AI-model voor algemene doeleinden geldt een specifieke definitie.<br>
+      <strong>Let op:</strong> Voor een AI-model voor algemene doeleinden geldt een specifieke definitie.<br>
 
-      <strong>Voorbeelden </strong><br>
+      <strong>Voorbeelden</strong><br>
       Technieken die sowieso onder de definitie vallen:<br>
       -	Supervised learning, waarbij een AI-systeem leert van gelabelde data en input gekoppeld is aan de juiste output.<br>
       -	Unsupervised learning, waarbij een AI-systeem leert van data dat niet gelabeld is.<br>
