@@ -23,8 +23,11 @@ const emit = defineEmits(['acceptDisclaimer'])
               >
                 <p class="utrecht-paragraph">Met deze beslishulp kun je nalopen of de AI-verordening geldt
                   voor een toepassing die jouw overheidsorganisatie gebruikt. En aan welke vereisten je dan
-                  moet voldoen voor deze toepassing. Let op: je moet dus voor elke toepassing apart nalopen
-                  of de AI-verordening geldt en wat dat betekent. Verder zijn de volgende zaken van belang:</p>
+                  moet voldoen voor deze toepassing. Aan het einde van de beslishulp kan je de resultaten
+                  exporteren in een rapport. Eventuele toelichtingen om context vast te leggen bij een keuze,
+                  worden in dit rapport opgenomen.</p>
+                 <p class="utrecht-paragraph">Let op: je moet dus voor elke toepassing apart nalopen of de
+                 AI-verordening geldt en wat dat betekent. Verder zijn de volgende zaken van belang:</p>
                 <ul class="rvo-ul rvo-ul--no-margin rvo-ul--no-padding utrecht-unordered-list">
                   <li>Deze beslishulp is een betaversie: de informatie is niet compleet en er kunnen fouten in staan.
                     Kom je iets tegen? Mail naar:
