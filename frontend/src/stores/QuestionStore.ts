@@ -4,7 +4,7 @@ import type { UserDecision } from '@/models/DecisionTree.ts'
 
 export const useQuestionStore = defineStore('question', () => {
   const initialLabelsBySubCategoryNTB = `{
-    "Rol": ["nader te bepalen"],
+    "Verantwoordelijkheid": ["nader te bepalen"],
     "Operationeel": ["nader te bepalen"],
     "Soort toepassing": ["nader te bepalen"],
     "Risicogroep": ["nader te bepalen"],
