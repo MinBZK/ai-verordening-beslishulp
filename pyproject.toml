@@ -1,0 +1,17 @@
+# Ruff settings: https://docs.astral.sh/ruff/configuration/
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+src = ["script"]
+
+[tool.ruff.format]
+line-ending = "lf"
+
+[tool.ruff.lint]
+select = ["I", "SIM", "B", "UP", "F", "E", "S", "C90", "DTZ", "LOG", "PIE", "PT", "ERA", "W", "C", "TRY", "RUF"]
+fixable = ["ALL"]
+task-tags = ["TODO"]
+ignore = ["TRY003", "ANN101"]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 12
