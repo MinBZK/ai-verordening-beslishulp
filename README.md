@@ -32,12 +32,12 @@ ongewenste effecten heeft. Overweeg een iframe te gebruiken om dit te voorkomen,
 
 Configuratie opties kunnen als URL parameter worden meegegeven, of als attribuut bij de 'script' tag. Bij het gebruik in de script tag, moet de parameter de prefix _data-_ krijgen.
 
-| Parameter            | Standaard waarde                  | Toelichting                                                                                                      |
+| Parameter            | Standaard waarde                  | Opmerking                                                                                                      |
 |----------------------|-----------------------------------|------------------------------------------------------------------------------------------------------------------|
 | showCloseOnEnd       | false                             | Toont een knop bij de conlusie dat een javascript event/bericht stuurt. Zie ook het [voorbeeld](voorbeeld.html). |
 | showCloseOnEndMsg    | Resultaten overnemen en afsluiten | De tekst die getoond wordt in bovenstaande knop.                                                                 |
 | showExportPDF        | true                              | Toont een knop bij de conclusie waarmee een PDF export gemaakt kan worden.                                       |
-| showExplanationField | true                              | Toont een invoerveld voor een toelichting bij elke vraag.                                                        |
+| showExplanationField | true                              | Toont een invoerveld voor een opmerking bij elke vraag.                                                        |
 
 # AI-Verordening-Beslishulp
 
