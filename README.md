@@ -6,7 +6,7 @@
 - De informatie is niet compleet en er kunnen fouten in staan.
 - Je bent zelf verantwoordelijk voor de informatie die je gebruikt.
 - Overleg de uitkomsten van de beslishulp met een expert.
-- In de beslishulp staat alleen informatie over de rollen van de overheid als [aanbieder](https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst) en als [gebruiksverantwoordelijke](https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst).
+- In de beslishulp staat alleen informatie over de rollen van de overheid als [aanbieder](https://minbzk.github.io/Algoritmekader/soorten-algoritmes-en-ai/definities/#begrippenlijst) en als [gebruiksverantwoordelijke](https://minbzk.github.io/Algoritmekader/soorten-algoritmes-en-ai/definities/#begrippenlijst).
 
 Voor vragen of opmerkingen over de beslishulp mail je naar: [ai-verordening@minbzk.nl](mailto::ai-verordening@minbzk.nl).
 
@@ -52,7 +52,7 @@ Het project omvat de volgende 3 onderdelen:
 3. De definities vanuit het Algoritmekader [definitions.yaml](definitions.yaml)
 2. Een frontend voor de visualisatie van de beslishulp: [frontend](frontend/)
 
-De Kubernetes deployment code staat bij  [infra](https://github.com/MinBZK/ai-validation-infra/apps/ai-verordening-beslishulp)
+De Kubernetes deployment code staat bij  [infra](https://github.com/MinBZK/ai-validation-infra/tree/main/apps/ai-verordening-beslishulp/sandbox)
 
 Door deze beslishulp te doorlopen, krijgt uw organisatie inzicht in de volgende vragen:
 
@@ -147,7 +147,7 @@ Source:                      # definitie van een bronverwijzing
   url: string                # optioneel: URL naar de bron
 ```
 
-Naast de beslishulp is er ook een [definitions.yaml](definitions.yaml) bestand. Dit bestand bevat alle relevante definities die de beslishulp ondersteunen en extra uitleg nodig hebben, gebaseerd op de [Begrippenlijst van het algoritmekader](https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst). Het verwachte schema van velden is gedocumenteerd in [schema_definitions.json](schemas/schema_definitions.json).
+Naast de beslishulp is er ook een [definitions.yaml](definitions.yaml) bestand. Dit bestand bevat alle relevante definities die de beslishulp ondersteunen en extra uitleg nodig hebben, gebaseerd op de [Begrippenlijst van het algoritmekader](https://minbzk.github.io/Algoritmekader/soorten-algoritmes-en-ai/definities/#begrippenlijst). Het verwachte schema van velden is gedocumenteerd in [schema_definitions.json](schemas/schema_definitions.json).
 
 ## Beslishulp diagram
 
