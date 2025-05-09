@@ -13,7 +13,7 @@ questions:
       - source: Handreiking Algoritmeregister
         url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
       - source: Begrippenlijst Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
+        url: https://minbzk.github.io/Algoritmekader/soorten-algoritmes-en-ai/definities/#begrippenlijst
     answers:
       - answer: Ja
         nextQuestionId: "1.2"
@@ -35,7 +35,7 @@ questions:
       - source: Artikel 3 - Definities
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2093-1-1
       - source: Begrippenlijst Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
+        url: https://minbzk.github.io/Algoritmekader/soorten-algoritmes-en-ai/definities/#begrippenlijst
     answers:
       - answer: We ontwikkelen enkel
         labels:
@@ -93,7 +93,7 @@ questions:
       - source: Overweging 177 - Aanpassingsperiode en uitzonderingen voor bestaande hoogrisico AI-systemen
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_177
       - source: Begrippenlijst Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
+        url: https://minbzk.github.io/Algoritmekader/soorten-algoritmes-en-ai/definities/#begrippenlijst
     answers:
       - answer: In gebruik
         labels:
@@ -150,7 +150,7 @@ questions:
       - source: Overweging 100 - Classificatie van AI-systemen met geïntegreerde AI-modellen voor algemene doeleinden
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_100
       - source: Begrippenlijst Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
+        url: https://minbzk.github.io/Algoritmekader/soorten-algoritmes-en-ai/definities/#begrippenlijst
     answers:
         - answer: Ja, het is een AI-systeem
           labels:
@@ -182,7 +182,7 @@ questions:
       - source: Overweging 100 - Classificatie van AI-systemen met geïntegreerde AI-modellen voor algemene doeleinden
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_100
       - source: Begrippenlijst Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
+        url: https://minbzk.github.io/Algoritmekader/soorten-algoritmes-en-ai/definities/#begrippenlijst
     answers:
       - answer: AI-systeem voor algemene doeleinden
         labels:
@@ -217,7 +217,7 @@ questions:
       - source: Artikel 2 - Toepassingsgebied
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e1978-1-1
       - source: Begrippenlijst Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
+        url: https://minbzk.github.io/Algoritmekader/soorten-algoritmes-en-ai/definities/#begrippenlijst
     answers:
       - answer: Ja
         labels:
@@ -363,7 +363,7 @@ questions:
       - source: Artikel 5 - Verboden AI
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2816-1-1
       - source: Begrippenlijst Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
+        url: https://minbzk.github.io/Algoritmekader/soorten-algoritmes-en-ai/definities/#begrippenlijst
     answers:
       - answer: Ja
         nextQuestionId: "2.2" #uitzondering verboden AI
@@ -386,7 +386,7 @@ questions:
       - source: Overweging 34 - Biometrische identificatie in openbare ruimten voor rechtshandhaving
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_34
       - source: Begrippenlijst Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
+        url: https://minbzk.github.io/Algoritmekader/soorten-algoritmes-en-ai/definities/#begrippenlijst
     answers:
       - answer: Ja
         redirects:
@@ -477,7 +477,7 @@ questions:
           - source: Overweging 49 - Veiligheidscomponent
             url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_49
           - source: Begrippenlijst Algoritmekader
-            url: https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/#begrippenlijst
+            url: https://minbzk.github.io/Algoritmekader/soorten-algoritmes-en-ai/definities/#begrippenlijst
     answers:
       - answer: Ja Sectie A van Bijlage I
         labels:

@@ -53,7 +53,7 @@ const emit = defineEmits(['acceptDisclaimer'])
                     overwegingen / artikelen / bijlagen
                     van de AI-verordening gelinkt per vraag. Definities van termen worden getoond als je met je muis
                     eroverheen gaat en zijn terug te vinden op het
-                    <a class="rvo-link" href="https://minbzk.github.io/Algoritmekader/overhetalgoritmekader/definities/?h=definitie" target="_blank">
+                    <a class="rvo-link" href="https://minbzk.github.io/Algoritmekader/soorten-algoritmes-en-ai/definities/#begrippenlijst" target="_blank">
                       Algoritmekader.
                     </a>
                   </li>
