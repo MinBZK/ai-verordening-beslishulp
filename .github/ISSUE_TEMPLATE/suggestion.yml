@@ -1,0 +1,32 @@
+name: Suggestie voor de AI-verordening beslishulp
+description: Help ons het AI-verordening beslishulp te verbeteren
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Suggestie voor de AI-verordening beslishulp
+        Help ons het AI-verordening beslishulp te verbeteren
+
+  - type: textarea
+    id: suggestie-beschrijving
+    attributes:
+      label: Beschrijf je suggestie
+      description: Omschrijving van je suggestie.
+      placeholder: Omschrijving.
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestie-motivatie
+    attributes:
+      label: Leg uit waarom dit een goede toevoeging is
+      description: Waarom is dit een goede toevoeging aan de AI-verordening beslishulp?
+      placeholder: Leg uit waarom dit een goede toevoeging is aan de AI-verordening beslishulp.
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        **Let op:** Zorg ervoor dat je een **Titel** invult voor de suggestie als de verzendknop uitgeschakeld is.
