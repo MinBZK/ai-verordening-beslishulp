@@ -14,6 +14,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Get latest release tag
+        id: get_latest_release
+        run: |
+          latest_tag=$(gh api repos/${{ github.repository }}/releases/latest --jq .tag_name)
+          echo "latest_tag=$latest_tag" >> "$GITHUB_OUTPUT"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Get GHCR package hash
         id: get_package_hash
         run: |
@@ -44,7 +52,7 @@ jobs:
       - name: Make changes to the file
         run: |
           sed -i 's/newTag: .*$/newTag: main@${{ steps.get_package_hash.outputs.container_id }}/g' apps/ai-verordening-beslishulp/sandbox/kustomization.yaml
-          sed -i 's|minbzk.github.io/version: .*$|minbzk.github.io/version: main|g' apps/ai-verordening-beslishulp/sandbox/kustomization.yaml
+          sed -i 's|minbzk.github.io/version: .*$|minbzk.github.io/version: ${{ steps.get_latest_release.outputs.latest_tag || 'main' }}|g' apps/ai-verordening-beslishulp/sandbox/kustomization.yaml
           git add apps/ai-verordening-beslishulp/sandbox/kustomization.yaml
 
       - name: show changes
@@ -52,13 +60,13 @@ jobs:
 
       - name: push changes
         run: |
-          git commit -m "Update ai-verordening-beslishulp sandbox tag ${{ steps.get_package_hash.outputs.container_id }}"
+          git commit -m "Update ai-verordening-beslishulp sandbox tag to ${{ steps.get_package_hash.outputs.tag_used }}@${{ steps.get_package_hash.outputs.container_id }}"
           git push --force-with-lease
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+
   deploy_github_pages:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-python@v5
