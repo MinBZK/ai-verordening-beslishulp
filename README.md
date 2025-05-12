@@ -6,7 +6,6 @@
 - De informatie is niet compleet en er kunnen fouten in staan.
 - Je bent zelf verantwoordelijk voor de informatie die je gebruikt.
 - Overleg de uitkomsten van de beslishulp met een expert.
-- In de beslishulp staat alleen informatie over de rollen van de overheid als [aanbieder](https://minbzk.github.io/Algoritmekader/soorten-algoritmes-en-ai/definities/#begrippenlijst) en als [gebruiksverantwoordelijke](https://minbzk.github.io/Algoritmekader/soorten-algoritmes-en-ai/definities/#begrippenlijst).
 
 Voor vragen of opmerkingen over de beslishulp mail je naar: [ai-verordening@minbzk.nl](mailto::ai-verordening@minbzk.nl).
 
@@ -81,7 +80,7 @@ Gezamenlijk zorgen de opgehaalde labels ervoor dat de toepassing binnen een bepa
 |                              |                              | geen hoog-risico AI              |
 |                              |                              | verboden AI                      |
 |                              |                              | uitzondering van toepassing       |
-|                              | Rol                          | aanbieder                        |
+|                              | Verantwoordelijkheid         | aanbieder                        |
 |                              |                              | gebruiksverantwoordelijke        |
 |                              |                              | importeur                        |
 |                              |                              | distributeur                     |

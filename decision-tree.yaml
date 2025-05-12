@@ -21,16 +21,16 @@ questions:
         labels:
           - "geen algoritme"
         nextConclusionId: "11.0"
-# Rol
+# Verantwoordelijkheid
   - questionId: "1.2"
     question: "Ontwikkelen jullie de toepassing in eigen beheer of is/wordt deze ontwikkeld door een andere partij?"
-    explanation: "Op basis van het antwoord op deze vraag zal je rol worden toegewezen: aanbieder, gebruiksverantwoordelijke, importeur en/of distributeur. <br><br>
-        Bij deze vraag is het belangrijk om de overweging te maken of een substantiële wijziging kan leiden tot een andere rolverdeling.
+    explanation: "Op basis van het antwoord op deze vraag zal je verantwoordelijkheid worden toegewezen: aanbieder, gebruiksverantwoordelijke, importeur en/of distributeur. <br><br>
+        Bij deze vraag is het belangrijk om de overweging te maken of een substantiële wijziging kan leiden tot een andere verantwoordelijkheid.
         Als je als gebruiker van een AI-systeem namelijk een substantiële wijziging uitvoert, word je aanbieder van een AI-systeem.
         Een substantiële wijziging wordt gedefinieerd als een verandering aan een AI-systeem dat niet is opgenomen in de initiële
         conformiteitsbeoordeling nadat het AI-systeem in de handel is gebracht of in gebruik is gesteld. Dit kan een wijziging zijn die leidt tot een aanpassing van het beoogde doel waarvoor een AI-systeem is beoordeeld."
     category: van_toepassing
-    subcategory: "Rol"
+    subcategory: "Verantwoordelijkheid"
     sources:
       - source: Artikel 3 - Definities
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2093-1-1
@@ -918,7 +918,7 @@ questions:
 
 ### Conclusies
 conclusions:
-## Conclusies voor geen rol (11)
+## Conclusies voor geen verantwoordelijkheid (11)
   - conclusionId: "11.0"
     conclusion: "Je hebt geantwoord dat er geen sprake is van een algoritme, hierdoor is de AI-verordening niet voor jou van toepassing. Op basis van je antwoorden is het niet nodig om door te gaan naar Stap 2 – bepalen risicogroep. "
     obligation: "Houd je aan bestaande wet- en regelgeving (bijv. AVG wanneer je persoonsgegevens verwerkt)."
