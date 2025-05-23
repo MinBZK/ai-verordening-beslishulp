@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "definitions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "term": {
+            "type": "string",
+            "description": "The term being defined."
+          },
+          "definition": {
+            "type": "string",
+            "description": "The definition of the term."
+          }
+        },
+        "required": ["term", "definition"],
+        "additionalProperties": false
+      , "minItems": 1}
+    }
+  },
+  "required": ["definitions"],
+  "additionalProperties": false
+}
