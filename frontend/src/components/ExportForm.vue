@@ -54,7 +54,7 @@ const handleBackdropClick = () => {
               <ul class="rvo-default-list">
                 <li>Het AI-verordening profiel</li>
                 <li>De geldende verplichtingen met bijbehorende bronnen</li>
-                <li>De gemaakte keuzes in de beslishulp (inclusief eventuele toelichtingen)</li>
+                <li>De gemaakte keuzes in de beslishulp (inclusief eventuele opmerkingen)</li>
               </ul>
               <p class="rvo-text--md --rvo-font-sans-serif-font-family">
                 Je kunt hieronder <b><i>optioneel</i></b> extra informatie toevoegen:
