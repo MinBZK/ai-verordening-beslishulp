@@ -1,8 +1,10 @@
 name: deploy
 
 on:
-  release:
-    types: [published]
+  workflow_run:
+    workflows: ["build"]
+    types: [completed]
+    branches: [main]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -16,6 +18,10 @@ env:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    # Only deploy if build was successful and it's a latest release
+    if: >
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.event == 'release'
     permissions:
       contents: read
     steps:
