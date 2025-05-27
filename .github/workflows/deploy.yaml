@@ -1,9 +1,8 @@
 name: deploy
 
 on:
-  push:
-    tags:
-      - 'v*'
+  release:
+    types: [published]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -32,10 +31,10 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Extract version from tag
+      - name: Extract version from release
         id: get_version
         run: |
-          VERSION=${GITHUB_REF#refs/tags/}
+          VERSION=${{ github.event.release.tag_name }}
           echo "VERSION=$VERSION" >> "$GITHUB_ENV"
           echo "Version: $VERSION"
 
@@ -52,7 +51,7 @@ jobs:
             echo "✅ Docker image exists: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}"
           else
             echo "❌ Docker image does not exist: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}"
-            echo "Please ensure the build workflow has successfully completed before tagging."
+            echo "Please ensure the build workflow has successfully completed before publishing the release."
             exit 1
           fi
 
