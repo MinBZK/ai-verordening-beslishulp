@@ -16,7 +16,7 @@ ptyprocess==0.7.0
 pure_eval==0.2.3
 Pygments==2.18.0
 PyYAML==6.0.2
-requests==2.32.3
+requests==2.32.4
 six==1.16.0
 stack-data==0.6.3
 traitlets==5.14.3
