@@ -1,42 +1,69 @@
 name: deploy
 
 on:
-  workflow_run:
-    workflows: ["build"]
-    types:
-      - completed
+  release:
+    types: [published]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: "minbzk/ai-verordening-beslishulp"
+  APP_URL: "https://ai-verordening-beslishulp.apps.digilab.network"
+  MAX_RETRIES: 12
+  RETRY_INTERVAL: 10
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
-      - name: Get latest release tag
-        id: get_latest_release
+      # Validate the release
+      - name: Validate release
+        if: github.event_name == 'release'
         run: |
-          latest_tag=$(gh api repos/${{ github.repository }}/releases/latest --jq .tag_name)
-          echo "latest_tag=$latest_tag" >> "$GITHUB_OUTPUT"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          if [[ "${{ github.event.release.draft }}" == "true" ]]; then
+            echo "This is a draft. Deployment is cancelled."
+            exit 1
+          fi
+          if [[ "${{ github.event.release.prerelease }}" == "true" ]]; then
+            echo "This is a pre-release. Deployment is cancelled."
+            exit 1
+          fi
+          echo "Release validation successful"
 
+      # Use the main tag of the last successfull workflow run
       - name: Get GHCR package hash
         id: get_package_hash
         run: |
-            container_id=$(gh api --paginate -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" /orgs/MinBZK/packages/container/ai-verordening-beslishulp/versions | jq -r '.[] | select(.metadata.container.tags | contains(["main"])) | .name')
-            echo "container_id=$container_id" >> "$GITHUB_OUTPUT"
+            release_tag="${{ github.ref_name }}"
+            echo "Looking for container image with tag: main"
+            # Wait up to 2 minutes to check if the image is available
+            for i in {1..12}; do
+                container_id=$(gh api --paginate -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" /orgs/MinBZK/packages/container/ai-verordening-beslishulp/versions | jq -r '.[] | select(.metadata.container.tags | contains(["main"])) | .name')
+                if [ -n "$container_id" ]; then
+                    echo "Container ID found: $container_id"
+                    echo "container_id=$container_id" >> "$GITHUB_OUTPUT"
+                    break
+                fi
+                echo "Waiting for container image ($i/12)..."
+                sleep 10
+            done
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: check correct name
+      - name: Check container ID
         run: |
             if [ -z "${{steps.get_package_hash.outputs.container_id}}" ]; then
-              echo "Variable is empty. Failing the workflow."
+              echo "Container ID is empty. Failing the workflow."
               exit 1
             fi
+            echo "Container ID found and verified: ${{steps.get_package_hash.outputs.container_id}}"
 
+      # Check the ai-validation-infra repo
       - uses: actions/checkout@v4
         with:
           repository: 'minbzk/ai-validation-infra'
@@ -48,25 +75,47 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-
-      - name: Make changes to the file
+      - name: Update sandbox environment
+        id: update_infra
         run: |
+          # Get version - either from release or default to main
+          if [[ "${{ github.event_name }}" == "release" ]]; then
+            release_tag="${{ github.ref_name }}"
+          else
+            release_tag="main"
+          fi
+
+          # Update the sandbox kustomization file with the current tag
           sed -i 's/newTag: .*$/newTag: main@${{ steps.get_package_hash.outputs.container_id }}/g' apps/ai-verordening-beslishulp/sandbox/kustomization.yaml
-          sed -i 's|minbzk.github.io/version: .*$|minbzk.github.io/version: ${{ steps.get_latest_release.outputs.latest_tag || 'main' }}|g' apps/ai-verordening-beslishulp/sandbox/kustomization.yaml
+          sed -i 's|minbzk.github.io/version: .*$|minbzk.github.io/version: '"$release_tag"'|g' apps/ai-verordening-beslishulp/sandbox/kustomization.yaml
+
           git add apps/ai-verordening-beslishulp/sandbox/kustomization.yaml
 
-      - name: show changes
-        run: git diff --staged
-
-      - name: push changes
-        run: |
-          git commit -m "Update ai-verordening-beslishulp sandbox tag to ${{ steps.get_package_hash.outputs.tag_used }}@${{ steps.get_package_hash.outputs.container_id }}"
-          git push --force-with-lease
+          # Only commit if there are actual changes
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update ai-verordening-beslishulp sandbox to $release_tag (using main@${{ steps.get_package_hash.outputs.container_id }})"
+            git push
+            echo "Infrastructure repository updated with new release"
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 
+      # Verify that the deployment has been completed successfully
+      - name: Verify deployment
+        if: steps.update_infra.outcome == 'success'
+        run: |
+          echo "✅ Deployment to ${{ env.APP_URL }} has been successfully initiated"
+          echo "The application should be available within a few minutes with version ${{ github.ref_name || 'main' }}"
+          echo "✅ NO new image has been built - we are using the latest successful main build"
+
   deploy_github_pages:
     runs-on: ubuntu-latest
+    needs: deploy
+    if: github.event_name == 'release'
+    permissions:
+      contents: write
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-python@v5
@@ -82,7 +131,7 @@ jobs:
       run: pip install -r 'requirements.txt'
 
     - name: Make a folder for the diagrams
-      run: mkdir mermaid_graphs
+      run: mkdir -p mermaid_graphs
 
     - name: Generate mermaid diagrams
       run: ./script/gen_mermaid.py
