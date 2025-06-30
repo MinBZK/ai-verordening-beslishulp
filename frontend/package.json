@@ -28,7 +28,7 @@
     "jexl": "^2.3.0",
     "js-yaml": "^4.1.0",
     "pdfmake": "^0.2.20",
-    "pinia": "^3.0.2",
+    "pinia": "^3.0.3",
     "vite-plugin-css-injected-by-js": "^3.5.2",
     "vue": "^3.5.16"
   },
