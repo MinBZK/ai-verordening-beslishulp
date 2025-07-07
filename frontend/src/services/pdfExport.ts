@@ -1,5 +1,6 @@
 import * as pdfMake from 'pdfmake/build/pdfmake'
 import type {Content, StyleDictionary, TDocumentDefinitions} from 'pdfmake/interfaces'
+import { PDF_DISCLAIMER_ITEMS, PDF_INTRO_TEXT, SOURCE_INFO, CONTACT_INFO } from '@/components/Disclaimer.vue'
 import type {UserDecision} from '@/models/DecisionTree.ts'
 import type {FilteredLabels} from '@/services/labelsService'
 import {stripHtml} from 'string-strip-html'
@@ -14,6 +15,47 @@ const dutchDateFormatter = new Intl.DateTimeFormat('nl-NL', {
   hour: '2-digit',
   minute: '2-digit'
 })
+
+// Helper function to generate ISO 8601 timestamps in different formats
+function getISOFormat(format: 'full' | 'date' = 'full'): string {
+  const now = new Date()
+
+  if (format === 'full') {
+    // Full ISO format with time and timezone: YYYY-MM-DDTHH:mm:ss.sssZ
+    return now.toISOString()
+  } else {
+    // ISO 8601 date-only format: YYYY-MM-DD
+    return now.toISOString().split('T')[0]
+  }
+}
+
+function buildDisclaimers(): Content {
+  const contentElements: Content = [
+    {
+      text: 'Belangrijke informatie',
+      style: 'header'
+    },
+    {
+      text: PDF_INTRO_TEXT.plain,
+      style: 'normal',
+      margin: [0, 0, 0, 10]
+    },
+    {
+      ul: PDF_DISCLAIMER_ITEMS.map(item => ({
+        text: item.plainText,
+        style: 'normal',
+        margin: [0, 0, 0, 5]
+      })),
+      style: 'normal',
+      margin: [0, 0, 0, 20]
+    }
+  ]
+
+  return {
+    stack: contentElements,
+    pageBreak: 'after'
+  }
+}
 
 function replaceSpecificDivsWithTextContent(htmlString: string, selector: string): string {
   if (!htmlString || htmlString.trim() === '') {
@@ -46,6 +88,18 @@ function replaceSpecificDivsWithTextContent(htmlString: string, selector: string
   }
 }
 
+async function getAppVersion(): Promise<string> {
+  // For Vite-vue projects, use import.meta.env instead of process.env
+  const appVersion = import.meta.env.VITE_APP_VERSION;
+
+  if (appVersion && appVersion !== 'unknown') {
+    return appVersion;
+  }
+
+  // If no build version is available, return a default version string
+  return 'development';
+}
+
 export async function exportToPdf(
   filename: string,
   userDecisionPath: UserDecision[],
@@ -57,6 +111,7 @@ export async function exportToPdf(
   filledBy: string,
   labels: FilteredLabels
 ): Promise<void> {
+  const releaseTag = await getAppVersion()
   const dpiaStyleDictionary: StyleDictionary = {
     title: {
       fontSize: 28,
@@ -123,7 +178,7 @@ export async function exportToPdf(
       content: [
         {
           stack: [
-            {text: 'Resultaten Beslishulp', style: 'title'},
+            {text: 'Resultaten AI-verordening Beslishulp', style: 'title'},
             algorithmName
               ? [
                 {
@@ -152,12 +207,31 @@ export async function exportToPdf(
             {
               text: `Gegenereerd op ${dutchDateFormatter.format(new Date())}`,
               style: 'subsubtitle'
-            }
+            },
+            {
+              text: [
+                { text: 'Bron: '},
+                {
+                  text: SOURCE_INFO.name,
+                  link: SOURCE_INFO.url,
+                  decoration: 'underline',
+                  color: 'blue'
+                }
+              ],
+              style: 'subsubtitle',
+              margin: [0, 10, 0, 0]
+            },
+            {
+              text: `Versie: ${releaseTag}`,
+              style: 'version',
+              margin: [0, 5, 0, 0]
+            },
           ],
           alignment: 'center',
           margin: [0, 150, 0, 0],
           pageBreak: 'after'
         },
+        buildDisclaimers(),
 
         buildLabels(labels),
 
@@ -185,7 +259,7 @@ export async function exportToPdf(
         return {
           text: `Pagina ${currentPage} van ${pageCount}`,
           alignment: 'center',
-          margin: [0, 0, 40, 0],
+          margin: [0, 0, 0, 0],
           color: '#999999',
           fontSize: 10
         }
@@ -193,9 +267,10 @@ export async function exportToPdf(
 
       // Document metadata
       info: {
-        title: 'Beslishulp',
-        author: 'Beslishulp generator',
-        creator: 'Beslishulp generator'
+        title: 'AI-verordening Beslishulp',
+        author: 'AI-verordening Beslishulp generator',
+        creator: 'AI-verordening Beslishulp generator',
+        subject: `Version: ${releaseTag}`
       },
 
       // Page styling
@@ -221,7 +296,22 @@ export async function exportToPdf(
       fontDefinitions[fontFamily] = variants as Record<string, string>
     }
 
-    const actualFilename = filename || 'beslishulp.pdf'
+    // Get ISO 8601 date for the filename (date only: YYYY-MM-DD)
+    const isoDate = getISOFormat('date')
+
+    // Build filename with proper format
+    let prefixFilename = 'AI-verordening beslishulp'
+    let baseFilename;
+
+    if (filename && filename.trim() !== '') {
+      // Format with filename: AI-verordening beslishulp - NAME - DATE.pdf
+      baseFilename = `${prefixFilename} - ${filename}`
+    } else {
+      baseFilename = prefixFilename
+    }
+    // Create the actual filename with date
+    const actualFilename = `${baseFilename} - ${isoDate}.pdf`
+
     const vfs = await FontService.getVFS()
 
     pdfMake.createPdf(docDefinition, undefined, fontDefinitions, vfs).download(actualFilename)
@@ -335,7 +425,7 @@ function buildAnswer(userDecision: UserDecision): Content {
   })
   stack.push({text: `Antwoord: ${userDecision.answer}`, style: 'description'})
   if (userDecision.explanation) {
-    stack.push({text: `Toelichting: ${userDecision.explanation}`, style: 'description'})
+    stack.push({text: `Opmerking: ${userDecision.explanation}`, style: 'description'})
   }
   return stack
 }
@@ -348,6 +438,33 @@ function buildSources(sources: { source: string; url: string | undefined }[]): C
     margin: [0, 0, 0, 10]
   })
 
+  // Add the AI-verordening Beslishulp and the Github as the first source
+  stack.push({
+    text: SOURCE_INFO.name,
+    margin: [0, 5, 0, 0]
+  })
+  stack.push({
+    text: SOURCE_INFO.url,
+    link: SOURCE_INFO.url,
+    decoration: 'underline',
+    color: 'blue',
+    margin: [0, 0, 0, 15]
+  })
+
+  stack.push({
+    text: [
+      { text: 'AI-verordening Beslishulp Github', margin: [0, 5, 0, 0] }
+    ]
+  })
+  stack.push({
+    text: 'https://github.com/MinBZK/ai-verordening-beslishulp',
+    link: 'https://github.com/MinBZK/ai-verordening-beslishulp',
+    decoration: 'underline',
+    color: 'blue',
+    margin: [0, 0, 0, 15]
+  })
+
+  // Add the other sources
   for (const source of sources) {
     if (source.url) {
       stack.push({
