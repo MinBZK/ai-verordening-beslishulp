@@ -72,7 +72,7 @@ const handleExport = (formData: {
   if (props.conclusion) {
     const processedLabels = filterLabels(props.labels)
     exportToPdf(
-      `${formData.algorithmName.trim() || 'beslishulp'}.pdf`,
+      `${formData.algorithmName.trim()}`,
       sessionUserDecisionPath.value,
       props.conclusion,
       props.sources,
@@ -103,19 +103,19 @@ const handleExport = (formData: {
 
     <!--Vorige vraag and export buttons section-->
     <div class="rvo-layout-margin-vertical--2xs flex justify-end">
-      <a
-        class="rvo-link rvo-link--with-icon"
-        href="#"
-        @click="$emit('back')"
-        style="margin-right: auto"
-      >
-        <span
-          class="utrecht-icon rvo-icon rvo-icon-terug rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"
-          role="img"
-          aria-label="Vorige stap"
-        ></span>
-        Vorige stap
-      </a>
+      <button
+          style="margin-right: auto"
+          @click="$emit('back')"
+          type="button"
+          class="flex utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
+        >
+          <span
+            class="utrecht-icon rvo-icon rvo-icon-terug rvo-icon--lg rvo-icon--wit"
+            role="img"
+            aria-label="Terug"
+          ></span>
+          Vorige vraag
+        </button>
 
       <button
         v-if="showExportPDF"
@@ -187,7 +187,7 @@ const handleExport = (formData: {
                   <span v-html="userDecision.question"></span><br />
                   <i>Antwoord:</i> <span>{{ userDecision.answer }}</span>
                   <div v-if="userDecision.explanation">
-                    <i>Toelichting:</i> <span>{{ userDecision.explanation }}</span>
+                    <i>Opmerking:</i> <span>{{ userDecision.explanation }}</span>
                   </div>
                 </li>
               </ul>

@@ -108,7 +108,9 @@ questions:
   - questionId: "1.4.1"
     question: "Is jouw (beoogde) toepassing een AI-systeem?"
     explanation: "
-      Een AI-systeem is een machine-gebaseerd systeem dat autonoom werkt, zichzelf kan aanpassen na inzet, en output levert zoals voorspellingen, inhoud, aanbevelingen of beslissingen. Deze output kan fysieke of virtuele omgevingen beïnvloeden. AI-systemen gebruiken inferentie, waarbij modellen of algoritmen worden afgeleid uit data, en combineren technieken als machinaal leren, logica en kennisrepresentatie. <br><br>
+      Een AI-systeem is een machine-gebaseerd systeem dat autonoom werkt, zichzelf kan aanpassen na inzet, en output levert zoals voorspellingen, inhoud, aanbevelingen of beslissingen.
+      Deze output kan fysieke of virtuele omgevingen beïnvloeden.
+      AI-systemen gebruiken inferentie, waarbij modellen of algoritmen worden afgeleid uit data, en combineren technieken als machinaal leren, logica en kennisrepresentatie. <br><br>
       <strong>Let op:</strong> Voor een AI-model voor algemene doeleinden geldt een specifieke definitie.<br>
 
       <strong>Voorbeelden</strong><br>
@@ -147,7 +149,7 @@ questions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_97
       - source: Overweging 99 - Generatieve AI-modellen als voorbeeld van AI-modellen voor algemene doeleinden
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_99
-      - source: Overweging 100 - Classificatie van AI-systemen met geïntegreerde AI-modellen voor algemene doeleinden
+      - source: Overweging 100 - Classificatie van AI-systemen met AI-modellen voor algemene doeleinden
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#rct_100
       - source: Begrippenlijst Algoritmekader
         url: https://minbzk.github.io/Algoritmekader/soorten-algoritmes-en-ai/definities/#begrippenlijst
