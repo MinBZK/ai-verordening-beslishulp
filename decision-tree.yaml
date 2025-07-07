@@ -11,7 +11,7 @@ questions:
       - source: Aandacht voor Algoritmes, Algemene Rekenkamer, 2021
         url: https://www.rekenkamer.nl/onderwerpen/algoritmes/documenten/rapporten/2021/01/26/aandacht-voor-algoritmes
       - source: Handreiking Algoritmeregister
-        url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
+        url: https://www.digitaleoverheid.nl/document/handreiking-algoritmeregister/
       - source: Begrippenlijst Algoritmekader
         url: https://minbzk.github.io/Algoritmekader/soorten-algoritmes-en-ai/definities/#begrippenlijst
     answers:
@@ -929,7 +929,7 @@ conclusions:
     obligation: "Controleer of het algoritme als impactvol kan worden aangemerkt en of publicatie in het algoritmeregister aanbevolen is volgens de Handreiking Algoritmeregister. Zorg er ook voor dat het algoritme voldoet aan de geldende wet- en regelgeving, zoals de AVG wanneer persoonsgegevens worden verwerkt."
     sources:
       - source: Handreiking Algoritmeregister
-        url: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2023/12/Handreiking-Algoritmeregister-versie-1.0.pdf
+        url: https://www.digitaleoverheid.nl/document/handreiking-algoritmeregister/
   - conclusionId: "11.2"
     conclusion: "Op basis van jouw antwoorden op de vragen is de AI-verordening niet op jou van toepassing, omdat je een uitzonderingsgrond hebt geselecteerd en buiten het toepassingsgebied valt."
     obligation: "Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt). Verder dien je te registreren in het algoritmeregister."
