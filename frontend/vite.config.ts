@@ -10,6 +10,7 @@ const SVG_ALLOW_LIST = [
   'logo.svg',
   'info.svg',
   'terug.svg',
+  'pijl-naar-rechts.svg',
   'downloaden.svg',
   'delta-omhoog.svg',
   'delta-omlaag.svg',

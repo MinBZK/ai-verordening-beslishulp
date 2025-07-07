@@ -36,7 +36,7 @@ Configuratie opties kunnen als URL parameter worden meegegeven, of als attribuut
 | showCloseOnEnd       | false                             | Toont een knop bij de conlusie dat een javascript event/bericht stuurt. Zie ook het [voorbeeld](voorbeeld.html). |
 | showCloseOnEndMsg    | Resultaten overnemen en afsluiten | De tekst die getoond wordt in bovenstaande knop.                                                                 |
 | showExportPDF        | true                              | Toont een knop bij de conclusie waarmee een PDF export gemaakt kan worden.                                       |
-| showExplanationField | true                              | Toont een invoerveld voor een toelichting bij elke vraag.                                                        |
+| showExplanationField | true                              | Toont een invoerveld voor een opmerking bij elke vraag.                                                        |
 
 # AI-Verordening-Beslishulp
 
@@ -217,6 +217,22 @@ Door het volgende script te runnen, kunt u controleren of het bestand decision-t
 
 ```sh
 ./script/validate --file_pairs schemas/schema_decision_tree.json:decision-tree.yaml schemas/schema_definitions.json:definitions.yaml
+```
+
+## Inject definitions
+
+Door het volgende script te runnen, worden de definities uit het Algoritmekader in de decision-tree.yaml geinjecteerd en geconverteerd naar `frontend/src/assets/decision-tree.json` om door de Vue App te worden opgepakt. Dit script wordt tijdens de build automatisch gerund.
+
+```sh
+python ./script/inject_definitions_in_decision_tree.py
+```
+
+## Convert categories
+
+Door het volgende script te runnen, wordt in de categories.yaml geconverteerd naar `frontend/src/assets/categories.json` om door de Vue App te worden opgepakt. Dit script wordt tijdens de build automatisch gerund.
+
+```sh
+python ./script/convert_categories.py
 ```
 
 ## Pre-commit
