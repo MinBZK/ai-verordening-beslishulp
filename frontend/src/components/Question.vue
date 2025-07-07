@@ -179,7 +179,7 @@ function optionalSaveUserDecision() {
           v-if="showExplanationField && question_category != 'tussenscherm'"
         >
           <label for="explanation-field" class="utrecht-form-label"
-            ><span class="rvo-text--bold">Toelichting</span> (niet verplicht)</label
+            ><span class="rvo-text--bold">Opmerking</span> (geen invloed op uitkomst, wel zichtbaar in rapport)</label
           >
           <textarea
             @input="adjustHeight"
@@ -216,10 +216,15 @@ function optionalSaveUserDecision() {
           @click="$emit('answered', submitAnswer())"
           type="button"
           :disabled="!selectedAnswer"
-          class="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
+          class="flex utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
           :class="{ 'utrecht-button--disabled': !selectedAnswer }"
         >
-          Volgende
+          Volgende vraag
+          <span
+            class="utrecht-icon rvo-icon rvo-icon-pijl-naar-rechts rvo-icon--lg rvo-icon--wit"
+            role="img"
+            aria-label="Verder"
+          ></span>
         </button>
       </div>
       <div class="rvo-layout-margin-vertical--xl">
