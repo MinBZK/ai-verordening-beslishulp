@@ -6,7 +6,6 @@
 - De informatie is niet compleet en er kunnen fouten in staan.
 - Je bent zelf verantwoordelijk voor de informatie die je gebruikt.
 - Overleg de uitkomsten van de beslishulp met een expert.
-- In de beslishulp staat alleen informatie over de rollen van de overheid als [aanbieder](https://minbzk.github.io/Algoritmekader/soorten-algoritmes-en-ai/definities/#begrippenlijst) en als [gebruiksverantwoordelijke](https://minbzk.github.io/Algoritmekader/soorten-algoritmes-en-ai/definities/#begrippenlijst).
 
 Voor vragen of opmerkingen over de beslishulp mail je naar: [ai-verordening@minbzk.nl](mailto::ai-verordening@minbzk.nl).
 
@@ -37,7 +36,7 @@ Configuratie opties kunnen als URL parameter worden meegegeven, of als attribuut
 | showCloseOnEnd       | false                             | Toont een knop bij de conlusie dat een javascript event/bericht stuurt. Zie ook het [voorbeeld](voorbeeld.html). |
 | showCloseOnEndMsg    | Resultaten overnemen en afsluiten | De tekst die getoond wordt in bovenstaande knop.                                                                 |
 | showExportPDF        | true                              | Toont een knop bij de conclusie waarmee een PDF export gemaakt kan worden.                                       |
-| showExplanationField | true                              | Toont een invoerveld voor een toelichting bij elke vraag.                                                        |
+| showExplanationField | true                              | Toont een invoerveld voor een opmerking bij elke vraag.                                                        |
 
 # AI-Verordening-Beslishulp
 
@@ -81,7 +80,7 @@ Gezamenlijk zorgen de opgehaalde labels ervoor dat de toepassing binnen een bepa
 |                              |                              | geen hoog-risico AI              |
 |                              |                              | verboden AI                      |
 |                              |                              | uitzondering van toepassing       |
-|                              | Rol                          | aanbieder                        |
+|                              | Verantwoordelijkheid         | aanbieder                        |
 |                              |                              | gebruiksverantwoordelijke        |
 |                              |                              | importeur                        |
 |                              |                              | distributeur                     |
@@ -218,6 +217,22 @@ Door het volgende script te runnen, kunt u controleren of het bestand decision-t
 
 ```sh
 ./script/validate --file_pairs schemas/schema_decision_tree.json:decision-tree.yaml schemas/schema_definitions.json:definitions.yaml
+```
+
+## Inject definitions
+
+Door het volgende script te runnen, worden de definities uit het Algoritmekader in de decision-tree.yaml geinjecteerd en geconverteerd naar `frontend/src/assets/decision-tree.json` om door de Vue App te worden opgepakt. Dit script wordt tijdens de build automatisch gerund.
+
+```sh
+python ./script/inject_definitions_in_decision_tree.py
+```
+
+## Convert categories
+
+Door het volgende script te runnen, wordt in de categories.yaml geconverteerd naar `frontend/src/assets/categories.json` om door de Vue App te worden opgepakt. Dit script wordt tijdens de build automatisch gerund.
+
+```sh
+python ./script/convert_categories.py
 ```
 
 ## Pre-commit

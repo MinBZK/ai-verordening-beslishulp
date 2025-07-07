@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  release:
+    types:
+      - published
 
 concurrency:
   group: ${{ github.workflow }}
@@ -41,6 +44,11 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=ref,event=branch                     # Added only on push to branch, f.e. main -> ghcr.io/minbzk/ai-verordening-beslishulp:main
+            type=ref,event=pr                         # Added only on PR, f.e. PR-123 -> ghcr.io/minbzk/ai-verordening-beslishulp:pr-123
+            type=semver,pattern={{version}}           # Added only on release, f.e. v1.2.3 -> ghcr.io/minbzk/ai-verordening-beslishulp:1.2.3
+            type=semver,pattern={{major}}.{{minor}}   # Added only on release, f.e. v1.2.3 -> ghcr.io/minbzk/ai-verordening-beslishulp:1.2
         env:
           DOCKER_METADATA_ANNOTATIONS_LEVELS: manifest,index
 
