@@ -44,6 +44,7 @@ jobs:
         run: |
           # Get raw version from release tag
           RAW_VERSION="${{ github.event.release.tag_name }}"
+          echo "Raw version from tag_name is: $RAW_VERSION"
 
           # Validate tag follows convention (starts with v or V)
           if [[ ! "$RAW_VERSION" =~ ^[vV] ]]; then
