@@ -41,6 +41,8 @@ jobs:
 
       - name: Check if latest version
         id: get_version
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # Get raw version from release branch
           RAW_VERSION="${{ github.event.workflow_run.head_branch }}"
@@ -58,6 +60,22 @@ jobs:
           # Clean current version: normalize by removing 'v' prefix (case insensitive), any period after v, and '.' suffix
           VERSION=$(echo "$RAW_VERSION" | sed -E 's/^[vV]\.?//;s/\.$//')
           echo "Raw version from release: $RAW_VERSION -> Normalized: $VERSION"
+
+          # Step 1: Get release list
+          echo "Getting release list..."
+          gh release list --limit 10
+
+          # Step 2: Filter out drafts
+          echo "Filtering drafts..."
+          gh release list --limit 10 | grep -v Draft
+
+          # Step 3: Extract first column
+          echo "Extracting version tags..."
+          gh release list --limit 10 | grep -v Draft | awk '{print $1}'
+
+          # Step 4: Filter for version pattern
+          echo "Filtering for version pattern..."
+          gh release list --limit 10 | grep -v Draft | awk '{print $1}' | grep -E "^[vV]"
 
           # Extract and normalize all version tags - only consider tags starting with v or V
           ALL_VERSIONS=$(gh release list --limit 10 | grep -v Draft | awk '{print $1}' | grep -E "^[vV]")
@@ -86,8 +104,6 @@ jobs:
           echo "is_latest=$IS_LATEST" >> "$GITHUB_OUTPUT"
 
           echo "Version: $VERSION (Latest: $LATEST, Is Latest: $IS_LATEST)"
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Verify Docker image exists
         run: |
