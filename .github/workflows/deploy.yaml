@@ -42,8 +42,8 @@ jobs:
       - name: Check if latest version
         id: get_version
         run: |
-          # Get raw version from release tag
-          RAW_VERSION="${{ github.event.release.tag_name }}"
+          # Get raw version from release branch
+          RAW_VERSION="${{ github.event.workflow_run.head_branch }}"
           echo "Raw version from tag_name is: $RAW_VERSION"
 
           # Validate tag follows convention (starts with v or V)
