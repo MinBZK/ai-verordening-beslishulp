@@ -61,24 +61,8 @@ jobs:
           VERSION=$(echo "$RAW_VERSION" | sed -E 's/^[vV]\.?//;s/\.$//')
           echo "Raw version from release: $RAW_VERSION -> Normalized: $VERSION"
 
-          # Step 1: Get release list
-          echo "Getting release list..."
-          gh release list --limit 10
-
-          # Step 2: Filter out drafts
-          echo "Filtering drafts..."
-          gh release list --limit 10 | grep -v Draft
-
-          # Step 3: Extract first column
-          echo "Extracting version tags..."
-          gh release list --limit 10 | grep -v Draft | awk '{print $1}'
-
-          # Step 4: Filter for version pattern
-          echo "Filtering for version pattern..."
-          gh release list --limit 10 | grep -v Draft | awk '{print $1}' | grep -E "^[vV]"
-
           # Extract and normalize all version tags - only consider tags starting with v or V
-          ALL_VERSIONS=$(gh release list --limit 10 | grep -v Draft | awk '{print $1}' | grep -E "^[vV]")
+          ALL_VERSIONS=$(gh release list --limit 10 | awk '!/[Dd]raft/ && $1 ~ /^[vV]/ {print $1}' || echo "")
           echo "All version tags (filtered to v/V only):"
           echo "$ALL_VERSIONS"
 
