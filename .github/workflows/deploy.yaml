@@ -5,6 +5,7 @@ on:
     workflows: ["build"]
     types: [completed]
     branches: [main]
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -18,10 +19,8 @@ env:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    # Only deploy if build was successful and it's a latest release
-    if: >
-      github.event.workflow_run.conclusion == 'success' &&
-      github.event.workflow_run.event == 'release'
+    # Only deploy if build was successful or manually triggered
+    if: github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch'
     permissions:
       contents: read
     outputs:
