@@ -1,0 +1,21 @@
+{
+  "name": "File",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "postCreateCommand": "sudo apt install jq && pip install -r requirements.txt",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "editorconfig.editorconfig",
+        "redhat.vscode-yaml"
+      ],
+      "settings": {
+        "yaml.schemas": {
+          "schemas/base.schema.json": [
+            "decision-tree-compressed-new.yaml",
+            "decision-tree.yaml"
+          ]
+        }
+      }
+    }
+  }
+}

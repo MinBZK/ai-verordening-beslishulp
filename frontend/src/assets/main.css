@@ -1,0 +1,234 @@
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+
+@layer theme, base, components, utilities;
+
+.rvo-theme {
+  background-color: var(--utrecht-document-background-color);
+  color: var(--utrecht-document-color);
+  font-family: var(--utrecht-document-font-family);
+  font-size: var(--utrecht-document-font-size);
+  font-weight: var(--utrecht-document-font-weight);
+  line-height: var(--utrecht-document-line-height);
+}
+
+.progress-tracker-font {
+  color: var(--rvo-color-hemelblauw);
+  font-weight: bold;
+}
+
+#progress-question-mobile {
+  @media only screen and (width <= 800px) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.aiv-definition {
+  position: relative;
+  display: inline-block;
+  border-bottom: 2px dotted black;
+  cursor: help;
+}
+
+.aiv-definition .aiv-definition-text {
+  visibility: hidden;
+  width: 300px;
+  background-color: var(--rvo-color-wit);
+  color: var(--rvo-color-zwart);
+  filter: drop-shadow(0 4px 4px rgba(115, 142, 171, 0.5));
+  text-align: left;
+  border-radius: var(--rvo-border-radius-xl);
+  border-color: var(--rvo-color-grijs-200);
+  border: 1px;
+  padding: var(--rvo-alert-padding-sm-padding-block-end);
+  position: absolute;
+  z-index: 1;
+
+  /* Text styling */
+  color: var(--utrecht-document-color);
+  font-family: var(--utrecht-document-font-family);
+  font-size: var(--utrecht-document-font-size);
+  font-weight: var(--utrecht-document-font-weight);
+  font-style: normal;
+  text-align: left;
+  line-height: var(--utrecht-document-line-height);
+
+  /* hack for Safari, https://stackoverflow.com/questions/38762661/css-drop-shadow-not-working-properly-in-safari/75027316#75027316 **/
+  backdrop-filter: blur(0);
+}
+
+.aiv-definition:hover .aiv-definition-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* reset some styles without using tailwind pre-flight */
+ol.no-list,
+ul.no-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* White background for button to improve contrast */
+.rvo-form-fieldset .utrecht-button{
+  background-color: var(--rvo-color-wit) !important;
+}
+
+/* Custom class for active answer buttons - using higher specificity */
+.rvo-form-fieldset .utrecht-button.utrecht-button--active {
+  background-color: var(--rvo-color-hemelblauw) !important;
+  color: var(--rvo-color-wit) !important;
+  border-color: var(--rvo-color-hemelblauw) !important;
+  box-shadow: 0 0 0 3px var(--rvo-color-hemelblauw-tint-3) !important;
+}
+
+/* Ensure hover state on active buttons maintains the active styling */
+.rvo-form-fieldset .utrecht-button.utrecht-button--active:hover {
+  background-color: var(--rvo-color-hemelblauw) !important;
+  color: var(--rvo-color-wit) !important;
+  border-color: var(--rvo-color-hemelblauw) !important;
+}
+
+/* Ensure focus state on active buttons maintains the active styling */
+.rvo-form-fieldset .utrecht-button.utrecht-button--active:focus {
+  background-color: var(--rvo-color-hemelblauw) !important;
+  color: var(--rvo-color-wit) !important;
+  border-color: var(--rvo-color-hemelblauw) !important;
+}
+
+/* Modal is not implemented in NLDS yet, so we implement it here. */
+.minbzk-modal {
+  /* Underlay covers entire screen. */
+  position: fixed;
+  inset: 0;
+
+  /* Change to appropriate color from NLDS. */
+  background-color: rgba(0 0 0 / 50%);
+  z-index: 1000;
+
+  /* Flexbox centers the .modal-content vertically and horizontally */
+  display: flex;
+  justify-content: center;
+
+  /* Animate when opening */
+  animation-name: fade-in;
+  animation-duration: 150ms;
+  animation-timing-function: ease;
+}
+
+.display-none {
+  display: none !important;
+}
+
+.minbzk-modal > .modal-underlay {
+  /* underlay takes up the entire viewport. This is only
+  required if you want to click to dismiss the popup */
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.model-content-auto-size {
+  width: auto !important;
+  height: auto !important;
+}
+
+.modal-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0 2px 0 2px; /* add minimal padding so the outline/focus borders are displayed correctly */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.modal-content-close {
+  position: absolute;
+  right: .75em;
+  top: .75em;
+  z-index: 1000;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+.modal-content-container {
+  overflow: hidden;
+  position: relative;
+
+  /* Position visible dialog near the top of the window */
+  margin-top: 5vh;
+  transition: height 0.3s ease;
+  width: 0.3s ease;
+
+  /* Sizing for visible dialog */
+  width: 90vw;
+  max-width: 640px;     /* of 40rem – past bij form grootte */
+  height: 90vh;
+  max-height: 700px;     /* optioneel: ceiling */
+
+  /* Display properties for visible dialog */
+  border: solid 1px #999;
+  border-radius: 1em;
+
+  display: flex;
+  flex-direction: column;
+
+  /* Change to appropriate color from NLDS. */
+  box-shadow: 0 0 1em 0 rgba(0 0 0 / 30%);
+  background-color: #fff;
+  padding: 2em 2em 1em 2em;
+
+  /* Animate when opening */
+  animation-name: zoom-in;
+  animation-duration: 150ms;
+  animation-timing-function: ease;
+}
+
+/* Animation keyframes */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoom-in {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Default list styling class to restore browser defaults */
+ol.rvo-default-list,
+ul.rvo-default-list {
+  list-style: initial;
+  margin: initial;
+  padding: 0 0 0 40px;
+}
+
+.modal-body {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.modal-buttons {
+  flex-shrink: 0;
+  display: flex;
+  background-color: white;
+  padding-bottom: 16px;
+}

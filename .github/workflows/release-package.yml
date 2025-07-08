@@ -1,0 +1,27 @@
+name: Build Node.js Package and Publish Assets
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install --prefix frontend
+      - run: npm run build --prefix frontend
+      - name: Publish release assets
+        uses: softprops/action-gh-release@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT_UPDATE_RELEASE }}
+        with:
+          files: |
+            frontend/dist/index.js
+            LICENSE.md

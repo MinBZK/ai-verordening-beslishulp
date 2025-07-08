@@ -1,0 +1,32 @@
+name: Fout of bug melden
+description: Help ons de AI-verordening beslishulp te verbeteren
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Fout of bug melden
+        Help ons de AI-verordening beslishulp te verbeteren
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Beschrijf de fout
+      description: Leg uit wat de fout of bug is die je gevonden hebt.
+      placeholder: Leg uit wat de fout of bug is die je gevonden hebt.
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Voeg eventueel een screenshot toe.
+      placeholder: Voeg eventueel een screenshot toe.
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        **Let op:** Zorg ervoor dat je een **Titel** invult voor de issue als de verzendknop uitgeschakeld is.

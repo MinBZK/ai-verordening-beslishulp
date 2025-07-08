@@ -1,0 +1,228 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/MinBZK/ai-verordening-beslishulp/main/schemas/base.schema",
+  "title": "Decision tree schema",
+  "description": "Decision tree schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the questions"
+    },
+    "version": {
+      "type": "string",
+      "description": "The version of the questions"
+    },
+    "questions": {
+      "type": "array",
+      "description": "The questions in the decision tree",
+      "items": {
+        "$ref": "#/$defs/Questions"
+      },
+      "minItems": 1
+    },
+    "conclusions": {
+      "type": "array",
+      "description": "The conclusions in the decision tree",
+      "items": {
+        "$ref": "#/$defs/Conclusion"
+      },
+      "minItems": 1
+    }
+  },
+  "$defs": {
+    "Result": {
+      "id": "#/$defs/Result",
+      "type": "string"
+    },
+    "Question": {
+      "id": "#/$defs/Question",
+      "type": "string"
+    },
+    "QuestionId": {
+      "id": "#/$defs/QuestionId",
+      "type": "string",
+      "uniqueItems": true
+    },
+    "Source": {
+      "id": "#/$defs/Source",
+      "type": "object",
+      "properties": {
+        "source": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      },
+      "required": ["source"]
+    },
+    "Explanation":{
+      "id": "#/$defs/Explanation",
+      "type": "string"
+    },
+    "Category": {
+      "id": "#/$defs/Category",
+      "type": "string"
+    },
+    "Description": {
+      "id": "#/$defs/Description",
+      "type": "string"
+    },
+    "AnswerComment": {
+      "id": "#/$defs/AnswerComment",
+      "type": "string"
+    },
+    "Label": {
+      "id": "#/$defs/Label",
+      "type": "string"
+    },
+    "If": {
+      "id": "#/$defs/If",
+      "type": "string"
+    },
+    "ConclusionId": {
+      "id": "#/$defs/ConclusionId",
+      "type": "string"
+    },
+    "ConclusionComment": {
+      "id": "#/$defs/ConclusionComment",
+      "type": "string"
+    },
+    "Obligation": {
+      "id": "#/$defs/Obligation",
+      "type": "string"
+    },
+    "Redirect": {
+      "id": "#/$defs/Redirect",
+      "type": "object",
+      "properties": {
+        "nextQuestionId": {
+          "$ref": "#/$defs/QuestionId"
+        },
+        "if": {
+          "$ref": "#/$defs/If"
+        }
+      },
+      "oneOf": [
+        {
+          "required": ["nextQuestionId"]
+        },
+        {
+          "required": ["nextConclusionId"]
+        }
+      ]
+    },
+    "Answer": {
+      "id": "#/$defs/Question",
+      "type": "object",
+      "properties": {
+        "answer": {
+          "type": "string"
+        },
+        "nextQuestionId": {
+          "$ref": "#/$defs/QuestionId"
+        },
+        "nextConclusionId":{
+          "$ref": "#/$defs/ConclusionId"
+        },
+        "subresult": {
+          "$ref": "#/$defs/Result"
+        },
+        "answerComment": {
+          "$ref": "#/$defs/AnswerComment"
+        },
+        "labels": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Label"
+          }
+        },
+        "redirects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Redirect"
+          },
+          "minItems": 2
+        }
+      },
+      "required": ["answer"],
+      "oneOf": [
+        {
+          "required": ["nextQuestionId"]
+        },
+        {
+          "required": ["nextConclusionId"]
+        },
+        {
+          "required": ["redirects"]
+        }
+      ]
+    },
+    "Questions": {
+      "id": "#/$defs/Questions",
+      "type": "object",
+      "properties": {
+        "questionId": {
+          "$ref": "#/$defs/QuestionId"
+        },
+        "question": {
+          "$ref": "#/$defs/Question"
+        },
+        "explanation":{
+          "$ref": "#/$defs/Explanation"
+        },
+        "category": {
+          "$ref": "#/$defs/Category"
+        },
+        "subcategory": {
+          "$ref": "#/$defs/Category"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Source"
+          }
+        },
+        "description": {
+          "$ref": "#/$defs/Description",
+          "type": "string"
+        },
+        "answers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Answer"
+          },
+          "minItems": 1,
+          "maxItems": 10
+        }
+      },
+      "required": ["questionId", "question", "explanation", "category", "subcategory", "answers"]
+    },
+    "Conclusion": {
+      "id": "#/$defs/Conclusion",
+      "type": "object",
+      "properties": {
+        "conclusionId": {
+          "$ref": "#/$defs/ConclusionId"
+        },
+        "conclusion": {
+          "type": "string"
+        },
+        "conclusionComment": {
+          "$ref": "#/$defs/ConclusionComment"
+        },
+        "obligation": {
+          "$ref": "#/$defs/Obligation"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Source"
+          }
+        }
+      },
+      "required": ["conclusionId", "conclusion", "obligation"]
+    }
+  }
+}
