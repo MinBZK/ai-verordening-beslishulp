@@ -232,3 +232,8 @@ ul.rvo-default-list {
   background-color: white;
   padding-bottom: 16px;
 }
+
+html {
+    visibility: visible;
+    opacity: 1;
+}
