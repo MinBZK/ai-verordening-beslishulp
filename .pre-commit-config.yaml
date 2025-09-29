@@ -2,7 +2,7 @@ default_language_version:
   python: python3.11
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: end-of-file-fixer
         exclude: 'frontend/src/assets/decision-tree.json|frontend/src/assets/categories.json'
@@ -16,7 +16,7 @@ repos:
       - id: check-toml
       - id: detect-private-key
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.12.7
+    rev: v0.13.1
     hooks:
       - id: ruff
       - id: ruff-format
