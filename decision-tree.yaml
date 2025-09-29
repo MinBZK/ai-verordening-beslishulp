@@ -935,7 +935,7 @@ conclusions:
     obligation: "Zorg ervoor dat het algoritme voldoet aan bestaande wet- en regelgeving (bijv. AVG wanneer het algoritme persoonsgegevens verwerkt). Verder dien je te registreren in het algoritmeregister."
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 2 - Toepassingsgebied
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e1978-1-1
   - conclusionId: "11.3"
@@ -948,7 +948,7 @@ conclusions:
     obligation: "Het AI-systeem moet van de markt worden gehaald. <strong>Let op: </strong> dit verbod geldt vanaf 1 februari 2025."
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 5 - Verboden AI praktijken
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2816-1-1
   - conclusionId: "12.0.1"
@@ -990,7 +990,7 @@ conclusions:
          • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Afdeling 2 - Eisen voor AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#cpt_III.sct_2
       - source: Artikel 4 - AI-geletterdheid
@@ -1046,7 +1046,7 @@ conclusions:
           • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Afdeling 2 - Eisen voor AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#cpt_III.sct_2
       - source: Artikel 4 - AI-geletterdheid
@@ -1095,7 +1095,7 @@ conclusions:
          • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 4 - AI-geletterdheid
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2799-1-1
       - source: Artikel 50 - Transparantieverplichtingen
@@ -1118,7 +1118,7 @@ conclusions:
          • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 4 - AI-geletterdheid
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2799-1-1
       - source: Artikel 95 - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften
@@ -1171,7 +1171,7 @@ conclusions:
       • Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Afdeling 2 - Eisen voor AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#cpt_III.sct_2
       - source: Artikel 4 - AI-geletterdheid
@@ -1241,7 +1241,7 @@ conclusions:
       • Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Afdeling 2 - Eisen voor AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#cpt_III.sct_2
       - source: Artikel 4 - AI-geletterdheid
@@ -1304,7 +1304,7 @@ conclusions:
       • Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 4 - AI-geletterdheid
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2799-1-1
       - source: Artikel 50 - Transparantieverplichtingen
@@ -1338,7 +1338,7 @@ conclusions:
       • Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 4 - AI-geletterdheid
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2799-1-1
       - source: Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden
@@ -1376,7 +1376,7 @@ conclusions:
       • Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 51 - Classificatie van AI-modellen voor algemene doeleinden als AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5489-1-1
       - source: Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden
@@ -1410,7 +1410,7 @@ conclusions:
       • Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 51 - Classificatie van AI-modellen voor algemene doeleinden als AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5489-1-1
       - source: Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden
@@ -1444,7 +1444,7 @@ conclusions:
       • Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 51 - Classificatie van AI-modellen voor algemene doeleinden als AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5489-1-1
       - source: Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden
@@ -1499,7 +1499,7 @@ conclusions:
           • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 4 - AI-geletterdheid
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2799-1-1
       - source: Artikel 26 - Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico
@@ -1545,7 +1545,7 @@ conclusions:
           • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 4 - AI-geletterdheid
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2799-1-1
       - source: Artikel 26 - Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico
@@ -1579,7 +1579,7 @@ conclusions:
           • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 4 - AI-geletterdheid
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2799-1-1
       - source: Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
@@ -1599,7 +1599,7 @@ conclusions:
           • Gedragscodes (Artikel 95) zijn vrijwillig en kunnen op elk moment na de inwerkingtreding van de AI-verordening worden opgesteld en toegepast.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 4 - AI-geletterdheid
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2799-1-1
       - source: Artikel 95 - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften
@@ -1639,7 +1639,7 @@ conclusions:
           • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 4 - AI-geletterdheid
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2799-1-1
       - source: Artikel 26 - Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico
@@ -1685,7 +1685,7 @@ conclusions:
           • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 4 - AI-geletterdheid
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2799-1-1
       - source: Artikel 26 - Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico
@@ -1719,7 +1719,7 @@ conclusions:
           • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 4 - AI-geletterdheid
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2799-1-1
       - source: Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
@@ -1740,7 +1740,7 @@ conclusions:
       "
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 4 - AI-geletterdheid
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2799-1-1
       - source: Artikel 95 - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften
@@ -1762,7 +1762,7 @@ conclusions:
       Daarnaast kan het systeem, afhankelijk van de specifieke toepassing, als een hoog-risico AI-systeem worden geclassificeerd."
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 51 - Classificatie van AI-modellen voor algemene doeleinden als AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5489-1-1
       - source: Artikel 56 - Praktijkcodes
@@ -1829,7 +1829,7 @@ conclusions:
           • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Afdeling 2 - Eisen voor AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#cpt_III.sct_2
       - source: Artikel 4 - AI-geletterdheid
@@ -1911,7 +1911,7 @@ conclusions:
           • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Afdeling 2 - Eisen voor AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#cpt_III.sct_2
       - source: Artikel 4 - AI-geletterdheid
@@ -1965,7 +1965,7 @@ conclusions:
           • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 4 - AI-geletterdheid
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2799-1-1
       - source: Artikel 50 - Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen
@@ -1985,7 +1985,7 @@ conclusions:
           • Gedragscodes (Artikel 95) zijn vrijwillig en kunnen op elk moment na de inwerkingtreding van de AI-verordening worden opgesteld en toegepast.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 4 - AI-geletterdheid
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2799-1-1
       - source: Artikel 95 - Gedragscodes voor vrijwillige toepassing van specifieke voorschriften
@@ -2054,7 +2054,7 @@ conclusions:
       • Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Afdeling 2 - Eisen voor AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#cpt_III.sct_2
       - source: Artikel 4 - AI-geletterdheid
@@ -2150,7 +2150,7 @@ conclusions:
       • Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Afdeling 2 - Eisen voor AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#cpt_III.sct_2
       - source: Artikel 4 - AI-geletterdheid
@@ -2223,7 +2223,7 @@ conclusions:
       • Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 4 - AI-geletterdheid
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2799-1-1
       - source: Artikel 50 - Transparantieverplichting
@@ -2257,7 +2257,7 @@ conclusions:
       • Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 4 - AI-geletterdheid
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2799-1-1
       - source: Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden
@@ -2290,7 +2290,7 @@ conclusions:
       • Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 51 - Classificatie van AI-modellen voor algemene doeleinden als AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5489-1-1
       - source: Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden
@@ -2322,7 +2322,7 @@ conclusions:
       • Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 51 - Classificatie van AI-modellen voor algemene doeleinden als AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5489-1-1
       - source: Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden
@@ -2354,7 +2354,7 @@ conclusions:
       • Voor AI-modellen in gebruik die vóór 2 augustus 2025 in de handel zijn gebracht, geldt dat zij uiterlijk op 2 augustus 2027 aan de verordening moeten voldoen, ook zonder significante ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 51 - Classificatie van AI-modellen voor algemene doeleinden als AI-modellen voor algemene doeleinden met een systeemrisico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e5489-1-1
       - source: Artikel 53 - Verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden
@@ -2374,7 +2374,7 @@ conclusions:
     obligation: "Het AI-systeem moet van de markt worden gehaald en het gebruik ervan stop gezet. <strong>Let op:</strong>  dit geldt vanaf 1 februari 2025."
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 5 - Verboden AI praktijken
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2816-1-1
   - conclusionId: "15.0.1"
@@ -2390,7 +2390,7 @@ conclusions:
       • Importeurs werken samen met bevoegde autoriteiten bij het nemen van maatregelen om de risico’s van het AI-systeem te verminderen en te beperken.<br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Afdeling 2 - Eisen voor AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#cpt_III.sct_2
       - source: Artikel 11 - Technische documentatie
@@ -2410,7 +2410,7 @@ conclusions:
     obligation: "Er zijn geen verplichtingen voor importeurs van niet-hoog-risico AI-systemen, alleen voor hoog-risico. In de bronnen is Artikel 23 opgenomen, deze bevat de verplichtingen voor importeurs van hoog-risico AI-systemen ter informatie ter informatie."
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 23 - Verplichtingen van importeurs
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e3823-1-1
   - conclusionId: "15.1.1"
@@ -2426,7 +2426,7 @@ conclusions:
       • Importeurs werken samen met bevoegde autoriteiten bij het nemen van maatregelen om de risico’s van het AI-systeem te verminderen en te beperken.<br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Afdeling 2 - Eisen voor AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#cpt_III.sct_2
       - source: Artikel 11 - Technische documentatie
@@ -2446,7 +2446,7 @@ conclusions:
     obligation: "Er zijn geen verplichtingen voor importeurs van niet-hoog-risico AI-systemen voor algemene doeleinden, alleen voor hoog-risico. In de bronnen is Artikel 23 opgenomen, deze bevat de verplichtingen voor importeurs van hoog-risico AI-systemen ter informatie."
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 23 - Verplichtingen van importeurs
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e3823-1-1
   - conclusionId: "15.2.1"
@@ -2454,7 +2454,7 @@ conclusions:
     obligation: "Er zijn geen verplichtingen voor importeurs van AI-modellen voor algemene doeleinden, alleen voor hoog-risico AI-systemen. In de bronnen is Artikel 23 opgenomen, deze bevat de verplichtingen voor importeurs van hoog-risico AI-systemen ter informatie."
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 23 - Verplichtingen van importeurs
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e3823-1-1
 
@@ -2465,7 +2465,7 @@ conclusions:
     obligation: "Het AI-systeem moet van de markt worden gehaald en het gebruik ervan stop gezet. <strong>Let op: </strong>  dit geldt vanaf 1 februari 2025."
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 5 - Verboden AI praktijken
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2816-1-1
   - conclusionId: "16.0.1"
@@ -2480,7 +2480,7 @@ conclusions:
       • Distributeurs werken samen met de bevoegde autoriteiten met betrekking tot maatregelen die genomen worden om de risico's van het AI-systeem dat zij op de markt hebben aangeboden te verminderen of te beperken."
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Afdeling 2 - Eisen voor AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#cpt_III.sct_2
       - source: Artikel 16 - Verplichtingen van aanbieders van AI-systemen met een hoog risico
@@ -2496,7 +2496,7 @@ conclusions:
     obligation: "Er zijn geen verplichtingen voor distributeurs van niet-hoog-risico AI-systemen, alleen voor hoog-risico. In de bronnen is Artikel 24 opgenomen, deze bevat de verplichtingen voor distributeurs van hoog-risico AI-systemen ter informatie."
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 24 - Verplichtingen van distributeurs
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e4246-1-1
   - conclusionId: "16.1.1"
@@ -2511,7 +2511,7 @@ conclusions:
       • Distributeurs werken samen met de bevoegde autoriteiten met betrekking tot maatregelen die genomen worden om de risico's van het AI-systeem dat zij op de markt hebben aangeboden te verminderen of te beperken."
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Afdeling 2 - Eisen voor AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#cpt_III.sct_2
       - source: Artikel 16 - Verplichtingen van aanbieders van AI-systemen met een hoog risico
@@ -2527,7 +2527,7 @@ conclusions:
     obligation: "Er zijn geen verplichtingen voor distributeurs van niet-hoog-risico AI-systemen, alleen voor hoog-risico. In de bronnen is Artikel 24 opgenomen, deze bevat de verplichtingen voor distributeurs van hoog-risico AI-systemen ter informatie."
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 24 - Verplichtingen van distributeurs
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e4246-1-1
   - conclusionId: "16.2.1"
@@ -2535,6 +2535,6 @@ conclusions:
     obligation: "Er zijn geen verplichtingen voor distributeurs van AI-model voor algemene doeleinden, alleen voor hoog-risico AI-systemen. In de bronnen is Artikel 24 opgenomen, deze bevat de verplichtingen voor distributeurs van hoog-risico AI-systemen ter informatie."
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
-        url: https://minbzk.github.io/Algoritmekader/voldoen-aan-wetten-en-regels/tijdlijn-ai-verordening/
+        url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
       - source: Artikel 24 - Verplichtingen van distributeurs
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e4246-1-1
