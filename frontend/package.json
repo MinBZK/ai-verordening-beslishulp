@@ -37,7 +37,7 @@
     "@tsconfig/node20": "^20.1.6",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^24.8.1",
-    "@types/pdfmake": "^0.2.11",
+    "@types/pdfmake": "^0.2.12",
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "^14.6.0",
