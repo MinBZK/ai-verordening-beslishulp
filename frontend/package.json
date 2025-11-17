@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.14.1",
-    "@tsconfig/node20": "^20.1.6",
+    "@tsconfig/node20": "^20.1.7",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^24.10.0",
     "@types/pdfmake": "^0.2.12",
