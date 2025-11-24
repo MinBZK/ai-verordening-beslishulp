@@ -26,7 +26,7 @@
     "fp-ts": "^2.16.11",
     "io-ts": "^2.2.22",
     "jexl": "^2.3.0",
-    "js-yaml": "^4.1.0",
+    "js-yaml": "^4.1.1",
     "pdfmake": "^0.2.20",
     "pinia": "^3.0.4",
     "vite-plugin-css-injected-by-js": "^3.5.2",
