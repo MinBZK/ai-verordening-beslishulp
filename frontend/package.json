@@ -44,7 +44,7 @@
     "@vue/tsconfig": "^0.8.1",
     "autoprefixer": "^10.4.23",
     "eslint": "^9.39.2",
-    "eslint-plugin-vue": "^10.5.1",
+    "eslint-plugin-vue": "^10.6.2",
     "npm-run-all2": "^8.0.2",
     "postcss": "^8.5.4",
     "prettier": "^3.7.4",
