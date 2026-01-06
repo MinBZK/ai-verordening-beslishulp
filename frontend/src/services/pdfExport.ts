@@ -25,7 +25,7 @@ function getISOFormat(format: 'full' | 'date' = 'full'): string {
     return now.toISOString()
   } else {
     // ISO 8601 date-only format: YYYY-MM-DD
-    return now.toISOString().split('T')[0]
+    return now.toISOString().split('T')[0] || ''
   }
 }
 
@@ -346,12 +346,12 @@ function buildLabels(labels: FilteredLabels): Content {
 
   for (const [key, value] of Object.entries(labels)) {
     tableRows.push([
-      {text: key, style: 'normal', margin: [0, 5, 0, 5]},
-      {text: value.join(', '), style: 'normal', margin: [0, 5, 0, 5]}
+      {text: key, style: 'normal', margin: [0, 5, 0, 5] as [number, number, number, number]},
+      {text: value.join(', '), style: 'normal', margin: [0, 5, 0, 5] as [number, number, number, number]}
     ])
   }
 
-  const contentElements: Content = [
+  const contentElements: Content[] = [
     {
       text: 'AI-verordening Profiel',
       style: 'header'

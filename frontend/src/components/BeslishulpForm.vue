@@ -164,8 +164,12 @@ async function givenAnswer(answer: Answer) {
   questionStore.addAnswer(questionId.value)
   if (answer.labels) {
     for (let i in answer.labels) {
-      questionStore.addLabel(answer.labels[i], questionId.value)
-      questionStore.addLabelBySubCategory(answer.labels[i], currentCategory.value?.subcategory)
+      if (questionId.value) {
+        questionStore.addLabel(answer.labels[i], questionId.value)
+      }
+      if (currentCategory.value?.subcategory) {
+        questionStore.addLabelBySubCategory(answer.labels[i], currentCategory.value.subcategory)
+      }
     }
   }
   if (answer.redirects) {
