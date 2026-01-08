@@ -22,4 +22,4 @@ stack-data==0.6.3
 traitlets==5.14.3
 types-requests==2.32.0.20240712
 typing_extensions==4.12.2
-urllib3==2.6.0
+urllib3==2.6.3
