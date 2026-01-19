@@ -36,7 +36,7 @@
     "@rushstack/eslint-patch": "^1.15.0",
     "@tsconfig/node20": "^20.1.8",
     "@types/js-yaml": "^4.0.9",
-    "@types/node": "^25.0.6",
+    "@types/node": "^25.0.9",
     "@types/pdfmake": "^0.2.12",
     "@vitejs/plugin-vue": "^6.0.3",
     "@vue/eslint-config-prettier": "^10.2.0",
