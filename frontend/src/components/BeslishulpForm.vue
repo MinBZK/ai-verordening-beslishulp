@@ -163,12 +163,12 @@ async function givenAnswer(answer: Answer) {
   questionStore.addUserDecisionPath(decision)
   questionStore.addAnswer(questionId.value)
   if (answer.labels) {
-    for (let i in answer.labels) {
+    for (const label of answer.labels) {
       if (questionId.value) {
-        questionStore.addLabel(answer.labels[i], questionId.value)
+        questionStore.addLabel(label, questionId.value as string)
       }
       if (currentCategory.value?.subcategory) {
-        questionStore.addLabelBySubCategory(answer.labels[i], currentCategory.value.subcategory)
+        questionStore.addLabelBySubCategory(label, currentCategory.value.subcategory)
       }
     }
   }
