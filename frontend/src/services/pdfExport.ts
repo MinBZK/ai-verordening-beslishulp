@@ -1,4 +1,4 @@
-import * as pdfMake from 'pdfmake/build/pdfmake'
+import pdfMake from 'pdfmake/build/pdfmake'
 import type {Content, StyleDictionary, TDocumentDefinitions} from 'pdfmake/interfaces'
 import { PDF_DISCLAIMER_ITEMS, PDF_INTRO_TEXT, SOURCE_INFO, CONTACT_INFO } from '@/components/Disclaimer.vue'
 import type {UserDecision} from '@/models/DecisionTree.ts'
@@ -314,7 +314,9 @@ export async function exportToPdf(
 
     const vfs = await FontService.getVFS()
 
-    pdfMake.createPdf(docDefinition, undefined, fontDefinitions, vfs).download(actualFilename)
+    pdfMake.addFonts(fontDefinitions)
+    pdfMake.addVirtualFileSystem(vfs)
+    pdfMake.createPdf(docDefinition).download(actualFilename)
 
     return Promise.resolve()
   } catch (error) {
