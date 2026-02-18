@@ -11,5 +11,16 @@ server {
         sub_filter_once on;
     }
 
+    location /stub_status {
+        internal;
+        stub_status;
+        access_log off;
+    }
+
+    location /metrics {
+        js_content prometheus.metrics;
+        access_log off;
+    }
+
     error_page 500 502 503 504 /50x.html;
 }

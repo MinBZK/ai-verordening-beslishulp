@@ -9,6 +9,7 @@ FROM nginxinc/nginx-unprivileged:alpine
 LABEL org.opencontainers.image.source=https://github.com/MinBZK/ai-verordening-beslishulp
 COPY --from=build /app/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/nginx.conf
+COPY prometheus.js /etc/nginx/prometheus.js
 COPY nginx.default.conf.template /etc/nginx/templates/default.conf.template
 EXPOSE 8080
 USER 1001
