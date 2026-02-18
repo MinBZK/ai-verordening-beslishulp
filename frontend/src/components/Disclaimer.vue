@@ -85,7 +85,7 @@ Let op: bij het interpreteren van de resultaten zijn de volgende punten van bela
 // Constanten voor gebruik in beide UI en PDF
 export const SOURCE_INFO = {
   name: 'AI-verordening Beslishulp',
-  url: 'https://ai-verordening-beslishulp.apps.digilab.network'
+  url: typeof window !== 'undefined' ? window.location.origin + window.location.pathname : ''
 }
 
 export const CONTACT_INFO = {
