@@ -7,10 +7,9 @@ RUN npm run build
 
 FROM nginxinc/nginx-unprivileged:alpine
 LABEL org.opencontainers.image.source=https://github.com/MinBZK/ai-verordening-beslishulp
-COPY --from=build --chmod=775 /app/dist /usr/share/nginx/html
+COPY --from=build /app/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY nginx.default.conf.template /etc/nginx/templates/default.conf.template
-COPY --chmod=755 docker-entrypoint.d/10-configure-base-path.sh /docker-entrypoint.d/10-configure-base-path.sh
 EXPOSE 8080
 USER 1001
 ENV BASE_PATH=/
