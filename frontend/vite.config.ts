@@ -99,6 +99,7 @@ function createSvgOutputFilter(): Plugin {
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: './',
   logLevel: 'info',
   plugins: [
     createSvgFilterPlugin(),
