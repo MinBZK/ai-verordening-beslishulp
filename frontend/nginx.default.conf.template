@@ -6,6 +6,9 @@ server {
         alias /usr/share/nginx/html/;
         index index.html;
         try_files $uri $uri/ ${BASE_PATH}/index.html;
+
+        sub_filter '<base href="/">' '<base href="${BASE_PATH}/">';
+        sub_filter_once on;
     }
 
     error_page 500 502 503 504 /50x.html;
