@@ -1,11 +1,11 @@
 server {
     listen 8080;
     server_name localhost;
+    absolute_redirect off;
 
     location ${BASE_PATH} {
         alias /usr/share/nginx/html/;
-        index index.html;
-        try_files $uri $uri/ ${BASE_PATH}/index.html;
+        try_files $uri ${BASE_PATH}/index.html;
 
         sub_filter '<base href="/">' '<base href="${BASE_PATH}/">';
         sub_filter_once on;
