@@ -13,7 +13,10 @@ concurrency:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: "minbzk/ai-verordening-beslishulp"
-  APP_URL: "https://ai-verordening-beslishulp.apps.digilab.network"
+  # ZAD Configuration - update these when ZAD project is created
+  ZAD_PROJECT: ai-verordening-beslishulp
+  ZAD_DEPLOYMENT: production
+  ZAD_COMPONENT: component-1
 
 jobs:
   deploy:
@@ -27,18 +30,6 @@ jobs:
     outputs:
       is_latest: ${{ steps.get_version.outputs.is_latest }}
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          repository: 'minbzk/ai-validation-infra'
-          ref: main
-          token: ${{ secrets.GH_PAT }}
-
-      - name: Configure Git
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
       - name: Check if latest version
         id: get_version
         env:
@@ -71,6 +62,9 @@ jobs:
           echo "Normalized versions:"
           echo "$NORMALIZED_VERSIONS"
 
+          # Get the latest version
+          LATEST=$(echo "$NORMALIZED_VERSIONS" | sort -V | tail -n1)
+
           # Determine if this is the latest version, using semantic version sorting
           if [ "$(echo -e "$VERSION\n$LATEST" | sort -V | tail -n1)" = "$VERSION" ]; then
             IS_LATEST="true"
@@ -90,6 +84,7 @@ jobs:
           echo "Version: $VERSION (Latest: $LATEST, Is Latest: $IS_LATEST)"
 
       - name: Verify Docker image exists
+        if: env.IS_LATEST == 'true'
         run: |
           # Check if the Docker image with this tag exists in the registry
           echo "Checking if Docker image exists: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}"
@@ -106,41 +101,25 @@ jobs:
             exit 1
           fi
 
-      - name: Update infrastructure
-        id: update_infra
+      - name: Deploy to ZAD
         if: env.IS_LATEST == 'true'
-        run: |
-          # Update the sandbox environment with the tag version
-          sed -i 's/newTag: .*$/newTag: ${{ env.VERSION }}/g' apps/ai-verordening-beslishulp/sandbox/kustomization.yaml
-          sed -i 's|minbzk.github.io/version: .*$|minbzk.github.io/version: ${{ env.VERSION }}|g' apps/ai-verordening-beslishulp/sandbox/kustomization.yaml
-
-          # Commit and push changes
-          git add apps/ai-verordening-beslishulp/sandbox/kustomization.yaml
-
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "Update ai-verordening-beslishulp sandbox to version ${{ env.VERSION }}"
-            git push
-            echo "Infrastructure repository updated"
-          fi
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+        uses: RijksICTGilde/zad-actions/deploy@v1
+        with:
+          api-key: ${{ secrets.ZAD_API_KEY }}
+          project-id: ${{ env.ZAD_PROJECT }}
+          deployment-name: ${{ env.ZAD_DEPLOYMENT }}
+          component: ${{ env.ZAD_COMPONENT }}
+          image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
 
       - name: Deployment status
         run: |
           if [ "${{ env.IS_LATEST }}" == "true" ]; then
-            if [ "${{ steps.update_infra.outcome }}" == "success" ]; then
-              echo "✅ Version ${{ env.VERSION }} deployment to ${{ env.APP_URL }} has been successfully initiated"
-              echo "The application should be available at ${{ env.APP_URL }} within a few minutes"
-              echo "✅ Using image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}"
-            else
-              echo "❌ Deployment failed"
-            fi
+            echo "✅ Version ${{ env.VERSION }} deployment initiated"
+            echo "✅ Using image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}"
           else
             if [[ -n "${{ env.VERSION }}" ]]; then
               echo "⚠️ Deployment skipped: Version ${{ env.VERSION }} is not the latest version"
-              echo "Only the latest version is deployed to the sandbox environment"
+              echo "Only the latest version is deployed"
             else
               echo "⚠️ Deployment skipped: Release tag does not follow the required 'v' prefix convention"
               echo "Only tags starting with 'v' (like v1.2.3) are supported for deployment"
