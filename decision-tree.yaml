@@ -582,11 +582,18 @@ questions:
   - questionId: "2.6"
     question: "Is er sprake van een uitzondering op de lijst van hoog-risico AI-systemen (uit bijlage III)?"
     explanation: "
-      Dit betreft een AI-systeem dat is bedoeld voor een van de volgende doeleinden:<br><br>
-      •	Het uitvoeren van een beperkte procedurele taak waarbij er geen significant risico is op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?<br>
-      •	Het verbeteren van het resultaat van een eerder voltooide menselijke activiteit en waarbij er geen significant risico is op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen?<br>
-      •	Het opsporen van besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen en waarbij het niet bedoeld is om de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden?<br>
-      •	Het uitvoeren van een voorbereidende taak voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen?"
+      Dit betreft een AI-systeem dat is bedoeld voor een van de volgende vier doeleinden (artikel 6, lid 3):<br><br>
+      •	Het uitvoeren van een beperkte procedurele taak;<br>
+      •	Het verbeteren van het resultaat van een eerder voltooide menselijke activiteit;<br>
+      •	Het opsporen van besluitvormingspatronen of afwijkingen van eerdere besluitvormingspatronen, zonder bedoeld te zijn de eerder voltooide menselijke beoordeling zonder behoorlijke menselijke toetsing te vervangen of te beïnvloeden;<br>
+      •	Het uitvoeren van een voorbereidende taak voor een beoordeling die relevant is voor de in bijlage III vermelde gebruiksgevallen.<br><br>
+      <strong>Let op — deze toelichting is gebaseerd op concept-richtsnoeren van de Europese Commissie (mei 2026). Deze richtsnoeren zijn nog in openbare consultatie (tot 23 juni 2026), niet-bindend en kunnen nog wijzigen.</strong><br>
+      Volgens deze concept-richtsnoeren moet de uitzondering eng worden uitgelegd:<br>
+      •	De uitzondering geldt alleen als er geen significant risico is op schade voor de gezondheid, veiligheid of de grondrechten van natuurlijke personen.<br>
+      •	De uitzondering geldt nooit als het systeem profilering van natuurlijke personen uitvoert (zie vorige vraag).<br>
+      •	De uitzondering geldt niet als het systeem de uitkomst van de beoordeling wezenlijk beïnvloedt. Ook wanneer een mens de output nog beoordeelt, kan het systeem hoog-risico blijven: menselijke tussenkomst alleen haalt een systeem niet uit de classificatie.<br>
+      •	Voorbeeld dat wél onder de uitzondering kan vallen: een cv-tool die sollicitaties uitsluitend in vooraf bepaalde categorieën sorteert. Dezelfde tool die kandidaten scoort of rangschikt valt er níét onder.<br>
+      •	Andere voorbeelden die onder de uitzondering kunnen vallen: een systeem dat prestatiegegevens samenvoegt tot een gestructureerd rapport, of dat door mensen opgestelde tekst herschrijft en wijst op mogelijk bevooroordeelde formuleringen."
     category: risicogroep
     subcategory: "Uitzondering Hoog risico bijlage III"
     sources:
@@ -596,10 +603,13 @@ questions:
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#anx_III
       - source: Artikel 6 (lid 3)- Classificatieregels voor AI-systemen met een hoog risico
         url: https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202401689#d1e2986-1-1
+      - source: Concept-richtsnoeren classificatie hoog-risico AI-systemen (Europese Commissie, mei 2026)
+        url: https://digital-strategy.ec.europa.eu/en/library/draft-commission-guidelines-classification-high-risk-ai-systems
     answers:
       - answer: Ja
         labels:
             - "geen hoog-risico AI"
+        subresult: "Beroep je je op deze uitzondering, dan moet je de onderbouwing (zelfbeoordeling) documenteren vóórdat het systeem in de handel wordt gebracht of in gebruik wordt gesteld, én het systeem registreren in de EU-databank (artikel 49, lid 2). Houd er rekening mee dat de Commissie de voorwaarden van artikel 6, lid 3 via gedelegeerde handelingen kan wijzigen (artikel 6, lid 6)."
         redirects:
          - nextQuestionId: "2.11" #open-source
            if: '"aanbieder" in labels || "gebruiksverantwoordelijke" in labels'
