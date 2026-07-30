@@ -358,7 +358,8 @@ questions:
       •	<strong>Ongeautoriseerde gezichtsherkenningsdatabases:</strong> gebruikt kan worden om databanken voor gezichtsherkenning aan te leggen of aan te vullen door willekeurige gezichtsafbeeldingen van internet of CCTV-beelden te scrapen;<br><br>
       •	<strong>Emotionele surveillancesystemen (op werk/onderwijs):</strong> gebruikt kan worden om emoties van een persoon op de werkplek of in het onderwijs af te leiden. Dit is niet van toepassing als het gebruik van het AI-systeem is bedoeld voor medische- of veiligheidsdoeleinden;<br><br>
       •	<strong>Biometrische discriminatiesystemen:</strong> gebruikt kan worden om natuurlijke personen individueel in categorieën in te delen op basis van biometrische gegevens om ras, politieke opvattingen, lidmaatschap van een vakbond, religieuze of levensbeschouwelijke overtuigingen, seksleven of seksuele geaardheid af te leiden. Dit verbod geldt niet voor het labelen of filteren van rechtmatig verkregen biometrische datasets, zoals afbeeldingen, op basis van biometrische gegevens, of voor categorisering van biometrische gegevens op het gebied van rechtshandhaving; <br><br>
-      •	<strong>Real-time biometrische identificatiesystemen (in publieke ruimte):</strong> gebruikt kan worden als een biometrisch systeem in de publieke ruimte voor identificatie op afstand in real-time, met het oog op de rechtshandhaving."
+      •	<strong>Real-time biometrische identificatiesystemen (in publieke ruimte):</strong> gebruikt kan worden als een biometrisch systeem in de publieke ruimte voor identificatie op afstand in real-time, met het oog op de rechtshandhaving.
+      • <strong>Uitkleedsystemen:</strong> gebruikt kan worden om realistisch pornografisch beeld-, video- of audiomateriaal te genereren van herkenbare natuurlijke persoon die daar geen expliciete toestemming voor hebben gegeven."
     category: risicogroep
     subcategory: "Verboden AI-systeem"
     sources:
