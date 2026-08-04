@@ -154,7 +154,7 @@ questions:
       - source: Begrippenlijst Algoritmekader
         url: https://minbzk.github.io/Algoritmekader/soorten-algoritmes-en-ai/definities/#begrippenlijst
     answers:
-        - answer: Ja, het is een AI-systeem (of AI-model)
+        - answer: Ja, het is een AI-systeem
           labels:
             - "AI-systeem"
           nextQuestionId: "1.5"
