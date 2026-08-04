@@ -111,7 +111,7 @@ questions:
       Een AI-systeem is een machine-gebaseerd systeem dat autonoom werkt, zichzelf kan aanpassen na inzet, en output levert zoals voorspellingen, inhoud, aanbevelingen of beslissingen.
       Deze output kan fysieke of virtuele omgevingen beïnvloeden.
       AI-systemen gebruiken inferentie, waarbij modellen of algoritmen worden afgeleid uit data, en combineren technieken als machinaal leren, logica en kennisrepresentatie. <br><br>
-      <strong>Let op:</strong> Voor een AI-model voor algemene doeleinden geldt een specifieke definitie.<br>
+      <strong>Let op:</strong> Voor een AI-model voor algemene doeleinden geldt een specifieke definitie die in een volgende vraag wordt behandeld.<br>
 
       <strong>Voorbeelden</strong><br>
       Technieken die sowieso onder de definitie vallen:<br>
@@ -358,7 +358,8 @@ questions:
       •	<strong>Ongeautoriseerde gezichtsherkenningsdatabases:</strong> gebruikt kan worden om databanken voor gezichtsherkenning aan te leggen of aan te vullen door willekeurige gezichtsafbeeldingen van internet of CCTV-beelden te scrapen;<br><br>
       •	<strong>Emotionele surveillancesystemen (op werk/onderwijs):</strong> gebruikt kan worden om emoties van een persoon op de werkplek of in het onderwijs af te leiden. Dit is niet van toepassing als het gebruik van het AI-systeem is bedoeld voor medische- of veiligheidsdoeleinden;<br><br>
       •	<strong>Biometrische discriminatiesystemen:</strong> gebruikt kan worden om natuurlijke personen individueel in categorieën in te delen op basis van biometrische gegevens om ras, politieke opvattingen, lidmaatschap van een vakbond, religieuze of levensbeschouwelijke overtuigingen, seksleven of seksuele geaardheid af te leiden. Dit verbod geldt niet voor het labelen of filteren van rechtmatig verkregen biometrische datasets, zoals afbeeldingen, op basis van biometrische gegevens, of voor categorisering van biometrische gegevens op het gebied van rechtshandhaving; <br><br>
-      •	<strong>Real-time biometrische identificatiesystemen (in publieke ruimte):</strong> gebruikt kan worden als een biometrisch systeem in de publieke ruimte voor identificatie op afstand in real-time, met het oog op de rechtshandhaving."
+      •	<strong>Real-time biometrische identificatiesystemen (in publieke ruimte):</strong> gebruikt kan worden als een biometrisch systeem in de publieke ruimte voor identificatie op afstand in real-time, met het oog op de rechtshandhaving.
+      • <strong>Uitkleedsystemen:</strong> gebruikt kan worden om realistisch pornografisch beeld-, video- of audiomateriaal te genereren van herkenbare natuurlijke persoon die daar geen expliciete toestemming voor hebben gegeven."
     category: risicogroep
     subcategory: "Verboden AI-systeem"
     sources:
@@ -974,8 +975,8 @@ conclusions:
           • Aanbieders tonen op een met redenen omkleed verzoek van een nationale bevoegde autoriteit de overeenstemming aan van het AI-systeem met een hoog risico met de eisen van afdeling 2<br>
           • Aanbieders zorgen ervoor dat het AI-systeem met een hoog risico voldoet aan de toegankelijkheidseisen overeenkomstig de Richtlijnen (EU) 2016/2102 en (EU) 2019/882.<br><br>
         <i>Geldig vanaf (Artikel 111):</i><br>
-         • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-         • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
+         • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 december 2027, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+         • Voor AI-systemen in gebruik die vóór 2 december 2027 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
 
         <strong>Verplichtingen voor aanbieders en gebruiksverantwoordelijken van AI-systemen met transparantieverplichtingen (Artikel 50):</strong><br>
           • Aanbieders zorgen ervoor dat AI-systemen die voor directe interactie met natuurlijke personen zijn bedoeld, zodanig worden ontworpen en ontwikkeld
@@ -986,8 +987,8 @@ conclusions:
             robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten
             en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen.<br><br>
         <i>Geldig vanaf (Artikel 111):</i><br>
-         • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-         • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br>"
+         • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 december 2027, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+         • Voor AI-systemen in gebruik die vóór 2 december 2027 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
         url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
@@ -1042,8 +1043,8 @@ conclusions:
           • Aanbieders tonen op een met redenen omkleed verzoek van een nationale bevoegde autoriteit de overeenstemming aan van het AI-systeem met een hoog risico met de eisen van afdeling 2<br>
           • Aanbieders zorgen ervoor dat het AI-systeem met een hoog risico voldoet aan de toegankelijkheidseisen overeenkomstig de Richtlijnen (EU) 2016/2102 en (EU) 2019/882.<br><br>
         <i>Geldig vanaf (Artikel 111):</i><br>
-          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-          • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br>"
+          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 december 2027, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+          • Voor AI-systemen in gebruik die vóór 2 december 2027 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
         url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
@@ -1091,8 +1092,8 @@ conclusions:
             robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten
             en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen.<br><br>
       <i>Geldig vanaf (Artikel 111):</i><br>
-         • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-         • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br>"
+         • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 december 2027, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+         • Voor AI-systemen in gebruik die vóór 2 december 2027 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
         url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
@@ -1114,8 +1115,8 @@ conclusions:
           • AI-geletterdheid (Artikel 4) gaat vanaf februari 2025 in werking.<br>
           • Gedragscodes (Artikel 95) zijn vrijwillig en kunnen op elk moment na de inwerkingtreding van de AI-verordening worden opgesteld en toegepast.<br><br>
       <i>Geldig vanaf (Artikel 111):</i><br>
-         • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-         • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br>"
+         • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 december 2027, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+         • Voor AI-systemen in gebruik die vóór 2 december 2027 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
         url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
@@ -1148,8 +1149,8 @@ conclusions:
           • Aanbieders tonen op een met redenen omkleed verzoek van een nationale bevoegde autoriteit de overeenstemming aan van het AI-systeem met een hoog risico met de eisen van afdeling 2<br>
           • Aanbieders zorgen ervoor dat het AI-systeem met een hoog risico voldoet aan de toegankelijkheidseisen overeenkomstig de Richtlijnen (EU) 2016/2102 en (EU) 2019/882.<br><br>
       <i>Geldig vanaf (Artikel 111):</i><br>
-         • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-         • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
+         • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 december 2027, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+         • Voor AI-systemen in gebruik die vóór 2 december 2027 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
       <strong>Verplichtingen voor aanbieders en gebruiksverantwoordelijken van AI-systemen met transparantieverplichtingen (Artikel 50):</strong><br>
           • Aanbieders zorgen ervoor dat AI-systemen die voor directe interactie met natuurlijke personen zijn bedoeld, zodanig worden ontworpen en ontwikkeld
             dat de betrokken natuurlijke personen worden geinformeerd dat zij interageren met een AI-systeem, tenzij dit duidelijk is vanuit het oogpunt van een normaal geinformeerde
@@ -1159,8 +1160,8 @@ conclusions:
             robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten
             en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen.<br><br>
      <i>Geldig vanaf (Artikel 111):</i><br>
-         • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-         • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
+         • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 december 2027, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+         • Voor AI-systemen in gebruik die vóór 2 december 2027 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
      <strong>Verplichtingen voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54): </strong><br>
       • De technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan<br>
       • Informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren<br>
@@ -1229,8 +1230,8 @@ conclusions:
           • Aanbieders tonen op een met redenen omkleed verzoek van een nationale bevoegde autoriteit de overeenstemming aan van het AI-systeem met een hoog risico met de eisen van afdeling 2<br>
           • Aanbieders zorgen ervoor dat het AI-systeem met een hoog risico voldoet aan de toegankelijkheidseisen overeenkomstig de Richtlijnen (EU) 2016/2102 en (EU) 2019/882.<br><br>
      <i>Geldig vanaf (Artikel 111):</i><br>
-         • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-         • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
+         • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 december 2027, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+         • Voor AI-systemen in gebruik die vóór 2 december 2027 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
      <strong>Verplichtingen voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54):</strong><br>
       • De technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan<br>
       • Informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren<br>
@@ -1292,8 +1293,8 @@ conclusions:
             robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten
             en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen.<br><br>
      <i>Geldig vanaf (Artikel 111):</i><br>
-         • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-         • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
+         • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 december 2027, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+         • Voor AI-systemen in gebruik die vóór 2 december 2027 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
      <strong>Verplichtingen voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54):</strong><br>
       • De technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan<br>
       • Informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren<br>
@@ -1489,14 +1490,14 @@ conclusions:
         • Gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.<br>
         • Gebruiksverantwoordelijken die publiekrechtelijke organen zijn of particuliere entiteiten zijn die openbare diensten verlenen, en gebruiksverantwoordelijken van AI-systemen met een hoog risico gebruikt in krediet/verzekering (bijlage III, 5, c en d) een beoordeling uit van de gevolgen voor de grondrechten die het gebruik van een dergelijk systeem kan opleveren (Artikel 27).<br><br>
       <i>Geldig vanaf (Artikel 111):</i><br>
-          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-          • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
+          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 december 2027, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+          • Voor AI-systemen in gebruik die vóór 2 december 2027 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
       <strong>Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen (Artikel 50):</strong><br>
           • Gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680, indien van toepassing<br>
           • Gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent genereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief, satirisch, fictief of analoog werk of programma, zijn de transparantieverplichtingen beperkt tot de openbaarmaking van het bestaan van dergelijke gegenereerde of bewerkte content op een passende wijze die de weergave of het genot van het werk niet belemmert.<br><br>
       <i>Geldig vanaf (Artikel 111):</i><br>
-          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-          • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
+          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 december 2027, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+          • Voor AI-systemen in gebruik die vóór 2 december 2027 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
         url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
@@ -1541,8 +1542,8 @@ conclusions:
         • Gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.<br>
         • Gebruiksverantwoordelijken die publiekrechtelijke organen zijn of particuliere entiteiten zijn die openbare diensten verlenen, en gebruiksverantwoordelijken van AI-systemen met een hoog risico gebruikt in krediet/verzekering (bijlage III, 5, c en d) een beoordeling uit van de gevolgen voor de grondrechten die het gebruik van een dergelijk systeem kan opleveren (Artikel 27).<br><br>
       <i>Geldig vanaf (Artikel 111):</i><br>
-          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-          • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
+          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 december 2027, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+          • Voor AI-systemen in gebruik die vóór 2 december 2027 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
         url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
@@ -1575,8 +1576,8 @@ conclusions:
           • Gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680, indien van toepassing<br>
           • Gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent genereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief, satirisch, fictief of analoog werk of programma, zijn de transparantieverplichtingen beperkt tot de openbaarmaking van het bestaan van dergelijke gegenereerde of bewerkte content op een passende wijze die de weergave of het genot van het werk niet belemmert.<br><br>
       <i>Geldig vanaf (Artikel 111):</i><br>
-          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-          • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
+          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 december 2027, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+          • Voor AI-systemen in gebruik die vóór 2 december 2027 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
         url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
@@ -1629,14 +1630,14 @@ conclusions:
         • Gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.<br>
         • Gebruiksverantwoordelijken die publiekrechtelijke organen zijn of particuliere entiteiten zijn die openbare diensten verlenen, en gebruiksverantwoordelijken van AI-systemen met een hoog risico gebruikt in krediet/verzekering (bijlage III, 5, c en d) een beoordeling uit van de gevolgen voor de grondrechten die het gebruik van een dergelijk systeem kan opleveren (Artikel 27).<br><br>
       <i>Geldig vanaf (Artikel 111):</i><br>
-          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-          • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
+          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 december 2027, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+          • Voor AI-systemen in gebruik die vóór 2 december 2027 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
       <strong>Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen (Artikel 50):</strong><br>
           • Gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680, indien van toepassing<br>
           • Gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent genereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief, satirisch, fictief of analoog werk of programma, zijn de transparantieverplichtingen beperkt tot de openbaarmaking van het bestaan van dergelijke gegenereerde of bewerkte content op een passende wijze die de weergave of het genot van het werk niet belemmert.<br><br>
       <i>Geldig vanaf (Artikel 111):</i><br>
-          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-          • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
+          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 december 2027, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+          • Voor AI-systemen in gebruik die vóór 2 december 2027 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
         url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
@@ -1681,8 +1682,8 @@ conclusions:
         • Gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.<br>
         • Gebruiksverantwoordelijken die publiekrechtelijke organen zijn of particuliere entiteiten zijn die openbare diensten verlenen, en gebruiksverantwoordelijken van AI-systemen met een hoog risico gebruikt in krediet/verzekering (bijlage III, 5, c en d) een beoordeling uit van de gevolgen voor de grondrechten die het gebruik van een dergelijk systeem kan opleveren (Artikel 27).<br><br>
       <i>Geldig vanaf (Artikel 111):</i><br>
-          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-          • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
+          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 december 2027, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+          • Voor AI-systemen in gebruik die vóór 2 december 2027 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
         url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
@@ -1715,8 +1716,8 @@ conclusions:
           • Gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680, indien van toepassing<br>
           • Gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent genereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief, satirisch, fictief of analoog werk of programma, zijn de transparantieverplichtingen beperkt tot de openbaarmaking van het bestaan van dergelijke gegenereerde of bewerkte content op een passende wijze die de weergave of het genot van het werk niet belemmert.<br><br>
       <i>Geldig vanaf (Artikel 111):</i><br>
-          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-          • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
+          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 december 2027, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+          • Voor AI-systemen in gebruik die vóór 2 december 2027 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
         url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
@@ -1803,8 +1804,8 @@ conclusions:
           • Aanbieders tonen op een met redenen omkleed verzoek van een nationale bevoegde autoriteit de overeenstemming aan van het AI-systeem met een hoog risico met de eisen van afdeling 2<br>
           • Aanbieders zorgen ervoor dat het AI-systeem met een hoog risico voldoet aan de toegankelijkheidseisen overeenkomstig de Richtlijnen (EU) 2016/2102 en (EU) 2019/882.<br><br>
       <i>Geldig vanaf (Artikel 111):</i><br>
-          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-          • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
+          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 december 2027, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+          • Voor AI-systemen in gebruik die vóór 2 december 2027 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
       <strong>Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico (Artikel 26 en Artikel 27):</strong><br>
         • Het nemen van passende technische en organisatorische maatregelen om te waarborgen dat dergelijke systemen in overeenstemming met de gebruiksaanwijzingen die bij de systemen zijn gevoegd worden gebruikt<br>
         • Het opdragen van menselijk toezicht aan natuurlijke personen die over de nodige bekwaamheid, opleiding en autoriteit beschikken en de nodige ondersteuning krijgen<br>
@@ -1819,14 +1820,14 @@ conclusions:
         • Gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.<br>
         • Gebruiksverantwoordelijken die publiekrechtelijke organen zijn of particuliere entiteiten zijn die openbare diensten verlenen, en gebruiksverantwoordelijken van AI-systemen met een hoog risico gebruikt in krediet/verzekering (bijlage III, 5, c en d) een beoordeling uit van de gevolgen voor de grondrechten die het gebruik van een dergelijk systeem kan opleveren (Artikel 27).<br><br>
       <i>Geldig vanaf (Artikel 111):</i><br>
-          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-          • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
+          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 december 2027, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+          • Voor AI-systemen in gebruik die vóór 2 december 2027 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
       <strong>Transparantieverplichtingen voor aanbieders en gebruiksverantwoordelijken van bepaalde AI-systemen (Artikel 50):</strong><br>
           • Gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680, indien van toepassing<br>
           • Gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent genereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief, satirisch, fictief of analoog werk of programma, zijn de transparantieverplichtingen beperkt tot de openbaarmaking van het bestaan van dergelijke gegenereerde of bewerkte content op een passende wijze die de weergave of het genot van het werk niet belemmert.<br><br>
       <i>Geldig vanaf (Artikel 111):</i><br>
-          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-          • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
+          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 december 2027, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+          • Voor AI-systemen in gebruik die vóór 2 december 2027 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
         url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
@@ -1891,8 +1892,8 @@ conclusions:
           • Aanbieders tonen op een met redenen omkleed verzoek van een nationale bevoegde autoriteit de overeenstemming aan van het AI-systeem met een hoog risico met de eisen van afdeling 2<br>
           • Aanbieders zorgen ervoor dat het AI-systeem met een hoog risico voldoet aan de toegankelijkheidseisen overeenkomstig de Richtlijnen (EU) 2016/2102 en (EU) 2019/882.<br><br>
       <i>Geldig vanaf (Artikel 111):</i><br>
-          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-          • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
+          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 december 2027, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+          • Voor AI-systemen in gebruik die vóór 2 december 2027 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
       <strong>Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico (Artikel 26 en Artikel 27):</strong><br>
         • Het nemen van passende technische en organisatorische maatregelen om te waarborgen dat dergelijke systemen in overeenstemming met de gebruiksaanwijzingen die bij de systemen zijn gevoegd worden gebruikt<br>
         • Het opdragen van menselijk toezicht aan natuurlijke personen die over de nodige bekwaamheid, opleiding en autoriteit beschikken en de nodige ondersteuning krijgen<br>
@@ -1907,8 +1908,8 @@ conclusions:
         • Gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.<br>
         • Gebruiksverantwoordelijken die publiekrechtelijke organen zijn of particuliere entiteiten zijn die openbare diensten verlenen, en gebruiksverantwoordelijken van AI-systemen met een hoog risico gebruikt in krediet/verzekering (bijlage III, 5, c en d) een beoordeling uit van de gevolgen voor de grondrechten die het gebruik van een dergelijk systeem kan opleveren (Artikel 27).<br><br>
       <i>Geldig vanaf (Artikel 111):</i><br>
-          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-          • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
+          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 december 2027, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+          • Voor AI-systemen in gebruik die vóór 2 december 2027 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
         url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
@@ -1961,8 +1962,8 @@ conclusions:
           • Gebruiksverantwoordelijken van een systeem voor het herkennen van emoties of een systeem voor biometrische categorisering informeren de daaraan blootgestelde natuurlijke personen over de werking van het systeem en verwerken de persoonsgegevens in overeenstemming met Verordening (EU) 2016/679, Verordening (EU) 2018/1725 en Richtlijn (EU) 2016/680, indien van toepassing<br>
           • Gebruiksverantwoordelijken van een AI-systeem dat beeld-, audio- of videocontent genereert of bewerkt die een deepfake vormt, maken bekend dat de content kunstmatig is gegenereerd of gemanipuleerd. Wanneer de content deel uitmaakt van een kennelijk artistiek, creatief, satirisch, fictief of analoog werk of programma, zijn de transparantieverplichtingen beperkt tot de openbaarmaking van het bestaan van dergelijke gegenereerde of bewerkte content op een passende wijze die de weergave of het genot van het werk niet belemmert.<br><br>
       <i>Geldig vanaf (Artikel 111):</i><br>
-          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-          • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
+          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 december 2027, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+          • Voor AI-systemen in gebruik die vóór 2 december 2027 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>"
     sources:
       - source: Tijdlijn AI-verordening Algoritmekader
         url: https://minbzk.github.io/Algoritmekader/ai-verordening/tijdlijn-ai-verordening/
@@ -2015,8 +2016,8 @@ conclusions:
           • Aanbieders tonen op een met redenen omkleed verzoek van een nationale bevoegde autoriteit de overeenstemming aan van het AI-systeem met een hoog risico met de eisen van afdeling 2<br>
           • Aanbieders zorgen ervoor dat het AI-systeem met een hoog risico voldoet aan de toegankelijkheidseisen overeenkomstig de Richtlijnen (EU) 2016/2102 en (EU) 2019/882.<br><br>
       <i>Geldig vanaf (Artikel 111):</i><br>
-          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-          • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
+          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 december 2027, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+          • Voor AI-systemen in gebruik die vóór 2 december 2027 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
       <strong>Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico (Artikel 26 en Artikel 27):</strong><br>
         • Het nemen van passende technische en organisatorische maatregelen om te waarborgen dat dergelijke systemen in overeenstemming met de gebruiksaanwijzingen die bij de systemen zijn gevoegd worden gebruikt<br>
         • Het opdragen van menselijk toezicht aan natuurlijke personen die over de nodige bekwaamheid, opleiding en autoriteit beschikken en de nodige ondersteuning krijgen<br>
@@ -2031,8 +2032,8 @@ conclusions:
         • Gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.<br>
         • Gebruiksverantwoordelijken die publiekrechtelijke organen zijn of particuliere entiteiten zijn die openbare diensten verlenen, en gebruiksverantwoordelijken van AI-systemen met een hoog risico gebruikt in krediet/verzekering (bijlage III, 5, c en d) een beoordeling uit van de gevolgen voor de grondrechten die het gebruik van een dergelijk systeem kan opleveren (Artikel 27).<br><br>
       <i>Geldig vanaf (Artikel 111):</i><br>
-          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-          • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
+          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 december 2027, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+          • Voor AI-systemen in gebruik die vóór 2 december 2027 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
       <strong>Verplichtingen voor aanbieders en gebruiksverantwoordelijken van AI-systemen met transparantieverplichtingen (Artikel 50):</strong><br>
           • Aanbieders zorgen ervoor dat AI-systemen die voor directe interactie met natuurlijke personen zijn bedoeld, zodanig worden ontworpen en ontwikkeld
             dat de betrokken natuurlijke personen worden geinformeerd dat zij interageren met een AI-systeem, tenzij dit duidelijk is vanuit het oogpunt van een normaal geinformeerde
@@ -2042,8 +2043,8 @@ conclusions:
             robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten
             en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen.<br><br>
       <i>Geldig vanaf (Artikel 111):</i><br>
-          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-          • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
+          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 december 2027, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+          • Voor AI-systemen in gebruik die vóór 2 december 2027 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
       <strong>Verplichtingen voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54):</strong><br>
       • De technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan<br>
       • Informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren<br>
@@ -2122,8 +2123,8 @@ conclusions:
           • Aanbieders tonen op een met redenen omkleed verzoek van een nationale bevoegde autoriteit de overeenstemming aan van het AI-systeem met een hoog risico met de eisen van afdeling 2<br>
           • Aanbieders zorgen ervoor dat het AI-systeem met een hoog risico voldoet aan de toegankelijkheidseisen overeenkomstig de Richtlijnen (EU) 2016/2102 en (EU) 2019/882.<br><br>
       <i>Geldig vanaf (Artikel 111):</i><br>
-          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-          • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
+          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 december 2027, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+          • Voor AI-systemen in gebruik die vóór 2 december 2027 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
       <strong>Verplichtingen van gebruiksverantwoordelijken van AI-systemen met een hoog risico (Artikel 26 en Artikel 27):</strong><br>
         • Het nemen van passende technische en organisatorische maatregelen om te waarborgen dat dergelijke systemen in overeenstemming met de gebruiksaanwijzingen die bij de systemen zijn gevoegd worden gebruikt<br>
         • Het opdragen van menselijk toezicht aan natuurlijke personen die over de nodige bekwaamheid, opleiding en autoriteit beschikken en de nodige ondersteuning krijgen<br>
@@ -2138,8 +2139,8 @@ conclusions:
         • Gebruiksverantwoordelijken werken samen met de relevante bevoegde autoriteiten bij alle door deze autoriteiten genomen maatregelen met betrekking tot een AI-systeem met een hoog risico met het oog op de uitvoering van deze verordening.<br>
         • Gebruiksverantwoordelijken die publiekrechtelijke organen zijn of particuliere entiteiten zijn die openbare diensten verlenen, en gebruiksverantwoordelijken van AI-systemen met een hoog risico gebruikt in krediet/verzekering (bijlage III, 5, c en d) een beoordeling uit van de gevolgen voor de grondrechten die het gebruik van een dergelijk systeem kan opleveren (Artikel 27).<br><br>
       <i>Geldig vanaf (Artikel 111):</i><br>
-          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-          • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
+          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 december 2027, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+          • Voor AI-systemen in gebruik die vóór 2 december 2027 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
       <strong>Verplichtingen voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54):</strong><br>
       • De technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan<br>
       • Informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren<br>
@@ -2211,8 +2212,8 @@ conclusions:
             robuust en betrouwbaar zijn voor zover dat technisch haalbaar is, rekening houdend met de specifieke kenmerken en beperkingen van de verschillende soorten content, de uitvoeringskosten
             en de algemeen erkende stand van de techniek, zoals tot uiting kan komen in relevante technische normen.<br><br>
       <i>Geldig vanaf (Artikel 111):</i><br>
-          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 augustus 2026, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
-          • Voor AI-systemen in gebruik die vóór 2 augustus 2026 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
+          • Voor AI-systemen in ontwikkeling geldt dat de verordening volledig in werking treedt op 2 december 2027, wat betekent dat deze systemen vanaf die datum aan de voorschriften moeten voldoen.<br>
+          • Voor AI-systemen in gebruik die vóór 2 december 2027 zijn geïntroduceerd, geldt dat de verordening alleen van toepassing is als ze significante wijzigingen ondergaan, maar voor AI-systemen met een hoog risico, met name die bedoeld voor overheidsgebruik, moeten aanbieders uiterlijk op 2 augustus 2030 aan alle vereisten voldoen, ongeacht ontwerpwijzigingen.<br><br>
       <strong>Verplichtingen voor de aanbieder van het AI-model voor algemene doeleinden, waarop het AI-systeem voor algemene doeleinden is gebaseerd (Artikel 53 en Artikel 54):</strong><br>
       • De technische documentatie van het model opstellen en up-to-date houden, inclusief het trainings- en testproces en de resultaten van de evaluatie ervan<br>
       • Informatie en documentatie opstellen, up-to-date houden en beschikbaar stellen voor aanbieders van AI-systemen die het AI-model voor algemene doeleinden in hun AI-systemen willen integreren<br>
