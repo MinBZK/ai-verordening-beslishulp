@@ -158,7 +158,7 @@ questions:
           labels:
             - "AI-systeem"
           nextQuestionId: "1.5"
-        - answer: Nee, het is geen AI-systeem (of AI-model)
+        - answer: Nee, het is geen AI-systeem
           nextQuestionId: "1.4.2"
         - answer: Ik weet het niet
           nextQuestionId: "1.6.1" # Hulp bij definitie AI-systeem - Beslisregels
