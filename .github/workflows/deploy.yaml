@@ -13,7 +13,7 @@ concurrency:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: "minbzk/ai-verordening-beslishulp"
-  APP_URL: "https://ai-verordening-beslishulp.apps.digilab.network"
+  APP_URL: "https://algoritmes.rijksapp.nl/beslishulp-ai-verordening"
 
 jobs:
   deploy:
