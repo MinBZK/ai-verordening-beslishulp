@@ -49,3 +49,7 @@ jobs:
 
       - name: Type-check
         run: npm run type-check --prefix frontend
+
+      # Componenttests, inclusief een axe-scan per component (Laag 2).
+      - name: Component tests
+        run: npm run test:unit --prefix frontend
