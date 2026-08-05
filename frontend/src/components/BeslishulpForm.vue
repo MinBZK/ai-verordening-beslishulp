@@ -223,11 +223,7 @@ function acceptDisclaimer() {
       id="progress-question-mobile"
       class="rvo-layout-column rvo-max-width-layout rvo-layout-align-items-start rvo-max-width-layout-inline-padding--sm"
     >
-      <ProgressTracker
-        v-if="categoryState && !findConclusion"
-        :ai_act_applicable_state="categoryState.ai_act_applicable_state"
-        :risk_group_state="categoryState.risk_group_state"
-      />
+      <ProgressTracker v-if="!findConclusion" :category-state="categoryState" />
       <div class="rvo-layout-gap--md">
         <DefaultLoader :loading="isLoading" />
         <DefaultError :error="error" />

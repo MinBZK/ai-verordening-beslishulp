@@ -1,17 +1,36 @@
 <script setup lang="ts">
+import { computed } from 'vue'
+import type { CategoryProgress } from '@/models/Categories'
+
 interface Props {
-  ai_act_applicable_state: string
-  risk_group_state: string
+  categoryState: CategoryProgress[]
 }
 
-defineProps<Props>()
+const props = defineProps<Props>()
 
-function change_status(category: string) {
+/**
+ * The label shown per category, in the order the categories are defined in categories.yaml.
+ * Categories without a label (the conclusion) are not shown as a separate step, the end of the
+ * tracker covers those.
+ */
+const stepLabels = [
+  'Geldt de AI-verorderning voor mij?',
+  'Zo ja, in welke risicogroep valt de toepassing?'
+]
+
+const steps = computed(() =>
+  props.categoryState.slice(0, stepLabels.length).map((progress, index) => ({
+    ...progress,
+    label: stepLabels[index]
+  }))
+)
+
+function change_status(state: string) {
   return (
     'rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-image-bg-progress-tracker-' +
-    category +
+    state +
     '-md--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before rvo-progress-tracker__step--' +
-    category
+    state
   )
 }
 </script>
@@ -21,14 +40,9 @@ function change_status(category: string) {
     <div
       class="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--start rvo-image-bg-progress-tracker-start-end-md--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before"
     ></div>
-    <div :class="change_status(ai_act_applicable_state)">
+    <div v-for="step in steps" :key="step.category" :class="change_status(step.state)">
       <a class="progress-tracker-font rvo-progress-tracker__step-link">
-        Geldt de AI-verorderning voor mij?
-      </a>
-    </div>
-    <div :class="change_status(risk_group_state)">
-      <a class="progress-tracker-font rvo-progress-tracker__step-link">
-        Zo ja, in welke risicogroep valt de toepassing?
+        {{ step.label }}
       </a>
     </div>
     <div

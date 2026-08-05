@@ -1,31 +1,26 @@
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { defineStore } from 'pinia'
+import categories_json from '@/assets/categories.json'
+import type { CategoryProgress, CategoryStateValue } from '@/models/Categories'
 
 export const useCategoryStore = defineStore('category', () => {
-  const startCategory = 'AI-verordening van toepassing?'
-  const startSubCategory = 'Soort toepassing'
+  /**
+   * categories.yaml is the single source of truth for the categories: the order in which the
+   * categories first appear there is the order in which the user traverses them.
+   */
+  const categoryOrder = [...new Set(categories_json.map((category) => category.category))]
+  const startCategory = categoryOrder[0] ?? ''
+  const startSubCategory = categories_json[0]?.subcategory ?? ''
   const initialPreviousCategory = sessionStorage.getItem('previousCategory') ?? startCategory
   const initialPreviousSubCategory =
     sessionStorage.getItem('previousSubCategory') ?? startSubCategory
   const initialCurrentCategory = sessionStorage.getItem('currentCategory') ?? startCategory
   const initialCurrentSubCategory = sessionStorage.getItem('currentSubCategory') ?? startSubCategory
   const initialCategoryTrace = JSON.parse(
-    sessionStorage.getItem('categoryTrace') ?? '["AI-verordening van toepassing?"]'
+    sessionStorage.getItem('categoryTrace') ?? JSON.stringify([startCategory])
   )
   const initialSubCategoryTrace = JSON.parse(
-    sessionStorage.getItem('subCategoryTrace') ?? '["Soort toepassing"]'
-  )
-  const initialCategoryStateString = `{
-  "ai_act_applicable_state": "doing",
-  "risk_group_state": "incomplete"
-}`
-  const categoryMapper = {
-    'AI-verordening van toepassing?': 'ai_act_applicable_state',
-    'Welke risicogroep geldt?': 'risk_group_state'
-  }
-
-  const initialCategoryState = JSON.parse(
-    sessionStorage.getItem('categoryState') ?? initialCategoryStateString
+    sessionStorage.getItem('subCategoryTrace') ?? JSON.stringify([startSubCategory])
   )
   const previousCategory = ref(String(initialPreviousCategory))
   const previousSubCategory = ref(String(initialPreviousSubCategory))
@@ -33,7 +28,24 @@ export const useCategoryStore = defineStore('category', () => {
   const currentSubCategory = ref(String(initialCurrentSubCategory))
   const categoryTrace = ref(initialCategoryTrace)
   const subCategoryTrace = ref(initialSubCategoryTrace)
-  const categoryState = ref(initialCategoryState)
+
+  /**
+   * The progress per category, in the order of categories.yaml. A category is only completed once
+   * the user has moved on to a later category, so a category stays "doing" for every question
+   * within that category.
+   */
+  const categoryState = computed<CategoryProgress[]>(() => {
+    const currentIndex = Math.max(categoryOrder.indexOf(currentCategory.value), 0)
+    return categoryOrder.map((category, index) => {
+      let state: CategoryStateValue = 'incomplete'
+      if (index < currentIndex) {
+        state = 'completed'
+      } else if (index === currentIndex) {
+        state = 'doing'
+      }
+      return { category, state }
+    })
+  })
 
   function updateCurrentCategory(category: string | undefined, subcategory: string | undefined) {
     if (category && subcategory) {
@@ -49,56 +61,18 @@ export const useCategoryStore = defineStore('category', () => {
       sessionStorage.setItem('previousSubCategory', previousSubCategory.value)
       sessionStorage.setItem('currentCategory', currentCategory.value)
       sessionStorage.setItem('currentSubCategory', currentSubCategory.value)
-      updateCategoryState()
-    }
-  }
-
-  function updateCategoryState() {
-    /**
-     * Update the CategoryState by looking at the currentCategory only
-     */
-    const currentCategoryKey = categoryMapper[currentCategory.value as keyof typeof categoryMapper]
-    const previousCategoryKey =
-      categoryMapper[previousCategory.value as keyof typeof categoryMapper]
-    if (previousCategoryKey != currentCategoryKey) {
-      categoryState.value[previousCategoryKey] = 'completed'
-      categoryState.value[currentCategoryKey] = 'doing'
-      sessionStorage.setItem('categoryState', JSON.stringify(categoryState.value))
-    }
-  }
-
-  function revertCategoryState() {
-    /**
-     * Update the CategoryState by looking at the currentCategory only
-     */
-    const currentCategoryKey = categoryMapper[currentCategory.value as keyof typeof categoryMapper]
-    const previousCategoryKey =
-      categoryMapper[previousCategory.value as keyof typeof categoryMapper]
-    if (previousCategoryKey != currentCategoryKey) {
-      categoryState.value[currentCategoryKey] = 'incomplete'
-      categoryState.value[previousCategoryKey] = 'doing'
-      sessionStorage.setItem('categoryState', JSON.stringify(categoryState.value))
     }
   }
 
   function revertCurrentCategory() {
     /**
-     * Set the currentCategory back to incomplete when the previousCategory is different
+     * Go back one step in the trace, so the currentCategory is the category of the question the
+     * user returns to
      */
     // Categories section
-    revertCategoryState()
-    if (categoryTrace.value.length - 1 > 0) {
-      currentCategory.value = categoryTrace.value[categoryTrace.value.length - 1]
-    } else {
-      currentCategory.value = startCategory
-    }
     categoryTrace.value.pop()
-
-    if (categoryTrace.value.length - 1 > 0) {
-      previousCategory.value = categoryTrace.value[categoryTrace.value.length - 1]
-    } else {
-      previousCategory.value = startCategory
-    }
+    currentCategory.value = categoryTrace.value[categoryTrace.value.length - 1] ?? startCategory
+    previousCategory.value = categoryTrace.value[categoryTrace.value.length - 2] ?? startCategory
     // Subcategories section
     if (subCategoryTrace.value.length - 1 > 0) {
       currentSubCategory.value = subCategoryTrace.value[subCategoryTrace.value.length - 1]
@@ -126,7 +100,6 @@ export const useCategoryStore = defineStore('category', () => {
     currentSubCategory.value = startSubCategory
     previousCategory.value = startCategory
     previousSubCategory.value = startSubCategory
-    categoryState.value = JSON.parse(initialCategoryStateString)
     categoryTrace.value = [startCategory]
     subCategoryTrace.value = [startSubCategory]
     sessionStorage.removeItem('currentCategory')
