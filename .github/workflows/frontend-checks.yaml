@@ -14,6 +14,8 @@ jobs:
   checks:
     name: lint + type-check
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
 
@@ -57,6 +59,8 @@ jobs:
   a11y-e2e:
     name: toegankelijkheid (Playwright + axe)
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
 
