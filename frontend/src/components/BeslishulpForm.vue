@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import jexl from 'jexl'
-import { computed, onMounted, ref } from 'vue'
+import { computed, nextTick, onMounted, ref } from 'vue'
 import {
   Answer,
   Conclusions,
@@ -41,6 +41,13 @@ const questionId = QuestionId
 const conclusionId = ConclusionId
 const isLoading = ref(true)
 const error = ref<string | null>(null)
+
+/**
+ * A7: zonder statusbericht verschijnt de volgende vraag geruisloos. De live-regio meldt de
+ * stap, niet de vraagtekst zelf — die wordt al voorgelezen doordat de focus naar de nieuwe
+ * <h1> gaat (zie Question.vue). Anders zou alles dubbel worden aangekondigd.
+ */
+const announcement = ref('')
 
 const userDecisions = UserDecisionsService()
 
@@ -146,10 +153,14 @@ function handleNextStep(object: Answer | Redirect) {
     currentCategory.value?.category,
     currentCategory.value?.subcategory
   )
-  // ugly hack, we do not know for sure when the DOM is fully updated with the new situation, this works
-  setTimeout(() => {
+  // Wachten op de DOM-update in plaats van op een timer van 200ms: die gok scrollde de
+  // gebruiker weg op een willekeurig moment na de vraagovergang.
+  nextTick(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, 200)
+    announcement.value = findConclusion.value
+      ? 'Resultaat geladen.'
+      : `Volgende vraag geladen: ${currentCategory.value?.subcategory ?? currentCategory.value?.category ?? ''}`
+  })
 }
 
 async function givenAnswer(answer: Answer) {
@@ -216,6 +227,19 @@ function acceptDisclaimer() {
   <div v-else class="rvo-layout-column rvo-layout-gap--2xl">
     <!-- Skip-link: eerste focusbare element, zodat toetsenbordgebruikers de navigatie kunnen overslaan -->
     <a class="aiv-skip-link rvo-link" href="#beslishulp-inhoud">Ga direct naar de inhoud</a>
+    <!--
+      Statusberichten (WCAG 4.1.3). De regio staat er altijd, ook leeg: een aria-live-regio die
+      pas samen met zijn tekst in de DOM verschijnt, wordt door schermlezers niet aangekondigd.
+    -->
+    <div
+      id="beslishulp-statusbericht"
+      class="aiv-visually-hidden"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+    >
+      {{ announcement }}
+    </div>
     <Header
       :question-id="currentQuestion?.questionId"
       :disclaimer-screen="AcceptedDisclaimer"

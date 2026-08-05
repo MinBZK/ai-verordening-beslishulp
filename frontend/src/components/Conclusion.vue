@@ -2,7 +2,7 @@
 import Sources from '@/components/Sources.vue'
 import SubResult from '@/components/SubResult.vue'
 import ExportForm from '@/components/ExportForm.vue'
-import { ref, onMounted, provide, getCurrentInstance } from 'vue'
+import { ref, nextTick, onMounted, provide, getCurrentInstance } from 'vue'
 import type { UserDecision } from '@/models/DecisionTree.ts'
 import { exportToPdf } from '@/services/pdfExport'
 import { filterLabels } from '@/services/labelsService'
@@ -21,6 +21,7 @@ defineEmits(['back'])
 // Gebruik ref voor reactieve data
 const sessionUserDecisionPath = ref<UserDecision[]>([])
 const isExportDialogOpen = ref(false)
+const resultHeadingRef = ref<HTMLHeadingElement | null>(null)
 
 const showCloseOnEnd = getCurrentInstance()!.appContext.config.globalProperties.showCloseOnEnd
 const showExportPDF = getCurrentInstance()!.appContext.config.globalProperties.showExportPDF
@@ -51,6 +52,9 @@ onMounted(() => {
   if (userDecisionPathData) {
     sessionUserDecisionPath.value = JSON.parse(userDecisionPathData)
   }
+  // A6: de knop waar de focus op stond is verdwenen met de laatste vraag. Zonder dit valt de
+  // focus terug naar <body> en begint de gebruiker weer bovenaan de pagina.
+  nextTick(() => resultHeadingRef.value?.focus())
 })
 
 const openExportDialog = () => {
@@ -89,7 +93,7 @@ const handleExport = (formData: {
 <template>
   <div class="flex flex-col py-5 gap-y-5 rvo-max-width-layout--md">
     <div class="flex">
-      <h1 class="utrecht-heading-2">Resultaat</h1>
+      <h1 ref="resultHeadingRef" class="utrecht-heading-2" tabindex="-1">Resultaat</h1>
     </div>
 
     <!--Conclusion/Resultaat section-->

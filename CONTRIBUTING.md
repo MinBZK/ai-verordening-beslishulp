@@ -14,6 +14,7 @@ community looks forward to your contributions. 🎉
 - [I Want To Contribute](#i-want-to-contribute)
 - [Reporting Bugs](#reporting-bugs)
 - [Suggesting Enhancements](#suggesting-enhancements)
+- [Toegankelijkheid](#toegankelijkheid)
 
 ## Code of Conduct
 
@@ -105,3 +106,42 @@ which the suggestion is related to. You can use [this tool](https://www.cockos.c
  Windows, and [this tool](https://github.com/colinkeenan/silentcast) or [this tool](https://github.com/phw/peek) on Linux.
 - **Explain why this enhancement would be useful** for the community. You may also want to point out the
 other projects that solved it better and which could serve as inspiration.
+
+## Toegankelijkheid
+
+Deze beslishulp is een overheidsdienst en moet voldoen aan WCAG 2.2 AA. Op elke pull request
+draaien drie lagen automatische controles (lint, componenttests met axe, en een Playwright-walk
+door de beslisboom) — zie [features/toegankelijkheid.md](features/toegankelijkheid.md).
+
+Automatische tools vinden ruwweg een derde tot de helft van alle WCAG-issues. De rest is
+menselijk oordeel. Loop daarom het volgende na.
+
+### Bij elke PR met een UI-wijziging
+
+- Is de linktekst los van zijn context te begrijpen? ("lees meer" is dat niet)
+- Klopt de koppenhiërarchie, zonder overgeslagen niveaus?
+- Is een foutmelding daadwerkelijk behulpzaam, of alleen aanwezig?
+- Kan alles wat met de muis kan, ook met het toetsenbord — en zie je waar de focus staat?
+
+### Bij elke release
+
+- Volledige doorloop met alleen het toetsenbord.
+- Doorloop met een schermlezer: VoiceOver (gratis, macOS) of NVDA (gratis, Windows).
+- 400% zoom en een venster van 320px breed.
+- Controleer de ingebedde variant (`iframe-voorbeeld.html`): taalattribuut, `title` op de iframe
+  en de focus-volgorde vanuit de hostpagina zijn daar pas echt zichtbaar.
+
+### Bij contentwijzigingen in `decision-tree.yaml` en `definitions.yaml`
+
+De vraag-, uitleg- en conclusieteksten gaan via `v-html` het DOM in. Een redacteur kan dus de
+semantiek van een pagina breken zonder één regel code aan te raken. Let op:
+
+- Geen koppen (`<h1>`–`<h6>`) in vraagteksten: de vraag ís al de `<h1>`.
+- Geen interactieve elementen (`<button>`, `<input>`) in de tekst.
+- Links krijgen een tekst die op zichzelf duidelijk is, en `target="_blank"` alleen als het echt
+  nodig is.
+
+### Toegankelijkheidsverklaring
+
+De verklaring op [toegankelijkheidsverklaring.nl](https://www.toegankelijkheidsverklaring.nl)
+moet actueel blijven. De automatische controles leveren het bewijsmateriaal, niet de verklaring.

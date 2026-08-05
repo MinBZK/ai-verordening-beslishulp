@@ -47,7 +47,11 @@ const hasLabels = computed(() => {
             >
           </summary>
           <div class="rvo-accordion__content">
-            <div class="rvo-table--responsive py-5">
+            <!--
+              De tabel scrolt horizontaal op smalle schermen. Een scrollbaar gebied moet
+              met het toetsenbord bereikbaar zijn en een naam hebben (WCAG 2.1.1).
+            -->
+            <div class="rvo-table--responsive py-5" role="region" :aria-label="title" tabindex="0">
               <table class="rvo-table">
                 <thead class="rvo-table-head">
                   <tr class="rvo-table-row">
@@ -104,7 +108,11 @@ const hasLabels = computed(() => {
             >
           </summary>
           <div class="rvo-accordion__content">
-            <div class="rvo-table--responsive py-5">
+            <!--
+              De tabel scrolt horizontaal op smalle schermen. Een scrollbaar gebied moet
+              met het toetsenbord bereikbaar zijn en een naam hebben (WCAG 2.1.1).
+            -->
+            <div class="rvo-table--responsive py-5" role="region" :aria-label="title" tabindex="0">
               <table class="rvo-table">
                 <thead class="rvo-table-head">
                   <tr class="rvo-table-row">

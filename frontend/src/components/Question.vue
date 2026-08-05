@@ -52,7 +52,14 @@ function updateFromPreviousDecision() {
   })
 }
 
-watch(() => props.id, updateFromPreviousDecision)
+watch(() => props.id, async () => {
+  updateFromPreviousDecision()
+  // A6: bij een vraagovergang verdwijnt de knop waar de focus op stond uit de DOM en valt de
+  // focus terug naar <body>. Zet hem expliciet op de kop van de nieuwe vraag, zodat toetsenbord-
+  // en schermlezergebruikers verdergaan waar de nieuwe inhoud begint.
+  await nextTick()
+  questionHeadingRef.value?.focus()
+})
 onMounted(updateFromPreviousDecision)
 
 function adjustHeight() {
@@ -64,10 +71,10 @@ function adjustHeight() {
 }
 
 function selectAnswer(answer: Answer) {
+  // Bewust géén focusverplaatsing naar het opmerkingenveld: de focus verplaatsen zonder dat
+  // de gebruiker daarom vraagt is een contextwijziging (WCAG 3.2.2 On Input) en zet
+  // toetsenbordgebruikers voorbij de knop waar ze net op stonden.
   selectedAnswer.value = answer
-  if (explanationFieldRef.value) {
-    explanationFieldRef.value.focus()
-  }
 }
 
 function submitAnswer() {

@@ -53,3 +53,54 @@ jobs:
       # Componenttests, inclusief een axe-scan per component (Laag 2).
       - name: Component tests
         run: npm run test:unit --prefix frontend
+
+  a11y-e2e:
+    name: toegankelijkheid (Playwright + axe)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: pip3 install -r requirements.txt
+
+      - name: Build decision-tree.json
+        run: python script/inject_definitions_in_decision_tree.py
+
+      - name: Build categories.json
+        run: python script/convert_categories.py
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install frontend dependencies
+        run: npm ci --prefix frontend
+
+      # Alleen chromium: dat scheelt installatietijd en de a11y-bevindingen zijn
+      # engine-onafhankelijk. Handmatig testen met VoiceOver/NVDA blijft nodig.
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        id: playwright-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-chromium-${{ hashFiles('frontend/package-lock.json') }}
+
+      - name: Install Playwright chromium
+        run: npx --prefix frontend playwright install --with-deps chromium
+
+      - name: Toegankelijkheidstests
+        run: npm run test:e2e --prefix frontend
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report
+          path: frontend/playwright-report/
+          retention-days: 7

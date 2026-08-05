@@ -33,7 +33,10 @@
 
 .aiv-definition .aiv-definition-text {
   visibility: hidden;
-  width: 300px;
+  /* WCAG 1.4.10 Reflow: een vaste breedte van 300px duwde de pagina op 320px breed voorbij het
+     venster — ook als de tooltip verborgen is, want visibility:hidden telt nog mee in de layout. */
+  width: max-content;
+  max-width: min(300px, calc(100vw - 2rem));
   background-color: var(--rvo-color-wit);
   color: var(--rvo-color-zwart);
   filter: drop-shadow(0 4px 4px rgba(115, 142, 171, 0.5));
@@ -58,9 +61,32 @@
   backdrop-filter: blur(0);
 }
 
+/* Op smalle schermen past een tooltip van 300px nergens naast de term waar hij bij hoort. Vast
+   ten opzichte van het venster is dan de enige plek waar hij wél past — en een vaste positie
+   telt niet mee in de scrollbreedte van de pagina, zodat de definities de reflow niet meer
+   breken. Definities zijn hovergedrag, dus op touch sowieso secundair. */
+@media (width <= 480px) {
+  .aiv-definition .aiv-definition-text {
+    position: fixed;
+    left: 1rem;
+    right: 1rem;
+    width: auto;
+    max-width: none;
+  }
+}
+
 .aiv-definition:hover .aiv-definition-text {
   visibility: visible;
   opacity: 1;
+}
+
+/* WCAG 1.4.3 Contrast: het standaard RVO-linkblauw (--rvo-color-hemelblauw, #007bc7) haalt
+   4.5:1 op wit, maar niet op de getinte achtergronden van de waarschuwingsbalk (#ffe9b8, 3.77:1)
+   en het disclaimerblok (#f1f5f9, 4.11:1). Logoblauw haalt daar 8.6:1 respectievelijk 9.4:1.
+   Gemeten met axe in tests/e2e/a11y-walk.spec.ts. */
+.rvo-alert .rvo-link,
+.rvo-form-fieldset .rvo-link {
+  color: var(--rvo-color-logoblauw, #154273);
 }
 
 /* Tekst die alleen voor schermlezers bestaat. Bewust geen display:none of visibility:hidden:
@@ -86,11 +112,71 @@
   z-index: 1100;
 }
 
-.aiv-skip-link:focus {
+/* WCAG 1.4.10 Reflow: op 320px (en bij 400% zoom) mag niets de pagina horizontaal buiten het
+   venster duwen. Het logo-embleem in index.html heeft geen eigen afmetingen en valt terug op de
+   SVG-standaard van 300x150; een knoplabel als "Akkoord en begin met de beslishulp" bleef op
+   één regel staan. */
+.rvo-header__logo-wrapper svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* De .rvo-theme-prefix is nodig voor specificiteit: main.css wordt vóór de RVO-stylesheet
+   geladen, dus een regel met gelijke specificiteit verliest. De componentbibliotheek zet
+   white-space:nowrap en max-width:fit-content op knoppen, waardoor een lang label als
+   "Akkoord en begin met de beslishulp" de hele pagina breder maakt dan 320px. */
+.rvo-theme .utrecht-button {
+  max-width: 100%;
+  white-space: normal;
+}
+
+/* Knoprijen breken af naar een volgende regel in plaats van de pagina breder te maken. */
+.rvo-theme .rvo-layout-row,
+.rvo-theme .flex.justify-end {
+  flex-wrap: wrap;
+}
+
+/* Flex-items krijgen standaard min-width:auto (= min-content), wat een max-width overrulet.
+   Zonder dit kan één lang woord of een brede tabelcel de hele pagina verbreden. */
+.rvo-theme .flex > *,
+.rvo-theme [class*='rvo-layout-column'] > *,
+.rvo-theme [class*='rvo-layout-row'] > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* De RVO max-width-containers rekenen met content-box: hun inline padding komt bovenop de
+   max-width, waardoor de pagina alsnog 24px te breed werd op 320px. */
+.rvo-theme [class*='rvo-max-width-layout'] {
+  box-sizing: border-box;
+}
+
+/* Lange samengestelde woorden ("conformiteitsbeoordelingsinstantie") passen op 320px niet op
+   één regel; zonder afbreekpunt verbreden ze de hele pagina. */
+.rvo-theme {
+  overflow-wrap: break-word;
+}
+
+/* WCAG 2.4.11/2.4.13 Focus zichtbaar: de RVO-linkstijlen zetten outline-style op none en geven
+   er niets voor terug, waardoor een toetsenbordgebruiker op een link niet kan zien waar hij is.
+   De knoppen uit de componentbibliotheek hebben wél een eigen focusstijl; die blijven ongemoeid. */
+a:focus-visible,
+a.rvo-link:focus,
+a.utrecht-link:focus {
+  outline: 3px solid var(--rvo-color-logoblauw, #154273);
+  outline-offset: 2px;
+}
+
+/* a.-prefix voor extra specificiteit: de RVO-linkstijlen worden ná main.css geladen en zetten
+   outline-style op none. Zonder dit heeft de skip-link geen zichtbare focusindicator
+   (WCAG 2.4.11/2.4.13). */
+a.aiv-skip-link:focus,
+a.aiv-skip-link:focus-visible {
   left: 0;
   padding: 0.5rem 1rem;
   background-color: var(--rvo-color-wit, #fff);
-  outline: 2px solid var(--rvo-color-hemelblauw, #007bc7);
+  outline: 3px solid var(--rvo-color-logoblauw, #154273);
+  outline-offset: 2px;
 }
 
 /* reset some styles without using tailwind pre-flight */

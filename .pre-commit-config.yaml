@@ -29,6 +29,16 @@ repos:
         additional_dependencies: [jsonschema, pyyaml]
         pass_filenames: false
         always_run: true
+      - id: eslint-frontend
+        name: eslint (frontend)
+        # Draait alleen als er frontend-bestanden in de commit zitten, en zonder --fix zodat de
+        # hook niet stilletjes repareert. De volledige poort staat in
+        # .github/workflows/frontend-checks.yaml. pass_filenames staat uit omdat eslint zijn
+        # config vanaf de eigen werkmap moet vinden.
+        entry: sh -c 'cd frontend && npx eslint .'
+        language: system
+        files: ^frontend/.*\.(js|ts|vue)$
+        pass_filenames: false
       - id: check-definitions-sync
         name: Check if definitions are in sync with Algoritmekader
         entry: ./script/sync --mode compare
