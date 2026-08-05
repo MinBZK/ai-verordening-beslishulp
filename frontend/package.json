@@ -29,7 +29,7 @@
     "js-yaml": "^4.3.0",
     "pdfmake": "^0.3.6",
     "pinia": "^3.0.4",
-    "vite-plugin-css-injected-by-js": "^3.5.2",
+    "vite-plugin-css-injected-by-js": "^4.0.1",
     "vue": "^3.5.29"
   },
   "devDependencies": {
@@ -42,11 +42,11 @@
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "^14.6.0",
     "@vue/tsconfig": "^0.8.1",
-    "autoprefixer": "^10.4.24",
+    "autoprefixer": "^10.4.27",
     "eslint": "^9.39.2",
     "eslint-plugin-vue": "^10.8.0",
     "npm-run-all2": "^8.0.2",
-    "postcss": "^8.5.8",
+    "postcss": "^8.5.25",
     "prettier": "^3.8.1",
     "string-strip-html": "^13.5.3",
     "tailwindcss": "^4.2.2",
