@@ -38,7 +38,7 @@ const data_questions = ref<Questions>([])
 const data_conclusions = ref<Conclusions>([])
 const data_categories = ref<Categories>([])
 const questionId = QuestionId
-let conclusionId = ConclusionId
+const conclusionId = ConclusionId
 const isLoading = ref(true)
 const error = ref<string | null>(null)
 
@@ -52,7 +52,7 @@ onMounted(async () => {
     fold(
       (errors: t.Errors) => {
         console.log('Validation errors: ' + errors.length)
-        let error_locations = []
+        const error_locations = []
         for (const error of errors) {
           console.log('error at ' + error.context.map((c) => c.key).join('.'))
           error_locations.push(error.context.map((c) => c.key).join('.'))
@@ -72,7 +72,7 @@ onMounted(async () => {
     fold(
       (errors: t.Errors) => {
         console.log('Validation errors: ' + errors.length)
-        let error_locations = []
+        const error_locations = []
         for (const error of errors) {
           console.log('error at ' + error.context.map((c) => c.key).join('.'))
           error_locations.push(error.context.map((c) => c.key).join('.'))
@@ -98,11 +98,11 @@ onMounted(async () => {
 
 function handleVersions(question_or_conclusion_id: string) {
   let category: Category | undefined
-  let versions = question_or_conclusion_id.split('.')
+  const versions = question_or_conclusion_id.split('.')
   category = data_categories.value.find((q) => q.questionId === versions[0])
   if (versions.length >= 2) {
     // Only overwrite if we find something here
-    let category_overwrite = data_categories.value.find(
+    const category_overwrite = data_categories.value.find(
       (q) => q.questionId === versions[0] + '.' + versions[1]
     )
     if (category_overwrite != undefined) {
@@ -110,7 +110,7 @@ function handleVersions(question_or_conclusion_id: string) {
     }
   }
   if (versions.length >= 3) {
-    let category_overwrite = data_categories.value.find(
+    const category_overwrite = data_categories.value.find(
       (q) => q.questionId === versions[0] + '.' + versions[1] + '.' + versions[2]
     )
     if (category_overwrite != undefined) {

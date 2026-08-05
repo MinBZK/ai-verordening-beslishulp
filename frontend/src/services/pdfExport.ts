@@ -1,6 +1,6 @@
 import pdfMake from 'pdfmake/build/pdfmake'
 import type {Content, StyleDictionary, TDocumentDefinitions} from 'pdfmake/interfaces'
-import { PDF_DISCLAIMER_ITEMS, PDF_INTRO_TEXT, SOURCE_INFO, CONTACT_INFO } from '@/components/Disclaimer.vue'
+import { PDF_DISCLAIMER_ITEMS, PDF_INTRO_TEXT, SOURCE_INFO } from '@/components/Disclaimer.vue'
 import type {UserDecision} from '@/models/DecisionTree.ts'
 import type {FilteredLabels} from '@/services/labelsService'
 import {stripHtml} from 'string-strip-html'
@@ -74,7 +74,7 @@ function replaceSpecificDivsWithTextContent(htmlString: string, selector: string
       definitionSpans.forEach((span) => span.remove())
 
       // Get the remaining text (just the term)
-      let mainTerm = targetDiv.textContent?.trim() || ''
+      const mainTerm = targetDiv.textContent?.trim() || ''
 
       // Create a text node with just the term
       const textNode = document.createTextNode(mainTerm)
@@ -300,7 +300,7 @@ export async function exportToPdf(
     const isoDate = getISOFormat('date')
 
     // Build filename with proper format
-    let prefixFilename = 'AI-verordening beslishulp'
+    const prefixFilename = 'AI-verordening beslishulp'
     let baseFilename;
 
     if (filename && filename.trim() !== '') {
@@ -414,7 +414,7 @@ function buildConclusion(conclusion: string): Content {
 }
 
 function buildAnswer(userDecision: UserDecision): Content {
-  let question = stripHtml(
+  const question = stripHtml(
     replaceSpecificDivsWithTextContent(
       userDecision.question ? userDecision.question : '',
       '.aiv-definition'
@@ -576,7 +576,7 @@ class HtmlToPdfProcessor {
             this.currentTextBlock.push({text: '\n'})
           }
           break
-        default:
+        default: {
           // For other block elements, create a new processor for their content
           const blockProcessor = new HtmlToPdfProcessor()
           Array.from(element.childNodes).forEach((child) => {
@@ -588,6 +588,7 @@ class HtmlToPdfProcessor {
             this.content.push(...blockContent)
           }
           break
+        }
       }
     } else {
       // This is an inline element

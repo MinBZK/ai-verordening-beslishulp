@@ -2,7 +2,7 @@
 import Sources from '@/components/Sources.vue'
 import SubResult from '@/components/SubResult.vue'
 import ExportForm from '@/components/ExportForm.vue'
-import { ref, onMounted, computed, provide, getCurrentInstance } from 'vue'
+import { ref, onMounted, provide, getCurrentInstance } from 'vue'
 import type { UserDecision } from '@/models/DecisionTree.ts'
 import { exportToPdf } from '@/services/pdfExport'
 import { filterLabels } from '@/services/labelsService'
@@ -177,8 +177,9 @@ const handleExport = (formData: {
             <div class="rvo-text--md --rvo-font-sans-serif-font-family">
               <ul class="no-list">
                 <li
+                  v-for="(userDecision, index) in sessionUserDecisionPath"
+                  :key="index"
                   class="rvo-layout-margin-vertical--lg"
-                  v-for="userDecision in sessionUserDecisionPath"
                 >
                   <strong
                     >Vraag <span>{{ String(userDecision.questionId) }}</span

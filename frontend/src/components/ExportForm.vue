@@ -7,7 +7,7 @@ interface ExportFormData {
   filledBy: string
 }
 
-const props = defineProps<{
+defineProps<{
   isOpen: boolean
 }>()
 

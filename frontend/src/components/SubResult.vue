@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, getCurrentInstance, inject } from 'vue'
+import { computed } from 'vue'
 import { filterLabels } from '@/services/labelsService.ts'
 
 interface Props {
@@ -13,10 +13,6 @@ type FilteredLabels = { [category: string]: string[] }
 
 const props = defineProps<Props>()
 
-// Access openExportDialog function from parent component
-const openExportDialog = inject('openExportDialog', () => {
-  console.warn('openExportDialog function not provided')
-})
 
 const filteredLabels = computed<FilteredLabels>(() => filterLabels(props.labels))
 

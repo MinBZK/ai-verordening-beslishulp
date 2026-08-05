@@ -5,7 +5,7 @@ interface Props {
 }
 
 defineProps<Props>()
-const emit = defineEmits(['reset-event'])
+defineEmits(['reset-event'])
 </script>
 
 <template>

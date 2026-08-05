@@ -25,24 +25,26 @@ async function _fetchAndEncode(url: string): Promise<string> {
   }
 
   // Start a new fetch and cache the promise
-  const fetchPromise = new Promise<string>(async (resolve) => {
+  const fetchPromise = (async (): Promise<string> => {
     try {
       const response = await fetch(url)
       const blob = await response.blob()
 
-      const reader = new FileReader()
-      reader.onloadend = () => {
-        const dataUrl = reader.result as string
-        delete _pendingFetches[url]
-        resolve(dataUrl)
-      }
-      reader.readAsDataURL(blob)
+      return await new Promise<string>((resolve) => {
+        const reader = new FileReader()
+        reader.onloadend = () => {
+          const dataUrl = reader.result as string
+          delete _pendingFetches[url]
+          resolve(dataUrl)
+        }
+        reader.readAsDataURL(blob)
+      })
     } catch (error) {
       console.error(`Failed to fetch and encode asset: ${url}`, error)
       delete _pendingFetches[url]
-      resolve('') // Return empty string on error
+      return '' // Return empty string on error
     }
-  })
+  })()
   _pendingFetches[url] = fetchPromise
   return fetchPromise
 }

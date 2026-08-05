@@ -84,7 +84,7 @@ export const useQuestionStore = defineStore('question', () => {
      * This function will change all the "nader te bepalen" labels to "niet van toepassing" when
      * the conclusion of the beslishulp has been reached.
      */
-    for (let key in LabelsBySubCategory.value) {
+    for (const key in LabelsBySubCategory.value) {
       if (JSON.stringify(LabelsBySubCategory.value[key]) === JSON.stringify(['nader te bepalen'])) {
         LabelsBySubCategory.value[key] = ['niet van toepassing']
       }
@@ -97,7 +97,7 @@ export const useQuestionStore = defineStore('question', () => {
      * This function will change all the "niet van toepassing" labels to "nader te bepalen" when
      * the back button has been clicked at the conclusion of the decision tree.
      */
-    for (let key in LabelsBySubCategory.value) {
+    for (const key in LabelsBySubCategory.value) {
       if (
         JSON.stringify(LabelsBySubCategory.value[key]) === JSON.stringify(['niet van toepassing'])
       ) {

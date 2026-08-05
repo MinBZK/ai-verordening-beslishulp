@@ -1,0 +1,51 @@
+name: frontend checks
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    name: lint + type-check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # decision-tree.json en categories.json zijn build-artefacten die door Python uit de
+      # YAML's in de repo-root worden gegenereerd. Zonder deze stappen draait de frontend op
+      # verouderde data. Zelfde patroon als in build.yaml en release-package.yml.
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: pip3 install -r requirements.txt
+
+      - name: Build decision-tree.json
+        run: python script/inject_definitions_in_decision_tree.py
+
+      - name: Build categories.json
+        run: python script/convert_categories.py
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install frontend dependencies
+        run: npm ci --prefix frontend
+
+      # `lint` repareert niet (dat doet `lint:fix`), zodat CI niet stilletjes groen wordt.
+      - name: Lint
+        run: npm run lint --prefix frontend
+
+      - name: Type-check
+        run: npm run type-check --prefix frontend

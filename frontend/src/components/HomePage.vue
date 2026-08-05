@@ -4,7 +4,7 @@
 import Header from '@/components/Header.vue'
 import Disclaimer from '@/components/Disclaimer.vue'
 
-const emit = defineEmits(['acceptDisclaimer'])
+defineEmits(['acceptDisclaimer'])
 </script>
 
 <template>
