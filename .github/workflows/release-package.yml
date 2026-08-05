@@ -2,26 +2,54 @@ name: Build Node.js Package and Publish Assets
 
 on:
   release:
-    types: [created]
+    # "published" vuurt ook wanneer een release vanuit een draft wordt
+    # gepubliceerd; "created" deed dat niet, waardoor v1.2.16 en v1.2.24
+    # helemaal geen run kregen.
+    types: [published]
+  # Maakt het mogelijk de asset achteraf alsnog voor een bestaande tag te
+  # publiceren, zonder de release opnieuw aan te maken.
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag waarvoor de assets gebouwd worden (bijv. v1.2.24)"
+        required: true
+        type: string
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     permissions:
-      packages: write
-      contents: read
+      # Nodig om release-assets te uploaden met de standaard GITHUB_TOKEN.
+      contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.tag || github.ref }}
+
+      # decision-tree.json en categories.json zijn build-artefacten: de YAML's
+      # in de repo-root zijn de bron. Zonder deze stappen wordt de asset
+      # gebouwd op de (verouderde) ingecheckte JSON en wijkt hij af van het
+      # container-image dat build.yaml publiceert.
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip3 install -r requirements.txt
+      - name: Build decision-tree.json
+        run: python script/inject_definitions_in_decision_tree.py
+      - name: Build categories.json
+        run: python script/convert_categories.py
+
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
-      - run: npm install --prefix frontend
+          node-version: 22
+      - run: npm ci --prefix frontend
       - run: npm run build --prefix frontend
+
       - name: Publish release assets
         uses: softprops/action-gh-release@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT_UPDATE_RELEASE }}
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag_name: ${{ inputs.tag || github.ref_name }}
           files: |
             frontend/dist/index.js
             LICENSE.md
