@@ -21,8 +21,13 @@ defineEmits(['reset-event'])
           <nav class="rvo-topnav rvo-topnav--lg">
             <ul class="rvo-topnav__list">
               <li v-if="questionId != '1.1' && disclaimerScreen != '0'" class="rvo-topnav__item">
-                <a
-                  class="rvo-link rvo-topnav__link rvo-link--logoblauw"
+                <!--
+                  Was een <a> zonder href: niet focusbaar, geen rol, niet met het toetsenbord
+                  te bedienen. Het is een actie, dus een echte knop.
+                -->
+                <button
+                  type="button"
+                  class="rvo-link rvo-topnav__link rvo-link--logoblauw header-reset-button"
                   @click="$emit('reset-event')"
                 >
                   <span
@@ -31,7 +36,7 @@ defineEmits(['reset-event'])
                     aria-label="Terug"
                   ></span>
                   Begin opnieuw
-                </a>
+                </button>
               </li>
               <li v-else style="height: 48px">
                 <!--                This is an empty space so that when the back to screen button is not there the line doesn't jump-->

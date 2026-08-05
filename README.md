@@ -27,6 +27,12 @@ tekst worden voorzien en 'onclick' stuurt dit een javascript event 'beslishulp-d
 Als de beslishulp in een eigen website wordt gebruikt, is de kans groot dat de CSS gaat mengen en dit
 ongewenste effecten heeft. Overweeg een iframe te gebruiken om dit te voorkomen, zie ook het [iframe voorbeeld](iframe-voorbeeld.html). Merk op dat het javascript event hier een 'message' is i.v.m. cross-origin communication.
 
+Geef een iframe altijd een `title`, anders kondigt een schermlezer alleen "frame" aan (WCAG 4.1.2):
+
+```html
+<iframe title="Beslishulp AI-verordening" src="..."></iframe>
+```
+
 ## Configuratie opties
 
 Configuratie opties kunnen als URL parameter worden meegegeven, of als attribuut bij de 'script' tag. Bij het gebruik in de script tag, moet de parameter de prefix _data-_ krijgen.

@@ -27,7 +27,7 @@ const hasLabels = computed(() => {
       <div class="rvo-accordion">
         <details class="rvo-accordion__item">
           <summary class="rvo-accordion__item-summary">
-            <h3
+            <h2
               class="utrecht-heading-3 rvo-accordion__item-title rvo-heading--no-margins rvo-heading--mixed items-center"
             >
               <span
@@ -41,7 +41,7 @@ const hasLabels = computed(() => {
                 aria-label="Delta omhoog"
               ></span>
               {{ title }}
-            </h3>
+            </h2>
             <span class="rvo-accordion-teaser"
               >Bekijk hier je AI-verordening profiel tot nu toe</span
             >
@@ -84,7 +84,7 @@ const hasLabels = computed(() => {
       <div class="rvo-accordion">
         <details class="rvo-accordion__item" open="true">
           <summary class="rvo-accordion__item-summary">
-            <h3
+            <h2
               class="utrecht-heading-3 rvo-accordion__item-title rvo-heading--no-margins rvo-heading--mixed items-center"
             >
               <span
@@ -98,7 +98,7 @@ const hasLabels = computed(() => {
                 aria-label="Delta omhoog"
               ></span>
               {{ title }}
-            </h3>
+            </h2>
             <span class="rvo-accordion-teaser"
               >Bekijk hier het AI-verordening profiel dat voor jou van toepassing is</span
             >

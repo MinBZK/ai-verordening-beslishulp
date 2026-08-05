@@ -213,9 +213,11 @@ function acceptDisclaimer() {
   <div v-if="AcceptedDisclaimer == '0'">
     <HomePage @accept-disclaimer="acceptDisclaimer" />
   </div>
-  <div class="rvo-layout-column rvo-layout-gap--2xl" v-else>
+  <div v-else class="rvo-layout-column rvo-layout-gap--2xl">
+    <!-- Skip-link: eerste focusbare element, zodat toetsenbordgebruikers de navigatie kunnen overslaan -->
+    <a class="aiv-skip-link rvo-link" href="#beslishulp-inhoud">Ga direct naar de inhoud</a>
     <Header
-      :questionId="currentQuestion?.questionId"
+      :question-id="currentQuestion?.questionId"
       :disclaimer-screen="AcceptedDisclaimer"
       @reset-event="reset"
     />
@@ -224,7 +226,11 @@ function acceptDisclaimer() {
       class="rvo-layout-column rvo-max-width-layout rvo-layout-align-items-start rvo-max-width-layout-inline-padding--sm"
     >
       <ProgressTracker v-if="!findConclusion" :category-state="categoryState" />
-      <div class="rvo-layout-gap--md">
+      <!--
+        Zonder <main> heeft juist het scherm waar de gebruiker de meeste tijd doorbrengt geen
+        hoofdlandmark; <main> stond alleen op de HomePage (WCAG 1.3.1 / 2.4.1).
+      -->
+      <main id="beslishulp-inhoud" class="rvo-layout-gap--md" tabindex="-1">
         <DefaultLoader :loading="isLoading" />
         <DefaultError :error="error" />
         <Conclusion
@@ -238,19 +244,19 @@ function acceptDisclaimer() {
         />
         <Question
           v-if="currentQuestion && currentCategory"
+          :id="currentQuestion.questionId"
           :question="currentQuestion.question"
           :explanation="currentQuestion.explanation"
-          :id="currentQuestion.questionId"
           :sources="currentQuestion.sources"
           :answers="currentQuestion.answers"
           :question_category="currentQuestion.category"
           :category="currentCategory.category"
           :labels="questionStore.getLabelsBySubCategory()"
-          :userDecisions="userDecisions"
+          :user-decisions="userDecisions"
           @answered="givenAnswer"
           @back="back"
         />
-      </div>
+      </main>
     </div>
   </div>
 </template>

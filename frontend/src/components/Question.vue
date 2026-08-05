@@ -25,6 +25,7 @@ defineEmits(['answered', 'back'])
 const selectedAnswer = ref<Answer | null>(null)
 const userExplanation = ref('')
 const explanationFieldRef = ref<HTMLTextAreaElement | null>(null)
+const questionHeadingRef = ref<HTMLHeadingElement | null>(null)
 const showExplanationField =
   getCurrentInstance()!.appContext.config.globalProperties.showExplanationField
 
@@ -93,11 +94,18 @@ function optionalSaveUserDecision() {
   <div class="rvo-max-width-layout--md">
     <!-- Question and Answer section -->
     <div class="rvo-layout-margin-vertical--s">
-      <fieldset class="rvo-max-width-layout--sm utrecht-form-fieldset rvo-form-fieldset border-none"
-                style="width: 600px;">
+      <!--
+        Was een <fieldset> met style="width: 600px": een harde pixelbreedte breekt reflow op
+        320px en bij 400% zoom (WCAG 1.4.10). De RVO max-width-class doet hetzelfde werk
+        responsief. De fieldset zelf is verplaatst naar de antwoordgroep hieronder, want dát
+        is de groep die een <legend> nodig heeft (WCAG 1.3.1).
+      -->
+      <div class="rvo-max-width-layout--sm utrecht-form-fieldset rvo-form-fieldset border-none">
         <!-- Question section -->
         <div class="flex">
-          <h1 class="utrecht-heading-3"><span v-html="question"></span></h1>
+          <h1 :id="`vraag-${id}-titel`" ref="questionHeadingRef" class="utrecht-heading-3" tabindex="-1">
+            <span v-html="question"></span>
+          </h1>
         </div>
         <div>
           <p style="white-space: pre-line" class="utrecht-paragraph">
@@ -113,14 +121,29 @@ function optionalSaveUserDecision() {
           </p>
           <HelpWanted style="margin-top: -2%; margin-bottom: 5%" />
         </div>
-        <div>
+        <fieldset class="border-none" :aria-describedby="`vraag-${id}-titel`">
+          <!--
+            De groep antwoordopties heeft een toegankelijke naam nodig. Visueel staat die naam
+            al in de <h1> erboven, dus de legend is alleen voor hulpsoftware zichtbaar.
+          -->
+          <legend class="aiv-visually-hidden">Antwoordopties bij deze vraag</legend>
           <!-- Controleer of er meer dan 2 antwoorden zijn -->
           <div v-if="answers.length > 2">
-            <ul class="rvo-layout-column rvo-layout-gap--sm no-list">
+            <!-- role="list" omdat .no-list de lijstsemantiek in Safari/VoiceOver wegneemt -->
+            <ul class="rvo-layout-column rvo-layout-gap--sm no-list" role="list">
               <li v-for="(answer, index) in answers" :key="index">
                 <button
+                  :id="`antwoord-${id}-${index}`"
                   :key="id + index.toString()"
-                  aria-roledescription="button"
+                  type="button"
+                  :aria-pressed="selectedAnswer?.answer === answer.answer"
+                  :class="[
+                    'utrecht-button utrecht-button--secondary-action utrecht-button--rvo-md rvo-link--no-underline rvo-link--hover',
+                    {
+                      'utrecht-button--active':
+                        selectedAnswer && selectedAnswer.answer === answer.answer
+                    }
+                  ]"
                   @click="
                     () => {
                       selectAnswer(answer)
@@ -129,14 +152,6 @@ function optionalSaveUserDecision() {
                       }
                     }
                   "
-                  :id="index.toString()"
-                  :class="[
-                    'utrecht-button utrecht-button--secondary-action utrecht-button--rvo-md rvo-link--no-underline rvo-link--hover',
-                    {
-                      'utrecht-button--active':
-                        selectedAnswer && selectedAnswer.answer === answer.answer
-                    }
-                  ]"
                 >
                   {{ answer.answer }}
                 </button>
@@ -144,11 +159,20 @@ function optionalSaveUserDecision() {
             </ul>
           </div>
           <!-- Als er 2 of minder antwoorden zijn, toon ze als losse knoppen -->
-          <div class="rvo-layout-row rvo-layout-gap--sm" v-else>
+          <div v-else class="rvo-layout-row rvo-layout-gap--sm">
             <div v-for="(answer, index) in answers" :key="index">
               <button
+                :id="`antwoord-${id}-${index}`"
                 :key="id + index.toString()"
-                aria-roledescription="button"
+                type="button"
+                :aria-pressed="selectedAnswer?.answer === answer.answer"
+                :class="[
+                  'utrecht-button utrecht-button--secondary-action utrecht-button--rvo-md rvo-link--no-underline rvo-link--hover',
+                  {
+                    'utrecht-button--active':
+                      selectedAnswer && selectedAnswer.answer === answer.answer
+                  }
+                ]"
                 @click="
                   () => {
                     selectAnswer(answer)
@@ -158,51 +182,43 @@ function optionalSaveUserDecision() {
                     }
                   }
                 "
-                :id="index.toString()"
-                :class="[
-                  'utrecht-button utrecht-button--secondary-action utrecht-button--rvo-md rvo-link--no-underline rvo-link--hover',
-                  {
-                    'utrecht-button--active':
-                      selectedAnswer && selectedAnswer.answer === answer.answer
-                  }
-                ]"
               >
                 {{ answer.answer }}
               </button>
             </div>
           </div>
-        </div>
+        </fieldset>
 
         <!-- TODO: maybe we need a better check to determine if we want to show the explanation field for specific questions -->
         <div
-          class="rvo-layout-margin-vertical--md"
           v-if="showExplanationField && question_category != 'tussenscherm'"
+          class="rvo-layout-margin-vertical--md"
         >
           <label for="explanation-field" class="utrecht-form-label"
             ><span class="rvo-text--bold">Opmerking</span> (geen invloed op uitkomst, wel zichtbaar in rapport)</label
           >
           <textarea
-            @input="adjustHeight"
             id="explanation-field"
             ref="explanationFieldRef"
             v-model="userExplanation"
             class="utrecht-textarea rvo-textarea"
             rows="1"
             style="width: 100%; min-height: 2.5em"
+            @input="adjustHeight"
           >
           </textarea>
         </div>
-      </fieldset>
+      </div>
       <div
         style="justify-content: flex-end"
         class="rvo-layout-margin-vertical--xl rvo-layout-row rvo-layout-align-items-end"
       >
         <button
-          style="margin-right: auto"
-          @click="optionalSaveUserDecision(); $emit('back')"
           v-if="id !== '1.1'"
+          style="margin-right: auto"
           type="button"
           class="flex utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
+          @click="optionalSaveUserDecision(); $emit('back')"
         >
           <span
             class="utrecht-icon rvo-icon rvo-icon-terug rvo-icon--lg rvo-icon--wit"
@@ -213,11 +229,11 @@ function optionalSaveUserDecision() {
         </button>
         <button
           v-if="showExplanationField && answers.length > 1"
-          @click="$emit('answered', submitAnswer())"
           type="button"
           :disabled="!selectedAnswer"
           class="flex utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
           :class="{ 'utrecht-button--disabled': !selectedAnswer }"
+          @click="$emit('answered', submitAnswer())"
         >
           Volgende vraag
           <span

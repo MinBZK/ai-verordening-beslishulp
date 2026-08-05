@@ -89,14 +89,14 @@ const handleExport = (formData: {
 <template>
   <div class="flex flex-col py-5 gap-y-5 rvo-max-width-layout--md">
     <div class="flex">
-      <div as="h3" class="utrecht-heading-2">Resultaat</div>
+      <h1 class="utrecht-heading-2">Resultaat</h1>
     </div>
 
     <!--Conclusion/Resultaat section-->
     <p class="rvo-alert--success rvo-alert--padding-md">
       <span
-        v-html="conclusion"
         class="rvo-text--italic rvo-text--xl --rvo-font-sans-serif-font-family"
+        v-html="conclusion"
       ></span>
       <slot />
     </p>
@@ -105,9 +105,9 @@ const handleExport = (formData: {
     <div class="rvo-layout-margin-vertical--2xs flex justify-end">
       <button
           style="margin-right: auto"
-          @click="$emit('back')"
           type="button"
           class="flex utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
+          @click="$emit('back')"
         >
           <span
             class="utrecht-icon rvo-icon rvo-icon-terug rvo-icon--lg rvo-icon--wit"
@@ -119,9 +119,9 @@ const handleExport = (formData: {
 
       <button
         v-if="showExportPDF"
-        @click="openExportDialog"
         type="button"
         class="rvo-layout-margin-horizontal--xs flex utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
+        @click="openExportDialog"
       >
         <span
           class="utrecht-icon rvo-icon rvo-icon-downloaden rvo-icon--md rvo-icon--hemelblauw"
@@ -133,9 +133,9 @@ const handleExport = (formData: {
 
       <button
         v-if="showCloseOnEnd"
-        @click="informDone"
         type="button"
         class="rvo-layout-margin-horizontal--xs flex utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
+        @click="informDone"
       >
         {{ showCloseOnEndMsg }}
       </button>
@@ -154,7 +154,7 @@ const handleExport = (formData: {
       <div v-if="sessionUserDecisionPath">
         <details class="rvo-accordion__item">
           <summary class="rvo-accordion__item-summary rvo-heading--no-margins rvo-heading--mixed">
-            <h3
+            <h2
               class="utrecht-heading-3 rvo-accordion__item-title rvo-heading--no-margins rvo-heading--mixed items-center"
             >
               <span
@@ -168,14 +168,15 @@ const handleExport = (formData: {
                 aria-label="Delta omhoog"
               ></span>
               Antwoorden
-            </h3>
+            </h2>
             <span class="rvo-accordion-teaser"
               >Bekijk hier het door jou bewandelde pad door de beslishulp</span
             >
           </summary>
           <div class="rvo-accordion__content">
             <div class="rvo-text--md --rvo-font-sans-serif-font-family">
-              <ul class="no-list">
+              <!-- role="list" omdat .no-list de lijstsemantiek in Safari/VoiceOver wegneemt -->
+              <ul class="no-list" role="list">
                 <li
                   v-for="(userDecision, index) in sessionUserDecisionPath"
                   :key="index"
@@ -201,7 +202,7 @@ const handleExport = (formData: {
       <div v-if="obligation">
         <details class="rvo-accordion__item">
           <summary class="rvo-accordion__item-summary rvo-heading--no-margins rvo-heading--mixed">
-            <h3
+            <h2
               class="utrecht-heading-3 rvo-accordion__item-title rvo-heading--no-margins rvo-heading--mixed items-center"
             >
               <span
@@ -215,7 +216,7 @@ const handleExport = (formData: {
                 aria-label="Delta omhoog"
               ></span>
               Verplichtingen
-            </h3>
+            </h2>
             <span class="rvo-accordion-teaser"
               >Bekijk hier de voor jou geldende verplichtingen</span
             >
@@ -233,7 +234,7 @@ const handleExport = (formData: {
       <div v-if="sources && sources.length > 0">
         <details class="rvo-accordion__item">
           <summary class="rvo-accordion__item-summary rvo-heading--no-margins rvo-heading--mixed">
-            <h3
+            <h2
               class="utrecht-heading-3 rvo-accordion__item-title rvo-heading--no-margins rvo-heading--mixed items-center"
             >
               <span
@@ -247,7 +248,7 @@ const handleExport = (formData: {
                 aria-label="Delta omhoog"
               ></span>
               Bronnen
-            </h3>
+            </h2>
             <span class="rvo-accordion-teaser">Bekijk hier de bronnen van de verplichtingen</span>
           </summary>
           <div class="rvo-accordion__content">

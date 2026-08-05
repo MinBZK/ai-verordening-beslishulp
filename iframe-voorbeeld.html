@@ -1,4 +1,4 @@
-<html>
+<html lang="nl">
 <head>
   <title>Voorbeeld gebruik beslishulp</title>
   <script type="text/javascript">
@@ -16,7 +16,7 @@ Waarde: ${JSON.stringify(JSON.parse(sessionStorage.getItem(key)), null, 2)}\n\n`
 </head>
 <body>
 <dialog open style="margin-top: 5vh; width: 75vw; height: 75vh">
-  <iframe style="width: 100%; height: 100%; border:0; padding: 0" srcdoc='<div id="app" class="rvo-theme"></div><script src="index.js" data-showCloseOnEndMsg="Resultaten overnemen en afsluiten" data-showCloseOnEnd="true"></script>'>
+  <iframe title="Beslishulp AI-verordening" style="width: 100%; height: 100%; border:0; padding: 0" srcdoc='<div id="app" class="rvo-theme"></div><script src="index.js" data-showCloseOnEndMsg="Resultaten overnemen en afsluiten" data-showCloseOnEnd="true"></script>'>
   </iframe>
 </dialog>
 <pre id="results">
