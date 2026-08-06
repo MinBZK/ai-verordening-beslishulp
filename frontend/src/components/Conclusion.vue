@@ -2,7 +2,7 @@
 import Sources from '@/components/Sources.vue'
 import SubResult from '@/components/SubResult.vue'
 import ExportForm from '@/components/ExportForm.vue'
-import { ref, onMounted, computed, provide, getCurrentInstance } from 'vue'
+import { ref, onMounted, nextTick, provide, getCurrentInstance } from 'vue'
 import type { UserDecision } from '@/models/DecisionTree.ts'
 import { exportToPdf } from '@/services/pdfExport'
 import { filterLabels } from '@/services/labelsService'
@@ -21,6 +21,7 @@ defineEmits(['back'])
 // Gebruik ref voor reactieve data
 const sessionUserDecisionPath = ref<UserDecision[]>([])
 const isExportDialogOpen = ref(false)
+const headingRef = ref<HTMLElement | null>(null)
 
 const showCloseOnEnd = getCurrentInstance()!.appContext.config.globalProperties.showCloseOnEnd
 const showExportPDF = getCurrentInstance()!.appContext.config.globalProperties.showExportPDF
@@ -51,6 +52,9 @@ onMounted(() => {
   if (userDecisionPathData) {
     sessionUserDecisionPath.value = JSON.parse(userDecisionPathData)
   }
+  // Zet de focus op "Resultaat", anders merkt een screenreadergebruiker niet
+  // dat de laatste vraag is vervangen door de uitkomst.
+  nextTick(() => headingRef.value?.focus())
 })
 
 const openExportDialog = () => {
@@ -89,7 +93,7 @@ const handleExport = (formData: {
 <template>
   <div class="flex flex-col py-5 gap-y-5 rvo-max-width-layout--md">
     <div class="flex">
-      <h2 class="utrecht-heading-2">Resultaat</h2>
+      <h2 ref="headingRef" tabindex="-1" class="utrecht-heading-2">Resultaat</h2>
     </div>
 
     <!--Conclusion/Resultaat section-->

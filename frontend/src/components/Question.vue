@@ -25,6 +25,7 @@ defineEmits(['answered', 'back'])
 const selectedAnswer = ref<Answer | null>(null)
 const userExplanation = ref('')
 const explanationFieldRef = ref<HTMLTextAreaElement | null>(null)
+const headingRef = ref<HTMLElement | null>(null)
 const showExplanationField =
   getCurrentInstance()!.appContext.config.globalProperties.showExplanationField
 
@@ -46,6 +47,17 @@ const isSelected = (answer: Answer) =>
  * misleidend zijn.
  */
 const keepsSelection = computed(() => showExplanationField && props.answers.length > 1)
+
+/*
+ * De beslishulp vervangt de vraag zonder paginanavigatie. Zonder ingrijpen
+ * blijft de focus op de knop staan die net verdween en krijgt een
+ * screenreadergebruiker niets te horen. Daarom gaat de focus naar de kop van
+ * de nieuwe vraag; die wordt dan voorgelezen en Tab gaat verder bij de
+ * antwoorden.
+ */
+function focusHeading() {
+  nextTick(() => headingRef.value?.focus())
+}
 
 function updateFromPreviousDecision() {
   const previousUserDecision = props.userDecisions.getPreviousUserDecision(props.id)
@@ -70,8 +82,14 @@ function updateFromPreviousDecision() {
   })
 }
 
-watch(() => props.id, updateFromPreviousDecision)
-onMounted(updateFromPreviousDecision)
+watch(() => props.id, () => {
+  updateFromPreviousDecision()
+  focusHeading()
+})
+onMounted(() => {
+  updateFromPreviousDecision()
+  focusHeading()
+})
 
 function adjustHeight() {
   const textarea: HTMLTextAreaElement | null = explanationFieldRef.value
@@ -122,7 +140,9 @@ function optionalSaveUserDecision() {
                 style="width: 600px;">
         <!-- Question section -->
         <div class="flex">
-          <h2 :id="headingId" class="utrecht-heading-3"><span v-html="question"></span></h2>
+          <h2 :id="headingId" ref="headingRef" tabindex="-1" class="utrecht-heading-3">
+            <span v-html="question"></span>
+          </h2>
         </div>
         <div>
           <p style="white-space: pre-line" class="utrecht-paragraph">
