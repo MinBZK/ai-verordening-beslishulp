@@ -97,6 +97,18 @@
   cursor: pointer;
 }
 
+/* Deze knoppen hebben hun standaardopmaak verloren (appearance: none), en
+   daarmee in sommige browsers ook hun focusrand. Expliciet terugzetten, zodat
+   zichtbaar blijft waar de focus staat (WCAG 2.4.7 Focus Visible). De koppen
+   krijgen tabindex="-1" om de focus te ontvangen na een stap in de beslishulp. */
+.aiv-link-button:focus-visible,
+.aiv-definition .aiv-definition-term:focus-visible,
+.modal-content-close:focus-visible,
+[tabindex='-1']:focus-visible {
+  outline: 2px solid var(--rvo-color-hemelblauw, #007bc7);
+  outline-offset: 2px;
+}
+
 /* Tekst die alleen voor screenreaders bedoeld is. Niet display:none, want dan
    halen hulptechnologieën de tekst ook weg. */
 .aiv-visually-hidden {
