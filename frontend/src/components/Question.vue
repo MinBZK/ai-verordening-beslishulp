@@ -97,7 +97,7 @@ function optionalSaveUserDecision() {
                 style="width: 600px;">
         <!-- Question section -->
         <div class="flex">
-          <h1 class="utrecht-heading-3"><span v-html="question"></span></h1>
+          <h2 class="utrecht-heading-3"><span v-html="question"></span></h2>
         </div>
         <div>
           <p style="white-space: pre-line" class="utrecht-paragraph">
