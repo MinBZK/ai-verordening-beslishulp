@@ -3,7 +3,7 @@ import Sources from '@/components/Sources.vue'
 import { Answer, type UserDecision } from '@/models/DecisionTree'
 import SubResult from '@/components/SubResult.vue'
 import HelpWanted from '@/components/HelpWanted.vue'
-import { getCurrentInstance, nextTick, onMounted, ref, watch } from 'vue'
+import { computed, getCurrentInstance, nextTick, onMounted, ref, watch } from 'vue'
 import * as t from 'io-ts'
 import type { UserDecisionsServiceType } from '@/services/userDecisionsService.ts'
 
@@ -27,6 +27,25 @@ const userExplanation = ref('')
 const explanationFieldRef = ref<HTMLTextAreaElement | null>(null)
 const showExplanationField =
   getCurrentInstance()!.appContext.config.globalProperties.showExplanationField
+
+/*
+ * De beslishulp wordt in de pagina van een andere applicatie gemonteerd, dus
+ * moeten alle id's uniek zijn binnen die pagina. Vandaar de aiv-prefix en het
+ * vraagnummer erin; eerder waren dit "0", "1" en "explanation-field".
+ */
+const headingId = 'aiv-question-heading'
+const explanationFieldId = 'aiv-explanation-field'
+const answerId = (index: number) => `aiv-answer-${props.id}-${index}`
+
+const isSelected = (answer: Answer) =>
+  selectedAnswer.value !== null && selectedAnswer.value.answer === answer.answer
+
+/*
+ * Bij één antwoord, of zonder opmerkingenveld, gaat een klik direct naar de
+ * volgende vraag. Dan is er geen keuze die blijft staan en zou aria-pressed
+ * misleidend zijn.
+ */
+const keepsSelection = computed(() => showExplanationField && props.answers.length > 1)
 
 function updateFromPreviousDecision() {
   const previousUserDecision = props.userDecisions.getPreviousUserDecision(props.id)
@@ -93,11 +112,17 @@ function optionalSaveUserDecision() {
   <div class="rvo-max-width-layout--md">
     <!-- Question and Answer section -->
     <div class="rvo-layout-margin-vertical--s">
-      <fieldset class="rvo-max-width-layout--sm utrecht-form-fieldset rvo-form-fieldset border-none"
+      <!--
+        Geen <fieldset>: dit blok bevat de kop, de toelichting en de antwoorden,
+        en niet alleen een groep formuliervelden. Een fieldset zonder <legend>
+        is bovendien een fout. De antwoorden zelf staan verderop in een
+        role="group" met de vraag als naam.
+      -->
+      <div class="rvo-max-width-layout--sm utrecht-form-fieldset rvo-form-fieldset border-none"
                 style="width: 600px;">
         <!-- Question section -->
         <div class="flex">
-          <h2 class="utrecht-heading-3"><span v-html="question"></span></h2>
+          <h2 :id="headingId" class="utrecht-heading-3"><span v-html="question"></span></h2>
         </div>
         <div>
           <p style="white-space: pre-line" class="utrecht-paragraph">
@@ -113,14 +138,13 @@ function optionalSaveUserDecision() {
           </p>
           <HelpWanted style="margin-top: -2%; margin-bottom: 5%" />
         </div>
-        <div>
+        <div role="group" :aria-labelledby="headingId">
           <!-- Controleer of er meer dan 2 antwoorden zijn -->
           <div v-if="answers.length > 2">
             <ul class="rvo-layout-column rvo-layout-gap--sm no-list">
               <li v-for="(answer, index) in answers" :key="index">
                 <button
-                  :key="id + index.toString()"
-                  aria-roledescription="button"
+                  type="button"
                   @click="
                     () => {
                       selectAnswer(answer)
@@ -129,13 +153,11 @@ function optionalSaveUserDecision() {
                       }
                     }
                   "
-                  :id="index.toString()"
+                  :id="answerId(index)"
+                  :aria-pressed="keepsSelection ? isSelected(answer) : undefined"
                   :class="[
                     'utrecht-button utrecht-button--secondary-action utrecht-button--rvo-md rvo-link--no-underline rvo-link--hover',
-                    {
-                      'utrecht-button--active':
-                        selectedAnswer && selectedAnswer.answer === answer.answer
-                    }
+                    { 'utrecht-button--active': isSelected(answer) }
                   ]"
                 >
                   {{ answer.answer }}
@@ -147,8 +169,7 @@ function optionalSaveUserDecision() {
           <div class="rvo-layout-row rvo-layout-gap--sm" v-else>
             <div v-for="(answer, index) in answers" :key="index">
               <button
-                :key="id + index.toString()"
-                aria-roledescription="button"
+                type="button"
                 @click="
                   () => {
                     selectAnswer(answer)
@@ -158,13 +179,11 @@ function optionalSaveUserDecision() {
                     }
                   }
                 "
-                :id="index.toString()"
+                :id="answerId(index)"
+                :aria-pressed="keepsSelection ? isSelected(answer) : undefined"
                 :class="[
                   'utrecht-button utrecht-button--secondary-action utrecht-button--rvo-md rvo-link--no-underline rvo-link--hover',
-                  {
-                    'utrecht-button--active':
-                      selectedAnswer && selectedAnswer.answer === answer.answer
-                  }
+                  { 'utrecht-button--active': isSelected(answer) }
                 ]"
               >
                 {{ answer.answer }}
@@ -178,12 +197,12 @@ function optionalSaveUserDecision() {
           class="rvo-layout-margin-vertical--md"
           v-if="showExplanationField && question_category != 'tussenscherm'"
         >
-          <label for="explanation-field" class="utrecht-form-label"
+          <label :for="explanationFieldId" class="utrecht-form-label"
             ><span class="rvo-text--bold">Opmerking</span> (geen invloed op uitkomst, wel zichtbaar in rapport)</label
           >
           <textarea
             @input="adjustHeight"
-            id="explanation-field"
+            :id="explanationFieldId"
             ref="explanationFieldRef"
             v-model="userExplanation"
             class="utrecht-textarea rvo-textarea"
@@ -192,7 +211,7 @@ function optionalSaveUserDecision() {
           >
           </textarea>
         </div>
-      </fieldset>
+      </div>
       <div
         style="justify-content: flex-end"
         class="rvo-layout-margin-vertical--xl rvo-layout-row rvo-layout-align-items-end"
