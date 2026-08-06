@@ -63,6 +63,17 @@
   opacity: 1;
 }
 
+/* Knop die eruitziet als een link. Een <a> zonder href is niet focusbaar en
+   niet met het toetsenbord te bedienen, dus is dit een echte <button>. */
+.aiv-link-button {
+  appearance: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
 /* reset some styles without using tailwind pre-flight */
 ol.no-list,
 ul.no-list {
