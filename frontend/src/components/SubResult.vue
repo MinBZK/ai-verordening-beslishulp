@@ -36,13 +36,11 @@ const hasLabels = computed(() => {
             >
               <span
                 class="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw rvo-accordion__item-icon--closed"
-                role="img"
-                aria-label="Delta omlaag"
+                aria-hidden="true"
               ></span>
               <span
                 class="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw rvo-accordion__item-icon--open"
-                role="img"
-                aria-label="Delta omhoog"
+                aria-hidden="true"
               ></span>
               {{ title }}
             </h3>
@@ -93,13 +91,11 @@ const hasLabels = computed(() => {
             >
               <span
                 class="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw rvo-accordion__item-icon--closed"
-                role="img"
-                aria-label="Delta omlaag"
+                aria-hidden="true"
               ></span>
               <span
                 class="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw rvo-accordion__item-icon--open"
-                role="img"
-                aria-label="Delta omhoog"
+                aria-hidden="true"
               ></span>
               {{ title }}
             </h3>

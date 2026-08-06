@@ -4,8 +4,7 @@
       <summary class="rvo-expandable-text__summary">
         <span
           class="utrecht-icon rvo-icon rvo-icon-info rvo-icon--md rvo-icon--hemelblauw"
-          role="img"
-          aria-label="Info"
+          aria-hidden="true"
         ></span>
         Hulp nodig?
       </summary>

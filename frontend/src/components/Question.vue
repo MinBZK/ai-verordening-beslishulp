@@ -206,8 +206,7 @@ function optionalSaveUserDecision() {
         >
           <span
             class="utrecht-icon rvo-icon rvo-icon-terug rvo-icon--lg rvo-icon--wit"
-            role="img"
-            aria-label="Terug"
+            aria-hidden="true"
           ></span>
           Vorige vraag
         </button>
@@ -222,8 +221,7 @@ function optionalSaveUserDecision() {
           Volgende vraag
           <span
             class="utrecht-icon rvo-icon rvo-icon-pijl-naar-rechts rvo-icon--lg rvo-icon--wit"
-            role="img"
-            aria-label="Verder"
+            aria-hidden="true"
           ></span>
         </button>
       </div>

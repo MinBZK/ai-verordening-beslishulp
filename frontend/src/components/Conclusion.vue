@@ -111,8 +111,7 @@ const handleExport = (formData: {
         >
           <span
             class="utrecht-icon rvo-icon rvo-icon-terug rvo-icon--lg rvo-icon--wit"
-            role="img"
-            aria-label="Terug"
+            aria-hidden="true"
           ></span>
           Vorige vraag
         </button>
@@ -125,8 +124,7 @@ const handleExport = (formData: {
       >
         <span
           class="utrecht-icon rvo-icon rvo-icon-downloaden rvo-icon--md rvo-icon--hemelblauw"
-          role="img"
-          aria-label="Exporteer naar PDF"
+          aria-hidden="true"
         ></span>
         Exporteer naar PDF
       </button>
@@ -159,13 +157,11 @@ const handleExport = (formData: {
             >
               <span
                 class="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw rvo-accordion__item-icon--closed"
-                role="img"
-                aria-label="Delta omlaag"
+                aria-hidden="true"
               ></span>
               <span
                 class="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw rvo-accordion__item-icon--open"
-                role="img"
-                aria-label="Delta omhoog"
+                aria-hidden="true"
               ></span>
               Antwoorden
             </h3>
@@ -205,13 +201,11 @@ const handleExport = (formData: {
             >
               <span
                 class="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw rvo-accordion__item-icon--closed"
-                role="img"
-                aria-label="Delta omlaag"
+                aria-hidden="true"
               ></span>
               <span
                 class="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw rvo-accordion__item-icon--open"
-                role="img"
-                aria-label="Delta omhoog"
+                aria-hidden="true"
               ></span>
               Verplichtingen
             </h3>
@@ -237,13 +231,11 @@ const handleExport = (formData: {
             >
               <span
                 class="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw rvo-accordion__item-icon--closed"
-                role="img"
-                aria-label="Delta omlaag"
+                aria-hidden="true"
               ></span>
               <span
                 class="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw rvo-accordion__item-icon--open"
-                role="img"
-                aria-label="Delta omhoog"
+                aria-hidden="true"
               ></span>
               Bronnen
             </h3>
@@ -260,8 +252,7 @@ const handleExport = (formData: {
     <div class="rvo-alert rvo-alert--info rvo-alert--padding-md">
       <span
         class="utrecht-icon rvo-icon rvo-icon-info rvo-icon--xl rvo-status-icon-info"
-        role="img"
-        aria-label="Info"
+        aria-hidden="true"
       ></span>
       <div class="rvo-alert-text">
         <div>

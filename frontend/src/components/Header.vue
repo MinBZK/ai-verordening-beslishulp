@@ -33,8 +33,7 @@ const emit = defineEmits(['reset-event'])
                 >
                   <span
                     class="utrecht-icon rvo-icon rvo-icon-terug rvo-icon--lg rvo-icon--wit"
-                    role="img"
-                    aria-label="Terug"
+                    aria-hidden="true"
                   ></span>
                   Begin opnieuw
                 </button>

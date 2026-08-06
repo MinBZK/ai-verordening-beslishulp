@@ -13,8 +13,7 @@ defineProps<Props>()
         <!-- When source.url exists -->
         <span
           class="utrecht-icon rvo-icon rvo-icon-info rvo-icon--xl rvo-status-icon-info"
-          role="img"
-          aria-label="Info"
+          aria-hidden="true"
         ></span>
         <a v-if="source.url" :href="source.url" target="_blank" class="rvo-link utrecht-link">
           {{ source.source }}
