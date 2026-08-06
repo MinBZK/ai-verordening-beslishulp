@@ -64,14 +64,20 @@ const hasLabels = computed(() => {
                     class="rvo-table-row"
                   >
                     <td class="rvo-table-cell rvo-text--bold rvo-text--md">{{ category }}</td>
-                    <td class="flex rvo-table-cell gap-x-3">
-                      <div
-                        v-for="label in assigned_labels"
-                        :key="label"
-                        class="rvo-tag rvo-tag--default"
-                        :style="{ backgroundColor: 'var(--rvo-color-hemelblauw-450)' }"
-                      >
-                        {{ label }}
+                    <!-- display:flex stond op de <td> zelf. Daarmee verliest de
+                         cel zijn tabelrol en kan een screenreader niet meer per
+                         kolom door de tabel lopen (WCAG 1.3.1). De opmaak zit
+                         nu in een <div> in de cel. -->
+                    <td class="rvo-table-cell">
+                      <div class="flex gap-x-3">
+                        <div
+                          v-for="label in assigned_labels"
+                          :key="label"
+                          class="rvo-tag rvo-tag--default"
+                          :style="{ backgroundColor: 'var(--rvo-color-hemelblauw-450)' }"
+                        >
+                          {{ label }}
+                        </div>
                       </div>
                     </td>
                   </tr>
@@ -119,14 +125,20 @@ const hasLabels = computed(() => {
                     class="rvo-table-row"
                   >
                     <td class="rvo-table-cell rvo-text--bold rvo-text--md">{{ category }}</td>
-                    <td class="flex rvo-table-cell gap-x-3">
-                      <div
-                        v-for="label in assigned_labels"
-                        :key="label"
-                        class="rvo-tag rvo-tag--default"
-                        :style="{ backgroundColor: 'var(--rvo-color-hemelblauw-450)' }"
-                      >
-                        {{ label }}
+                    <!-- display:flex stond op de <td> zelf. Daarmee verliest de
+                         cel zijn tabelrol en kan een screenreader niet meer per
+                         kolom door de tabel lopen (WCAG 1.3.1). De opmaak zit
+                         nu in een <div> in de cel. -->
+                    <td class="rvo-table-cell">
+                      <div class="flex gap-x-3">
+                        <div
+                          v-for="label in assigned_labels"
+                          :key="label"
+                          class="rvo-tag rvo-tag--default"
+                          :style="{ backgroundColor: 'var(--rvo-color-hemelblauw-450)' }"
+                        >
+                          {{ label }}
+                        </div>
                       </div>
                     </td>
                   </tr>
