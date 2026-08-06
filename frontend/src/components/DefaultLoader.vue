@@ -78,5 +78,13 @@ defineProps<Props>()
     transform: scale(0);
   }
 }
+
+/* Zonder animatie blijven de bolletjes gewoon staan; de tekst "Bezig met
+   laden" vertelt nog steeds wat er gebeurt (WCAG 2.3.3). */
+@media (prefers-reduced-motion: reduce) {
+  .ai-decisiontree-loader div {
+    animation: none;
+  }
+}
 </style>
 <!-- #1E2761, #408EC6, #7A2048 -->

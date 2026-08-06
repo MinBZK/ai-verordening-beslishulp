@@ -148,7 +148,9 @@ function handleNextStep(object: Answer | Redirect) {
   )
   // ugly hack, we do not know for sure when the DOM is fully updated with the new situation, this works
   setTimeout(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    // Wie minder beweging heeft ingesteld, krijgt geen meescrollende pagina.
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' })
   }, 200)
 }
 
