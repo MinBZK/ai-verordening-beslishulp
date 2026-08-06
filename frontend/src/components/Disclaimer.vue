@@ -32,7 +32,7 @@ const HOMEPAGE_SPECIFIC_ITEMS = [
     plainText: 'Voor vragen of opmerkingen over de AI-verordening beslishulp mail je naar: ai-verordening@minbzk.nl'
   },
   {
-    text: 'Om je te helpen bij het beantwoorden van de vragen, zijn relevante overwegingen / artikelen / bijlagen van de AI-verordening gelinkt per vraag. Definities van termen worden getoond als je met je muis eroverheen gaat en zijn terug te vinden op het <a class="rvo-link" href="https://minbzk.github.io/Algoritmekader/soorten-algoritmes-en-ai/definities/#begrippenlijst" target="_blank">Algoritmekader.</a>',
+    text: 'Om je te helpen bij het beantwoorden van de vragen, zijn relevante overwegingen / artikelen / bijlagen van de AI-verordening gelinkt per vraag. Definities van termen worden getoond als je met je muis eroverheen gaat en zijn terug te vinden op het <a class="rvo-link" href="https://minbzk.github.io/Algoritmekader/soorten-algoritmes-en-ai/definities/#begrippenlijst" target="_blank" rel="noopener noreferrer">Algoritmekader<span class="aiv-visually-hidden"> (opent in een nieuw venster)</span>.</a>',
     plainText: 'Om je te helpen bij het beantwoorden van de vragen, zijn relevante overwegingen / artikelen / bijlagen van de AI-verordening gelinkt per vraag. Definities van termen worden getoond als je met je muis eroverheen gaat en zijn terug te vinden op het Algoritmekader.'
   }
 ]

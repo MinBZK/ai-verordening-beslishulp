@@ -14,8 +14,15 @@
         Je hebt aangegeven dat je hulp nodig hebt. Voor advies kun je een e-mail sturen naar
         <a class="rvo-link" href="mailto:ai-verordening@minbzk.nl"> ai-verordening@minbzk.nl </a> of
         op de pleio-omgeving
-        <a class="rvo-link" target="_blank" href="https://algoritmes.pleio.nl">
-          https://algoritmes.pleio.nl</a
+        <a
+          class="rvo-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://algoritmes.pleio.nl"
+        >
+          https://algoritmes.pleio.nl<span class="aiv-visually-hidden">
+            (opent in een nieuw venster)</span
+          ></a
         >.
       </div>
     </details>
