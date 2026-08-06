@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { nextTick, onBeforeUnmount, ref, watch } from 'vue'
 
 interface ExportFormData {
   algorithmName: string
@@ -19,6 +19,76 @@ const formData = ref<ExportFormData>({
   filledBy: ''
 })
 
+const dialogRef = ref<HTMLElement | null>(null)
+const closeButtonRef = ref<HTMLElement | null>(null)
+/* Het element dat de focus had voordat de dialoog openging. Daar moet de
+   focus na het sluiten weer naartoe (WCAG 2.4.3 Focus Order). */
+let elementBeforeOpen: HTMLElement | null = null
+
+const FOCUSABLE =
+  'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
+
+function focusableElements(): HTMLElement[] {
+  if (!dialogRef.value) return []
+  return Array.from(dialogRef.value.querySelectorAll<HTMLElement>(FOCUSABLE)).filter(
+    (element) => element.offsetParent !== null
+  )
+}
+
+/*
+ * Houd Tab binnen de dialoog. Zonder deze afhandeling loopt de focus door naar
+ * de inhoud erachter, die visueel is afgedekt maar wel bereikbaar blijft.
+ */
+function trapFocus(event: KeyboardEvent) {
+  const elements = focusableElements()
+  if (elements.length === 0) return
+
+  const first = elements[0]!
+  const last = elements[elements.length - 1]!
+  const active = document.activeElement
+
+  if (event.shiftKey && (active === first || !dialogRef.value?.contains(active))) {
+    event.preventDefault()
+    last.focus()
+  } else if (!event.shiftKey && active === last) {
+    event.preventDefault()
+    first.focus()
+  }
+}
+
+function handleKeydown(event: KeyboardEvent) {
+  if (!props.isOpen) return
+
+  if (event.key === 'Escape') {
+    // De beslishulp draait zelf in een modal van de host. Zonder stopPropagation
+    // sluit één druk op Escape beide dialogen tegelijk.
+    event.stopPropagation()
+    handleCancel()
+    return
+  }
+
+  if (event.key === 'Tab') {
+    trapFocus(event)
+  }
+}
+
+watch(
+  () => props.isOpen,
+  (isOpen) => {
+    if (isOpen) {
+      elementBeforeOpen = document.activeElement as HTMLElement | null
+      document.addEventListener('keydown', handleKeydown, true)
+      nextTick(() => closeButtonRef.value?.focus())
+    } else {
+      document.removeEventListener('keydown', handleKeydown, true)
+      elementBeforeOpen?.focus()
+      elementBeforeOpen = null
+    }
+  }
+)
+
+onBeforeUnmount(() => document.removeEventListener('keydown', handleKeydown, true))
+
 const handleExport = () => {
   emit('export', formData.value)
   emit('close')
@@ -34,10 +104,24 @@ const handleBackdropClick = () => {
 </script>
 
 <template>
-  <div v-show="isOpen" id="modal" class="minbzk-modal">
+  <div v-show="isOpen" id="aiv-export-modal" class="minbzk-modal">
     <div class="modal-underlay" @click="handleBackdropClick"></div>
-    <div class="modal-content-container">
-      <div class="modal-content-close" @click="handleCancel">&#xd7;</div>
+    <div
+      ref="dialogRef"
+      class="modal-content-container"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="aiv-export-modal-title"
+    >
+      <button
+        ref="closeButtonRef"
+        type="button"
+        class="modal-content-close"
+        aria-label="Sluiten"
+        @click="handleCancel"
+      >
+        &#xd7;
+      </button>
 
       <div class="modal-content">
         <!-- Form = alles binnen modal -->
@@ -45,7 +129,9 @@ const handleBackdropClick = () => {
 
           <!-- Scrollbare body -->
           <div class="modal-body flex-grow overflow-auto space-y-4">
-            <h3 class="utrecht-heading-3">Exporteer AI-verordening profiel naar PDF</h3>
+            <h2 id="aiv-export-modal-title" class="utrecht-heading-3">
+              Exporteer AI-verordening profiel naar PDF
+            </h2>
 
             <div class="rvo-layout-margin-vertical--md">
               <p class="rvo-text--md --rvo-font-sans-serif-font-family">
@@ -62,9 +148,9 @@ const handleBackdropClick = () => {
             </div>
 
             <div>
-              <label for="algorithmName" class="rvo-label">Naam algoritme</label>
+              <label for="aiv-algorithm-name" class="rvo-label">Naam algoritme</label>
               <input
-                id="algorithmName"
+                id="aiv-algorithm-name"
                 v-model="formData.algorithmName"
                 type="text"
                 class="utrecht-textbox utrecht-textbox--rvo-sm w-full"
@@ -72,9 +158,9 @@ const handleBackdropClick = () => {
             </div>
 
             <div>
-              <label for="description" class="rvo-label">Omschrijving</label>
+              <label for="aiv-description" class="rvo-label">Omschrijving</label>
               <textarea
-                id="description"
+                id="aiv-description"
                 v-model="formData.description"
                 rows="3"
                 class="utrecht-textarea utrecht-textarea--rvo-sm w-full"
@@ -82,11 +168,12 @@ const handleBackdropClick = () => {
             </div>
 
             <div>
-              <label for="filledBy" class="rvo-label">Ingevuld door</label>
+              <label for="aiv-filled-by" class="rvo-label">Ingevuld door</label>
               <input
-                id="filledBy"
+                id="aiv-filled-by"
                 v-model="formData.filledBy"
                 type="text"
+                autocomplete="name"
                 class="utrecht-textbox utrecht-textbox--rvo-sm w-full"
               >
             </div>

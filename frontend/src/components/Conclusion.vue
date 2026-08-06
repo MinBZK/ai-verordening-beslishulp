@@ -2,7 +2,7 @@
 import Sources from '@/components/Sources.vue'
 import SubResult from '@/components/SubResult.vue'
 import ExportForm from '@/components/ExportForm.vue'
-import { ref, onMounted, computed, provide, getCurrentInstance } from 'vue'
+import { ref, onMounted, nextTick, provide, getCurrentInstance } from 'vue'
 import type { UserDecision } from '@/models/DecisionTree.ts'
 import { exportToPdf } from '@/services/pdfExport'
 import { filterLabels } from '@/services/labelsService'
@@ -21,6 +21,7 @@ defineEmits(['back'])
 // Gebruik ref voor reactieve data
 const sessionUserDecisionPath = ref<UserDecision[]>([])
 const isExportDialogOpen = ref(false)
+const headingRef = ref<HTMLElement | null>(null)
 
 const showCloseOnEnd = getCurrentInstance()!.appContext.config.globalProperties.showCloseOnEnd
 const showExportPDF = getCurrentInstance()!.appContext.config.globalProperties.showExportPDF
@@ -51,6 +52,9 @@ onMounted(() => {
   if (userDecisionPathData) {
     sessionUserDecisionPath.value = JSON.parse(userDecisionPathData)
   }
+  // Zet de focus op "Resultaat", anders merkt een screenreadergebruiker niet
+  // dat de laatste vraag is vervangen door de uitkomst.
+  nextTick(() => headingRef.value?.focus())
 })
 
 const openExportDialog = () => {
@@ -89,7 +93,7 @@ const handleExport = (formData: {
 <template>
   <div class="flex flex-col py-5 gap-y-5 rvo-max-width-layout--md">
     <div class="flex">
-      <div as="h3" class="utrecht-heading-2">Resultaat</div>
+      <h2 ref="headingRef" tabindex="-1" class="utrecht-heading-2">Resultaat</h2>
     </div>
 
     <!--Conclusion/Resultaat section-->
@@ -111,8 +115,7 @@ const handleExport = (formData: {
         >
           <span
             class="utrecht-icon rvo-icon rvo-icon-terug rvo-icon--lg rvo-icon--wit"
-            role="img"
-            aria-label="Terug"
+            aria-hidden="true"
           ></span>
           Vorige vraag
         </button>
@@ -125,8 +128,7 @@ const handleExport = (formData: {
       >
         <span
           class="utrecht-icon rvo-icon rvo-icon-downloaden rvo-icon--md rvo-icon--hemelblauw"
-          role="img"
-          aria-label="Exporteer naar PDF"
+          aria-hidden="true"
         ></span>
         Exporteer naar PDF
       </button>
@@ -159,13 +161,11 @@ const handleExport = (formData: {
             >
               <span
                 class="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw rvo-accordion__item-icon--closed"
-                role="img"
-                aria-label="Delta omlaag"
+                aria-hidden="true"
               ></span>
               <span
                 class="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw rvo-accordion__item-icon--open"
-                role="img"
-                aria-label="Delta omhoog"
+                aria-hidden="true"
               ></span>
               Antwoorden
             </h3>
@@ -205,13 +205,11 @@ const handleExport = (formData: {
             >
               <span
                 class="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw rvo-accordion__item-icon--closed"
-                role="img"
-                aria-label="Delta omlaag"
+                aria-hidden="true"
               ></span>
               <span
                 class="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw rvo-accordion__item-icon--open"
-                role="img"
-                aria-label="Delta omhoog"
+                aria-hidden="true"
               ></span>
               Verplichtingen
             </h3>
@@ -237,13 +235,11 @@ const handleExport = (formData: {
             >
               <span
                 class="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw rvo-accordion__item-icon--closed"
-                role="img"
-                aria-label="Delta omlaag"
+                aria-hidden="true"
               ></span>
               <span
                 class="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw rvo-accordion__item-icon--open"
-                role="img"
-                aria-label="Delta omhoog"
+                aria-hidden="true"
               ></span>
               Bronnen
             </h3>
@@ -260,8 +256,7 @@ const handleExport = (formData: {
     <div class="rvo-alert rvo-alert--info rvo-alert--padding-md">
       <span
         class="utrecht-icon rvo-icon rvo-icon-info rvo-icon--xl rvo-status-icon-info"
-        role="img"
-        aria-label="Info"
+        aria-hidden="true"
       ></span>
       <div class="rvo-alert-text">
         <div>

@@ -273,6 +273,18 @@ export async function exportToPdf(
         subject: `Version: ${releaseTag}`
       },
 
+      /*
+       * Ook het geëxporteerde rapport valt onder de toegankelijkheidseisen.
+       * - tagged zet een structuurboom in de PDF, zodat een screenreader de
+       *   leesvolgorde en de koppen kan volgen (WCAG 1.3.1/1.3.2).
+       * - language zet de taal van het document (WCAG 3.1.1).
+       * - displayTitle laat de viewer de titel tonen in plaats van de
+       *   bestandsnaam (WCAG 2.4.2).
+       */
+      tagged: true,
+      language: 'nl-NL',
+      displayTitle: true,
+
       // Page styling
       pageSize: 'A4',
       pageMargins: [70, 90, 70, 70],

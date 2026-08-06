@@ -38,6 +38,34 @@ Configuratie opties kunnen als URL parameter worden meegegeven, of als attribuut
 | showExportPDF        | true                              | Toont een knop bij de conclusie waarmee een PDF export gemaakt kan worden.                                       |
 | showExplanationField | true                              | Toont een invoerveld voor een opmerking bij elke vraag.                                                        |
 
+## Toegankelijkheid bij inbedding
+
+De beslishulp is bedoeld om als modal in een andere applicatie te draaien en
+niet als losse pagina. Een deel van de eisen uit WCAG 2.2 AA gaat over de
+pagina als geheel en kan de beslishulp daarom niet zelf afdekken. De verdeling:
+
+De beslishulp regelt zelf:
+
+- `lang="nl"` op de wrapper om de beslishulp heen, ongeacht de taal van de host.
+- Geen `<header>`, `<nav>` of `<main>`, zodat de landmarks van de host uniek
+  blijven.
+- Koppen beginnen op `<h2>`; de `<h1>` van de pagina hoort bij de host.
+- Alle id's beginnen met `aiv-`, zodat ze niet botsen met id's in de host.
+- De eigen exportdialoog vangt Escape af en stopt het event, zodat één druk op
+  Escape niet ook de modal van de host sluit.
+
+De host regelt:
+
+- De modal zelf: `role="dialog"`, `aria-modal="true"` en een toegankelijke naam
+  (`aria-label` of `aria-labelledby`), of een `<dialog>`-element. Zie
+  [voorbeeld.html](voorbeeld.html).
+- Focus die bij het openen de modal in gaat en bij het sluiten terugkeert naar
+  de knop waarmee de modal is geopend, en die niet achter de modal langs kan
+  lopen.
+- Sluiten met Escape en een sluitknop die met het toetsenbord te bedienen is.
+- Een `<h1>` op de pagina en een `title` op de `<iframe>` bij gebruik van de
+  iframe-variant, zie [iframe-voorbeeld.html](iframe-voorbeeld.html).
+
 # AI-Verordening-Beslishulp
 
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/MinBZK/ai-verordening-beslishulp/main.svg?badge_token=d3dKEK97RwC1II15_W-nng)](https://results.pre-commit.ci/latest/github/MinBZK/ai-verordening-beslishulp/main?badge_token=d3dKEK97RwC1II15_W-nng)
