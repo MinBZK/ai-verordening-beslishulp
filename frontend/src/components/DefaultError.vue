@@ -8,7 +8,9 @@ import { ExclamationTriangleIcon } from '@heroicons/vue/24/outline'
 </script>
 
 <template>
-  <div v-if="error" class="">
+  <!-- role="alert" laat een screenreader de foutmelding direct voorlezen; de
+       melding verschijnt zonder dat de focus verplaatst (WCAG 4.1.3). -->
+  <div v-if="error" role="alert">
     <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
       <div class="sm:flex sm:items-start">
         <div

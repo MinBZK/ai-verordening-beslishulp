@@ -6,12 +6,15 @@ defineProps<Props>()
 </script>
 
 <template>
-  <div v-if="loading" class="ai-decisiontree-loader">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+  <!-- role="status" zorgt dat een screenreader meldt dat er geladen wordt;
+       de animatie zelf is puur visueel (WCAG 4.1.3 Status Messages). -->
+  <div v-if="loading" class="ai-decisiontree-loader" role="status">
+    <span class="aiv-visually-hidden">Bezig met laden</span>
+    <div aria-hidden="true"></div>
+    <div aria-hidden="true"></div>
+    <div aria-hidden="true"></div>
+    <div aria-hidden="true"></div>
+    <div aria-hidden="true"></div>
   </div>
 </template>
 
