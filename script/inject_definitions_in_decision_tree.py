@@ -12,18 +12,39 @@ with open("decision-tree.yaml") as file:
 with open("definitions.yaml") as file:
     definitions = yaml.safe_load(file)
 
-# Create a dictionary to lookup terms
-term_dict = {
-    definition["term"]: (
-        f"<div class='aiv-definition'>"
-        f"{definition['term']}"
-        f"<span class='aiv-definition-text'>"
-        f"{definition['definition']}"
+# Definitie per term, opgezocht op het moment dat een term in de tekst staat
+term_dict = {definition["term"]: definition["definition"] for definition in definitions["definitions"]}
+
+# Doorlopende teller voor unieke id's. Op de conclusiepagina staan alle eerder
+# gestelde vragen onder "Antwoorden", dus staan meerdere definities van dezelfde
+# term tegelijk in de DOM. Een id per term zou dan dubbel voorkomen.
+definition_counter = 0
+
+
+def render_definition(term):
+    """
+    Zet een term om in de markup voor een definitie-tooltip.
+
+    Bewust een <button> in een <span>, geen <div>:
+    - een <div> in lopende tekst breekt de omringende <p> of <h2> open;
+    - de definitie was alleen met de muis op te roepen. Als knop is de term
+      focusbaar, zodat de definitie ook met het toetsenbord verschijnt.
+    aria-describedby koppelt de definitie aan de term, zodat een screenreader
+    die voorleest zodra de term focus krijgt.
+    """
+    global definition_counter
+    definition_counter += 1
+    definition_id = f"aiv-definition-{definition_counter}"
+    return (
+        f"<span class='aiv-definition'>"
+        f"<button type='button' class='aiv-definition-term' aria-describedby='{definition_id}'>"
+        f"{term}"
+        f"</button>"
+        f"<span class='aiv-definition-text' role='tooltip' id='{definition_id}'>"
+        f"{term_dict[term]}"
         f"</span>"
-        f"</div>"
+        f"</span>"
     )
-    for definition in definitions["definitions"]
-}
 
 
 def create_pattern(terms):
@@ -67,7 +88,7 @@ def replace_terms_with_tracking(text, term_dict):
 
         # If this is the first occurrence of the term, add the definition
         if term not in used_terms:
-            result.append(term_dict[term])
+            result.append(render_definition(term))
             used_terms.add(term)
         else:
             result.append(term)

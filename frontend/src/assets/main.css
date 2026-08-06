@@ -27,13 +27,28 @@
 .aiv-definition {
   position: relative;
   display: inline-block;
-  border-bottom: 2px dotted black;
+}
+
+/* De term zelf is een knop, zodat de definitie ook met het toetsenbord
+   op te roepen is. De knopopmaak wordt teruggezet naar lopende tekst. */
+.aiv-definition .aiv-definition-term {
+  appearance: none;
+  background: none;
+  border: 0;
+  border-bottom: 2px dotted currentcolor;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
   cursor: help;
 }
 
 .aiv-definition .aiv-definition-text {
   visibility: hidden;
-  width: 300px;
+
+  /* Niet breder dan het scherm, anders ontstaat horizontaal scrollen
+     op smalle schermen (WCAG 1.4.10 Reflow). */
+  width: min(300px, calc(100vw - 2rem));
   background-color: var(--rvo-color-wit);
   color: var(--rvo-color-zwart);
   filter: drop-shadow(0 4px 4px rgba(115, 142, 171, 0.5));
@@ -58,9 +73,17 @@
   backdrop-filter: blur(0);
 }
 
-.aiv-definition:hover .aiv-definition-text {
+/* focus-within zorgt dat de definitie ook verschijnt bij toetsenbordgebruik. */
+.aiv-definition:hover .aiv-definition-text,
+.aiv-definition:focus-within .aiv-definition-text {
   visibility: visible;
   opacity: 1;
+}
+
+/* Met Escape is de definitie weg te klikken zonder de muis te verplaatsen
+   (WCAG 1.4.13 Content on Hover or Focus). Zie definitionTooltips.ts. */
+.aiv-definition--dismissed .aiv-definition-text {
+  visibility: hidden;
 }
 
 /* Knop die eruitziet als een link. Een <a> zonder href is niet focusbaar en
