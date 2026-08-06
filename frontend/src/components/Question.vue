@@ -136,8 +136,10 @@ function optionalSaveUserDecision() {
         is bovendien een fout. De antwoorden zelf staan verderop in een
         role="group" met de vraag als naam.
       -->
+      <!-- max-width en geen width: bij 320px breed of bij 400% zoom moet de
+           inhoud meebewegen in plaats van horizontaal weglopen (WCAG 1.4.10). -->
       <div class="rvo-max-width-layout--sm utrecht-form-fieldset rvo-form-fieldset border-none"
-                style="width: 600px;">
+                style="max-width: 600px;">
         <!-- Question section -->
         <div class="flex">
           <h2 :id="headingId" ref="headingRef" tabindex="-1" class="utrecht-heading-3">

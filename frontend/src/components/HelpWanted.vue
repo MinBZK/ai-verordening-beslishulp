@@ -8,7 +8,9 @@
         ></span>
         Hulp nodig?
       </summary>
-      <div class="rvo-expandable-text__details" style="width: 55%">
+      <!-- max-width in plaats van een vaste 55%, zodat de tekst op een smal
+           scherm de volle breedte mag gebruiken (WCAG 1.4.10 Reflow). -->
+      <div class="rvo-expandable-text__details" style="max-width: 55ch">
         Je hebt aangegeven dat je hulp nodig hebt. Voor advies kun je een e-mail sturen naar
         <a class="rvo-link" href="mailto:ai-verordening@minbzk.nl"> ai-verordening@minbzk.nl </a> of
         op de pleio-omgeving
