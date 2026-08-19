@@ -18,6 +18,12 @@
 }
 
 #progress-question-mobile {
+  /* box-sizing: border-box zodat de horizontale padding binnen de breedte valt
+     in plaats van erbovenop; met content-box liep dit blok bij een venster van
+     320px door tot 408px (WCAG 1.4.10 Reflow). */
+  box-sizing: border-box;
+  max-width: 100%;
+
   @media only screen and (width <= 800px) {
     display: flex;
     align-items: center;
@@ -107,6 +113,37 @@
 [tabindex='-1']:focus-visible {
   outline: 2px solid var(--rvo-color-hemelblauw, #007bc7);
   outline-offset: 2px;
+}
+
+/* Het logo mag nooit breder worden dan de ruimte die het krijgt; anders
+   ontstaat horizontaal scrollen op een smal scherm (WCAG 1.4.10 Reflow). */
+.rvo-logo__emblem svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Reflow bij 320px (WCAG 1.4.10).
+
+   Twee flexbox-oorzaken lieten de conclusiepagina tot 408px uitlopen bij een
+   venster van 320px, met horizontaal scrollen tot gevolg:
+
+   1. align-items: flex-start op de kolom heft de standaard stretch op, waardoor
+      de kinderen zo breed werden als hun inhoud in plaats van als de container.
+   2. Een flex-item krijgt standaard min-width: auto en mag dus niet kleiner
+      worden dan zijn inhoud; met min-width: 0 breekt de tekst gewoon af. */
+#progress-question-mobile.rvo-layout-align-items-start > * {
+  align-self: stretch;
+  max-width: 100%;
+}
+
+.rvo-alert,
+.rvo-alert-text,
+.rvo-accordion,
+.rvo-accordion__item,
+.rvo-accordion__item-title,
+.rvo-layout-column,
+.rvo-layout-row {
+  min-width: 0;
 }
 
 /* Links op een gekleurde achtergrond.
