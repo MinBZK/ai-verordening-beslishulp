@@ -275,13 +275,18 @@ export async function exportToPdf(
 
       /*
        * Ook het geëxporteerde rapport valt onder de toegankelijkheidseisen.
-       * - tagged zet een structuurboom in de PDF, zodat een screenreader de
-       *   leesvolgorde en de koppen kan volgen (WCAG 1.3.1/1.3.2).
        * - language zet de taal van het document (WCAG 3.1.1).
        * - displayTitle laat de viewer de titel tonen in plaats van de
        *   bestandsnaam (WCAG 2.4.2).
+       *
+       * Bewust geen `tagged: true`. pdfmake 0.3.6 accepteert de optie, maar
+       * levert een lege structuurboom op: /Nums [] en nul /StructElem-objecten,
+       * en geen /StructParents op de pagina's. De PDF meldt dan via
+       * /Marked true dat er een leesvolgorde is terwijl die er niet is, en een
+       * screenreader vertrouwt op die belofte in plaats van terug te vallen op
+       * zijn eigen heuristiek. Een echt getagde PDF vraagt een andere generator
+       * of een naverwerkingsstap.
        */
-      tagged: true,
       language: 'nl-NL',
       displayTitle: true,
 
