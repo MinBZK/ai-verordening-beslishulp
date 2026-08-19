@@ -53,8 +53,9 @@
   visibility: hidden;
 
   /* Niet breder dan het scherm, anders ontstaat horizontaal scrollen
-     op smalle schermen (WCAG 1.4.10 Reflow). */
-  width: min(300px, calc(100vw - 2rem));
+     op smalle schermen (WCAG 1.4.10 Reflow). De marge is 2rem: 1rem voor de
+     left-offset hieronder en 1rem aan de andere kant. */
+  width: min(300px, calc(100vw - 3rem));
   box-sizing: border-box;
   background-color: var(--rvo-color-wit);
   color: var(--rvo-color-zwart);
@@ -72,13 +73,14 @@
      Rechts uitlijnen verplaatst het probleem alleen naar de linkerkant.
 
      Met position: fixed en left: 1rem staat de tooltip altijd volledig in
-     beeld. Boven de 800px is er ruimte genoeg en blijft hij bij de term
-     staan, waar hij visueel hoort. */
+     beeld. Pas vanaf 1000px is er genoeg ruimte naast de tekstkolom om hem
+     weer bij de term te zetten, waar hij visueel hoort; tussen 800 en 1000px
+     liep hij daar nog buiten beeld. */
   position: fixed;
   left: 1rem;
   z-index: 1;
 
-  @media only screen and (width > 800px) {
+  @media only screen and (width >= 1000px) {
     position: absolute;
     left: auto;
   }
@@ -161,6 +163,15 @@
 .rvo-layout-column,
 .rvo-layout-row {
   min-width: 0;
+}
+
+/* De knoppenrijen staan op één regel met justify-end en flex-shrink: 0. Passen
+   ze samen niet meer, dan schuift de eerste knop links buiten beeld: op de
+   conclusiepagina stond "Vorige vraag" bij 320px op left: -76. Laat de rij
+   omslaan in plaats van overlopen (WCAG 1.4.10 Reflow). */
+.flex.justify-end,
+.rvo-layout-row.rvo-layout-align-items-end {
+  flex-wrap: wrap;
 }
 
 /* Het waarschuwingspictogram in de bètaversie-balk.
