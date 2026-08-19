@@ -1,7 +1,7 @@
 import { getAsset } from '@/services/assetsRegistry'
 
 /**
- * Interface for individual font variants in pdfMake format
+ * Interface for individual font variants
  */
 interface PdfFontVariants {
   normal?: string
@@ -11,14 +11,14 @@ interface PdfFontVariants {
 }
 
 /**
- * Interface for pdfMake font definitions
+ * Interface for font definitions per family
  */
 interface PdfFonts {
   [fontFamily: string]: PdfFontVariants
 }
 
 /**
- * Interface for virtual file system (VFS) used by pdfMake
+ * Virtual file system: bestandsnaam naar base64-inhoud
  */
 interface VirtualFileSystem {
   [filename: string]: string
@@ -39,12 +39,12 @@ const fontAssetPaths = {
 }
 
 /**
- * Service to load fonts and VFS for pdfMake
+ * Service die de fonts en hun bytes laadt voor de PDF-export
  */
 const FontService = {
   /**
-   * Get fonts in pdfMake format
-   * @returns {PdfFonts} Fonts in pdfMake format
+   * Get the available font families
+   * @returns {PdfFonts} Font families with their variants
    */
   async getFonts(): Promise<PdfFonts> {
     if (!initialized) {
@@ -54,7 +54,7 @@ const FontService = {
   },
 
   /**
-   * Get virtual file system for pdfMake
+   * Get the virtual file system with the font bytes
    * @returns {VirtualFileSystem} Virtual file system with base64 encoded fonts
    */
   async getVFS(): Promise<VirtualFileSystem> {

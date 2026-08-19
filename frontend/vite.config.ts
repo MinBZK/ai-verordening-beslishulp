@@ -5,6 +5,7 @@ import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 import path from 'node:path';
 import type { Plugin } from 'vite';
 import tailwindcss from '@tailwindcss/vite'
+import { nodePolyfills } from 'vite-plugin-node-polyfills'
 
 // De RVO-assets bevatten duizenden iconen; alles bundelen maakt de build
 // onnodig groot. Alleen de iconen die de beslishulp echt gebruikt komen mee,
@@ -109,6 +110,9 @@ export default defineConfig({
   logLevel: 'info',
   plugins: [
     createSvgFilterPlugin(),
+    // pdfkit draait van oorsprong op Node en verwacht buffer, stream en util.
+    // Zonder deze polyfills laadt de getagde PDF-export niet in de browser.
+    nodePolyfills({ include: ['buffer', 'stream', 'util', 'events', 'zlib', 'assert'] }),
     vue(),
     tailwindcss(),
     cssInjectedByJsPlugin(),
