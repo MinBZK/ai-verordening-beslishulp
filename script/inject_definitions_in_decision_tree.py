@@ -31,6 +31,12 @@ def render_definition(term):
       focusbaar, zodat de definitie ook met het toetsenbord verschijnt.
     aria-describedby koppelt de definitie aan de term, zodat een screenreader
     die voorleest zodra de term focus krijgt.
+
+    De definitietekst staat op aria-hidden. Zonder dat telt hij mee in de naam
+    van de <h2> eromheen, en die kop krijgt na elke stap de focus: een
+    screenreader las dan de hele definitie midden in de vraag voor, en bij het
+    tabben naar de term nog een keer via aria-describedby. aria-describedby
+    leest ook aria-hidden-inhoud, dus de definitie blijft gewoon beschikbaar.
     """
     global definition_counter
     definition_counter += 1
@@ -40,7 +46,7 @@ def render_definition(term):
         f"<button type='button' class='aiv-definition-term' aria-describedby='{definition_id}'>"
         f"{term}"
         f"</button>"
-        f"<span class='aiv-definition-text' role='tooltip' id='{definition_id}'>"
+        f"<span class='aiv-definition-text' role='tooltip' id='{definition_id}' aria-hidden='true'>"
         f"{term_dict[term]}"
         f"</span>"
         f"</span>"
