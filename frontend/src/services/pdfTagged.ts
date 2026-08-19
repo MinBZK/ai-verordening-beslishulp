@@ -52,7 +52,11 @@ export interface TaggedPdfOptions {
   }
 }
 
-const MARGIN = { top: 90, bottom: 70, left: 60, right: 60 }
+const PAGE_SIZE = 'A4'
+const MARGIN = { top: 90, bottom: 70, left: 70, right: 70 }
+/* Het logo is een brede banner (4000x552) met het beeldmerk links; op een
+   smalle breedte wordt dat onleesbaar klein. Dezelfde maat als voorheen. */
+const LOGO_WIDTH = 300
 const COLOR_RVO_BLUE = '#154273'
 const COLOR_TEXT = '#000000'
 const COLOR_MUTED = '#666666'
@@ -80,6 +84,7 @@ export class TaggedPdf {
       tagged: true,
       displayTitle: true,
       autoFirstPage: false,
+      size: PAGE_SIZE,
       margins: MARGIN,
       info: {
         Title: options.title,
@@ -160,9 +165,8 @@ export class TaggedPdf {
     this.doc.markContent('Artifact')
     try {
       const logo = `data:image/png;base64,${this.logoBase64}`
-      const width = 160
-      const x = (this.doc.page.width - width) / 2
-      this.doc.image(logo, x, 25, { width })
+      const x = (this.doc.page.width - LOGO_WIDTH) / 2
+      this.doc.image(logo, x, 30, { width: LOGO_WIDTH })
     } catch {
       // Een ontbrekend logo mag de export niet blokkeren.
     }
@@ -185,27 +189,40 @@ export class TaggedPdf {
     element.end()
   }
 
-  heading(text: string, level: 1 | 2 | 3 = 2): void {
-    const sizes = { 1: 24, 2: 18, 3: 14 } as const
-    const spacing = { 1: 14, 2: 12, 3: 8 } as const
+  heading(
+    text: string,
+    level: 1 | 2 | 3 = 2,
+    opts: { center?: boolean } = {}
+  ): void {
+    const sizes = { 1: 26, 2: 18, 3: 12.5 } as const
+    const spaceAfter = { 1: 0.7, 2: 0.55, 3: 0.35 } as const
     this.write(`H${level}` as StructType, text, () => {
       this.doc
         .font(this.fontBold)
         .fontSize(sizes[level])
         .fillColor(COLOR_RVO_BLUE)
-        .text(text, { align: 'left' })
-      this.doc.moveDown(spacing[level] / 24)
+        .text(text, { align: opts.center ? 'center' : 'left' })
+      this.doc.moveDown(spaceAfter[level])
     })
   }
 
-  paragraph(text: string, opts: { italic?: boolean; muted?: boolean; size?: number } = {}): void {
+  paragraph(
+    text: string,
+    opts: {
+      italic?: boolean
+      muted?: boolean
+      size?: number
+      center?: boolean
+      spaceAfter?: number
+    } = {}
+  ): void {
     this.write('P', text, () => {
       this.doc
         .font(opts.italic ? this.fontItalic : this.fontNormal)
         .fontSize(opts.size ?? 11)
         .fillColor(opts.muted ? COLOR_MUTED : COLOR_TEXT)
-        .text(text, { align: 'left' })
-      this.doc.moveDown(0.5)
+        .text(text, { align: opts.center ? 'center' : 'left', lineGap: 2 })
+      this.doc.moveDown(opts.spaceAfter ?? 0.5)
     })
   }
 
@@ -298,16 +315,20 @@ export class TaggedPdf {
   }
 
   /** Een link met Link-structuurelement en een leesbare beschrijving. */
-  link(label: string, url: string): void {
+  link(label: string, url: string, opts: { center?: boolean; size?: number } = {}): void {
     this.write(
       'Link',
       label,
       () => {
         this.doc
           .font(this.fontNormal)
-          .fontSize(11)
+          .fontSize(opts.size ?? 11)
           .fillColor(COLOR_LINK)
-          .text(label, { link: url, underline: true, align: 'left' })
+          .text(label, {
+            link: url,
+            underline: true,
+            align: opts.center ? 'center' : 'left'
+          })
         this.doc.moveDown(0.4)
       },
       { alt: `${label}: ${url}` }
@@ -317,6 +338,27 @@ export class TaggedPdf {
 
   moveDown(lines = 1): void {
     this.doc.moveDown(lines)
+  }
+
+  /** Zet de cursor op een vaste hoogte, voor het uitlijnen van het voorblad. */
+  moveTo(y: number): void {
+    this.doc.x = MARGIN.left
+    this.doc.y = y
+  }
+
+  /** Een dunne scheidingslijn, decoratief en dus een artifact. */
+  rule(width = 0.6): void {
+    const y = this.doc.y
+    this.doc.markContent('Artifact')
+    this.doc
+      .moveTo(MARGIN.left, y)
+      .lineTo(this.doc.page.width - MARGIN.right, y)
+      .lineWidth(width)
+      .strokeColor('#CCCCCC')
+      .stroke()
+    this.doc.endMarkedContent()
+    this.doc.x = MARGIN.left
+    this.doc.y = y + 12
   }
 
   /**

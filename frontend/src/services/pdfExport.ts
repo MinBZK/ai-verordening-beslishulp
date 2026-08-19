@@ -149,28 +149,47 @@ function addTitlePage(
   releaseTag: string
 ): void {
   pdf.addPage()
-  pdf.moveDown(4)
-  pdf.heading('Resultaten AI-verordening Beslishulp', 1)
+
+  // De titel begint op een derde van de pagina, zodat het voorblad rust heeft
+  // en niet strak onder het logo begint.
+  pdf.moveTo(250)
+  pdf.heading('Resultaten AI-verordening Beslishulp', 1, { center: true })
 
   if (algorithmName) {
-    pdf.paragraph(algorithmName, { size: 16 })
+    pdf.paragraph(algorithmName, { size: 17, center: true, spaceAfter: 0.8 })
   }
   if (description) {
-    pdf.paragraph(description)
-  }
-  if (filledBy) {
-    pdf.paragraph(`Ingevuld door ${filledBy}`, { italic: true, muted: true })
+    pdf.paragraph(description, { center: true, spaceAfter: 1.2 })
   }
 
-  pdf.paragraph(`Gegenereerd op ${dutchDateFormatter.format(new Date())}`, {
-    italic: true,
-    muted: true
-  })
-  pdf.paragraph(`Bron: ${SOURCE_INFO.name}`, { italic: true, muted: true })
-  if (SOURCE_INFO.url) {
-    pdf.link(SOURCE_INFO.url, SOURCE_INFO.url)
+  pdf.rule()
+
+  // De herkomstgegevens staan kleiner en gedempt: ze horen bij het document,
+  // niet bij de inhoud.
+  if (filledBy) {
+    pdf.paragraph(`Ingevuld door ${filledBy}`, {
+      muted: true,
+      size: 10,
+      center: true,
+      spaceAfter: 0.25
+    })
   }
-  pdf.paragraph(`Versie: ${releaseTag}`, { italic: true, muted: true })
+  pdf.paragraph(`Gegenereerd op ${dutchDateFormatter.format(new Date())}`, {
+    muted: true,
+    size: 10,
+    center: true,
+    spaceAfter: 0.25
+  })
+  pdf.paragraph(`Bron: ${SOURCE_INFO.name}`, {
+    muted: true,
+    size: 10,
+    center: true,
+    spaceAfter: 0.25
+  })
+  if (SOURCE_INFO.url) {
+    pdf.link(SOURCE_INFO.url, SOURCE_INFO.url, { center: true, size: 10 })
+  }
+  pdf.paragraph(`Versie: ${releaseTag}`, { muted: true, size: 10, center: true })
 }
 
 function addDisclaimers(pdf: TaggedPdf): void {
