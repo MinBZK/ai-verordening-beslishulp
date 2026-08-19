@@ -164,32 +164,33 @@ function addTitlePage(
 
   pdf.rule()
 
-  // De herkomstgegevens staan kleiner en gedempt: ze horen bij het document,
-  // niet bij de inhoud.
+  // De herkomstgegevens staan gedempt: ze horen bij het document, niet bij de
+  // inhoud. Wel op dezelfde 11pt als de lopende tekst, want kleiner leest niet
+  // prettig.
   if (filledBy) {
     pdf.paragraph(`Ingevuld door ${filledBy}`, {
       muted: true,
-      size: 10,
+      size: 11,
       center: true,
       spaceAfter: 0.25
     })
   }
   pdf.paragraph(`Gegenereerd op ${dutchDateFormatter.format(new Date())}`, {
     muted: true,
-    size: 10,
+    size: 11,
     center: true,
     spaceAfter: 0.25
   })
   pdf.paragraph(`Bron: ${SOURCE_INFO.name}`, {
     muted: true,
-    size: 10,
+    size: 11,
     center: true,
     spaceAfter: 0.25
   })
   if (SOURCE_INFO.url) {
-    pdf.link(SOURCE_INFO.url, SOURCE_INFO.url, { center: true, size: 10 })
+    pdf.link(SOURCE_INFO.url, SOURCE_INFO.url, { center: true, size: 11 })
   }
-  pdf.paragraph(`Versie: ${releaseTag}`, { muted: true, size: 10, center: true })
+  pdf.paragraph(`Versie: ${releaseTag}`, { muted: true, size: 11, center: true })
 }
 
 function addDisclaimers(pdf: TaggedPdf): void {
