@@ -55,6 +55,7 @@
   /* Niet breder dan het scherm, anders ontstaat horizontaal scrollen
      op smalle schermen (WCAG 1.4.10 Reflow). */
   width: min(300px, calc(100vw - 2rem));
+  box-sizing: border-box;
   background-color: var(--rvo-color-wit);
   color: var(--rvo-color-zwart);
   filter: drop-shadow(0 4px 4px rgba(115, 142, 171, 0.5));
@@ -63,8 +64,24 @@
   border-color: var(--rvo-color-grijs-200);
   border: 1px;
   padding: var(--rvo-alert-padding-sm-padding-block-end);
-  position: absolute;
+
+  /* Op smalle schermen hoort de tooltip zich aan het venster te houden en
+     niet aan de term. Met position: absolute begon hij waar de term stond,
+     en een term achter in een regel duwde hem tot ver buiten beeld: bij een
+     venster van 502px liep de pagina door tot 744px (WCAG 1.4.10 Reflow).
+     Rechts uitlijnen verplaatst het probleem alleen naar de linkerkant.
+
+     Met position: fixed en left: 1rem staat de tooltip altijd volledig in
+     beeld. Boven de 800px is er ruimte genoeg en blijft hij bij de term
+     staan, waar hij visueel hoort. */
+  position: fixed;
+  left: 1rem;
   z-index: 1;
+
+  @media only screen and (width > 800px) {
+    position: absolute;
+    left: auto;
+  }
 
   /* Text styling */
   color: var(--utrecht-document-color);
