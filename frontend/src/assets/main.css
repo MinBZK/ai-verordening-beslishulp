@@ -109,6 +109,20 @@
   outline-offset: 2px;
 }
 
+/* Links op een gekleurde achtergrond.
+
+   Het standaard hemelblauw (#007BC7) haalt 4,51:1 op wit en voldoet daar net,
+   maar niet op de achtergronden waar deze links op staan: 3,78:1 op de
+   waarschuwingsbalk (#FFE9B8) en 4,12:1 in de disclaimerlijst (#F1F5F9), beide
+   onder de 4,5:1 van WCAG 1.4.3. Logoblauw komt op diezelfde achtergronden uit
+   op 8,55:1 en 9,31:1. */
+.rvo-alert .rvo-link,
+.rvo-alert-text .rvo-link,
+.rvo-form-fieldset .utrecht-unordered-list .rvo-link,
+.rvo-tag .rvo-link {
+  color: var(--rvo-color-logoblauw, #154273);
+}
+
 /* Tekst die alleen voor screenreaders bedoeld is. Niet display:none, want dan
    halen hulptechnologieën de tekst ook weg. */
 .aiv-visually-hidden {
