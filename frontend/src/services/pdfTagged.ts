@@ -53,10 +53,13 @@ export interface TaggedPdfOptions {
 }
 
 const PAGE_SIZE = 'A4'
-const MARGIN = { top: 90, bottom: 70, left: 70, right: 70 }
-/* Het logo is een brede banner (4000x552) met het beeldmerk links; op een
-   smalle breedte wordt dat onleesbaar klein. Dezelfde maat als voorheen. */
-const LOGO_WIDTH = 300
+/* De bovenmarge houdt ruimte vrij voor het logo, dat op y=30 begint en bij
+   LOGO_WIDTH 420 zo'n 58pt hoog is. */
+const MARGIN = { top: 110, bottom: 70, left: 70, right: 70 }
+/* Het logo is een brede banner (4000x552): het beeldmerk beslaat maar een
+   klein deel van die breedte, dus moet de banner zelf ruim zijn om het
+   embleem leesbaar te houden. Op 420pt is het beeldmerk ongeveer 58pt hoog. */
+const LOGO_WIDTH = 420
 const COLOR_RVO_BLUE = '#154273'
 const COLOR_TEXT = '#000000'
 const COLOR_MUTED = '#666666'
@@ -231,26 +234,41 @@ export class TaggedPdf {
     const visible = items.filter((item) => item.trim())
     if (visible.length === 0) return
 
+    /*
+     * De bullet wordt los van de tekst getekend, in een eigen kolom. Met
+     * `• ${item}` als één tekstblok springt alleen de eerste regel in en loopt
+     * elke vervolgregel terug onder de bullet; de opsomming hangt dan niet uit.
+     */
+    const bulletX = MARGIN.left + 6
+    const textX = MARGIN.left + 22
+    const textWidth = this.doc.page.width - textX - MARGIN.right
+
     const list = this.doc.struct('L')
     this.root.add(list)
+
     for (const item of visible) {
       const li = this.doc.struct('LI')
       list.add(li)
       const body = this.doc.struct('LBody')
       li.add(body)
       body.add(this.doc.markStructureContent('LBody'))
-      this.doc
-        .font(this.fontNormal)
-        .fontSize(11)
-        .fillColor(COLOR_TEXT)
-        .text(`• ${item}`, { align: 'left', indent: 10 })
-      this.doc.moveDown(0.3)
+
+      const y = this.doc.y
+      this.doc.font(this.fontNormal).fontSize(11).fillColor(COLOR_TEXT)
+      this.doc.text('•', bulletX, y, { lineBreak: false })
+      this.doc.text(item, textX, y, { width: textWidth, align: 'left', lineGap: 2 })
+
       this.doc.endMarkedContent()
       body.end()
       li.end()
+
+      this.doc.x = MARGIN.left
+      this.doc.moveDown(0.55)
     }
+
     list.end()
-    this.doc.moveDown(0.4)
+    this.doc.x = MARGIN.left
+    this.doc.moveDown(0.5)
   }
 
   /**
