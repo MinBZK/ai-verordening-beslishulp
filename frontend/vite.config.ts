@@ -6,6 +6,11 @@ import path from 'node:path';
 import type { Plugin } from 'vite';
 import tailwindcss from '@tailwindcss/vite'
 
+// De RVO-assets bevatten duizenden iconen; alles bundelen maakt de build
+// onnodig groot. Alleen de iconen die de beslishulp echt gebruikt komen mee,
+// de rest wordt vervangen door een lege SVG. Staat een icoon dat wél in de
+// markup wordt gebruikt niet in deze lijst, dan is het in de applicatie
+// onzichtbaar zonder dat er een foutmelding verschijnt.
 const SVG_ALLOW_LIST = [
   'logo.svg',
   'info.svg',
@@ -15,6 +20,7 @@ const SVG_ALLOW_LIST = [
   'delta-omhoog.svg',
   'delta-omlaag.svg',
   'bewerken.svg',
+  'waarschuwing.svg', // bètaversie-balk en het label in de beslishulp
   'progress-tracker-', // This allows all SVGs starting with 'progress-tracker-'
 ];
 

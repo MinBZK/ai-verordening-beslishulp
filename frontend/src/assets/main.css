@@ -146,6 +146,21 @@
   min-width: 0;
 }
 
+/* Het waarschuwingspictogram in de bètaversie-balk.
+
+   Een rvo-icoon is een mask-image die zijn vorm uit de achtergrondkleur haalt.
+   RVO zet die kleur op donkergeel (#FFB612), wat op de gele balk (#FFE9B8)
+   uitkomt op 1,47:1: het icoon zou ook met een werkende mask nauwelijks te
+   onderscheiden zijn. WCAG 1.4.11 eist 3:1 voor pictogrammen die informatie
+   dragen; grijs-800 komt uit op 12,26:1 en sluit aan bij de tekst in de balk.
+
+   Dat het icoon helemaal ontbrak had een andere oorzaak: waarschuwing.svg
+   stond niet in de SVG_ALLOW_LIST in vite.config.ts. Zie die commit. */
+.rvo-alert--warning .rvo-icon-waarschuwing,
+.rvo-tag--warning .rvo-icon-waarschuwing {
+  background-color: var(--rvo-color-grijs-800, #1e293b);
+}
+
 /* Links op een gekleurde achtergrond.
 
    Het standaard hemelblauw (#007BC7) haalt 4,51:1 op wit en voldoet daar net,
