@@ -60,10 +60,17 @@ const MARGIN = { top: 110, bottom: 70, left: 70, right: 70 }
    klein deel van die breedte, dus moet de banner zelf ruim zijn om het
    embleem leesbaar te houden. Op 420pt is het beeldmerk ongeveer 58pt hoog. */
 const LOGO_WIDTH = 420
-const COLOR_RVO_BLUE = '#154273'
-const COLOR_TEXT = '#000000'
-const COLOR_MUTED = '#666666'
-const COLOR_LINK = '#154273'
+/*
+ * Alle kleuren zijn nagerekend tegen wit (WCAG 1.4.3 voor tekst, 1.4.11 voor
+ * lijnen). De ratio staat erbij zodat een wijziging niet ongemerkt onder de
+ * norm zakt.
+ */
+const COLOR_RVO_BLUE = '#154273' // 10,20:1
+const COLOR_TEXT = '#000000' // 21,00:1
+const COLOR_MUTED = '#666666' // 5,74:1
+const COLOR_LINK = '#154273' // 10,20:1
+const COLOR_FOOTER = '#767676' // 4,54:1 — was #999999 met 2,85:1
+const COLOR_RULE = '#8C8C8C' // 3,36:1 — was #CCCCCC met 1,61:1
 
 /**
  * Bouwt een getagde PDF op. De aanroeper voegt inhoud toe via de methodes
@@ -149,7 +156,7 @@ export class TaggedPdf {
     this.doc
       .font(this.fontNormal)
       .fontSize(9)
-      .fillColor('#999999')
+      .fillColor(COLOR_FOOTER)
       .text(`Pagina ${this.pageNumber}`, MARGIN.left, y, {
         width: this.doc.page.width - MARGIN.left - MARGIN.right,
         align: 'center',
@@ -320,7 +327,7 @@ export class TaggedPdf {
         .moveTo(left, rowBottom)
         .lineTo(left + usable, rowBottom)
         .lineWidth(isHeader ? 1 : 0.5)
-        .strokeColor(isHeader ? COLOR_RVO_BLUE : '#AAAAAA')
+        .strokeColor(isHeader ? COLOR_RVO_BLUE : COLOR_RULE)
         .stroke()
       this.doc.y = rowBottom + 2
       this.doc.x = left
@@ -372,7 +379,7 @@ export class TaggedPdf {
       .moveTo(MARGIN.left, y)
       .lineTo(this.doc.page.width - MARGIN.right, y)
       .lineWidth(width)
-      .strokeColor('#CCCCCC')
+      .strokeColor(COLOR_RULE)
       .stroke()
     this.doc.endMarkedContent()
     this.doc.x = MARGIN.left
