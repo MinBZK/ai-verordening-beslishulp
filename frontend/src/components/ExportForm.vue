@@ -19,11 +19,42 @@ const formData = ref<ExportFormData>({
   filledBy: ''
 })
 
+const modalRef = ref<HTMLElement | null>(null)
 const dialogRef = ref<HTMLElement | null>(null)
 const closeButtonRef = ref<HTMLElement | null>(null)
 /* Het element dat de focus had voordat de dialoog openging. Daar moet de
    focus na het sluiten weer naartoe (WCAG 2.4.3 Focus Order). */
 let elementBeforeOpen: HTMLElement | null = null
+/* De elementen die wij op inert hebben gezet, zodat we bij het sluiten alleen
+   die weer vrijgeven en niets aanraken wat de host zelf inert had gemaakt. */
+let inertedElements: HTMLElement[] = []
+
+/*
+ * De focustrap houdt Tab binnen de dialoog, maar een screenreadergebruiker die
+ * met de virtuele cursor navigeert leest gewoon door naar de pagina erachter.
+ * inert haalt die inhoud uit zowel de focusvolgorde als de toegankelijkheidsboom.
+ *
+ * inert gaat op de broers en zussen van de modal, niet op een voorouder: de
+ * modal staat in de DOM van de conclusie, dus een voorouder inert maken zou de
+ * dialoog zelf ook uitschakelen.
+ */
+function setBackgroundInert(inert: boolean) {
+  if (!inert) {
+    inertedElements.forEach((element) => element.removeAttribute('inert'))
+    inertedElements = []
+    return
+  }
+  const modal = modalRef.value
+  if (!modal) return
+  for (let node = modal; node.parentElement; node = node.parentElement) {
+    for (const sibling of Array.from(node.parentElement.children)) {
+      if (sibling === node || !(sibling instanceof HTMLElement)) continue
+      if (sibling.hasAttribute('inert')) continue
+      sibling.setAttribute('inert', '')
+      inertedElements.push(sibling)
+    }
+  }
+}
 
 const FOCUSABLE =
   'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
@@ -78,16 +109,23 @@ watch(
     if (isOpen) {
       elementBeforeOpen = document.activeElement as HTMLElement | null
       document.addEventListener('keydown', handleKeydown, true)
-      nextTick(() => closeButtonRef.value?.focus())
+      nextTick(() => {
+        setBackgroundInert(true)
+        closeButtonRef.value?.focus()
+      })
     } else {
       document.removeEventListener('keydown', handleKeydown, true)
+      setBackgroundInert(false)
       elementBeforeOpen?.focus()
       elementBeforeOpen = null
     }
   }
 )
 
-onBeforeUnmount(() => document.removeEventListener('keydown', handleKeydown, true))
+onBeforeUnmount(() => {
+  document.removeEventListener('keydown', handleKeydown, true)
+  setBackgroundInert(false)
+})
 
 const handleExport = () => {
   emit('export', formData.value)
@@ -104,7 +142,7 @@ const handleBackdropClick = () => {
 </script>
 
 <template>
-  <div v-show="isOpen" id="aiv-export-modal" class="minbzk-modal">
+  <div v-show="isOpen" ref="modalRef" id="aiv-export-modal" class="minbzk-modal">
     <div class="modal-underlay" @click="handleBackdropClick"></div>
     <div
       ref="dialogRef"
