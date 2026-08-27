@@ -1,10 +1,4 @@
-/**
- * Export van het beslishulp-rapport naar een getagde PDF.
- *
- * De opbouw loopt via TaggedPdf (pdfkit) en niet via pdfmake: pdfmake maakt
- * geen structuurelementen aan, waardoor de PDF wel meldt dat hij een
- * leesvolgorde heeft zonder er een te hebben. Zie pdfTagged.ts.
- */
+/** Export van het beslishulp-rapport naar een getagde PDF. Zie pdfTagged.ts. */
 
 import { PDF_DISCLAIMER_ITEMS, PDF_INTRO_TEXT, SOURCE_INFO } from '@/components/Disclaimer.vue'
 import type { UserDecision } from '@/models/DecisionTree.ts'
@@ -150,8 +144,7 @@ function addTitlePage(
 ): void {
   pdf.addPage()
 
-  // De titel begint op een derde van de pagina, zodat het voorblad rust heeft
-  // en niet strak onder het logo begint.
+  // De titel begint op een derde van de pagina, voor rust op het voorblad.
   pdf.moveTo(250)
   pdf.heading('Resultaten AI-verordening Beslishulp', 1, { center: true })
 
@@ -164,9 +157,7 @@ function addTitlePage(
 
   pdf.rule()
 
-  // De herkomstgegevens staan gedempt: ze horen bij het document, niet bij de
-  // inhoud. Wel op dezelfde 11pt als de lopende tekst, want kleiner leest niet
-  // prettig.
+  // Gedempt: deze regels horen bij het document, niet bij de inhoud.
   if (filledBy) {
     pdf.paragraph(`Ingevuld door ${filledBy}`, {
       muted: true,

@@ -7,11 +7,9 @@ import type { Plugin } from 'vite';
 import tailwindcss from '@tailwindcss/vite'
 import { nodePolyfills } from 'vite-plugin-node-polyfills'
 
-// De RVO-assets bevatten duizenden iconen; alles bundelen maakt de build
-// onnodig groot. Alleen de iconen die de beslishulp echt gebruikt komen mee,
-// de rest wordt vervangen door een lege SVG. Staat een icoon dat wél in de
-// markup wordt gebruikt niet in deze lijst, dan is het in de applicatie
-// onzichtbaar zonder dat er een foutmelding verschijnt.
+// De RVO-assets bevatten duizenden iconen; alleen de gebruikte komen mee, de
+// rest wordt een lege SVG. Ontbreekt een icoon dat de markup wel gebruikt, dan
+// is het onzichtbaar zonder foutmelding.
 const SVG_ALLOW_LIST = [
   'logo.svg',
   'info.svg',
@@ -110,8 +108,7 @@ export default defineConfig({
   logLevel: 'info',
   plugins: [
     createSvgFilterPlugin(),
-    // pdfkit draait van oorsprong op Node en verwacht buffer, stream en util.
-    // Zonder deze polyfills laadt de getagde PDF-export niet in de browser.
+    // pdfkit verwacht Node's buffer, stream en util.
     nodePolyfills({ include: ['buffer', 'stream', 'util', 'events', 'zlib', 'assert'] }),
     vue(),
     tailwindcss(),

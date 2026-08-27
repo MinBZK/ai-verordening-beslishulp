@@ -18,9 +18,8 @@
 }
 
 #progress-question-mobile {
-  /* box-sizing: border-box zodat de horizontale padding binnen de breedte valt
-     in plaats van erbovenop; met content-box liep dit blok bij een venster van
-     320px door tot 408px (WCAG 1.4.10 Reflow). */
+  /* border-box zodat de padding binnen de breedte valt en niet erbovenop
+     (WCAG 1.4.10 Reflow). */
   box-sizing: border-box;
   max-width: 100%;
 
@@ -66,16 +65,10 @@
   border: 1px;
   padding: var(--rvo-alert-padding-sm-padding-block-end);
 
-  /* Op smalle schermen hoort de tooltip zich aan het venster te houden en
-     niet aan de term. Met position: absolute begon hij waar de term stond,
-     en een term achter in een regel duwde hem tot ver buiten beeld: bij een
-     venster van 502px liep de pagina door tot 744px (WCAG 1.4.10 Reflow).
-     Rechts uitlijnen verplaatst het probleem alleen naar de linkerkant.
-
-     Met position: fixed en left: 1rem staat de tooltip altijd volledig in
-     beeld. Pas vanaf 1000px is er genoeg ruimte naast de tekstkolom om hem
-     weer bij de term te zetten, waar hij visueel hoort; tussen 800 en 1000px
-     liep hij daar nog buiten beeld. */
+  /* Op smalle schermen ankert de tooltip aan het venster in plaats van aan de
+     term: absoluut gepositioneerd liep hij buiten beeld bij een term achter in
+     een regel (WCAG 1.4.10 Reflow). Vanaf 1000px is er ruimte naast de
+     tekstkolom en staat hij weer bij de term. */
   position: fixed;
   left: 1rem;
   z-index: 1;
@@ -141,15 +134,9 @@
   height: auto;
 }
 
-/* Reflow bij 320px (WCAG 1.4.10).
-
-   Twee flexbox-oorzaken lieten de conclusiepagina tot 408px uitlopen bij een
-   venster van 320px, met horizontaal scrollen tot gevolg:
-
-   1. align-items: flex-start op de kolom heft de standaard stretch op, waardoor
-      de kinderen zo breed werden als hun inhoud in plaats van als de container.
-   2. Een flex-item krijgt standaard min-width: auto en mag dus niet kleiner
-      worden dan zijn inhoud; met min-width: 0 breekt de tekst gewoon af. */
+/* Twee flexbox-defaults lieten de pagina uitlopen op smalle schermen
+   (WCAG 1.4.10 Reflow): align-items: flex-start heft de stretch op, en
+   min-width: auto belet een flex-item kleiner te worden dan zijn inhoud. */
 #progress-question-mobile.rvo-layout-align-items-start > * {
   align-self: stretch;
   max-width: 100%;
@@ -165,37 +152,22 @@
   min-width: 0;
 }
 
-/* De knoppenrijen staan op één regel met justify-end en flex-shrink: 0. Passen
-   ze samen niet meer, dan schuift de eerste knop links buiten beeld: op de
-   conclusiepagina stond "Vorige vraag" bij 320px op left: -76. Laat de rij
-   omslaan in plaats van overlopen (WCAG 1.4.10 Reflow). */
+/* Met justify-end en flex-shrink: 0 schuift de eerste knop links buiten beeld
+   zodra de rij niet meer past. Laat hem omslaan (WCAG 1.4.10 Reflow). */
 .flex.justify-end,
 .rvo-layout-row.rvo-layout-align-items-end {
   flex-wrap: wrap;
 }
 
-/* Het waarschuwingspictogram in de bètaversie-balk.
-
-   Een rvo-icoon is een mask-image die zijn vorm uit de achtergrondkleur haalt.
-   RVO zet die kleur op donkergeel (#FFB612), wat op de gele balk (#FFE9B8)
-   uitkomt op 1,47:1: het icoon zou ook met een werkende mask nauwelijks te
-   onderscheiden zijn. WCAG 1.4.11 eist 3:1 voor pictogrammen die informatie
-   dragen; grijs-800 komt uit op 12,26:1 en sluit aan bij de tekst in de balk.
-
-   Dat het icoon helemaal ontbrak had een andere oorzaak: waarschuwing.svg
-   stond niet in de SVG_ALLOW_LIST in vite.config.ts. Zie die commit. */
+/* Een rvo-icoon is een mask-image die zijn vorm uit de achtergrondkleur haalt.
+   RVO's donkergeel haalt op deze balk 1,47:1; WCAG 1.4.11 eist 3:1. */
 .rvo-alert--warning .rvo-icon-waarschuwing,
 .rvo-tag--warning .rvo-icon-waarschuwing {
   background-color: var(--rvo-color-grijs-800, #1e293b);
 }
 
-/* Links op een gekleurde achtergrond.
-
-   Het standaard hemelblauw (#007BC7) haalt 4,51:1 op wit en voldoet daar net,
-   maar niet op de achtergronden waar deze links op staan: 3,78:1 op de
-   waarschuwingsbalk (#FFE9B8) en 4,12:1 in de disclaimerlijst (#F1F5F9), beide
-   onder de 4,5:1 van WCAG 1.4.3. Logoblauw komt op diezelfde achtergronden uit
-   op 8,55:1 en 9,31:1. */
+/* Hemelblauw haalt 4,51:1 op wit maar zakt op deze gekleurde achtergronden
+   onder de 4,5:1 van WCAG 1.4.3; logoblauw haalt er ruim 8:1. */
 .rvo-alert .rvo-link,
 .rvo-alert-text .rvo-link,
 .rvo-form-fieldset .utrecht-unordered-list .rvo-link,

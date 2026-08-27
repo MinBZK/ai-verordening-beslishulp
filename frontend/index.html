@@ -23,12 +23,8 @@
       <a href="#" aria-label="Logo Rijksoverheid" class="rvo-header__logo-link rvo-link rvo-link--no-underline">
         <div class="rvo-logo rvo-header__logo-img ">
           <div class="rvo-logo__emblem">
-            <!--
-              viewBox op de werkelijke maat van het embleem (44x88, beginnend op
-              y=-12). Zonder viewBox valt de svg terug op de standaard 300x150px,
-              waardoor hij bij een venster van 320px tot 440px doorliep en de
-              pagina horizontaal ging scrollen (WCAG 1.4.10 Reflow).
-            -->
+            <!-- viewBox op de maat van het embleem; zonder valt de svg terug
+                 op 300x150px en scrollt de pagina horizontaal (WCAG 1.4.10). -->
             <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 -12 44 88">
               <title>Logo Rijksoverheid</title>
               <rect

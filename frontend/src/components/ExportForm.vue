@@ -25,18 +25,17 @@ const closeButtonRef = ref<HTMLElement | null>(null)
 /* Het element dat de focus had voordat de dialoog openging. Daar moet de
    focus na het sluiten weer naartoe (WCAG 2.4.3 Focus Order). */
 let elementBeforeOpen: HTMLElement | null = null
-/* De elementen die wij op inert hebben gezet, zodat we bij het sluiten alleen
-   die weer vrijgeven en niets aanraken wat de host zelf inert had gemaakt. */
+/* Alleen wat wij zelf inert zetten weer vrijgeven, zodat een host die eigen
+   inhoud inert had gemaakt niet wordt overschreven. */
 let inertedElements: HTMLElement[] = []
 
 /*
- * De focustrap houdt Tab binnen de dialoog, maar een screenreadergebruiker die
- * met de virtuele cursor navigeert leest gewoon door naar de pagina erachter.
- * inert haalt die inhoud uit zowel de focusvolgorde als de toegankelijkheidsboom.
+ * De focustrap houdt alleen Tab binnen de dialoog; met de virtuele cursor leest
+ * een screenreader door naar de pagina erachter. inert dekt beide.
  *
- * inert gaat op de broers en zussen van de modal, niet op een voorouder: de
- * modal staat in de DOM van de conclusie, dus een voorouder inert maken zou de
- * dialoog zelf ook uitschakelen.
+ * Het gaat op de broers en zussen van de modal, niet op een voorouder: de modal
+ * staat in de DOM van de conclusie, dus een voorouder zou de dialoog zelf ook
+ * uitschakelen.
  */
 function setBackgroundInert(inert: boolean) {
   if (!inert) {

@@ -1,24 +1,12 @@
 /**
- * Getagde PDF-export op basis van pdfkit.
- *
- * pdfmake kan dit niet: het geeft `tagged: true` wel door aan pdfkit, maar
- * roept nergens struct() aan. Het resultaat is een document dat via
- * /Marked true belooft een leesvolgorde te hebben, met een lege
- * structuurboom (/Nums [], nul /StructElem). Een screenreader vertrouwt op
- * die belofte in plaats van terug te vallen op zijn eigen heuristiek, dus
- * die vlag maakt het resultaat slechter dan geen vlag.
- *
- * Hier bouwen we de structuurboom zelf op: elk stuk tekst wordt met
- * markStructureContent() aan een structuurelement gekoppeld, zodat de PDF
- * echte koppen, alinea's, lijsten en tabellen krijgt (WCAG 1.3.1, 1.3.2).
+ * Getagde PDF-export: elk tekstblok wordt met markStructureContent() aan een
+ * structuurelement gekoppeld, zodat de PDF een leesvolgorde met echte koppen,
+ * lijsten en tabellen krijgt (WCAG 1.3.1, 1.3.2). pdfmake kan dit niet; het
+ * accepteert `tagged: true` maar laat de structuurboom leeg.
  */
 
-/*
- * De standalone-build en niet 'pdfkit': de gewone ES-build importeert Node's
- * zlib, fs en buffer, die Vite in de browser leeg externaliseert. Het laden
- * strandde daardoor op kMaxLength uit browserify-zlib. De standalone-build
- * bundelt die polyfills zelf en bevat dezelfde tagging-API.
- */
+// De standalone-build, want de ES-build importeert Node's zlib, fs en buffer,
+// die Vite in de browser leeg externaliseert.
 import PDFDocument from 'pdfkit/js/pdfkit.standalone.js'
 import blobStream from 'blob-stream'
 
@@ -53,18 +41,13 @@ export interface TaggedPdfOptions {
 }
 
 const PAGE_SIZE = 'A4'
-/* De bovenmarge houdt ruimte vrij voor het logo, dat op y=30 begint en bij
-   LOGO_WIDTH 420 zo'n 58pt hoog is. */
+// De bovenmarge houdt ruimte vrij voor het logo (58pt hoog bij LOGO_WIDTH).
 const MARGIN = { top: 110, bottom: 70, left: 70, right: 70 }
-/* Het logo is een brede banner (4000x552): het beeldmerk beslaat maar een
-   klein deel van die breedte, dus moet de banner zelf ruim zijn om het
-   embleem leesbaar te houden. Op 420pt is het beeldmerk ongeveer 58pt hoog. */
+// Het logo is een brede banner (4000x552) waarin het beeldmerk een fractie
+// beslaat; smaller maakt het embleem onleesbaar.
 const LOGO_WIDTH = 420
-/*
- * Alle kleuren zijn nagerekend tegen wit (WCAG 1.4.3 voor tekst, 1.4.11 voor
- * lijnen). De ratio staat erbij zodat een wijziging niet ongemerkt onder de
- * norm zakt.
- */
+// Contrastratio tegen wit, zodat een wijziging niet ongemerkt onder de norm
+// zakt (WCAG 1.4.3 voor tekst, 1.4.11 voor lijnen).
 const COLOR_RVO_BLUE = '#154273' // 10,20:1
 const COLOR_TEXT = '#000000' // 21,00:1
 const COLOR_MUTED = '#666666' // 5,74:1
@@ -140,17 +123,12 @@ export class TaggedPdf {
 
   /**
    * Het paginanummer, als artifact zodat het buiten de leesvolgorde blijft.
-   * Bewust zonder totaal: dat is pas aan het eind bekend, en achteraf per
-   * pagina terugspringen met switchToPage() voegde bij een al geschreven
-   * pagina een nieuwe toe in plaats van terug te gaan.
+   * Zonder totaal: switchToPage() achteraf voegt bij een al geschreven pagina
+   * een nieuwe toe in plaats van terug te gaan.
    */
   private drawFooterArtifact(): void {
-    /*
-     * Binnen het tekstgebied blijven: een y voorbij page.maxY() laat pdfkit
-     * concluderen dat de tekst niet meer past, waarna het per pagina een lege
-     * extra pagina aanmaakt. Bij A4 met deze marges is maxY() 722, terwijl
-     * page.height - bottom + 20 op 742 uitkwam.
-     */
+    // Voorbij page.maxY() concludeert pdfkit dat de tekst niet past en maakt
+    // het een lege extra pagina aan.
     const y = this.doc.page.maxY() - 12
     this.doc.markContent('Artifact')
     this.doc
@@ -241,11 +219,8 @@ export class TaggedPdf {
     const visible = items.filter((item) => item.trim())
     if (visible.length === 0) return
 
-    /*
-     * De bullet wordt los van de tekst getekend, in een eigen kolom. Met
-     * `• ${item}` als één tekstblok springt alleen de eerste regel in en loopt
-     * elke vervolgregel terug onder de bullet; de opsomming hangt dan niet uit.
-     */
+    // Bullet en tekst in eigen kolommen: als één tekstblok met indent springt
+    // alleen de eerste regel in en hangt de opsomming niet uit.
     const bulletX = MARGIN.left + 6
     const textX = MARGIN.left + 22
     const textWidth = this.doc.page.width - textX - MARGIN.right
@@ -298,12 +273,8 @@ export class TaggedPdf {
       let maxHeight = 0
 
       cells.forEach((cell, index) => {
-        /*
-         * TH tegenover TD is wat de tabel leesbaar maakt: een screenreader
-         * kondigt de koprij als kop aan. Een /Scope-attribuut zou de koppeling
-         * per kolom nog explicieter maken, maar pdfkit geeft alleen title,
-         * lang, alt, expanded en actual door aan het structuurelement.
-         */
+        // Geen /Scope: pdfkit geeft alleen title, lang, alt, expanded en
+        // actual door aan het structuurelement.
         const type = isHeader ? 'TH' : 'TD'
         const cellStruct = this.doc.struct(type)
         tr.add(cellStruct)
@@ -386,10 +357,6 @@ export class TaggedPdf {
     this.doc.y = y + 12
   }
 
-  /**
-   * Sluit het document af en levert de blob op. Paginanummers worden hier
-   * toegevoegd, want pas nu is het totaal bekend; ze zijn een artifact.
-   */
   /** Sluit het document af en levert de blob op. */
   async finish(): Promise<Blob> {
     this.root.end()
