@@ -100,10 +100,10 @@ function adjustHeight() {
 }
 
 function selectAnswer(answer: Answer) {
+  // Bewust geen focusverplaatsing naar het opmerkingenveld: een antwoord kiezen
+  // is invoer, geen navigatie. De sprong tilde een toetsenbordgebruiker uit de
+  // antwoordgroep voordat die de overige opties had gehoord (WCAG 3.2.2 On Input).
   selectedAnswer.value = answer
-  if (explanationFieldRef.value) {
-    explanationFieldRef.value.focus()
-  }
 }
 
 function submitAnswer() {
