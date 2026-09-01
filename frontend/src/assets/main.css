@@ -208,6 +208,17 @@
   box-sizing: border-box;
 }
 
+/* De RVO-linkstijlen zetten outline-style op none zonder er iets voor terug te
+   geven; een toetsenbordgebruiker kan op de bronlinks niet zien waar de focus
+   staat (WCAG 2.4.7 Focus Visible). De knoppen uit de componentbibliotheek
+   hebben wél een eigen focusstijl; die blijven ongemoeid. */
+a:focus-visible,
+a.rvo-link:focus,
+a.utrecht-link:focus {
+  outline: 3px solid var(--rvo-color-logoblauw, #154273);
+  outline-offset: 2px;
+}
+
 /* Tekst die alleen voor screenreaders bedoeld is. Niet display:none, want dan
    halen hulptechnologieën de tekst ook weg. */
 .aiv-visually-hidden {
