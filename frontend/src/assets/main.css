@@ -4,6 +4,9 @@
 @layer theme, base, components, utilities;
 
 .rvo-theme {
+  /* Lange samengestelde woorden passen op 320px niet op één regel; zonder
+     afbreekpunt verbreden ze de hele pagina (WCAG 1.4.10 Reflow). */
+  overflow-wrap: break-word;
   background-color: var(--utrecht-document-background-color);
   color: var(--utrecht-document-color);
   font-family: var(--utrecht-document-font-family);
@@ -173,6 +176,36 @@
 .rvo-form-fieldset .utrecht-unordered-list .rvo-link,
 .rvo-tag .rvo-link {
   color: var(--rvo-color-logoblauw, #154273);
+}
+
+/* De componentbibliotheek zet white-space:nowrap en max-width:fit-content op
+   knoppen, waardoor een lang antwoordlabel de pagina op 320px breder maakt dan
+   het venster (WCAG 1.4.10 Reflow). De .rvo-theme-prefix is nodig voor
+   specificiteit: main.css wordt vóór de RVO-stylesheet geladen. */
+.rvo-theme .utrecht-button {
+  max-width: 100%;
+  white-space: normal;
+}
+
+/* Knoprijen breken af naar een volgende regel in plaats van de pagina te verbreden. */
+.rvo-theme .rvo-layout-row,
+.rvo-theme .flex.justify-end {
+  flex-wrap: wrap;
+}
+
+/* Flex-items krijgen standaard min-width:auto (= min-content), wat een max-width
+   overrulet; één lang woord of brede tabelcel kon zo de hele pagina verbreden. */
+.rvo-theme .flex > *,
+.rvo-theme [class*='rvo-layout-column'] > *,
+.rvo-theme [class*='rvo-layout-row'] > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* De RVO max-width-containers rekenen met content-box: hun inline padding komt
+   bovenop de max-width, waardoor de pagina op 320px alsnog te breed werd. */
+.rvo-theme [class*='rvo-max-width-layout'] {
+  box-sizing: border-box;
 }
 
 /* Tekst die alleen voor screenreaders bedoeld is. Niet display:none, want dan
