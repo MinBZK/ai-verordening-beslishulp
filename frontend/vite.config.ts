@@ -5,7 +5,11 @@ import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 import path from 'node:path';
 import type { Plugin } from 'vite';
 import tailwindcss from '@tailwindcss/vite'
+import { nodePolyfills } from 'vite-plugin-node-polyfills'
 
+// De RVO-assets bevatten duizenden iconen; alleen de gebruikte komen mee, de
+// rest wordt een lege SVG. Ontbreekt een icoon dat de markup wel gebruikt, dan
+// is het onzichtbaar zonder foutmelding.
 const SVG_ALLOW_LIST = [
   'logo.svg',
   'info.svg',
@@ -15,6 +19,7 @@ const SVG_ALLOW_LIST = [
   'delta-omhoog.svg',
   'delta-omlaag.svg',
   'bewerken.svg',
+  'waarschuwing.svg', // bètaversie-balk en het label in de beslishulp
   'progress-tracker-', // This allows all SVGs starting with 'progress-tracker-'
 ];
 
@@ -103,6 +108,8 @@ export default defineConfig({
   logLevel: 'info',
   plugins: [
     createSvgFilterPlugin(),
+    // pdfkit verwacht Node's buffer, stream en util.
+    nodePolyfills({ include: ['buffer', 'stream', 'util', 'events', 'zlib', 'assert'] }),
     vue(),
     tailwindcss(),
     cssInjectedByJsPlugin(),

@@ -11,6 +11,14 @@ Voor vragen of opmerkingen over de beslishulp mail je naar: [ai-verordening@minb
 
 # Gebruik beslishulp in je eigen website
 
+> **Let op:** de beslishulp is uitsluitend geschikt gemaakt om als **modal**
+> binnen een andere applicatie te draaien. Gebruik als losstaande pagina wordt
+> niet ondersteund: de beslishulp levert bewust geen `<h1>`, geen landmarks
+> (`<header>`, `<nav>`, `<main>`) en geen dialoog-semantiek, omdat de host die
+> hoort te leveren. Draai je de beslishulp toch als losse pagina, dan voldoet
+> het resultaat niet aan WCAG 2.2 AA. Zie [Toegankelijkheid bij inbedding](#toegankelijkheid-bij-inbedding)
+> voor de precieze verdeling tussen wat de beslishulp en wat de host regelt.
+
 De beslishulp met alle styling is te downloaden van de [release pagina](https://github.com/MinBZK/ai-verordening-beslishulp/releases).
 
 Om de beslishulp op te nemen in een pagina, is minimaal de volgende code nodig. Let op dat je ook de
@@ -37,6 +45,34 @@ Configuratie opties kunnen als URL parameter worden meegegeven, of als attribuut
 | showCloseOnEndMsg    | Resultaten overnemen en afsluiten | De tekst die getoond wordt in bovenstaande knop.                                                                 |
 | showExportPDF        | true                              | Toont een knop bij de conclusie waarmee een PDF export gemaakt kan worden.                                       |
 | showExplanationField | true                              | Toont een invoerveld voor een opmerking bij elke vraag.                                                        |
+
+## Toegankelijkheid bij inbedding
+
+De beslishulp is bedoeld om als modal in een andere applicatie te draaien en
+niet als losse pagina. Een deel van de eisen uit WCAG 2.2 AA gaat over de
+pagina als geheel en kan de beslishulp daarom niet zelf afdekken. De verdeling:
+
+De beslishulp regelt zelf:
+
+- `lang="nl"` op de wrapper om de beslishulp heen, ongeacht de taal van de host.
+- Geen `<header>`, `<nav>` of `<main>`, zodat de landmarks van de host uniek
+  blijven.
+- Koppen beginnen op `<h2>`; de `<h1>` van de pagina hoort bij de host.
+- Alle id's beginnen met `aiv-`, zodat ze niet botsen met id's in de host.
+- De eigen exportdialoog vangt Escape af en stopt het event, zodat één druk op
+  Escape niet ook de modal van de host sluit.
+
+De host regelt:
+
+- De modal zelf: `role="dialog"`, `aria-modal="true"` en een toegankelijke naam
+  (`aria-label` of `aria-labelledby`), of een `<dialog>`-element. Zie
+  [voorbeeld.html](voorbeeld.html).
+- Focus die bij het openen de modal in gaat en bij het sluiten terugkeert naar
+  de knop waarmee de modal is geopend, en die niet achter de modal langs kan
+  lopen.
+- Sluiten met Escape en een sluitknop die met het toetsenbord te bedienen is.
+- Een `<h1>` op de pagina en een `title` op de `<iframe>` bij gebruik van de
+  iframe-variant, zie [iframe-voorbeeld.html](iframe-voorbeeld.html).
 
 # AI-Verordening-Beslishulp
 

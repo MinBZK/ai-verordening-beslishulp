@@ -9,7 +9,12 @@ const emit = defineEmits(['reset-event'])
 </script>
 
 <template>
-  <header class="header">
+  <!--
+    Bewust geen <header>/<nav>: de beslishulp wordt als modal in een andere
+    applicatie geplaatst. Die host heeft al een banner- en navigatielandmark;
+    een tweede maakt de landmarks van de pagina dubbel en niet-uniek.
+  -->
+  <div class="header">
     <div id="header_logo">
       <!-- Place holder div for logo based on who implements the decision tree -->
     </div>
@@ -18,28 +23,28 @@ const emit = defineEmits(['reset-event'])
         <div
           class="rvo-max-width-layout rvo-max-width-layout--md rvo-max-width-layout-inline-padding--sm"
         >
-          <nav class="rvo-topnav rvo-topnav--lg">
+          <div class="rvo-topnav rvo-topnav--lg">
             <ul class="rvo-topnav__list">
               <li v-if="questionId != '1.1' && disclaimerScreen != '0'" class="rvo-topnav__item">
-                <a
-                  class="rvo-link rvo-topnav__link rvo-link--logoblauw"
+                <button
+                  type="button"
+                  class="aiv-link-button rvo-link rvo-topnav__link rvo-link--logoblauw"
                   @click="$emit('reset-event')"
                 >
                   <span
                     class="utrecht-icon rvo-icon rvo-icon-terug rvo-icon--lg rvo-icon--wit"
-                    role="img"
-                    aria-label="Terug"
+                    aria-hidden="true"
                   ></span>
                   Begin opnieuw
-                </a>
+                </button>
               </li>
               <li v-else style="height: 48px">
                 <!--                This is an empty space so that when the back to screen button is not there the line doesn't jump-->
               </li>
             </ul>
-          </nav>
+          </div>
         </div>
       </div>
     </div>
-  </header>
+  </div>
 </template>

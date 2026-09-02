@@ -13,11 +13,21 @@ defineProps<Props>()
         <!-- When source.url exists -->
         <span
           class="utrecht-icon rvo-icon rvo-icon-info rvo-icon--xl rvo-status-icon-info"
-          role="img"
-          aria-label="Info"
+          aria-hidden="true"
         ></span>
-        <a v-if="source.url" :href="source.url" target="_blank" class="rvo-link utrecht-link">
+        <!-- De beslishulp draait in een modal van een andere applicatie; een bron
+             openen in hetzelfde venster zou de ingevulde antwoorden weggooien.
+             De link opent daarom in een nieuw venster, wat hieronder ook wordt
+             aangekondigd in plaats van alleen visueel te zijn. -->
+        <a
+          v-if="source.url"
+          :href="source.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="rvo-link utrecht-link"
+        >
           {{ source.source }}
+          <span class="aiv-visually-hidden">(opent in een nieuw venster)</span>
           <slot />
         </a>
         <!--        <p class="rvo-icon-info"></p>-->

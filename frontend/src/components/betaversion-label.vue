@@ -6,8 +6,7 @@
     >
       <span
         class="utrecht-icon rvo-icon rvo-icon-waarschuwing rvo-icon--lg"
-        role="img"
-        aria-label="Waarschuwing"
+        aria-hidden="true"
       ></span>
       <div class="utrecht-alert--warning utrecht-paragraph">
         <details class="rvo-expandable-text rvo-expandable-text--subtle">

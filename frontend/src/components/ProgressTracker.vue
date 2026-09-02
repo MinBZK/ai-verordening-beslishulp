@@ -18,10 +18,21 @@ const stepLabels = [
   'Zo ja, in welke risicogroep valt de toepassing?'
 ]
 
+/**
+ * De status is visueel alleen aan kleur en pictogram te zien. Deze tekst maakt
+ * dezelfde informatie beschikbaar voor screenreaders (WCAG 1.4.1 Use of Color).
+ */
+const stateLabels: Record<string, string> = {
+  completed: 'afgerond',
+  doing: 'huidige stap',
+  incomplete: 'nog te doen'
+}
+
 const steps = computed(() =>
   props.categoryState.slice(0, stepLabels.length).map((progress, index) => ({
     ...progress,
-    label: stepLabels[index]
+    label: stepLabels[index],
+    stateLabel: stateLabels[progress.state] ?? progress.state
   }))
 )
 
@@ -36,19 +47,29 @@ function change_status(state: string) {
 </script>
 
 <template>
-  <div class="rvo-progress-tracker">
-    <div
+  <!-- Een genummerde lijst: de stappen hebben een vaste volgorde, en een
+       screenreader meldt zo hoeveel stappen er zijn en de hoeveelste dit is. -->
+  <ol class="rvo-progress-tracker no-list" aria-label="Voortgang in de beslishulp">
+    <li
       class="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--start rvo-image-bg-progress-tracker-start-end-md--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before"
-    ></div>
-    <div v-for="step in steps" :key="step.category" :class="change_status(step.state)">
-      <a class="progress-tracker-font rvo-progress-tracker__step-link">
+    ></li>
+    <li
+      v-for="step in steps"
+      :key="step.category"
+      :class="change_status(step.state)"
+      :aria-current="step.state === 'doing' ? 'step' : undefined"
+    >
+      <!-- Geen <a>: dit verwijst nergens heen en was met het toetsenbord niet
+           te bereiken, terwijl het wel als link werd aangekondigd. -->
+      <span class="progress-tracker-font rvo-progress-tracker__step-link">
         {{ step.label }}
-      </a>
-    </div>
-    <div
+      </span>
+      <span class="aiv-visually-hidden"> ({{ step.stateLabel }})</span>
+    </li>
+    <li
       class="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--end rvo-image-bg-progress-tracker-start-end-md--after"
     >
       Vervolgstappen per risicogroep
-    </div>
-  </div>
+    </li>
+  </ol>
 </template>

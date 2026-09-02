@@ -1,11 +1,12 @@
-import pdfMake from 'pdfmake/build/pdfmake'
-import type {Content, StyleDictionary, TDocumentDefinitions} from 'pdfmake/interfaces'
-import { PDF_DISCLAIMER_ITEMS, PDF_INTRO_TEXT, SOURCE_INFO, CONTACT_INFO } from '@/components/Disclaimer.vue'
-import type {UserDecision} from '@/models/DecisionTree.ts'
-import type {FilteredLabels} from '@/services/labelsService'
-import {stripHtml} from 'string-strip-html'
+/** Export van het beslishulp-rapport naar een getagde PDF. Zie pdfTagged.ts. */
+
+import { PDF_DISCLAIMER_ITEMS, PDF_INTRO_TEXT, SOURCE_INFO } from '@/components/Disclaimer.vue'
+import type { UserDecision } from '@/models/DecisionTree.ts'
+import type { FilteredLabels } from '@/services/labelsService'
+import { stripHtml } from 'string-strip-html'
 import FontService from '@/services/fontService.ts'
-import {getAsset} from '@/services/assetsRegistry'
+import { getAsset } from '@/services/assetsRegistry'
+import { TaggedPdf, base64ToBytes } from '@/services/pdfTagged'
 
 const dutchDateFormatter = new Intl.DateTimeFormat('nl-NL', {
   weekday: 'long',
@@ -16,47 +17,23 @@ const dutchDateFormatter = new Intl.DateTimeFormat('nl-NL', {
   minute: '2-digit'
 })
 
-// Helper function to generate ISO 8601 timestamps in different formats
-function getISOFormat(format: 'full' | 'date' = 'full'): string {
-  const now = new Date()
-
-  if (format === 'full') {
-    // Full ISO format with time and timezone: YYYY-MM-DDTHH:mm:ss.sssZ
-    return now.toISOString()
-  } else {
-    // ISO 8601 date-only format: YYYY-MM-DD
-    return now.toISOString().split('T')[0] || ''
-  }
+/** ISO 8601-datum (YYYY-MM-DD) voor in de bestandsnaam. */
+function getISODate(): string {
+  return new Date().toISOString().split('T')[0] || ''
 }
 
-function buildDisclaimers(): Content {
-  const contentElements: Content = [
-    {
-      text: 'Belangrijke informatie',
-      style: 'header'
-    },
-    {
-      text: PDF_INTRO_TEXT.plain,
-      style: 'normal',
-      margin: [0, 0, 0, 10]
-    },
-    {
-      ul: PDF_DISCLAIMER_ITEMS.map(item => ({
-        text: item.plainText,
-        style: 'normal',
-        margin: [0, 0, 0, 5]
-      })),
-      style: 'normal',
-      margin: [0, 0, 0, 20]
-    }
-  ]
-
-  return {
-    stack: contentElements,
-    pageBreak: 'after'
+async function getAppVersion(): Promise<string> {
+  const appVersion = import.meta.env.VITE_APP_VERSION
+  if (appVersion && appVersion !== 'unknown') {
+    return appVersion
   }
+  return 'development'
 }
 
+/**
+ * Haalt de definitie-tooltips uit de vraagtekst: in de PDF blijft alleen de
+ * term over, want de tooltip is een schermmechanisme.
+ */
 function replaceSpecificDivsWithTextContent(htmlString: string, selector: string): string {
   if (!htmlString || htmlString.trim() === '') {
     return ''
@@ -69,14 +46,10 @@ function replaceSpecificDivsWithTextContent(htmlString: string, selector: string
     const targetDivs = doc.querySelectorAll(selector)
 
     targetDivs.forEach((targetDiv) => {
-      // Remove any definition spans completely
       const definitionSpans = targetDiv.querySelectorAll('.aiv-definition-text')
       definitionSpans.forEach((span) => span.remove())
 
-      // Get the remaining text (just the term)
-      let mainTerm = targetDiv.textContent?.trim() || ''
-
-      // Create a text node with just the term
+      const mainTerm = targetDiv.textContent?.trim() || ''
       const textNode = document.createTextNode(mainTerm)
       targetDiv.parentNode?.replaceChild(textNode, targetDiv)
     })
@@ -88,16 +61,212 @@ function replaceSpecificDivsWithTextContent(htmlString: string, selector: string
   }
 }
 
-async function getAppVersion(): Promise<string> {
-  // For Vite-vue projects, use import.meta.env instead of process.env
-  const appVersion = import.meta.env.VITE_APP_VERSION;
+/** Eén blok uit de conclusie- of verplichtingen-HTML. */
+type HtmlBlock = { kind: 'paragraph'; text: string } | { kind: 'list'; items: string[] }
 
-  if (appVersion && appVersion !== 'unknown') {
-    return appVersion;
+/**
+ * Zet de HTML uit de beslisboom om in blokken die als alinea of lijst getagd
+ * kunnen worden. Alleen die twee vormen komen in deze teksten voor.
+ */
+export function htmlToBlocks(html: string): HtmlBlock[] {
+  if (!html || html.trim() === '') return []
+
+  const processed = replaceSpecificDivsWithTextContent(html, '.aiv-definition')
+  const doc = new DOMParser().parseFromString(processed, 'text/html')
+  const blocks: HtmlBlock[] = []
+  let paragraph: string[] = []
+
+  const flush = () => {
+    const text = paragraph.join(' ').replace(/\s+/g, ' ').trim()
+    if (text) blocks.push({ kind: 'paragraph', text })
+    paragraph = []
   }
 
-  // If no build version is available, return a default version string
-  return 'development';
+  const walk = (node: Node) => {
+    if (node.nodeType === Node.TEXT_NODE) {
+      const text = node.textContent?.trim()
+      if (text) paragraph.push(text)
+      return
+    }
+    if (node.nodeType !== Node.ELEMENT_NODE) return
+
+    const element = node as Element
+    const tag = element.tagName.toUpperCase()
+
+    if (tag === 'UL' || tag === 'OL') {
+      flush()
+      const items = Array.from(element.querySelectorAll('li'))
+        .map((li) => li.textContent?.trim() || '')
+        .filter(Boolean)
+      if (items.length) blocks.push({ kind: 'list', items })
+      return
+    }
+
+    if (tag === 'BR' || tag === 'P' || tag === 'DIV') {
+      flush()
+    }
+
+    Array.from(element.childNodes).forEach(walk)
+
+    if (tag === 'P' || tag === 'DIV') {
+      flush()
+    }
+  }
+
+  walk(doc.body)
+  flush()
+  return blocks
+}
+
+function addHtmlSection(pdf: TaggedPdf, title: string, html: string): void {
+  pdf.addPage()
+  pdf.heading(title, 2)
+  const blocks = htmlToBlocks(html)
+  if (blocks.length === 0) {
+    pdf.paragraph('Geen informatie beschikbaar.')
+    return
+  }
+  for (const block of blocks) {
+    if (block.kind === 'list') {
+      pdf.list(block.items)
+    } else {
+      pdf.paragraph(block.text)
+    }
+  }
+}
+
+function addTitlePage(
+  pdf: TaggedPdf,
+  algorithmName: string,
+  description: string,
+  filledBy: string,
+  releaseTag: string
+): void {
+  pdf.addPage()
+
+  // De titel begint op een derde van de pagina, voor rust op het voorblad.
+  pdf.moveTo(250)
+  pdf.heading('Resultaten AI-verordening Beslishulp', 1, { center: true })
+
+  if (algorithmName) {
+    pdf.paragraph(algorithmName, { size: 17, center: true, spaceAfter: 0.8 })
+  }
+  if (description) {
+    pdf.paragraph(description, { center: true, spaceAfter: 1.2 })
+  }
+
+  pdf.rule()
+
+  // Gedempt: deze regels horen bij het document, niet bij de inhoud.
+  if (filledBy) {
+    pdf.paragraph(`Ingevuld door ${filledBy}`, {
+      muted: true,
+      size: 11,
+      center: true,
+      spaceAfter: 0.25
+    })
+  }
+  pdf.paragraph(`Gegenereerd op ${dutchDateFormatter.format(new Date())}`, {
+    muted: true,
+    size: 11,
+    center: true,
+    spaceAfter: 0.25
+  })
+  pdf.paragraph(`Bron: ${SOURCE_INFO.name}`, {
+    muted: true,
+    size: 11,
+    center: true,
+    spaceAfter: 0.25
+  })
+  if (SOURCE_INFO.url) {
+    pdf.link(SOURCE_INFO.url, SOURCE_INFO.url, { center: true, size: 11 })
+  }
+  pdf.paragraph(`Versie: ${releaseTag}`, { muted: true, size: 11, center: true })
+}
+
+function addDisclaimers(pdf: TaggedPdf): void {
+  pdf.addPage()
+  pdf.heading('Belangrijke informatie', 2)
+  for (const paragraph of PDF_INTRO_TEXT.plain.split('\n\n')) {
+    pdf.paragraph(paragraph.trim())
+  }
+  pdf.list(PDF_DISCLAIMER_ITEMS.map((item) => item.plainText))
+}
+
+function addLabels(pdf: TaggedPdf, labels: FilteredLabels): void {
+  pdf.addPage()
+  pdf.heading('AI-verordening Profiel', 2)
+  const rows = Object.entries(labels).map(([category, values]) => [category, values.join(', ')])
+  if (rows.length === 0) {
+    pdf.paragraph('Geen profiel vastgesteld.')
+    return
+  }
+  pdf.table(['Categorie', 'Resultaat'], rows)
+}
+
+function addAnswers(pdf: TaggedPdf, userDecisionPath: UserDecision[]): void {
+  pdf.addPage()
+  pdf.heading('Antwoorden', 2)
+
+  if (userDecisionPath.length === 0) {
+    pdf.paragraph('Geen antwoorden vastgelegd.')
+    return
+  }
+
+  for (const decision of userDecisionPath) {
+    const question = stripHtml(
+      replaceSpecificDivsWithTextContent(decision.question ?? '', '.aiv-definition')
+    ).result
+    pdf.heading(`Vraag ${decision.questionId}: ${question}`, 3)
+    pdf.paragraph(`Antwoord: ${decision.answer ?? 'niet beantwoord'}`)
+    if (decision.explanation) {
+      pdf.paragraph(`Opmerking: ${decision.explanation}`)
+    }
+  }
+}
+
+function addSources(
+  pdf: TaggedPdf,
+  sources: { source: string; url: string | undefined }[]
+): void {
+  pdf.addPage()
+  pdf.heading('Bronnen', 2)
+
+  pdf.paragraph(SOURCE_INFO.name)
+  if (SOURCE_INFO.url) {
+    pdf.link(SOURCE_INFO.url, SOURCE_INFO.url)
+  }
+
+  pdf.paragraph('AI-verordening Beslishulp Github')
+  pdf.link(
+    'https://github.com/MinBZK/ai-verordening-beslishulp',
+    'https://github.com/MinBZK/ai-verordening-beslishulp'
+  )
+
+  for (const source of sources) {
+    if (!source.url) continue
+    pdf.paragraph(source.source)
+    pdf.link(source.url, source.url)
+  }
+}
+
+function buildFilename(filename: string): string {
+  const prefix = 'AI-verordening beslishulp'
+  const base = filename && filename.trim() !== '' ? `${prefix} - ${filename}` : prefix
+  return `${base} - ${getISODate()}.pdf`
+}
+
+/** Start de download van de blob onder de gegeven bestandsnaam. */
+function downloadBlob(blob: Blob, filename: string): void {
+  const url = URL.createObjectURL(blob)
+  const anchor = document.createElement('a')
+  anchor.href = url
+  anchor.download = filename
+  document.body.appendChild(anchor)
+  anchor.click()
+  document.body.removeChild(anchor)
+  // De URL pas vrijgeven als de browser de download heeft opgepakt.
+  setTimeout(() => URL.revokeObjectURL(url), 10_000)
 }
 
 export async function exportToPdf(
@@ -111,555 +280,45 @@ export async function exportToPdf(
   filledBy: string,
   labels: FilteredLabels
 ): Promise<void> {
-  const releaseTag = await getAppVersion()
-  const dpiaStyleDictionary: StyleDictionary = {
-    title: {
-      fontSize: 28,
-      bold: true,
-      margin: [0, 0, 0, 10],
-      color: '#154273' // RVO blue
-    },
-    subtitle: {
-      fontSize: 18,
-      margin: [0, 15, 0, 0],
-      color: '#333333'
-    },
-    subsubtitle: {
-      fontSize: 14,
-      margin: [0, 40, 0, 0],
-      color: '#666666',
-      italics: true
-    },
-    header: {
-      fontSize: 24,
-      bold: true,
-      margin: [0, 0, 0, 20],
-      color: '#154273' // RVO blue
-    },
-    subHeader: {
-      fontSize: 16,
-      bold: true,
-      margin: [0, 15, 0, 10],
-      color: '#154273' // RVO blue
-    },
-    subSubHeader: {
-      fontSize: 14,
-      bold: true,
-      margin: [0, 10, 0, 5]
-    },
-    questionHeader: {
-      fontSize: 11,
-      bold: true,
-      margin: [0, 10, 0, 5]
-    },
-    description: {
-      fontSize: 11,
-      margin: [0, 0, 0, 15]
-    },
-    normal: {
-      fontSize: 11
-    },
-    tableHeader: {
-      fontSize: 12,
-      bold: true,
-      color: '#154273'
-    },
-    tableExample: {
-      margin: [0, 5, 0, 15]
-    }
-  }
-
-  const logoImageData = await getAsset('RO_Logo_pres_pos_nl.png')
   try {
-    const docDefinition: TDocumentDefinitions = {
-      defaultStyle: {
-        font: 'rijksoverheidsanstext' // Use Roboto as the default font since it's included with pdfMake by default
-      },
-      content: [
-        {
-          stack: [
-            {text: 'Resultaten AI-verordening Beslishulp', style: 'title'},
-            algorithmName
-              ? [
-                {
-                  text: `${algorithmName}`,
-                  style: 'subtitle'
-                }
-              ]
-              : [],
-            description
-              ? [
-                {
-                  text: description,
-                  style: 'description',
-                  margin: [0, 30, 0, 0] as [number, number, number, number]
-                }
-              ]
-              : [],
-            filledBy
-              ? [
-                {
-                  text: `Ingevuld door ${filledBy || 'niet vermeld'}`,
-                  style: 'subsubtitle'
-                }
-              ]
-              : [],
-            {
-              text: `Gegenereerd op ${dutchDateFormatter.format(new Date())}`,
-              style: 'subsubtitle'
-            },
-            {
-              text: [
-                { text: 'Bron: '},
-                {
-                  text: SOURCE_INFO.name,
-                  link: SOURCE_INFO.url,
-                  decoration: 'underline',
-                  color: 'blue'
-                }
-              ],
-              style: 'subsubtitle',
-              margin: [0, 10, 0, 0]
-            },
-            {
-              text: `Versie: ${releaseTag}`,
-              style: 'version',
-              margin: [0, 5, 0, 0]
-            },
-          ],
-          alignment: 'center',
-          margin: [0, 150, 0, 0],
-          pageBreak: 'after'
-        },
-        buildDisclaimers(),
-
-        buildLabels(labels),
-
-        buildAnswers(userDecisionPath),
-
-        buildConclusion(conclusion),
-
-        obligation ? buildObligation(obligation) : [],
-
-        sources ? buildSources(sources) : []
-      ],
-
-      header: function (currentPage, pageCount, pageSize) {
-        const imageWidth = 600
-        const xPosition = (pageSize.width - imageWidth) / 2
-        return {
-          image: `data:image/png;base64,${logoImageData}`,
-          width: imageWidth,
-          absolutePosition: {x: xPosition, y: 0},
-          margin: [0, 0, 0, 0]
-        }
-      },
-
-      footer: function (currentPage, pageCount) {
-        return {
-          text: `Pagina ${currentPage} van ${pageCount}`,
-          alignment: 'center',
-          margin: [0, 0, 0, 0],
-          color: '#999999',
-          fontSize: 10
-        }
-      },
-
-      // Document metadata
-      info: {
-        title: 'AI-verordening Beslishulp',
-        author: 'AI-verordening Beslishulp generator',
-        creator: 'AI-verordening Beslishulp generator',
-        subject: `Version: ${releaseTag}`
-      },
-
-      // Page styling
-      pageSize: 'A4',
-      pageMargins: [70, 90, 70, 70],
-      styles: dpiaStyleDictionary
-    }
-
-    // Start with default Roboto font
-    const fontDefinitions: Record<string, Record<string, string>> = {
-      Roboto: {
-        normal: 'Roboto-Regular.ttf',
-        bold: 'Roboto-Medium.ttf',
-        italics: 'Roboto-Italic.ttf',
-        bolditalics: 'Roboto-MediumItalic.ttf'
-      }
-    }
-
-    const customFonts = await FontService.getFonts()
-
-    // Add all font families from the FontService
-    for (const [fontFamily, variants] of Object.entries(customFonts)) {
-      fontDefinitions[fontFamily] = variants as Record<string, string>
-    }
-
-    // Get ISO 8601 date for the filename (date only: YYYY-MM-DD)
-    const isoDate = getISOFormat('date')
-
-    // Build filename with proper format
-    let prefixFilename = 'AI-verordening beslishulp'
-    let baseFilename;
-
-    if (filename && filename.trim() !== '') {
-      // Format with filename: AI-verordening beslishulp - NAME - DATE.pdf
-      baseFilename = `${prefixFilename} - ${filename}`
-    } else {
-      baseFilename = prefixFilename
-    }
-    // Create the actual filename with date
-    const actualFilename = `${baseFilename} - ${isoDate}.pdf`
-
+    const releaseTag = await getAppVersion()
+    const logoBase64 = await getAsset('RO_Logo_pres_pos_nl.png')
     const vfs = await FontService.getVFS()
 
-    pdfMake.addFonts(fontDefinitions)
-    pdfMake.addVirtualFileSystem(vfs)
-    pdfMake.createPdf(docDefinition).download(actualFilename)
+    // De VFS levert de fonts als base64; pdfkit wil de ruwe bytes.
+    const fontBytes = (name: string): Uint8Array | undefined => {
+      const data = vfs[name]
+      return data ? base64ToBytes(data) : undefined
+    }
 
-    return Promise.resolve()
+    const pdf = new TaggedPdf({
+      title: algorithmName
+        ? `AI-verordening Beslishulp - ${algorithmName}`
+        : 'AI-verordening Beslishulp',
+      language: 'nl-NL',
+      subject: `Versie: ${releaseTag}`,
+      logoBase64,
+      fonts: {
+        normal: fontBytes('rijksoverheidsanstext-regular-webfont.ttf'),
+        bold: fontBytes('rijksoverheidsanstext-bold-webfont.ttf'),
+        italic: fontBytes('rijksoverheidsanstext-italic-webfont.ttf')
+      }
+    })
+
+    addTitlePage(pdf, algorithmName, description, filledBy, releaseTag)
+    addDisclaimers(pdf)
+    addLabels(pdf, labels)
+    addAnswers(pdf, userDecisionPath)
+    addHtmlSection(pdf, 'Conclusie', conclusion)
+    if (obligation) {
+      addHtmlSection(pdf, 'Verplichtingen', obligation)
+    }
+    addSources(pdf, sources ?? [])
+
+    const blob = await pdf.finish()
+    downloadBlob(blob, buildFilename(filename))
   } catch (error) {
     console.error(error)
     return Promise.reject(new Error('Failed to export PDF'))
-  }
-}
-
-function buildAnswers(userDecisionPath: UserDecision[]): Content {
-  const contentElements: Content = [
-    {
-      text: 'Antwoorden',
-      style: 'header'
-    },
-    userDecisionPath.map((userDecision) => buildAnswer(userDecision))
-  ]
-  return {
-    stack: contentElements,
-    pageBreak: 'after'
-  }
-}
-
-function buildLabels(labels: FilteredLabels): Content {
-  const tableRows = []
-  tableRows.push([
-    {text: 'Categorie', style: 'tableHeader'},
-    {text: 'Resultaat', style: 'tableHeader'}
-  ])
-
-  for (const [key, value] of Object.entries(labels)) {
-    tableRows.push([
-      {text: key, style: 'normal', margin: [0, 5, 0, 5] as [number, number, number, number]},
-      {text: value.join(', '), style: 'normal', margin: [0, 5, 0, 5] as [number, number, number, number]}
-    ])
-  }
-
-  const contentElements: Content[] = [
-    {
-      text: 'AI-verordening Profiel',
-      style: 'header'
-    },
-    {
-      table: {
-        headerRows: 1,
-        widths: ['40%', '60%'],
-        body: tableRows
-      },
-      layout: {
-        hLineWidth: function (i: number, node: any) {
-          return i === 0 || i === 1 || i === node.table.body.length ? 1 : 0
-        },
-        vLineWidth: function () {
-          return 0
-        },
-        hLineColor: function (i: number) {
-          return i === 0 || i === 1 ? '#154273' : '#aaa'
-        },
-        paddingLeft: function () {
-          return 8
-        },
-        paddingRight: function () {
-          return 8
-        },
-        paddingTop: function () {
-          return 8
-        },
-        paddingBottom: function () {
-          return 8
-        }
-      },
-      style: 'tableExample'
-    }
-  ]
-
-  return {
-    stack: contentElements,
-    pageBreak: 'after'
-  }
-}
-
-function buildHtmlSection(title: string, htmlContent: string): Content {
-  const headerElement: Content = {
-    text: title,
-    style: 'header'
-  }
-  const contentElements = convertHtmlToPdfMake(htmlContent)
-  return {
-    stack: [headerElement, ...contentElements],
-    pageBreak: 'after'
-  }
-}
-
-function buildConclusion(conclusion: string): Content {
-  return buildHtmlSection('Conclusie', conclusion)
-}
-
-function buildAnswer(userDecision: UserDecision): Content {
-  let question = stripHtml(
-    replaceSpecificDivsWithTextContent(
-      userDecision.question ? userDecision.question : '',
-      '.aiv-definition'
-    )
-  ).result
-  const stack = []
-  stack.push({
-    text: `Vraag ${userDecision.questionId}: ${question}`,
-    style: 'questionHeader'
-  })
-  stack.push({text: `Antwoord: ${userDecision.answer}`, style: 'description'})
-  if (userDecision.explanation) {
-    stack.push({text: `Opmerking: ${userDecision.explanation}`, style: 'description'})
-  }
-  return stack
-}
-
-function buildSources(sources: { source: string; url: string | undefined }[]): Content {
-  const stack: Content[] = []
-  stack.push({
-    text: `Bronnen`,
-    style: 'header',
-    margin: [0, 0, 0, 10]
-  })
-
-  // Add the AI-verordening Beslishulp and the Github as the first source
-  stack.push({
-    text: SOURCE_INFO.name,
-    margin: [0, 5, 0, 0]
-  })
-  stack.push({
-    text: SOURCE_INFO.url,
-    link: SOURCE_INFO.url,
-    decoration: 'underline',
-    color: 'blue',
-    margin: [0, 0, 0, 15]
-  })
-
-  stack.push({
-    text: [
-      { text: 'AI-verordening Beslishulp Github', margin: [0, 5, 0, 0] }
-    ]
-  })
-  stack.push({
-    text: 'https://github.com/MinBZK/ai-verordening-beslishulp',
-    link: 'https://github.com/MinBZK/ai-verordening-beslishulp',
-    decoration: 'underline',
-    color: 'blue',
-    margin: [0, 0, 0, 15]
-  })
-
-  // Add the other sources
-  for (const source of sources) {
-    if (source.url) {
-      stack.push({
-        text: source.source,
-        margin: [0, 5, 0, 0]
-      })
-      stack.push({
-        text: source.url,
-        link: source.url,
-        decoration: 'underline',
-        color: 'blue',
-        margin: [0, 0, 0, 15]
-      })
-    }
-  }
-
-  return {
-    stack
-  }
-}
-
-function buildObligation(obligation: string): Content {
-  return buildHtmlSection('Verplichtingen', obligation)
-}
-
-export function convertHtmlToPdfMake(html: string): Content[] {
-  if (!html || html.trim() === '') {
-    return [
-      {
-        text: '',
-        style: 'description'
-      }
-    ]
-  }
-
-  const processedHtml = replaceSpecificDivsWithTextContent(html, '.aiv-definition')
-  const doc = new DOMParser().parseFromString(processedHtml, 'text/html')
-
-  const processor = new HtmlToPdfProcessor()
-  processor.processNode(doc.body)
-
-  return processor.getResult()
-}
-
-class HtmlToPdfProcessor {
-  private content: Content[] = []
-  private currentTextBlock: Array<{ text: string; [key: string]: any }> | null = null
-
-  constructor() {
-    this.currentTextBlock = null
-  }
-
-  getResult(): Content[] {
-    this.finalizeTextBlock()
-    return this.content
-  }
-
-  processNode(node: Node): void {
-    switch (node.nodeType) {
-      case Node.TEXT_NODE:
-        this.processTextNode(node as Text)
-        break
-      case Node.ELEMENT_NODE:
-        this.processElementNode(node as Element)
-        break
-      default:
-        console.warn('Unknown node type:', node.nodeType)
-        break
-    }
-  }
-
-  private processTextNode(node: Text): void {
-    const text = node.textContent?.trim()
-    if (!text) return
-
-    if (text.startsWith('- ')) {
-      this.finalizeTextBlock()
-      this.content.push({
-        ul: [text.substring(2).trim()],
-        style: 'description'
-      })
-      return
-    }
-
-    if (!this.currentTextBlock) {
-      this.currentTextBlock = []
-    }
-
-    this.currentTextBlock.push({
-      text: text
-    })
-  }
-
-  private processElementNode(element: Element): void {
-    const tagName = element.tagName.toUpperCase()
-    if (this.isBlockElement(tagName)) {
-      // Finalize any pending text block before processing a block element
-      this.finalizeTextBlock()
-
-      switch (tagName) {
-        case 'UL':
-        case 'OL':
-          this.processListElement(element)
-          break
-        case 'BR':
-          if (this.currentTextBlock) {
-            this.currentTextBlock.push({text: '\n'})
-          }
-          break
-        default:
-          // For other block elements, create a new processor for their content
-          const blockProcessor = new HtmlToPdfProcessor()
-          Array.from(element.childNodes).forEach((child) => {
-            blockProcessor.processNode(child)
-          })
-
-          const blockContent = blockProcessor.getResult()
-          if (blockContent.length > 0) {
-            this.content.push(...blockContent)
-          }
-          break
-      }
-    } else {
-      // This is an inline element
-      switch (tagName) {
-        case 'STRONG':
-        case 'B':
-          this.processInlineElement(element, {bold: true})
-          break
-        case 'EM':
-        case 'I':
-          this.processInlineElement(element, {italics: true})
-          break
-        case 'SPAN':
-        default:
-          Array.from(element.childNodes).forEach((child) => {
-            this.processNode(child)
-          })
-          break
-      }
-    }
-  }
-
-  private processInlineElement(element: Element, style: Record<string, boolean>): void {
-    const text = element.textContent?.trim()
-    if (!text) return
-
-    if (!this.currentTextBlock) {
-      this.currentTextBlock = []
-    }
-    this.currentTextBlock.push({
-      text,
-      ...style
-    })
-  }
-
-  private processListElement(element: Element): void {
-    const listItems: string[] = []
-    const listElements = element.querySelectorAll('LI')
-
-    listElements.forEach((item) => {
-      const text = item.textContent?.trim() || ''
-      if (text) {
-        listItems.push(text)
-      }
-    })
-
-    if (listItems.length > 0) {
-      if (element.tagName.toUpperCase() === 'UL') {
-        this.content.push({
-          ul: listItems,
-          style: 'description'
-        })
-      } else {
-        this.content.push({
-          ol: listItems,
-          style: 'description'
-        })
-      }
-    }
-  }
-
-  private finalizeTextBlock(): void {
-    if (!this.currentTextBlock || this.currentTextBlock.length === 0) return
-    this.content.push({
-      text: this.currentTextBlock,
-      style: 'description'
-    })
-    this.currentTextBlock = null
-  }
-
-  private isBlockElement(tagName: string): boolean {
-    const blockElements = ['DIV', 'P', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'UL', 'OL', 'LI', 'BR']
-    return blockElements.includes(tagName.toUpperCase())
   }
 }

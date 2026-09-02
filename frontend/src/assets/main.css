@@ -4,6 +4,9 @@
 @layer theme, base, components, utilities;
 
 .rvo-theme {
+  /* Lange samengestelde woorden passen op 320px niet op één regel; zonder
+     afbreekpunt verbreden ze de hele pagina (WCAG 1.4.10 Reflow). */
+  overflow-wrap: break-word;
   background-color: var(--utrecht-document-background-color);
   color: var(--utrecht-document-color);
   font-family: var(--utrecht-document-font-family);
@@ -18,6 +21,11 @@
 }
 
 #progress-question-mobile {
+  /* border-box zodat de padding binnen de breedte valt en niet erbovenop
+     (WCAG 1.4.10 Reflow). */
+  box-sizing: border-box;
+  max-width: 100%;
+
   @media only screen and (width <= 800px) {
     display: flex;
     align-items: center;
@@ -27,13 +35,30 @@
 .aiv-definition {
   position: relative;
   display: inline-block;
-  border-bottom: 2px dotted black;
+}
+
+/* De term zelf is een knop, zodat de definitie ook met het toetsenbord
+   op te roepen is. De knopopmaak wordt teruggezet naar lopende tekst. */
+.aiv-definition .aiv-definition-term {
+  appearance: none;
+  background: none;
+  border: 0;
+  border-bottom: 2px dotted currentcolor;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
   cursor: help;
 }
 
 .aiv-definition .aiv-definition-text {
   visibility: hidden;
-  width: 300px;
+
+  /* Niet breder dan het scherm, anders ontstaat horizontaal scrollen
+     op smalle schermen (WCAG 1.4.10 Reflow). De marge is 2rem: 1rem voor de
+     left-offset hieronder en 1rem aan de andere kant. */
+  width: min(300px, calc(100vw - 3rem));
+  box-sizing: border-box;
   background-color: var(--rvo-color-wit);
   color: var(--rvo-color-zwart);
   filter: drop-shadow(0 4px 4px rgba(115, 142, 171, 0.5));
@@ -42,8 +67,19 @@
   border-color: var(--rvo-color-grijs-200);
   border: 1px;
   padding: var(--rvo-alert-padding-sm-padding-block-end);
-  position: absolute;
+
+  /* Op smalle schermen ankert de tooltip aan het venster in plaats van aan de
+     term: absoluut gepositioneerd liep hij buiten beeld bij een term achter in
+     een regel (WCAG 1.4.10 Reflow). Vanaf 1000px is er ruimte naast de
+     tekstkolom en staat hij weer bij de term. */
+  position: fixed;
+  left: 1rem;
   z-index: 1;
+
+  @media only screen and (width >= 1000px) {
+    position: absolute;
+    left: auto;
+  }
 
   /* Text styling */
   color: var(--utrecht-document-color);
@@ -58,9 +94,144 @@
   backdrop-filter: blur(0);
 }
 
-.aiv-definition:hover .aiv-definition-text {
+/* focus-within zorgt dat de definitie ook verschijnt bij toetsenbordgebruik. */
+.aiv-definition:hover .aiv-definition-text,
+.aiv-definition:focus-within .aiv-definition-text {
   visibility: visible;
   opacity: 1;
+}
+
+/* Met Escape is de definitie weg te klikken zonder de muis te verplaatsen
+   (WCAG 1.4.13 Content on Hover or Focus). Zie definitionTooltips.ts. */
+.aiv-definition--dismissed .aiv-definition-text {
+  visibility: hidden;
+}
+
+/* Knop die eruitziet als een link. Een <a> zonder href is niet focusbaar en
+   niet met het toetsenbord te bedienen, dus is dit een echte <button>. */
+.aiv-link-button {
+  appearance: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Deze knoppen hebben hun standaardopmaak verloren (appearance: none), en
+   daarmee in sommige browsers ook hun focusrand. Expliciet terugzetten, zodat
+   zichtbaar blijft waar de focus staat (WCAG 2.4.7 Focus Visible). De koppen
+   krijgen tabindex="-1" om de focus te ontvangen na een stap in de beslishulp. */
+.aiv-link-button:focus-visible,
+.aiv-definition .aiv-definition-term:focus-visible,
+.modal-content-close:focus-visible,
+[tabindex='-1']:focus-visible {
+  outline: 2px solid var(--rvo-color-hemelblauw, #007bc7);
+  outline-offset: 2px;
+}
+
+/* Het logo mag nooit breder worden dan de ruimte die het krijgt; anders
+   ontstaat horizontaal scrollen op een smal scherm (WCAG 1.4.10 Reflow). */
+.rvo-logo__emblem svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Twee flexbox-defaults lieten de pagina uitlopen op smalle schermen
+   (WCAG 1.4.10 Reflow): align-items: flex-start heft de stretch op, en
+   min-width: auto belet een flex-item kleiner te worden dan zijn inhoud. */
+#progress-question-mobile.rvo-layout-align-items-start > * {
+  align-self: stretch;
+  max-width: 100%;
+}
+
+.rvo-alert,
+.rvo-alert-text,
+.rvo-accordion,
+.rvo-accordion__item,
+.rvo-accordion__item-title,
+.rvo-layout-column,
+.rvo-layout-row {
+  min-width: 0;
+}
+
+/* Met justify-end en flex-shrink: 0 schuift de eerste knop links buiten beeld
+   zodra de rij niet meer past. Laat hem omslaan (WCAG 1.4.10 Reflow). */
+.flex.justify-end,
+.rvo-layout-row.rvo-layout-align-items-end {
+  flex-wrap: wrap;
+}
+
+/* Een rvo-icoon is een mask-image die zijn vorm uit de achtergrondkleur haalt.
+   RVO's donkergeel haalt op deze balk 1,47:1; WCAG 1.4.11 eist 3:1. */
+.rvo-alert--warning .rvo-icon-waarschuwing,
+.rvo-tag--warning .rvo-icon-waarschuwing {
+  background-color: var(--rvo-color-grijs-800, #1e293b);
+}
+
+/* Hemelblauw haalt 4,51:1 op wit maar zakt op deze gekleurde achtergronden
+   onder de 4,5:1 van WCAG 1.4.3; logoblauw haalt er ruim 8:1. */
+.rvo-alert .rvo-link,
+.rvo-alert-text .rvo-link,
+.rvo-form-fieldset .utrecht-unordered-list .rvo-link,
+.rvo-tag .rvo-link {
+  color: var(--rvo-color-logoblauw, #154273);
+}
+
+/* De componentbibliotheek zet white-space:nowrap en max-width:fit-content op
+   knoppen, waardoor een lang antwoordlabel de pagina op 320px breder maakt dan
+   het venster (WCAG 1.4.10 Reflow). De .rvo-theme-prefix is nodig voor
+   specificiteit: main.css wordt vóór de RVO-stylesheet geladen. */
+.rvo-theme .utrecht-button {
+  max-width: 100%;
+  white-space: normal;
+}
+
+/* Knoprijen breken af naar een volgende regel in plaats van de pagina te verbreden. */
+.rvo-theme .rvo-layout-row,
+.rvo-theme .flex.justify-end {
+  flex-wrap: wrap;
+}
+
+/* Flex-items krijgen standaard min-width:auto (= min-content), wat een max-width
+   overrulet; één lang woord of brede tabelcel kon zo de hele pagina verbreden. */
+.rvo-theme .flex > *,
+.rvo-theme [class*='rvo-layout-column'] > *,
+.rvo-theme [class*='rvo-layout-row'] > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* De RVO max-width-containers rekenen met content-box: hun inline padding komt
+   bovenop de max-width, waardoor de pagina op 320px alsnog te breed werd. */
+.rvo-theme [class*='rvo-max-width-layout'] {
+  box-sizing: border-box;
+}
+
+/* De RVO-linkstijlen zetten outline-style op none zonder er iets voor terug te
+   geven; een toetsenbordgebruiker kan op de bronlinks niet zien waar de focus
+   staat (WCAG 2.4.7 Focus Visible). De knoppen uit de componentbibliotheek
+   hebben wél een eigen focusstijl; die blijven ongemoeid. */
+a:focus-visible,
+a.rvo-link:focus,
+a.utrecht-link:focus {
+  outline: 3px solid var(--rvo-color-logoblauw, #154273);
+  outline-offset: 2px;
+}
+
+/* Tekst die alleen voor screenreaders bedoeld is. Niet display:none, want dan
+   halen hulptechnologieën de tekst ook weg. */
+.aiv-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* reset some styles without using tailwind pre-flight */
@@ -157,6 +328,22 @@ ul.no-list {
   z-index: 1000;
   cursor: pointer;
   font-size: 40px;
+
+  /* Dit is een <button> en geen <div>, anders is de sluitknop niet met het
+     toetsenbord te bedienen. Onderstaande regels houden het uiterlijk gelijk. */
+  appearance: none;
+  background: none;
+  border: 0;
+  color: inherit;
+  line-height: 1;
+
+  /* Minimale klik- en tikoppervlakte van 24 bij 24 CSS-pixels (WCAG 2.5.8). */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  min-height: 24px;
+  padding: 0;
 }
 
 .modal-content-container {
@@ -190,6 +377,19 @@ ul.no-list {
   animation-name: zoom-in;
   animation-duration: 150ms;
   animation-timing-function: ease;
+}
+
+/* Gebruikers die aangeven minder beweging te willen, krijgen de dialoog
+   zonder in- en uitzoomen (WCAG 2.3.3 Animation from Interactions). */
+@media (prefers-reduced-motion: reduce) {
+  .minbzk-modal,
+  .modal-content-container {
+    animation: none;
+  }
+
+  .modal-content-container {
+    transition: none;
+  }
 }
 
 /* Animation keyframes */

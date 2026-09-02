@@ -8,5 +8,11 @@ import '@nl-rvo/design-tokens/dist/index.css'
 </script>
 
 <template>
-  <BeslishulpForm class="rvo-theme" />
+  <!--
+    lang staat op de wrapper en niet op <html>: de beslishulp wordt als onderdeel
+    in een andere applicatie gemonteerd en kan de taal van de host niet bepalen.
+  -->
+  <div class="rvo-theme" lang="nl">
+    <BeslishulpForm />
+  </div>
 </template>

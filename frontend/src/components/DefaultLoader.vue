@@ -6,12 +6,15 @@ defineProps<Props>()
 </script>
 
 <template>
-  <div v-if="loading" class="ai-decisiontree-loader">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+  <!-- role="status" zorgt dat een screenreader meldt dat er geladen wordt;
+       de animatie zelf is puur visueel (WCAG 4.1.3 Status Messages). -->
+  <div v-if="loading" class="ai-decisiontree-loader" role="status">
+    <span class="aiv-visually-hidden">Bezig met laden</span>
+    <div aria-hidden="true"></div>
+    <div aria-hidden="true"></div>
+    <div aria-hidden="true"></div>
+    <div aria-hidden="true"></div>
+    <div aria-hidden="true"></div>
   </div>
 </template>
 
@@ -73,6 +76,14 @@ defineProps<Props>()
   }
   100% {
     transform: scale(0);
+  }
+}
+
+/* Zonder animatie blijven de bolletjes gewoon staan; de tekst "Bezig met
+   laden" vertelt nog steeds wat er gebeurt (WCAG 2.3.3). */
+@media (prefers-reduced-motion: reduce) {
+  .ai-decisiontree-loader div {
+    animation: none;
   }
 }
 </style>

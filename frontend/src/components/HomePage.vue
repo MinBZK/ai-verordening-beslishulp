@@ -11,7 +11,12 @@ const emit = defineEmits(['acceptDisclaimer'])
   <Header
     :questionId="'1.1'"
     :disclaimer-screen="'0'"/>
-  <main>
+  <!--
+    Bewust geen <main>: de beslishulp draait als modal binnen een andere
+    applicatie, die zelf al een main-landmark heeft. Twee main-landmarks op
+    een pagina is niet toegestaan.
+  -->
+  <div>
     <div class="rvo-progress-tracker">
     </div>
     <div class="rvo-form">
@@ -38,5 +43,5 @@ const emit = defineEmits(['acceptDisclaimer'])
         </div>
       </div>
     </div>
-  </main>
+  </div>
 </template>
