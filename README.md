@@ -11,6 +11,14 @@ Voor vragen of opmerkingen over de beslishulp mail je naar: [ai-verordening@minb
 
 # Gebruik beslishulp in je eigen website
 
+> **Let op:** de beslishulp is uitsluitend geschikt gemaakt om als **modal**
+> binnen een andere applicatie te draaien. Gebruik als losstaande pagina wordt
+> niet ondersteund: de beslishulp levert bewust geen `<h1>`, geen landmarks
+> (`<header>`, `<nav>`, `<main>`) en geen dialoog-semantiek, omdat de host die
+> hoort te leveren. Draai je de beslishulp toch als losse pagina, dan voldoet
+> het resultaat niet aan WCAG 2.2 AA. Zie [Toegankelijkheid bij inbedding](#toegankelijkheid-bij-inbedding)
+> voor de precieze verdeling tussen wat de beslishulp en wat de host regelt.
+
 De beslishulp met alle styling is te downloaden van de [release pagina](https://github.com/MinBZK/ai-verordening-beslishulp/releases).
 
 Om de beslishulp op te nemen in een pagina, is minimaal de volgende code nodig. Let op dat je ook de
