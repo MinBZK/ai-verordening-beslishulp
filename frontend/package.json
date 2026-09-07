@@ -28,7 +28,7 @@
     "io-ts": "^2.2.22",
     "jexl": "^2.3.0",
     "js-yaml": "^4.3.0",
-    "pdfkit": "^0.19.1",
+    "pdfkit": "^0.20.2",
     "pinia": "^3.0.4",
     "vite-plugin-css-injected-by-js": "^4.0.1",
     "vue": "^3.5.29"
