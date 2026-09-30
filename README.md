@@ -79,7 +79,7 @@ De host regelt:
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/MinBZK/ai-verordening-beslishulp/main.svg?badge_token=d3dKEK97RwC1II15_W-nng)](https://results.pre-commit.ci/latest/github/MinBZK/ai-verordening-beslishulp/main?badge_token=d3dKEK97RwC1II15_W-nng)
 
 Deze git repository bevat de beslishulp op basis van de AI-verordening.
-Het AI-validatie Team heeft deze tool ontwikkeld, maar is niet verantwoordelijk voor de juridische inhoud van de beslishulp. Voor meer informatie over het AI Validatie Team, bezoek de [site van het AI-validatieteam](https://minbzk.github.io/ai-validation/). Voor vragen over de juridische inhoud, neem contact op met de experts via ai-verordening@minbzk.nl.
+Het AI-validatie Team heeft deze tool ontwikkeld en Digi Gilde beheert de tool, maar beide zijn niet verantwoordelijk voor de juridische inhoud van de beslishulp. Voor meer informatie over Digi Gilde, bezoek het [Digi Gilde handboek](https://digigilde.github.io/handboek/). Voor vragen over de juridische inhoud, neem contact op met de experts via ai-verordening@minbzk.nl.
 
 Het project omvat de volgende 3 onderdelen:
 
