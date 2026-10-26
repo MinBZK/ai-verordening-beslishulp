@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@tsconfig/node20": "^20.1.9",
+    "@tsconfig/node20": "^20.1.10",
     "@types/blob-stream": "^0.1.33",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^26.4.1",
