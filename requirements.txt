@@ -14,7 +14,7 @@ pexpect==4.9.0
 prompt_toolkit==3.0.47
 ptyprocess==0.7.0
 pure_eval==0.2.3
-Pygments==2.18.0
+Pygments==2.20.0
 PyYAML==6.0.2
 requests==2.33.0
 six==1.16.0
@@ -22,4 +22,4 @@ stack-data==0.6.3
 traitlets==5.14.3
 types-requests==2.32.0.20240712
 typing_extensions==4.12.2
-urllib3==2.7.0
+urllib3==2.8.0
