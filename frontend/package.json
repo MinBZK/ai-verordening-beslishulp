@@ -30,7 +30,7 @@
     "js-yaml": "^5.5.0",
     "pdfkit": "^0.20.2",
     "pinia": "^4.1.0",
-    "vite-plugin-css-injected-by-js": "^4.0.1",
+    "vite-plugin-css-injected-by-js": "^5.0.3",
     "vue": "^3.5.44"
   },
   "devDependencies": {
